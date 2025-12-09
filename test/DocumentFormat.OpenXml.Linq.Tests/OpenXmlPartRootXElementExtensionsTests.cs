@@ -9,7 +9,6 @@ using System.Linq;
 using System.Xml.Linq;
 using Xunit;
 
-#nullable enable
 #pragma warning disable SA1116 // Split parameters should start on line after declaration
 
 namespace DocumentFormat.OpenXml.Linq.Tests
@@ -240,7 +239,7 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             Assert.Equal(HelloWorldXmlString, rootElement!.OuterXml);
 
             // Note that the Document has the expected markup.
-            Document document = part.Document;
+            Document document = part.Document!;
             Assert.NotNull(document);
             Assert.Equal(HelloWorldXmlString, document.OuterXml);
         }
@@ -287,7 +286,7 @@ namespace DocumentFormat.OpenXml.Linq.Tests
             Assert.Equal(HelloWorldXmlString, rootElement!.OuterXml);
 
             // Note that the Document has the expected markup.
-            Document document = part.Document;
+            Document document = part.Document!;
             Assert.NotNull(document);
             Assert.Equal(HelloWorldXmlString, document.OuterXml);
         }

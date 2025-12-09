@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
@@ -603,8 +604,8 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker.ElementType, 1, 1, version: FileFormatVersions.Office2016),

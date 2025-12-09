@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -153,7 +154,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent());
             builder.AddElement<WrapSquare>()
                 .AddAttribute("wrapText", a => a.WrapText, aBuilder =>
                 {
@@ -271,7 +272,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon());
             builder.AddElement<WrapTight>()
                 .AddAttribute("wrapText", a => a.WrapText, aBuilder =>
                 {
@@ -387,7 +388,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon());
             builder.AddElement<WrapThrough>()
                 .AddAttribute("wrapText", a => a.WrapText, aBuilder =>
                 {
@@ -493,7 +494,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent());
             builder.AddElement<WrapTopBottom>()
                 .AddAttribute("distT", a => a.DistanceFromTop)
                 .AddAttribute("distB", a => a.DistanceFromBottom);
@@ -644,11 +645,11 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Graphic.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Graphic());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent());
             builder.AddElement<Inline>()
                 .AddAttribute("distT", a => a.DistanceFromTop)
                 .AddAttribute("distB", a => a.DistanceFromBottom)
@@ -947,21 +948,21 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapNone>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapSquare>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapThrough>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTight>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTopBottom>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Graphic.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Graphic());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.DocProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.NonVisualGraphicFrameDrawingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.SimplePosition());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.Extent());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalPosition());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalPosition());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapNone.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapNone());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapSquare.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapSquare());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapThrough.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapThrough());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTight.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTight());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTopBottom.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTopBottom());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight());
             builder.AddElement<Anchor>()
                 .AddAttribute("distT", a => a.DistanceFromTop)
                 .AddAttribute("distB", a => a.DistanceFromBottom)
@@ -1400,8 +1401,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.StartPoint>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.LineTo>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.StartPoint.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.StartPoint());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.LineTo.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.LineTo());
             builder.AddElement<WrapPolygon>()
                 .AddAttribute("edited", a => a.Edited);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1494,9 +1495,9 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalAlignment());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset());
             builder.AddElement<HorizontalPosition>()
                 .AddAttribute("relativeFrom", a => a.RelativeFrom, aBuilder =>
                 {
@@ -1623,9 +1624,9 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalAlignment());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset());
             builder.AddElement<VerticalPosition>()
                 .AddAttribute("relativeFrom", a => a.RelativeFrom, aBuilder =>
                 {
@@ -1853,9 +1854,9 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnClick());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnHover());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList());
             builder.AddElement<DocProperties>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -1975,8 +1976,8 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GraphicFrameLocks());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks.ElementType, 0, 1),

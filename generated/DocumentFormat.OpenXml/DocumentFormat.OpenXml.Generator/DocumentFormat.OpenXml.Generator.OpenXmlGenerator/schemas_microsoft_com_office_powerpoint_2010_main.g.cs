@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -77,9 +78,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualInkContentPartProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualDrawingProperties.ElementType, 1, 1, version: FileFormatVersions.Office2010),
@@ -217,8 +218,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Offset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Offset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Extents.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Extents());
             builder.AddElement<Transform2D>()
                 .AddAttribute("rot", a => a.Rotation)
                 .AddAttribute("flipH", a => a.HorizontalFlip)
@@ -325,7 +326,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Presentation.Extension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Extension());
             builder.AddElement<ExtensionListModify>()
                 .AddAttribute("mod", a => a.Modify);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -428,10 +429,10 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmarkList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.MediaFade());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim());
             builder.AddElement<Media>()
                 .AddAttribute("r:embed", a => a.Embed)
                 .AddAttribute("r:link", a => a.Link);
@@ -1548,7 +1549,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionOld>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionOld.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.SectionOld());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionOld.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -1614,7 +1615,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.Section>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.Section.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.Section());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.Section.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -1728,12 +1729,12 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HslColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HslColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SchemeColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelHex());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SystemColor());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -2026,7 +2027,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.TracePointList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.TracePointList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.TracePointList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.TracePointList.ElementType, 0, 0, version: FileFormatVersions.Office2010)
@@ -2201,13 +2202,13 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.PlayEventRecord());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.StopEventRecord());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.PauseEventRecord());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.ResumeEventRecord());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.SeekEventRecord());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.NullEventRecord());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
@@ -2425,9 +2426,9 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnClick());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnHover());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList());
             builder.AddElement<NonVisualDrawingProperties>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -2557,8 +2558,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks());
             builder.AddElement<NonVisualInkContentPartProperties>()
                 .AddAttribute("isComment", a => a.IsComment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2680,14 +2681,14 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AudioFromCD>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AudioFromFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.WaveAudioFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.QuickTimeFromFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.VideoFromFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AudioFromCD.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AudioFromCD());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AudioFromFile.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AudioFromFile());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.WaveAudioFile.ElementType, static () => new DocumentFormat.OpenXml.Drawing.WaveAudioFile());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.QuickTimeFromFile.ElementType, static () => new DocumentFormat.OpenXml.Drawing.QuickTimeFromFile());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.VideoFromFile.ElementType, static () => new DocumentFormat.OpenXml.Drawing.VideoFromFile());
+            builder.AddChild(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Presentation.CustomerDataList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.CustomerDataList());
+            builder.AddChild(DocumentFormat.OpenXml.Presentation.PlaceholderShape.ElementType, static () => new DocumentFormat.OpenXml.Presentation.PlaceholderShape());
             builder.AddElement<ApplicationNonVisualDrawingProperties>()
                 .AddAttribute("isPhoto", a => a.IsPhoto)
                 .AddAttribute("userDrawn", a => a.UserDrawn);
@@ -2946,7 +2947,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmark>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmark.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmark());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmark.ElementType, 0, 0, version: FileFormatVersions.Office2010)
@@ -3012,7 +3013,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Presentation.Extension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -3114,7 +3115,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList());
             builder.AddElement<SectionOld>()
                 .AddAttribute("name", a => a.Name)
                 .AddAttribute("slideIdLst", a => a.SlideIdList, aBuilder =>
@@ -3250,7 +3251,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdListEntry>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdListEntry.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdListEntry());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdListEntry.ElementType, 0, 0, version: FileFormatVersions.Office2010)
@@ -3337,8 +3338,8 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList());
             builder.AddElement<Section>()
                 .AddAttribute("name", a => a.Name)
                 .AddAttribute("id", a => a.Id, aBuilder =>
@@ -3513,7 +3514,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.PowerPoint.TracePoint>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.PowerPoint.TracePoint.ElementType, static () => new DocumentFormat.OpenXml.Office2010.PowerPoint.TracePoint());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.PowerPoint.TracePoint.ElementType, 0, 0, version: FileFormatVersions.Office2010)

@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
@@ -72,7 +73,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeACB>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeACB.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeACB());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeACB.ElementType, 1, 1, version: FileFormatVersions.Microsoft365)
@@ -240,8 +241,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.CameoEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.UnknownEmpty>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.CameoEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.CameoEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.UnknownEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.UnknownEmpty());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)

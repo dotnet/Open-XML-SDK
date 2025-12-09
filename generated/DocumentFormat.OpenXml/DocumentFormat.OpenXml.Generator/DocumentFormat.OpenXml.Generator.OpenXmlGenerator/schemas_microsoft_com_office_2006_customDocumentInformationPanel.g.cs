@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
@@ -72,9 +73,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen.ElementType, 1, 1),
@@ -343,8 +344,8 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace.ElementType, 1, 1),

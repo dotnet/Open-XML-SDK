@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class ExceptionMessages {
@@ -259,6 +259,15 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Encrypted packages are not supported..
+        /// </summary>
+        internal static string EncryptedPackageNotSupported {
+            get {
+                return ResourceManager.GetString("EncryptedPackageNotSupported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The contentType parameter has incorrect value..
         /// </summary>
         internal static string ErrorContentType {
@@ -327,15 +336,6 @@ namespace DocumentFormat.OpenXml {
         internal static string FileNotFound {
             get {
                 return ResourceManager.GetString("FileNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The enumerable contained more than a single element when only zero or one are allowed..
-        /// </summary>
-        internal static string FirstOrDefaultMaxOne {
-            get {
-                return ResourceManager.GetString("FirstOrDefaultMaxOne", resourceCulture);
             }
         }
         
@@ -807,6 +807,17 @@ namespace DocumentFormat.OpenXml {
         internal static string SamePartWithDifferentRelationshipType {
             get {
                 return ResourceManager.GetString("SamePartWithDifferentRelationshipType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  Part: {0} doesn&apos;t exist in the package.
+        ///
+        ///Original Message:{1}.
+        /// </summary>
+        internal static string SpecifiedPartNotFound {
+            get {
+                return ResourceManager.GetString("SpecifiedPartNotFound", resourceCulture);
             }
         }
         

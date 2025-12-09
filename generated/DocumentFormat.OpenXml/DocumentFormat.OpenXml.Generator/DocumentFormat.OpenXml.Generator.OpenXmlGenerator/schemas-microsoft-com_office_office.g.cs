@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
@@ -194,17 +195,17 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ColorMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Stroke>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.TextBox>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Callout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Callout());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ColorMenu.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ColorMenu());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Extrusion.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Extrusion());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Lock.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Skew.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Skew());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Fill.ElementType, static () => new DocumentFormat.OpenXml.Vml.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageData.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageData());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Stroke.ElementType, static () => new DocumentFormat.OpenXml.Vml.Stroke());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.TextBox.ElementType, static () => new DocumentFormat.OpenXml.Vml.TextBox());
             builder.AddElement<ShapeDefaults>()
                 .AddAttribute("v:ext", a => a.Extension)
                 .AddAttribute("spidmax", a => a.MaxShapeId)
@@ -448,9 +449,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ShapeIdMap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.RegroupTable>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Rules>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ShapeIdMap.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ShapeIdMap());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.RegroupTable.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.RegroupTable());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Rules.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Rules());
             builder.AddElement<ShapeLayout>()
                 .AddAttribute("v:ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
@@ -907,7 +908,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.RelationTable>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.RelationTable.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.RelationTable());
             builder.AddElement<Diagram>()
                 .AddAttribute("v:ext", a => a.Extension)
                 .AddAttribute("dgmstyle", a => a.Style)
@@ -1905,9 +1906,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.LinkType>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.LockedField>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.FieldCodes>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.LinkType.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.LinkType());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.LockedField.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.LockedField());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.FieldCodes.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.FieldCodes());
             builder.AddElement<OleObject>()
                 .AddAttribute("Type", a => a.Type)
                 .AddAttribute("ProgID", a => a.ProgId)
@@ -2733,7 +2734,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Entry>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Entry.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Entry());
             builder.AddElement<RegroupTable>()
                 .AddAttribute("v:ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2813,7 +2814,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Rule>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Rule.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Rule());
             builder.AddElement<Rules>()
                 .AddAttribute("v:ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2973,7 +2974,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Proxy>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Proxy.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Proxy());
             builder.AddElement<Rule>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -3062,7 +3063,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Relation>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.Relation.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.Relation());
             builder.AddElement<RelationTable>()
                 .AddAttribute("v:ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)

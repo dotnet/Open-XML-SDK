@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.CustomXmlSchemaReferences;
@@ -8102,10 +8103,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingId>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingLevelReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Inserted>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingChange>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingId.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingId());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingLevelReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingLevelReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Inserted.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Inserted());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingChange.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingChange());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.NumberingLevelReference.ElementType, 0, 1),
@@ -8230,12 +8231,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BetweenBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BarBorder>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BetweenBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BetweenBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BarBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BarBorder());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.TopBorder.ElementType, 0, 1),
@@ -8569,7 +8570,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TabStop>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TabStop.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TabStop());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.TabStop.ElementType, 1, 0)
@@ -9735,7 +9736,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesExtended>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesExtended.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesExtended());
             builder.AddElement<ParagraphPropertiesChange>()
                 .AddAttribute("w:author", a => a.Author, aBuilder =>
                 {
@@ -11112,22 +11113,22 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.OleObject>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Arc>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Curve>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Group>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Line>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Oval>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.PolyLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Rectangle>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.RoundRectangle>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shapetype>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Control>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Drawing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ObjectEmbed>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ObjectLink>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.OleObject.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.OleObject());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Arc.ElementType, static () => new DocumentFormat.OpenXml.Vml.Arc());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Curve.ElementType, static () => new DocumentFormat.OpenXml.Vml.Curve());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Group.ElementType, static () => new DocumentFormat.OpenXml.Vml.Group());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageFile.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageFile());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Line.ElementType, static () => new DocumentFormat.OpenXml.Vml.Line());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Oval.ElementType, static () => new DocumentFormat.OpenXml.Vml.Oval());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.PolyLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.PolyLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Rectangle.ElementType, static () => new DocumentFormat.OpenXml.Vml.Rectangle());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.RoundRectangle.ElementType, static () => new DocumentFormat.OpenXml.Vml.RoundRectangle());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shape.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shape());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shapetype.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shapetype());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Control.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Control());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Drawing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Drawing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ObjectEmbed.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ObjectEmbed());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ObjectLink.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ObjectLink());
             builder.AddElement<EmbeddedObject>()
                 .AddAttribute("w:dxaOrig", a => a.DxaOriginal)
                 .AddAttribute("w:dyaOrig", a => a.DyaOriginal)
@@ -11256,20 +11257,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.OleObject>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Arc>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Curve>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Group>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Line>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Oval>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.PolyLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Rectangle>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.RoundRectangle>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shapetype>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Control>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MovieReference>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.OleObject.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.OleObject());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Arc.ElementType, static () => new DocumentFormat.OpenXml.Vml.Arc());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Curve.ElementType, static () => new DocumentFormat.OpenXml.Vml.Curve());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Group.ElementType, static () => new DocumentFormat.OpenXml.Vml.Group());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageFile.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageFile());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Line.ElementType, static () => new DocumentFormat.OpenXml.Vml.Line());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Oval.ElementType, static () => new DocumentFormat.OpenXml.Vml.Oval());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.PolyLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.PolyLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Rectangle.ElementType, static () => new DocumentFormat.OpenXml.Vml.Rectangle());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.RoundRectangle.ElementType, static () => new DocumentFormat.OpenXml.Vml.RoundRectangle());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shape.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shape());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shapetype.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shapetype());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Control.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Control());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MovieReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MovieReference());
             builder.AddElement<Picture>()
                 .AddAttribute("w14:anchorId", a => a.AnchorId, aBuilder =>
                 {
@@ -11406,9 +11407,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FieldData>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FormFieldData>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingChange>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FieldData.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FieldData());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FormFieldData.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FormFieldData());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingChange.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingChange());
             builder.AddElement<FieldChar>()
                 .AddAttribute("w:fldCharType", a => a.FieldCharType, aBuilder =>
                 {
@@ -11523,9 +11524,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RubyContent>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RubyBase>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RubyProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RubyContent.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RubyContent());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RubyBase.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RubyBase());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RubyProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RubyProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.RubyProperties.ElementType, 1, 1),
@@ -11752,8 +11753,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor.ElementType, 1, 1),
@@ -14230,7 +14231,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PreviousRunProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PreviousRunProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PreviousRunProperties());
             builder.AddElement<RunPropertiesChange>()
                 .AddAttribute("w:author", a => a.Author, aBuilder =>
                 {
@@ -14382,57 +14383,57 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Border>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Color>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Emphasis>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FitText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunFonts>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Highlight>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Kern>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FontSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Languages>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Bold>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Italic>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Caps>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SmallCaps>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Strike>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoubleStrike>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Emboss>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Imprint>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoProof>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Vanish>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WebHidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RightToLeftText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SpecVanish>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunPropertiesChange>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Spacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Position>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CharacterScale>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Underline>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Glow>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Ligatures>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Properties3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Reflection>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Scene3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Border.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Border());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Color.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Color());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Emphasis.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Emphasis());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FitText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FitText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunFonts.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunFonts());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Highlight.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Highlight());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Kern.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Kern());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FontSize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FontSize());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Languages.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Languages());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Bold.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Bold());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Italic.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Italic());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Caps.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Caps());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SmallCaps.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SmallCaps());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Strike.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Strike());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoubleStrike.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoubleStrike());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Outline());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Emboss.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Emboss());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Imprint.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Imprint());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoProof.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoProof());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SnapToGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SnapToGrid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Vanish.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Vanish());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WebHidden.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WebHidden());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RightToLeftText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RightToLeftText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SpecVanish.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SpecVanish());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunPropertiesChange.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunPropertiesChange());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Spacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Spacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Position.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Position());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextEffect.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextEffect());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CharacterScale.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CharacterScale());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Underline.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Underline());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.FillTextEffect.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.FillTextEffect());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Glow.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Glow());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Ligatures.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Ligatures());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.NumberingFormat());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.NumberSpacing.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.NumberSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Properties3D.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Properties3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Reflection.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Reflection());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Scene3D.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Scene3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.StylisticSets.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.StylisticSets());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -15329,8 +15330,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunProperties());
             builder.AddElement<InsertedMathControl>()
                 .AddAttribute("w:author", a => a.Author, aBuilder =>
                 {
@@ -15484,7 +15485,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunProperties());
             builder.AddElement<DeletedMathControl>()
                 .AddAttribute("w:author", a => a.Author, aBuilder =>
                 {
@@ -15812,9 +15813,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunProperties());
             builder.AddElement<MathControlMoveType>()
                 .AddAttribute("w:author", a => a.Author, aBuilder =>
                 {
@@ -15949,64 +15950,64 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Math.Accent.ElementType, static () => new DocumentFormat.OpenXml.Math.Accent());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Bar.ElementType, static () => new DocumentFormat.OpenXml.Math.Bar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.BorderBox.ElementType, static () => new DocumentFormat.OpenXml.Math.BorderBox());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Box.ElementType, static () => new DocumentFormat.OpenXml.Math.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Delimiter.ElementType, static () => new DocumentFormat.OpenXml.Math.Delimiter());
+            builder.AddChild(DocumentFormat.OpenXml.Math.EquationArray.ElementType, static () => new DocumentFormat.OpenXml.Math.EquationArray());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Fraction.ElementType, static () => new DocumentFormat.OpenXml.Math.Fraction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.MathFunction.ElementType, static () => new DocumentFormat.OpenXml.Math.MathFunction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.GroupChar.ElementType, static () => new DocumentFormat.OpenXml.Math.GroupChar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitLower.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitLower());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitUpper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Matrix.ElementType, static () => new DocumentFormat.OpenXml.Math.Matrix());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Nary.ElementType, static () => new DocumentFormat.OpenXml.Math.Nary());
+            builder.AddChild(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Math.OfficeMath());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Math.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Phantom.ElementType, static () => new DocumentFormat.OpenXml.Math.Phantom());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Run.ElementType, static () => new DocumentFormat.OpenXml.Math.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Radical.ElementType, static () => new DocumentFormat.OpenXml.Math.Radical());
+            builder.AddChild(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, static () => new DocumentFormat.OpenXml.Math.PreSubSuper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Subscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Subscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, static () => new DocumentFormat.OpenXml.Math.SubSuperscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Superscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Superscript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Run.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties.ElementType, 0, 1),
@@ -16290,64 +16291,64 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FieldData>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Math.Accent.ElementType, static () => new DocumentFormat.OpenXml.Math.Accent());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Bar.ElementType, static () => new DocumentFormat.OpenXml.Math.Bar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.BorderBox.ElementType, static () => new DocumentFormat.OpenXml.Math.BorderBox());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Box.ElementType, static () => new DocumentFormat.OpenXml.Math.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Delimiter.ElementType, static () => new DocumentFormat.OpenXml.Math.Delimiter());
+            builder.AddChild(DocumentFormat.OpenXml.Math.EquationArray.ElementType, static () => new DocumentFormat.OpenXml.Math.EquationArray());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Fraction.ElementType, static () => new DocumentFormat.OpenXml.Math.Fraction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.MathFunction.ElementType, static () => new DocumentFormat.OpenXml.Math.MathFunction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.GroupChar.ElementType, static () => new DocumentFormat.OpenXml.Math.GroupChar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitLower.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitLower());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitUpper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Matrix.ElementType, static () => new DocumentFormat.OpenXml.Math.Matrix());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Nary.ElementType, static () => new DocumentFormat.OpenXml.Math.Nary());
+            builder.AddChild(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Math.OfficeMath());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Math.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Phantom.ElementType, static () => new DocumentFormat.OpenXml.Math.Phantom());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Run.ElementType, static () => new DocumentFormat.OpenXml.Math.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Radical.ElementType, static () => new DocumentFormat.OpenXml.Math.Radical());
+            builder.AddChild(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, static () => new DocumentFormat.OpenXml.Math.PreSubSuper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Subscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Subscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, static () => new DocumentFormat.OpenXml.Math.SubSuperscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Superscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Superscript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FieldData.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FieldData());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Run.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.AddElement<SimpleFieldRuby>()
                 .AddAttribute("w:instr", a => a.Instruction, aBuilder =>
                 {
@@ -16689,63 +16690,63 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Math.Accent.ElementType, static () => new DocumentFormat.OpenXml.Math.Accent());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Bar.ElementType, static () => new DocumentFormat.OpenXml.Math.Bar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.BorderBox.ElementType, static () => new DocumentFormat.OpenXml.Math.BorderBox());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Box.ElementType, static () => new DocumentFormat.OpenXml.Math.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Delimiter.ElementType, static () => new DocumentFormat.OpenXml.Math.Delimiter());
+            builder.AddChild(DocumentFormat.OpenXml.Math.EquationArray.ElementType, static () => new DocumentFormat.OpenXml.Math.EquationArray());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Fraction.ElementType, static () => new DocumentFormat.OpenXml.Math.Fraction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.MathFunction.ElementType, static () => new DocumentFormat.OpenXml.Math.MathFunction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.GroupChar.ElementType, static () => new DocumentFormat.OpenXml.Math.GroupChar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitLower.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitLower());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitUpper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Matrix.ElementType, static () => new DocumentFormat.OpenXml.Math.Matrix());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Nary.ElementType, static () => new DocumentFormat.OpenXml.Math.Nary());
+            builder.AddChild(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Math.OfficeMath());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Math.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Phantom.ElementType, static () => new DocumentFormat.OpenXml.Math.Phantom());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Run.ElementType, static () => new DocumentFormat.OpenXml.Math.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Radical.ElementType, static () => new DocumentFormat.OpenXml.Math.Radical());
+            builder.AddChild(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, static () => new DocumentFormat.OpenXml.Math.PreSubSuper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Subscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Subscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, static () => new DocumentFormat.OpenXml.Math.SubSuperscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Superscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Superscript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Run.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.AddElement<HyperlinkRuby>()
                 .AddAttribute("w:tgtFrame", a => a.TargetFrame, aBuilder =>
                 {
@@ -17020,39 +17021,39 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Break>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Drawing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoBreakHyphen>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SoftHyphen>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DayShort>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MonthShort>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.YearShort>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DayLong>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MonthLong>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.YearLong>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AnnotationReferenceMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FootnoteReferenceMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndnoteReferenceMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SeparatorMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContinuationSeparatorMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PageNumber>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CarriageReturn>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TabChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LastRenderedPageBreak>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FieldChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FootnoteReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndnoteReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EmbeddedObject>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Picture>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PositionalTab>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Ruby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SymbolChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Text>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FieldCode>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Break.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Break());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Drawing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Drawing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoBreakHyphen.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoBreakHyphen());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SoftHyphen.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SoftHyphen());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DayShort.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DayShort());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MonthShort.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MonthShort());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.YearShort.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.YearShort());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DayLong.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DayLong());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MonthLong.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MonthLong());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.YearLong.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.YearLong());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AnnotationReferenceMark.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AnnotationReferenceMark());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FootnoteReferenceMark.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FootnoteReferenceMark());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EndnoteReferenceMark.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EndnoteReferenceMark());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SeparatorMark.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SeparatorMark());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContinuationSeparatorMark.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContinuationSeparatorMark());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PageNumber.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PageNumber());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CarriageReturn.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CarriageReturn());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TabChar.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TabChar());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LastRenderedPageBreak.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LastRenderedPageBreak());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FieldChar.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FieldChar());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FootnoteReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FootnoteReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EndnoteReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EndnoteReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EmbeddedObject.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EmbeddedObject());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Picture.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Picture());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PositionalTab.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PositionalTab());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Ruby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Ruby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SymbolChar.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SymbolChar());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Text.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Text());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FieldCode.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FieldCode());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode());
             builder.AddElement<Run>()
                 .AddAttribute("w:rsidRPr", a => a.RsidRunProperties, aBuilder =>
                 {
@@ -17209,29 +17210,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentRunRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtContentRunRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtContentRunRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SdtProperties.ElementType, 0, 1),
@@ -18715,62 +18716,62 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Math.Accent.ElementType, static () => new DocumentFormat.OpenXml.Math.Accent());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Bar.ElementType, static () => new DocumentFormat.OpenXml.Math.Bar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.BorderBox.ElementType, static () => new DocumentFormat.OpenXml.Math.BorderBox());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Box.ElementType, static () => new DocumentFormat.OpenXml.Math.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Delimiter.ElementType, static () => new DocumentFormat.OpenXml.Math.Delimiter());
+            builder.AddChild(DocumentFormat.OpenXml.Math.EquationArray.ElementType, static () => new DocumentFormat.OpenXml.Math.EquationArray());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Fraction.ElementType, static () => new DocumentFormat.OpenXml.Math.Fraction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.MathFunction.ElementType, static () => new DocumentFormat.OpenXml.Math.MathFunction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.GroupChar.ElementType, static () => new DocumentFormat.OpenXml.Math.GroupChar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitLower.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitLower());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitUpper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Matrix.ElementType, static () => new DocumentFormat.OpenXml.Math.Matrix());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Nary.ElementType, static () => new DocumentFormat.OpenXml.Math.Nary());
+            builder.AddChild(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Math.OfficeMath());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Math.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Phantom.ElementType, static () => new DocumentFormat.OpenXml.Math.Phantom());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Run.ElementType, static () => new DocumentFormat.OpenXml.Math.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Radical.ElementType, static () => new DocumentFormat.OpenXml.Math.Radical());
+            builder.AddChild(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, static () => new DocumentFormat.OpenXml.Math.PreSubSuper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Subscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Subscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, static () => new DocumentFormat.OpenXml.Math.SubSuperscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Superscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Superscript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Run.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.AddElement<RunTrackChangeType>()
                 .AddAttribute("w:author", a => a.Author, aBuilder =>
                 {
@@ -18919,29 +18920,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtContentRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtContentRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SdtProperties.ElementType, 0, 1),
@@ -19093,41 +19094,41 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Table.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Table());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties.ElementType, 0, 1),
@@ -19296,29 +19297,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtContentBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtContentBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SdtProperties.ElementType, 0, 1),
@@ -19600,67 +19601,67 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Hyperlink>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleField>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Math.Accent.ElementType, static () => new DocumentFormat.OpenXml.Math.Accent());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Bar.ElementType, static () => new DocumentFormat.OpenXml.Math.Bar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.BorderBox.ElementType, static () => new DocumentFormat.OpenXml.Math.BorderBox());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Box.ElementType, static () => new DocumentFormat.OpenXml.Math.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Delimiter.ElementType, static () => new DocumentFormat.OpenXml.Math.Delimiter());
+            builder.AddChild(DocumentFormat.OpenXml.Math.EquationArray.ElementType, static () => new DocumentFormat.OpenXml.Math.EquationArray());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Fraction.ElementType, static () => new DocumentFormat.OpenXml.Math.Fraction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.MathFunction.ElementType, static () => new DocumentFormat.OpenXml.Math.MathFunction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.GroupChar.ElementType, static () => new DocumentFormat.OpenXml.Math.GroupChar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitLower.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitLower());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitUpper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Matrix.ElementType, static () => new DocumentFormat.OpenXml.Math.Matrix());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Nary.ElementType, static () => new DocumentFormat.OpenXml.Math.Nary());
+            builder.AddChild(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Math.OfficeMath());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Math.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Phantom.ElementType, static () => new DocumentFormat.OpenXml.Math.Phantom());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Run.ElementType, static () => new DocumentFormat.OpenXml.Math.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Radical.ElementType, static () => new DocumentFormat.OpenXml.Math.Radical());
+            builder.AddChild(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, static () => new DocumentFormat.OpenXml.Math.PreSubSuper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Subscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Subscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, static () => new DocumentFormat.OpenXml.Math.SubSuperscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Superscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Superscript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Hyperlink.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Hyperlink());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Run.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SimpleField.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SimpleField());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.AddElement<Paragraph>()
                 .AddAttribute("w:rsidRPr", a => a.RsidParagraphMarkRevision, aBuilder =>
                 {
@@ -19959,41 +19960,41 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableRow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableGrid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableRow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableRow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtRow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtRow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableGrid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -20284,41 +20285,41 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlCell>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtCell>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCell>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableRowProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlCell.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlCell());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtCell.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtCell());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptions.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptions());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCell.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCell());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableRowProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableRowProperties());
             builder.AddElement<TableRow>()
                 .AddAttribute("w:rsidRPr", a => a.RsidTableRowMarkRevision, aBuilder =>
                 {
@@ -20547,40 +20548,40 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableRow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableRow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableRow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtRow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtRow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties.ElementType, 0, 1),
@@ -20742,29 +20743,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentRow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtContentRow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtContentRow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SdtProperties.ElementType, 0, 1),
@@ -20917,42 +20918,42 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AltChunk>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AltChunk.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AltChunk());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Table.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Table());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.TableCellProperties.ElementType, 0, 1),
@@ -21164,40 +21165,40 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlCell>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtCell>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCell>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlCell.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlCell());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtCell.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtCell());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCell.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCell());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties.ElementType, 0, 1),
@@ -21359,29 +21360,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentCell>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtContentCell.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtContentCell());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtEndCharProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.SdtProperties.ElementType, 0, 1),
@@ -21559,67 +21560,67 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Hyperlink>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleField>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Math.Accent.ElementType, static () => new DocumentFormat.OpenXml.Math.Accent());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Bar.ElementType, static () => new DocumentFormat.OpenXml.Math.Bar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.BorderBox.ElementType, static () => new DocumentFormat.OpenXml.Math.BorderBox());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Box.ElementType, static () => new DocumentFormat.OpenXml.Math.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Delimiter.ElementType, static () => new DocumentFormat.OpenXml.Math.Delimiter());
+            builder.AddChild(DocumentFormat.OpenXml.Math.EquationArray.ElementType, static () => new DocumentFormat.OpenXml.Math.EquationArray());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Fraction.ElementType, static () => new DocumentFormat.OpenXml.Math.Fraction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.MathFunction.ElementType, static () => new DocumentFormat.OpenXml.Math.MathFunction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.GroupChar.ElementType, static () => new DocumentFormat.OpenXml.Math.GroupChar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitLower.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitLower());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitUpper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Matrix.ElementType, static () => new DocumentFormat.OpenXml.Math.Matrix());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Nary.ElementType, static () => new DocumentFormat.OpenXml.Math.Nary());
+            builder.AddChild(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Math.OfficeMath());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Math.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Phantom.ElementType, static () => new DocumentFormat.OpenXml.Math.Phantom());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Run.ElementType, static () => new DocumentFormat.OpenXml.Math.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Radical.ElementType, static () => new DocumentFormat.OpenXml.Math.Radical());
+            builder.AddChild(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, static () => new DocumentFormat.OpenXml.Math.PreSubSuper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Subscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Subscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, static () => new DocumentFormat.OpenXml.Math.SubSuperscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Superscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Superscript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Hyperlink.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Hyperlink());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Run.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SimpleField.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SimpleField());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlProperties.ElementType, 0, 1),
@@ -21933,67 +21934,67 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FieldData>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Hyperlink>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleField>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Math.Accent.ElementType, static () => new DocumentFormat.OpenXml.Math.Accent());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Bar.ElementType, static () => new DocumentFormat.OpenXml.Math.Bar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.BorderBox.ElementType, static () => new DocumentFormat.OpenXml.Math.BorderBox());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Box.ElementType, static () => new DocumentFormat.OpenXml.Math.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Delimiter.ElementType, static () => new DocumentFormat.OpenXml.Math.Delimiter());
+            builder.AddChild(DocumentFormat.OpenXml.Math.EquationArray.ElementType, static () => new DocumentFormat.OpenXml.Math.EquationArray());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Fraction.ElementType, static () => new DocumentFormat.OpenXml.Math.Fraction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.MathFunction.ElementType, static () => new DocumentFormat.OpenXml.Math.MathFunction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.GroupChar.ElementType, static () => new DocumentFormat.OpenXml.Math.GroupChar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitLower.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitLower());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitUpper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Matrix.ElementType, static () => new DocumentFormat.OpenXml.Math.Matrix());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Nary.ElementType, static () => new DocumentFormat.OpenXml.Math.Nary());
+            builder.AddChild(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Math.OfficeMath());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Math.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Phantom.ElementType, static () => new DocumentFormat.OpenXml.Math.Phantom());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Run.ElementType, static () => new DocumentFormat.OpenXml.Math.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Radical.ElementType, static () => new DocumentFormat.OpenXml.Math.Radical());
+            builder.AddChild(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, static () => new DocumentFormat.OpenXml.Math.PreSubSuper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Subscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Subscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, static () => new DocumentFormat.OpenXml.Math.SubSuperscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Superscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Superscript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FieldData.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FieldData());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Hyperlink.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Hyperlink());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Run.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SimpleField.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SimpleField());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.AddElement<SimpleField>()
                 .AddAttribute("w:instr", a => a.Instruction, aBuilder =>
                 {
@@ -22365,66 +22366,66 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Hyperlink>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleField>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Math.Accent.ElementType, static () => new DocumentFormat.OpenXml.Math.Accent());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Bar.ElementType, static () => new DocumentFormat.OpenXml.Math.Bar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.BorderBox.ElementType, static () => new DocumentFormat.OpenXml.Math.BorderBox());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Box.ElementType, static () => new DocumentFormat.OpenXml.Math.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Delimiter.ElementType, static () => new DocumentFormat.OpenXml.Math.Delimiter());
+            builder.AddChild(DocumentFormat.OpenXml.Math.EquationArray.ElementType, static () => new DocumentFormat.OpenXml.Math.EquationArray());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Fraction.ElementType, static () => new DocumentFormat.OpenXml.Math.Fraction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.MathFunction.ElementType, static () => new DocumentFormat.OpenXml.Math.MathFunction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.GroupChar.ElementType, static () => new DocumentFormat.OpenXml.Math.GroupChar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitLower.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitLower());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitUpper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Matrix.ElementType, static () => new DocumentFormat.OpenXml.Math.Matrix());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Nary.ElementType, static () => new DocumentFormat.OpenXml.Math.Nary());
+            builder.AddChild(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Math.OfficeMath());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Math.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Phantom.ElementType, static () => new DocumentFormat.OpenXml.Math.Phantom());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Run.ElementType, static () => new DocumentFormat.OpenXml.Math.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Radical.ElementType, static () => new DocumentFormat.OpenXml.Math.Radical());
+            builder.AddChild(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, static () => new DocumentFormat.OpenXml.Math.PreSubSuper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Subscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Subscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, static () => new DocumentFormat.OpenXml.Math.SubSuperscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Superscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Superscript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Hyperlink.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Hyperlink());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Run.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SimpleField.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SimpleField());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.AddElement<Hyperlink>()
                 .AddAttribute("w:tgtFrame", a => a.TargetFrame, aBuilder =>
                 {
@@ -22728,66 +22729,66 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Hyperlink>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleField>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Math.Accent.ElementType, static () => new DocumentFormat.OpenXml.Math.Accent());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Bar.ElementType, static () => new DocumentFormat.OpenXml.Math.Bar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.BorderBox.ElementType, static () => new DocumentFormat.OpenXml.Math.BorderBox());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Box.ElementType, static () => new DocumentFormat.OpenXml.Math.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Delimiter.ElementType, static () => new DocumentFormat.OpenXml.Math.Delimiter());
+            builder.AddChild(DocumentFormat.OpenXml.Math.EquationArray.ElementType, static () => new DocumentFormat.OpenXml.Math.EquationArray());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Fraction.ElementType, static () => new DocumentFormat.OpenXml.Math.Fraction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.MathFunction.ElementType, static () => new DocumentFormat.OpenXml.Math.MathFunction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.GroupChar.ElementType, static () => new DocumentFormat.OpenXml.Math.GroupChar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitLower.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitLower());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitUpper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Matrix.ElementType, static () => new DocumentFormat.OpenXml.Math.Matrix());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Nary.ElementType, static () => new DocumentFormat.OpenXml.Math.Nary());
+            builder.AddChild(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Math.OfficeMath());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Math.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Phantom.ElementType, static () => new DocumentFormat.OpenXml.Math.Phantom());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Run.ElementType, static () => new DocumentFormat.OpenXml.Math.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Radical.ElementType, static () => new DocumentFormat.OpenXml.Math.Radical());
+            builder.AddChild(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, static () => new DocumentFormat.OpenXml.Math.PreSubSuper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Subscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Subscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, static () => new DocumentFormat.OpenXml.Math.SubSuperscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Superscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Superscript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Hyperlink.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Hyperlink());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Run.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SimpleField.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SimpleField());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.AddElement<BidirectionalOverride>()
                 .AddAttribute("w:val", a => a.Val);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -23073,66 +23074,66 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Hyperlink>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleField>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Math.Accent.ElementType, static () => new DocumentFormat.OpenXml.Math.Accent());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Bar.ElementType, static () => new DocumentFormat.OpenXml.Math.Bar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.BorderBox.ElementType, static () => new DocumentFormat.OpenXml.Math.BorderBox());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Box.ElementType, static () => new DocumentFormat.OpenXml.Math.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Delimiter.ElementType, static () => new DocumentFormat.OpenXml.Math.Delimiter());
+            builder.AddChild(DocumentFormat.OpenXml.Math.EquationArray.ElementType, static () => new DocumentFormat.OpenXml.Math.EquationArray());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Fraction.ElementType, static () => new DocumentFormat.OpenXml.Math.Fraction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.MathFunction.ElementType, static () => new DocumentFormat.OpenXml.Math.MathFunction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.GroupChar.ElementType, static () => new DocumentFormat.OpenXml.Math.GroupChar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitLower.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitLower());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitUpper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Matrix.ElementType, static () => new DocumentFormat.OpenXml.Math.Matrix());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Nary.ElementType, static () => new DocumentFormat.OpenXml.Math.Nary());
+            builder.AddChild(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Math.OfficeMath());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Math.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Phantom.ElementType, static () => new DocumentFormat.OpenXml.Math.Phantom());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Run.ElementType, static () => new DocumentFormat.OpenXml.Math.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Radical.ElementType, static () => new DocumentFormat.OpenXml.Math.Radical());
+            builder.AddChild(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, static () => new DocumentFormat.OpenXml.Math.PreSubSuper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Subscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Subscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, static () => new DocumentFormat.OpenXml.Math.SubSuperscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Superscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Superscript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Hyperlink.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Hyperlink());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Run.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SimpleField.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SimpleField());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.AddElement<BidirectionalEmbedding>()
                 .AddAttribute("w:val", a => a.Val);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -24423,16 +24424,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StartBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsideHorizontalBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TopLeftToBottomRightCellBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TopRightToBottomLeftCellBorder>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StartBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StartBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EndBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EndBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsideHorizontalBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsideHorizontalBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TopLeftToBottomRightCellBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TopLeftToBottomRightCellBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TopRightToBottomLeftCellBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TopRightToBottomLeftCellBorder());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.TopBorder.ElementType, 0, 1),
@@ -25252,12 +25253,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TopMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LeftMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StartMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BottomMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RightMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndMargin>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TopMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TopMargin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LeftMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LeftMargin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StartMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StartMargin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BottomMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BottomMargin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RightMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RightMargin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EndMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EndMargin());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.TopMargin.ElementType, 0, 1),
@@ -26025,14 +26026,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StartBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RightBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsideHorizontalBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StartBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StartBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RightBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EndBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EndBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsideHorizontalBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsideHorizontalBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.TopBorder.ElementType, 0, 1),
@@ -26258,12 +26259,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TopMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StartMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BottomMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellLeftMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellRightMargin>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TopMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TopMargin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StartMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StartMargin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BottomMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BottomMargin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EndMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EndMargin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellLeftMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellLeftMargin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellRightMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellRightMargin());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.TopMargin.ElementType, 0, 1),
@@ -26520,7 +26521,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AltChunkProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AltChunkProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AltChunkProperties());
             builder.AddElement<AltChunk>()
                 .AddAttribute("r:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -26755,10 +26756,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FootnotePosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingRestart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FootnotePosition.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FootnotePosition());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingFormat());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingRestart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingRestart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.FootnotePosition.ElementType, 0, 1),
@@ -26887,10 +26888,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndnotePosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingRestart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EndnotePosition.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EndnotePosition());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingFormat());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingRestart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingRestart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.EndnotePosition.ElementType, 0, 1),
@@ -27408,10 +27409,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RightBorder>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RightBorder());
             builder.AddElement<PageBorders>()
                 .AddAttribute("w:zOrder", a => a.ZOrder)
                 .AddAttribute("w:display", a => a.Display)
@@ -27778,7 +27779,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Column>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Column.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Column());
             builder.AddElement<Columns>()
                 .AddAttribute("w:equalWidth", a => a.EqualWidth)
                 .AddAttribute("w:space", a => a.Space, aBuilder =>
@@ -27980,7 +27981,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RecipientData>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RecipientData.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RecipientData());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.RecipientData.ElementType, 1, 0)
@@ -28079,41 +28080,41 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AltChunk>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AltChunk.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AltChunk());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Table.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Table());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 1, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -28275,7 +28276,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Comment>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Comment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Comment());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Comment.ElementType, 0, 0)
@@ -28371,7 +28372,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Footnote>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Footnote.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Footnote());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 0)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Footnote.ElementType, 0, 1)
@@ -28467,7 +28468,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Endnote>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Endnote.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Endnote());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 0)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Endnote.ElementType, 0, 1)
@@ -28597,41 +28598,41 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AltChunk>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AltChunk.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AltChunk());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Table.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Table());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 1, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -28858,41 +28859,41 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AltChunk>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AltChunk.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AltChunk());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Table.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Table());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 1, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -29118,41 +29119,41 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AltChunk>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AltChunk.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AltChunk());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Table.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Table());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
         }
     }
 
@@ -29312,109 +29313,109 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.CustomXmlSchemaReferences.SchemaLibrary>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Captions>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeMapping>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Compatibility>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocumentProtection>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Rsids>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocumentType>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocumentVariables>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndnoteDocumentWideProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ForceUpgrade>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FootnoteDocumentWideProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoLineBreaksAfterKinsoku>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoLineBreaksBeforeKinsoku>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ThemeFontLanguages>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MailMerge>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DefaultTabStop>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookFoldPrintingSheets>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RemovePersonalInformation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RemoveDateAndTime>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotDisplayPageBoundaries>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DisplayBackgroundShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PrintPostScriptOverText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PrintFractionalCharacterWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PrintFormsData>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EmbedTrueTypeFonts>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EmbedSystemFonts>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SaveSubsetFonts>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SaveFormsData>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MirrorMargins>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AlignBorderAndEdges>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BordersDoNotSurroundHeader>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BordersDoNotSurroundFooter>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.GutterAtTop>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.HideSpellingErrors>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.HideGrammaticalErrors>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FormsDesign>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LinkStyles>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TrackRevisions>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotTrackMoves>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotTrackFormatting>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutoFormatOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StyleLockThemesPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StyleLockStylesPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutoHyphenation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotHyphenateCaps>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ShowEnvelope>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EvenAndOddHeaders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookFoldReversePrinting>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookFoldPrinting>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotUseMarginsForDrawingGridOrigin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotShadeFormData>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoPunctuationKerning>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PrintTwoOnOne>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StrictFirstAndLastChars>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SavePreviewPicture>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotValidateAgainstSchema>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SaveInvalidXml>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.IgnoreMixedContent>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AlwaysShowPlaceholderText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotDemarcateInvalidXml>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SaveXmlDataOnly>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UseXsltWhenSaving>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ShowXmlTags>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AlwaysMergeEmptyNamespace>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UpdateFieldsOnOpen>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UICompatibleWith97To2003>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotIncludeSubdocsInStats>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotAutoCompressPictures>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.ChartTrackingRefBased>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofState>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ReadModeInkLockDown>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AttachedTemplate>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SaveThroughXslt>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.HeaderShapeDefaults>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ShapeDefaults>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AttachedSchema>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DecimalSymbol>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ListSeparator>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ClickAndTypeStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DefaultTableStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StylePaneFormatFilter>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StylePaneSortMethods>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RevisionView>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.HyphenationZone>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DrawingGridHorizontalSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DrawingGridVerticalSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DrawingGridHorizontalOrigin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DrawingGridVerticalOrigin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SummaryLength>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DisplayHorizontalDrawingGrid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DisplayVerticalDrawingGrid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ConsecutiveHyphenLimit>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.View>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WriteProtection>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ActiveWritingStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Zoom>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DefaultImageDpi>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DocumentId>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.DiscardImageEditingData>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictMode>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId>();
+            builder.AddChild(DocumentFormat.OpenXml.Math.MathProperties.ElementType, static () => new DocumentFormat.OpenXml.Math.MathProperties());
+            builder.AddChild(DocumentFormat.OpenXml.CustomXmlSchemaReferences.SchemaLibrary.ElementType, static () => new DocumentFormat.OpenXml.CustomXmlSchemaReferences.SchemaLibrary());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Captions.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Captions());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingControl.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingControl());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ColorSchemeMapping.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ColorSchemeMapping());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Compatibility.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Compatibility());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocumentProtection.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocumentProtection());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Rsids.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Rsids());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocumentType.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocumentType());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocumentVariables.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocumentVariables());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EndnoteDocumentWideProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EndnoteDocumentWideProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ForceUpgrade.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ForceUpgrade());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FootnoteDocumentWideProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FootnoteDocumentWideProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoLineBreaksAfterKinsoku.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoLineBreaksAfterKinsoku());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoLineBreaksBeforeKinsoku.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoLineBreaksBeforeKinsoku());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ThemeFontLanguages.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ThemeFontLanguages());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MailMerge.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MailMerge());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DefaultTabStop.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DefaultTabStop());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookFoldPrintingSheets.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookFoldPrintingSheets());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RemovePersonalInformation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RemovePersonalInformation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RemoveDateAndTime.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RemoveDateAndTime());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotDisplayPageBoundaries.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotDisplayPageBoundaries());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DisplayBackgroundShape.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DisplayBackgroundShape());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PrintPostScriptOverText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PrintPostScriptOverText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PrintFractionalCharacterWidth.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PrintFractionalCharacterWidth());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PrintFormsData.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PrintFormsData());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EmbedTrueTypeFonts.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EmbedTrueTypeFonts());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EmbedSystemFonts.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EmbedSystemFonts());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SaveSubsetFonts.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SaveSubsetFonts());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SaveFormsData.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SaveFormsData());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MirrorMargins.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MirrorMargins());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AlignBorderAndEdges.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AlignBorderAndEdges());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BordersDoNotSurroundHeader.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BordersDoNotSurroundHeader());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BordersDoNotSurroundFooter.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BordersDoNotSurroundFooter());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.GutterAtTop.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.GutterAtTop());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.HideSpellingErrors.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.HideSpellingErrors());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.HideGrammaticalErrors.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.HideGrammaticalErrors());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FormsDesign.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FormsDesign());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LinkStyles.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LinkStyles());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TrackRevisions.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TrackRevisions());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotTrackMoves.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotTrackMoves());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotTrackFormatting.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotTrackFormatting());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutoFormatOverride.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutoFormatOverride());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StyleLockThemesPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StyleLockThemesPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StyleLockStylesPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StyleLockStylesPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutoHyphenation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutoHyphenation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotHyphenateCaps.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotHyphenateCaps());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ShowEnvelope.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ShowEnvelope());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EvenAndOddHeaders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EvenAndOddHeaders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookFoldReversePrinting.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookFoldReversePrinting());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookFoldPrinting.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookFoldPrinting());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotUseMarginsForDrawingGridOrigin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotUseMarginsForDrawingGridOrigin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotShadeFormData.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotShadeFormData());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoPunctuationKerning.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoPunctuationKerning());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PrintTwoOnOne.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PrintTwoOnOne());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StrictFirstAndLastChars.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StrictFirstAndLastChars());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SavePreviewPicture.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SavePreviewPicture());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotValidateAgainstSchema.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotValidateAgainstSchema());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SaveInvalidXml.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SaveInvalidXml());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.IgnoreMixedContent.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.IgnoreMixedContent());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AlwaysShowPlaceholderText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AlwaysShowPlaceholderText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotDemarcateInvalidXml.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotDemarcateInvalidXml());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SaveXmlDataOnly.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SaveXmlDataOnly());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.UseXsltWhenSaving.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.UseXsltWhenSaving());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ShowXmlTags.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ShowXmlTags());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AlwaysMergeEmptyNamespace.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AlwaysMergeEmptyNamespace());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.UpdateFieldsOnOpen.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.UpdateFieldsOnOpen());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.UICompatibleWith97To2003.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.UICompatibleWith97To2003());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotIncludeSubdocsInStats.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotIncludeSubdocsInStats());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotAutoCompressPictures.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotAutoCompressPictures());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Word.ChartTrackingRefBased.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Word.ChartTrackingRefBased());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofState.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofState());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ReadModeInkLockDown.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ReadModeInkLockDown());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AttachedTemplate.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AttachedTemplate());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SaveThroughXslt.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SaveThroughXslt());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.HeaderShapeDefaults.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.HeaderShapeDefaults());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ShapeDefaults.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ShapeDefaults());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AttachedSchema.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AttachedSchema());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DecimalSymbol.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DecimalSymbol());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ListSeparator.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ListSeparator());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ClickAndTypeStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ClickAndTypeStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DefaultTableStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DefaultTableStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StylePaneFormatFilter.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StylePaneFormatFilter());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StylePaneSortMethods.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StylePaneSortMethods());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RevisionView.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RevisionView());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.HyphenationZone.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.HyphenationZone());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DrawingGridHorizontalSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DrawingGridHorizontalSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DrawingGridVerticalSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DrawingGridVerticalSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DrawingGridHorizontalOrigin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DrawingGridHorizontalOrigin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DrawingGridVerticalOrigin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DrawingGridVerticalOrigin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SummaryLength.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SummaryLength());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DisplayHorizontalDrawingGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DisplayHorizontalDrawingGrid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DisplayVerticalDrawingGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DisplayVerticalDrawingGrid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ConsecutiveHyphenLimit.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ConsecutiveHyphenLimit());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.View.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.View());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WriteProtection.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WriteProtection());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ActiveWritingStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ActiveWritingStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Zoom.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Zoom());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DefaultImageDpi.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DefaultImageDpi());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DocumentId.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DocumentId());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.DiscardImageEditingData.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.DiscardImageEditingData());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.ConflictMode.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.ConflictMode());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.WriteProtection.ElementType, 0, 1),
@@ -29896,18 +29897,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PixelsPerInch>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Divs>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Frameset>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.OptimizeForBrowser>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RelyOnVML>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AllowPNG>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotRelyOnCSS>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotSaveAsSingleFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotOrganizeInFolder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotUseLongFileNames>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WebPageEncoding>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSize>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PixelsPerInch.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PixelsPerInch());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Divs.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Divs());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Frameset.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Frameset());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.OptimizeForBrowser.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.OptimizeForBrowser());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RelyOnVML.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RelyOnVML());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AllowPNG.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AllowPNG());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotRelyOnCSS.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotRelyOnCSS());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotSaveAsSingleFile.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotSaveAsSingleFile());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotOrganizeInFolder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotOrganizeInFolder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotUseLongFileNames.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotUseLongFileNames());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WebPageEncoding.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WebPageEncoding());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TargetScreenSize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TargetScreenSize());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Frameset.ElementType, 0, 1),
@@ -30170,7 +30171,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Font>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Font.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Font());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Font.ElementType, 0, 0)
@@ -30269,10 +30270,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AbstractNum>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingIdMacAtCleanup>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingInstance>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingPictureBullet>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AbstractNum.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AbstractNum());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingIdMacAtCleanup.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingIdMacAtCleanup());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingInstance.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingInstance());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingPictureBullet.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingPictureBullet());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.NumberingPictureBullet.ElementType, 0, 0),
@@ -30373,9 +30374,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocDefaults>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LatentStyles>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Style>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocDefaults.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocDefaults());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LatentStyles.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LatentStyles());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Style.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Style());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DocDefaults.ElementType, 0, 1),
@@ -30482,8 +30483,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocumentBackground>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Body>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocumentBackground.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocumentBackground());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Body.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Body());
             builder.AddElement<Document>()
                 .AddAttribute("w:conformance", a => a.Conformance);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -30615,8 +30616,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocumentBackground>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocParts>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocumentBackground.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocumentBackground());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocParts.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocParts());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -30753,15 +30754,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableLayout>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableLook>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableJustification.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableJustification());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableLayout.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableLayout());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableLook.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableLook());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableWidth.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableWidth());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableIndentation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableIndentation());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.TableWidth.ElementType, 0, 1),
@@ -30966,22 +30967,22 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CellMerge>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.GridSpan>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.HorizontalMerge>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellFitText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.HideMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CellInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CellDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.VerticalMerge>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CellMerge.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CellMerge());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.GridSpan.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.GridSpan());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.HorizontalMerge.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.HorizontalMerge());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoWrap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellFitText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellFitText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.HideMark.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.HideMark());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellWidth.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellWidth());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellMargin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextDirection.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextDirection());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CellInsertion.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CellInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CellDeletion.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CellDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.VerticalMerge.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.VerticalMerge());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -31289,18 +31290,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.GridBefore>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.GridAfter>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableRowHeight>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DivId>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Hidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CantSplit>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableHeader>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WidthBeforeTableRow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WidthAfterTableRow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.GridBefore.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.GridBefore());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.GridAfter.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.GridAfter());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableRowHeight.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableRowHeight());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DivId.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DivId());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Hidden.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Hidden());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CantSplit.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CantSplit());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableHeader.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableHeader());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableJustification.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableJustification());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WidthBeforeTableRow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WidthBeforeTableRow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WidthAfterTableRow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WidthAfterTableRow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -31402,21 +31403,21 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BiDiVisual>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCaption>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableDescription>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableLayout>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableLook>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableOverlap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TablePositionProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BiDiVisual.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BiDiVisual());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCaption.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCaption());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableDescription.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableDescription());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableJustification.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableJustification());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableLayout.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableLayout());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableLook.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableLook());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableOverlap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableOverlap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TablePositionProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TablePositionProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableWidth.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableWidth());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableIndentation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableIndentation());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -31797,26 +31798,26 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Columns>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocGrid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndnoteProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FootnoteProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LineNumberType>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FormProtection>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoEndnote>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TitlePage>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.GutterOnRight>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PageBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PageMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PageNumberType>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PageSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PaperSource>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PrinterSettingsReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SectionType>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Columns.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Columns());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocGrid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EndnoteProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EndnoteProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FootnoteProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FootnoteProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LineNumberType.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LineNumberType());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FormProtection.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FormProtection());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoEndnote.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoEndnote());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TitlePage.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TitlePage());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BiDi.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BiDi());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.GutterOnRight.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.GutterOnRight());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PageBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PageBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PageMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PageMargin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PageNumberType.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PageNumberType());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PageSize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PageSize());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PaperSource.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PaperSource());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PrinterSettingsReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PrinterSettingsReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SectionType.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SectionType());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextDirection.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextDirection());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage());
             builder.AddElement<PreviousSectionProperties>()
                 .AddAttribute("w:rsidRPr", a => a.RsidRPr, aBuilder =>
                 {
@@ -32215,39 +32216,39 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.OutlineLevel>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FrameProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Indentation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Justification>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DivId>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.KeepNext>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.KeepLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WidowControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Kinsoku>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WordWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MirrorIndents>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Tabs>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.OutlineLevel.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.OutlineLevel());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FrameProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FrameProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Indentation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Indentation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Justification.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Justification());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DivId.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DivId());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.KeepNext.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.KeepNext());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.KeepLines.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.KeepLines());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WidowControl.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WidowControl());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Kinsoku.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Kinsoku());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WordWrap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WordWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BiDi.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BiDi());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SnapToGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SnapToGrid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MirrorIndents.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MirrorIndents());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Tabs.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Tabs());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextAlignment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextAlignment());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextDirection.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextDirection());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -32840,56 +32841,56 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Border>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Color>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Emphasis>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FitText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunFonts>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Highlight>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Kern>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FontSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Languages>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Bold>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Italic>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Caps>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SmallCaps>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Strike>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoubleStrike>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Emboss>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Imprint>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoProof>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Vanish>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WebHidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RightToLeftText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SpecVanish>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Spacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Position>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CharacterScale>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Underline>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Glow>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Ligatures>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Properties3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Reflection>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Scene3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Border.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Border());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Color.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Color());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Emphasis.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Emphasis());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FitText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FitText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunFonts.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunFonts());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Highlight.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Highlight());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Kern.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Kern());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FontSize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FontSize());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Languages.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Languages());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Bold.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Bold());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Italic.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Italic());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Caps.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Caps());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SmallCaps.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SmallCaps());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Strike.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Strike());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoubleStrike.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoubleStrike());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Outline());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Emboss.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Emboss());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Imprint.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Imprint());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoProof.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoProof());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SnapToGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SnapToGrid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Vanish.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Vanish());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WebHidden.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WebHidden());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RightToLeftText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RightToLeftText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SpecVanish.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SpecVanish());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Spacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Spacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Position.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Position());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextEffect.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextEffect());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CharacterScale.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CharacterScale());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Underline.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Underline());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.FillTextEffect.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.FillTextEffect());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Glow.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Glow());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Ligatures.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Ligatures());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.NumberingFormat());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.NumberSpacing.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.NumberSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Properties3D.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Properties3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Reflection.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Reflection());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Scene3D.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Scene3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.StylisticSets.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.StylisticSets());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -33113,63 +33114,63 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Border>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Color>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Emphasis>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FitText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunFonts>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Highlight>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Kern>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FontSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Languages>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Bold>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Italic>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Caps>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SmallCaps>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Strike>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoubleStrike>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Emboss>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Imprint>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoProof>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Vanish>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WebHidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RightToLeftText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SpecVanish>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Spacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Position>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CharacterScale>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Inserted>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Deleted>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFrom>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveTo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Underline>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Glow>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Ligatures>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Properties3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Reflection>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Scene3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Border.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Border());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Color.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Color());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Emphasis.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Emphasis());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FitText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FitText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunFonts.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunFonts());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Highlight.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Highlight());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Kern.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Kern());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FontSize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FontSize());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Languages.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Languages());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Bold.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Bold());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Italic.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Italic());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Caps.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Caps());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SmallCaps.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SmallCaps());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Strike.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Strike());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoubleStrike.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoubleStrike());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Outline());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Emboss.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Emboss());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Imprint.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Imprint());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoProof.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoProof());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SnapToGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SnapToGrid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Vanish.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Vanish());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WebHidden.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WebHidden());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RightToLeftText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RightToLeftText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SpecVanish.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SpecVanish());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.OfficeMath());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Spacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Spacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Position.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Position());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextEffect.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextEffect());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CharacterScale.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CharacterScale());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Inserted.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Inserted());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Deleted.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Deleted());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFrom.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFrom());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveTo.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveTo());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Underline.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Underline());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.FillTextEffect.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.FillTextEffect());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Glow.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Glow());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Ligatures.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Ligatures());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.NumberingFormat());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.NumberSpacing.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.NumberSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Properties3D.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Properties3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Reflection.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Reflection());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Scene3D.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Scene3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.StylisticSets.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.StylisticSets());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -33853,64 +33854,64 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Border>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Color>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Emphasis>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FitText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunFonts>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Highlight>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Kern>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FontSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Languages>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Bold>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Italic>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Caps>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SmallCaps>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Strike>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoubleStrike>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Emboss>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Imprint>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoProof>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Vanish>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WebHidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RightToLeftText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SpecVanish>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphMarkRunPropertiesChange>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Spacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Position>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CharacterScale>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Inserted>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Deleted>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFrom>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveTo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Underline>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Glow>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Ligatures>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Properties3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Reflection>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Scene3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Border.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Border());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Color.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Color());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Emphasis.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Emphasis());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FitText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FitText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunFonts.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunFonts());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Highlight.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Highlight());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Kern.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Kern());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FontSize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FontSize());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Languages.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Languages());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Bold.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Bold());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Italic.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Italic());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Caps.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Caps());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SmallCaps.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SmallCaps());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Strike.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Strike());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoubleStrike.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoubleStrike());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Outline());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Emboss.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Emboss());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Imprint.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Imprint());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoProof.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoProof());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SnapToGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SnapToGrid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Vanish.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Vanish());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WebHidden.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WebHidden());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RightToLeftText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RightToLeftText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SpecVanish.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SpecVanish());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.OfficeMath());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ParagraphMarkRunPropertiesChange.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ParagraphMarkRunPropertiesChange());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Spacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Spacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Position.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Position());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextEffect.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextEffect());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CharacterScale.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CharacterScale());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Inserted.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Inserted());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Deleted.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Deleted());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFrom.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFrom());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveTo.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveTo());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Underline.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Underline());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.FillTextEffect.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.FillTextEffect());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Glow.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Glow());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Ligatures.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Ligatures());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.NumberingFormat());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.NumberSpacing.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.NumberSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Properties3D.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Properties3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Reflection.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Reflection());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Scene3D.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Scene3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.StylisticSets.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.StylisticSets());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -34230,29 +34231,29 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Columns>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocGrid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndnoteProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FootnoteProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.HeaderReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FooterReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LineNumberType>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FormProtection>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoEndnote>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TitlePage>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.GutterOnRight>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PageBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PageMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PageNumberType>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PageSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PaperSource>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PrinterSettingsReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SectionPropertiesChange>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SectionType>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Columns.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Columns());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocGrid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EndnoteProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EndnoteProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FootnoteProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FootnoteProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.HeaderReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.HeaderReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FooterReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FooterReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LineNumberType.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LineNumberType());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FormProtection.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FormProtection());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoEndnote.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoEndnote());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TitlePage.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TitlePage());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BiDi.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BiDi());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.GutterOnRight.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.GutterOnRight());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PageBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PageBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PageMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PageMargin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PageNumberType.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PageNumberType());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PageSize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PageSize());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PaperSource.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PaperSource());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PrinterSettingsReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PrinterSettingsReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SectionPropertiesChange.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SectionPropertiesChange());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SectionType.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SectionType());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextDirection.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextDirection());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage());
             builder.AddElement<SectionProperties>()
                 .AddAttribute("w:rsidRPr", a => a.RsidRPr, aBuilder =>
                 {
@@ -34420,16 +34421,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DropDownListFormField>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.HelpText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FormFieldName>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StatusText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextInput>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EntryMacro>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ExitMacro>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Enabled>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CalculateOnExit>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CheckBox.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DropDownListFormField.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DropDownListFormField());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.HelpText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.HelpText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FormFieldName.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FormFieldName());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StatusText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StatusText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextInput.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextInput());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EntryMacro.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EntryMacro());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ExitMacro.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ExitMacro());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Enabled.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Enabled());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CalculateOnExit.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CalculateOnExit());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.FormFieldName.ElementType, 1, 1),
@@ -34788,10 +34789,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FormFieldSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutomaticallySizeFormField>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DefaultCheckBoxFormFieldState>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Checked>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FormFieldSize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FormFieldSize());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutomaticallySizeFormField.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutomaticallySizeFormField());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DefaultCheckBoxFormFieldState.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DefaultCheckBoxFormFieldState());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Checked.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Checked());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -34864,9 +34865,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DropDownListSelection>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ListEntryFormField>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DefaultDropDownListItemIndex>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DropDownListSelection.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DropDownListSelection());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ListEntryFormField.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ListEntryFormField());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DefaultDropDownListItemIndex.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DefaultDropDownListItemIndex());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DropDownListSelection.ElementType, 0, 1),
@@ -34962,10 +34963,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldType>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MaxLength>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DefaultTextBoxFormFieldString>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Format>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldType.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldType());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MaxLength.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MaxLength());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DefaultTextBoxFormFieldString.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DefaultTextBoxFormFieldString());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Format.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Format());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldType.ElementType, 0, 1),
@@ -35543,7 +35544,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PreviousSectionProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PreviousSectionProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PreviousSectionProperties());
             builder.AddElement<SectionPropertiesChange>()
                 .AddAttribute("w:author", a => a.Author, aBuilder =>
                 {
@@ -35697,7 +35698,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphMarkRunProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphMarkRunProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphMarkRunProperties());
             builder.AddElement<ParagraphMarkRunPropertiesChange>()
                 .AddAttribute("w:author", a => a.Author, aBuilder =>
                 {
@@ -35799,7 +35800,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MatchSource>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MatchSource.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MatchSource());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MatchSource.ElementType, 0, 1)
@@ -36027,12 +36028,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideTextFontSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideBaseTextSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideRaise>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LanguageId>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Dirty>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RubyAlign>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideTextFontSize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideTextFontSize());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideBaseTextSize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideBaseTextSize());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideRaise.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideRaise());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LanguageId.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LanguageId());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Dirty.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Dirty());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RubyAlign.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RubyAlign());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.RubyAlign.ElementType, 1, 1),
@@ -36713,63 +36714,63 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Math.Accent.ElementType, static () => new DocumentFormat.OpenXml.Math.Accent());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Bar.ElementType, static () => new DocumentFormat.OpenXml.Math.Bar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.BorderBox.ElementType, static () => new DocumentFormat.OpenXml.Math.BorderBox());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Box.ElementType, static () => new DocumentFormat.OpenXml.Math.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Delimiter.ElementType, static () => new DocumentFormat.OpenXml.Math.Delimiter());
+            builder.AddChild(DocumentFormat.OpenXml.Math.EquationArray.ElementType, static () => new DocumentFormat.OpenXml.Math.EquationArray());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Fraction.ElementType, static () => new DocumentFormat.OpenXml.Math.Fraction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.MathFunction.ElementType, static () => new DocumentFormat.OpenXml.Math.MathFunction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.GroupChar.ElementType, static () => new DocumentFormat.OpenXml.Math.GroupChar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitLower.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitLower());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitUpper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Matrix.ElementType, static () => new DocumentFormat.OpenXml.Math.Matrix());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Nary.ElementType, static () => new DocumentFormat.OpenXml.Math.Nary());
+            builder.AddChild(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Math.OfficeMath());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Math.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Phantom.ElementType, static () => new DocumentFormat.OpenXml.Math.Phantom());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Run.ElementType, static () => new DocumentFormat.OpenXml.Math.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Radical.ElementType, static () => new DocumentFormat.OpenXml.Math.Radical());
+            builder.AddChild(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, static () => new DocumentFormat.OpenXml.Math.PreSubSuper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Subscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Subscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, static () => new DocumentFormat.OpenXml.Math.SubSuperscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Superscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Superscript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Run.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
         }
     }
 
@@ -37005,36 +37006,36 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Color>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DataBinding>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.DataBinding>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtId>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentEquation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentPicture>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentRichText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentCitation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentBibliography>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.EntityPickerEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSectionItem>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ShowingPlaceholder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TemporarySdt>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.WebExtensionLinked>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.WebExtensionCreated>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtPlaceholder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentComboBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentDate>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentDocPartObject>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentDocPartList>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentDropDownList>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtContentText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtAlias>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Tag>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SdtContentCheckBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.Appearance>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Word.Color.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Word.Color());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DataBinding.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DataBinding());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Word.DataBinding.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Word.DataBinding());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtId.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtId());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtContentEquation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtContentEquation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtContentPicture.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtContentPicture());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtContentRichText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtContentRichText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtContentCitation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtContentCitation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtContentGroup.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtContentGroup());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtContentBibliography.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtContentBibliography());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.EntityPickerEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.EntityPickerEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSectionItem.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSectionItem());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Lock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Lock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ShowingPlaceholder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ShowingPlaceholder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TemporarySdt.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TemporarySdt());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Word.WebExtensionLinked.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Word.WebExtensionLinked());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Word.WebExtensionCreated.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Word.WebExtensionCreated());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtPlaceholder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtPlaceholder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtContentComboBox.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtContentComboBox());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtContentDate.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtContentDate());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtContentDocPartObject.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtContentDocPartObject());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtContentDocPartList.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtContentDocPartList());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtContentDropDownList.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtContentDropDownList());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtContentText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtContentText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtAlias.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtAlias());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Tag.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Tag());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.SdtContentCheckBox.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.SdtContentCheckBox());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Word.Appearance.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Word.Appearance());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.RunProperties.ElementType, 0, 1),
@@ -37134,7 +37135,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.RunProperties.ElementType, 0, 1)
@@ -37232,40 +37233,40 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Table.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Table());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -37467,66 +37468,66 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Hyperlink>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleField>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Math.Accent.ElementType, static () => new DocumentFormat.OpenXml.Math.Accent());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Bar.ElementType, static () => new DocumentFormat.OpenXml.Math.Bar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.BorderBox.ElementType, static () => new DocumentFormat.OpenXml.Math.BorderBox());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Box.ElementType, static () => new DocumentFormat.OpenXml.Math.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Delimiter.ElementType, static () => new DocumentFormat.OpenXml.Math.Delimiter());
+            builder.AddChild(DocumentFormat.OpenXml.Math.EquationArray.ElementType, static () => new DocumentFormat.OpenXml.Math.EquationArray());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Fraction.ElementType, static () => new DocumentFormat.OpenXml.Math.Fraction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.MathFunction.ElementType, static () => new DocumentFormat.OpenXml.Math.MathFunction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.GroupChar.ElementType, static () => new DocumentFormat.OpenXml.Math.GroupChar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitLower.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitLower());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitUpper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Matrix.ElementType, static () => new DocumentFormat.OpenXml.Math.Matrix());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Nary.ElementType, static () => new DocumentFormat.OpenXml.Math.Nary());
+            builder.AddChild(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Math.OfficeMath());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Math.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Phantom.ElementType, static () => new DocumentFormat.OpenXml.Math.Phantom());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Run.ElementType, static () => new DocumentFormat.OpenXml.Math.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Radical.ElementType, static () => new DocumentFormat.OpenXml.Math.Radical());
+            builder.AddChild(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, static () => new DocumentFormat.OpenXml.Math.PreSubSuper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Subscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Subscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, static () => new DocumentFormat.OpenXml.Math.SubSuperscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Superscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Superscript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Hyperlink.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Hyperlink());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Run.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SubDocumentReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SimpleField.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SimpleField());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -37803,63 +37804,63 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Math.Accent.ElementType, static () => new DocumentFormat.OpenXml.Math.Accent());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Bar.ElementType, static () => new DocumentFormat.OpenXml.Math.Bar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.BorderBox.ElementType, static () => new DocumentFormat.OpenXml.Math.BorderBox());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Box.ElementType, static () => new DocumentFormat.OpenXml.Math.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Delimiter.ElementType, static () => new DocumentFormat.OpenXml.Math.Delimiter());
+            builder.AddChild(DocumentFormat.OpenXml.Math.EquationArray.ElementType, static () => new DocumentFormat.OpenXml.Math.EquationArray());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Fraction.ElementType, static () => new DocumentFormat.OpenXml.Math.Fraction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.MathFunction.ElementType, static () => new DocumentFormat.OpenXml.Math.MathFunction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.GroupChar.ElementType, static () => new DocumentFormat.OpenXml.Math.GroupChar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitLower.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitLower());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitUpper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Matrix.ElementType, static () => new DocumentFormat.OpenXml.Math.Matrix());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Nary.ElementType, static () => new DocumentFormat.OpenXml.Math.Nary());
+            builder.AddChild(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Math.OfficeMath());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Math.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Phantom.ElementType, static () => new DocumentFormat.OpenXml.Math.Phantom());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Run.ElementType, static () => new DocumentFormat.OpenXml.Math.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Radical.ElementType, static () => new DocumentFormat.OpenXml.Math.Radical());
+            builder.AddChild(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, static () => new DocumentFormat.OpenXml.Math.PreSubSuper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Subscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Subscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, static () => new DocumentFormat.OpenXml.Math.SubSuperscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Superscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Superscript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.HyperlinkRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Run.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtRunRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SimpleFieldRuby());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -38075,39 +38076,39 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlCell>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtCell>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCell>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlCell.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlCell());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtCell.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtCell());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCell.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCell());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -38275,39 +38276,39 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlRow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableRow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlRow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableRow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableRow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtRow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtRow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Group, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -38444,8 +38445,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlPlaceholder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlAttribute>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlPlaceholder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlPlaceholder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlAttribute.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlAttribute());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.CustomXmlPlaceholder.ElementType, 0, 1),
@@ -38670,7 +38671,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid());
             builder.AddElement<TableGridChange>()
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
@@ -38815,7 +38816,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PreviousTableCellProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PreviousTableCellProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PreviousTableCellProperties());
             builder.AddElement<TableCellPropertiesChange>()
                 .AddAttribute("w:author", a => a.Author, aBuilder =>
                 {
@@ -38933,23 +38934,23 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CellMerge>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.GridSpan>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.HorizontalMerge>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellFitText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.HideMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellPropertiesChange>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CellInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CellDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.VerticalMerge>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CellMerge.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CellMerge());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.GridSpan.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.GridSpan());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.HorizontalMerge.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.HorizontalMerge());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoWrap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellFitText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellFitText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.HideMark.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.HideMark());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellWidth.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellWidth());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellMargin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellPropertiesChange.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellPropertiesChange());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextDirection.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextDirection());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CellInsertion.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CellInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CellDeletion.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CellDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.VerticalMerge.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.VerticalMerge());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -39305,7 +39306,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PreviousTableProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PreviousTableProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PreviousTableProperties());
             builder.AddElement<TablePropertiesChange>()
                 .AddAttribute("w:author", a => a.Author, aBuilder =>
                 {
@@ -39459,7 +39460,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PreviousTablePropertyExceptions>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PreviousTablePropertyExceptions.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PreviousTablePropertyExceptions());
             builder.AddElement<TablePropertyExceptionsChange>()
                 .AddAttribute("w:author", a => a.Author, aBuilder =>
                 {
@@ -39576,22 +39577,22 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BiDiVisual>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCaption>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableDescription>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableLayout>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableLook>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableOverlap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TablePositionProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TablePropertiesChange>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BiDiVisual.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BiDiVisual());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCaption.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCaption());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableDescription.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableDescription());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableJustification.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableJustification());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableLayout.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableLayout());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableLook.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableLook());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableOverlap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableOverlap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TablePositionProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TablePositionProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TablePropertiesChange.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TablePropertiesChange());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableWidth.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableWidth());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableIndentation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableIndentation());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -39922,8 +39923,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableGridChange>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.GridColumn>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableGridChange.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableGridChange());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.GridColumn.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.GridColumn());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -40419,9 +40420,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UniqueTag>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Active>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ColumnIndex>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.UniqueTag.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.UniqueTag());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Active.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Active());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ColumnIndex.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ColumnIndex());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Active.ElementType, 0, 1),
@@ -40629,12 +40630,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LanguageId>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MailMergeFieldType>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DynamicAddress>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Name>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MappedName>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ColumnIndex>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LanguageId.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LanguageId());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MailMergeFieldType.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MailMergeFieldType());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DynamicAddress.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DynamicAddress());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Name.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Name());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MappedName.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MappedName());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ColumnIndex.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ColumnIndex());
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MailMergeFieldType.ElementType, 0, 1),
@@ -40933,14 +40934,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MailMergeSource>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FieldMapData>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FirstRowHeader>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SourceReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RecipientDataReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UdlConnectionString>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DataSourceTableName>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ColumnDelimiter>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MailMergeSource.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MailMergeSource());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FieldMapData.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FieldMapData());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FirstRowHeader.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FirstRowHeader());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SourceReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SourceReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RecipientDataReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RecipientDataReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.UdlConnectionString.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.UdlConnectionString());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DataSourceTableName.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DataSourceTableName());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ColumnDelimiter.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ColumnDelimiter());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.UdlConnectionString.ElementType, 0, 1),
@@ -41355,40 +41356,40 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Border>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Color>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Emphasis>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FitText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunFonts>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Kern>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FontSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Languages>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Bold>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Italic>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Caps>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SmallCaps>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Strike>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoubleStrike>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Emboss>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Imprint>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoProof>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Vanish>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WebHidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SpecVanish>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Spacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Position>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CharacterScale>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Underline>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Border.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Border());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Color.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Color());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Emphasis.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Emphasis());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FitText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FitText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunFonts.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunFonts());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Kern.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Kern());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FontSize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FontSize());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Languages.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Languages());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Bold.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Bold());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Italic.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Italic());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Caps.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Caps());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SmallCaps.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SmallCaps());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Strike.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Strike());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoubleStrike.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoubleStrike());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Outline());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Emboss.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Emboss());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Imprint.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Imprint());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoProof.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoProof());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SnapToGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SnapToGrid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Vanish.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Vanish());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WebHidden.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WebHidden());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SpecVanish.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SpecVanish());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Spacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Spacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Position.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Position());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextEffect.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextEffect());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CharacterScale.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CharacterScale());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Underline.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Underline());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -41981,36 +41982,36 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.OutlineLevel>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FrameProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Indentation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Justification>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.KeepNext>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.KeepLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WidowControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Kinsoku>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WordWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MirrorIndents>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Tabs>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.OutlineLevel.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.OutlineLevel());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FrameProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FrameProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Indentation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Indentation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Justification.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Justification());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.KeepNext.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.KeepNext());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.KeepLines.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.KeepLines());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WidowControl.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WidowControl());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Kinsoku.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Kinsoku());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WordWrap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WordWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BiDi.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BiDi());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SnapToGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SnapToGrid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MirrorIndents.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MirrorIndents());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Tabs.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Tabs());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextAlignment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextAlignment());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextDirection.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextDirection());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -42500,7 +42501,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle.ElementType, 0, 1)
@@ -42578,7 +42579,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesBaseStyle>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesBaseStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesBaseStyle());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesBaseStyle.ElementType, 0, 1)
@@ -43041,10 +43042,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Color>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FlatBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Width>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Color.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Color());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FlatBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FlatBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Width.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Width());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Width.ElementType, 0, 1),
@@ -43216,11 +43217,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Frame>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FrameLayout>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Frameset>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FramesetSplitbar>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FrameSize>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Frame.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Frame());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FrameLayout.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FrameLayout());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Frameset.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Frameset());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FramesetSplitbar.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FramesetSplitbar());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FrameSize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FrameSize());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.FrameSize.ElementType, 0, 1),
@@ -43341,14 +43342,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ScrollbarVisibility>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoResizeAllowed>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LinkedToFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MarginWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MarginHeight>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SourceFileReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FrameSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FrameName>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ScrollbarVisibility.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ScrollbarVisibility());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoResizeAllowed.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoResizeAllowed());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LinkedToFile.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LinkedToFile());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MarginWidth.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MarginWidth());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MarginHeight.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MarginHeight());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SourceFileReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SourceFileReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FrameSize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FrameSize());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FrameName.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FrameName());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.FrameSize.ElementType, 0, 1),
@@ -43798,37 +43799,37 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.OutlineLevel>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FrameProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Indentation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Justification>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.KeepNext>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.KeepLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WidowControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Kinsoku>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WordWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MirrorIndents>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Tabs>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.OutlineLevel.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.OutlineLevel());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FrameProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FrameProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Indentation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Indentation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Justification.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Justification());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.KeepNext.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.KeepNext());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.KeepLines.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.KeepLines());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WidowControl.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WidowControl());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Kinsoku.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Kinsoku());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WordWrap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WordWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BiDi.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BiDi());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SnapToGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SnapToGrid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MirrorIndents.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MirrorIndents());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Tabs.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Tabs());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextAlignment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextAlignment());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextDirection.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextDirection());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -44373,42 +44374,42 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Border>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Color>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Emphasis>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FitText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunFonts>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Kern>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FontSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Languages>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Bold>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Italic>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Caps>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SmallCaps>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Strike>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoubleStrike>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Emboss>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Imprint>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoProof>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Vanish>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WebHidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RightToLeftText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SpecVanish>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Spacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Position>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CharacterScale>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Underline>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Border.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Border());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Color.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Color());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Emphasis.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Emphasis());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FitText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FitText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunFonts.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunFonts());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Kern.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Kern());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FontSize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FontSize());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Languages.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Languages());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Bold.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Bold());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Italic.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Italic());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Caps.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Caps());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SmallCaps.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SmallCaps());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Strike.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Strike());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoubleStrike.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoubleStrike());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Outline());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Emboss.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Emboss());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Imprint.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Imprint());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoProof.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoProof());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SnapToGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SnapToGrid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Vanish.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Vanish());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WebHidden.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WebHidden());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RightToLeftText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RightToLeftText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SpecVanish.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SpecVanish());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Spacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Spacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Position.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Position());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextEffect.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextEffect());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CharacterScale.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CharacterScale());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Underline.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Underline());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -45098,18 +45099,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LevelRestart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LevelPictureBulletId>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LevelJustification>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LevelSuffix>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LevelText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LegacyNumbering>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StartNumberingValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.IsLegalNumberingStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingSymbolRunProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleIdInLevel>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LevelRestart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LevelRestart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LevelPictureBulletId.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LevelPictureBulletId());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LevelJustification.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LevelJustification());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LevelSuffix.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LevelSuffix());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LevelText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LevelText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LegacyNumbering.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LegacyNumbering());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StartNumberingValue.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StartNumberingValue());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingFormat());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.IsLegalNumberingStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.IsLegalNumberingStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingSymbolRunProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingSymbolRunProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleIdInLevel.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleIdInLevel());
             builder.AddElement<Level>()
                 .AddAttribute("w:ilvl", a => a.LevelIndex, aBuilder =>
                 {
@@ -45365,8 +45366,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Drawing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PictureBulletBase>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Drawing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Drawing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PictureBulletBase.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PictureBulletBase());
             builder.AddElement<NumberingPictureBullet>()
                 .AddAttribute("w:numPicBulletId", a => a.NumberingPictureBulletId, aBuilder =>
                 {
@@ -45486,13 +45487,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Nsid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TemplateCode>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Level>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MultiLevelType>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AbstractNumDefinitionName>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StyleLink>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingStyleLink>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Nsid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Nsid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TemplateCode.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TemplateCode());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Level.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Level());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MultiLevelType.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MultiLevelType());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AbstractNumDefinitionName.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AbstractNumDefinitionName());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StyleLink.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StyleLink());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingStyleLink.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingStyleLink());
             builder.AddElement<AbstractNum>()
                 .AddAttribute("w:abstractNumId", a => a.AbstractNumberId, aBuilder =>
                 {
@@ -45675,8 +45676,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AbstractNumId>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LevelOverride>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AbstractNumId.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AbstractNumId());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LevelOverride.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LevelOverride());
             builder.AddElement<NumberingInstance>()
                 .AddAttribute("w:numId", a => a.NumberID, aBuilder =>
                 {
@@ -45792,37 +45793,37 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.OutlineLevel>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FrameProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Indentation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Justification>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.KeepNext>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.KeepLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WidowControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Kinsoku>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WordWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MirrorIndents>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesChange>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Tabs>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.OutlineLevel.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.OutlineLevel());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FrameProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FrameProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Indentation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Indentation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Justification.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Justification());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.KeepNext.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.KeepNext());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.KeepLines.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.KeepLines());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WidowControl.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WidowControl());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Kinsoku.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Kinsoku());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WordWrap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WordWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BiDi.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BiDi());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SnapToGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SnapToGrid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MirrorIndents.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MirrorIndents());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesChange.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesChange());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Tabs.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Tabs());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextAlignment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextAlignment());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextDirection.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextDirection());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -46343,12 +46344,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableJustification.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableJustification());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableIndentation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableIndentation());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -46512,11 +46513,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Hidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CantSplit>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableHeader>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Hidden.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Hidden());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CantSplit.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CantSplit());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableHeader.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableHeader());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableJustification.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableJustification());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -46595,11 +46596,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoWrap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellMargin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -46884,41 +46885,41 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Border>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Color>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Emphasis>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FitText>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunFonts>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Kern>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FontSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Languages>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Bold>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Italic>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Caps>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SmallCaps>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Strike>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoubleStrike>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Emboss>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Imprint>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoProof>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Vanish>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WebHidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SpecVanish>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunPropertiesChange>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Spacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Position>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CharacterScale>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Underline>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Border.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Border());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Color.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Color());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Emphasis.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Emphasis());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FitText.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FitText());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunFonts.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunFonts());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Kern.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Kern());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FontSize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FontSize());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Languages.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Languages());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Bold.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Bold());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Italic.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Italic());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Caps.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Caps());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SmallCaps.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SmallCaps());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Strike.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Strike());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoubleStrike.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoubleStrike());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Outline());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shadow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shadow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Emboss.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Emboss());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Imprint.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Imprint());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoProof.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoProof());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SnapToGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SnapToGrid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Vanish.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Vanish());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WebHidden.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WebHidden());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SpecVanish.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SpecVanish());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunPropertiesChange.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunPropertiesChange());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Spacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Spacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Position.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Position());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextEffect.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextEffect());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CharacterScale.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CharacterScale());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Underline.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Underline());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -47515,14 +47516,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableStyleRowBandSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableStyleColumnBandSize>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableJustification.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableJustification());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableIndentation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableIndentation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableStyleRowBandSize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableStyleRowBandSize());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableStyleColumnBandSize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableStyleColumnBandSize());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -47719,10 +47720,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellMargin>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoWrap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellMargin.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellMargin());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -47871,11 +47872,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableCellProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableCellProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableCellProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties());
             builder.AddElement<TableStyleProperties>()
                 .AddAttribute("w:type", a => a.Type, aBuilder =>
                 {
@@ -48136,8 +48137,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesDefault>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RunPropertiesDefault>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesDefault.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesDefault());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RunPropertiesDefault.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RunPropertiesDefault());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.RunPropertiesDefault.ElementType, 0, 1),
@@ -48307,7 +48308,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LatentStyleExceptionInfo>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LatentStyleExceptionInfo.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LatentStyleExceptionInfo());
             builder.AddElement<LatentStyles>()
                 .AddAttribute("w:defLockedState", a => a.DefaultLockedState)
                 .AddAttribute("w:defUIPriority", a => a.DefaultUiPriority, aBuilder =>
@@ -48455,28 +48456,28 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Rsid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutoRedefine>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StyleHidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SemiHidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UnhideWhenUsed>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PrimaryStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Locked>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Personal>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PersonalCompose>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PersonalReply>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StyleRunProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Aliases>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BasedOn>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NextParagraphStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LinkedStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StyleName>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StyleTableProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableStyleProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StyleTableCellProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UIPriority>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Rsid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Rsid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutoRedefine.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutoRedefine());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StyleHidden.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StyleHidden());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SemiHidden.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SemiHidden());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.UnhideWhenUsed.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.UnhideWhenUsed());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PrimaryStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PrimaryStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Locked.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Locked());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Personal.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Personal());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PersonalCompose.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PersonalCompose());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PersonalReply.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PersonalReply());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StyleRunProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StyleRunProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Aliases.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Aliases());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BasedOn.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BasedOn());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NextParagraphStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NextParagraphStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LinkedStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LinkedStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StyleName.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StyleName());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StyleTableProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StyleTableProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableStyleProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableStyleProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StyleTableCellProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StyleTableCellProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.UIPriority.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.UIPriority());
             builder.AddElement<Style>()
                 .AddAttribute("w:type", a => a.Type)
                 .AddAttribute("w:styleId", a => a.StyleId, aBuilder =>
@@ -48867,17 +48868,17 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FontCharSet>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FontFamily>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EmbedRegularFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EmbedBoldFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EmbedItalicFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EmbedBoldItalicFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FontSignature>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NotTrueType>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Panose1Number>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Pitch>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AltName>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FontCharSet.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FontCharSet());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FontFamily.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FontFamily());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EmbedRegularFont.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EmbedRegularFont());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EmbedBoldFont.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EmbedBoldFont());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EmbedItalicFont.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EmbedItalicFont());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EmbedBoldItalicFont.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EmbedBoldItalicFont());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FontSignature.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FontSignature());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NotTrueType.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NotTrueType());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Panose1Number.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Panose1Number());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Pitch.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Pitch());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AltName.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AltName());
             builder.AddElement<Font>()
                 .AddAttribute("w:name", a => a.Name, aBuilder =>
                 {
@@ -49273,10 +49274,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TopBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LeftBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BottomBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RightBorder>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TopBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TopBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LeftBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LeftBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BottomBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BottomBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RightBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RightBorder());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.TopBorder.ElementType, 0, 1),
@@ -49523,7 +49524,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Div>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Div.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Div());
         }
     }
 
@@ -49601,14 +49602,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DivBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DivsChild>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BlockQuote>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BodyDiv>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LeftMarginDiv>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RightMarginDiv>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TopMarginDiv>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BottomMarginDiv>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DivBorder.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DivBorder());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DivsChild.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DivsChild());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BlockQuote.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BlockQuote());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BodyDiv.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BodyDiv());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LeftMarginDiv.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LeftMarginDiv());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RightMarginDiv.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RightMarginDiv());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TopMarginDiv.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TopMarginDiv());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BottomMarginDiv.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BottomMarginDiv());
             builder.AddElement<Div>()
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
@@ -49858,18 +49859,18 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AltChunk>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AltChunk.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AltChunk());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Table.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Table());
             builder.AddElement<Comment>()
                 .AddAttribute("w:initials", a => a.Initials, aBuilder =>
                 {
@@ -50480,41 +50481,41 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AltChunk>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AltChunk.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AltChunk());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Table.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Table());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.AddElement<FootnoteEndnoteType>()
                 .AddAttribute("w:type", a => a.Type)
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
@@ -50924,7 +50925,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutoCaption>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutoCaption.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutoCaption());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.AutoCaption.ElementType, 1, 0)
@@ -51041,7 +51042,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Background>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Background.ElementType, static () => new DocumentFormat.OpenXml.Vml.Background());
             builder.AddElement<DocumentBackground>()
                 .AddAttribute("w:color", a => a.Color, aBuilder =>
                 {
@@ -51137,7 +51138,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocPart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocPart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DocPart.ElementType, 0, 0, version: FileFormatVersions.Office2007),
@@ -51267,8 +51268,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Gallery>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Name>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Gallery.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Gallery());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Name.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Name());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Name.ElementType, 1, 1),
@@ -51373,7 +51374,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocPartType>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocPartType.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocPartType());
             builder.AddElement<DocPartTypes>()
                 .AddAttribute("w:all", a => a.All);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -51440,7 +51441,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Behavior>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Behavior.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Behavior());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Behavior.ElementType, 1, 0)
@@ -51560,13 +51561,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Behaviors>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Category>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocPartName>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocPartTypes>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocPartId>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StyleId>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Description>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Behaviors.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Behaviors());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Category.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Category());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocPartName.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocPartName());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocPartTypes.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocPartTypes());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocPartId.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocPartId());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StyleId.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StyleId());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Description.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Description());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DocPartName.ElementType, 0, 1),
@@ -52162,42 +52163,42 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AltChunk>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtBlock>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SectionProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Table>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AltChunk.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AltChunk());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtBlock.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtBlock());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SectionProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SectionProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Table.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Table());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
         }
     }
 
@@ -52256,8 +52257,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocPartBody>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocPartProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocPartBody.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocPartBody());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocPartProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocPartProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DocPartProperties.ElementType, 0, 1),
@@ -52563,16 +52564,16 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableLayout>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableLook>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptionsChange>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableJustification.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableJustification());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableLayout.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableLayout());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableLook.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableLook());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptionsChange.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptionsChange());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableWidth.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableWidth());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableIndentation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableIndentation());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -52798,23 +52799,23 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.GridBefore>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.GridAfter>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableRowHeight>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DivId>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Hidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CantSplit>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableHeader>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WidthBeforeTableRow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WidthAfterTableRow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Inserted>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Deleted>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TableRowPropertiesChange>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.GridBefore.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.GridBefore());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.GridAfter.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.GridAfter());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableRowHeight.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableRowHeight());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DivId.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DivId());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Hidden.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Hidden());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CantSplit.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CantSplit());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableHeader.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableHeader());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableJustification.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableJustification());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WidthBeforeTableRow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WidthBeforeTableRow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WidthAfterTableRow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WidthAfterTableRow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Inserted.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Inserted());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Deleted.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Deleted());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TableRowPropertiesChange.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TableRowPropertiesChange());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
@@ -52971,7 +52972,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PreviousTableRowProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PreviousTableRowProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PreviousTableRowProperties());
             builder.AddElement<TableRowPropertiesChange>()
                 .AddAttribute("w:author", a => a.Author, aBuilder =>
                 {
@@ -53108,42 +53109,42 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.OutlineLevel>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FrameProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Indentation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Justification>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DivId>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.KeepNext>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.KeepLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WidowControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Kinsoku>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WordWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MirrorIndents>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphMarkRunProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesChange>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SectionProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Shading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Tabs>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.OutlineLevel.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.OutlineLevel());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FrameProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FrameProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Indentation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Indentation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Justification.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Justification());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DivId.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DivId());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.KeepNext.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.KeepNext());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.KeepLines.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.KeepLines());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WidowControl.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WidowControl());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Kinsoku.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Kinsoku());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WordWrap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WordWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BiDi.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BiDi());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SnapToGrid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SnapToGrid());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MirrorIndents.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MirrorIndents());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ParagraphMarkRunProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ParagraphMarkRunProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesChange.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesChange());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SectionProperties.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SectionProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Shading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Shading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Tabs.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Tabs());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextAlignment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextAlignment());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TextDirection.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TextDirection());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -53819,7 +53820,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.GridColumn>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.GridColumn.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.GridColumn());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.GridColumn.ElementType, 0, 0)
@@ -54168,7 +54169,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocPartReference>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocPartReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocPartReference());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DocPartReference.ElementType, 1, 1)
@@ -54338,7 +54339,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ListItem>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ListItem.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ListItem());
             builder.AddElement<SdtContentComboBox>()
                 .AddAttribute("w:lastValue", a => a.LastValue);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -54421,10 +54422,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Calendar>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LanguageId>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtDateMappingType>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DateFormat>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Calendar.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Calendar());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LanguageId.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LanguageId());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtDateMappingType.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtDateMappingType());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DateFormat.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DateFormat());
             builder.AddElement<SdtContentDate>()
                 .AddAttribute("w:fullDate", a => a.FullDate);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -54683,9 +54684,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocPartUnique>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocPartGallery>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocPartCategory>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocPartUnique.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocPartUnique());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocPartGallery.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocPartGallery());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocPartCategory.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocPartCategory());
         }
 
         /// <summary>
@@ -54795,7 +54796,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ListItem>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ListItem.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ListItem());
             builder.AddElement<SdtContentDropDownList>()
                 .AddAttribute("w:lastValue", a => a.LastValue);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -55925,22 +55926,22 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ActiveRecord>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CheckErrors>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DataType>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Destination>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MainDocumentType>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DataSourceObject>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LinkToQuery>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressBlankLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MailAsAttachment>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ViewMergedData>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DataSourceReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.HeaderSource>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ConnectString>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Query>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AddressFieldName>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MailSubject>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ActiveRecord.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ActiveRecord());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CheckErrors.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CheckErrors());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DataType.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DataType());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Destination.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Destination());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MainDocumentType.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MainDocumentType());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DataSourceObject.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DataSourceObject());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LinkToQuery.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LinkToQuery());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressBlankLines.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressBlankLines());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MailAsAttachment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MailAsAttachment());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ViewMergedData.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ViewMergedData());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DataSourceReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DataSourceReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.HeaderSource.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.HeaderSource());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ConnectString.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ConnectString());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Query.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Query());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AddressFieldName.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AddressFieldName());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MailSubject.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MailSubject());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.MainDocumentType.ElementType, 0, 1),
@@ -57329,8 +57330,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ShapeDefaults>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ShapeLayout>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ShapeDefaults.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ShapeDefaults());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Office.ShapeLayout.ElementType, static () => new DocumentFormat.OpenXml.Vml.Office.ShapeLayout());
         }
     }
 
@@ -57392,11 +57393,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FootnoteSpecialReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FootnotePosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingRestart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FootnoteSpecialReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FootnoteSpecialReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FootnotePosition.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FootnotePosition());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingFormat());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingRestart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingRestart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -57533,11 +57534,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndnotePosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.EndnoteSpecialReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NumberingRestart>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EndnotePosition.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EndnotePosition());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.EndnoteSpecialReference.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.EndnoteSpecialReference());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingFormat());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NumberingRestart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NumberingRestart());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -57735,72 +57736,72 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CompatibilitySetting>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UseSingleBorderForContiguousCells>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WordPerfectJustification>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoTabHangIndent>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoLeading>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SpaceForUnderline>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoColumnBalance>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BalanceSingleByteDoubleByteWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoExtraLineSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotLeaveBackslashAlone>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UnderlineTrailingSpaces>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotExpandShiftReturn>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SpacingInWholePoints>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LineWrapLikeWord6>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PrintBodyTextBeforeHeader>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PrintColorBlackWhite>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WordPerfectSpaceWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ShowBreaksInFrames>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SubFontBySize>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressBottomSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressTopSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressSpacingAtTopOfPage>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressTopSpacingWordPerfect>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SuppressSpacingBeforeAfterPageBreak>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SwapBordersFacingPages>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ConvertMailMergeEscape>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.TruncateFontHeightsLikeWordPerfect>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MacWordSmallCaps>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UsePrinterMetrics>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressParagraphBorders>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.WrapTrailSpaces>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.FootnoteLayoutLikeWord8>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ShapeLayoutLikeWord8>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AlignTablesRowByRow>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ForgetLastTabAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AdjustLineHeightInTable>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceLikeWord95>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.NoSpaceRaiseLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotUseHTMLParagraphAutoSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LayoutRawTableWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.LayoutTableRowsApart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UseWord97LineBreakRules>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotBreakWrappedTables>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotSnapToGridInCell>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SelectFieldWithFirstOrLastChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ApplyBreakingRules>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotWrapTextWithPunctuation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotUseEastAsianBreakRules>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UseWord2002TableStyleRules>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.GrowAutofit>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UseFarEastLayout>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UseNormalStyleForList>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotUseIndentAsNumberingTabStop>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UseAltKinsokuLineBreakRules>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AllowSpaceOfSameStyleInTable>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressIndentation>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotAutofitConstrainedTables>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutofitToFirstFixedWidthCell>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UnderlineTabInNumberingList>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DisplayHangulFixedWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SplitPageBreakAndParagraphMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotVerticallyAlignCellWithShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotBreakConstrainedForcedTable>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DoNotVerticallyAlignInTextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.UseAnsiKerningPairs>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CachedColumnBalance>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CompatibilitySetting.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CompatibilitySetting());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.UseSingleBorderForContiguousCells.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.UseSingleBorderForContiguousCells());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WordPerfectJustification.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WordPerfectJustification());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoTabHangIndent.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoTabHangIndent());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoLeading.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoLeading());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SpaceForUnderline.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SpaceForUnderline());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoColumnBalance.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoColumnBalance());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BalanceSingleByteDoubleByteWidth.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BalanceSingleByteDoubleByteWidth());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoExtraLineSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoExtraLineSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotLeaveBackslashAlone.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotLeaveBackslashAlone());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.UnderlineTrailingSpaces.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.UnderlineTrailingSpaces());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotExpandShiftReturn.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotExpandShiftReturn());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SpacingInWholePoints.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SpacingInWholePoints());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LineWrapLikeWord6.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LineWrapLikeWord6());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PrintBodyTextBeforeHeader.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PrintBodyTextBeforeHeader());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PrintColorBlackWhite.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PrintColorBlackWhite());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WordPerfectSpaceWidth.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WordPerfectSpaceWidth());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ShowBreaksInFrames.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ShowBreaksInFrames());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SubFontBySize.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SubFontBySize());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressBottomSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressBottomSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressTopSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressTopSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressSpacingAtTopOfPage.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressSpacingAtTopOfPage());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressTopSpacingWordPerfect.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressTopSpacingWordPerfect());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SuppressSpacingBeforeAfterPageBreak.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SuppressSpacingBeforeAfterPageBreak());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SwapBordersFacingPages.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SwapBordersFacingPages());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ConvertMailMergeEscape.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ConvertMailMergeEscape());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.TruncateFontHeightsLikeWordPerfect.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.TruncateFontHeightsLikeWordPerfect());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MacWordSmallCaps.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MacWordSmallCaps());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.UsePrinterMetrics.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.UsePrinterMetrics());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressParagraphBorders.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressParagraphBorders());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.WrapTrailSpaces.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.WrapTrailSpaces());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.FootnoteLayoutLikeWord8.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.FootnoteLayoutLikeWord8());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ShapeLayoutLikeWord8.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ShapeLayoutLikeWord8());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AlignTablesRowByRow.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AlignTablesRowByRow());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ForgetLastTabAlignment.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ForgetLastTabAlignment());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AdjustLineHeightInTable.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AdjustLineHeightInTable());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutoSpaceLikeWord95.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutoSpaceLikeWord95());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.NoSpaceRaiseLower.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.NoSpaceRaiseLower());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotUseHTMLParagraphAutoSpacing.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotUseHTMLParagraphAutoSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LayoutRawTableWidth.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LayoutRawTableWidth());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.LayoutTableRowsApart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.LayoutTableRowsApart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.UseWord97LineBreakRules.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.UseWord97LineBreakRules());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotBreakWrappedTables.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotBreakWrappedTables());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotSnapToGridInCell.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotSnapToGridInCell());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SelectFieldWithFirstOrLastChar.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SelectFieldWithFirstOrLastChar());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ApplyBreakingRules.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ApplyBreakingRules());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotWrapTextWithPunctuation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotWrapTextWithPunctuation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotUseEastAsianBreakRules.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotUseEastAsianBreakRules());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.UseWord2002TableStyleRules.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.UseWord2002TableStyleRules());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.GrowAutofit.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.GrowAutofit());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.UseFarEastLayout.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.UseFarEastLayout());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.UseNormalStyleForList.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.UseNormalStyleForList());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotUseIndentAsNumberingTabStop.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotUseIndentAsNumberingTabStop());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.UseAltKinsokuLineBreakRules.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.UseAltKinsokuLineBreakRules());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AllowSpaceOfSameStyleInTable.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AllowSpaceOfSameStyleInTable());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressIndentation.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressIndentation());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotAutofitConstrainedTables.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotAutofitConstrainedTables());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutofitToFirstFixedWidthCell.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutofitToFirstFixedWidthCell());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.UnderlineTabInNumberingList.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.UnderlineTabInNumberingList());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DisplayHangulFixedWidth.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DisplayHangulFixedWidth());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SplitPageBreakAndParagraphMark.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SplitPageBreakAndParagraphMark());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotVerticallyAlignCellWithShape.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotVerticallyAlignCellWithShape());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotBreakConstrainedForcedTable.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotBreakConstrainedForcedTable());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DoNotVerticallyAlignInTextBox.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DoNotVerticallyAlignInTextBox());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.UseAnsiKerningPairs.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.UseAnsiKerningPairs());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CachedColumnBalance.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CachedColumnBalance());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.UseSingleBorderForContiguousCells.ElementType, 0, 1),
@@ -58775,7 +58776,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DocumentVariable>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DocumentVariable.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DocumentVariable());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.DocumentVariable.ElementType, 0, 0)
@@ -58841,8 +58842,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.RsidRoot>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Rsid>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.RsidRoot.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.RsidRoot());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Rsid.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Rsid());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.RsidRoot.ElementType, 0, 1),
@@ -59121,8 +59122,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.AutoCaptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Caption>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.AutoCaptions.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.AutoCaptions());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Caption.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Caption());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Wordprocessing.Caption.ElementType, 1, 0),
@@ -59351,15 +59352,15 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Group>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.ImageFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Line>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Oval>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.PolyLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Rectangle>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.RoundRectangle>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Shapetype>();
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Group.ElementType, static () => new DocumentFormat.OpenXml.Vml.Group());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.ImageFile.ElementType, static () => new DocumentFormat.OpenXml.Vml.ImageFile());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Line.ElementType, static () => new DocumentFormat.OpenXml.Vml.Line());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Oval.ElementType, static () => new DocumentFormat.OpenXml.Vml.Oval());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.PolyLine.ElementType, static () => new DocumentFormat.OpenXml.Vml.PolyLine());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Rectangle.ElementType, static () => new DocumentFormat.OpenXml.Vml.Rectangle());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.RoundRectangle.ElementType, static () => new DocumentFormat.OpenXml.Vml.RoundRectangle());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shape.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shape());
+            builder.AddChild(DocumentFormat.OpenXml.Vml.Shapetype.ElementType, static () => new DocumentFormat.OpenXml.Vml.Shapetype());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -60000,8 +60001,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.StartOverrideNumberingValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Level>();
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.StartOverrideNumberingValue.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.StartOverrideNumberingValue());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Level.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Level());
             builder.AddElement<LevelOverride>()
                 .AddAttribute("w:ilvl", a => a.LevelIndex, aBuilder =>
                 {

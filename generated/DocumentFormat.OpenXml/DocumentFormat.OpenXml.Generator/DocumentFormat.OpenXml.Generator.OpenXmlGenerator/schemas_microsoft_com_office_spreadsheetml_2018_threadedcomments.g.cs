@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
@@ -73,8 +74,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person.ElementType, 0, 0, version: FileFormatVersions.Office2019),
@@ -173,8 +174,8 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment.ElementType, 0, 0, version: FileFormatVersions.Office2019),
@@ -312,7 +313,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList());
             builder.AddElement<Person>()
                 .AddAttribute("displayName", a => a.DisplayName, aBuilder =>
                 {
@@ -403,7 +404,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -537,9 +538,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions());
             builder.AddElement<ThreadedComment>()
                 .AddAttribute("ref", a => a.Ref)
                 .AddAttribute("dT", a => a.DT)
@@ -708,7 +709,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Mention>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Mention.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Mention());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Mention.ElementType, 0, 0, version: FileFormatVersions.Office2019)

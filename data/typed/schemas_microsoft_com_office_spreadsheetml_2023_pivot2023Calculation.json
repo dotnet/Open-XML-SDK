@@ -1,10 +1,38 @@
 [
   {
+    "Name": "xlpcalc:CT_PivotItemSubtotal/",
+    "ClassName": "OpenXmlPivotItemSubtotalElement"
+  },
+  {
     "Name": "xlpcalc:CT_AggregationInfo/xlpcalc:aggregationInfo",
     "ClassName": "AggregationInfo"
   },
   {
     "Name": "xlpcalc:CT_FeatureSupport/xlpcalc:featureSupportInfo",
     "ClassName": "FeatureSupport"
+  },
+  {
+    "Name": "xlpcalc:CT_PivotAreaReferenceSubtotals/xlpcalc:pivotAreaReferenceSubtotals",
+    "ClassName": "PivotAreaReferenceSubtotals"
+  },
+  {
+    "Name": "xlpcalc:CT_PivotTableSubtotalLineItems/xlpcalc:pivotFieldSubtotalLineItems",
+    "ClassName": "PivotTableSubtotalLineItems"
+  },
+  {
+    "Name": "xlpcalc:CT_PivotFieldSubtotals/xlpcalc:pivotFieldSubtotals",
+    "ClassName": "PivotFieldSubtotals"
+  },
+  {
+    "Name": "xlpcalc:CT_PivotItemSubtotal/xlpcalc:subtotal",
+    "ClassName": "SubtotalPivotItemSubtotal"
+  },
+  {
+    "Name": "xlpcalc:CT_PivotSubtotalType/xlpcalc:subtotal",
+    "ClassName": "PivotSubtotalType"
+  },
+  {
+    "Name": "xlpcalc:CT_PivotItemSubtotal/xlpcalc:subtotalLineItem",
+    "ClassName": "SubtotalLineItemPivotItemSubtotal"
   }
 ]

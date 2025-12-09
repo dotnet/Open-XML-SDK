@@ -11,6 +11,16 @@ namespace DocumentFormat.OpenXml
     {
         private readonly XmlWriter _writer;
 
+        public XmlDOMTextWriter(Stream stream)
+        {
+            _writer = Create(stream);
+        }
+
+        public XmlDOMTextWriter(Stream stream, XmlWriterSettings settings)
+        {
+            _writer = Create(stream, settings);
+        }
+
         public XmlDOMTextWriter(TextWriter w)
         {
             var xwSettings = new XmlWriterSettings

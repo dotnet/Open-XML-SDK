@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
@@ -93,8 +94,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory());
             builder.AddElement<TaskDetails>()
                 .AddAttribute("deleted", a => a.Deleted)
                 .AddAttribute("inactive", a => a.Inactive);
@@ -237,7 +238,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Presentation.Extension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -414,8 +415,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
@@ -851,17 +852,17 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AddEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnasgnAllEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AsgnTaskAssignUnassignUser>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskProgressEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskScheduleEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskTitleEventInfo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUndo>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUnknownRecord>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AddEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AddEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnasgnAllEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnasgnAllEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AsgnTaskAssignUnassignUser.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AsgnTaskAssignUnassignUser());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskProgressEventInfo.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskProgressEventInfo());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskScheduleEventInfo.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskScheduleEventInfo());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskTitleEventInfo.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskTitleEventInfo());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUndo.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUndo());
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUnknownRecord.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUnknownRecord());
             builder.AddElement<TaskHistoryEvent>()
                 .AddAttribute("time", a => a.Time, aBuilder =>
                 {
@@ -976,7 +977,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistoryEvent>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistoryEvent.ElementType, static () => new DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistoryEvent());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistoryEvent.ElementType, 0, 0, version: FileFormatVersions.Microsoft365)

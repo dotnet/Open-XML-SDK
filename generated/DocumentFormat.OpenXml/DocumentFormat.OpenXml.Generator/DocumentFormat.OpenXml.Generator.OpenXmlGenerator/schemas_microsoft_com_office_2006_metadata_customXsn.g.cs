@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
@@ -73,10 +74,10 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.CachedView>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.Scope>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomXsn.CachedView.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomXsn.CachedView());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault());
+            builder.AddChild(DocumentFormat.OpenXml.Office.CustomXsn.Scope.ElementType, static () => new DocumentFormat.OpenXml.Office.CustomXsn.Scope());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation.ElementType, 1, 1),

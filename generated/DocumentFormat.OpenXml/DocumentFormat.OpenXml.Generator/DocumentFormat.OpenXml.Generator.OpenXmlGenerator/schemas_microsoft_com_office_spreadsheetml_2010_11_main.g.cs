@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
@@ -202,7 +203,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCache>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotCache.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotCache());
         }
     }
 
@@ -261,7 +262,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotTableReference>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.PivotTableReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.PivotTableReference());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.PivotTableReference.ElementType, 1, 0, version: FileFormatVersions.Office2013)
@@ -392,7 +393,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.WebExtension>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.WebExtension.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.WebExtension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.WebExtension.ElementType, 1, 0, version: FileFormatVersions.Office2013)
@@ -458,7 +459,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReference>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReference());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReference.ElementType, 1, 0, version: FileFormatVersions.Office2013)
@@ -524,7 +525,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineReference>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.TimelineReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.TimelineReference());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.TimelineReference.ElementType, 1, 0, version: FileFormatVersions.Office2013)
@@ -643,7 +644,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyle>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.TimelineStyle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.TimelineStyle());
             builder.AddElement<TimelineStyles>()
                 .AddAttribute("defaultTimelineStyle", a => a.DefaultTimelineStyle, aBuilder =>
                 {
@@ -724,7 +725,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat());
             builder.AddElement<DifferentialFormats>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -846,11 +847,11 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TextProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DataFeedProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ModelTextProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.OleDbPrpoperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.RangeProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.TextProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.TextProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.DataFeedProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.DataFeedProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.ModelTextProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.ModelTextProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.OleDbPrpoperties.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.OleDbPrpoperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.RangeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.RangeProperties());
             builder.AddElement<Connection>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -1080,8 +1081,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.FieldListActiveTabTopLevelEntity>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.FieldListActiveTabTopLevelEntity.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.FieldListActiveTabTopLevelEntity());
             builder.AddElement<PivotTableUISettings>()
                 .AddAttribute("sourceDataName", a => a.SourceDataName)
                 .AddAttribute("relNeededHidden", a => a.RelNeededHidden);
@@ -1197,7 +1198,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueName>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueName.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueName());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueName.ElementType, 1, 0, version: FileFormatVersions.Office2013)
@@ -1424,9 +1425,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ModelRelationships>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ModelTables>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.ModelRelationships.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.ModelRelationships());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.ModelTables.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.ModelTables());
             builder.AddElement<DataModel>()
                 .AddAttribute("minVersionLoad", a => a.MinVersionLoad);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -1565,7 +1566,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotRow>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.PivotRow.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.PivotRow());
             builder.AddElement<PivotTableData>()
                 .AddAttribute("rowCount", a => a.RowCount)
                 .AddAttribute("columnCount", a => a.ColumnCount)
@@ -1829,7 +1830,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCache>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SlicerCache.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SlicerCache());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.SlicerCache.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -1945,7 +1946,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.ExtensionList());
             builder.AddElement<TableSlicerCache>()
                 .AddAttribute("tableId", a => a.TableId, aBuilder =>
                 {
@@ -2046,7 +2047,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheOlapLevelName>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheOlapLevelName.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheOlapLevelName());
             builder.AddElement<SlicerCacheHideItemsWithNoData>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2114,7 +2115,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable.ElementType, 1, 0, version: FileFormatVersions.Office2010)
@@ -2224,11 +2225,11 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SurveyPrSurveyElementPr>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TitlePrSurveyElementPr>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DescriptionPrSurveyElementPr>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.SurveyPrSurveyElementPr.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.SurveyPrSurveyElementPr());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.TitlePrSurveyElementPr.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.TitlePrSurveyElementPr());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.DescriptionPrSurveyElementPr.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.DescriptionPrSurveyElementPr());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions());
             builder.AddElement<Survey>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -2375,7 +2376,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.Timeline>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.Timeline.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.Timeline());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.Timeline.ElementType, 1, 0, version: FileFormatVersions.Office2013)
@@ -2494,9 +2495,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTables>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineState>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTables.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTables());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.TimelineState.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.TimelineState());
             builder.AddElement<TimelineCacheDefinition>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -2702,7 +2703,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            builder.AddChild(DocumentFormat.OpenXml.Office.Excel.Formula.ElementType, static () => new DocumentFormat.OpenXml.Office.Excel.Formula());
             builder.AddElement<WebExtension>()
                 .AddAttribute("appRef", a => a.ApplicationReference, aBuilder =>
                 {
@@ -2894,7 +2895,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElements>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElements.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElements());
             builder.AddElement<TimelineStyle>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -3035,7 +3036,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElement>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElement.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElement());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElement.ElementType, 1, 0, version: FileFormatVersions.Office2013)
@@ -3147,7 +3148,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DbTable>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.DbTable.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.DbTable());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.DbTable.ElementType, 1, 0, version: FileFormatVersions.Office2013)
@@ -3419,7 +3420,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TextFields>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.TextFields.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.TextFields());
             builder.AddElement<TextProperties>()
                 .AddAttribute("prompt", a => a.Prompt)
                 .AddAttribute("fileType", a => a.FileType)
@@ -3615,8 +3616,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DbCommand>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DbTables>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.DbCommand.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.DbCommand());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.DbTables.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.DbTables());
             builder.AddElement<OleDbPrpoperties>()
                 .AddAttribute("connection", a => a.Connection);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -3721,7 +3722,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DbTables>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.DbTables.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.DbTables());
             builder.AddElement<DataFeedProperties>()
                 .AddAttribute("connection", a => a.Connection, aBuilder =>
                 {
@@ -3862,7 +3863,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -4156,7 +4157,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ModelTable>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.ModelTable.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.ModelTable());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.ModelTable.ElementType, 1, 0, version: FileFormatVersions.Office2013)
@@ -4222,7 +4223,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ModelRelationship>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.ModelRelationship.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.ModelRelationship());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.ModelRelationship.ElementType, 1, 0, version: FileFormatVersions.Office2013)
@@ -4309,8 +4310,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.Xstring>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotValueCellExtra>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.Xstring.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.Xstring());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.PivotValueCellExtra.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.PivotValueCellExtra());
             builder.AddElement<PivotValueCell>()
                 .AddAttribute("i", a => a.Item)
                 .AddAttribute("t", a => a.Text);
@@ -4575,7 +4576,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ServerFormat>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.ServerFormat.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.ServerFormat());
             builder.AddElement<PivotTableServerFormats>()
                 .AddAttribute("count", a => a.Count, aBuilder =>
                 {
@@ -5163,7 +5164,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.ExtensionList());
             builder.AddElement<OpenXmlSurveyElementPrElement>()
                 .AddAttribute("cssClass", a => a.CssClass)
                 .AddAttribute("bottom", a => a.Bottom)
@@ -5245,8 +5246,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.QuestionsPrSurveyElementPr>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestion>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.QuestionsPrSurveyElementPr.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.QuestionsPrSurveyElementPr());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestion.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestion());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.QuestionsPrSurveyElementPr.ElementType, 0, 1, version: FileFormatVersions.Office2013),
@@ -5417,8 +5418,8 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr());
             builder.AddElement<SurveyQuestion>()
                 .AddAttribute("binding", a => a.Binding, aBuilder =>
                 {
@@ -5634,7 +5635,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.ExtensionList());
             builder.AddElement<Timeline>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {
@@ -5927,9 +5928,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FilterColumn>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.FilterColumn.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.FilterColumn());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SortState.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SortState());
             builder.AddElement<AutoFilter>()
                 .AddAttribute("ref", a => a.Reference);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -5999,7 +6000,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTable>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTable.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTable());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTable.ElementType, 1, 0, version: FileFormatVersions.Office2013)
@@ -6148,10 +6149,10 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SelectionTimelineRange>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.BoundsTimelineRange>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.SelectionTimelineRange.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.SelectionTimelineRange());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.BoundsTimelineRange.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.BoundsTimelineRange());
             builder.AddElement<TimelineState>()
                 .AddAttribute("singleRangeFilterState", a => a.SingleRangeFilterState)
                 .AddAttribute("minimalRefreshVersion", a => a.MinimalRefreshVersion, aBuilder =>
@@ -6313,7 +6314,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotValueCell>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.PivotValueCell.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.PivotValueCell());
             builder.AddElement<PivotRow>()
                 .AddAttribute("r", a => a.Reference)
                 .AddAttribute("count", a => a.Count, aBuilder =>

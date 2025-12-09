@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
@@ -73,8 +74,8 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible());
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible.ElementType, 0, 0, version: FileFormatVersions.Office2021),
@@ -211,7 +212,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList());
             builder.AddElement<CommentExtensible>()
                 .AddAttribute("w16cex:durableId", a => a.DurableId, aBuilder =>
                 {
@@ -305,7 +306,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension.ElementType, static () => new DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension.ElementType, 0, 0, version: FileFormatVersions.Office2021)

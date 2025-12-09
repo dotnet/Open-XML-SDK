@@ -4,11 +4,13 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -19,7 +21,7 @@ namespace DocumentFormat.OpenXml.Packaging
         IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.rdrichvaluewebimage+xml";
-        internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage";
+        internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2020/07/relationships/rdRichValueWebImage";
         private DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.WebImagesSupportingRichData? _rootElement;
 
         /// <summary>
@@ -53,7 +55,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.WebImagesSupportingRichData WebImagesSupportingRichData
+        public DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.WebImagesSupportingRichData? WebImagesSupportingRichData
         {
             get
             {

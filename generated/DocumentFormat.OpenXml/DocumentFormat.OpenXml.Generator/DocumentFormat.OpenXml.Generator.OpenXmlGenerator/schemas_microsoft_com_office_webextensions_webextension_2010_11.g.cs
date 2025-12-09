@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -98,12 +99,12 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.Snapshot>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBindingList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionPropertyBag>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.WebExtension.Snapshot.ElementType, static () => new DocumentFormat.OpenXml.Office2013.WebExtension.Snapshot());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBindingList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBindingList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionPropertyBag.ElementType, static () => new DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionPropertyBag());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList());
             builder.AddElement<WebExtension>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -399,7 +400,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Extension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -501,7 +502,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList());
             builder.AddElement<WebExtensionBinding>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -633,7 +634,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList());
             builder.AddElement<WebExtensionStoreReference>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -724,7 +725,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference.ElementType, 0, 0, version: FileFormatVersions.Office2013)
@@ -790,7 +791,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionProperty>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionProperty.ElementType, static () => new DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionProperty());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionProperty.ElementType, 0, 0, version: FileFormatVersions.Office2013)
@@ -856,7 +857,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBinding>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBinding.ElementType, static () => new DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBinding());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBinding.ElementType, 0, 0, version: FileFormatVersions.Office2013)
@@ -975,24 +976,24 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaBiLevel>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaCeiling>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaFloor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaInverse>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaModulationEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaModulationFixed>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaReplace>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BiLevel>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Blur>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ColorChange>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ColorReplacement>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Duotone>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.FillOverlay>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Grayscale>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Hsl>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LuminanceEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.TintEffect>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaBiLevel.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaBiLevel());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaCeiling.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaCeiling());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaFloor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaFloor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaInverse.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaInverse());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaModulationEffect.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaModulationEffect());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaModulationFixed.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaModulationFixed());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaReplace.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaReplace());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BiLevel.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BiLevel());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Blur.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Blur());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ColorChange.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ColorChange());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ColorReplacement.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ColorReplacement());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Duotone.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Duotone());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.FillOverlay.ElementType, static () => new DocumentFormat.OpenXml.Drawing.FillOverlay());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Grayscale.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Grayscale());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Hsl.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Hsl());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.LuminanceEffect.ElementType, static () => new DocumentFormat.OpenXml.Drawing.LuminanceEffect());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.TintEffect.ElementType, static () => new DocumentFormat.OpenXml.Drawing.TintEffect());
             builder.AddElement<Snapshot>()
                 .AddAttribute("r:embed", a => a.Embed)
                 .AddAttribute("r:link", a => a.Link)

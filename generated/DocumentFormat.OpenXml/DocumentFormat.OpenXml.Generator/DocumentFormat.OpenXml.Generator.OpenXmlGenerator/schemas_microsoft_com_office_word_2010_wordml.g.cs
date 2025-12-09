@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -693,62 +694,62 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart>();
+            builder.AddChild(DocumentFormat.OpenXml.Math.Accent.ElementType, static () => new DocumentFormat.OpenXml.Math.Accent());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Bar.ElementType, static () => new DocumentFormat.OpenXml.Math.Bar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.BorderBox.ElementType, static () => new DocumentFormat.OpenXml.Math.BorderBox());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Box.ElementType, static () => new DocumentFormat.OpenXml.Math.Box());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Delimiter.ElementType, static () => new DocumentFormat.OpenXml.Math.Delimiter());
+            builder.AddChild(DocumentFormat.OpenXml.Math.EquationArray.ElementType, static () => new DocumentFormat.OpenXml.Math.EquationArray());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Fraction.ElementType, static () => new DocumentFormat.OpenXml.Math.Fraction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.MathFunction.ElementType, static () => new DocumentFormat.OpenXml.Math.MathFunction());
+            builder.AddChild(DocumentFormat.OpenXml.Math.GroupChar.ElementType, static () => new DocumentFormat.OpenXml.Math.GroupChar());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitLower.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitLower());
+            builder.AddChild(DocumentFormat.OpenXml.Math.LimitUpper.ElementType, static () => new DocumentFormat.OpenXml.Math.LimitUpper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Matrix.ElementType, static () => new DocumentFormat.OpenXml.Math.Matrix());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Nary.ElementType, static () => new DocumentFormat.OpenXml.Math.Nary());
+            builder.AddChild(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Math.OfficeMath());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Paragraph.ElementType, static () => new DocumentFormat.OpenXml.Math.Paragraph());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Phantom.ElementType, static () => new DocumentFormat.OpenXml.Math.Phantom());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Run.ElementType, static () => new DocumentFormat.OpenXml.Math.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Radical.ElementType, static () => new DocumentFormat.OpenXml.Math.Radical());
+            builder.AddChild(DocumentFormat.OpenXml.Math.PreSubSuper.ElementType, static () => new DocumentFormat.OpenXml.Math.PreSubSuper());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Subscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Subscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.SubSuperscript.ElementType, static () => new DocumentFormat.OpenXml.Math.SubSuperscript());
+            builder.AddChild(DocumentFormat.OpenXml.Math.Superscript.ElementType, static () => new DocumentFormat.OpenXml.Math.Superscript());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ContentPart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ContentPart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermEnd.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.PermStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.PermStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.ProofError.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.ProofError());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.Run.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.InsertedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.InsertedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.DeletedRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.DeletedRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.MoveToRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.MoveToRun());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.SdtRun.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.SdtRun());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart());
             builder.AddElement<RunTrackChangeType>()
                 .AddAttribute("w:author", a => a.Author, aBuilder =>
                 {
@@ -1492,16 +1493,16 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Saturation>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SaturationOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SaturationModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Luminance>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.LuminanceOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.LuminanceModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Tint>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Shade>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Alpha>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.HueModulation>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Saturation.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Saturation());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.SaturationOffset.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.SaturationOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.SaturationModulation.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.SaturationModulation());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Luminance.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Luminance());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.LuminanceOffset.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.LuminanceOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.LuminanceModulation.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.LuminanceModulation());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Tint.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Tint());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Shade.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Shade());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Alpha.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Alpha());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.HueModulation.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.HueModulation());
             builder.AddElement<RgbColorModelHex>()
                 .AddAttribute("w14:val", a => a.Val, aBuilder =>
                 {
@@ -1611,16 +1612,16 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Saturation>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SaturationOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SaturationModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Luminance>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.LuminanceOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.LuminanceModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Tint>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Shade>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Alpha>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.HueModulation>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Saturation.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Saturation());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.SaturationOffset.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.SaturationOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.SaturationModulation.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.SaturationModulation());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Luminance.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Luminance());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.LuminanceOffset.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.LuminanceOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.LuminanceModulation.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.LuminanceModulation());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Tint.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Tint());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Shade.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Shade());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Alpha.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Alpha());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.HueModulation.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.HueModulation());
             builder.AddElement<SchemeColor>()
                 .AddAttribute("w14:val", a => a.Val, aBuilder =>
                 {
@@ -1787,7 +1788,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.FillToRectangle>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.FillToRectangle.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.FillToRectangle());
             builder.AddElement<PathShadeProperties>()
                 .AddAttribute("w14:path", a => a.Path, aBuilder =>
                 {
@@ -2022,8 +2023,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.SchemeColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.SchemeColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
@@ -2124,9 +2125,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.GradientStopList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.LinearShadeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.PathShadeProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.GradientStopList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.GradientStopList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.LinearShadeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.LinearShadeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.PathShadeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.PathShadeProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.GradientStopList.ElementType, 0, 1, version: FileFormatVersions.Office2010),
@@ -2326,8 +2327,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.SchemeColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.SchemeColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex());
             builder.AddElement<Glow>()
                 .AddAttribute("w14:rad", a => a.GlowRadius, aBuilder =>
                 {
@@ -2537,8 +2538,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.SchemeColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.SchemeColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex());
             builder.AddElement<Shadow>()
                 .AddAttribute("w14:blurRad", a => a.BlurRadius, aBuilder =>
                 {
@@ -2996,13 +2997,13 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NoFillEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RoundEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.BevelEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.LineJoinMiterProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.NoFillEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.NoFillEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RoundEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RoundEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.BevelEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.BevelEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.LineJoinMiterProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.LineJoinMiterProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.PresetLineDashProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.PresetLineDashProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties());
             builder.AddElement<TextOutlineEffect>()
                 .AddAttribute("w14:w", a => a.LineWidth, aBuilder =>
                 {
@@ -3112,9 +3113,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NoFillEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.NoFillEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.NoFillEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.GradientFillProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
@@ -3228,8 +3229,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Camera>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.LightRig>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Camera.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Camera());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.LightRig.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.LightRig());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.Camera.ElementType, 1, 1, version: FileFormatVersions.Office2010),
@@ -3364,10 +3365,10 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.BevelTop>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.BevelBottom>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ExtrusionColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.ContourColor>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.BevelTop.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.BevelTop());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.BevelBottom.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.BevelBottom());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.ExtrusionColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.ExtrusionColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.ContourColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.ContourColor());
             builder.AddElement<Properties3D>()
                 .AddAttribute("w14:extrusionH", a => a.ExtrusionHeight, aBuilder =>
                 {
@@ -3654,7 +3655,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.StyleSet>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.StyleSet.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.StyleSet());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 0, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.StyleSet.ElementType, 0, 0, version: FileFormatVersions.Office2010)
@@ -3916,9 +3917,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Transform2D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.WordNonVisualContentPartShapeProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Transform2D.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Transform2D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.WordNonVisualContentPartShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.WordNonVisualContentPartShapeProperties());
             builder.AddElement<ContentPart>()
                 .AddAttribute("w14:bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -4250,9 +4251,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Checked>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.CheckedState>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.UncheckedState>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Checked.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Checked());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.CheckedState.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.CheckedState());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.UncheckedState.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.UncheckedState());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.Checked.ElementType, 0, 1, version: FileFormatVersions.Office2010),
@@ -4373,8 +4374,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.SchemeColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.SchemeColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex());
             builder.AddElement<GradientStop>()
                 .AddAttribute("w14:pos", a => a.StopPosition, aBuilder =>
                 {
@@ -4580,7 +4581,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.GradientStop>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.GradientStop.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.GradientStop());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.GradientStop.ElementType, 2, 10, version: FileFormatVersions.Office2010)
@@ -4812,7 +4813,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SphereCoordinates>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.SphereCoordinates.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.SphereCoordinates());
             builder.AddElement<LightRig>()
                 .AddAttribute("w14:rig", a => a.LightRigType, aBuilder =>
                 {
@@ -5192,8 +5193,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.SchemeColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.SchemeColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex());
         }
 
         /// <summary>
@@ -5522,9 +5523,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnClick());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnHover());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList());
             builder.AddElement<NonVisualDrawingProperties>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -5654,8 +5655,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks());
             builder.AddElement<NonVisualInkContentPartProperties>()
                 .AddAttribute("isComment", a => a.IsComment);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -5751,8 +5752,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.NonVisualInkContentPartProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.NonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.NonVisualDrawingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.NonVisualInkContentPartProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.NonVisualInkContentPartProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2010.Word.NonVisualDrawingProperties.ElementType, 0, 1, version: FileFormatVersions.Office2010),
@@ -5876,8 +5877,8 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Offset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Offset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Extents.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Extents());
             builder.AddElement<Transform2D>()
                 .AddAttribute("rot", a => a.Rotation)
                 .AddAttribute("flipH", a => a.HorizontalFlip)
@@ -5974,7 +5975,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Extension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)

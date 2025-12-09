@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing.Charts;
@@ -74,9 +75,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Level>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Level.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Level());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PointCount());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PointCount.ElementType, 0, 1),

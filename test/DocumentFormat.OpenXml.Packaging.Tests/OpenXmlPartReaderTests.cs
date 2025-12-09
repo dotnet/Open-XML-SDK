@@ -15,8 +15,8 @@ public class OpenXmlPartReaderTests
     [Fact]
     public void ThrowsNull()
     {
-        Assert.Throws<ArgumentNullException>(() => new OpenXmlPartReader(null));
-        Assert.Throws<ArgumentNullException>(() => new OpenXmlPartReader(null, true));
+        Assert.Throws<ArgumentNullException>(() => new OpenXmlPartReader(null!));
+        Assert.Throws<ArgumentNullException>(() => new OpenXmlPartReader(null!, true));
     }
 
     [InlineData("<?xml version='1.0' encoding='UTF-8' standalone='yes'?><root/>", "UTF-8", true)]
@@ -27,7 +27,7 @@ public class OpenXmlPartReaderTests
     [InlineData("<?xml version='1.0'?>", null, null)]
     [InlineData("<root/>", null, null)]
     [Theory]
-    public void ExtractsInfoFromStream(string xml, string encoding, bool? standalone)
+    public void ExtractsInfoFromStream(string xml, string? encoding, bool? standalone)
     {
         var features = new FeatureCollection();
         var elementFactory = Substitute.For<IRootElementFeature>();
@@ -46,5 +46,54 @@ public class OpenXmlPartReaderTests
 
         // Ensure the part reader did not dispose the stream when it is disposed
         Assert.True(stream.CanRead);
+    }
+
+    [Fact]
+    public void CreateElement()
+    {
+        // Arrange
+        var stream = new MemoryStream();
+        ExtendedPart extPart;
+        const string xmlContent = """
+            <?xml version='1.0' encoding='utf-8' standalone='yes'?>
+            <a:root xmlns:a="http://www.tests.com/">
+                <a:child>Test</a:child>
+                <a:child>Test2</a:child>
+            </a:root>
+            """;
+        const string nsUri = "http://www.tests.com/";
+        const string prefix = "a";
+        const string localName = "root";
+        {
+            using (var package = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook))
+            {
+                var workbook = package.AddWorkbookPart();
+                extPart = workbook.AddExtendedPart(nsUri, "application/xml", ".xml");
+
+                // Write some custom elements which are unknown to the OpenXmlPartReader
+                using (var writer = new StreamWriter(extPart.GetStream(FileMode.Create)))
+                {
+                    writer.Write(xmlContent);
+                }
+
+                OpenXmlReader reader = OpenXmlReader.Create(extPart);
+
+                // Assert
+                while (reader.Read())
+                {
+                    Assert.Equal(prefix, reader.Prefix);
+                    Assert.Equal(nsUri, reader.NamespaceUri);
+
+                    if (!reader.LocalName.Equals(localName))
+                    {
+                        Assert.Equal("child", reader.LocalName);
+                    }
+                    else
+                    {
+                        Assert.Equal(localName, reader.LocalName);
+                    }
+                }
+            }
+        }
     }
 }

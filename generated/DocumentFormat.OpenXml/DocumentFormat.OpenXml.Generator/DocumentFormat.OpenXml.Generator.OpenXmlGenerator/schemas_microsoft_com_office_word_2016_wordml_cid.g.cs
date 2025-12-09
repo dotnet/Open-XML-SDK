@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
@@ -71,7 +72,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId.ElementType, 0, 0, version: FileFormatVersions.Office2019)

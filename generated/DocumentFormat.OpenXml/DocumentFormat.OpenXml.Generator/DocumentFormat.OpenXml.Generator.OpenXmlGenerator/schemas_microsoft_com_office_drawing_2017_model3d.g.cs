@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -112,19 +113,19 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PictureAttributionSourceURL>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.AmbientLight>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.DirectionalLight>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DCamera>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DRaster>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DTransform>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ObjectViewport>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PointLight>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SpotLight>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UnknownLight>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.WindowViewport>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PictureAttributionSourceURL.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PictureAttributionSourceURL());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.AmbientLight.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.AmbientLight());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.DirectionalLight.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.DirectionalLight());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DCamera.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DCamera());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DRaster.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DRaster());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DTransform.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DTransform());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ObjectViewport.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ObjectViewport());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PointLight.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PointLight());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SpotLight.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SpotLight());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UnknownLight.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UnknownLight());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.WindowViewport.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.WindowViewport());
             builder.AddElement<Model3D>()
                 .AddAttribute("r:embed", a => a.Embed)
                 .AddAttribute("r:link", a => a.Link);
@@ -783,9 +784,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SxRatio>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SyRatio>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzRatio>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SxRatio.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SxRatio());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SyRatio.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SyRatio());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzRatio.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzRatio());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SxRatio.ElementType, 1, 1, version: FileFormatVersions.Office2019),
@@ -957,7 +958,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Extension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -1164,8 +1165,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio.ElementType, 1, 1, version: FileFormatVersions.Office2019),
@@ -1268,7 +1269,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList());
             builder.AddElement<PerspectiveProjection>()
                 .AddAttribute("fov", a => a.Fov, aBuilder =>
                 {
@@ -1406,24 +1407,24 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaBiLevel>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaCeiling>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaFloor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaInverse>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaModulationEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaModulationFixed>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaReplace>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BiLevel>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Blur>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ColorChange>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ColorReplacement>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Duotone>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.FillOverlay>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Grayscale>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Hsl>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LuminanceEffect>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.TintEffect>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaBiLevel.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaBiLevel());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaCeiling.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaCeiling());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaFloor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaFloor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaInverse.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaInverse());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaModulationEffect.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaModulationEffect());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaModulationFixed.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaModulationFixed());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaReplace.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaReplace());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BiLevel.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BiLevel());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Blur.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Blur());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ColorChange.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ColorChange());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ColorReplacement.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ColorReplacement());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Duotone.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Duotone());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.FillOverlay.ElementType, static () => new DocumentFormat.OpenXml.Drawing.FillOverlay());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Grayscale.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Grayscale());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Hsl.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Hsl());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.LuminanceEffect.ElementType, static () => new DocumentFormat.OpenXml.Drawing.LuminanceEffect());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.TintEffect.ElementType, static () => new DocumentFormat.OpenXml.Drawing.TintEffect());
             builder.AddElement<Blip>()
                 .AddAttribute("r:embed", a => a.Embed)
                 .AddAttribute("r:link", a => a.Link)
@@ -1521,12 +1522,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HslColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HslColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SchemeColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelHex());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SystemColor());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -1692,8 +1693,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimation>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.PosterFrame>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimation.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.EmbeddedAnimation());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.PosterFrame.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.PosterFrame());
             builder.AddElement<Model3DExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -1791,21 +1792,21 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.CustomGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GradientFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GroupFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Outline());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Scene3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Shape3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Transform2D());
             builder.AddElement<ShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -1926,12 +1927,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UpVector3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OrthographicProjection>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PerspectiveProjection>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UpVector3D.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.UpVector3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OrthographicProjection.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OrthographicProjection());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PerspectiveProjection.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PerspectiveProjection());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D.ElementType, 1, 1, version: FileFormatVersions.Office2019),
@@ -2049,12 +2050,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PreTransVector3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PostTransVector3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.MeterPerModelUnitPositiveRatio>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Rotate3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Scale3D>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PreTransVector3D.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PreTransVector3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PostTransVector3D.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PostTransVector3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.MeterPerModelUnitPositiveRatio.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.MeterPerModelUnitPositiveRatio());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Rotate3D.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Rotate3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Scale3D.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Scale3D());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.MeterPerModelUnitPositiveRatio.ElementType, 0, 1, version: FileFormatVersions.Office2019),
@@ -2272,7 +2273,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Blip>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Blip.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Blip());
             builder.AddElement<Model3DRaster>()
                 .AddAttribute("rName", a => a.RName, aBuilder =>
                 {
@@ -2360,7 +2361,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtension>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtension.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtension.ElementType, 0, 0, version: FileFormatVersions.Office2019)
@@ -2436,7 +2437,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList());
             builder.AddElement<ObjectViewport>()
                 .AddAttribute("viewportSz", a => a.ViewportSz, aBuilder =>
                 {
@@ -2521,7 +2522,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2019)
@@ -2612,9 +2613,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio());
             builder.AddElement<AmbientLight>()
                 .AddAttribute("enabled", a => a.Enabled);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2746,10 +2747,10 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio());
             builder.AddElement<PointLight>()
                 .AddAttribute("enabled", a => a.Enabled)
                 .AddAttribute("rad", a => a.Rad, aBuilder =>
@@ -2911,11 +2912,11 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio());
             builder.AddElement<SpotLight>()
                 .AddAttribute("enabled", a => a.Enabled)
                 .AddAttribute("rad", a => a.Rad, aBuilder =>
@@ -3086,11 +3087,11 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.ColorType());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PosPoint3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.LookAtPoint3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio());
             builder.AddElement<DirectionalLight>()
                 .AddAttribute("enabled", a => a.Enabled)
                 .AddAttribute("angularRad", a => a.AngularRad, aBuilder =>

@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -211,7 +212,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier.ElementType, static () => new DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier());
             builder.AddElement<ThreadingInfo>()
                 .AddAttribute("timeZoneBias", a => a.TimeZoneBias);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -425,8 +426,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide.ElementType, static () => new DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide());
         }
     }
 
@@ -590,12 +591,12 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HslColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HslColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SchemeColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelHex());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SystemColor());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -750,7 +751,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Presentation.Extension.ElementType, static () => new DocumentFormat.OpenXml.Presentation.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -873,8 +874,8 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType.ElementType, static () => new DocumentFormat.OpenXml.Office2013.PowerPoint.ColorType());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList());
             builder.AddElement<ExtendedGuide>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {

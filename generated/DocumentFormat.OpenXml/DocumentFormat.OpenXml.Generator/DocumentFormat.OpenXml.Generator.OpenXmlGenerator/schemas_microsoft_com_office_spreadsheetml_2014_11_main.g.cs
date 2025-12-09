@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
@@ -71,7 +72,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping.ElementType, static () => new DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping.ElementType, 1, 0, version: FileFormatVersions.Office2016)
@@ -167,7 +168,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.ExcelAc.CalculatedTimeColumn>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.ExcelAc.CalculatedTimeColumn.ElementType, static () => new DocumentFormat.OpenXml.Office2016.ExcelAc.CalculatedTimeColumn());
             builder.AddElement<ModelTimeGrouping>()
                 .AddAttribute("tableName", a => a.TableName, aBuilder =>
                 {

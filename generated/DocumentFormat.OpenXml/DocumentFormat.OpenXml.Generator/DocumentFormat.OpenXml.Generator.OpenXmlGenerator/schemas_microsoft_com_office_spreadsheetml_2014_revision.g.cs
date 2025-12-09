@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
@@ -113,7 +114,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExHeader>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExHeader.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExHeader());
             builder.AddElement<RevExHeaders>()
                 .AddAttribute("minRev", a => a.MinRev, aBuilder =>
                 {
@@ -209,20 +210,20 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExDefinedName>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExDelObj>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExFormatting>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExFuture>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExMove>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExRowColumn>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExSheetOp>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExTrimmed>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExUnsupported>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevisionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExDefinedName.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExDefinedName());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExDelObj.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExDelObj());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExFormatting.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExFormatting());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExFuture.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExFuture());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExMove.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExMove());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExRowColumn.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExRowColumn());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExSheetOp.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExSheetOp());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExTrimmed.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExTrimmed());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExUnsupported.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExUnsupported());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevGroup.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevGroup());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevisionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevisionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RevExFuture.ElementType, 0, 0, version: FileFormatVersions.Office2016),
@@ -307,13 +308,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Border.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Border());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Alignment.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Alignment());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Protection.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Protection());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Fill.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Fill());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Font.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Font());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.NumberingFormat());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Font.ElementType, 0, 1),
@@ -541,12 +542,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.AutoFilter>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.Comments>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.DataValidation>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.Hyperlink>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.AutoFilter.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.AutoFilter());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.Comments.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.Comments());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.DataValidation.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.DataValidation());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.Hyperlink.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.Hyperlink());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.DataValidation.ElementType, 1, 1, version: FileFormatVersions.Office2016),
@@ -840,7 +841,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExTest>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExTest.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExTest());
             builder.AddElement<RevExFuture>()
                 .AddAttribute("rev", a => a.Rev, aBuilder =>
                 {
@@ -1513,8 +1514,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ChangeCellSubEdit>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevCell>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.ChangeCellSubEdit.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.ChangeCellSubEdit());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevCell.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevCell());
             builder.AddElement<RevExChangeCell>()
                 .AddAttribute("listUid", a => a.ListUid, aBuilder =>
                 {
@@ -1803,8 +1804,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.ExtensionList());
             builder.AddElement<RevExFormatting>()
                 .AddAttribute("rev", a => a.Rev, aBuilder =>
                 {
@@ -2098,8 +2099,8 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula());
             builder.AddElement<RevExDefinedName>()
                 .AddAttribute("rev", a => a.Rev, aBuilder =>
                 {
@@ -2276,7 +2277,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader());
             builder.AddElement<RevExDelObj>()
                 .AddAttribute("rev", a => a.Rev, aBuilder =>
                 {
@@ -2427,9 +2428,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevisionState>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevisionStateLink>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevisionState.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevisionState());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevisionStateLink.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevisionStateLink());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader());
             builder.AddElement<RevExChgObj>()
                 .AddAttribute("rev", a => a.Rev, aBuilder =>
                 {
@@ -3068,19 +3069,19 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExDefinedName>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExDelObj>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExFormatting>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExFuture>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExMove>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExRowColumn>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExSheetOp>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExTrimmed>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevExUnsupported>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevisionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExChgObj());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExDefinedName.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExDefinedName());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExDelObj.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExDelObj());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExFormatting.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExFormatting());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExFuture.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExFuture());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExMove.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExMove());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExRowColumn.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExRowColumn());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExSheetOp.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExSheetOp());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExTrimmed.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExTrimmed());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevExUnsupported.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevExUnsupported());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevisionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevisionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw());
             builder.AddElement<RevGroup>()
                 .AddAttribute("rev", a => a.Rev, aBuilder =>
                 {
@@ -3251,9 +3252,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RstType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.FFormula>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.Xstring>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RstType.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RstType());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.FFormula.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.FFormula());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.Xstring.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.Xstring());
             builder.AddElement<RevCell>()
                 .AddAttribute("t", a => a.T)
                 .AddAttribute("nop", a => a.Nop)
@@ -3405,7 +3406,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RevCell>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RevCell.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RevCell());
             builder.AddElement<ChangeCellSubEdit>()
                 .AddAttribute("r", a => a.R, aBuilder =>
                 {
@@ -3479,7 +3480,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
@@ -3689,7 +3690,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RefMap>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RefMap.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RefMap());
             builder.AddElement<StateBasedHeader>()
                 .AddAttribute("uid", a => a.Uid, aBuilder =>
                 {
@@ -3834,11 +3835,11 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.FreezePanes>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.Outlines>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.FreezePanes.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.FreezePanes());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.Outlines.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.Outlines());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -3977,11 +3978,11 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RefCell>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RefFuture>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RefOartAnchor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.RefTest>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.SheetXluid>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RefCell.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RefCell());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RefFuture.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RefFuture());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RefOartAnchor.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RefOartAnchor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.RefTest.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.RefTest());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.SheetXluid.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.SheetXluid());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Excel.RefCell.ElementType, 1, 1, version: FileFormatVersions.Office2016),
@@ -4295,7 +4296,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.Outline>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Excel.Outline.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Excel.Outline());
             builder.AddElement<Outlines>()
                 .AddAttribute("isRow", a => a.IsRow, aBuilder =>
                 {
@@ -4473,10 +4474,10 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Text>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PhoneticRun.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PhoneticRun());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Run.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Run());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Text.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Text());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Text.ElementType, 0, 1),
@@ -5243,9 +5244,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula1>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formula2>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Formula1.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Formula1());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Formula2.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Formula2());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.ExcelAc.List.ElementType, static () => new DocumentFormat.OpenXml.Office2010.ExcelAc.List());
             builder.AddElement<DataValidation>()
                 .AddAttribute("type", a => a.Type)
                 .AddAttribute("errorStyle", a => a.ErrorStyle)
@@ -5641,16 +5642,16 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SeriesColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.NegativeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.AxisColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.MarkersColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Sparklines>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.SeriesColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.SeriesColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.NegativeColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.NegativeColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.AxisColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.AxisColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.MarkersColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.MarkersColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office.Excel.Formula.ElementType, static () => new DocumentFormat.OpenXml.Office.Excel.Formula());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Excel.Sparklines.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Excel.Sparklines());
             builder.AddElement<SparklineGroup>()
                 .AddAttribute("manualMax", a => a.ManualMax)
                 .AddAttribute("manualMin", a => a.ManualMin)
@@ -5875,9 +5876,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Authors>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CommentList>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Authors.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Authors());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.CommentList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.CommentList());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Authors.ElementType, 1, 1),
@@ -5996,9 +5997,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FilterColumn>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.FilterColumn.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.FilterColumn());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.SortState.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.SortState());
             builder.AddElement<AutoFilter>()
                 .AddAttribute("ref", a => a.Reference);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -6764,23 +6765,23 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnFields>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnItems>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataFields>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Formats>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Location>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageFields>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFields>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotFilters>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowFields>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowItems>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ChartFormats.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ChartFormats());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ColumnFields.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ColumnFields());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ColumnItems.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ColumnItems());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.DataFields.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.DataFields());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Formats.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Formats());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Location.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Location());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PageFields.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PageFields());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotFields.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotFields());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotFilters.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotFilters());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RowFields.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RowFields());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage());
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.RowItems.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.RowItems());
             builder.AddElement<pivotTableDefinition>()
                 .AddAttribute("name", a => a.Name, aBuilder =>
                 {

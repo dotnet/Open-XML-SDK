@@ -8,7 +8,6 @@ using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.IO;
-using System.Xml;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -239,6 +238,47 @@ namespace DocumentFormat.OpenXml.Tests
 
             var r2 = p.GetOrAddFirstChild<Run>();
             Assert.Same(r, r2);
+        }
+
+        [Fact]
+        public void IsValidChild_ValidChild_ReturnsTrue()
+        {
+            // Arrange
+            Paragraph parentElement = new();
+            Run validChild = new();
+
+            // Act
+            bool result = parentElement.IsValidChild(validChild);
+
+            // Assert
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void IsValidChild_InvalidChild_ReturnsFalse()
+        {
+            // Arrange
+            Paragraph parentElement = new();
+            Table invalidChild = new();
+
+            // Act
+            bool result = parentElement.IsValidChild(invalidChild);
+
+            // Assert
+            Assert.False(result);
+        }
+
+        [Fact]
+        public void IsValidChild_NullChild_ReturnsFalse()
+        {
+            // Arrange
+            Paragraph parentElement = new();
+
+            // Act
+            bool result = parentElement.IsValidChild(null);
+
+            // Assert
+            Assert.False(result);
         }
     }
 }

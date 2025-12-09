@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -76,11 +77,11 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Pictures.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Pictures.BlipFill());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Pictures.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Pictures.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Pictures.ShapeStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties.ElementType, 1, 1),
@@ -266,9 +267,9 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnClick());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnHover());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList());
             builder.AddElement<NonVisualDrawingProperties>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -398,8 +399,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureLocks>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PictureLocks.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PictureLocks());
             builder.AddElement<NonVisualPictureDrawingProperties>()
                 .AddAttribute("preferRelativeResize", a => a.PreferRelativeResize);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -494,8 +495,8 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualDrawingProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureDrawingProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Pictures.NonVisualDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Pictures.NonVisualDrawingProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureDrawingProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureDrawingProperties());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Pictures.NonVisualDrawingProperties.ElementType, 1, 1),
@@ -610,10 +611,10 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Blip>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Stretch>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tile>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Blip.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Blip());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SourceRectangle.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SourceRectangle());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Stretch.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Stretch());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Tile.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Tile());
             builder.AddElement<BlipFill>()
                 .AddAttribute("dpi", a => a.Dpi)
                 .AddAttribute("rotWithShape", a => a.RotateWithShape);
@@ -740,21 +741,21 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.CustomGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GradientFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GroupFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Outline());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Scene3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Shape3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Transform2D());
             builder.AddElement<ShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {

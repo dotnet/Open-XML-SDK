@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
@@ -92,7 +93,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList());
             builder.AddElement<DynamicArrayProperties>()
                 .AddAttribute("fDynamic", a => a.FDynamic)
                 .AddAttribute("fCollapsed", a => a.FCollapsed);
@@ -174,7 +175,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Spreadsheet.Extension.ElementType, static () => new DocumentFormat.OpenXml.Spreadsheet.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)

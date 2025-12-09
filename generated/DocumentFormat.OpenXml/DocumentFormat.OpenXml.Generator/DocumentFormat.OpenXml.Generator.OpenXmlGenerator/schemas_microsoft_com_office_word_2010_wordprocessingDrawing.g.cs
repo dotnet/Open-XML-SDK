@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -172,7 +173,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth());
             builder.AddElement<RelativeWidth>()
                 .AddAttribute("relativeFrom", a => a.ObjectId, aBuilder =>
                 {
@@ -267,7 +268,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight());
             builder.AddElement<RelativeHeight>()
                 .AddAttribute("relativeFrom", a => a.RelativeFrom, aBuilder =>
                 {

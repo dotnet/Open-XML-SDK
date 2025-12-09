@@ -164,7 +164,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
                 using (WordprocessingDocument roundTripped = WordprocessingDocument.FromFlatOpcDocument(flatOpcDocument))
                 {
-                    List<AlternativeFormatImportPart> altChunkParts = roundTripped.MainDocumentPart
+                    List<AlternativeFormatImportPart> altChunkParts = roundTripped.MainDocumentPart!
                         .GetPartsOfType<AlternativeFormatImportPart>()
                         .ToList();
 
@@ -201,13 +201,13 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                     .ToList();
 
                 // We want our MainDocumentPart to contain XML data.
-                Assert.Equal(WordprocessingMLContentType, (string)mainDocumentPart.Attribute(Pkg + "contentType"));
+                Assert.Equal(WordprocessingMLContentType, (string?)mainDocumentPart.Attribute(Pkg + "contentType"));
                 Assert.NotEmpty(mainDocumentPart.Elements(Pkg + "xmlData"));
 
                 // We want to see each one of our AlternativeFormatImportParts.
-                Assert.Contains(altChunkParts, p => (string)p.Attribute(Pkg + "contentType") == XhtmlContentType);
-                Assert.Contains(altChunkParts, p => (string)p.Attribute(Pkg + "contentType") == XmlContentType);
-                Assert.Contains(altChunkParts, p => (string)p.Attribute(Pkg + "contentType") == WordprocessingMLContentType);
+                Assert.Contains(altChunkParts, p => (string?)p.Attribute(Pkg + "contentType") == XhtmlContentType);
+                Assert.Contains(altChunkParts, p => (string?)p.Attribute(Pkg + "contentType") == XmlContentType);
+                Assert.Contains(altChunkParts, p => (string?)p.Attribute(Pkg + "contentType") == WordprocessingMLContentType);
 
                 // We want all of our AlternativeFormatImportParts to contain binary data,
                 // even though two of them have a content type ending with "+xml".
@@ -276,11 +276,23 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             using var presDoc = PresentationDocument.Open(testFile, false);
 
             Assert.NotNull(presDoc);
+            Assert.NotNull(presDoc.PresentationPart);
 
             // Check to see that the Model3DReferenceRelationshippart has content type 'model/gltf-binary'
-            SlidePart slidePart = presDoc.PresentationPart.GetPartsOfType<SlidePart>().FirstOrDefault();
+            PresentationPart? presentationPart = presDoc.PresentationPart;
+            IEnumerable<SlidePart>? slideParts = presentationPart.GetPartsOfType<SlidePart>();
+
+            Assert.NotNull(slideParts);
+
+            Assert.True(slideParts.Count<SlidePart>() > 0);
+
+            SlidePart? slidePart = slideParts.First();
+
             IEnumerable<Model3DReferenceRelationshipPart> model3DReferenceRelationshipParts = slidePart.Model3DReferenceRelationshipParts;
-            Model3DReferenceRelationshipPart model3DReferenceRelationshipPart = model3DReferenceRelationshipParts.FirstOrDefault();
+
+            Assert.True(model3DReferenceRelationshipParts.Count<Model3DReferenceRelationshipPart>() > 0);
+
+            Model3DReferenceRelationshipPart model3DReferenceRelationshipPart = model3DReferenceRelationshipParts.First();
 
             Assert.Equal("model/gltf-binary", model3DReferenceRelationshipPart.ContentType);
         }
@@ -296,9 +308,9 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             Assert.NotNull(presDoc);
 
             // Check to see that the Model3DReferenceRelationshippart has content type 'model/gltf-binary'
-            SlidePart slidePart = presDoc.PresentationPart.GetPartsOfType<SlidePart>().FirstOrDefault();
+            SlidePart slidePart = presDoc.PresentationPart!.GetPartsOfType<SlidePart>().First();
             IEnumerable<Model3DReferenceRelationshipPart> model3DReferenceRelationshipParts = slidePart.Model3DReferenceRelationshipParts;
-            Model3DReferenceRelationshipPart model3DReferenceRelationshipPart = model3DReferenceRelationshipParts.FirstOrDefault();
+            Model3DReferenceRelationshipPart model3DReferenceRelationshipPart = model3DReferenceRelationshipParts.First();
 
             Assert.Equal("model/gltf-binary", model3DReferenceRelationshipPart.ContentType);
         }
@@ -329,6 +341,62 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             spd.LoadAllParts();
 
             Assert.NotNull(spd);
+        }
+
+        [Fact]
+        public void IsEncryptedOfficeFile_ReturnsTrue_ForEncryptedFile()
+        {
+            using (Stream stream = GetStream(TestFiles.Encrypted_pptx, false))
+            {
+                Assert.True(OpenXmlPackage.IsEncryptedOfficeFile(stream));
+            }
+        }
+
+        [Fact]
+        public void IsEncryptedOfficeFile_ReturnsFalse_ForUnencryptedFile()
+        {
+            using (Stream stream = GetStream(TestFiles.Presentation, false))
+            {
+                Assert.False(OpenXmlPackage.IsEncryptedOfficeFile(stream));
+            }
+        }
+
+        [Fact]
+        public void IsEncryptedOfficeFile_ThrowsArgumentNullException_ForNullStream()
+        {
+            Assert.Throws<ArgumentNullException>(() => OpenXmlPackage.IsEncryptedOfficeFile((Stream)null!));
+        }
+
+        [Fact]
+        public void IsEncryptedOfficeFile_ThrowsArgumentException_ForUnseekableStream()
+        {
+            var unseekable = new UnseekableStream();
+            Assert.Throws<ArgumentException>(() => OpenXmlPackage.IsEncryptedOfficeFile(unseekable));
+        }
+
+        private class UnseekableStream : MemoryStream
+        {
+            public override bool CanSeek => false;
+        }
+
+        [Fact]
+        public void IsEncryptedOfficeFile_ReturnsTrue_ForEncryptedFilePath()
+        {
+            string filePath = GetTestFilePath(TestFiles.Encrypted_pptx);
+            Assert.True(OpenXmlPackage.IsEncryptedOfficeFile(filePath));
+
+            // Clean up the test file path
+            File.Delete(filePath);
+        }
+
+        [Fact]
+        public void IsEncryptedOfficeFile_ReturnsFalse_ForUnencryptedFile_FromString()
+        {
+            string filePath = GetTestFilePath(TestFiles.Presentation);
+            Assert.False(OpenXmlPackage.IsEncryptedOfficeFile(filePath));
+
+            // Clean up the test file path
+            File.Delete(filePath);
         }
     }
 }

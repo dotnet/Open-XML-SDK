@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -522,8 +523,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Offset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Offset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Extents.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Extents());
             builder.AddElement<Transform2D>()
                 .AddAttribute("rot", a => a.Rotation)
                 .AddAttribute("flipH", a => a.HorizontalFlip)
@@ -1297,16 +1298,16 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NonVisualDrawingProps>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NonVisualGroupDrawingShapeProps>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.ConnectorMoniker>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.GraphicFrameMoniker>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeMoniker>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.InkMoniker>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.PictureMoniker>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.ShapeMoniker>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.NonVisualDrawingProps.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.NonVisualDrawingProps());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.NonVisualGroupDrawingShapeProps.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.NonVisualGroupDrawingShapeProps());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.ConnectorMoniker.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.ConnectorMoniker());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.GraphicFrameMoniker.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.GraphicFrameMoniker());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeMoniker.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeMoniker());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.InkMoniker.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.InkMoniker());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.PictureMoniker.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.PictureMoniker());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.ShapeMoniker.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.ShapeMoniker());
             builder.AddElement<GroupCommand>()
                 .AddAttribute("verId", a => a.VerId)
                 .AddAttribute("preventRegroup", a => a.PreventRegroup)
@@ -2920,23 +2921,23 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BulletColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AutoNumberedBullet>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureBullet>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BulletColorText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BulletSizeText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BulletSizePercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BulletSizePoints>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BulletFontText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.DefaultRunProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CharacterBullet>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BulletFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoBullet>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LineSpacing>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SpaceBefore>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SpaceAfter>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.TabStopList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BulletColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BulletColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AutoNumberedBullet());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PictureBullet.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PictureBullet());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BulletColorText.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BulletColorText());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BulletSizeText.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BulletSizeText());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BulletSizePercentage.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BulletSizePercentage());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BulletSizePoints.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BulletSizePoints());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BulletFontText.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BulletFontText());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.DefaultRunProperties.ElementType, static () => new DocumentFormat.OpenXml.Drawing.DefaultRunProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.CharacterBullet.ElementType, static () => new DocumentFormat.OpenXml.Drawing.CharacterBullet());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BulletFont.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BulletFont());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoBullet.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoBullet());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.LineSpacing.ElementType, static () => new DocumentFormat.OpenXml.Drawing.LineSpacing());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SpaceBefore.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SpaceBefore());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SpaceAfter.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SpaceAfter());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.TabStopList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.TabStopList());
             builder.AddElement<TextParagraphPropertiesType>()
                 .AddAttribute("marL", a => a.LeftMargin, aBuilder =>
                 {
@@ -3308,14 +3309,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.FlatText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetTextWarp>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoAutoFit>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NormalAutoFit>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeAutoFit>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.FlatText.ElementType, static () => new DocumentFormat.OpenXml.Drawing.FlatText());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetTextWarp.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetTextWarp());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Scene3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Shape3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoAutoFit.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoAutoFit());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NormalAutoFit.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NormalAutoFit());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ShapeAutoFit.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ShapeAutoFit());
             builder.AddElement<TextBodyProperties>()
                 .AddAttribute("rot", a => a.Rotation)
                 .AddAttribute("spcFirstLastPara", a => a.UseParagraphSpacing)
@@ -3701,21 +3702,21 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.CustomGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GradientFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GroupFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Outline());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Scene3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Shape3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Transform2D());
             builder.AddElement<ShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -4733,15 +4734,15 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -5188,12 +5189,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HslColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HslColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SchemeColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelHex());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SystemColor());
             builder.AddElement<StyleMatrixReferenceType>()
                 .AddAttribute("idx", a => a.Index, aBuilder =>
                 {
@@ -5350,12 +5351,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HslColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HslColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SchemeColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelHex());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SystemColor());
             builder.AddElement<FontReference>()
                 .AddAttribute("idx", a => a.Index, aBuilder =>
                 {
@@ -5519,10 +5520,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -5756,10 +5757,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Blip>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Stretch>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tile>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Blip.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Blip());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SourceRectangle.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SourceRectangle());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Stretch.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Stretch());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Tile.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Tile());
             builder.AddElement<BlipFillProperties>()
                 .AddAttribute("dpi", a => a.Dpi)
                 .AddAttribute("rotWithShape", a => a.RotateWithShape);
@@ -5999,10 +6000,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -6252,17 +6253,17 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.TransformGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GradientFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GroupFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.TransformGroup.ElementType, static () => new DocumentFormat.OpenXml.Drawing.TransformGroup());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Scene3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
             builder.AddElement<GroupShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -6373,12 +6374,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -6579,9 +6580,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnClick());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnHover());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList());
             builder.AddElement<NonVisualDrawingProps>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -6701,8 +6702,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GroupShapeLocks.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GroupShapeLocks());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.GroupShapeLocks.ElementType, 0, 1),
@@ -7111,8 +7112,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection());
             builder.AddElement<ModifyNonVisualConnectorProps>()
                 .AddAttribute("noGrp", a => a.NoGrp)
                 .AddAttribute("noSelect", a => a.NoSelect)
@@ -7227,18 +7228,18 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -7703,7 +7704,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016)
@@ -7984,18 +7985,18 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomDash>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HeadEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.TailEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LineJoinBevel>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Miter>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Round>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetDash>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.CustomDash.ElementType, static () => new DocumentFormat.OpenXml.Drawing.CustomDash());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GradientFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HeadEnd.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HeadEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.TailEnd.ElementType, static () => new DocumentFormat.OpenXml.Drawing.TailEnd());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.LineJoinBevel.ElementType, static () => new DocumentFormat.OpenXml.Drawing.LineJoinBevel());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Miter.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Miter());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Round.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Round());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.LinePropertiesExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetDash.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetDash());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
             builder.AddElement<LinePropertiesType>()
                 .AddAttribute("w", a => a.Width, aBuilder =>
                 {
@@ -8458,7 +8459,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData());
             builder.AddElement<OpenXmlHyperlinkPropsElement>()
                 .AddAttribute("source", a => a.Source)
                 .AddAttribute("action", a => a.Action)
@@ -8539,8 +8540,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps.ElementType, 0, 1, version: FileFormatVersions.Office2016),
@@ -8634,8 +8635,8 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty.ElementType, 0, 1, version: FileFormatVersions.Office2016),

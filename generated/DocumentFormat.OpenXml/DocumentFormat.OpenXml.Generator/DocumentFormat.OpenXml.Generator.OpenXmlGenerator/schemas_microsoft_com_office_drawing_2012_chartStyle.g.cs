@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -99,14 +100,14 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleVariation>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HslColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HslColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SchemeColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelHex());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SystemColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleVariation.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleVariation());
             builder.AddElement<ColorStyle>()
                 .AddAttribute("meth", a => a.Method, aBuilder =>
                 {
@@ -268,38 +269,38 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerLayoutProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.CategoryAxis>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartArea>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabel>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelCallout>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointMarker>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointWireframe>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataTableStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DownBar>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DropLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ErrorBar>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Floor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMajor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMinor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.HiLoLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LeaderLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesAxis>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitleStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineLabel>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.UpBar>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerLayoutProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerLayoutProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.AxisTitle());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.CategoryAxis.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.CategoryAxis());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartArea.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartArea());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabel.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabel());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelCallout.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelCallout());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint3D.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPoint3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointLine.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointLine());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointMarker.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointMarker());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointWireframe.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataPointWireframe());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataTableStyle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataTableStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DownBar.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DownBar());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DropLine.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DropLine());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ErrorBar.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ErrorBar());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Floor.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Floor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMajor.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMajor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMinor.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.GridlineMinor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.HiLoLine.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.HiLoLine());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LeaderLine.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LeaderLine());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendStyle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea3D.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.PlotArea3D());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesAxis.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesAxis());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesLine.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.SeriesLine());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitleStyle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitleStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineStyle.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineStyle());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineLabel.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TrendlineLabel());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.UpBar.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.UpBar());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ValueAxis());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall());
             builder.AddElement<ChartStyle>()
                 .AddAttribute("id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -872,34 +873,34 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HueOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Complement>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Gamma>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Gray>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.InverseGamma>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Inverse>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Saturation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SaturationOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SaturationModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Luminance>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LuminanceOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LuminanceModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Red>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RedOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RedModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Green>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GreenOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GreenModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Blue>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlueOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlueModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Hue>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tint>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shade>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Alpha>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HueModulation>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HueOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HueOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Complement.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Complement());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Gamma.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Gamma());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Gray.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Gray());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.InverseGamma.ElementType, static () => new DocumentFormat.OpenXml.Drawing.InverseGamma());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Inverse.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Inverse());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Saturation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Saturation());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SaturationOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SaturationOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SaturationModulation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SaturationModulation());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Luminance.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Luminance());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.LuminanceOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.LuminanceOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.LuminanceModulation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.LuminanceModulation());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Red.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Red());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RedOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RedOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RedModulation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RedModulation());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Green.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Green());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GreenOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GreenOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GreenModulation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GreenModulation());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Blue.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Blue());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlueOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlueOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlueModulation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlueModulation());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Hue.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Hue());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Tint.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Tint());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Shade.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Shade());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Alpha.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Alpha());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaModulation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaModulation());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HueModulation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HueModulation());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -998,7 +999,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Extension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
@@ -1107,34 +1108,34 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HueOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Complement>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Gamma>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Gray>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.InverseGamma>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Inverse>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Saturation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SaturationOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SaturationModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Luminance>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LuminanceOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LuminanceModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Red>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RedOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RedModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Green>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GreenOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GreenModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Blue>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlueOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlueModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Hue>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Tint>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shade>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Alpha>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AlphaModulation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HueModulation>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HueOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HueOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Complement.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Complement());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Gamma.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Gamma());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Gray.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Gray());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.InverseGamma.ElementType, static () => new DocumentFormat.OpenXml.Drawing.InverseGamma());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Inverse.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Inverse());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Saturation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Saturation());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SaturationOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SaturationOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SaturationModulation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SaturationModulation());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Luminance.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Luminance());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.LuminanceOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.LuminanceOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.LuminanceModulation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.LuminanceModulation());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Red.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Red());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RedOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RedOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RedModulation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RedModulation());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Green.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Green());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GreenOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GreenOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GreenModulation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GreenModulation());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Blue.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Blue());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlueOffset.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlueOffset());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlueModulation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlueModulation());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Hue.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Hue());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Tint.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Tint());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Shade.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Shade());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Alpha.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Alpha());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.AlphaModulation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.AlphaModulation());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HueModulation.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HueModulation());
             builder.AddElement<StyleColor>()
                 .AddAttribute("val", a => a.Val, aBuilder =>
                 {
@@ -1516,13 +1517,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HslColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HslColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SchemeColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelHex());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SystemColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor());
             builder.AddElement<StyleReference>()
                 .AddAttribute("idx", a => a.Index, aBuilder =>
                 {
@@ -1658,13 +1659,13 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HslColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HslColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SchemeColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SchemeColor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RgbColorModelHex.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RgbColorModelHex());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SystemColor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SystemColor());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor());
             builder.AddElement<FontReference>()
                 .AddAttribute("idx", a => a.Index, aBuilder =>
                 {
@@ -1773,21 +1774,21 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.CustomGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.CustomGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GradientFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GroupFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Outline());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetGeometry.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetGeometry());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Scene3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Shape3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Transform2D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Transform2D());
             builder.AddElement<ShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -2114,28 +2115,28 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RightToLeft>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Highlight>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnMouseOver>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Underline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.LatinFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EastAsianFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ComplexScriptFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SymbolFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.UnderlineFillText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.UnderlineFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.UnderlineFollowsText>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.BlipFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.BlipFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.RightToLeft.ElementType, static () => new DocumentFormat.OpenXml.Drawing.RightToLeft());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Highlight.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Highlight());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectDag.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectDag());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EffectList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EffectList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GradientFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GradientFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.GroupFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.GroupFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnClick());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.HyperlinkOnMouseOver.ElementType, static () => new DocumentFormat.OpenXml.Drawing.HyperlinkOnMouseOver());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Outline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Outline());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Underline.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Underline());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PatternFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PatternFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SolidFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SolidFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.LatinFont.ElementType, static () => new DocumentFormat.OpenXml.Drawing.LatinFont());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.EastAsianFont.ElementType, static () => new DocumentFormat.OpenXml.Drawing.EastAsianFont());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ComplexScriptFont.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ComplexScriptFont());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.SymbolFont.ElementType, static () => new DocumentFormat.OpenXml.Drawing.SymbolFont());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.UnderlineFillText.ElementType, static () => new DocumentFormat.OpenXml.Drawing.UnderlineFillText());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.UnderlineFill.ElementType, static () => new DocumentFormat.OpenXml.Drawing.UnderlineFill());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.UnderlineFollowsText.ElementType, static () => new DocumentFormat.OpenXml.Drawing.UnderlineFollowsText());
             builder.AddElement<TextCharacterPropertiesType>()
                 .AddAttribute("kumimoji", a => a.Kumimoji)
                 .AddAttribute("lang", a => a.Language)
@@ -2494,14 +2495,14 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2013;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.FlatText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetTextWarp>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoAutoFit>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NormalAutoFit>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapeAutoFit>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.FlatText.ElementType, static () => new DocumentFormat.OpenXml.Drawing.FlatText());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.PresetTextWarp.ElementType, static () => new DocumentFormat.OpenXml.Drawing.PresetTextWarp());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Scene3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Scene3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Shape3DType.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Shape3DType());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NoAutoFit.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NoAutoFit());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.NormalAutoFit.ElementType, static () => new DocumentFormat.OpenXml.Drawing.NormalAutoFit());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ShapeAutoFit.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ShapeAutoFit());
             builder.AddElement<TextBodyProperties>()
                 .AddAttribute("rot", a => a.Rotation)
                 .AddAttribute("spcFirstLastPara", a => a.UseParagraphSpacing)
@@ -5962,15 +5963,15 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ShapeProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextBodyProperties());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TextCharacterPropertiesType());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FontReference());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineReference());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.FillReference());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.EffectReference());
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale());
             builder.AddElement<StyleEntry>()
                 .AddAttribute("mods", a => a.Modifiers);
         }

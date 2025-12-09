@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -84,8 +85,8 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.OfficeArtExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties());
             builder.AddElement<EmbeddedAnimation>()
                 .AddAttribute("animId", a => a.AnimId, aBuilder =>
                 {
@@ -313,7 +314,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList>();
+            builder.AddChild(DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList());
             builder.AddElement<AnimationProperties>()
                 .AddAttribute("name", a => a.Name)
                 .AddAttribute("length", a => a.Length, aBuilder =>
@@ -410,7 +411,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Extension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Extension());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)

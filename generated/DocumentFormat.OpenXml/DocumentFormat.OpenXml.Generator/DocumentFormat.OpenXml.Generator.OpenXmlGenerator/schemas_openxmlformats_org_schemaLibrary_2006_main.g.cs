@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
@@ -71,7 +72,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild<DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema>();
+            builder.AddChild(DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema.ElementType, static () => new DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema.ElementType, 0, 0)

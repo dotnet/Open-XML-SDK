@@ -4,11 +4,13 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -44,7 +46,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace ChartSpace
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace? ChartSpace
         {
             get
             {
