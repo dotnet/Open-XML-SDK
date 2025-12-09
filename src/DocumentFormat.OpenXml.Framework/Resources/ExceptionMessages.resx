@@ -411,4 +411,7 @@
   <data name="AddedPartIsNotAllowed" xml:space="preserve">
     <value>The part cannot be added here.</value>
   </data>
+  <data name="EncryptedPackageNotSupported" xml:space="preserve">
+    <value>Encrypted packages are not supported.</value>
+  </data>
 </root>

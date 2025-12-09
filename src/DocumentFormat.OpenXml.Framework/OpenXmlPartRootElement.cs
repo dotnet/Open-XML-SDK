@@ -216,7 +216,7 @@ namespace DocumentFormat.OpenXml
             var events = Features.Get<IPartRootEventsFeature>();
             events?.OnChange(EventType.Saving, OpenXmlPart);
 
-            using (var xmlWriter = XmlWriter.Create(stream, settings))
+            using (var xmlWriter = new XmlDOMTextWriter(stream, settings))
             {
                 if (_standaloneDeclaration is not null)
                 {

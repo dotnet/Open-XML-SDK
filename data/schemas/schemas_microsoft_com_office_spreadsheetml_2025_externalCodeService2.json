@@ -1,0 +1,27 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2025/externalCodeService2",
+  "Types": [
+    {
+      "Name": "xlecs2:CT_ExternalCodeServiceImageAsInput/xlecs2:externalCodeServiceImageAsInput",
+      "ClassName": "ExternalCodeServiceImageAsInput",
+      "Summary": "Defines the ExternalCodeServiceImageAsInput Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":maxWidth",
+          "Type": "UInt32Value",
+          "Version": "Microsoft365",
+          "PropertyComments": "maxWidth"
+        },
+        {
+          "QName": ":maxHeight",
+          "Type": "UInt32Value",
+          "Version": "Microsoft365",
+          "PropertyComments": "maxHeight"
+        }
+      ]
+    }
+  ]
+}

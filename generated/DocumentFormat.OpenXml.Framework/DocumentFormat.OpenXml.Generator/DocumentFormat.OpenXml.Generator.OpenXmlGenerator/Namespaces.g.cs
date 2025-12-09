@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using System.Collections.Generic;
 
@@ -146,10 +147,12 @@ internal partial class OpenXmlNamespaceResolver
         { "http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing", "xdr14" },
         { "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "xfpb" },
         { "http://schemas.microsoft.com/office/spreadsheetml/2023/externalCodeService", "xlecs" },
+        { "http://schemas.microsoft.com/office/spreadsheetml/2025/externalCodeService2", "xlecs2" },
         { "http://schemas.microsoft.com/office/spreadsheetml/2023/msForms", "xlmsforms" },
         { "http://schemas.microsoft.com/office/spreadsheetml/2024/pivotAutoRefresh", "xlpar" },
         { "http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation", "xlpcalc" },
         { "http://schemas.microsoft.com/office/spreadsheetml/2024/pivotDynamicArrays", "xlpda" },
+        { "http://schemas.microsoft.com/office/spreadsheetml/2025/pivotDataSource", "xlpds" },
         { "http://schemas.microsoft.com/office/spreadsheetml/2016/01/main", "xlPr" },
         { "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "xlrd" },
         { "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2", "xlrd2" },
@@ -316,10 +319,12 @@ internal partial class OpenXmlNamespaceResolver
         { "xdr14", "http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing" },
         { "xfpb", "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag" },
         { "xlecs", "http://schemas.microsoft.com/office/spreadsheetml/2023/externalCodeService" },
+        { "xlecs2", "http://schemas.microsoft.com/office/spreadsheetml/2025/externalCodeService2" },
         { "xlmsforms", "http://schemas.microsoft.com/office/spreadsheetml/2023/msForms" },
         { "xlpar", "http://schemas.microsoft.com/office/spreadsheetml/2024/pivotAutoRefresh" },
         { "xlpcalc", "http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation" },
         { "xlpda", "http://schemas.microsoft.com/office/spreadsheetml/2024/pivotDynamicArrays" },
+        { "xlpds", "http://schemas.microsoft.com/office/spreadsheetml/2025/pivotDataSource" },
         { "xlPr", "http://schemas.microsoft.com/office/spreadsheetml/2016/01/main" },
         { "xlrd", "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata" },
         { "xlrd2", "http://schemas.microsoft.com/office/spreadsheetml/2017/richdata2" },
@@ -486,10 +491,12 @@ internal partial class OpenXmlNamespaceResolver
         { "xdr14", FileFormatVersions.Office2010 },
         { "xfpb", FileFormatVersions.Microsoft365 },
         { "xlecs", FileFormatVersions.Microsoft365 },
+        { "xlecs2", FileFormatVersions.Microsoft365 },
         { "xlmsforms", FileFormatVersions.Microsoft365 },
         { "xlpar", FileFormatVersions.Microsoft365 },
         { "xlpcalc", FileFormatVersions.Microsoft365 },
         { "xlpda", FileFormatVersions.Microsoft365 },
+        { "xlpds", FileFormatVersions.Microsoft365 },
         { "xlPr", FileFormatVersions.Office2019 },
         { "xlrd", FileFormatVersions.Office2019 },
         { "xlrd2", FileFormatVersions.Office2019 },

@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
@@ -17,6 +18,7 @@ using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion;
+using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2025.ExternalCodeService2;
 using DocumentFormat.OpenXml.Office2010.Excel;
 using DocumentFormat.OpenXml.Office2013.Excel;
 using DocumentFormat.OpenXml.Office2013.ExcelAc;
@@ -49934,6 +49936,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences" /> <c>&lt;x15:timelineCacheRefs></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties" /> <c>&lt;x15:workbookPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService" /> <c>&lt;xlecs:externalCodeService></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2025.ExternalCodeService2.ExternalCodeServiceImageAsInput" /> <c>&lt;xlecs2:externalCodeServiceImageAsInput></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion.Version" /> <c>&lt;xlwcv:version></c></description></item>
     /// </list>
     /// </remarks>
@@ -50002,6 +50005,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences());
             builder.AddChild(DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties());
             builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService());
+            builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2025.ExternalCodeService2.ExternalCodeServiceImageAsInput.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2025.ExternalCodeService2.ExternalCodeServiceImageAsInput());
             builder.AddChild(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion.Version.ElementType, static () => new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion.Version());
             builder.AddElement<WorkbookExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -50024,6 +50028,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 new ElementParticle(DocumentFormat.OpenXml.Office2013.Excel.DataModel.ElementType, 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
                 new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion.Version.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2025.ExternalCodeService2.ExternalCodeServiceImageAsInput.ElementType, 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1)
             };
         }

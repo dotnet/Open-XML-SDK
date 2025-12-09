@@ -3,7 +3,7 @@
   "Name": "RdRichValueWebImagePart",
   "Base": "OpenXmlPart",
   "ContentType": "application/vnd.ms-excel.rdrichvaluewebimage\u002Bxml",
-  "RelationshipType": "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage",
+  "RelationshipType": "http://schemas.microsoft.com/office/2020/07/relationships/rdRichValueWebImage",
   "Target": "rdRichValueWebImage",
   "RootElement": "webImagesSrd",
   "Paths": {
