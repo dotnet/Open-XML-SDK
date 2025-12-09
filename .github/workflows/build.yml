@@ -73,7 +73,7 @@ jobs:
 
     env:
       RunPeVerify: true 
-      Solution_Name: Open-XML-SDK.sln  
+      Solution_Name: Open-XML-SDK.slnx
       Configuration: ${{ matrix.configuration }}
       ProjectLoadStyle: ${{ matrix.projectloadstyle }}
           
