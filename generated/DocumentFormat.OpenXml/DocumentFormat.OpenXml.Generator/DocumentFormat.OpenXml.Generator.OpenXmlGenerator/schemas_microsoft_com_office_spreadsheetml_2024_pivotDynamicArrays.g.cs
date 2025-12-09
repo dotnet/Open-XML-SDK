@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
@@ -21,6 +22,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlpda:pivotCacheDynamicArray.</para>
     /// </summary>
+    [Obsolete("Unused class, will be removed in a future version.", false)]
+    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)] 
     public partial class PivotCacheDynamicArray : OpenXmlLeafElement
     {
         #pragma warning disable CS0109

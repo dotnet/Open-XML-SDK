@@ -439,6 +439,15 @@ namespace DocumentFormat.OpenXml.Validation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The &apos;{0}&apos; part is missing its root element..
+        /// </summary>
+        internal static string Sch_MissingPartRootElement {
+            get {
+                return ResourceManager.GetString("Sch_MissingPartRootElement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The required attribute &apos;{0}&apos; is missing..
         /// </summary>
         internal static string Sch_MissRequiredAttribute {

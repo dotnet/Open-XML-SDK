@@ -1,0 +1,40 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2025/pivotDataSource",
+  "Types": [
+    {
+      "Name": "xlpds:CT_PivotCacheDataSource/xlpds:pivotCacheDataSource",
+      "ClassName": "PivotCacheDataSource",
+      "Summary": "Defines the PivotCacheDataSource Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":ref",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "ref"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:ST_Formula/xne:f",
+          "PropertyName": "Formula"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:ST_Formula/xne:f",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

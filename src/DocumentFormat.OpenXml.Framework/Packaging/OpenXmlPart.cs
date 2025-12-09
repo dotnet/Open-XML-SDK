@@ -43,8 +43,19 @@ namespace DocumentFormat.OpenXml.Packaging
 
             SetPackage(openXmlPackage, parent);
 
-            // TODO: should we delay load?
-            var part = _openXmlPackage.Features.GetRequired<IPackageFeature>().Package.GetPart(uriTarget);
+            IPackagePart? part = null;
+            try
+            {
+                // TODO: should we delay load?
+                part = _openXmlPackage.Features.GetRequired<IPackageFeature>().Package.GetPart(uriTarget);
+            }
+            catch (InvalidOperationException ex)
+            {
+                var errorMessage = SR.Format(
+                    ExceptionMessages.SpecifiedPartNotFound,
+                    uriTarget.OriginalString, ex.Message);
+                throw new InvalidOperationException(errorMessage);
+            }
 
             Features.Set<IPackagePartFeature>(new PackagePartFeature(part));
 
@@ -446,6 +457,19 @@ namespace DocumentFormat.OpenXml.Packaging
         internal virtual bool IsInVersion(FileFormatVersions version)
         {
             return true;
+        }
+
+        internal override bool IsEmptyPart()
+        {
+            if (!Uri.ToString().EndsWith(".xml", System.StringComparison.InvariantCultureIgnoreCase))
+            {
+                return false;
+            }
+
+            using (Stream stream = GetStream())
+            {
+                return stream.Length == 0;
+            }
         }
 
         #endregion

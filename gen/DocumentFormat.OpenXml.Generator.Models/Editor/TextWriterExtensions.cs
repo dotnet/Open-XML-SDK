@@ -29,6 +29,7 @@ public static class TextWriterExtensions
         writer.WriteLine(Line2);
         writer.WriteLine();
         writer.WriteLine("#nullable enable");
+        writer.WriteLine("#pragma warning disable CS0618");
         writer.WriteLine();
     }
 

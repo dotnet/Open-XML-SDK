@@ -71,6 +71,26 @@ namespace DocumentFormat.OpenXml.Tests
             return isEditable ? stream.AsMemoryStream() : stream;
         }
 
+        /// <summary>
+        /// Extracts an embedded test resource to a temporary file and returns its file path.
+        /// </summary>
+        /// <param name="resourceName">The name of the embedded resource to extract.</param>
+        /// <returns>The full path to the temporary file containing the resource data.</returns>
+        /// <remarks>
+        /// The caller is responsible for deleting the temporary file after use.
+        /// </remarks>
+        public static string GetTestFilePath(string resourceName)
+        {
+            string tempPath = Path.Combine(Path.GetTempPath(), Guid.NewGuid() + Path.GetExtension(resourceName));
+
+            using (Stream stream = GetStream(resourceName, false))
+            using (FileStream fileStream = File.Create(tempPath))
+            {
+                stream.CopyTo(fileStream);
+                return tempPath;
+            }
+        }
+
         private static Stream AsMemoryStream(this Stream stream)
         {
             if (stream is MemoryStream ms)
