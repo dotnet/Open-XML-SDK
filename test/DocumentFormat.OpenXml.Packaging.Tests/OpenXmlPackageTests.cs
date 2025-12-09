@@ -342,5 +342,61 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             Assert.NotNull(spd);
         }
+
+        [Fact]
+        public void IsEncryptedOfficeFile_ReturnsTrue_ForEncryptedFile()
+        {
+            using (Stream stream = GetStream(TestFiles.Encrypted_pptx, false))
+            {
+                Assert.True(OpenXmlPackage.IsEncryptedOfficeFile(stream));
+            }
+        }
+
+        [Fact]
+        public void IsEncryptedOfficeFile_ReturnsFalse_ForUnencryptedFile()
+        {
+            using (Stream stream = GetStream(TestFiles.Presentation, false))
+            {
+                Assert.False(OpenXmlPackage.IsEncryptedOfficeFile(stream));
+            }
+        }
+
+        [Fact]
+        public void IsEncryptedOfficeFile_ThrowsArgumentNullException_ForNullStream()
+        {
+            Assert.Throws<ArgumentNullException>(() => OpenXmlPackage.IsEncryptedOfficeFile((Stream)null!));
+        }
+
+        [Fact]
+        public void IsEncryptedOfficeFile_ThrowsArgumentException_ForUnseekableStream()
+        {
+            var unseekable = new UnseekableStream();
+            Assert.Throws<ArgumentException>(() => OpenXmlPackage.IsEncryptedOfficeFile(unseekable));
+        }
+
+        private class UnseekableStream : MemoryStream
+        {
+            public override bool CanSeek => false;
+        }
+
+        [Fact]
+        public void IsEncryptedOfficeFile_ReturnsTrue_ForEncryptedFilePath()
+        {
+            string filePath = GetTestFilePath(TestFiles.Encrypted_pptx);
+            Assert.True(OpenXmlPackage.IsEncryptedOfficeFile(filePath));
+
+            // Clean up the test file path
+            File.Delete(filePath);
+        }
+
+        [Fact]
+        public void IsEncryptedOfficeFile_ReturnsFalse_ForUnencryptedFile_FromString()
+        {
+            string filePath = GetTestFilePath(TestFiles.Presentation);
+            Assert.False(OpenXmlPackage.IsEncryptedOfficeFile(filePath));
+
+            // Clean up the test file path
+            File.Delete(filePath);
+        }
     }
 }

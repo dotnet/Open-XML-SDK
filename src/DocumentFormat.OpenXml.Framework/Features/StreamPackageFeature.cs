@@ -56,7 +56,12 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageS
         }
         catch when (isOwned)
         {
-            // Ensure that the stream if created is disposed before leaving the constructor so we don't hold onto it
+            if (_stream is not null && OpenXmlPackage.IsEncryptedOfficeFile(_stream))
+            {
+                _stream.Dispose();
+                throw new OpenXmlPackageException(ExceptionMessages.EncryptedPackageNotSupported);
+            }
+
             _stream?.Dispose();
             throw;
         }
