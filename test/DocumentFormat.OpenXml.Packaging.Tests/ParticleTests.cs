@@ -229,16 +229,17 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 fs.SetLength(0);
 
                 var orderedData = constraints.OrderBy(t => t.Key.FullName, StringComparer.Ordinal);
-                var json = JsonSerializer.Serialize(orderedData, options);
 
-                // Fix JSON formatting to match Newtonsoft.Json indentation
-                json = json.Replace("    {", "  {")
-                           .Replace("        \"", "    \"")
-                           .Replace("            ", "      ");
-
-                using (var textWriter = new StreamWriter(fs))
+                // Use Utf8JsonWriter with custom indentation to match expected format
+                var writerOptions = new JsonWriterOptions
                 {
-                    textWriter.Write(json);
+                    Indented = true,
+                    IndentSize = 1,
+                };
+
+                using (var writer = new Utf8JsonWriter(fs, writerOptions))
+                {
+                    JsonSerializer.Serialize(writer, orderedData, options);
                 }
             }
 
