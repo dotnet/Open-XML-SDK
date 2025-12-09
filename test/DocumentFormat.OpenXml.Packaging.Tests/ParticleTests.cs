@@ -210,7 +210,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             {
                 WriteIndented = true,
                 DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
-                PropertyNamingPolicy = null, // Use Pascal case like Newtonsoft
+                PropertyNamingPolicy = null,
                 Converters =
                 {
                     new JsonStringEnumConverter(),
