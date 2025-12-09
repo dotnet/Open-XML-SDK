@@ -9,7 +9,7 @@
     <RootNamespace>DocumentFormat.OpenXml.Generator</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.Text.Json" PrivateAssets="all" />
+    <PackageReference Include="Newtonsoft.Json" PrivateAssets="all" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Collections.Immutable" />

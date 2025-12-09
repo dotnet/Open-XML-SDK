@@ -2,22 +2,20 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Generator.Models;
-using System;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace DocumentFormat.OpenXml.Generator.Converters;
 
 internal class TypedQNameConverter : JsonConverter<TypedQName>
 {
-    public override TypedQName? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    public override TypedQName? ReadJson(JsonReader reader, Type objectType, TypedQName? existingValue, bool hasExistingValue, JsonSerializer serializer)
     {
-        if (reader.TokenType != JsonTokenType.String)
+        if (reader.TokenType != JsonToken.String)
         {
             throw new InvalidOperationException("TypedQName must be encoded as a string");
         }
 
-        var str = reader.GetString() ?? string.Empty;
+        var str = serializer.Deserialize<string>(reader) ?? string.Empty;
         var split = str.Split('/');
 
         if (split.Length != 2)
@@ -28,7 +26,7 @@ internal class TypedQNameConverter : JsonConverter<TypedQName>
         return new TypedQName(QName.Parse(split[0]), QName.Parse(split[1]));
     }
 
-    public override void Write(Utf8JsonWriter writer, TypedQName value, JsonSerializerOptions options)
+    public override void WriteJson(JsonWriter writer, TypedQName? value, JsonSerializer serializer)
     {
         throw new NotImplementedException();
     }

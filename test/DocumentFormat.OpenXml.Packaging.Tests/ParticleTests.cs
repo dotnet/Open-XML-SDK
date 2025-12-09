@@ -216,7 +216,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                     new JsonStringEnumConverter(),
                     new TypeNameConverter(),
                     new QNameConverter(),
-                }
+                },
             };
 
             var tmp = Path.GetTempFileName();
@@ -230,12 +230,12 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
                 var orderedData = constraints.OrderBy(t => t.Key.FullName, StringComparer.Ordinal);
                 var json = JsonSerializer.Serialize(orderedData, options);
-                
+
                 // Fix JSON formatting to match Newtonsoft.Json indentation
                 json = json.Replace("    {", "  {")
                            .Replace("        \"", "    \"")
                            .Replace("            ", "      ");
-                
+
                 using (var textWriter = new StreamWriter(fs))
                 {
                     textWriter.Write(json);
@@ -253,8 +253,6 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 Assert.Equal(expected, actual);
             }
         }
-
-
 
         private class VersionCollection<T> : IEnumerable<KeyValuePair<FileFormatVersions, T>>
         {

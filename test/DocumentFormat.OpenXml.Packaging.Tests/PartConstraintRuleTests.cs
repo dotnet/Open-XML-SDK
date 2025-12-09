@@ -162,9 +162,9 @@ namespace DocumentFormat.OpenXml.Tests
                     Converters =
                     {
                         new JsonStringEnumConverter(),
-                    }
+                    },
                 };
-                
+
                 return JsonSerializer.Deserialize<ConstraintData[]>(reader.ReadToEnd(), options)
                     .ToDictionary(t => t.Name, StringComparer.Ordinal);
 #nullable enable

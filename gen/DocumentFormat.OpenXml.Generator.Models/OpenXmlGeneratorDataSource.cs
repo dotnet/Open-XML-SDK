@@ -4,25 +4,25 @@
 using DocumentFormat.OpenXml.Generator.Converters;
 using DocumentFormat.OpenXml.Generator.Models;
 using DocumentFormat.OpenXml.Generator.Schematron;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System.Collections.Immutable;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace DocumentFormat.OpenXml.Generator;
 
 public record OpenXmlGeneratorDataSource
 {
-    private static readonly JsonSerializerOptions _options = new()
+    private static readonly JsonSerializerSettings _settings = new()
     {
         Converters =
         {
-            new JsonStringEnumConverter(),
+            new StringEnumConverter(),
             new QualifiedNameConverter(),
             new TypedQNameConverter(),
         },
     };
 
-    public static T? Deserialize<T>(string? content) => content is null ? default : JsonSerializer.Deserialize<T>(content, _options);
+    public static T? Deserialize<T>(string? content) => content is null ? default : JsonConvert.DeserializeObject<T>(content, _settings);
 
     public ImmutableArray<NamespaceInfo> KnownNamespaces { get; init; } = ImmutableArray.Create<NamespaceInfo>();
 

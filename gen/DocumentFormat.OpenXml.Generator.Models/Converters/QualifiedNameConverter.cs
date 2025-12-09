@@ -2,26 +2,25 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Generator.Models;
-using System;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace DocumentFormat.OpenXml.Generator.Converters;
 
 internal class QualifiedNameConverter : JsonConverter<QName>
 {
-    public override QName? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    public override QName? ReadJson(JsonReader reader, Type objectType, QName? existingValue, bool hasExistingValue, JsonSerializer serializer)
     {
-        if (reader.TokenType != JsonTokenType.String)
+        if (reader.TokenType != JsonToken.String)
         {
             throw new InvalidOperationException("QName must be encoded as a string");
         }
 
-        var str = reader.GetString() ?? string.Empty;
+        var str = serializer.Deserialize<string>(reader) ?? string.Empty;
+
         return QName.Parse(str);
     }
 
-    public override void Write(Utf8JsonWriter writer, QName value, JsonSerializerOptions options)
+    public override void WriteJson(JsonWriter writer, QName? value, JsonSerializer serializer)
     {
         throw new NotImplementedException();
     }
