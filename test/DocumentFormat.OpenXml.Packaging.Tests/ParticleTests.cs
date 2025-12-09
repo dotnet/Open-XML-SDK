@@ -209,13 +209,14 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             var options = new JsonSerializerOptions
             {
                 WriteIndented = true,
-                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault,
                 PropertyNamingPolicy = null,
                 Converters =
                 {
                     new JsonStringEnumConverter(),
                     new TypeNameConverter(),
                     new QNameConverter(),
+                    new ParticleConstraintConverter(),
                 },
             };
 
@@ -314,6 +315,64 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             public override void Write(Utf8JsonWriter writer, OpenXmlQualifiedName value, JsonSerializerOptions options)
             {
                 writer.WriteStringValue(value.ToString());
+            }
+        }
+
+        private sealed class ParticleConstraintConverter : JsonConverter<ParticleConstraint>
+        {
+            public override ParticleConstraint? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            {
+                throw new NotImplementedException();
+            }
+
+            public override void Write(Utf8JsonWriter writer, ParticleConstraint value, JsonSerializerOptions options)
+            {
+                writer.WriteStartObject();
+
+                // Get properties in alphabetical order
+                var properties = new List<(string Name, object? Value, bool ShouldWrite)>();
+
+                if (value is CompositeParticle composite)
+                {
+                    // ChildrenParticles - only if not empty
+                    if (composite.ChildrenParticles.Any())
+                    {
+                        properties.Add(("ChildrenParticles", composite.ChildrenParticles, true));
+                    }
+                }
+
+                // MaxOccurs - only if not default value of 1
+                if (value.MaxOccurs != 1)
+                {
+                    properties.Add(("MaxOccurs", value.MaxOccurs, true));
+                }
+
+                // MinOccurs - only if not default value of 1
+                if (value.MinOccurs != 1)
+                {
+                    properties.Add(("MinOccurs", value.MinOccurs, true));
+                }
+
+                // ParticleType
+                properties.Add(("ParticleType", value.ParticleType, true));
+
+                // Type - only for ElementParticle
+                if (value is ElementParticle element)
+                {
+                    properties.Add(("Type", element.Type, true));
+                }
+
+                // Sort properties alphabetically and write them
+                foreach (var (name, propValue, shouldWrite) in properties.OrderBy(p => p.Name))
+                {
+                    if (shouldWrite && propValue != null)
+                    {
+                        writer.WritePropertyName(name);
+                        JsonSerializer.Serialize(writer, propValue, propValue.GetType(), options);
+                    }
+                }
+
+                writer.WriteEndObject();
             }
         }
     }
