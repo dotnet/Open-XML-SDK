@@ -43,8 +43,19 @@ namespace DocumentFormat.OpenXml.Packaging
 
             SetPackage(openXmlPackage, parent);
 
-            // TODO: should we delay load?
-            var part = _openXmlPackage.Features.GetRequired<IPackageFeature>().Package.GetPart(uriTarget);
+            IPackagePart? part = null;
+            try
+            {
+                // TODO: should we delay load?
+                part = _openXmlPackage.Features.GetRequired<IPackageFeature>().Package.GetPart(uriTarget);
+            }
+            catch (InvalidOperationException ex)
+            {
+                var errorMessage = SR.Format(
+                    ExceptionMessages.SpecifiedPartNotFound,
+                    uriTarget.OriginalString, ex.Message);
+                throw new InvalidOperationException(errorMessage);
+            }
 
             Features.Set<IPackagePartFeature>(new PackagePartFeature(part));
 

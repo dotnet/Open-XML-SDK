@@ -820,6 +820,17 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to  Part: {0} doesn&apos;t exist in the package.
+        ///
+        ///Original Message:{1}.
+        /// </summary>
+        internal static string SpecifiedPartNotFound {
+            get {
+                return ResourceManager.GetString("SpecifiedPartNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The stream was not opened for writing..
         /// </summary>
         internal static string StreamAccessModeShouldBeWrite {
