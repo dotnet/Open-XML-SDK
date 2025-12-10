@@ -339,6 +339,33 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                     {
                         properties.Add(("ChildrenParticles", composite.ChildrenParticles, true));
                     }
+
+                    // ParticleType - for CompositeParticle
+                    properties.Add(("ParticleType", value.ParticleType, true));
+                }
+                else if (value is ElementParticle element)
+                {
+                    // Type - only for ElementParticle
+                    properties.Add(("Type", element.Type, true));
+                }
+                else
+                {
+                    // For AnyParticle, handle NamespaceValue
+                    var anyParticleType = value.GetType();
+                    var namespaceValueProp = anyParticleType.GetProperty("NamespaceValue");
+                    if (namespaceValueProp != null)
+                    {
+                        var namespaceValue = namespaceValueProp.GetValue(value);
+
+                        // Only include NamespaceValue if it's not the default (Any = 0)
+                        if (namespaceValue != null && Convert.ToInt32(namespaceValue) != 0)
+                        {
+                            properties.Add(("NamespaceValue", namespaceValue, true));
+                        }
+                    }
+
+                    // ParticleType - for AnyParticle and other types
+                    properties.Add(("ParticleType", value.ParticleType, true));
                 }
 
                 // MaxOccurs - only if not default value of 1
@@ -351,15 +378,6 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 if (value.MinOccurs != 1)
                 {
                     properties.Add(("MinOccurs", value.MinOccurs, true));
-                }
-
-                // ParticleType
-                properties.Add(("ParticleType", value.ParticleType, true));
-
-                // Type - only for ElementParticle
-                if (value is ElementParticle element)
-                {
-                    properties.Add(("Type", element.Type, true));
                 }
 
                 // Sort properties alphabetically and write them
