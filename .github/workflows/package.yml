@@ -37,10 +37,6 @@ jobs:
         uses: actions/setup-dotnet@v5
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v4
-        with:
-          # v5.10.0 of GitVersion has a fix for incorrect versions when building tags. See https://github.com/GitTools/GitVersion/issues/2838
-          # It appears that the fix then had a regression in a later version, so locking in 5.10.0.  See https://github.com/GitTools/GitVersion/issues/3351#issuecomment-1403657689
-          versionSpec: '5.10.0' 
       - name: Determine Version
         uses: gittools/actions/gitversion/execute@v4
         with:
