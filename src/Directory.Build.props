@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageReadmeFile>$(MSBuildProjectDirectory)/README.md</PackageReadmeFile>
-  </PropertyGroup>
-
-  <PropertyGroup>
     <AnalysisLevel>latest-All</AnalysisLevel>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <IsTrimmable Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net6.0'))">true</IsTrimmable>
@@ -31,6 +27,7 @@
     <PackageIcon>icon.png</PackageIcon>
     <!-- For backwards compatibility. See https://aka.ms/deprecateIconUrl -->
     <PackageIconUrl>https://raw.githubusercontent.com/dotnet/Open-XML-SDK/master/icon.png</PackageIconUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -47,6 +44,10 @@
 
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)..\icon.png" Pack="true" PackagePath="\" />
+    <None Include="$(MSBuildProjectDirectory)\README.md"
+          Pack="true"
+          PackagePath="\"
+          Condition="Exists('$(MSBuildProjectDirectory)\\README.md')" />
   </ItemGroup>
 
   <ItemGroup>
