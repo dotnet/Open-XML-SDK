@@ -329,59 +329,76 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             {
                 writer.WriteStartObject();
 
-                // Get properties in alphabetical order
-                var properties = new List<(string Name, object? Value, bool ShouldWrite)>();
+                // Get all public properties from the type
+                var type = value.GetType();
+                var allProperties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance)
+                    .Where(p => p.CanRead && p.GetIndexParameters().Length == 0);
 
-                if (value is CompositeParticle composite)
+                var propertiesToWrite = new List<(string Name, object? Value, bool ShouldWrite)>();
+
+                foreach (var prop in allProperties)
                 {
-                    // ChildrenParticles - only if not empty
-                    if (composite.ChildrenParticles.Any())
+                    var propName = prop.Name;
+                    var propValue = prop.GetValue(value);
+
+                    // Ignore certain properties
+                    if (propName == nameof(ParticleConstraint.Version) ||
+                        propName == "RequireFilter" ||
+                        propName == "ParticleValidator" ||
+                        propName == "UnboundedMaxOccurs" ||
+                        propName == "CanOccursMoreThanOne")
                     {
-                        properties.Add(("ChildrenParticles", composite.ChildrenParticles, true));
+                        continue;
                     }
 
-                    // ParticleType - for CompositeParticle
-                    properties.Add(("ParticleType", value.ParticleType, true));
-                }
-                else if (value is ElementParticle element)
-                {
-                    // Type - only for ElementParticle
-                    properties.Add(("Type", element.Type, true));
-                }
-                else
-                {
-                    // For AnyParticle, handle NamespaceValue
-                    var anyParticleType = value.GetType();
-                    var namespaceValueProp = anyParticleType.GetProperty("NamespaceValue");
-                    if (namespaceValueProp != null)
+                    // Handle MinOccurs and MaxOccurs - only include if not default value of 1
+                    if (propName == nameof(ParticleConstraint.MinOccurs) || propName == nameof(ParticleConstraint.MaxOccurs))
                     {
-                        var namespaceValue = namespaceValueProp.GetValue(value);
-
-                        // Only include NamespaceValue if it's not the default (Any = 0)
-                        if (namespaceValue != null && Convert.ToInt32(namespaceValue) != 0)
+                        if (propValue is int intValue && intValue != 1)
                         {
-                            properties.Add(("NamespaceValue", namespaceValue, true));
+                            propertiesToWrite.Add((propName, propValue, true));
                         }
+
+                        continue;
                     }
 
-                    // ParticleType - for AnyParticle and other types
-                    properties.Add(("ParticleType", value.ParticleType, true));
-                }
+                    // Handle ChildrenParticles - only include if not empty
+                    if (propName == "ChildrenParticles")
+                    {
+                        if (value is CompositeParticle composite && composite.ChildrenParticles.Any())
+                        {
+                            propertiesToWrite.Add((propName, composite.ChildrenParticles, true));
+                        }
 
-                // MaxOccurs - only if not default value of 1
-                if (value.MaxOccurs != 1)
-                {
-                    properties.Add(("MaxOccurs", value.MaxOccurs, true));
-                }
+                        continue;
+                    }
 
-                // MinOccurs - only if not default value of 1
-                if (value.MinOccurs != 1)
-                {
-                    properties.Add(("MinOccurs", value.MinOccurs, true));
+                    // Handle NamespaceValue - only include if not the default (Any = 0)
+                    if (propName == "NamespaceValue")
+                    {
+                        if (propValue != null && Convert.ToInt32(propValue) != 0)
+                        {
+                            propertiesToWrite.Add((propName, propValue, true));
+                        }
+
+                        continue;
+                    }
+
+                    // For ElementParticle, don't include ParticleType
+                    if (value is ElementParticle && propName == nameof(ParticleConstraint.ParticleType))
+                    {
+                        continue;
+                    }
+
+                    // Include all other properties
+                    if (propValue != null)
+                    {
+                        propertiesToWrite.Add((propName, propValue, true));
+                    }
                 }
 
                 // Sort properties alphabetically and write them
-                foreach (var (name, propValue, shouldWrite) in properties.OrderBy(p => p.Name))
+                foreach (var (name, propValue, shouldWrite) in propertiesToWrite.OrderBy(p => p.Name))
                 {
                     if (shouldWrite && propValue != null)
                     {
