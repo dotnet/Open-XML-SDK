@@ -73,7 +73,7 @@ jobs:
 
     env:
       RunPeVerify: true 
-      Solution_Name: Open-XML-SDK.sln  
+      Solution_Name: Open-XML-SDK.slnx
       Configuration: ${{ matrix.configuration }}
       ProjectLoadStyle: ${{ matrix.projectloadstyle }}
           
@@ -88,7 +88,9 @@ jobs:
     - name: Install .NET Core
       uses: actions/setup-dotnet@v5
       with:
-          dotnet-version: 6.0.x
+        dotnet-version: |
+          6.0.x
+          8.0.x
     - name: Install global.json .NET
       uses: actions/setup-dotnet@v5
     - name: Restore
