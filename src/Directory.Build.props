@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageReadmeFile>$(MSBuildProjectDirectory)README.md</PackageReadmeFile>
+    <PackageReadmeFile>$(MSBuildProjectDirectory)/README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup>
