@@ -1657,6 +1657,11 @@ namespace DocumentFormat.OpenXml.Packaging
         // find all reachable parts from the package root, the dictionary also used for cycle reference defense
         internal abstract void FindAllReachableParts(IDictionary<OpenXmlPart, bool> reachableParts);
 
+        internal virtual bool IsEmptyPart()
+        {
+            return false;
+        }
+
         #endregion
 
         // Checks if the target part is in the same OpenXmlPackage as this part.

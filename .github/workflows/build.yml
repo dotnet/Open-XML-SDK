@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Upload
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: Event File
         path: ${{ github.event_path }}
@@ -33,11 +33,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
       with:
         fetch-depth: 0
     - name: Install .NET
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
     - name: Remove generated files for baseline
       run: Remove-Item generated/ -Include *.g.cs -Recurse
       shell: pwsh
@@ -81,16 +81,16 @@ jobs:
     
     steps:
     - name: Checkout
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
       with:
         fetch-depth: 0
 
     - name: Install .NET Core
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
           dotnet-version: 6.0.x
     - name: Install global.json .NET
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
     - name: Restore
       run: dotnet restore --verbosity normal          
     - name: Build
@@ -99,7 +99,7 @@ jobs:
       run: dotnet test --no-restore -- --results-directory ${{ github.workspace }}/test-results/ --report-xunit-trx
     - name: Upload Test Results
       if: always()
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: Test Results (${{ matrix.os }} ${{ matrix.configuration }} ${{ matrix.projectloadstyle }})
         path: ${{ github.workspace }}/test-results/*
