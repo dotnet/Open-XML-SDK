@@ -85,7 +85,6 @@ DocumentFormat.OpenXml.EnumValue<T>
 DocumentFormat.OpenXml.EnumValue<T>.EnumValue() -> void
 DocumentFormat.OpenXml.EnumValue<T>.EnumValue(DocumentFormat.OpenXml.EnumValue<T>! source) -> void
 DocumentFormat.OpenXml.EnumValue<T>.EnumValue(T value) -> void
-DocumentFormat.OpenXml.Experimental.PackageExtensions
 DocumentFormat.OpenXml.Features.DisposableFeatureExtensions
 DocumentFormat.OpenXml.Features.EventType
 DocumentFormat.OpenXml.Features.EventType.Added = 14 -> DocumentFormat.OpenXml.Features.EventType
@@ -364,9 +363,17 @@ DocumentFormat.OpenXml.OpenXmlPartRootElement.Save() -> void
 DocumentFormat.OpenXml.OpenXmlPartRootElement.Save(System.IO.Stream! stream) -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart) -> void
+DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, DocumentFormat.OpenXml.OpenXmlPartWriterSettings! settings) -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, System.Text.Encoding! encoding) -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream) -> void
+DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream, DocumentFormat.OpenXml.OpenXmlPartWriterSettings! settings) -> void
 DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream, System.Text.Encoding! encoding) -> void
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings.CloseOutput.get -> bool
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings.CloseOutput.set -> void
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings.Encoding.get -> System.Text.Encoding!
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings.Encoding.set -> void
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings.OpenXmlPartWriterSettings() -> void
 DocumentFormat.OpenXml.OpenXmlReader
 DocumentFormat.OpenXml.OpenXmlReader.Dispose() -> void
 DocumentFormat.OpenXml.OpenXmlReader.OpenXmlReader() -> void
@@ -422,67 +429,6 @@ DocumentFormat.OpenXml.Packaging.IdPartPair.IdPartPair(string! id, DocumentForma
 DocumentFormat.OpenXml.Packaging.IdPartPair.OpenXmlPart.get -> DocumentFormat.OpenXml.Packaging.OpenXmlPart!
 DocumentFormat.OpenXml.Packaging.IdPartPair.RelationshipId.get -> string!
 DocumentFormat.OpenXml.Packaging.IFixedContentTypePart
-DocumentFormat.OpenXml.Packaging.IPackage
-DocumentFormat.OpenXml.Packaging.IPackage.CreatePart(System.Uri! partUri, string! contentType, System.IO.Packaging.CompressionOption compressionOption) -> DocumentFormat.OpenXml.Packaging.IPackagePart!
-DocumentFormat.OpenXml.Packaging.IPackage.DeletePart(System.Uri! uri) -> void
-DocumentFormat.OpenXml.Packaging.IPackage.FileOpenAccess.get -> System.IO.FileAccess
-DocumentFormat.OpenXml.Packaging.IPackage.GetPart(System.Uri! uriTarget) -> DocumentFormat.OpenXml.Packaging.IPackagePart!
-DocumentFormat.OpenXml.Packaging.IPackage.GetParts() -> System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Packaging.IPackagePart!>!
-DocumentFormat.OpenXml.Packaging.IPackage.PackageProperties.get -> DocumentFormat.OpenXml.Packaging.IPackageProperties!
-DocumentFormat.OpenXml.Packaging.IPackage.PartExists(System.Uri! partUri) -> bool
-DocumentFormat.OpenXml.Packaging.IPackage.Relationships.get -> DocumentFormat.OpenXml.Packaging.IRelationshipCollection!
-DocumentFormat.OpenXml.Packaging.IPackage.Save() -> void
-DocumentFormat.OpenXml.Packaging.IPackagePart
-DocumentFormat.OpenXml.Packaging.IPackagePart.ContentType.get -> string!
-DocumentFormat.OpenXml.Packaging.IPackagePart.GetStream(System.IO.FileMode open, System.IO.FileAccess write) -> System.IO.Stream!
-DocumentFormat.OpenXml.Packaging.IPackagePart.Package.get -> DocumentFormat.OpenXml.Packaging.IPackage!
-DocumentFormat.OpenXml.Packaging.IPackagePart.Relationships.get -> DocumentFormat.OpenXml.Packaging.IRelationshipCollection!
-DocumentFormat.OpenXml.Packaging.IPackagePart.Uri.get -> System.Uri!
-DocumentFormat.OpenXml.Packaging.IPackageProperties
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Category.get -> string?
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Category.set -> void
-DocumentFormat.OpenXml.Packaging.IPackageProperties.ContentStatus.get -> string?
-DocumentFormat.OpenXml.Packaging.IPackageProperties.ContentStatus.set -> void
-DocumentFormat.OpenXml.Packaging.IPackageProperties.ContentType.get -> string?
-DocumentFormat.OpenXml.Packaging.IPackageProperties.ContentType.set -> void
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Created.get -> System.DateTime?
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Created.set -> void
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Creator.get -> string?
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Creator.set -> void
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Description.get -> string?
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Description.set -> void
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Identifier.get -> string?
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Identifier.set -> void
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Keywords.get -> string?
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Keywords.set -> void
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Language.get -> string?
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Language.set -> void
-DocumentFormat.OpenXml.Packaging.IPackageProperties.LastModifiedBy.get -> string?
-DocumentFormat.OpenXml.Packaging.IPackageProperties.LastModifiedBy.set -> void
-DocumentFormat.OpenXml.Packaging.IPackageProperties.LastPrinted.get -> System.DateTime?
-DocumentFormat.OpenXml.Packaging.IPackageProperties.LastPrinted.set -> void
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Modified.get -> System.DateTime?
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Modified.set -> void
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Revision.get -> string?
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Revision.set -> void
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Subject.get -> string?
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Subject.set -> void
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Title.get -> string?
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Title.set -> void
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Version.get -> string?
-DocumentFormat.OpenXml.Packaging.IPackageProperties.Version.set -> void
-DocumentFormat.OpenXml.Packaging.IPackageRelationship
-DocumentFormat.OpenXml.Packaging.IPackageRelationship.Id.get -> string!
-DocumentFormat.OpenXml.Packaging.IPackageRelationship.RelationshipType.get -> string!
-DocumentFormat.OpenXml.Packaging.IPackageRelationship.SourceUri.get -> System.Uri!
-DocumentFormat.OpenXml.Packaging.IPackageRelationship.TargetMode.get -> System.IO.Packaging.TargetMode
-DocumentFormat.OpenXml.Packaging.IPackageRelationship.TargetUri.get -> System.Uri!
-DocumentFormat.OpenXml.Packaging.IRelationshipCollection
-DocumentFormat.OpenXml.Packaging.IRelationshipCollection.Contains(string! id) -> bool
-DocumentFormat.OpenXml.Packaging.IRelationshipCollection.Count.get -> int
-DocumentFormat.OpenXml.Packaging.IRelationshipCollection.Create(System.Uri! targetUri, System.IO.Packaging.TargetMode targetMode, string! relationshipType, string? id = null) -> DocumentFormat.OpenXml.Packaging.IPackageRelationship!
-DocumentFormat.OpenXml.Packaging.IRelationshipCollection.Remove(string! id) -> void
-DocumentFormat.OpenXml.Packaging.IRelationshipCollection.this[string! id].get -> DocumentFormat.OpenXml.Packaging.IPackageRelationship!
 DocumentFormat.OpenXml.Packaging.ISupportedRelationship<TPart>
 DocumentFormat.OpenXml.Packaging.MarkupCompatibilityProcessMode
 DocumentFormat.OpenXml.Packaging.MarkupCompatibilityProcessMode.NoProcess = 0 -> DocumentFormat.OpenXml.Packaging.MarkupCompatibilityProcessMode
@@ -835,7 +781,6 @@ static DocumentFormat.OpenXml.DoubleValue.ToDouble(DocumentFormat.OpenXml.Double
 static DocumentFormat.OpenXml.EnumValue<T>.implicit operator DocumentFormat.OpenXml.EnumValue<T>!(T value) -> DocumentFormat.OpenXml.EnumValue<T>!
 static DocumentFormat.OpenXml.EnumValue<T>.implicit operator string?(DocumentFormat.OpenXml.EnumValue<T>! value) -> string?
 static DocumentFormat.OpenXml.EnumValue<T>.implicit operator T(DocumentFormat.OpenXml.EnumValue<T>! value) -> T
-static DocumentFormat.OpenXml.Experimental.PackageExtensions.GetPackage(this DocumentFormat.OpenXml.Packaging.OpenXmlPackage! package) -> DocumentFormat.OpenXml.Packaging.IPackage!
 static DocumentFormat.OpenXml.Features.DisposableFeatureExtensions.Register(this DocumentFormat.OpenXml.Features.IDisposableFeature! feature, System.IDisposable! disposable) -> void
 static DocumentFormat.OpenXml.Features.FeatureEventArgs<TArg>.operator !=(DocumentFormat.OpenXml.Features.FeatureEventArgs<TArg> left, DocumentFormat.OpenXml.Features.FeatureEventArgs<TArg> right) -> bool
 static DocumentFormat.OpenXml.Features.FeatureEventArgs<TArg>.operator ==(DocumentFormat.OpenXml.Features.FeatureEventArgs<TArg> left, DocumentFormat.OpenXml.Features.FeatureEventArgs<TArg> right) -> bool
@@ -915,6 +860,8 @@ static DocumentFormat.OpenXml.Packaging.FlatOpcExtensions.ToFlatOpcString(this D
 static DocumentFormat.OpenXml.Packaging.IdPartPair.operator !=(DocumentFormat.OpenXml.Packaging.IdPartPair left, DocumentFormat.OpenXml.Packaging.IdPartPair right) -> bool
 static DocumentFormat.OpenXml.Packaging.IdPartPair.operator ==(DocumentFormat.OpenXml.Packaging.IdPartPair left, DocumentFormat.OpenXml.Packaging.IdPartPair right) -> bool
 static DocumentFormat.OpenXml.Packaging.MediaReferenceRelationship.MediaReferenceRelationshipType.get -> string!
+static DocumentFormat.OpenXml.Packaging.OpenXmlPackage.IsEncryptedOfficeFile(string! filePath) -> bool
+static DocumentFormat.OpenXml.Packaging.OpenXmlPackage.IsEncryptedOfficeFile(System.IO.Stream! inputStream) -> bool
 static DocumentFormat.OpenXml.Packaging.OpenXmlPackageExtensions.GetAllParts(this DocumentFormat.OpenXml.Packaging.OpenXmlPackage! package) -> System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Packaging.OpenXmlPart!>!
 static DocumentFormat.OpenXml.Packaging.PartTypeInfo.operator !=(DocumentFormat.OpenXml.Packaging.PartTypeInfo left, DocumentFormat.OpenXml.Packaging.PartTypeInfo right) -> bool
 static DocumentFormat.OpenXml.Packaging.PartTypeInfo.operator ==(DocumentFormat.OpenXml.Packaging.PartTypeInfo left, DocumentFormat.OpenXml.Packaging.PartTypeInfo right) -> bool
@@ -952,6 +899,7 @@ static DocumentFormat.OpenXml.UInt64Value.implicit operator DocumentFormat.OpenX
 static DocumentFormat.OpenXml.UInt64Value.implicit operator ulong(DocumentFormat.OpenXml.UInt64Value! value) -> ulong
 static DocumentFormat.OpenXml.UInt64Value.ToUInt64(DocumentFormat.OpenXml.UInt64Value! value) -> ulong
 virtual DocumentFormat.OpenXml.Features.FeatureCollection.Revision.get -> int
+virtual DocumentFormat.OpenXml.OpenXmlCompositeElement.IsValidChild(DocumentFormat.OpenXml.OpenXmlElement! element) -> bool
 virtual DocumentFormat.OpenXml.OpenXmlElement.AppendChild<T>(T? newChild) -> T?
 virtual DocumentFormat.OpenXml.OpenXmlElement.CloneNode(bool deep) -> DocumentFormat.OpenXml.OpenXmlElement!
 virtual DocumentFormat.OpenXml.OpenXmlElement.FirstChild.get -> DocumentFormat.OpenXml.OpenXmlElement?
@@ -997,18 +945,70 @@ virtual DocumentFormat.OpenXml.Packaging.ReferenceRelationship.Id.get -> string!
 virtual DocumentFormat.OpenXml.Packaging.ReferenceRelationship.IsExternal.get -> bool
 virtual DocumentFormat.OpenXml.Packaging.ReferenceRelationship.RelationshipType.get -> string!
 virtual DocumentFormat.OpenXml.Packaging.ReferenceRelationship.Uri.get -> System.Uri!
+[OOXML0001]DocumentFormat.OpenXml.Experimental.PackageExtensions
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackage
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackage.CreatePart(System.Uri! partUri, string! contentType, System.IO.Packaging.CompressionOption compressionOption) -> DocumentFormat.OpenXml.Packaging.IPackagePart!
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackage.DeletePart(System.Uri! uri) -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackage.FileOpenAccess.get -> System.IO.FileAccess
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackage.GetPart(System.Uri! uriTarget) -> DocumentFormat.OpenXml.Packaging.IPackagePart!
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackage.GetParts() -> System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Packaging.IPackagePart!>!
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackage.PackageProperties.get -> DocumentFormat.OpenXml.Packaging.IPackageProperties!
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackage.PartExists(System.Uri! partUri) -> bool
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackage.Relationships.get -> DocumentFormat.OpenXml.Packaging.IRelationshipCollection!
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackage.Save() -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackagePart
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackagePart.ContentType.get -> string!
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackagePart.GetStream(System.IO.FileMode open, System.IO.FileAccess write) -> System.IO.Stream!
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackagePart.Package.get -> DocumentFormat.OpenXml.Packaging.IPackage!
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackagePart.Relationships.get -> DocumentFormat.OpenXml.Packaging.IRelationshipCollection!
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackagePart.Uri.get -> System.Uri!
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Category.get -> string?
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Category.set -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.ContentStatus.get -> string?
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.ContentStatus.set -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.ContentType.get -> string?
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.ContentType.set -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Created.get -> System.DateTime?
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Created.set -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Creator.get -> string?
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Creator.set -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Description.get -> string?
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Description.set -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Identifier.get -> string?
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Identifier.set -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Keywords.get -> string?
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Keywords.set -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Language.get -> string?
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Language.set -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.LastModifiedBy.get -> string?
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.LastModifiedBy.set -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.LastPrinted.get -> System.DateTime?
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.LastPrinted.set -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Modified.get -> System.DateTime?
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Modified.set -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Revision.get -> string?
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Revision.set -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Subject.get -> string?
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Subject.set -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Title.get -> string?
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Title.set -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Version.get -> string?
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageProperties.Version.set -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageRelationship
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageRelationship.Id.get -> string!
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageRelationship.RelationshipType.get -> string!
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageRelationship.SourceUri.get -> System.Uri!
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageRelationship.TargetMode.get -> System.IO.Packaging.TargetMode
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IPackageRelationship.TargetUri.get -> System.Uri!
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IRelationshipCollection
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IRelationshipCollection.Contains(string! id) -> bool
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IRelationshipCollection.Count.get -> int
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IRelationshipCollection.Create(System.Uri! targetUri, System.IO.Packaging.TargetMode targetMode, string! relationshipType, string? id = null) -> DocumentFormat.OpenXml.Packaging.IPackageRelationship!
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IRelationshipCollection.Remove(string! id) -> void
+[OOXML0001]DocumentFormat.OpenXml.Packaging.IRelationshipCollection.this[string! id].get -> DocumentFormat.OpenXml.Packaging.IPackageRelationship!
+[OOXML0001]static DocumentFormat.OpenXml.Experimental.PackageExtensions.GetPackage(this DocumentFormat.OpenXml.Packaging.OpenXmlPackage! package) -> DocumentFormat.OpenXml.Packaging.IPackage!
 ~override DocumentFormat.OpenXml.OpenXmlElementList.Equals(object obj) -> bool
 ~override DocumentFormat.OpenXml.OpenXmlElementList.ToString() -> string
 ~override DocumentFormat.OpenXml.Packaging.PartTypeInfo.Equals(object obj) -> bool
 ~override DocumentFormat.OpenXml.Packaging.PartTypeInfo.ToString() -> string
-DocumentFormat.OpenXml.OpenXmlPartWriterSettings
-DocumentFormat.OpenXml.OpenXmlPartWriterSettings.CloseOutput.get -> bool
-DocumentFormat.OpenXml.OpenXmlPartWriterSettings.CloseOutput.set -> void
-DocumentFormat.OpenXml.OpenXmlPartWriterSettings.Encoding.get -> System.Text.Encoding!
-DocumentFormat.OpenXml.OpenXmlPartWriterSettings.Encoding.set -> void
-DocumentFormat.OpenXml.OpenXmlPartWriterSettings.OpenXmlPartWriterSettings() -> void
-DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, DocumentFormat.OpenXml.OpenXmlPartWriterSettings! settings) -> void
-DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream, DocumentFormat.OpenXml.OpenXmlPartWriterSettings! settings) -> void
-virtual DocumentFormat.OpenXml.OpenXmlCompositeElement.IsValidChild(DocumentFormat.OpenXml.OpenXmlElement! element) -> bool
-static DocumentFormat.OpenXml.Packaging.OpenXmlPackage.IsEncryptedOfficeFile(System.IO.Stream! inputStream) -> bool
-static DocumentFormat.OpenXml.Packaging.OpenXmlPackage.IsEncryptedOfficeFile(string! filePath) -> bool

@@ -1,0 +1,56 @@
+<Solution>
+  <Folder Name="/gen/">
+    <Project Path="gen/DocumentFormat.OpenXml.Generator.Models/DocumentFormat.OpenXml.Generator.Models.csproj" />
+    <Project Path="gen/DocumentFormat.OpenXml.Generator/DocumentFormat.OpenXml.Generator.csproj" />
+  </Folder>
+  <Folder Name="/samples/">
+    <File Path="samples/Directory.Build.props" />
+    <File Path="samples/Directory.Build.targets" />
+    <Project Path="samples/DocumentTaskExample/DocumentTaskSample.csproj" />
+    <Project Path="samples/IsolatedStorageExceptionWorkaround/IsolatedStorageExceptionWorkaround.csproj" />
+    <Project Path="samples/Linq/SvgExample/SvgExampleLinq.csproj" />
+    <Project Path="samples/NamedSheetView/AddNamedSheetView.csproj" />
+    <Project Path="samples/RichData/RichData.csproj" />
+    <Project Path="samples/SunburstChartExample/SunburstChartExample.csproj" />
+    <Project Path="samples/SVGExample/SVGExample.csproj" />
+    <Project Path="samples/ThreadedCommentExample/ThreadedCommentExample.csproj" />
+  </Folder>
+  <Folder Name="/samples/Linq/">
+    <Project Path="samples/AnimatedModel3DExample/AddAnimatedModel3D.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".vsconfig" />
+    <File Path="CHANGELOG.md" />
+    <File Path="data/OpenXmlData.targets" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Build.targets" />
+    <File Path="Directory.Packages.props" />
+    <File Path="GitVersion.yml" />
+    <File Path="global.json" />
+    <File Path="LICENSE" />
+    <File Path="NuGet.Config" />
+    <File Path="README.md" />
+    <File Path="stylecop.json" />
+  </Folder>
+  <Folder Name="/src/">
+    <File Path="src/common/FrameworkShims.targets" />
+    <File Path="src/Directory.Build.props" />
+    <File Path="src/Directory.Build.targets" />
+    <Project Path="src/DocumentFormat.OpenXml.Features/DocumentFormat.OpenXml.Features.csproj" />
+    <Project Path="src/DocumentFormat.OpenXml.Framework/DocumentFormat.OpenXml.Framework.csproj" />
+    <Project Path="src/DocumentFormat.OpenXml.Linq/DocumentFormat.OpenXml.Linq.csproj" />
+    <Project Path="src/DocumentFormat.OpenXml/DocumentFormat.OpenXml.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <File Path="test/Directory.Build.props" />
+    <File Path="test/Directory.Build.targets" />
+    <Project Path="test/DocumentFormat.OpenXml.Benchmarks/DocumentFormat.OpenXml.Benchmarks.csproj" />
+    <Project Path="test/DocumentFormat.OpenXml.Framework.Features.Tests/DocumentFormat.OpenXml.Framework.Features.Tests.csproj" />
+    <Project Path="test/DocumentFormat.OpenXml.Framework.Tests/DocumentFormat.OpenXml.Framework.Tests.csproj" />
+    <Project Path="test/DocumentFormat.OpenXml.Linq.Tests/DocumentFormat.OpenXml.Linq.Tests.csproj" />
+    <Project Path="test/DocumentFormat.OpenXml.Packaging.Tests/DocumentFormat.OpenXml.Packaging.Tests.csproj" />
+    <Project Path="test/DocumentFormat.OpenXml.Tests.Assets/DocumentFormat.OpenXml.Tests.Assets.csproj" />
+    <Project Path="test/DocumentFormat.OpenXml.Tests/DocumentFormat.OpenXml.Tests.csproj" />
+  </Folder>
+</Solution>
