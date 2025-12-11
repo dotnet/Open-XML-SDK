@@ -9,6 +9,29 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      test-dependencies:
+        patterns:
+          - "xunit.*"
+          - "NSubstitute"
+          - "coverlet.*"
+          - "Microsoft.NET.Test.Sdk"
+          - "Microsoft.Testing.Extensions.*"
+          - "NuGet.*"
+      analyzers:
+        patterns:
+          - "Microsoft.CodeAnalysis*"
+      stylecop:
+        patterns:
+          - "StyleCop.*"
+      benchmarks:
+        patterns:
+          - "BenchmarkDotNet*"
+          - "ObjectLayoutInspector"
+      dotnet-libraries:
+        patterns:
+          - "Microsoft.Bcl.*"
+          - "System.*"
 
   - package-ecosystem: "github-actions"
     # Workflow files stored in the default location of `.github/workflows`. (You don't need to specify `/.github/workflows` for `directory`. You can use `directory: "/"`.)
