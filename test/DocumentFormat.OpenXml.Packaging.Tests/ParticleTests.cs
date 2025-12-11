@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Tests;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections;
@@ -177,9 +178,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
                     if (constructor is not null)
                     {
-#nullable disable
-                        var element = (OpenXmlElement)Activator.CreateInstance(type);
-#nullable enable
+                        var element = (OpenXmlElement)Activator.CreateInstance(type)!;
 
                         if (version.AtLeast(element!.InitialVersion))
                         {
@@ -231,28 +230,20 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
                 var orderedData = constraints.OrderBy(t => t.Key.FullName, StringComparer.Ordinal);
 
-                // Use Utf8JsonWriter with custom indentation to match expected format
-                var writerOptions = new JsonWriterOptions
+                using var writer = new Utf8JsonWriter(fs, new JsonWriterOptions
                 {
                     Indented = true,
                     IndentSize = 1,
-                };
+                });
 
-                using (var writer = new Utf8JsonWriter(fs, writerOptions))
-                {
-                    JsonSerializer.Serialize(writer, orderedData, options);
-                }
+                JsonSerializer.Serialize(writer, orderedData, options);
             }
 
             using (var expectedStream = typeof(ParticleTests).GetTypeInfo().Assembly.GetManifestResourceStream("DocumentFormat.OpenXml.Packaging.Tests.data.Particles.json"))
-            using (var expectedStreamReader = new StreamReader(expectedStream!))
             using (var actualStream = File.OpenRead(tmp))
-            using (var actualStreamReader = new StreamReader(actualStream))
             {
-                var expected = expectedStreamReader.ReadToEnd().Replace("\r\n", "\n");
-                var actual = actualStreamReader.ReadToEnd().Replace("\r\n", "\n");
-
-                Assert.Equal(expected, actual);
+                Assert.NotNull(expectedStream);
+                TestUtility.ValidateJsonFileContentsAreEqual(expectedStream, actualStream);
             }
         }
 
