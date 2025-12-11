@@ -4,14 +4,14 @@
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using NSubstitute;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -157,7 +157,18 @@ namespace DocumentFormat.OpenXml.Tests
             using (var reader = new StreamReader(stream!))
             {
 #nullable disable
-                return JsonConvert.DeserializeObject<ConstraintData[]>(reader.ReadToEnd(), new StringEnumConverter())
+                var json = reader.ReadToEnd();
+
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+                    Converters =
+                    {
+                        new JsonStringEnumConverter(JsonNamingPolicy.CamelCase),
+                    },
+                };
+
+                return JsonSerializer.Deserialize<ConstraintData[]>(json, options)
                     .ToDictionary(t => t.Name, StringComparer.Ordinal);
 #nullable enable
             }

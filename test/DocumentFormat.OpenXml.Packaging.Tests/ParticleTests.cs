@@ -3,15 +3,15 @@
 
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Validation.Schema;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.Text.Json.Serialization.Metadata;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Packaging.Tests
@@ -178,9 +178,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
                     if (constructor is not null)
                     {
-#nullable disable
-                        var element = (OpenXmlElement)Activator.CreateInstance(type);
-#nullable enable
+                        var element = (OpenXmlElement)Activator.CreateInstance(type)!;
 
                         if (version.AtLeast(element!.InitialVersion))
                         {
@@ -205,23 +203,26 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             AssertEqual(constraints);
         }
 
+        private static readonly JsonSerializerOptions _options = new()
+        {
+            WriteIndented = true,
+            IndentCharacter = ' ',
+            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault,
+            TypeInfoResolverChain =
+            {
+                new DefaultJsonTypeInfoResolver(),
+                new ParticleTypeInfoResolver(),
+            },
+            Converters =
+            {
+                new JsonStringEnumConverter(),
+                new TypeNameConverter(),
+                new QNameConverter(),
+            },
+        };
+
         private void AssertEqual(Dictionary<Type, VersionCollection<ParticleConstraint>> constraints)
         {
-            var settings = new JsonSerializerSettings
-            {
-                Formatting = Formatting.Indented,
-                Converters = new JsonConverter[]
-                {
-                    new StringEnumConverter(),
-                    new TypeNameConverter(),
-                    new QNameConverter(),
-                },
-                ContractResolver = new OccursDefaultResolver(),
-                NullValueHandling = NullValueHandling.Ignore,
-                DefaultValueHandling = DefaultValueHandling.Ignore,
-            };
-
-            var serializer = JsonSerializer.Create(settings);
             var tmp = Path.GetTempFileName();
 
             _output.WriteLine($"Writing output to {tmp}");
@@ -232,9 +233,12 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 fs.SetLength(0);
 
                 using (var textWriter = new StreamWriter(fs))
-                using (var writer = new JsonTextWriter(textWriter) { Indentation = 1 })
                 {
-                    serializer.Serialize(writer, constraints.OrderBy(t => t.Key.FullName, StringComparer.Ordinal));
+                    var json = JsonSerializer.Serialize(
+                        constraints.OrderBy(t => t.Key.FullName, StringComparer.Ordinal),
+                        _options);
+
+                    textWriter.Write(json);
                 }
             }
 
@@ -250,41 +254,39 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             }
         }
 
-        private class OccursDefaultResolver : DefaultContractResolver
+        private sealed class ParticleTypeInfoResolver : IJsonTypeInfoResolver
         {
-            protected override JsonContract CreateContract(Type objectType)
+            public JsonTypeInfo? GetTypeInfo(Type objectType, JsonSerializerOptions options)
             {
-                // CompositeParticle implements IEnumerable to enable collection initializers, but we want it to serialize as if it were just the object
                 if (objectType == typeof(CompositeParticle))
                 {
-                    return CreateObjectContract(objectType);
+                    return ConfigureCompositeParticle(objectType, options);
                 }
 
-                return base.CreateContract(objectType);
+                return null;
             }
 
-            protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
+            private static JsonTypeInfo ConfigureCompositeParticle(Type type, JsonSerializerOptions options)
             {
-                var properties = base.CreateProperties(type, memberSerialization);
+                var info = JsonTypeInfo.CreateJsonTypeInfo(type, options);
 
-                foreach (var prop in properties)
+                foreach (var prop in info.Properties)
                 {
-                    if (prop.PropertyName == nameof(ParticleConstraint.MinOccurs) || prop.PropertyName == nameof(ParticleConstraint.MaxOccurs))
+                    if (prop.Name == nameof(ParticleConstraint.MinOccurs) || prop.Name == nameof(ParticleConstraint.MaxOccurs))
                     {
-                        prop.DefaultValue = 1;
+                        prop.ShouldSerialize = (v, _) => (int)v != 1;
                     }
-                    else if (prop.PropertyName == nameof(ParticleConstraint.Version) || prop.PropertyName == nameof(CompositeParticle.RequireFilter))
+                    else if (prop.Name == nameof(ParticleConstraint.Version) || prop.Name == nameof(CompositeParticle.RequireFilter))
                     {
-                        prop.Ignored = true;
+                        prop.ShouldSerialize = (_, _) => false;
                     }
-                    else if (prop.PropertyName == nameof(CompositeParticle.ChildrenParticles))
+                    else if (prop.Name == nameof(CompositeParticle.ChildrenParticles))
                     {
-                        prop.PropertyType = typeof(IEnumerable<ParticleConstraint>);
-                        prop.ShouldSerialize = c => ((CompositeParticle)c).ChildrenParticles.Any();
+                        prop.ShouldSerialize = (obj, _) => ((CompositeParticle)obj).ChildrenParticles.Any();
                     }
                 }
 
-                return properties.OrderBy(p => p.PropertyName).ToList();
+                return info;
             }
         }
 
@@ -326,20 +328,20 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
         private class TypeNameConverter : JsonConverter<Type>
         {
-            public override Type ReadJson(JsonReader reader, Type objectType, Type? existingValue, bool hasExistingValue, JsonSerializer serializer)
+            public override Type Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
                 => throw new NotImplementedException();
 
-            public override void WriteJson(JsonWriter writer, Type? value, JsonSerializer serializer)
-                => serializer.Serialize(writer, value!.FullName);
+            public override void Write(Utf8JsonWriter writer, Type value, JsonSerializerOptions options)
+                => JsonSerializer.Serialize(writer, value.FullName, options);
         }
 
         private sealed class QNameConverter : JsonConverter<OpenXmlQualifiedName>
         {
-            public override OpenXmlQualifiedName ReadJson(JsonReader reader, Type objectType, OpenXmlQualifiedName existingValue, bool hasExistingValue, JsonSerializer serializer)
+            public override OpenXmlQualifiedName Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
                 => throw new NotImplementedException();
 
-            public override void WriteJson(JsonWriter writer, OpenXmlQualifiedName value, JsonSerializer serializer)
-                => writer.WriteValue(value.ToString());
+            public override void Write(Utf8JsonWriter writer, OpenXmlQualifiedName value, JsonSerializerOptions options)
+                => writer.WriteStringValue(value.ToString());
         }
     }
 }

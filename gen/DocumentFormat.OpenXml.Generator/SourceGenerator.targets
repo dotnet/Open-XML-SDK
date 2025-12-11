@@ -8,10 +8,6 @@
     <ProjectReference Include="@(OoxGenerator)" OutputItemType="Analyzer" ReferenceOutputAssembly="false" SkipGetTargetFrameworkProperties="true" GlobalPropertiesToRemove="TargetFramework" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" PrivateAssets="all" GeneratePathProperty="true" />
-    <Analyzer Include="$(PkgNewtonsoft_Json)\lib\netstandard2.0\*.dll" Visible="false" />
-  </ItemGroup>
-  <ItemGroup>
     <AdditionalFiles Include="@(OpenXmlDataNamespace)" OpenXml="Namespace" LinkBase="data" />
     <AdditionalFiles Include="@(OpenXmlDataSchematron)" OpenXml="Schematron" LinkBase="data" />
     <AdditionalFiles Include="@(OpenXmlDataPart)" OpenXml="Part" LinkBase="data/parts" />
