@@ -27,6 +27,7 @@
     <PackageIcon>icon.png</PackageIcon>
     <!-- For backwards compatibility. See https://aka.ms/deprecateIconUrl -->
     <PackageIconUrl>https://raw.githubusercontent.com/dotnet/Open-XML-SDK/master/icon.png</PackageIconUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -43,6 +44,10 @@
 
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)..\icon.png" Pack="true" PackagePath="\" />
+    <None Include="$(MSBuildProjectDirectory)\README.md"
+          Pack="true"
+          PackagePath="\"
+          Condition="Exists('$(MSBuildProjectDirectory)\\README.md')" />
   </ItemGroup>
 
   <ItemGroup>
