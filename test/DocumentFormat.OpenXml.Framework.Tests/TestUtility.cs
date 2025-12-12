@@ -4,8 +4,10 @@
 using System;
 using System.IO;
 using System.Reflection;
+using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Framework.Tests
 {
@@ -13,6 +15,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
     {
         private static readonly JsonSerializerOptions _options = new()
         {
+            Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
             Converters =
             {
                 new OpenXmlNamespaceConverter(),
@@ -21,6 +24,17 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             },
             WriteIndented = true,
         };
+
+        public static void ValidateJsonFileContentsAreEqual(Stream stream1, Stream stream2)
+        {
+            using var reader1 = new StreamReader(stream1);
+            using var reader2 = new StreamReader(stream2);
+
+            var expected = reader1.ReadToEnd().Replace("\r\n", "\n");
+            var actual = reader2.ReadToEnd().Replace("\r\n", "\n");
+
+            Assert.Equal(expected, actual);
+        }
 
 #nullable enable
 

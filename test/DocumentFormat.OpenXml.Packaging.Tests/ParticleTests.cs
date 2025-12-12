@@ -2,16 +2,16 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Tests;
 using DocumentFormat.OpenXml.Validation.Schema;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Packaging.Tests
@@ -178,9 +178,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
                     if (constructor is not null)
                     {
-#nullable disable
-                        var element = (OpenXmlElement)Activator.CreateInstance(type);
-#nullable enable
+                        var element = (OpenXmlElement)Activator.CreateInstance(type)!;
 
                         if (version.AtLeast(element!.InitialVersion))
                         {
@@ -207,21 +205,20 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
         private void AssertEqual(Dictionary<Type, VersionCollection<ParticleConstraint>> constraints)
         {
-            var settings = new JsonSerializerSettings
+            var options = new JsonSerializerOptions
             {
-                Formatting = Formatting.Indented,
-                Converters = new JsonConverter[]
+                WriteIndented = true,
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault,
+                PropertyNamingPolicy = null,
+                Converters =
                 {
-                    new StringEnumConverter(),
+                    new JsonStringEnumConverter(),
                     new TypeNameConverter(),
                     new QNameConverter(),
+                    new ParticleConstraintConverter(),
                 },
-                ContractResolver = new OccursDefaultResolver(),
-                NullValueHandling = NullValueHandling.Ignore,
-                DefaultValueHandling = DefaultValueHandling.Ignore,
             };
 
-            var serializer = JsonSerializer.Create(settings);
             var tmp = Path.GetTempFileName();
 
             _output.WriteLine($"Writing output to {tmp}");
@@ -231,60 +228,22 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             {
                 fs.SetLength(0);
 
-                using (var textWriter = new StreamWriter(fs))
-                using (var writer = new JsonTextWriter(textWriter) { Indentation = 1 })
+                var orderedData = constraints.OrderBy(t => t.Key.FullName, StringComparer.Ordinal);
+
+                using var writer = new Utf8JsonWriter(fs, new JsonWriterOptions
                 {
-                    serializer.Serialize(writer, constraints.OrderBy(t => t.Key.FullName, StringComparer.Ordinal));
-                }
+                    Indented = true,
+                    IndentSize = 1,
+                });
+
+                JsonSerializer.Serialize(writer, orderedData, options);
             }
 
             using (var expectedStream = typeof(ParticleTests).GetTypeInfo().Assembly.GetManifestResourceStream("DocumentFormat.OpenXml.Packaging.Tests.data.Particles.json"))
-            using (var expectedStreamReader = new StreamReader(expectedStream!))
             using (var actualStream = File.OpenRead(tmp))
-            using (var actualStreamReader = new StreamReader(actualStream))
             {
-                var expected = expectedStreamReader.ReadToEnd().Replace("\r\n", "\n");
-                var actual = actualStreamReader.ReadToEnd().Replace("\r\n", "\n");
-
-                Assert.Equal(expected, actual);
-            }
-        }
-
-        private class OccursDefaultResolver : DefaultContractResolver
-        {
-            protected override JsonContract CreateContract(Type objectType)
-            {
-                // CompositeParticle implements IEnumerable to enable collection initializers, but we want it to serialize as if it were just the object
-                if (objectType == typeof(CompositeParticle))
-                {
-                    return CreateObjectContract(objectType);
-                }
-
-                return base.CreateContract(objectType);
-            }
-
-            protected override IList<JsonProperty> CreateProperties(Type type, MemberSerialization memberSerialization)
-            {
-                var properties = base.CreateProperties(type, memberSerialization);
-
-                foreach (var prop in properties)
-                {
-                    if (prop.PropertyName == nameof(ParticleConstraint.MinOccurs) || prop.PropertyName == nameof(ParticleConstraint.MaxOccurs))
-                    {
-                        prop.DefaultValue = 1;
-                    }
-                    else if (prop.PropertyName == nameof(ParticleConstraint.Version) || prop.PropertyName == nameof(CompositeParticle.RequireFilter))
-                    {
-                        prop.Ignored = true;
-                    }
-                    else if (prop.PropertyName == nameof(CompositeParticle.ChildrenParticles))
-                    {
-                        prop.PropertyType = typeof(IEnumerable<ParticleConstraint>);
-                        prop.ShouldSerialize = c => ((CompositeParticle)c).ChildrenParticles.Any();
-                    }
-                }
-
-                return properties.OrderBy(p => p.PropertyName).ToList();
+                Assert.NotNull(expectedStream);
+                TestUtility.ValidateJsonFileContentsAreEqual(expectedStream, actualStream);
             }
         }
 
@@ -324,22 +283,123 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
         }
 
-        private class TypeNameConverter : JsonConverter<Type>
+        private sealed class TypeNameConverter : JsonConverter<Type>
         {
-            public override Type ReadJson(JsonReader reader, Type objectType, Type? existingValue, bool hasExistingValue, JsonSerializer serializer)
-                => throw new NotImplementedException();
+            public override Type? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            {
+                throw new NotImplementedException();
+            }
 
-            public override void WriteJson(JsonWriter writer, Type? value, JsonSerializer serializer)
-                => serializer.Serialize(writer, value!.FullName);
+            public override void Write(Utf8JsonWriter writer, Type value, JsonSerializerOptions options)
+            {
+                writer.WriteStringValue(value.FullName);
+            }
         }
 
         private sealed class QNameConverter : JsonConverter<OpenXmlQualifiedName>
         {
-            public override OpenXmlQualifiedName ReadJson(JsonReader reader, Type objectType, OpenXmlQualifiedName existingValue, bool hasExistingValue, JsonSerializer serializer)
-                => throw new NotImplementedException();
+            public override OpenXmlQualifiedName Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            {
+                throw new NotImplementedException();
+            }
 
-            public override void WriteJson(JsonWriter writer, OpenXmlQualifiedName value, JsonSerializer serializer)
-                => writer.WriteValue(value.ToString());
+            public override void Write(Utf8JsonWriter writer, OpenXmlQualifiedName value, JsonSerializerOptions options)
+            {
+                writer.WriteStringValue(value.ToString());
+            }
+        }
+
+        private sealed class ParticleConstraintConverter : JsonConverter<ParticleConstraint>
+        {
+            public override ParticleConstraint? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+            {
+                throw new NotImplementedException();
+            }
+
+            public override void Write(Utf8JsonWriter writer, ParticleConstraint value, JsonSerializerOptions options)
+            {
+                writer.WriteStartObject();
+
+                // Get all public properties from the type
+                var type = value.GetType();
+                var allProperties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance)
+                    .Where(p => p.CanRead && p.GetIndexParameters().Length == 0);
+
+                var propertiesToWrite = new List<(string Name, object? Value, bool ShouldWrite)>();
+
+                foreach (var prop in allProperties)
+                {
+                    var propName = prop.Name;
+                    var propValue = prop.GetValue(value);
+
+                    // Ignore certain properties
+                    if (propName == nameof(ParticleConstraint.Version) ||
+                        propName == "RequireFilter" ||
+                        propName == "ParticleValidator" ||
+                        propName == "UnboundedMaxOccurs" ||
+                        propName == "CanOccursMoreThanOne")
+                    {
+                        continue;
+                    }
+
+                    // Handle MinOccurs and MaxOccurs - only include if not default value of 1
+                    if (propName == nameof(ParticleConstraint.MinOccurs) || propName == nameof(ParticleConstraint.MaxOccurs))
+                    {
+                        if (propValue is int intValue && intValue != 1)
+                        {
+                            propertiesToWrite.Add((propName, propValue, true));
+                        }
+
+                        continue;
+                    }
+
+                    // Handle ChildrenParticles - only include if not empty
+                    if (propName == "ChildrenParticles")
+                    {
+                        if (value is CompositeParticle composite && composite.ChildrenParticles.Any())
+                        {
+                            propertiesToWrite.Add((propName, composite.ChildrenParticles, true));
+                        }
+
+                        continue;
+                    }
+
+                    // Handle NamespaceValue - only include if not the default (Any = 0)
+                    if (propName == "NamespaceValue")
+                    {
+                        if (propValue != null && Convert.ToInt32(propValue) != 0)
+                        {
+                            propertiesToWrite.Add((propName, propValue, true));
+                        }
+
+                        continue;
+                    }
+
+                    // For ElementParticle, don't include ParticleType
+                    if (value is ElementParticle && propName == nameof(ParticleConstraint.ParticleType))
+                    {
+                        continue;
+                    }
+
+                    // Include all other properties
+                    if (propValue != null)
+                    {
+                        propertiesToWrite.Add((propName, propValue, true));
+                    }
+                }
+
+                // Sort properties alphabetically and write them
+                foreach (var (name, propValue, shouldWrite) in propertiesToWrite.OrderBy(p => p.Name))
+                {
+                    if (shouldWrite && propValue != null)
+                    {
+                        writer.WritePropertyName(name);
+                        JsonSerializer.Serialize(writer, propValue, propValue.GetType(), options);
+                    }
+                }
+
+                writer.WriteEndObject();
+            }
         }
     }
 }
