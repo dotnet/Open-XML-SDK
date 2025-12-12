@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistory" /> <c>&lt;p216:history></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TaskHistoryDetails : OpenXmlCompositeElement
+    public partial class TaskHistoryDetails : OpenXmlCompositeElement, IExtensionChildrenParent<TaskHistoryDetails>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "taskHistoryDetails");
@@ -79,6 +79,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -395,7 +398,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.CommentAnchor" /> <c>&lt;p216:comment></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TaskAnchor : OpenXmlCompositeElement
+    public partial class TaskAnchor : OpenXmlCompositeElement, IExtensionChildrenParent<TaskAnchor>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "anchr");
@@ -434,6 +437,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -861,7 +867,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskUnknownRecord" /> <c>&lt;p216:unknown></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TaskHistoryEvent : OpenXmlCompositeElement
+    public partial class TaskHistoryEvent : OpenXmlCompositeElement, IExtensionChildrenParent<TaskHistoryEvent>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2021/06/main", "event");
@@ -920,6 +926,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

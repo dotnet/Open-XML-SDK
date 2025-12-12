@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleVariation" /> <c>&lt;cs:variation></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ColorStyle : OpenXmlPartRootElement
+    public partial class ColorStyle : OpenXmlPartRootElement, IExtensionChildrenParent<ColorStyle>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "colorStyle");
@@ -95,6 +95,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -215,7 +218,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall" /> <c>&lt;cs:wall></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ChartStyle : OpenXmlPartRootElement
+    public partial class ChartStyle : OpenXmlPartRootElement, IExtensionChildrenParent<ChartStyle>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "chartStyle");
@@ -264,6 +267,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1720,7 +1726,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ShapeProperties : OpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "spPr");
@@ -1769,6 +1775,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1881,7 +1890,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.UnderlineFollowsText" /> <c>&lt;a:uLnTx></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
+    public partial class TextCharacterPropertiesType : OpenXmlCompositeElement, IExtensionChildrenParent<TextCharacterPropertiesType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "defRPr");
@@ -2110,6 +2119,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2261,7 +2273,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeAutoFit" /> <c>&lt;a:spAutoFit></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TextBodyProperties : OpenXmlCompositeElement
+    public partial class TextBodyProperties : OpenXmlCompositeElement, IExtensionChildrenParent<TextBodyProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "bodyPr");
@@ -2490,6 +2502,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3481,7 +3496,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class AxisTitle : StyleEntry
+    public partial class AxisTitle : StyleEntry, IExtensionChildrenParent<AxisTitle>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "axisTitle");
@@ -3520,6 +3535,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3562,7 +3580,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CategoryAxis : StyleEntry
+    public partial class CategoryAxis : StyleEntry, IExtensionChildrenParent<CategoryAxis>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "categoryAxis");
@@ -3601,6 +3619,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3643,7 +3664,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ChartArea : StyleEntry
+    public partial class ChartArea : StyleEntry, IExtensionChildrenParent<ChartArea>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "chartArea");
@@ -3682,6 +3703,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3724,7 +3748,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataLabel : StyleEntry
+    public partial class DataLabel : StyleEntry, IExtensionChildrenParent<DataLabel>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataLabel");
@@ -3763,6 +3787,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3805,7 +3832,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataLabelCallout : StyleEntry
+    public partial class DataLabelCallout : StyleEntry, IExtensionChildrenParent<DataLabelCallout>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataLabelCallout");
@@ -3844,6 +3871,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3886,7 +3916,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataPoint : StyleEntry
+    public partial class DataPoint : StyleEntry, IExtensionChildrenParent<DataPoint>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPoint");
@@ -3925,6 +3955,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3967,7 +4000,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataPoint3D : StyleEntry
+    public partial class DataPoint3D : StyleEntry, IExtensionChildrenParent<DataPoint3D>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPoint3D");
@@ -4006,6 +4039,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4048,7 +4084,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataPointLine : StyleEntry
+    public partial class DataPointLine : StyleEntry, IExtensionChildrenParent<DataPointLine>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPointLine");
@@ -4087,6 +4123,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4129,7 +4168,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataPointMarker : StyleEntry
+    public partial class DataPointMarker : StyleEntry, IExtensionChildrenParent<DataPointMarker>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPointMarker");
@@ -4168,6 +4207,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4210,7 +4252,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataPointWireframe : StyleEntry
+    public partial class DataPointWireframe : StyleEntry, IExtensionChildrenParent<DataPointWireframe>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataPointWireframe");
@@ -4249,6 +4291,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4291,7 +4336,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataTableStyle : StyleEntry
+    public partial class DataTableStyle : StyleEntry, IExtensionChildrenParent<DataTableStyle>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dataTable");
@@ -4330,6 +4375,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4372,7 +4420,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DownBar : StyleEntry
+    public partial class DownBar : StyleEntry, IExtensionChildrenParent<DownBar>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "downBar");
@@ -4411,6 +4459,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4453,7 +4504,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DropLine : StyleEntry
+    public partial class DropLine : StyleEntry, IExtensionChildrenParent<DropLine>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "dropLine");
@@ -4492,6 +4543,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4534,7 +4588,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ErrorBar : StyleEntry
+    public partial class ErrorBar : StyleEntry, IExtensionChildrenParent<ErrorBar>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "errorBar");
@@ -4573,6 +4627,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4615,7 +4672,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Floor : StyleEntry
+    public partial class Floor : StyleEntry, IExtensionChildrenParent<Floor>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "floor");
@@ -4654,6 +4711,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4696,7 +4756,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class GridlineMajor : StyleEntry
+    public partial class GridlineMajor : StyleEntry, IExtensionChildrenParent<GridlineMajor>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "gridlineMajor");
@@ -4735,6 +4795,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4777,7 +4840,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class GridlineMinor : StyleEntry
+    public partial class GridlineMinor : StyleEntry, IExtensionChildrenParent<GridlineMinor>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "gridlineMinor");
@@ -4816,6 +4879,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4858,7 +4924,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class HiLoLine : StyleEntry
+    public partial class HiLoLine : StyleEntry, IExtensionChildrenParent<HiLoLine>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "hiLoLine");
@@ -4897,6 +4963,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4939,7 +5008,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class LeaderLine : StyleEntry
+    public partial class LeaderLine : StyleEntry, IExtensionChildrenParent<LeaderLine>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "leaderLine");
@@ -4978,6 +5047,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5020,7 +5092,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class LegendStyle : StyleEntry
+    public partial class LegendStyle : StyleEntry, IExtensionChildrenParent<LegendStyle>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "legend");
@@ -5059,6 +5131,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5101,7 +5176,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PlotArea : StyleEntry
+    public partial class PlotArea : StyleEntry, IExtensionChildrenParent<PlotArea>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "plotArea");
@@ -5140,6 +5215,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5182,7 +5260,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PlotArea3D : StyleEntry
+    public partial class PlotArea3D : StyleEntry, IExtensionChildrenParent<PlotArea3D>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "plotArea3D");
@@ -5221,6 +5299,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5263,7 +5344,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SeriesAxis : StyleEntry
+    public partial class SeriesAxis : StyleEntry, IExtensionChildrenParent<SeriesAxis>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "seriesAxis");
@@ -5302,6 +5383,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5344,7 +5428,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SeriesLine : StyleEntry
+    public partial class SeriesLine : StyleEntry, IExtensionChildrenParent<SeriesLine>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "seriesLine");
@@ -5383,6 +5467,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5425,7 +5512,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TitleStyle : StyleEntry
+    public partial class TitleStyle : StyleEntry, IExtensionChildrenParent<TitleStyle>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "title");
@@ -5464,6 +5551,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5506,7 +5596,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TrendlineStyle : StyleEntry
+    public partial class TrendlineStyle : StyleEntry, IExtensionChildrenParent<TrendlineStyle>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "trendline");
@@ -5545,6 +5635,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5587,7 +5680,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TrendlineLabel : StyleEntry
+    public partial class TrendlineLabel : StyleEntry, IExtensionChildrenParent<TrendlineLabel>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "trendlineLabel");
@@ -5626,6 +5719,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5668,7 +5764,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class UpBar : StyleEntry
+    public partial class UpBar : StyleEntry, IExtensionChildrenParent<UpBar>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "upBar");
@@ -5707,6 +5803,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5749,7 +5848,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ValueAxis : StyleEntry
+    public partial class ValueAxis : StyleEntry, IExtensionChildrenParent<ValueAxis>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "valueAxis");
@@ -5788,6 +5887,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5830,7 +5932,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Wall : StyleEntry
+    public partial class Wall : StyleEntry, IExtensionChildrenParent<Wall>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "wall");
@@ -5869,6 +5971,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5911,7 +6016,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remarks>
-    public abstract partial class StyleEntry : OpenXmlCompositeElement
+    public abstract partial class StyleEntry : OpenXmlCompositeElement, IExtensionChildrenParent<StyleEntry>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
@@ -5960,6 +6065,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

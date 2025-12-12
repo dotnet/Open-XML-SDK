@@ -803,7 +803,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ColorMap : OpenXmlCompositeElement
+    public partial class ColorMap : OpenXmlCompositeElement, IExtensionChildrenParent<ColorMap>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "clrMap");
@@ -962,6 +962,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1166,7 +1169,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class BackgroundProperties : OpenXmlCompositeElement
+    public partial class BackgroundProperties : OpenXmlCompositeElement, IExtensionChildrenParent<BackgroundProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "bgPr");
@@ -1215,6 +1218,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1913,7 +1919,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideSize" /> <c>&lt;p:sldSz></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Presentation : OpenXmlPartRootElement
+    public partial class Presentation : OpenXmlPartRootElement, IExtensionChildrenParent<Presentation>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "presentation");
@@ -2072,6 +2078,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2359,7 +2368,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.WebProperties" /> <c>&lt;p:webPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PresentationProperties : OpenXmlPartRootElement
+    public partial class PresentationProperties : OpenXmlPartRootElement, IExtensionChildrenParent<PresentationProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "presentationPr");
@@ -2398,6 +2407,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2547,7 +2559,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Transition" /> <c>&lt;p:transition></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Slide : OpenXmlPartRootElement
+    public partial class Slide : OpenXmlPartRootElement, IExtensionChildrenParent<Slide>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "sld");
@@ -2616,6 +2628,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2762,7 +2777,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Transition" /> <c>&lt;p:transition></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SlideLayout : OpenXmlPartRootElement
+    public partial class SlideLayout : OpenXmlPartRootElement, IExtensionChildrenParent<SlideLayout>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldLayout");
@@ -2861,6 +2876,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3029,7 +3047,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Transition" /> <c>&lt;p:transition></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SlideMaster : OpenXmlPartRootElement
+    public partial class SlideMaster : OpenXmlPartRootElement, IExtensionChildrenParent<SlideMaster>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldMaster");
@@ -3078,6 +3096,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3264,7 +3285,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HeaderFooter" /> <c>&lt;p:hf></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class HandoutMaster : OpenXmlPartRootElement
+    public partial class HandoutMaster : OpenXmlPartRootElement, IExtensionChildrenParent<HandoutMaster>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "handoutMaster");
@@ -3303,6 +3324,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3428,7 +3452,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NotesMaster : OpenXmlPartRootElement
+    public partial class NotesMaster : OpenXmlPartRootElement, IExtensionChildrenParent<NotesMaster>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesMaster");
@@ -3467,6 +3491,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3605,7 +3632,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NotesSlide : OpenXmlPartRootElement
+    public partial class NotesSlide : OpenXmlPartRootElement, IExtensionChildrenParent<NotesSlide>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "notes");
@@ -3664,6 +3691,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3773,7 +3803,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SlideSyncProperties : OpenXmlPartRootElement
+    public partial class SlideSyncProperties : OpenXmlPartRootElement, IExtensionChildrenParent<SlideSyncProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldSyncPr");
@@ -3842,6 +3872,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4028,7 +4061,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideViewProperties" /> <c>&lt;p:slideViewPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ViewProperties : OpenXmlPartRootElement
+    public partial class ViewProperties : OpenXmlPartRootElement, IExtensionChildrenParent<ViewProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "viewPr");
@@ -4087,6 +4120,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4270,7 +4306,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties" /> <c>&lt;p14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ContentPart : OpenXmlCompositeElement
+    public partial class ContentPart : OpenXmlCompositeElement, IExtensionChildrenParent<ContentPart>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "contentPart");
@@ -4335,6 +4371,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10813,7 +10852,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CommentAuthor : OpenXmlCompositeElement
+    public partial class CommentAuthor : OpenXmlCompositeElement, IExtensionChildrenParent<CommentAuthor>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "cmAuthor");
@@ -10902,6 +10941,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10967,7 +11009,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Text" /> <c>&lt;p:text></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Comment : OpenXmlCompositeElement
+    public partial class Comment : OpenXmlCompositeElement, IExtensionChildrenParent<Comment>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "cm");
@@ -11036,6 +11078,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11187,7 +11232,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Picture" /> <c>&lt;p:pic></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Control : OpenXmlCompositeElement
+    public partial class Control : OpenXmlCompositeElement, IExtensionChildrenParent<Control>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "control");
@@ -11289,6 +11334,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11359,7 +11407,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SlideId : OpenXmlCompositeElement
+    public partial class SlideId : OpenXmlCompositeElement, IExtensionChildrenParent<SlideId>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldId");
@@ -11421,11 +11469,15 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+            DocumentFormat.OpenXml.Presentation.Picture.ElementType,
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
-            builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>.ElementType, static () => new DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>());
             builder.AddElement<SlideId>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -11438,7 +11490,7 @@ namespace DocumentFormat.OpenXml.Presentation
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType, 0, 1)
+                new ElementParticle(DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>.ElementType, 0, 1),
             };
             builder.AddConstraint(new UniqueAttributeValueConstraint(builder.CreateQName(":id"), true, null));
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
@@ -11451,10 +11503,10 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remarks>
-        public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>? ExtensionList
         {
-            get => GetElement(DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType) as DocumentFormat.OpenXml.Presentation.ExtensionList;
-            set => SetElement(value, DocumentFormat.OpenXml.Presentation.ExtensionList.ElementType);
+            get => GetElement(DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>.ElementType) as DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>;
+            set => SetElement(value, DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>.ElementType);
         }
 
         /// <inheritdoc/>
@@ -11472,7 +11524,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SlideMasterId : OpenXmlCompositeElement
+    public partial class SlideMasterId : OpenXmlCompositeElement, IExtensionChildrenParent<SlideMasterId>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldMasterId");
@@ -11534,6 +11586,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11584,7 +11639,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NotesMasterId : OpenXmlCompositeElement
+    public partial class NotesMasterId : OpenXmlCompositeElement, IExtensionChildrenParent<NotesMasterId>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesMasterId");
@@ -11636,6 +11691,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -11681,7 +11739,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class HandoutMasterId : OpenXmlCompositeElement
+    public partial class HandoutMasterId : OpenXmlCompositeElement, IExtensionChildrenParent<HandoutMasterId>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "handoutMasterId");
@@ -11733,6 +11791,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12228,7 +12289,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideList" /> <c>&lt;p:sldLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CustomShow : OpenXmlCompositeElement
+    public partial class CustomShow : OpenXmlCompositeElement, IExtensionChildrenParent<CustomShow>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "custShow");
@@ -12287,6 +12348,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12353,7 +12417,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPr");
@@ -12442,6 +12506,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12524,7 +12591,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualShapeDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvSpPr");
@@ -12573,6 +12640,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12636,7 +12706,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PlaceholderShape" /> <c>&lt;p:ph></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeElement
+    public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ApplicationNonVisualDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "nvPr");
@@ -12695,6 +12765,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12881,7 +12954,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ShapeProperties : OpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "spPr");
@@ -12930,6 +13003,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13246,7 +13322,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualConnectorShapeDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvCxnSpPr");
@@ -13285,6 +13361,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13480,7 +13559,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureLocks" /> <c>&lt;a:picLocks></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualPictureDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvPicPr");
@@ -13529,6 +13608,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13825,7 +13907,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualGraphicFrameDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvGraphicFramePr");
@@ -13864,6 +13946,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14157,7 +14242,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualGroupShapeDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "cNvGrpSpPr");
@@ -14196,6 +14281,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14260,7 +14348,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TitleStyle : TextListStyleType
+    public partial class TitleStyle : TextListStyleType, IExtensionChildrenParent<TitleStyle>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "titleStyle");
@@ -14299,6 +14387,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14344,7 +14435,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class BodyStyle : TextListStyleType
+    public partial class BodyStyle : TextListStyleType, IExtensionChildrenParent<BodyStyle>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "bodyStyle");
@@ -14383,6 +14474,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14428,7 +14522,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class OtherStyle : TextListStyleType
+    public partial class OtherStyle : TextListStyleType, IExtensionChildrenParent<OtherStyle>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "otherStyle");
@@ -14467,6 +14561,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14512,7 +14609,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DefaultTextStyle : TextListStyleType
+    public partial class DefaultTextStyle : TextListStyleType, IExtensionChildrenParent<DefaultTextStyle>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "defaultTextStyle");
@@ -14551,6 +14648,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14596,7 +14696,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NotesStyle : TextListStyleType
+    public partial class NotesStyle : TextListStyleType, IExtensionChildrenParent<NotesStyle>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesStyle");
@@ -14635,6 +14735,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14680,7 +14783,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
     /// </list>
     /// </remarks>
-    public abstract partial class TextListStyleType : OpenXmlCompositeElement
+    public abstract partial class TextListStyleType : OpenXmlCompositeElement, IExtensionChildrenParent<TextListStyleType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
@@ -14719,6 +14822,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14890,7 +14996,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SlideLayoutId : OpenXmlCompositeElement
+    public partial class SlideLayoutId : OpenXmlCompositeElement, IExtensionChildrenParent<SlideLayoutId>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "sldLayoutId");
@@ -14952,6 +15058,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -15006,7 +15115,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShapeTree" /> <c>&lt;p:spTree></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CommonSlideData : OpenXmlCompositeElement
+    public partial class CommonSlideData : OpenXmlCompositeElement, IExtensionChildrenParent<CommonSlideData>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "cSld");
@@ -15055,6 +15164,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -16022,7 +16134,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RestoredTop" /> <c>&lt;p:restoredTop></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NormalViewProperties : OpenXmlCompositeElement
+    public partial class NormalViewProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NormalViewProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "normalViewPr");
@@ -16111,6 +16223,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -16193,7 +16308,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SlideViewProperties : OpenXmlCompositeElement
+    public partial class SlideViewProperties : OpenXmlCompositeElement, IExtensionChildrenParent<SlideViewProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "slideViewPr");
@@ -16232,6 +16347,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -16288,7 +16406,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.OutlineViewSlideList" /> <c>&lt;p:sldLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class OutlineViewProperties : OpenXmlCompositeElement
+    public partial class OutlineViewProperties : OpenXmlCompositeElement, IExtensionChildrenParent<OutlineViewProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "outlineViewPr");
@@ -16327,6 +16445,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -16397,7 +16518,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NotesTextViewProperties : OpenXmlCompositeElement
+    public partial class NotesTextViewProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NotesTextViewProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesTextViewPr");
@@ -16436,6 +16557,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -16491,7 +16615,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SorterViewProperties : OpenXmlCompositeElement
+    public partial class SorterViewProperties : OpenXmlCompositeElement, IExtensionChildrenParent<SorterViewProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "sorterViewPr");
@@ -16540,6 +16664,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -16597,7 +16724,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NotesViewProperties : OpenXmlCompositeElement
+    public partial class NotesViewProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NotesViewProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "notesViewPr");
@@ -16636,6 +16763,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -17069,7 +17199,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties" /> <c>&lt;p:nvPicPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Picture : OpenXmlCompositeElement
+    public partial class Picture : OpenXmlCompositeElement, IExtensionChildrenParent<Picture>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "pic");
@@ -17108,6 +17238,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -17207,7 +17340,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class OleObjectEmbed : OpenXmlCompositeElement
+    public partial class OleObjectEmbed : OpenXmlCompositeElement, IExtensionChildrenParent<OleObjectEmbed>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "embed");
@@ -17256,6 +17389,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -17300,7 +17436,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class OleObjectLink : OpenXmlCompositeElement
+    public partial class OleObjectLink : OpenXmlCompositeElement, IExtensionChildrenParent<OleObjectLink>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "link");
@@ -17349,6 +17485,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -17432,7 +17571,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.PresetTransition" /> <c>&lt;p15:prstTrans></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Transition : OpenXmlCompositeElement
+    public partial class Transition : OpenXmlCompositeElement, IExtensionChildrenParent<Transition>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "transition");
@@ -17514,6 +17653,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -17646,7 +17788,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeNodeList" /> <c>&lt;p:tnLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Timing : OpenXmlCompositeElement
+    public partial class Timing : OpenXmlCompositeElement, IExtensionChildrenParent<Timing>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "timing");
@@ -17685,6 +17827,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -17942,7 +18087,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Shape" /> <c>&lt;p:sp></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ShapeTree : GroupShapeType
+    public partial class ShapeTree : GroupShapeType, IExtensionChildrenParent<ShapeTree>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "spTree");
@@ -17981,6 +18126,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -18025,7 +18173,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Shape" /> <c>&lt;p:sp></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class GroupShape : GroupShapeType
+    public partial class GroupShape : GroupShapeType, IExtensionChildrenParent<GroupShape>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "grpSp");
@@ -18064,6 +18212,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -18108,7 +18259,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Shape" /> <c>&lt;p:sp></c></description></item>
     /// </list>
     /// </remarks>
-    public abstract partial class GroupShapeType : OpenXmlCompositeElement
+    public abstract partial class GroupShapeType : OpenXmlCompositeElement, IExtensionChildrenParent<GroupShapeType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
@@ -18147,6 +18298,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -18517,7 +18671,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class GroupShapeProperties : OpenXmlCompositeElement
+    public partial class GroupShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<GroupShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "grpSpPr");
@@ -18566,6 +18720,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -18646,7 +18803,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties" /> <c>&lt;p:nvSpPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Shape : OpenXmlCompositeElement
+    public partial class Shape : OpenXmlCompositeElement, IExtensionChildrenParent<Shape>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "sp");
@@ -18695,6 +18852,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -18799,7 +18959,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties" /> <c>&lt;p:nvGraphicFramePr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class GraphicFrame : OpenXmlCompositeElement
+    public partial class GraphicFrame : OpenXmlCompositeElement, IExtensionChildrenParent<GraphicFrame>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "graphicFrame");
@@ -18838,6 +18998,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -18925,7 +19088,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ConnectionShape : OpenXmlCompositeElement
+    public partial class ConnectionShape : OpenXmlCompositeElement, IExtensionChildrenParent<ConnectionShape>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "cxnSp");
@@ -18964,6 +19127,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -19867,7 +20033,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PlaceholderShape : OpenXmlCompositeElement
+    public partial class PlaceholderShape : OpenXmlCompositeElement, IExtensionChildrenParent<PlaceholderShape>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "ph");
@@ -19956,6 +20122,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -21398,7 +21567,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PhotoAlbum : OpenXmlCompositeElement
+    public partial class PhotoAlbum : OpenXmlCompositeElement, IExtensionChildrenParent<PhotoAlbum>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "photoAlbum");
@@ -21477,6 +21646,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -22007,7 +22179,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideRange" /> <c>&lt;p:sldRg></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class HtmlPublishProperties : OpenXmlCompositeElement
+    public partial class HtmlPublishProperties : OpenXmlCompositeElement, IExtensionChildrenParent<HtmlPublishProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "htmlPubPr");
@@ -22079,6 +22251,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -22127,7 +22302,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class WebProperties : OpenXmlCompositeElement
+    public partial class WebProperties : OpenXmlCompositeElement, IExtensionChildrenParent<WebProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "webPr");
@@ -22256,6 +22431,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -22311,7 +22489,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PrintingProperties : OpenXmlCompositeElement
+    public partial class PrintingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<PrintingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "prnPr");
@@ -22400,6 +22578,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -22458,7 +22639,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShowPropertiesExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ShowProperties : OpenXmlCompositeElement
+    public partial class ShowProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ShowProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "showPr");
@@ -22537,6 +22718,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -22848,7 +23032,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class HeaderFooter : OpenXmlCompositeElement
+    public partial class HeaderFooter : OpenXmlCompositeElement, IExtensionChildrenParent<HeaderFooter>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "hf");
@@ -22927,6 +23111,9 @@ namespace DocumentFormat.OpenXml.Presentation
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -23104,7 +23291,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TextStyles : OpenXmlCompositeElement
+    public partial class TextStyles : OpenXmlCompositeElement, IExtensionChildrenParent<TextStyles>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/presentationml/2006/main", "txStyles");
@@ -23143,6 +23330,9 @@ namespace DocumentFormat.OpenXml.Presentation
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
