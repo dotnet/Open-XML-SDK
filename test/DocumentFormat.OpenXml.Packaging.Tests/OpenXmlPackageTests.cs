@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             using (Stream stream = part.GetStream(FileMode.Open))
             {
                 var buffer = new byte[stream.Length];
-                stream.Read(buffer, 0, buffer.Length);
+                stream.ReadExactly(buffer);
 
                 Assert.Equal(expected, buffer);
             }

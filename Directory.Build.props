@@ -65,10 +65,10 @@
         <ProductTargetFrameworks>netstandard2.0;net10.0;net8.0;net35;net40;net46</ProductTargetFrameworks>
         <FrameworkTargetFrameworks>netstandard2.0;net10.0;net6.0;net8.0;net35;net40;net46</FrameworkTargetFrameworks>
         <AssetsTargetFrameworks>netstandard2.0;net472</AssetsTargetFrameworks>
-        <TestTargetFrameworks>net8.0</TestTargetFrameworks>
+        <TestTargetFrameworks>net8.0;net10.0</TestTargetFrameworks>
         <TestTargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(TestTargetFrameworks);net472</TestTargetFrameworks>
-        <LatestTargetFramework>net8.0</LatestTargetFramework>
-        <SamplesFrameworks>net8.0</SamplesFrameworks>
+        <LatestTargetFramework>net10.0</LatestTargetFramework>
+        <SamplesFrameworks>net8.0;net10.0</SamplesFrameworks>
         <SamplesFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(SamplesFrameworks);net472</SamplesFrameworks>
         <DefineConstants Condition=" '$(TargetFramework)' != 'net35' And '$(TargetFramework)' != 'net40' And '$(TargetFramework)' != 'net46' And '$(TargetFramework)' != 'net472' ">$(DefineConstants);FEATURE_ASYNC_SAX_XML</DefineConstants>
       </PropertyGroup>
