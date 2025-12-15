@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList" /> <c>&lt;p202:designTagLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DesignerDrawingProps : OpenXmlCompositeElement
+    public partial class DesignerDrawingProps : OpenXmlCompositeElement, IExtensionChildrenParent<DesignerDrawingProps>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2020/02/main", "designPr");
@@ -145,6 +145,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

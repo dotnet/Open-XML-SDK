@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2010/diagram", "cNvPr");
@@ -120,6 +120,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

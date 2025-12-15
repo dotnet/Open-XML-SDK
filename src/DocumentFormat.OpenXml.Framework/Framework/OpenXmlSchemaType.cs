@@ -5,7 +5,7 @@ using System;
 
 namespace DocumentFormat.OpenXml.Framework;
 
-internal readonly struct OpenXmlSchemaType(OpenXmlQualifiedName name, OpenXmlQualifiedName type) : IComparable<OpenXmlSchemaType>, IEquatable<OpenXmlSchemaType>
+public readonly struct OpenXmlSchemaType(OpenXmlQualifiedName name, OpenXmlQualifiedName type) : IComparable<OpenXmlSchemaType>, IEquatable<OpenXmlSchemaType>
 {
     public OpenXmlQualifiedName Name => name;
 

@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings" /> <c>&lt;cx:printSettings></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ChartSpace : OpenXmlPartRootElement
+    public partial class ChartSpace : OpenXmlPartRootElement, IExtensionChildrenParent<ChartSpace>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "chartSpace");
@@ -76,6 +76,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1576,7 +1579,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimension" /> <c>&lt;cx:strDim></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Data : OpenXmlCompositeElement
+    public partial class Data : OpenXmlCompositeElement, IExtensionChildrenParent<Data>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "data");
@@ -1625,6 +1628,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2470,7 +2476,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ShapeProperties : OpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "spPr");
@@ -2519,6 +2525,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2613,7 +2622,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class AxisUnitsLabel : OpenXmlCompositeElement
+    public partial class AxisUnitsLabel : OpenXmlCompositeElement, IExtensionChildrenParent<AxisUnitsLabel>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "unitsLabel");
@@ -2652,6 +2661,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2894,7 +2906,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class AxisTitle : OpenXmlCompositeElement
+    public partial class AxisTitle : OpenXmlCompositeElement, IExtensionChildrenParent<AxisTitle>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "title");
@@ -2933,6 +2945,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3019,7 +3034,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class AxisUnits : OpenXmlCompositeElement
+    public partial class AxisUnits : OpenXmlCompositeElement, IExtensionChildrenParent<AxisUnits>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "units");
@@ -3068,6 +3083,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3126,7 +3144,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class MajorGridlinesGridlines : OpenXmlGridlinesElement
+    public partial class MajorGridlinesGridlines : OpenXmlGridlinesElement, IExtensionChildrenParent<MajorGridlinesGridlines>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "majorGridlines");
@@ -3165,6 +3183,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3193,7 +3214,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class MinorGridlinesGridlines : OpenXmlGridlinesElement
+    public partial class MinorGridlinesGridlines : OpenXmlGridlinesElement, IExtensionChildrenParent<MinorGridlinesGridlines>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "minorGridlines");
@@ -3232,6 +3253,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3260,7 +3284,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public abstract partial class OpenXmlGridlinesElement : OpenXmlCompositeElement
+    public abstract partial class OpenXmlGridlinesElement : OpenXmlCompositeElement, IExtensionChildrenParent<OpenXmlGridlinesElement>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
@@ -3299,6 +3323,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3344,7 +3371,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class MajorTickMarksTickMarks : OpenXmlTickMarksElement
+    public partial class MajorTickMarksTickMarks : OpenXmlTickMarksElement, IExtensionChildrenParent<MajorTickMarksTickMarks>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "majorTickMarks");
@@ -3383,6 +3410,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3409,7 +3439,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class MinorTickMarksTickMarks : OpenXmlTickMarksElement
+    public partial class MinorTickMarksTickMarks : OpenXmlTickMarksElement, IExtensionChildrenParent<MinorTickMarksTickMarks>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "minorTickMarks");
@@ -3448,6 +3478,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3474,7 +3507,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public abstract partial class OpenXmlTickMarksElement : OpenXmlCompositeElement
+    public abstract partial class OpenXmlTickMarksElement : OpenXmlCompositeElement, IExtensionChildrenParent<OpenXmlTickMarksElement>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
@@ -3523,6 +3556,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3556,7 +3592,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TickLabels : OpenXmlCompositeElement
+    public partial class TickLabels : OpenXmlCompositeElement, IExtensionChildrenParent<TickLabels>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "tickLabels");
@@ -3595,6 +3631,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7448,7 +7487,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring" /> <c>&lt;cx:separator></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataLabel : OpenXmlCompositeElement
+    public partial class DataLabel : OpenXmlCompositeElement, IExtensionChildrenParent<DataLabel>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "dataLabel");
@@ -7507,6 +7546,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7912,7 +7954,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataPoint : OpenXmlCompositeElement
+    public partial class DataPoint : OpenXmlCompositeElement, IExtensionChildrenParent<DataPoint>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "dataPt");
@@ -7961,6 +8003,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8028,7 +8073,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring" /> <c>&lt;cx:separator></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataLabels : OpenXmlCompositeElement
+    public partial class DataLabels : OpenXmlCompositeElement, IExtensionChildrenParent<DataLabels>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "dataLabels");
@@ -8077,6 +8122,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8239,7 +8287,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Subtotals" /> <c>&lt;cx:subtotals></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SeriesLayoutProperties : OpenXmlCompositeElement
+    public partial class SeriesLayoutProperties : OpenXmlCompositeElement, IExtensionChildrenParent<SeriesLayoutProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "layoutPr");
@@ -8278,6 +8326,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8409,7 +8460,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PlotSurface : OpenXmlCompositeElement
+    public partial class PlotSurface : OpenXmlCompositeElement, IExtensionChildrenParent<PlotSurface>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "plotSurface");
@@ -8448,6 +8499,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8512,7 +8566,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisId" /> <c>&lt;cx:axisId></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Series : OpenXmlCompositeElement
+    public partial class Series : OpenXmlCompositeElement, IExtensionChildrenParent<Series>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "series");
@@ -8601,6 +8655,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8709,7 +8766,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Series" /> <c>&lt;cx:series></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PlotAreaRegion : OpenXmlCompositeElement
+    public partial class PlotAreaRegion : OpenXmlCompositeElement, IExtensionChildrenParent<PlotAreaRegion>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "plotAreaRegion");
@@ -8748,6 +8805,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8804,7 +8864,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueAxisScaling" /> <c>&lt;cx:valScaling></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Axis : OpenXmlCompositeElement
+    public partial class Axis : OpenXmlCompositeElement, IExtensionChildrenParent<Axis>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "axis");
@@ -8863,6 +8923,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8926,7 +8989,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ChartTitle : OpenXmlCompositeElement
+    public partial class ChartTitle : OpenXmlCompositeElement, IExtensionChildrenParent<ChartTitle>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "title");
@@ -8995,6 +9058,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -9087,7 +9153,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotAreaRegion" /> <c>&lt;cx:plotAreaRegion></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PlotArea : OpenXmlCompositeElement
+    public partial class PlotArea : OpenXmlCompositeElement, IExtensionChildrenParent<PlotArea>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "plotArea");
@@ -9126,6 +9192,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -9174,7 +9243,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Legend : OpenXmlCompositeElement
+    public partial class Legend : OpenXmlCompositeElement, IExtensionChildrenParent<Legend>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "legend");
@@ -9243,6 +9312,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -9318,7 +9390,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class FormatOverride : OpenXmlCompositeElement
+    public partial class FormatOverride : OpenXmlCompositeElement, IExtensionChildrenParent<FormatOverride>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "fmtOvr");
@@ -9367,6 +9439,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -9869,7 +9944,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExternalData" /> <c>&lt;cx:externalData></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ChartData : OpenXmlCompositeElement
+    public partial class ChartData : OpenXmlCompositeElement, IExtensionChildrenParent<ChartData>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "chartData");
@@ -9908,6 +9983,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -9955,7 +10033,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotArea" /> <c>&lt;cx:plotArea></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Chart : OpenXmlCompositeElement
+    public partial class Chart : OpenXmlCompositeElement, IExtensionChildrenParent<Chart>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "chart");
@@ -9994,6 +10072,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10079,7 +10160,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ColorMappingType : OpenXmlCompositeElement
+    public partial class ColorMappingType : OpenXmlCompositeElement, IExtensionChildrenParent<ColorMappingType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "clrMapOvr");
@@ -10238,6 +10319,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

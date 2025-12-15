@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person" /> <c>&lt;xltc:person></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PersonList : OpenXmlPartRootElement
+    public partial class PersonList : OpenXmlPartRootElement, IExtensionChildrenParent<PersonList>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "personList");
@@ -69,6 +69,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -130,7 +133,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment" /> <c>&lt;xltc:threadedComment></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ThreadedComments : OpenXmlPartRootElement
+    public partial class ThreadedComments : OpenXmlPartRootElement, IExtensionChildrenParent<ThreadedComments>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "ThreadedComments");
@@ -169,6 +172,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -229,7 +235,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Person : OpenXmlCompositeElement
+    public partial class Person : OpenXmlCompositeElement, IExtensionChildrenParent<Person>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "person");
@@ -308,6 +314,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -434,7 +443,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions" /> <c>&lt;xltc:mentions></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ThreadedComment : OpenXmlCompositeElement
+    public partial class ThreadedComment : OpenXmlCompositeElement, IExtensionChildrenParent<ThreadedComment>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments", "threadedComment");
@@ -533,6 +542,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

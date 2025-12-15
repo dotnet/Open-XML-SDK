@@ -6225,6 +6225,26 @@
             ]
           }
         ]
+      },
+      "ExtensionChildren": [
+
+        {
+          "Name": "p:CT_Picture/p:pic",
+          "PropertyName": "Picture"
+        }
+      ],
+      "ExtensionParticle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p:CT_Picture/p:pic",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
       }
     },
     {

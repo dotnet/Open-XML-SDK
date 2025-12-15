@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValue" /> <c>&lt;xlrd:rv></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class RichValueData : OpenXmlPartRootElement
+    public partial class RichValueData : OpenXmlPartRootElement, IExtensionChildrenParent<RichValueData>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "rvData");
@@ -125,6 +125,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -191,7 +194,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueStructure" /> <c>&lt;xlrd:s></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class RichValueStructures : OpenXmlPartRootElement
+    public partial class RichValueStructures : OpenXmlPartRootElement, IExtensionChildrenParent<RichValueStructures>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2017/richdata", "rvStructures");
@@ -240,6 +243,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
