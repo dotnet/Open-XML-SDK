@@ -300,18 +300,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName additive = "additive";
 
         /// <summary>
-        /// Represents the addlXml XML attribute.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML attribute, it:</para>
-        /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A15.signatureLine" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: SignatureLine.AdditionalXml.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName addlXml_ = "addlXml";
-
-        /// <summary>
         /// Represents the addlxml XML attribute.
         /// </summary>
         /// <remarks>
@@ -322,6 +310,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName addlxml = "addlxml";
+
+        /// <summary>
+        /// Represents the addlXml XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="A15.signatureLine" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: SignatureLine.AdditionalXml.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName addlXml_ = "addlXml";
 
         /// <summary>
         /// Represents the address1 XML attribute.
@@ -648,18 +648,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName allowBlank = "allowBlank";
 
         /// <summary>
-        /// Represents the allowComments XML attribute.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML attribute, it:</para>
-        /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A15.signatureLine" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: SignatureLine.AllowComments.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName allowComments_ = "allowComments";
-
-        /// <summary>
         /// Represents the allowcomments XML attribute.
         /// </summary>
         /// <remarks>
@@ -670,6 +658,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName allowcomments = "allowcomments";
+
+        /// <summary>
+        /// Represents the allowComments XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="A15.signatureLine" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: SignatureLine.AllowComments.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName allowComments_ = "allowComments";
 
         /// <summary>
         /// Represents the allowedTaskSizes XML attributes.
@@ -6084,18 +6084,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName dropStyle = "dropStyle";
 
         /// <summary>
-        /// Represents the dT XML attribute.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML attribute, it:</para>
-        /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="XLTC.threadedComment" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: ThreadedComment.DT.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName dT_ = "dT";
-
-        /// <summary>
         /// Represents the dt XML attributes.
         /// </summary>
         /// <remarks>
@@ -6106,6 +6094,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName dt = "dt";
+
+        /// <summary>
+        /// Represents the dT XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="XLTC.threadedComment" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: ThreadedComment.DT.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName dT_ = "dT";
 
         /// <summary>
         /// Represents the dt2D XML attribute.
@@ -6312,18 +6312,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName edit = "edit";
 
         /// <summary>
-        /// Represents the editAs XML attribute.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML attribute, it:</para>
-        /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="XDR.twoCellAnchor" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: TwoCellAnchor.EditAs.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName editAs_ = "editAs";
-
-        /// <summary>
         /// Represents the editas XML attribute.
         /// </summary>
         /// <remarks>
@@ -6334,6 +6322,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName editas = "editas";
+
+        /// <summary>
+        /// Represents the editAs XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="XDR.twoCellAnchor" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: TwoCellAnchor.EditAs.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName editAs_ = "editAs";
 
         /// <summary>
         /// Represents the editData XML attribute.
@@ -10440,18 +10440,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName invertible = "invertible";
 
         /// <summary>
-        /// Represents the invX XML attribute.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML attribute, it:</para>
-        /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="P15.prstTrans" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: PresetTransition.InvX.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName invX_ = "invX";
-
-        /// <summary>
         /// Represents the invx XML attribute.
         /// </summary>
         /// <remarks>
@@ -10464,16 +10452,16 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName invx = "invx";
 
         /// <summary>
-        /// Represents the invY XML attribute.
+        /// Represents the invX XML attribute.
         /// </summary>
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
         /// <item><description>is contained in the following XML elements: <see cref="P15.prstTrans" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: PresetTransition.InvY.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: PresetTransition.InvX.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName invY_ = "invY";
+        public static readonly XName invX_ = "invX";
 
         /// <summary>
         /// Represents the invy XML attribute.
@@ -10486,6 +10474,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName invy = "invy";
+
+        /// <summary>
+        /// Represents the invY XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="P15.prstTrans" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: PresetTransition.InvY.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName invY_ = "invY";
 
         /// <summary>
         /// Represents the isActiveX XML attribute.
@@ -10620,18 +10620,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName isPhoto = "isPhoto";
 
         /// <summary>
-        /// Represents the isSignatureLine XML attribute.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML attribute, it:</para>
-        /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A15.signatureLine" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: SignatureLine.IsSignatureLine.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName isSignatureLine_ = "isSignatureLine";
-
-        /// <summary>
         /// Represents the issignatureline XML attribute.
         /// </summary>
         /// <remarks>
@@ -10642,6 +10630,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName issignatureline = "issignatureline";
+
+        /// <summary>
+        /// Represents the isSignatureLine XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="A15.signatureLine" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: SignatureLine.IsSignatureLine.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName isSignatureLine_ = "isSignatureLine";
 
         /// <summary>
         /// Represents the item XML attributes.
@@ -13740,18 +13740,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName o = "o";
 
         /// <summary>
-        /// Represents the objectId XML attribute.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML attribute, it:</para>
-        /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A15.objectPr" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: ObjectProperties.Id.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName objectId = "objectId";
-
-        /// <summary>
         /// Represents the ObjectID XML attribute.
         /// </summary>
         /// <remarks>
@@ -13762,6 +13750,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName ObjectID_ = "ObjectID";
+
+        /// <summary>
+        /// Represents the objectId XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="A15.objectPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: ObjectProperties.Id.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName objectId = "objectId";
 
         /// <summary>
         /// Represents the objects XML attributes.
@@ -13776,18 +13776,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName objects = "objects";
 
         /// <summary>
-        /// Represents the objectType XML attribute.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML attribute, it:</para>
-        /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="X14.formControlPr" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: FormControlProperties.ObjectType.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName objectType = "objectType";
-
-        /// <summary>
         /// Represents the ObjectType XML attribute.
         /// </summary>
         /// <remarks>
@@ -13798,6 +13786,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName ObjectType_ = "ObjectType";
+
+        /// <summary>
+        /// Represents the objectType XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="X14.formControlPr" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: FormControlProperties.ObjectType.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName objectType = "objectType";
 
         /// <summary>
         /// Represents the objId XML attributes.
@@ -15576,18 +15576,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName productSubtotal = "productSubtotal";
 
         /// <summary>
-        /// Represents the progId XML attributes.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML attribute, it:</para>
-        /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="P.oleObj" />, <see cref="X.oleLink" />, <see cref="X.oleObject" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: OleLink.ProgId, OleObject.ProgId.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName progId = "progId";
-
-        /// <summary>
         /// Represents the ProgID XML attribute.
         /// </summary>
         /// <remarks>
@@ -15598,6 +15586,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName ProgID_ = "ProgID";
+
+        /// <summary>
+        /// Represents the progId XML attributes.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="P.oleObj" />, <see cref="X.oleLink" />, <see cref="X.oleObject" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: OleLink.ProgId, OleObject.ProgId.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName progId = "progId";
 
         /// <summary>
         /// Represents the projectionType XML attribute.
@@ -15672,18 +15672,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName @protected = "protected";
 
         /// <summary>
-        /// Represents the provId XML attribute.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML attribute, it:</para>
-        /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A15.signatureLine" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: SignatureLine.ProviderId.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName provId_ = "provId";
-
-        /// <summary>
         /// Represents the provid XML attribute.
         /// </summary>
         /// <remarks>
@@ -15694,6 +15682,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName provid = "provid";
+
+        /// <summary>
+        /// Represents the provId XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="A15.signatureLine" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: SignatureLine.ProviderId.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName provId_ = "provId";
 
         /// <summary>
         /// Represents the provider XML attribute.
@@ -16932,18 +16932,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName rotation = "rotation";
 
         /// <summary>
-        /// Represents the rotationAngle XML attribute.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML attribute, it:</para>
-        /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="MSINK.context" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: ContextNode.RotationAngle.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName rotationAngle_ = "rotationAngle";
-
-        /// <summary>
         /// Represents the rotationangle XML attribute.
         /// </summary>
         /// <remarks>
@@ -16954,6 +16942,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName rotationangle = "rotationangle";
+
+        /// <summary>
+        /// Represents the rotationAngle XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="MSINK.context" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: ContextNode.RotationAngle.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName rotationAngle_ = "rotationAngle";
 
         /// <summary>
         /// Represents the rotationcenter XML attribute.
@@ -17892,18 +17892,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName shapeGeometry = "shapeGeometry";
 
         /// <summary>
-        /// Represents the shapeId XML attributes.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML attribute, it:</para>
-        /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="X.comment" />, <see cref="X.control" />, <see cref="X.oleObject" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: Comment.ShapeId, Control.ShapeId, OleObject.ShapeId.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName shapeId = "shapeId";
-
-        /// <summary>
         /// Represents the ShapeID XML attribute.
         /// </summary>
         /// <remarks>
@@ -17914,6 +17902,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName ShapeID_ = "ShapeID";
+
+        /// <summary>
+        /// Represents the shapeId XML attributes.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="X.comment" />, <see cref="X.control" />, <see cref="X.oleObject" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: Comment.ShapeId, Control.ShapeId, OleObject.ShapeId.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName shapeId = "shapeId";
 
         /// <summary>
         /// Represents the shapeName XML attribute.
@@ -18852,18 +18852,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName showSheetTabs = "showSheetTabs";
 
         /// <summary>
-        /// Represents the showSignDate XML attribute.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML attribute, it:</para>
-        /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A15.signatureLine" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: SignatureLine.ShowSignDate.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName showSignDate_ = "showSignDate";
-
-        /// <summary>
         /// Represents the showsigndate XML attribute.
         /// </summary>
         /// <remarks>
@@ -18874,6 +18862,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName showsigndate = "showsigndate";
+
+        /// <summary>
+        /// Represents the showSignDate XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="A15.signatureLine" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: SignatureLine.ShowSignDate.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName showSignDate_ = "showSignDate";
 
         /// <summary>
         /// Represents the showSpeakerNotes XML attribute.
@@ -19068,18 +19068,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName side = "side";
 
         /// <summary>
-        /// Represents the signingInstructions XML attribute.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML attribute, it:</para>
-        /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A15.signatureLine" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: SignatureLine.SigningInstructions.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName signingInstructions_ = "signingInstructions";
-
-        /// <summary>
         /// Represents the signinginstructions XML attribute.
         /// </summary>
         /// <remarks>
@@ -19092,16 +19080,16 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName signinginstructions = "signinginstructions";
 
         /// <summary>
-        /// Represents the signingInstructionsSet XML attribute.
+        /// Represents the signingInstructions XML attribute.
         /// </summary>
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
         /// <item><description>is contained in the following XML elements: <see cref="A15.signatureLine" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: SignatureLine.SigningInstructionsSet.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: SignatureLine.SigningInstructions.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName signingInstructionsSet_ = "signingInstructionsSet";
+        public static readonly XName signingInstructions_ = "signingInstructions";
 
         /// <summary>
         /// Represents the signinginstructionsset XML attribute.
@@ -19116,16 +19104,16 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName signinginstructionsset = "signinginstructionsset";
 
         /// <summary>
-        /// Represents the sigProvUrl XML attribute.
+        /// Represents the signingInstructionsSet XML attribute.
         /// </summary>
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
         /// <item><description>is contained in the following XML elements: <see cref="A15.signatureLine" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: SignatureLine.SignatureProviderUrl.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: SignatureLine.SigningInstructionsSet.</description></item>
         /// </list>
         /// </remarks>
-        public static readonly XName sigProvUrl_ = "sigProvUrl";
+        public static readonly XName signingInstructionsSet_ = "signingInstructionsSet";
 
         /// <summary>
         /// Represents the sigprovurl XML attribute.
@@ -19138,6 +19126,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName sigprovurl = "sigprovurl";
+
+        /// <summary>
+        /// Represents the sigProvUrl XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="A15.signatureLine" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: SignatureLine.SignatureProviderUrl.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName sigProvUrl_ = "sigProvUrl";
 
         /// <summary>
         /// Represents the simplePos XML attribute.
