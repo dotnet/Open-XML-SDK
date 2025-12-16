@@ -5,6 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.4.0] - 2025-12-10
+
+### Added
+
+- Added `MediaDataPartType.Mp4` to support MP4 video media parts in presentations and documents (#1866)
+- Updated bundled Open XML schemas to the Q3 2025 Office release, enabling newer document and presentation features (#1963)
+
+### Changed
+
+- Reduced JIT and AOT size and improved document load performance by removing the generic builder pattern from element metadata creation (#1842, #1843)
+- Optimized `FromChunkedBase64String` to significantly reduce allocations and improve throughput when decoding chunked base64 content (≈2.4× faster, ≈70% less memory) (#1868)
+
+### Fixed
+
+- Switched to `XmlDOMTextWriter` instead of `XmlWriter.Create` to correctly handle serialization of certain XML content (#1869, #1961)
+- Added a clear error when attempting to open encrypted documents that the SDK cannot process (#1635, #1969)
+- Improved exception messages when required package parts are missing by including the name of the missing part (#1971, #1974)
+
+### Documentation
+
+- Clarified the README SDK description and simplified the note on 3.0.0 breaking changes (#1858)
+- Documented that disposing a package with `AutoSave` set to `false` does not persist changes (#1873)
+- Removed the PowerPoint modern comments sample, which now lives on learn.microsoft.com (#1861)
+
+Thanks to the following for their contributions:
+
+@QuocDatHoang
+@Varorbc
+
 ## [3.3.0] - 2025-03-06
 
 ### Added
@@ -83,7 +112,7 @@ Thanks to the following for their contributions:
 
 ### Added
 
-- Packages can now be saved on .NET Core and .NET 5+ if constructed with a path or stream (#1307).
+- Packages can now be saved on .NET Core and .NET 5+ if constructed with a path or stream (#1307)
 - Packages can now support malformed URIs (such as relationships with a URI such as `mailto:person@`)
 - Introduce equality comparers for `OpenXmlElement` (#1476)
 - `IFeatureCollection` can now be enumerated and has a helpful debug view to see what features are registered (#1452)
@@ -227,7 +256,7 @@ Thanks to the following for their contribution:
 - Added samples for strongly typed classes and Linq-to-XML in the `./samples` directory (#1101, #1087)
 - Shipping additional libraries for some additional functionality in `DocumentFormat.OpenXml.Features` and `DocumentFormat.OpenXml.Linq`. See documentation in repo for additional details.
 - Added extension method to support getting image part type (#1082)
-- Added generated classes and `FileFormatVersions.Microsoft365` for new subscription model types and constraints (#1097).
+- Added generated classes and `FileFormatVersions.Microsoft365` for new subscription model types and constraints (#1097)
 
 ### Fixed
 
@@ -375,7 +404,7 @@ Thanks to the following for their contributions:
 ### Added
 
 - Added `FileFormatVersions.2019` enum (#695)
-- Added `ChartSpace` and chart elements for the new 2016 namespaces. This allows the connecting pieces for building a chart part with chart styles like "Sunburst" (#687).
+- Added `ChartSpace` and chart elements for the new 2016 namespaces. This allows the connecting pieces for building a chart part with chart styles like "Sunburst" (#687)
 - Added `OpenXmlElementFunctionalExtensions.With(...)` extension methods, which offer flexible means for constructing `OpenXmlElement` instances in the context of pure functional transformations (#679)
 - Added minimum Office versions for enum types and values (#707)
 - Added additional `CompatSettingNameValues` values: `UseWord2013TrackBottomHyphenation`, `AllowHyphenationAtTrackBottom`, and `AllowTextAfterFloatingTableBreak` (#706)
