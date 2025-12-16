@@ -105,7 +105,7 @@ jobs:
            run: dotnet tool install --global NuGetKeyVaultSignTool
 
          - name: Download Unsigned Packages
-           uses: actions/download-artifact@v6
+           uses: actions/download-artifact@v7
            with: 
                 name: Unsigned
                 path: '${{ github.workspace }}/unsigned' 
@@ -162,7 +162,7 @@ jobs:
          - name: Install .NET Core
            uses: actions/setup-dotnet@v5
          - name: Download Packages
-           uses: actions/download-artifact@v6
+           uses: actions/download-artifact@v7
            with: 
                 name: Signed
                 path: '${{ github.workspace }}/packages'
