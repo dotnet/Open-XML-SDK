@@ -60,16 +60,16 @@ jobs:
       matrix:
         configuration: [ debug, release ]
         projectloadstyle: [ net35, net40, All ]
-        os: [ windows-latest, ubuntu-latest, macos-latest ]
+        os: [ windows-latest, ubuntu-latest, macos-15-large ]
         exclude: 
           - projectloadstyle: net35
             os: ubuntu-latest
           - projectloadstyle: net40
             os: ubuntu-latest
           - projectloadstyle: net35
-            os: macos-latest
+            os: macos-15-large
           - projectloadstyle: net40
-            os: macos-latest
+            os: macos-15-large
 
     env:
       RunPeVerify: true 
