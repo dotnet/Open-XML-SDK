@@ -60,7 +60,7 @@ jobs:
       matrix:
         configuration: [ debug, release ]
         projectloadstyle: [ net35, net40, All ]
-        os: [ windows-latest, ubuntu-latest ]
+        os: [ windows-2022, ubuntu-latest ]
         exclude: 
           - projectloadstyle: net35
             os: ubuntu-latest
