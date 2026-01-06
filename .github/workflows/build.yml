@@ -92,9 +92,9 @@ jobs:
     - name: Restore
       run: dotnet restore --verbosity normal          
     - name: Build
-      run: dotnet build --no-restore --verbosity normal
+      run: dotnet build --no-restore --configuration ${{ matrix.configuration }} --verbosity normal
     - name: Test
-      run: dotnet test --no-restore -- --results-directory ${{ github.workspace }}/test-results/ --report-xunit-trx
+      run: dotnet test --no-restore --configuration ${{ matrix.configuration }} -- --results-directory ${{ github.workspace }}/test-results/ --report-xunit-trx
     - name: Upload Test Results
       if: always()
       uses: actions/upload-artifact@v6
