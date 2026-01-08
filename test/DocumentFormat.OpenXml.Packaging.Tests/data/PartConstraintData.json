@@ -812,6 +812,16 @@
     "Parts": []
   },
   {
+    "Name": "DocumentFormat.OpenXml.Packaging.FeaturePropertyBagsPart",
+    "ContentType": "application/vnd.ms-excel.featurepropertybag+xml",
+    "IsContentTypeFixed": true,
+    "RelationshipType": "http://schemas.microsoft.com/office/2022/11/relationships/FeaturePropertyBag",
+    "TargetFileExtension": ".xml",
+    "TargetName": "featurePropertyBag",
+    "TargetPath": "featurePropertyBag",
+    "Parts": []
+  },
+  {
     "Name": "DocumentFormat.OpenXml.Packaging.FontPart",
     "ContentType": null,
     "IsContentTypeFixed": false,
@@ -2525,7 +2535,7 @@
     "Name": "DocumentFormat.OpenXml.Packaging.RdRichValueWebImagePart",
     "ContentType": "application/vnd.ms-excel.rdrichvaluewebimage+xml",
     "IsContentTypeFixed": true,
-    "RelationshipType": "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage",
+    "RelationshipType": "http://schemas.microsoft.com/office/2020/07/relationships/rdRichValueWebImage",
     "TargetFileExtension": ".xml",
     "TargetName": "rdRichValueWebImage",
     "TargetPath": "richData",
@@ -3965,7 +3975,7 @@
         "FileFormat": "Office2019"
       },
       {
-        "RelationshipType": "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage",
+        "RelationshipType": "http://schemas.microsoft.com/office/2020/07/relationships/rdRichValueWebImage",
         "ContentType": "application/vnd.ms-excel.rdrichvaluewebimage+xml",
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
@@ -4234,16 +4244,6 @@
     "TargetFileExtension": ".xml",
     "TargetName": "sig",
     "TargetPath": "_xmlsignatures",
-    "Parts": []
-  },
-  {
-    "Name": "DocumentFormat.OpenXml.Packaging.FeaturePropertyBagsPart",
-    "ContentType": "application/vnd.ms-excel.featurepropertybag+xml",
-    "IsContentTypeFixed": true,
-    "RelationshipType": "http://schemas.microsoft.com/office/2022/11/relationships/FeaturePropertyBag",
-    "TargetFileExtension": ".xml",
-    "TargetName": "featurePropertyBag",
-    "TargetPath": "featurePropertyBag",
     "Parts": []
   }
 ]

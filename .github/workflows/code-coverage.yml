@@ -31,12 +31,12 @@ jobs:
     
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
         fetch-depth: 0
 
     - name: Install .NET Core
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
 
     - name: Restore
       run: dotnet restore --verbosity normal
@@ -48,7 +48,7 @@ jobs:
       run: dotnet test --no-restore --verbosity normal --collect:"XPlat Code Coverage" --results-directory coverage
 
     - name: ReportGenerator
-      uses: danielpalme/ReportGenerator-GitHub-Action@5.4.4
+      uses: danielpalme/ReportGenerator-GitHub-Action@5.5.1
       with:
         reports: coverage/**/coverage.cobertura.xml
         targetdir: coveragereport
@@ -63,7 +63,7 @@ jobs:
     
     - name: Upload Test Results
       if: always()
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       with:
         name: Code Coverage
         path: coveragereport/*

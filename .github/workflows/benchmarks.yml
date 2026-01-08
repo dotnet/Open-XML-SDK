@@ -22,13 +22,13 @@ jobs:
     name: Run
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-dotnet@v5
       - name: Build benchmarks
         run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet build -c RELEASE
         shell: pwsh
       - name: Run benchmarks
-        run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet run -c RELEASE -f net8.0
+        run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet run -c RELEASE -f net10.0
         shell: pwsh
       - name: Write summary
         shell: pwsh

@@ -3,15 +3,17 @@
 
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Framework.Tests;
 using DocumentFormat.OpenXml.Packaging;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using DocumentFormat.OpenXml.Packaging.Tests;
 using NSubstitute;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
@@ -86,10 +88,9 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             Assert.NotNull(expectedConstraints.Parts);
-#if DEBUG
+
             _output.WriteObjectToTempFile("expected constraints", expectedConstraints.Parts.OrderBy(p => p.RelationshipType));
             _output.WriteObjectToTempFile("actual constraints", constraints.Rules.OrderBy(p => p.RelationshipType).Select(p => new PartConstraintRule2(p)));
-#endif
 
             Assert.Equal(
                 expectedConstraints.Parts.OrderBy(p => p.RelationshipType),
@@ -119,7 +120,13 @@ namespace DocumentFormat.OpenXml.Tests
                 })
                 .OrderBy(d => d.Name, StringComparer.Ordinal);
 
-            _output.WriteObjectToTempFile("typed parts", result);
+            var output = _output.WriteObjectToTempFile("typed parts", result);
+
+            using (var expectedStream = typeof(ParticleTests).GetTypeInfo().Assembly.GetManifestResourceStream("DocumentFormat.OpenXml.Packaging.Tests.data.PartConstraintData.json"))
+            using (var actualStream = new FileStream(output, FileMode.Open, FileAccess.Read))
+            {
+                TestUtility.ValidateJsonFileContentsAreEqual(expectedStream!, actualStream);
+            }
         }
 
         public static IEnumerable<object[]> GetOpenXmlParts() => GetParts().Select(p => new[] { p });
@@ -134,9 +141,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static OpenXmlPart InitializePart(Type type)
         {
-#nullable disable
-            var part = (OpenXmlPart)Activator.CreateInstance(type, true);
-#nullable enable
+            var part = (OpenXmlPart)Activator.CreateInstance(type, true)!;
 
             var appType = Substitute.For<IApplicationTypeFeature>();
             appType.Type.Returns(ApplicationType.None);
@@ -148,7 +153,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static ConstraintData GetConstraintData(OpenXmlPart part) => _cachedConstraintData.Value[part.GetType().FullName!];
 
-        private static Lazy<Dictionary<string, ConstraintData>> _cachedConstraintData = new Lazy<Dictionary<string, ConstraintData>>(() =>
+        private static readonly Lazy<Dictionary<string, ConstraintData>> _cachedConstraintData = new(() =>
         {
             var names = typeof(PartConstraintRuleTests).GetTypeInfo().Assembly.GetManifestResourceNames();
 
@@ -157,7 +162,15 @@ namespace DocumentFormat.OpenXml.Tests
             using (var reader = new StreamReader(stream!))
             {
 #nullable disable
-                return JsonConvert.DeserializeObject<ConstraintData[]>(reader.ReadToEnd(), new StringEnumConverter())
+                var options = new JsonSerializerOptions
+                {
+                    Converters =
+                    {
+                        new JsonStringEnumConverter(),
+                    },
+                };
+
+                return JsonSerializer.Deserialize<ConstraintData[]>(reader.ReadToEnd(), options)
                     .ToDictionary(t => t.Name, StringComparer.Ordinal);
 #nullable enable
             }

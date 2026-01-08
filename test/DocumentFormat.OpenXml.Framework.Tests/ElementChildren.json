@@ -22868,6 +22868,45 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.PivotAreaReferenceSubtotals",
+    "Children": [
+      {
+        "Name": "http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation*subtotal",
+        "Type": "http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation*CT_PivotSubtotalType"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.PivotFieldSubtotals",
+    "Children": [
+      {
+        "Name": "http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation*subtotal",
+        "Type": "http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation*CT_PivotItemSubtotal"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.PivotSubtotalType",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.PivotTableSubtotalLineItems",
+    "Children": [
+      {
+        "Name": "http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation*subtotalLineItem",
+        "Type": "http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation*CT_PivotItemSubtotal"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.SubtotalLineItemPivotItemSubtotal",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.SubtotalPivotItemSubtotal",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh.Xsdboolean",
     "Children": []
   },
@@ -22878,6 +22917,19 @@
   {
     "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.WorkbookCompatibilityVersion.Version",
     "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2025.ExternalCodeService2.ExternalCodeServiceImageAsInput",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2025.PivotDataSource.PivotCacheDataSource",
+    "Children": [
+      {
+        "Name": "http://schemas.microsoft.com/office/excel/2006/main*f",
+        "Type": "http://schemas.openxmlformats.org/spreadsheetml/2006/main*ST_Formula"
+      }
+    ]
   },
   {
     "Element": "DocumentFormat.OpenXml.Office.Word.AllocatedCommand",
@@ -46908,6 +46960,10 @@
       {
         "Name": "http://schemas.microsoft.com/office/spreadsheetml/2024/workbookCompatibilityVersion*version",
         "Type": "http://schemas.microsoft.com/office/spreadsheetml/2024/workbookCompatibilityVersion*CT_Version"
+      },
+      {
+        "Name": "http://schemas.microsoft.com/office/spreadsheetml/2025/externalCodeService2*externalCodeServiceImageAsInput",
+        "Type": "http://schemas.microsoft.com/office/spreadsheetml/2025/externalCodeService2*CT_ExternalCodeServiceImageAsInput"
       }
     ]
   },

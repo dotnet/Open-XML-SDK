@@ -26,15 +26,15 @@ jobs:
       Configuration: Release
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - name: Install .NET Core
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v5
         with:
           dotnet-version: 6.x
       - name: Install .NET Core from global.json
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v5
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v3
         with:
@@ -86,7 +86,7 @@ jobs:
       - name: Pack
         run: dotnet pack --no-build
       - name: Upload
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: Unsigned
           path: "artifacts/package/${{ env.Configuration }}/*"
@@ -98,7 +98,7 @@ jobs:
     runs-on: windows-latest
     steps: 
          - name: Install .NET Core
-           uses: actions/setup-dotnet@v4
+           uses: actions/setup-dotnet@v5
            with:
               dotnet-version: 6.0.x
 
@@ -109,7 +109,7 @@ jobs:
            run: dotnet tool install --global NuGetKeyVaultSignTool
 
          - name: Download Unsigned Packages
-           uses: actions/download-artifact@v4
+           uses: actions/download-artifact@v7
            with: 
                 name: Unsigned
                 path: '${{ github.workspace }}/unsigned' 
@@ -152,7 +152,7 @@ jobs:
               --azure-key-vault-certificate "${{ secrets.SignKeyVaultCertificate }}" 
               --azure-key-vault-url "${{ secrets.SignKeyVaultUrl }}"
              
-         - uses: actions/upload-artifact@v4
+         - uses: actions/upload-artifact@v6
            with:
              name: Signed
              path: |
@@ -164,9 +164,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
          - name: Install .NET Core
-           uses: actions/setup-dotnet@v4
+           uses: actions/setup-dotnet@v5
          - name: Download Packages
-           uses: actions/download-artifact@v4
+           uses: actions/download-artifact@v7
            with: 
                 name: Signed
                 path: '${{ github.workspace }}/packages'
@@ -188,7 +188,7 @@ jobs:
         run: >
           echo ${{ github.event_name == 'release' }} >> release-info.txt
       - name: Upload Release Info
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: release-info
           path: release-info.txt

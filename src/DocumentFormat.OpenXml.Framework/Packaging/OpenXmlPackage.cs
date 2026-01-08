@@ -612,5 +612,97 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new PackageFeatureCollection(this);
+
+        /// <summary>
+        /// Determines whether the provided stream represents an encrypted Office Open XML file.
+        /// </summary>
+        /// <param name="inputStream">The <see cref="Stream"/> to check. The stream must be seekable and not null.</param>
+        /// <returns>
+        /// <c>true</c> if the stream is an encrypted Office file (either OLE Compound File or contains an encrypted package part); otherwise, <c>false</c>.
+        /// </returns>
+        /// <exception cref="ArgumentNullException">Thrown if <paramref name="inputStream"/> is null.</exception>
+        /// <exception cref="ArgumentException">Thrown if <paramref name="inputStream"/> is not seekable.</exception>
+        /// <remarks>
+        /// This method checks for the OLE Compound File signature at the start of the stream, which is used for encrypted Office files.
+        /// If not found, it attempts to open the stream as an OPC package and checks for the presence of an encrypted package part.
+        /// The stream position is restored after the check.
+        /// </remarks>
+        public static bool IsEncryptedOfficeFile(Stream inputStream)
+        {
+            if (inputStream is null)
+            {
+                throw new ArgumentNullException(nameof(inputStream));
+            }
+
+            if (!inputStream.CanSeek)
+            {
+                throw new ArgumentException("Stream must be seekable.");
+            }
+
+            long originalPosition = inputStream.Position;
+
+            try
+            {
+                byte[] header = new byte[8];
+                inputStream.Seek(0, SeekOrigin.Begin);
+                int read = inputStream.Read(header, 0, header.Length);
+                inputStream.Seek(originalPosition, SeekOrigin.Begin);
+
+                // OLE Compound File signature for encrypted Office files
+                if (read == 8 && header.SequenceEqual(new byte[] { 0xD0, 0xCF, 0x11, 0xE0, 0xA1, 0xB1, 0x1A, 0xE1 }))
+                {
+                    return true;
+                }
+
+                // If not OLE, try to open as package and check for encrypted part
+                try
+                {
+                    using (var package = System.IO.Packaging.Package.Open(inputStream, FileMode.Open, FileAccess.Read))
+                    {
+                        foreach (var part in package.GetParts())
+                        {
+                            if (part.ContentType.Equals("application/vnd.openxmlformats-officedocument.encrypted-package", StringComparison.OrdinalIgnoreCase))
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                }
+                catch
+                {
+                    return false;
+                }
+
+                return false;
+            }
+            finally
+            {
+                inputStream.Seek(originalPosition, SeekOrigin.Begin);
+            }
+        }
+
+        /// <summary>
+        /// Determines whether the file at the specified path is an encrypted Office Open XML file.
+        /// </summary>
+        /// <param name="filePath">The path to the file to check. Must not be null.</param>
+        /// <returns>
+        /// <c>true</c> if the file is an encrypted Office file (either OLE Compound File or contains an encrypted package part); otherwise, <c>false</c>.
+        /// </returns>
+        /// <exception cref="ArgumentNullException">Thrown if <paramref name="filePath"/> is null.</exception>
+        /// <remarks>
+        /// This method opens the file at the specified path and checks its contents using <see cref="IsEncryptedOfficeFile(Stream)"/>.
+        /// </remarks>
+        public static bool IsEncryptedOfficeFile(string filePath)
+        {
+            if (filePath is null)
+            {
+                throw new ArgumentNullException(nameof(filePath));
+            }
+
+            using (FileStream fileStream = File.Open(filePath, FileMode.Open, FileAccess.Read, FileShare.Read))
+            {
+                return IsEncryptedOfficeFile(fileStream);
+            }
+        }
     }
 }

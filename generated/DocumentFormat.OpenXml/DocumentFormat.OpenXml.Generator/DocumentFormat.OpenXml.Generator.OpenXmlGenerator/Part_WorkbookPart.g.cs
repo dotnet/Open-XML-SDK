@@ -4,6 +4,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 #nullable enable
+#pragma warning disable CS0618
 
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
@@ -286,7 +287,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 { "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBag", "application/vnd.ms-excel.rdsupportingpropertybag+xml", false, true, FileFormatVersions.Office2019 },
                 { "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBagStructure", "application/vnd.ms-excel.rdsupportingpropertybagstructure+xml", false, true, FileFormatVersions.Office2019 },
                 { "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValueTypes", "application/vnd.ms-excel.rdrichvaluetypes+xml", false, true, FileFormatVersions.Office2019 },
-                { "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage", "application/vnd.ms-excel.rdrichvaluewebimage+xml", false, false, FileFormatVersions.Office2021 },
+                { "http://schemas.microsoft.com/office/2020/07/relationships/rdRichValueWebImage", "application/vnd.ms-excel.rdrichvaluewebimage+xml", false, false, FileFormatVersions.Office2021 },
                 { "http://schemas.microsoft.com/office/2022/11/relationships/FeaturePropertyBag", "application/vnd.ms-excel.featurepropertybag+xml", false, false, FileFormatVersions.Microsoft365 },
             };
             bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
