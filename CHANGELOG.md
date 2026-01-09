@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [3.4.0] - 2025-12-10
+## [3.4.1] - 2026-01-06
 
 ### Added
 
@@ -329,7 +329,7 @@ Thanks to the following for their contributions:
 
 Thanks to the following for their contributions:
 
-@lklein53  
+@lklein53
 @igitur
 
 ## [2.12.3] - 2021-02-24
@@ -511,7 +511,7 @@ Thanks to the following for their contributions:
 
 ### Changed
 
-- Fixed issue where assembly version wasn't set in assembly. 
+- Fixed issue where assembly version wasn't set in assembly.
 
 ## [2.7.1] - 2017-01-31
 
