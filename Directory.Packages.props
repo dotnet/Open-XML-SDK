@@ -4,7 +4,7 @@
     <PackageVersion Include="BenchmarkDotNet" Version="0.15.8" />
     <PackageVersion Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.15.8" />
     <PackageVersion Include="coverlet.collector" Version="6.0.4" />
-    <PackageVersion Include="Microsoft.Bcl.Memory" Version="9.0.4" />
+    <PackageVersion Include="Microsoft.Bcl.Memory" Version="10.0.2" />
     <PackageVersion Include="Microsoft.DotNet.BuildTools.GenAPI" Version="3.0.0-preview4-06015-01" />
     <PackageVersion Include="Microsoft.CodeAnalysis" Version="4.11.0" />
     <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="5.0.0" />
@@ -24,14 +24,21 @@
     <PackageVersion Include="StyleCop.Analyzers" Version="1.2.0-beta.556" />
     <PackageVersion Include="Svg" Version="3.4.7" />
     <PackageVersion Include="System.CodeDom" Version="8.0.0" />
-    <PackageVersion Include="System.IO.Packaging" Version="8.0.1" />
-    <PackageVersion Include="System.Collections.Immutable" Version="9.0.4" />
+    <PackageVersion Include="System.Collections.Immutable" Version="10.0.2" />
     <PackageVersion Include="System.Net.Http" Version="4.3.4" />
     <PackageVersion Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
-    <PackageVersion Include="System.Text.Json" Version="9.0.0" />
+    <PackageVersion Include="System.Text.Json" Version="10.0.2" />
     <PackageVersion Include="System.Xml.ReaderWriter" Version="4.3.1" />
     <PackageVersion Include="System.ValueTuple" Version="4.6.1" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
     <PackageVersion Include="xunit.v3.mtp-v2" Version="3.2.2" />
+  </ItemGroup>
+
+  <!-- For libraries that are shipped we want to control the versions they are pinned to globally based off of TFM -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
+    <PackageVersion Include="System.IO.Packaging" Version="10.0.2" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' != 'net10.0'">
+    <PackageVersion Include="System.IO.Packaging" Version="8.0.1" />
   </ItemGroup>
 </Project>
