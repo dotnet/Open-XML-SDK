@@ -34,7 +34,7 @@
     <PackageVersion Include="xunit.v3.mtp-v2" Version="3.2.1" />
   </ItemGroup>
 
-  <!-- Conditional package versions based on target framework -->
+  <!-- For libraries that are shipped we want to control the versions they are pinned to globally based off of TFM -->
   <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
     <PackageVersion Include="System.IO.Packaging" Version="10.0.2" />
   </ItemGroup>
