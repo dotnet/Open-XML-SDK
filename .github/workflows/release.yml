@@ -7,6 +7,7 @@ on:
         - completed
 permissions: 
     issues: write
+    id-token: write
 
 jobs: 
     releaseInfo: 
@@ -37,6 +38,8 @@ jobs:
       needs: [releaseInfo]
       if: needs.releaseInfo.outputs.IS_RELEASE == 'true'      
       runs-on: ubuntu-latest
+      permissions:
+        id-token: write
       steps:
         - name: Download and Extract Artifacts from build
           uses: dawidd6/action-download-artifact@v14
@@ -60,9 +63,15 @@ jobs:
               additional-approved-words: ''
               additional-denied-words: ''
 
+        - name: NuGet login
+          uses: NuGet/login@v1
+          id: nuget-login
+          with:
+            user: ${{ secrets.NUGET_USER }}
+            
         - name: Publish NuGet package
           shell: pwsh
           run: |
             foreach($file in (Get-ChildItem "${{ github.workspace }}/artifacts" -Recurse -Include *.nupkg)) {
-                dotnet nuget push $file --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
+                dotnet nuget push $file --api-key "${{ steps.nuget-login.outputs.NUGET_API_KEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
             }
