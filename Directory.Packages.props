@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <ItemGroup>
-    <PackageVersion Include="BenchmarkDotNet" Version="0.14.0" />
-    <PackageVersion Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.14.0" />
+    <PackageVersion Include="BenchmarkDotNet" Version="0.15.8" />
+    <PackageVersion Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.15.8" />
     <PackageVersion Include="coverlet.collector" Version="6.0.4" />
     <PackageVersion Include="Microsoft.Bcl.Memory" Version="9.0.4" />
     <PackageVersion Include="Microsoft.DotNet.BuildTools.GenAPI" Version="3.0.0-preview4-06015-01" />
