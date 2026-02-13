@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class MultiLvlStrData : OpenXmlCompositeElement
+    public partial class MultiLvlStrData : OpenXmlCompositeElement, IExtensionChildrenParent<MultiLvlStrData>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chart/ac", "multiLvlStrLit");
@@ -70,6 +70,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

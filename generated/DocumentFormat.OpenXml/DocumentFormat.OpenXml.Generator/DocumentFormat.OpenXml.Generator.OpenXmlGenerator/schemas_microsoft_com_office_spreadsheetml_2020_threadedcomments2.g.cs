@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList" /> <c>&lt;xltc2:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CommentHyperlink : OpenXmlCompositeElement
+    public partial class CommentHyperlink : OpenXmlCompositeElement, IExtensionChildrenParent<CommentHyperlink>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2020/threadedcomments2", "hyperlink");
@@ -143,6 +143,9 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

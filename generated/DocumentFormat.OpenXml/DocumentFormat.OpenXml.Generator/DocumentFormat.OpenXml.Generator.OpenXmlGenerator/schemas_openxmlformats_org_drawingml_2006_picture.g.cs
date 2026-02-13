@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties" /> <c>&lt;pic:nvPicPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Picture : OpenXmlCompositeElement
+    public partial class Picture : OpenXmlCompositeElement, IExtensionChildrenParent<Picture>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/picture", "pic");
@@ -73,6 +73,9 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -174,7 +177,7 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/picture", "cNvPr");
@@ -263,6 +266,9 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -346,7 +352,7 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureLocks" /> <c>&lt;a:picLocks></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualPictureDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/picture", "cNvPicPr");
@@ -395,6 +401,9 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -688,7 +697,7 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ShapeProperties : OpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/picture", "spPr");
@@ -737,6 +746,9 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

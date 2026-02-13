@@ -980,7 +980,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chartDrawing", "cNvPr");
@@ -1069,6 +1069,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1152,7 +1155,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualShapeDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chartDrawing", "cNvSpPr");
@@ -1201,6 +1204,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1365,7 +1371,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ShapeProperties : OpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chartDrawing", "spPr");
@@ -1414,6 +1420,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1730,7 +1739,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElement
+    public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualConnectionShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chartDrawing", "cNvCxnSpPr");
@@ -1769,6 +1778,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1948,7 +1960,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureLocks" /> <c>&lt;a:picLocks></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualPictureDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chartDrawing", "cNvPicPr");
@@ -1997,6 +2009,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2277,7 +2292,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualGraphicFrameDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chartDrawing", "cNvGraphicFramePr");
@@ -2316,6 +2331,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2593,7 +2611,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualGroupShapeDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chartDrawing", "cNvGrpSpPr");
@@ -2632,6 +2650,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3156,7 +3177,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class GroupShapeProperties : OpenXmlCompositeElement
+    public partial class GroupShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<GroupShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chartDrawing", "grpSpPr");
@@ -3205,6 +3226,9 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

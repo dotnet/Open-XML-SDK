@@ -3847,7 +3847,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.WordNonVisualContentPartShapeProperties" /> <c>&lt;w14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ContentPart : OpenXmlCompositeElement
+    public partial class ContentPart : OpenXmlCompositeElement, IExtensionChildrenParent<ContentPart>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordml", "contentPart");
@@ -3912,6 +3912,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5429,7 +5432,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordml", "cNvPr");
@@ -5518,6 +5521,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5601,7 +5607,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
+    public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualInkContentPartProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordml", "cNvContentPartPr");
@@ -5650,6 +5656,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

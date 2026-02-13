@@ -177,7 +177,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties" /> <c>&lt;a14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class GvmlContentPart : OpenXmlCompositeElement
+    public partial class GvmlContentPart : OpenXmlCompositeElement, IExtensionChildrenParent<GvmlContentPart>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2010/main", "contentPart");
@@ -239,6 +239,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -537,7 +540,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class HiddenLineProperties : OpenXmlCompositeElement
+    public partial class HiddenLineProperties : OpenXmlCompositeElement, IExtensionChildrenParent<HiddenLineProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2010/main", "hiddenLine");
@@ -616,6 +619,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -804,7 +810,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class HiddenScene3D : OpenXmlCompositeElement
+    public partial class HiddenScene3D : OpenXmlCompositeElement, IExtensionChildrenParent<HiddenScene3D>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2010/main", "hiddenScene3d");
@@ -843,6 +849,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -932,7 +941,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class HiddenShape3D : OpenXmlCompositeElement
+    public partial class HiddenShape3D : OpenXmlCompositeElement, IExtensionChildrenParent<HiddenShape3D>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2010/main", "hiddenSp3d");
@@ -1011,6 +1020,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1353,7 +1365,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ContentPartLocks : OpenXmlCompositeElement
+    public partial class ContentPartLocks : OpenXmlCompositeElement, IExtensionChildrenParent<ContentPartLocks>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2010/main", "cpLocks");
@@ -1492,6 +1504,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3951,7 +3966,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualDrawingProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2010/main", "cNvPr");
@@ -4040,6 +4055,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4123,7 +4141,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
+    public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement, IExtensionChildrenParent<NonVisualInkContentPartProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2010/main", "cNvContentPartPr");
@@ -4172,6 +4190,9 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

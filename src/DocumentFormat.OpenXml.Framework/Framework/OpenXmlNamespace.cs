@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Framework;
 /// </summary>
 [Experimental(ExperimentalApis.Framework, UrlFormat = ExperimentalApis.UrlFormat)]
 [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.Framework, UrlFormat = ExperimentalApis.UrlFormat)]
-internal readonly partial struct OpenXmlNamespace : IComparable<OpenXmlNamespace>, IEquatable<OpenXmlNamespace>
+public readonly partial struct OpenXmlNamespace : IComparable<OpenXmlNamespace>, IEquatable<OpenXmlNamespace>
 {
     private readonly string? _uri;
 

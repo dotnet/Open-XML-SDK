@@ -167,7 +167,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList" /> <c>&lt;p223:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ReactionInstance : OpenXmlCompositeElement
+    public partial class ReactionInstance : OpenXmlCompositeElement, IExtensionChildrenParent<ReactionInstance>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2022/03/main", "instance");
@@ -226,6 +226,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

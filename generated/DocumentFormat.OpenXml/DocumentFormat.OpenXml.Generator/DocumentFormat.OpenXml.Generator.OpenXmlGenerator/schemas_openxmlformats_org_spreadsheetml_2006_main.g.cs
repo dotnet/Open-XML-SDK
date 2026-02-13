@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CalculationChain : OpenXmlPartRootElement
+    public partial class CalculationChain : OpenXmlPartRootElement, IExtensionChildrenParent<CalculationChain>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "calcChain");
@@ -156,6 +156,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -217,7 +220,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Comments : OpenXmlPartRootElement
+    public partial class Comments : OpenXmlPartRootElement, IExtensionChildrenParent<Comments>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "comments");
@@ -256,6 +259,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -576,7 +582,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TupleCache" /> <c>&lt;x:tupleCache></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PivotCacheDefinition : OpenXmlPartRootElement
+    public partial class PivotCacheDefinition : OpenXmlPartRootElement, IExtensionChildrenParent<PivotCacheDefinition>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotCacheDefinition");
@@ -808,6 +814,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1050,7 +1059,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCacheRecord" /> <c>&lt;x:r></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PivotCacheRecords : OpenXmlPartRootElement
+    public partial class PivotCacheRecords : OpenXmlPartRootElement, IExtensionChildrenParent<PivotCacheRecords>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotCacheRecords");
@@ -1099,6 +1108,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1176,7 +1188,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowItems" /> <c>&lt;x:rowItems></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PivotTableDefinition : OpenXmlPartRootElement
+    public partial class PivotTableDefinition : OpenXmlPartRootElement, IExtensionChildrenParent<PivotTableDefinition>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotTableDefinition");
@@ -1895,6 +1907,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2297,7 +2312,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh" /> <c>&lt;x:queryTableRefresh></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class QueryTable : OpenXmlPartRootElement
+    public partial class QueryTable : OpenXmlPartRootElement, IExtensionChildrenParent<QueryTable>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "queryTable");
@@ -2556,6 +2571,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2675,7 +2693,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SharedStringItem" /> <c>&lt;x:si></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SharedStringTable : OpenXmlPartRootElement
+    public partial class SharedStringTable : OpenXmlPartRootElement, IExtensionChildrenParent<SharedStringTable>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sst");
@@ -2734,6 +2752,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3313,7 +3334,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorksheetExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Worksheet : OpenXmlPartRootElement
+    public partial class Worksheet : OpenXmlPartRootElement, IExtensionChildrenParent<Worksheet>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "worksheet");
@@ -3352,6 +3373,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3548,7 +3572,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebPublishItems" /> <c>&lt;x:webPublishItems></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Chartsheet : OpenXmlPartRootElement
+    public partial class Chartsheet : OpenXmlPartRootElement, IExtensionChildrenParent<Chartsheet>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "chartsheet");
@@ -3587,6 +3611,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3867,7 +3894,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetViews" /> <c>&lt;x:sheetViews></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DialogSheet : OpenXmlPartRootElement
+    public partial class DialogSheet : OpenXmlPartRootElement, IExtensionChildrenParent<DialogSheet>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dialogsheet");
@@ -3906,6 +3933,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4207,7 +4237,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataTypes" /> <c>&lt;x:metadataTypes></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Metadata : OpenXmlPartRootElement
+    public partial class Metadata : OpenXmlPartRootElement, IExtensionChildrenParent<Metadata>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "metadata");
@@ -4246,6 +4276,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4460,7 +4493,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableStyles" /> <c>&lt;x:tableStyles></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Stylesheet : OpenXmlPartRootElement
+    public partial class Stylesheet : OpenXmlPartRootElement, IExtensionChildrenParent<Stylesheet>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "styleSheet");
@@ -4499,6 +4532,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4722,7 +4758,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleLink" /> <c>&lt;x:oleLink></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ExternalLink : OpenXmlPartRootElement
+    public partial class ExternalLink : OpenXmlPartRootElement, IExtensionChildrenParent<ExternalLink>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "externalLink");
@@ -4761,6 +4797,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4831,7 +4870,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo" /> <c>&lt;x:tableStyleInfo></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Table : OpenXmlPartRootElement
+    public partial class Table : OpenXmlPartRootElement, IExtensionChildrenParent<Table>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "table");
@@ -5090,6 +5129,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5268,7 +5310,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.VolatileType" /> <c>&lt;x:volType></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class VolatileTypes : OpenXmlPartRootElement
+    public partial class VolatileTypes : OpenXmlPartRootElement, IExtensionChildrenParent<VolatileTypes>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "volTypes");
@@ -5307,6 +5349,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5383,7 +5428,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath" /> <c>&lt;x15ac:absPath></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Workbook : OpenXmlPartRootElement
+    public partial class Workbook : OpenXmlPartRootElement, IExtensionChildrenParent<Workbook>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "workbook");
@@ -5432,6 +5477,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5728,7 +5776,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IconFilter" /> <c>&lt;x14:iconFilter></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class FilterColumn : OpenXmlCompositeElement
+    public partial class FilterColumn : OpenXmlCompositeElement, IExtensionChildrenParent<FilterColumn>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filterColumn");
@@ -5797,6 +5845,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5965,7 +6016,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SortCondition" /> <c>&lt;x14:sortCondition></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SortState : OpenXmlCompositeElement
+    public partial class SortState : OpenXmlCompositeElement, IExtensionChildrenParent<SortState>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sortState");
@@ -6044,6 +6095,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -7743,7 +7797,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties" /> <c>&lt;x:webPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Connection : OpenXmlCompositeElement
+    public partial class Connection : OpenXmlCompositeElement, IExtensionChildrenParent<Connection>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "connection");
@@ -7982,6 +8036,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -8542,7 +8599,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertiesMap" /> <c>&lt;x:mpMap></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CacheField : OpenXmlCompositeElement
+    public partial class CacheField : OpenXmlCompositeElement, IExtensionChildrenParent<CacheField>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cacheField");
@@ -8711,6 +8768,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -10874,7 +10934,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Groups" /> <c>&lt;x:groups></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class GroupLevel : OpenXmlCompositeElement
+    public partial class GroupLevel : OpenXmlCompositeElement, IExtensionChildrenParent<GroupLevel>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "groupLevel");
@@ -10953,6 +11013,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12048,7 +12111,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CalculatedItem : OpenXmlCompositeElement
+    public partial class CalculatedItem : OpenXmlCompositeElement, IExtensionChildrenParent<CalculatedItem>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "calculatedItem");
@@ -12107,6 +12170,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12165,7 +12231,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences" /> <c>&lt;x:references></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PivotArea : OpenXmlCompositeElement
+    public partial class PivotArea : OpenXmlCompositeElement, IExtensionChildrenParent<PivotArea>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotArea");
@@ -12324,6 +12390,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12392,7 +12461,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CalculatedMember : OpenXmlCompositeElement
+    public partial class CalculatedMember : OpenXmlCompositeElement, IExtensionChildrenParent<CalculatedMember>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "calculatedMember");
@@ -12501,6 +12570,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -12565,7 +12637,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PivotField : OpenXmlCompositeElement
+    public partial class PivotField : OpenXmlCompositeElement, IExtensionChildrenParent<PivotField>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotField");
@@ -13084,6 +13156,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13358,7 +13433,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataField : OpenXmlCompositeElement
+    public partial class DataField : OpenXmlCompositeElement, IExtensionChildrenParent<DataField>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dataField");
@@ -13467,6 +13542,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13665,7 +13743,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Format : OpenXmlCompositeElement
+    public partial class Format : OpenXmlCompositeElement, IExtensionChildrenParent<Format>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "format");
@@ -13724,6 +13802,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -13783,7 +13864,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotAreas" /> <c>&lt;x:pivotAreas></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ConditionalFormat : OpenXmlCompositeElement
+    public partial class ConditionalFormat : OpenXmlCompositeElement, IExtensionChildrenParent<ConditionalFormat>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "conditionalFormat");
@@ -13852,6 +13933,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14111,7 +14195,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PivotHierarchy : OpenXmlCompositeElement
+    public partial class PivotHierarchy : OpenXmlCompositeElement, IExtensionChildrenParent<PivotHierarchy>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotHierarchy");
@@ -14260,6 +14344,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -14805,7 +14892,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PivotFilter : OpenXmlCompositeElement
+    public partial class PivotFilter : OpenXmlCompositeElement, IExtensionChildrenParent<PivotFilter>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "filter");
@@ -14954,6 +15041,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -15035,7 +15125,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GroupLevels" /> <c>&lt;x:groupLevels></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CacheHierarchy : OpenXmlCompositeElement
+    public partial class CacheHierarchy : OpenXmlCompositeElement, IExtensionChildrenParent<CacheHierarchy>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cacheHierarchy");
@@ -15294,6 +15384,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -15687,7 +15780,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PageField : OpenXmlCompositeElement
+    public partial class PageField : OpenXmlCompositeElement, IExtensionChildrenParent<PageField>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pageField");
@@ -15776,6 +15869,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -15904,7 +16000,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FieldItem" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PivotAreaReference : OpenXmlCompositeElement
+    public partial class PivotAreaReference : OpenXmlCompositeElement, IExtensionChildrenParent<PivotAreaReference>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "reference");
@@ -16113,6 +16209,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -16359,7 +16458,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class QueryTableField : OpenXmlCompositeElement
+    public partial class QueryTableField : OpenXmlCompositeElement, IExtensionChildrenParent<QueryTableField>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "queryTableField");
@@ -16468,6 +16567,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -17978,7 +18080,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetIdMap" /> <c>&lt;x:sheetIdMap></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Header : OpenXmlCompositeElement
+    public partial class Header : OpenXmlCompositeElement, IExtensionChildrenParent<Header>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "header");
@@ -18090,6 +18192,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -18582,7 +18687,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class RevisionSheetName : OpenXmlCompositeElement
+    public partial class RevisionSheetName : OpenXmlCompositeElement, IExtensionChildrenParent<RevisionSheetName>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rsnm");
@@ -18681,6 +18786,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -18855,7 +18963,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NewCell" /> <c>&lt;x:nc></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class RevisionCellChange : OpenXmlCompositeElement
+    public partial class RevisionCellChange : OpenXmlCompositeElement, IExtensionChildrenParent<RevisionCellChange>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rcc");
@@ -19034,6 +19142,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -19156,7 +19267,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class RevisionFormat : OpenXmlCompositeElement
+    public partial class RevisionFormat : OpenXmlCompositeElement, IExtensionChildrenParent<RevisionFormat>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rfmt");
@@ -19255,6 +19366,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -19463,7 +19577,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OldFormula" /> <c>&lt;x:oldFormula></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class RevisionDefinedName : OpenXmlCompositeElement
+    public partial class RevisionDefinedName : OpenXmlCompositeElement, IExtensionChildrenParent<RevisionDefinedName>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "rdn");
@@ -19742,6 +19856,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -20543,7 +20660,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellValue" /> <c>&lt;x:v></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class OldCell : CellType
+    public partial class OldCell : CellType, IExtensionChildrenParent<OldCell>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "oc");
@@ -20582,6 +20699,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -20616,7 +20736,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellValue" /> <c>&lt;x:v></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Cell : CellType
+    public partial class Cell : CellType, IExtensionChildrenParent<Cell>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "c");
@@ -20655,6 +20775,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -20695,7 +20818,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellValue" /> <c>&lt;x:v></c></description></item>
     /// </list>
     /// </remarks>
-    public abstract partial class CellType : OpenXmlCompositeElement
+    public abstract partial class CellType : OpenXmlCompositeElement, IExtensionChildrenParent<CellType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
@@ -20794,6 +20917,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -20877,7 +21003,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellValue" /> <c>&lt;x:v></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NewCell : OpenXmlCompositeElement
+    public partial class NewCell : OpenXmlCompositeElement, IExtensionChildrenParent<NewCell>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "nc");
@@ -20976,6 +21102,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -21079,7 +21208,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class OldDifferentialFormat : DifferentialFormatType
+    public partial class OldDifferentialFormat : DifferentialFormatType, IExtensionChildrenParent<OldDifferentialFormat>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "odxf");
@@ -21118,6 +21247,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -21155,7 +21287,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class NewDifferentialFormat : DifferentialFormatType
+    public partial class NewDifferentialFormat : DifferentialFormatType, IExtensionChildrenParent<NewDifferentialFormat>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ndxf");
@@ -21194,6 +21326,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -21231,7 +21366,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DifferentialFormat : DifferentialFormatType
+    public partial class DifferentialFormat : DifferentialFormatType, IExtensionChildrenParent<DifferentialFormat>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dxf");
@@ -21270,6 +21405,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -21307,7 +21445,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remarks>
-    public abstract partial class DifferentialFormatType : OpenXmlCompositeElement
+    public abstract partial class DifferentialFormatType : OpenXmlCompositeElement, IExtensionChildrenParent<DifferentialFormatType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
@@ -21346,6 +21484,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -21699,7 +21840,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class UserInfo : OpenXmlCompositeElement
+    public partial class UserInfo : OpenXmlCompositeElement, IExtensionChildrenParent<UserInfo>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "userInfo");
@@ -21778,6 +21919,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -21836,7 +21980,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Row : OpenXmlCompositeElement
+    public partial class Row : OpenXmlCompositeElement, IExtensionChildrenParent<Row>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "row");
@@ -22008,6 +22152,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -23793,7 +23940,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class AutoFilter : OpenXmlCompositeElement
+    public partial class AutoFilter : OpenXmlCompositeElement, IExtensionChildrenParent<AutoFilter>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "autoFilter");
@@ -23842,6 +23989,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -23878,7 +24028,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula" /> <c>&lt;x:formula></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ConditionalFormattingRule : OpenXmlCompositeElement
+    public partial class ConditionalFormattingRule : OpenXmlCompositeElement, IExtensionChildrenParent<ConditionalFormattingRule>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cfRule");
@@ -24047,6 +24197,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -24200,7 +24353,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ConditionalFormatValueObject : OpenXmlCompositeElement
+    public partial class ConditionalFormatValueObject : OpenXmlCompositeElement, IExtensionChildrenParent<ConditionalFormatValueObject>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cfvo");
@@ -24269,6 +24422,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -25041,7 +25197,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ChartSheetView : OpenXmlCompositeElement
+    public partial class ChartSheetView : OpenXmlCompositeElement, IExtensionChildrenParent<ChartSheetView>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetView");
@@ -25120,6 +25276,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26005,7 +26164,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Selection" /> <c>&lt;x:selection></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SheetView : OpenXmlCompositeElement
+    public partial class SheetView : OpenXmlCompositeElement, IExtensionChildrenParent<SheetView>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetView");
@@ -26234,6 +26393,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -26317,7 +26479,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Selection" /> <c>&lt;x:selection></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CustomSheetView : OpenXmlCompositeElement
+    public partial class CustomSheetView : OpenXmlCompositeElement, IExtensionChildrenParent<CustomSheetView>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customSheetView");
@@ -26556,6 +26718,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -27158,7 +27323,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FutureMetadataBlock" /> <c>&lt;x:bk></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class FutureMetadata : OpenXmlCompositeElement
+    public partial class FutureMetadata : OpenXmlCompositeElement, IExtensionChildrenParent<FutureMetadata>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "futureMetadata");
@@ -27217,6 +27382,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -27927,7 +28095,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class FutureMetadataBlock : OpenXmlCompositeElement
+    public partial class FutureMetadataBlock : OpenXmlCompositeElement, IExtensionChildrenParent<FutureMetadataBlock>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "bk");
@@ -27966,6 +28134,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -28655,7 +28826,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties" /> <c>&lt;x:xmlCellPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SingleXmlCell : OpenXmlCompositeElement
+    public partial class SingleXmlCell : OpenXmlCompositeElement, IExtensionChildrenParent<SingleXmlCell>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "singleXmlCell");
@@ -28724,6 +28895,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -28795,7 +28969,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.XmlProperties" /> <c>&lt;x:xmlPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class XmlCellProperties : OpenXmlCompositeElement
+    public partial class XmlCellProperties : OpenXmlCompositeElement, IExtensionChildrenParent<XmlCellProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "xmlCellPr");
@@ -28854,6 +29028,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -28920,7 +29097,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class XmlProperties : OpenXmlCompositeElement
+    public partial class XmlProperties : OpenXmlCompositeElement, IExtensionChildrenParent<XmlProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "xmlPr");
@@ -28989,6 +29166,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -30562,7 +30742,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CellStyle : OpenXmlCompositeElement
+    public partial class CellStyle : OpenXmlCompositeElement, IExtensionChildrenParent<CellStyle>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cellStyle");
@@ -30661,6 +30841,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -30717,7 +30900,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CellFormat : OpenXmlCompositeElement
+    public partial class CellFormat : OpenXmlCompositeElement, IExtensionChildrenParent<CellFormat>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "xf");
@@ -30886,6 +31069,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -32439,7 +32625,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties" /> <c>&lt;x:xmlColumnPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TableColumn : OpenXmlCompositeElement
+    public partial class TableColumn : OpenXmlCompositeElement, IExtensionChildrenParent<TableColumn>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tableColumn");
@@ -32598,6 +32784,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -32866,7 +33055,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class XmlColumnProperties : OpenXmlCompositeElement
+    public partial class XmlColumnProperties : OpenXmlCompositeElement, IExtensionChildrenParent<XmlColumnProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "xmlColumnPr");
@@ -32945,6 +33134,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -33541,7 +33733,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CustomWorkbookView : OpenXmlCompositeElement
+    public partial class CustomWorkbookView : OpenXmlCompositeElement, IExtensionChildrenParent<CustomWorkbookView>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "customWorkbookView");
@@ -33820,6 +34012,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -33993,7 +34188,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class WorkbookView : OpenXmlCompositeElement
+    public partial class WorkbookView : OpenXmlCompositeElement, IExtensionChildrenParent<WorkbookView>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "workbookView");
@@ -34162,6 +34357,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -36502,7 +36700,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ChartSheetViews : OpenXmlCompositeElement
+    public partial class ChartSheetViews : OpenXmlCompositeElement, IExtensionChildrenParent<ChartSheetViews>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetViews");
@@ -36541,6 +36739,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -37907,7 +38108,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetView" /> <c>&lt;x:sheetView></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SheetViews : OpenXmlCompositeElement
+    public partial class SheetViews : OpenXmlCompositeElement, IExtensionChildrenParent<SheetViews>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "sheetViews");
@@ -37946,6 +38147,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -38906,7 +39110,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ConditionalFormatting : OpenXmlCompositeElement
+    public partial class ConditionalFormatting : OpenXmlCompositeElement, IExtensionChildrenParent<ConditionalFormatting>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "conditionalFormatting");
@@ -38965,6 +39169,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -43156,7 +43363,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class QueryTableRefresh : OpenXmlCompositeElement
+    public partial class QueryTableRefresh : OpenXmlCompositeElement, IExtensionChildrenParent<QueryTableRefresh>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "queryTableRefresh");
@@ -43265,6 +43472,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -43953,7 +44163,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.IgnoredError" /> <c>&lt;x:ignoredError></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class IgnoredErrors : OpenXmlCompositeElement
+    public partial class IgnoredErrors : OpenXmlCompositeElement, IExtensionChildrenParent<IgnoredErrors>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "ignoredErrors");
@@ -43992,6 +44202,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -46691,7 +46904,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorksheetSource" /> <c>&lt;x:worksheetSource></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CacheSource : OpenXmlCompositeElement
+    public partial class CacheSource : OpenXmlCompositeElement, IExtensionChildrenParent<CacheSource>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "cacheSource");
@@ -46750,6 +46963,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -47062,7 +47278,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Sets" /> <c>&lt;x:sets></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TupleCache : OpenXmlCompositeElement
+    public partial class TupleCache : OpenXmlCompositeElement, IExtensionChildrenParent<TupleCache>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "tupleCache");
@@ -47101,6 +47317,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

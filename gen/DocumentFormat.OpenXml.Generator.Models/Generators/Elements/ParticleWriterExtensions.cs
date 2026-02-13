@@ -61,7 +61,15 @@ internal static class ParticleWriterExtensions
                 foreach (var item in p.Items)
                 {
                     list.AddDelimiter();
-                    writer.WriteItemNode(services, containingType, item);
+
+                    if (containingType.Name.QName.Name == "sldId" && containingType.Name.QName.Prefix == "p" && item.Name.QName.Name == "extLst" && item.Name.QName.Prefix == "p")
+                    {
+                        writer.Write("new ElementParticle(DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>.ElementType, 0, 1),");
+                    }
+                    else
+                    {
+                        writer.WriteItemNode(services, containingType, item);
+                    }
                 }
 
                 writer.WriteLine();

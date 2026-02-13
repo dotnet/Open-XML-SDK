@@ -1017,7 +1017,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.FieldListActiveTabTopLevelEntity" /> <c>&lt;x15:activeTabTopLevelEntity></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PivotTableUISettings : OpenXmlCompositeElement
+    public partial class PivotTableUISettings : OpenXmlCompositeElement, IExtensionChildrenParent<PivotTableUISettings>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "pivotTableUISettings");
@@ -1076,6 +1076,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1371,7 +1374,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ModelTables" /> <c>&lt;x15:modelTables></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DataModel : OpenXmlCompositeElement
+    public partial class DataModel : OpenXmlCompositeElement, IExtensionChildrenParent<DataModel>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "dataModel");
@@ -1420,6 +1423,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1852,7 +1858,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TableSlicerCache : OpenXmlCompositeElement
+    public partial class TableSlicerCache : OpenXmlCompositeElement, IExtensionChildrenParent<TableSlicerCache>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "tableSlicerCache");
@@ -1941,6 +1947,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2141,7 +2150,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions" /> <c>&lt;x15:questions></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Survey : OpenXmlCompositeElement
+    public partial class Survey : OpenXmlCompositeElement, IExtensionChildrenParent<Survey>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "survey");
@@ -2220,6 +2229,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2431,7 +2443,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineState" /> <c>&lt;x15:state></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TimelineCacheDefinition : OpenXmlPartRootElement
+    public partial class TimelineCacheDefinition : OpenXmlPartRootElement, IExtensionChildrenParent<TimelineCacheDefinition>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "timelineCacheDefinition");
@@ -2490,6 +2502,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4717,7 +4732,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SurveyPrSurveyElementPr : OpenXmlSurveyElementPrElement
+    public partial class SurveyPrSurveyElementPr : OpenXmlSurveyElementPrElement, IExtensionChildrenParent<SurveyPrSurveyElementPr>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "surveyPr");
@@ -4756,6 +4771,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4782,7 +4800,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TitlePrSurveyElementPr : OpenXmlSurveyElementPrElement
+    public partial class TitlePrSurveyElementPr : OpenXmlSurveyElementPrElement, IExtensionChildrenParent<TitlePrSurveyElementPr>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "titlePr");
@@ -4821,6 +4839,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4847,7 +4868,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DescriptionPrSurveyElementPr : OpenXmlSurveyElementPrElement
+    public partial class DescriptionPrSurveyElementPr : OpenXmlSurveyElementPrElement, IExtensionChildrenParent<DescriptionPrSurveyElementPr>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "descriptionPr");
@@ -4886,6 +4907,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4912,7 +4936,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class QuestionsPrSurveyElementPr : OpenXmlSurveyElementPrElement
+    public partial class QuestionsPrSurveyElementPr : OpenXmlSurveyElementPrElement, IExtensionChildrenParent<QuestionsPrSurveyElementPr>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "questionsPr");
@@ -4951,6 +4975,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -4977,7 +5004,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class QuestionPrSurveyElementPr : OpenXmlSurveyElementPrElement
+    public partial class QuestionPrSurveyElementPr : OpenXmlSurveyElementPrElement, IExtensionChildrenParent<QuestionPrSurveyElementPr>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "questionPr");
@@ -5016,6 +5043,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5042,7 +5072,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public abstract partial class OpenXmlSurveyElementPrElement : OpenXmlCompositeElement
+    public abstract partial class OpenXmlSurveyElementPrElement : OpenXmlCompositeElement, IExtensionChildrenParent<OpenXmlSurveyElementPrElement>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new(string.Empty, string.Empty);
@@ -5161,6 +5191,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5284,7 +5317,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr" /> <c>&lt;x15:questionPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SurveyQuestion : OpenXmlCompositeElement
+    public partial class SurveyQuestion : OpenXmlCompositeElement, IExtensionChildrenParent<SurveyQuestion>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "question");
@@ -5413,6 +5446,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5481,7 +5517,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Timeline : OpenXmlCompositeElement
+    public partial class Timeline : OpenXmlCompositeElement, IExtensionChildrenParent<Timeline>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "timeline");
@@ -5630,6 +5666,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5874,7 +5913,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class AutoFilter : OpenXmlCompositeElement
+    public partial class AutoFilter : OpenXmlCompositeElement, IExtensionChildrenParent<AutoFilter>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "autoFilter");
@@ -5923,6 +5962,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -6025,7 +6067,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.BoundsTimelineRange" /> <c>&lt;x15:bounds></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TimelineState : OpenXmlCompositeElement
+    public partial class TimelineState : OpenXmlCompositeElement, IExtensionChildrenParent<TimelineState>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/spreadsheetml/2010/11/main", "state");
@@ -6144,6 +6186,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

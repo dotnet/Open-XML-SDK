@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList" /> <c>&lt;thm15:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ThemeFamily : OpenXmlCompositeElement
+    public partial class ThemeFamily : OpenXmlCompositeElement, IExtensionChildrenParent<ThemeFamily>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/thememl/2012/main", "themeFamily");
@@ -99,6 +99,9 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -227,7 +230,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList" /> <c>&lt;thm15:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ThemeVariant : OpenXmlCompositeElement
+    public partial class ThemeVariant : OpenXmlCompositeElement, IExtensionChildrenParent<ThemeVariant>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/thememl/2012/main", "themeVariant");
@@ -319,6 +322,9 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

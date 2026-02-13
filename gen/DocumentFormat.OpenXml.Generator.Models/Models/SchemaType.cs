@@ -73,4 +73,8 @@ public class SchemaType
     public IEnumerable<Validator> Validators { get; set; } = Enumerable.Empty<Validator>();
 
     public Particle? Particle { get; set; }
+
+    public IEnumerable<SchemaElement> ExtensionChildren { get; set; } = Enumerable.Empty<SchemaElement>();
+
+    public Particle? ExtensionParticle { get; set; }
 }

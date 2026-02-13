@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.WindowViewport" /> <c>&lt;am3d:winViewport></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Model3D : OpenXmlCompositeElement
+    public partial class Model3D : OpenXmlCompositeElement, IExtensionChildrenParent<Model3D>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2017/model3d", "model3d");
@@ -108,6 +108,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1121,7 +1124,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio" /> <c>&lt;am3d:sz></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class OrthographicProjection : OpenXmlCompositeElement
+    public partial class OrthographicProjection : OpenXmlCompositeElement, IExtensionChildrenParent<OrthographicProjection>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2017/model3d", "orthographic");
@@ -1160,6 +1163,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1215,7 +1221,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PerspectiveProjection : OpenXmlCompositeElement
+    public partial class PerspectiveProjection : OpenXmlCompositeElement, IExtensionChildrenParent<PerspectiveProjection>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2017/model3d", "perspective");
@@ -1264,6 +1270,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1327,7 +1336,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TintEffect" /> <c>&lt;a:tint></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Blip : OpenXmlCompositeElement
+    public partial class Blip : OpenXmlCompositeElement, IExtensionChildrenParent<Blip>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2017/model3d", "blip");
@@ -1402,6 +1411,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1738,7 +1750,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ShapeProperties : OpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement, IExtensionChildrenParent<ShapeProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2017/model3d", "spPr");
@@ -1787,6 +1799,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1883,7 +1898,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PerspectiveProjection" /> <c>&lt;am3d:perspective></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Model3DCamera : OpenXmlCompositeElement
+    public partial class Model3DCamera : OpenXmlCompositeElement, IExtensionChildrenParent<Model3DCamera>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2017/model3d", "camera");
@@ -1922,6 +1937,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2006,7 +2024,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Scale3D" /> <c>&lt;am3d:scale></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Model3DTransform : OpenXmlCompositeElement
+    public partial class Model3DTransform : OpenXmlCompositeElement, IExtensionChildrenParent<Model3DTransform>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2017/model3d", "trans");
@@ -2045,6 +2063,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2383,7 +2404,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class ObjectViewport : OpenXmlCompositeElement
+    public partial class ObjectViewport : OpenXmlCompositeElement, IExtensionChildrenParent<ObjectViewport>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2017/model3d", "objViewport");
@@ -2432,6 +2453,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2478,7 +2502,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class WindowViewport : OpenXmlCompositeElement
+    public partial class WindowViewport : OpenXmlCompositeElement, IExtensionChildrenParent<WindowViewport>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2017/model3d", "winViewport");
@@ -2517,6 +2541,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2559,7 +2586,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio" /> <c>&lt;am3d:illuminance></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class AmbientLight : OpenXmlCompositeElement
+    public partial class AmbientLight : OpenXmlCompositeElement, IExtensionChildrenParent<AmbientLight>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2017/model3d", "ambientLight");
@@ -2608,6 +2635,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2683,7 +2713,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio" /> <c>&lt;am3d:intensity></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class PointLight : OpenXmlCompositeElement
+    public partial class PointLight : OpenXmlCompositeElement, IExtensionChildrenParent<PointLight>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2017/model3d", "ptLight");
@@ -2742,6 +2772,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -2838,7 +2871,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio" /> <c>&lt;am3d:intensity></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class SpotLight : OpenXmlCompositeElement
+    public partial class SpotLight : OpenXmlCompositeElement, IExtensionChildrenParent<SpotLight>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2017/model3d", "spotLight");
@@ -2907,6 +2940,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -3023,7 +3059,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio" /> <c>&lt;am3d:illuminance></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class DirectionalLight : OpenXmlCompositeElement
+    public partial class DirectionalLight : OpenXmlCompositeElement, IExtensionChildrenParent<DirectionalLight>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2017/model3d", "dirLight");
@@ -3082,6 +3118,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

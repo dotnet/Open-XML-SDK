@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties" /> <c>&lt;a3danim:animPr></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class EmbeddedAnimation : OpenXmlCompositeElement
+    public partial class EmbeddedAnimation : OpenXmlCompositeElement, IExtensionChildrenParent<EmbeddedAnimation>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2018/animation/model3d", "embedAnim");
@@ -80,6 +80,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -200,7 +203,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList" /> <c>&lt;aanim:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class AnimationProperties : OpenXmlCompositeElement
+    public partial class AnimationProperties : OpenXmlCompositeElement, IExtensionChildrenParent<AnimationProperties>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2018/animation/model3d", "animPr");
@@ -309,6 +312,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
