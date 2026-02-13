@@ -1012,3 +1012,14 @@ virtual DocumentFormat.OpenXml.Packaging.ReferenceRelationship.Uri.get -> System
 ~override DocumentFormat.OpenXml.OpenXmlElementList.ToString() -> string
 ~override DocumentFormat.OpenXml.Packaging.PartTypeInfo.Equals(object obj) -> bool
 ~override DocumentFormat.OpenXml.Packaging.PartTypeInfo.ToString() -> string
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings.CloseOutput.get -> bool
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings.CloseOutput.set -> void
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings.Encoding.get -> System.Text.Encoding!
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings.Encoding.set -> void
+DocumentFormat.OpenXml.OpenXmlPartWriterSettings.OpenXmlPartWriterSettings() -> void
+DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, DocumentFormat.OpenXml.OpenXmlPartWriterSettings! settings) -> void
+DocumentFormat.OpenXml.OpenXmlPartWriter.OpenXmlPartWriter(System.IO.Stream! partStream, DocumentFormat.OpenXml.OpenXmlPartWriterSettings! settings) -> void
+DocumentFormat.OpenXml.OpenXmlPartReader.NodeType.get -> System.Xml.XmlNodeType
+virtual DocumentFormat.OpenXml.OpenXmlReader.NodeType.get -> System.Xml.XmlNodeType
+override DocumentFormat.OpenXml.OpenXmlPartReader.NodeType.get -> System.Xml.XmlNodeType

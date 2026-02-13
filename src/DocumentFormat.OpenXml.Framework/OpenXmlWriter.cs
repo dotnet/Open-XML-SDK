@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
 using System.Threading.Tasks;
 #endif
 
@@ -131,7 +131,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public abstract void Close();
 
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
         /// <summary>
         /// Asynchronously writes the XML declaration with the version "1.0".
         /// </summary>

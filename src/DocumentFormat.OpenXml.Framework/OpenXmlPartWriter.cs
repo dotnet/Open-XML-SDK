@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
 using DocumentFormat.OpenXml.Framework;
 using System.Threading.Tasks;
 #endif
@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml
             {
                 CloseOutput = true,
                 Encoding = settings.Encoding,
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
                 Async = settings.Async,
 #endif
             };
@@ -146,7 +146,7 @@ namespace DocumentFormat.OpenXml
             {
                 CloseOutput = settings.CloseOutput,
                 Encoding = settings.Encoding,
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
                 Async = settings.Async,
 #endif
             };
@@ -430,7 +430,7 @@ namespace DocumentFormat.OpenXml
         #endregion
 
         // Async Methods
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
         /// <summary>
         /// Asynchronously writes the XML declaration with the version "1.0".
         /// </summary>

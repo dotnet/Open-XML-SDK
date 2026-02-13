@@ -6,6 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+#if TASKS_SUPPORTED
+using System.Threading.Tasks;
+#endif
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -184,6 +187,17 @@ namespace DocumentFormat.OpenXml
         public abstract string Prefix { get; }
 
         /// <summary>
+        /// Gets the type of the current node in the XML document being read.
+        /// </summary>
+        /// <remarks>
+        /// The <see cref="XmlNodeType"/> indicates the type of the current node, such as
+        /// <c>Element</c>, <c>Attribute</c>, <c>Text</c>, <c>CDATA</c>, <c>Comment</c>, or others.
+        /// This property provides information about the structure of the XML document
+        /// and is useful for determining how to process the current node.
+        /// </remarks>
+        public virtual XmlNodeType NodeType { get; }
+
+        /// <summary>
         /// Gets an instance of <see cref="IXmlLineInfo"/> if available for the current reader.
         /// </summary>
         /// <returns>An object for obtaining information about line info</returns>
@@ -234,6 +248,42 @@ namespace DocumentFormat.OpenXml
         /// Closes the reader.
         /// </summary>
         public abstract void Close();
+
+#if TASKS_SUPPORTED
+        #region Async methods
+
+        /// <summary>
+        /// Asynchronously reads the next element in the Open XML document.
+        /// </summary>
+        /// <returns>
+        /// A task that represents the asynchronous read operation. The task result is <c>true</c> if the next element
+        /// was read successfully; <c>false</c> if there are no more elements to read.
+        /// </returns>
+        /// <remarks>
+        /// This method is only available when the build target supports asynchronous SAX XML processing.
+        /// </remarks>
+        public virtual Task<bool> ReadAsync()
+        {
+            return Task.FromResult(Read());
+        }
+
+        /// <summary>
+        /// Asynchronously moves the reader to the first child element of the current node.
+        /// </summary>
+        /// <returns>
+        /// A task that represents the asynchronous operation. The task result is <c>true</c> if the first child element
+        /// was read successfully; <c>false</c> if there are no child elements to read.
+        /// </returns>
+        /// <remarks>
+        /// This method can only be called when the reader is positioned on an element start. If no child elements exist,
+        /// the reader will move to the end tag of the current element.
+        /// </remarks>
+        public virtual Task<bool> ReadFirstChildAsync()
+        {
+            return Task.FromResult(ReadFirstChild());
+        }
+        #endregion
+#endif
 
         /// <summary>
         /// Thrown if the object is disposed.
