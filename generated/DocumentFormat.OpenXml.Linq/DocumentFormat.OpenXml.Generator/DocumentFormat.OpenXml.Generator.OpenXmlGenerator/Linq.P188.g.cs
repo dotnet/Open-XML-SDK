@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="CX.tx" />, <see cref="cm" />, <see cref="reply" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="C.tx" />, <see cref="cm" />, <see cref="reply" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="A.bodyPr" />, <see cref="A.lstStyle" />, <see cref="A.p" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TextBodyType.</description></item>
         /// </list>
