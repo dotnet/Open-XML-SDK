@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Collections.Immutable" />
     <ProjectReference Include="..\..\src\DocumentFormat.OpenXml.Linq\DocumentFormat.OpenXml.Linq.csproj" />
     <ProjectReference Include="..\..\src\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj" />
   </ItemGroup>

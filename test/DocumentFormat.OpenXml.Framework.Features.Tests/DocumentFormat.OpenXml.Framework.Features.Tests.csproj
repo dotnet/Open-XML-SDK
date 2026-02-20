@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <PackageReference Include="NSubstitute" />
+    <PackageReference Include="System.Collections.Immutable" />
   </ItemGroup>
 
 </Project>
