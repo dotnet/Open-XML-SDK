@@ -361,6 +361,10 @@
     "ClassName": "OddHeaderXsdstring"
   },
   {
+    "Name": "cx:CT_Offset/cx:offset",
+    "ClassName": "Offset"
+  },
+  {
     "Name": "xsd:unsignedInt/cx:openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3",
     "ClassName": "Openxmlsdk_49BECFFA_3B03_4D13_8272_D6CCB22579E3XsdunsignedInt"
   },
