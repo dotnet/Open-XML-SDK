@@ -76,6 +76,36 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
         }
 
+        /// <summary>
+        /// <para>version, this property is only available in Office 2016 and later.</para>
+        /// <para>Represents the following attribute in the schema: version</para>
+        /// </summary>
+        public StringValue? Version
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>featureList, this property is only available in Office 2016 and later.</para>
+        /// <para>Represents the following attribute in the schema: featureList</para>
+        /// </summary>
+        public StringValue? FeatureList
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>fallbackImg, this property is only available in Office 2016 and later.</para>
+        /// <para>Represents the following attribute in the schema: fallbackImg</para>
+        /// </summary>
+        public StringValue? FallbackImg
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -89,6 +119,10 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverrides.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverrides());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings());
+            builder.AddElement<ChartSpace>()
+                .AddAttribute("version", a => a.Version)
+                .AddAttribute("featureList", a => a.FeatureList)
+                .AddAttribute("fallbackImg", a => a.FallbackImg);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartData.ElementType, 1, 1, version: FileFormatVersions.Office2016),
@@ -2600,6 +2634,66 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     }
 
     /// <summary>
+    /// <para>Defines the Offset Class.</para>
+    /// <para>This class is available in Office 2016 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is cx:offset.</para>
+    /// </summary>
+    public partial class Offset : OpenXmlLeafElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "offset");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.microsoft.com/office/drawing/2014/chartex", "CT_Offset");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the Offset class.
+        /// </summary>
+        public Offset() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>top, this property is only available in Office 2016 and later.</para>
+        /// <para>Represents the following attribute in the schema: top</para>
+        /// </summary>
+        public DoubleValue? Top
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>left, this property is only available in Office 2016 and later.</para>
+        /// <para>Represents the following attribute in the schema: left</para>
+        /// </summary>
+        public DoubleValue? Left
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+            builder.Availability = FileFormatVersions.Office2016;
+            builder.AddElement<Offset>()
+                .AddAttribute("top", a => a.Top, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("left", a => a.Left, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Offset>(deep);
+    }
+
+    /// <summary>
     /// <para>Defines the AxisUnitsLabel Class.</para>
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:unitsLabel.</para>
@@ -2891,6 +2985,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody" /> <c>&lt;cx:txPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset" /> <c>&lt;cx:offset></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
     /// </list>
     /// </remarks>
@@ -2941,12 +3036,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text());
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text.ElementType, 0, 1, version: FileFormatVersions.Office2016),
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, 0, 1, version: FileFormatVersions.Office2016),
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset.ElementType, 0, 1, version: FileFormatVersions.Office2016),
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
@@ -2988,6 +3085,19 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
             get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody;
             set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType);
+        }
+
+        /// <summary>
+        /// <para>Offset.</para>
+        /// <para>Represents the following element tag in the schema: cx:offset.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remarks>
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset? Offset
+        {
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset.ElementType);
         }
 
         /// <summary>
@@ -8923,6 +9033,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody" /> <c>&lt;cx:txPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset" /> <c>&lt;cx:offset></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
     /// </list>
     /// </remarks>
@@ -9003,6 +9114,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text());
             builder.AddElement<ChartTitle>()
                 .AddAttribute("pos", a => a.Pos)
@@ -9013,6 +9125,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text.ElementType, 0, 1, version: FileFormatVersions.Office2016),
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, 0, 1, version: FileFormatVersions.Office2016),
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset.ElementType, 0, 1, version: FileFormatVersions.Office2016),
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
@@ -9054,6 +9167,19 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
             get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody;
             set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType);
+        }
+
+        /// <summary>
+        /// <para>Offset.</para>
+        /// <para>Represents the following element tag in the schema: cx:offset.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remarks>
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset? Offset
+        {
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset.ElementType);
         }
 
         /// <summary>
@@ -9172,6 +9298,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody" /> <c>&lt;cx:txPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset" /> <c>&lt;cx:offset></c></description></item>
     /// </list>
     /// </remarks>
     public partial class Legend : OpenXmlCompositeElement
@@ -9251,6 +9378,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody());
             builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset.ElementType, static () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset());
             builder.AddElement<Legend>()
                 .AddAttribute("pos", a => a.Pos)
                 .AddAttribute("align", a => a.Align)
@@ -9259,6 +9387,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
             {
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties.ElementType, 0, 1, version: FileFormatVersions.Office2016),
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType, 0, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset.ElementType, 0, 1, version: FileFormatVersions.Office2016),
                 new ElementParticle(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList.ElementType, 0, 1, version: FileFormatVersions.Office2016)
             };
         }
@@ -9287,6 +9416,19 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         {
             get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody;
             set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody.ElementType);
+        }
+
+        /// <summary>
+        /// <para>Offset.</para>
+        /// <para>Represents the following element tag in the schema: cx:offset.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
+        /// </remarks>
+        public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset? Offset
+        {
+            get => GetElement(DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset.ElementType) as DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset;
+            set => SetElement(value, DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset.ElementType);
         }
 
         /// <summary>
@@ -10549,6 +10691,51 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnsignedIntegerType>(deep);
+    }
+
+    /// <summary>
+    /// Defines the ExtensionDropMode enumeration.
+    /// </summary>
+    public readonly record struct ExtensionDropMode : IEnumValue, IEnumValueFactory<ExtensionDropMode>
+    {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ExtensionDropMode enum instance
+        /// </summary>
+        public ExtensionDropMode(string value) => _value = value;
+        ExtensionDropMode IEnumValueFactory<ExtensionDropMode>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "never" => true,
+            "onModelChange" => true,
+            "onDataChange" => true,
+            "always" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "never";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2016;
+        /// <summary>
+        /// never.
+        /// <para>When the item is serialized out as xml, its value is "never".</para>
+        /// </summary>
+        public static ExtensionDropMode Never => new("never");
+        /// <summary>
+        /// onModelChange.
+        /// <para>When the item is serialized out as xml, its value is "onModelChange".</para>
+        /// </summary>
+        public static ExtensionDropMode OnModelChange => new("onModelChange");
+        /// <summary>
+        /// onDataChange.
+        /// <para>When the item is serialized out as xml, its value is "onDataChange".</para>
+        /// </summary>
+        public static ExtensionDropMode OnDataChange => new("onDataChange");
+        /// <summary>
+        /// always.
+        /// <para>When the item is serialized out as xml, its value is "always".</para>
+        /// </summary>
+        public static ExtensionDropMode Always => new("always");
+    
     }
 
     /// <summary>

@@ -32926,6 +32926,10 @@
         "Type": "http://schemas.microsoft.com/office/drawing/2014/chartex*CT_ExtensionList"
       },
       {
+        "Name": "http://schemas.microsoft.com/office/drawing/2014/chartex*offset",
+        "Type": "http://schemas.microsoft.com/office/drawing/2014/chartex*CT_Offset"
+      },
+      {
         "Name": "http://schemas.microsoft.com/office/drawing/2014/chartex*spPr",
         "Type": "http://schemas.openxmlformats.org/drawingml/2006/main*CT_ShapeProperties"
       },
@@ -33079,6 +33083,10 @@
       {
         "Name": "http://schemas.microsoft.com/office/drawing/2014/chartex*extLst",
         "Type": "http://schemas.microsoft.com/office/drawing/2014/chartex*CT_ExtensionList"
+      },
+      {
+        "Name": "http://schemas.microsoft.com/office/drawing/2014/chartex*offset",
+        "Type": "http://schemas.microsoft.com/office/drawing/2014/chartex*CT_Offset"
       },
       {
         "Name": "http://schemas.microsoft.com/office/drawing/2014/chartex*spPr",
@@ -33592,6 +33600,10 @@
         "Type": "http://schemas.microsoft.com/office/drawing/2014/chartex*CT_ExtensionList"
       },
       {
+        "Name": "http://schemas.microsoft.com/office/drawing/2014/chartex*offset",
+        "Type": "http://schemas.microsoft.com/office/drawing/2014/chartex*CT_Offset"
+      },
+      {
         "Name": "http://schemas.microsoft.com/office/drawing/2014/chartex*spPr",
         "Type": "http://schemas.openxmlformats.org/drawingml/2006/main*CT_ShapeProperties"
       },
@@ -33814,6 +33826,10 @@
   },
   {
     "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddHeaderXsdstring",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Offset",
     "Children": []
   },
   {

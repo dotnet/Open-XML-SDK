@@ -7044,6 +7044,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName fadeDir = "fadeDir";
 
         /// <summary>
+        /// Represents the fallbackImg XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="C.chartSpace" />, <see cref="CX.chartSpace" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: ChartSpace.FallbackImg.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName fallbackImg = "fallbackImg";
+
+        /// <summary>
         /// Represents the fc XML attributes.
         /// </summary>
         /// <remarks>
@@ -7054,6 +7066,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName fc = "fc";
+
+        /// <summary>
+        /// Represents the featureList XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="C.chartSpace" />, <see cref="CX.chartSpace" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: ChartSpace.FeatureList.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName featureList = "featureList";
 
         /// <summary>
         /// Represents the fi XML attribute.
@@ -11189,8 +11213,8 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="X.gradientFill" />, <see cref="X.pageMargins" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: GradientFill.Left, PageMargins.Left.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="CX.offset" />, <see cref="X.gradientFill" />, <see cref="X.pageMargins" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: GradientFill.Left, Offset.Left, PageMargins.Left.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName left = "left";
@@ -21209,8 +21233,8 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="X.gradientFill" />, <see cref="X.pageMargins" />, <see cref="X.top10" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: GradientFill.Top, PageMargins.Top, Top10.Top.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="CX.offset" />, <see cref="X.gradientFill" />, <see cref="X.pageMargins" />, <see cref="X.top10" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: GradientFill.Top, Offset.Top, PageMargins.Top, Top10.Top.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName top = "top";
@@ -22265,8 +22289,8 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="EMMA.emma_" />, <see cref="VT.vstream" />, <see cref="WE.reference" />, <see cref="X.headers" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: Emma.Version, Headers.Version, VTVStreamData.Version, WebExtensionStoreReference.Version.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="C.chartSpace" />, <see cref="CX.chartSpace" />, <see cref="EMMA.emma_" />, <see cref="VT.vstream" />, <see cref="WE.reference" />, <see cref="X.headers" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: ChartSpace.Version, Emma.Version, Headers.Version, VTVStreamData.Version, WebExtensionStoreReference.Version.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName version = "version";
