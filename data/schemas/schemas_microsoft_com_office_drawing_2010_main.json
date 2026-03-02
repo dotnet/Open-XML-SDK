@@ -780,9 +780,23 @@
       "Name": "a14:CT_TextMath/a14:m",
       "ClassName": "TextMath",
       "Summary": "Defines the TextMath Class.",
-      "BaseClass": "OpenXmlLeafElement",
-      "IsLeafElement": true,
-      "Version": "Office2010"
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2010",
+      "Children": [
+        {
+          "Name": "m:CT_OMath/m:oMath",
+          "PropertyName": "OfficeMath"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "m:CT_OMath/m:oMath"
+          }
+        ]
+      }
     },
     {
       "Name": "a:CT_OfficeArtExtensionList/a14:extLst",
