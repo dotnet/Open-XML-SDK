@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList" /> <c>&lt;tsle:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class TimeSlicer : OpenXmlCompositeElement
+    public partial class TimeSlicer : OpenXmlCompositeElement, IExtensionChildrenParent<TimeSlicer>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2012/timeslicer", "timeslicer");
@@ -78,6 +78,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

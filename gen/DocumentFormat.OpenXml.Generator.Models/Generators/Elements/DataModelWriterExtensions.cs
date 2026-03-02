@@ -260,7 +260,15 @@ public static class DataModelWriterExtensions
         writer.Write("partial class ");
         writer.Write(className);
         writer.Write(" : ");
-        writer.WriteLine(GetBaseName(element));
+
+        if (element.KnownChildren is not null && element.KnownChildren.Any(c => c.QName.Name == "extLst") && element.ExtensionChildren is not null)
+        {
+            writer.WriteLine($"{GetBaseName(element)}, IExtensionChildrenParent<{className}>");
+        }
+        else
+        {
+            writer.WriteLine(GetBaseName(element));
+        }
 
         using (writer.AddBlock(new() { AddNewLineBeforeClosing = true, IncludeTrailingNewline = false }))
         {
@@ -364,6 +372,24 @@ public static class DataModelWriterExtensions
 
     private static void WriteMetadata(this IndentedTextWriter writer, OpenXmlGeneratorServices services, SchemaType containingType)
     {
+        if (containingType.KnownChildren is not null && containingType.KnownChildren.Any(c => c.QName.Name == "extLst") && containingType.ExtensionChildren is not null)
+        {
+            writer.WriteLine("public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {");
+
+            foreach (var child in containingType.ExtensionChildren)
+            {
+                writer.WriteLine($"    {services.FindClassName(child.Name)}.ElementType,");
+            }
+
+            writer.WriteLine("};");
+            writer.WriteLine();
+
+            //writer.WriteLine("public static IEnumerable<OpenXmlSchemaType> GetExtensionChildren<T>()");
+            //writer.WriteLine("    where T : IExtensionChildrenParent<T>");
+            //writer.WriteLine("    => T.ExtensionChildren;");
+            //writer.WriteLine();
+        }
+
         var attributes = containingType.Attributes;
 
         writer.WriteLine("internal override void ConfigureMetadata(ElementMetadata.Builder builder)");
@@ -400,16 +426,32 @@ public static class DataModelWriterExtensions
                 writer.WriteLine(";");
             }
 
-            if (!containingType.IsDerived)
+            if (!containingType.IsDerived && containingType.KnownChildren is not null)
             {
                 foreach (var child in containingType.KnownChildren)
                 {
                     var className = services.FindClassName(child);
 
                     writer.Write("builder.AddChild(");
-                    writer.Write(className);
+                    if (containingType.Name.QName.Name == "sldId" && containingType.Name.QName.Prefix == "p" && className == "DocumentFormat.OpenXml.Presentation.ExtensionList")
+                    {
+                        writer.Write($"{className}<DocumentFormat.OpenXml.Presentation.SlideId>");
+                    }
+                    else
+                    {
+                        writer.Write(className);
+                    }
+
                     writer.Write(".ElementType, static () => new ");
-                    writer.Write(className);
+                    if (containingType.Name.QName.Name == "sldId" && containingType.Name.QName.Prefix == "p" && className == "DocumentFormat.OpenXml.Presentation.ExtensionList")
+                    {
+                        writer.Write($"{className}<DocumentFormat.OpenXml.Presentation.SlideId>");
+                    }
+                    else
+                    {
+                        writer.Write(className);
+                    }
+
                     writer.WriteLine("());");
                 }
             }
@@ -534,20 +576,53 @@ public static class DataModelWriterExtensions
         }
 
         writer.Write("public ");
-        writer.Write(className);
+
+        if (parent.Name.QName.Name == "sldId" && parent.Name.QName.Prefix == "p" && className == "DocumentFormat.OpenXml.Presentation.ExtensionList")
+        {
+            writer.Write(string.Concat(className, "<DocumentFormat.OpenXml.Presentation.SlideId>"));
+        }
+        else
+        {
+            writer.Write(className);
+        }
+
         writer.Write("? ");
         writer.WriteLine(element.PropertyName);
 
         using (writer.AddBlock(new() { IncludeTrailingNewline = false }))
         {
             writer.Write("get => GetElement(");
-            writer.Write(className);
+            if (parent.Name.QName.Name == "sldId" && parent.Name.QName.Prefix == "p" && className == "DocumentFormat.OpenXml.Presentation.ExtensionList")
+            {
+                writer.Write("DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>");
+            }
+            else
+            {
+                writer.Write(className);
+            }
+
             writer.Write(".ElementType) as ");
-            writer.Write(className);
+            if (parent.Name.QName.Name == "sldId" && parent.Name.QName.Prefix == "p" && className == "DocumentFormat.OpenXml.Presentation.ExtensionList")
+            {
+                writer.Write("DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>");
+            }
+            else
+            {
+                writer.Write(className);
+            }
+
             writer.WriteLine(";");
 
             writer.Write("set => SetElement(value, ");
-            writer.Write(className);
+            if (parent.Name.QName.Name == "sldId" && parent.Name.QName.Prefix == "p" && className == "DocumentFormat.OpenXml.Presentation.ExtensionList")
+            {
+                writer.Write("DocumentFormat.OpenXml.Presentation.ExtensionList<DocumentFormat.OpenXml.Presentation.SlideId>");
+            }
+            else
+            {
+                writer.Write(className);
+            }
+
             writer.WriteLine(".ElementType);");
         }
     }

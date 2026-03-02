@@ -548,7 +548,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList" /> <c>&lt;p188:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Author : OpenXmlCompositeElement
+    public partial class Author : OpenXmlCompositeElement, IExtensionChildrenParent<Author>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "author");
@@ -637,6 +637,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -697,7 +700,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList" /> <c>&lt;p188:extLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class CommentReply : OpenXmlCompositeElement
+    public partial class CommentReply : OpenXmlCompositeElement, IExtensionChildrenParent<CommentReply>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "reply");
@@ -796,6 +799,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -1019,7 +1025,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList" /> <c>&lt;pc:sldMkLst></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class Comment : OpenXmlCompositeElement
+    public partial class Comment : OpenXmlCompositeElement, IExtensionChildrenParent<Comment>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "cm");
@@ -1178,6 +1184,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
             set => SetAttribute(value);
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);

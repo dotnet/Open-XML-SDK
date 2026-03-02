@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape" /> <c>&lt;wps:wsp></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class WordprocessingCanvas : OpenXmlCompositeElement
+    public partial class WordprocessingCanvas : OpenXmlCompositeElement, IExtensionChildrenParent<WordprocessingCanvas>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas", "wpc");
@@ -79,6 +79,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -343,7 +346,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D" /> <c>&lt;wpg:xfrm></c></description></item>
     /// </list>
     /// </remarks>
-    public partial class GraphicFrameType : OpenXmlCompositeElement
+    public partial class GraphicFrameType : OpenXmlCompositeElement, IExtensionChildrenParent<GraphicFrameType>
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas", "graphicFrame");
@@ -382,6 +385,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
         {
         }
 
+        public static IEnumerable<OpenXmlSchemaType> ExtensionChildren { get; } = new List<OpenXmlSchemaType>() {
+        };
+        
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
