@@ -1134,7 +1134,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
             catch (Exception e)
             {
-                Output.WriteLine($"Warning: {e.ToString()}");
+                Output.WriteLine($"Warning: {e}");
                 Output.WriteLine("Expected {0} Caught!", e.GetType().Name);
             }
         }
@@ -1151,7 +1151,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
             catch (Exception e)
             {
-                Output.WriteLine($"Warning: {e.ToString()}");
+                Output.WriteLine($"Warning: {e}");
                 Output.WriteLine("Expected {0} Caught!", e.GetType().Name);
             }
         }
