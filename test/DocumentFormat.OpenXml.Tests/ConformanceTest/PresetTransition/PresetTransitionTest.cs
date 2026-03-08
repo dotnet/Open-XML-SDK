@@ -31,12 +31,9 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransition
             SimpleReadWriteTest(
                 (e) =>
                 {
-                    Log.VerifyValue(
-                        e.Preset.Value, OriginalPresetTransition,
-                        "Verified 'Preset' attribute of <P15:prstTrans>");
-                    Log.VerifyValue(e.InvX.Value, true,
-                        "Verified 'InvX' attribute of <P15:prstTrans>");
-                    Log.VerifyNull(e.InvY, "Verified 'InvY' attribute of <P15:prstTrans>");
+                    Assert.Equal(OriginalPresetTransition, e.Preset.Value);
+                    Assert.Equal(true, e.InvX.Value);
+                    Assert.Null(e.InvY);
                 },
                 (e) =>
                 {
@@ -46,13 +43,9 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransition
                 },
                 (e) =>
                 {
-                    Log.VerifyValue(
-                        e.Preset.Value, ModifiedPresetTransition,
-                        "Verified the updated attribute");
-                    Log.VerifyValue(e.InvX.Value, false,
-                        "Verified 'InvX' attribute of <P15:prstTrans>");
-                    Log.VerifyValue(e.InvY.Value, true,
-                        "Verified 'InvY' attribute of <P15:prstTrans>");
+                    Assert.Equal(ModifiedPresetTransition, e.Preset.Value);
+                    Assert.Equal(false, e.InvX.Value);
+                    Assert.Equal(true, e.InvY.Value);
                 });
         }
         #endregion

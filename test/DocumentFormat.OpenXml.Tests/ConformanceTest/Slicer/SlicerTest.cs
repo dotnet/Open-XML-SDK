@@ -22,8 +22,8 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
                 GeneratedDocument.CreatePackage(stream);
 
                 TestEntities testEntities = new TestEntities();
-                testEntities.EditElements(stream, Log);
-                testEntities.VerifyElements(stream, Log);
+                testEntities.EditElements(stream, Output);
+                testEntities.VerifyElements(stream, Output);
             }
         }
     }

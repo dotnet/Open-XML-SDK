@@ -30,8 +30,8 @@ namespace DocumentFormat.OpenXml.Tests.Theme
                 }
 
                 TestEntities testEntities = new TestEntities();
-                testEntities.EditAttribute(stream, Log);
-                testEntities.VerifyAttribute(stream, Log);
+                testEntities.EditAttribute(stream, Output);
+                testEntities.VerifyAttribute(stream, Output);
             }
         }
 
@@ -43,11 +43,11 @@ namespace DocumentFormat.OpenXml.Tests.Theme
                 GeneratedDocument.CreatePackage(stream);
 
                 TestEntities testEntities = new TestEntities();
-                testEntities.DeletAttribute(stream, Log);
-                testEntities.VerifyDeletedAttribute(stream, Log);
+                testEntities.DeletAttribute(stream, Output);
+                testEntities.VerifyDeletedAttribute(stream, Output);
 
-                testEntities.AddAttribute(stream, Log);
-                testEntities.VerifyAddedAttribute(stream, Log);
+                testEntities.AddAttribute(stream, Output);
+                testEntities.VerifyAddedAttribute(stream, Output);
             }
         }
     }

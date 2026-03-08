@@ -110,9 +110,7 @@ namespace DocumentFormat.OpenXml.Tests
                 }
             }
 
-            Log.VerifyTrue(
-                elements.Count > 0,
-                string.Format(
+            Assert.True(elements.Count > 0, string.Format(
                     "Elements [{0}] are detected in [{1}]",
                     typeof(TElement).ToString(),
                     package.Package.PackageProperties.Title));

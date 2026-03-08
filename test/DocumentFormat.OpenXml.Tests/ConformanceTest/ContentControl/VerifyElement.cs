@@ -3,9 +3,9 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
-using LogUtil;
 using System.IO;
 using System.Linq;
+using Xunit;
 
 using ConstStr = DocumentFormat.OpenXml.Tests.ContentControl.ConstantStrings;
 using W15 = DocumentFormat.OpenXml.Office2013.Word;
@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
         /// <summary>
         /// To check whether a document has been changed correctly
         /// </summary>
-        internal static void VerifyContentControlElement(Stream stream, VerifiableLog log)
+        internal static void VerifyContentControlElement(Stream stream, ITestOutputHelper log)
         {
             using (WordprocessingDocument package = WordprocessingDocument.Open(stream, false))
             {
@@ -39,8 +39,8 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             elementNum = sdtBlock.SdtContentBlock.Descendants<RunStyle>().Where(e => e.Val == ConstStr.RunStyleValues.Placeholder).Count();
 
-                            log.Verify(elementNum == 0, "Element does not appear as expected. Its elements are \"style\", \"PlaceholderText\" value.");
-                            log.Verify(sdtBlock.SdtContentBlock.InnerText == ConstStr.TestStrings.ContentControlString2, "In the text is not expected.");
+                            Assert.True(elementNum == 0, "Element does not appear as expected. Its elements are \"style\", \"PlaceholderText\" value.");
+                            Assert.True(sdtBlock.SdtContentBlock.InnerText == ConstStr.TestStrings.ContentControlString2, "In the text is not expected.");
                             break;
 
                         // Tag is "Test1.1.2"
@@ -49,8 +49,8 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             elementNum = sdtBlock.SdtContentBlock.Descendants<RunStyle>().Where(e => e.Val == ConstStr.RunStyleValues.Placeholder).Count();
 
-                            log.Verify(elementNum != 0, "Do not expect element appeared. Its elements are \"style\", \"PlaceholderText\" value.");
-                            log.Verify(sdtBlock.SdtContentBlock.InnerText == ConstStr.TestStrings.ContentControlString1, "In the text is not expected.");
+                            Assert.True(elementNum != 0, "Do not expect element appeared. Its elements are \"style\", \"PlaceholderText\" value.");
+                            Assert.True(sdtBlock.SdtContentBlock.InnerText == ConstStr.TestStrings.ContentControlString1, "In the text is not expected.");
                             break;
 
                         // Tag is "Test1.2.1"
@@ -59,11 +59,11 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             elementNum = sdtBlock.SdtProperties.Descendants<W15.Appearance>().Count();
 
-                            log.Verify(elementNum != 0, "Element does not appear as expected. Its elements are \"appearance\".");
+                            Assert.True(elementNum != 0, "Element does not appear as expected. Its elements are \"appearance\".");
 
                             if (elementNum != 0)
                             {
-                                log.Verify(sdtBlock.SdtProperties.Descendants<W15.Appearance>().First().Val == W15.SdtAppearance.Tags, "Do not have the expected value element.Its values is \"Tags\".");
+                                Assert.True(sdtBlock.SdtProperties.Descendants<W15.Appearance>().First().Val == W15.SdtAppearance.Tags, "Do not have the expected value element.Its values is \"Tags\".");
                             }
 
                             break;
@@ -74,11 +74,11 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             elementNum = sdtBlock.SdtProperties.Descendants<W15.Appearance>().Count();
 
-                            log.Verify(elementNum != 0, "Element does not appear as expected. Its elements are \"appearance\".");
+                            Assert.True(elementNum != 0, "Element does not appear as expected. Its elements are \"appearance\".");
 
                             if (elementNum != 0)
                             {
-                                log.Verify(sdtBlock.SdtProperties.Descendants<W15.Appearance>().First().Val == W15.SdtAppearance.Hidden, "Do not have the expected value element.Its values is \"Hidden\".");
+                                Assert.True(sdtBlock.SdtProperties.Descendants<W15.Appearance>().First().Val == W15.SdtAppearance.Hidden, "Do not have the expected value element.Its values is \"Hidden\".");
                             }
 
                             break;
@@ -91,11 +91,11 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             if (elementNum != 0)
                             {
-                                log.Verify(sdtBlock.SdtProperties.Descendants<W15.Appearance>().First().Val == W15.SdtAppearance.BoundingBox, "Do not have the expected value element.Its values is \"BoundingBox\".");
+                                Assert.True(sdtBlock.SdtProperties.Descendants<W15.Appearance>().First().Val == W15.SdtAppearance.BoundingBox, "Do not have the expected value element.Its values is \"BoundingBox\".");
                             }
                             else
                             {
-                                log.Pass("There is no element appearance. This is enabled by default.");
+                                log.WriteLine("There is no element appearance. This is enabled by default.");
                             }
 
                             break;
@@ -106,8 +106,8 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             elementNum = sdtBlock.SdtProperties.Descendants<W15.Color>().Count();
 
-                            log.Verify(elementNum != 0, "Element does not appear as expected. Its elements are \"color\".");
-                            log.Verify(sdtBlock.SdtProperties.Descendants<W15.Color>().First().Val.Value == ConstStr.TestColorValues.TestColor, string.Format("Do not have the expected value element.Its values is \"{0}\".", ConstStr.TestColorValues.TestColor));
+                            Assert.True(elementNum != 0, "Element does not appear as expected. Its elements are \"color\".");
+                            Assert.True(sdtBlock.SdtProperties.Descendants<W15.Color>().First().Val.Value == ConstStr.TestColorValues.TestColor, string.Format("Do not have the expected value element.Its values is \"{0}\".", ConstStr.TestColorValues.TestColor));
                             break;
 
                         // Tag is "Test1.3.2"
@@ -116,7 +116,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             elementNum = sdtBlock.SdtProperties.Descendants<W15.Color>().Count();
 
-                            log.Verify(elementNum == 0, "Element does not appear as expected. Its elements are \"color\".");
+                            Assert.True(elementNum == 0, "Element does not appear as expected. Its elements are \"color\".");
                             break;
 
                         // Tag is "Test1.4.1"
@@ -125,7 +125,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             elementNum = sdtBlock.SdtProperties.Descendants<W15.SdtRepeatedSection>().Count();
 
-                            log.Verify(elementNum != 0, "Element does not appear as expected. Its elements are \"SdtRepeatedSection\".");
+                            Assert.True(elementNum != 0, "Element does not appear as expected. Its elements are \"SdtRepeatedSection\".");
                             break;
 
                         // Tag is "Test1.4.2"
@@ -134,7 +134,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             elementNum = sdtBlock.SdtContentBlock.Descendants<SdtBlock>().First().SdtProperties.Descendants<W15.SdtRepeatedSectionItem>().Count();
 
-                            log.Verify(elementNum != 0, "Element does not appear as expected. Its elements are \"SdtRepeatedSectionItem\".");
+                            Assert.True(elementNum != 0, "Element does not appear as expected. Its elements are \"SdtRepeatedSectionItem\".");
                             break;
 
                         // Tag is "Test1.4.3"
@@ -143,7 +143,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             sdtRepeatedSection = sdtBlock.SdtProperties.Descendants<W15.SdtRepeatedSection>().First();
 
-                            log.Verify(sdtRepeatedSection.DoNotAllowInsertDeleteSection.Val.Value == false, "Do not have the expected value element. Its values is \"0\" or \"false\".");
+                            Assert.True(sdtRepeatedSection.DoNotAllowInsertDeleteSection.Val.Value == false, "Do not have the expected value element. Its values is \"0\" or \"false\".");
                             break;
 
                         // Tag is "Test1.4.4"
@@ -152,14 +152,11 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             var sectionTitles = sdtBlock.Descendants<W15.SectionTitle>();
                             if (sectionTitles.Any())
                             {
-                                log.VerifySubString(
-                                    sectionTitles.First().Val,
-                                    "TEST_TEST",
-                                    "SectionTitle is detected and updated");
+                                Assert.Contains("TEST_TEST", sectionTitles.First().Val);
                             }
                             else
                             {
-                                log.Fail("SectionTitle is not detected.");
+                                Assert.Fail("SectionTitle is not detected.");
                             }
 
                             break;
@@ -168,32 +165,32 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                         case ConstStr.TestTagStrings.TagContent12:
                             sdtCell = tag.Ancestors<SdtCell>().First();
 
-                            log.Verify(sdtCell.InnerText == ConstStr.TestStrings.ContentControlCellString1, string.Format("Do not have the expected value element. Its values is \"{0}\".", ConstStr.TestStrings.ContentControlCellString1));
+                            Assert.True(sdtCell.InnerText == ConstStr.TestStrings.ContentControlCellString1, string.Format("Do not have the expected value element. Its values is \"{0}\".", ConstStr.TestStrings.ContentControlCellString1));
                             break;
 
                         // Tag is "Test1.5.1_2"
                         case ConstStr.TestTagStrings.TagContent13:
                             sdtCell = tag.Ancestors<SdtCell>().First();
 
-                            log.Verify(sdtCell.InnerText == ConstStr.TestStrings.ContentControlCellString2, string.Format("Do not have the expected value element. Its values is \"{0}\".", ConstStr.TestStrings.ContentControlCellString2));
+                            Assert.True(sdtCell.InnerText == ConstStr.TestStrings.ContentControlCellString2, string.Format("Do not have the expected value element. Its values is \"{0}\".", ConstStr.TestStrings.ContentControlCellString2));
                             break;
 
                         // Tag is "Test1.5.1_3"
                         case ConstStr.TestTagStrings.TagContent14:
                             sdtCell = tag.Ancestors<SdtCell>().First();
 
-                            log.Verify(sdtCell.InnerText == ConstStr.TestStrings.ContentControlCellString3, string.Format("Do not have the expected value element. Its values is \"{0}\".", ConstStr.TestStrings.ContentControlCellString3));
+                            Assert.True(sdtCell.InnerText == ConstStr.TestStrings.ContentControlCellString3, string.Format("Do not have the expected value element. Its values is \"{0}\".", ConstStr.TestStrings.ContentControlCellString3));
                             break;
 
                         // Tag is "Test1.5.1_4"
                         case ConstStr.TestTagStrings.TagContent15:
                             sdtCell = tag.Ancestors<SdtCell>().First();
 
-                            log.Verify(sdtCell.InnerText == ConstStr.TestStrings.ContentControlCellString4, string.Format("Do not have the expected value element. Its values is \"{0}\".", ConstStr.TestStrings.ContentControlCellString4));
+                            Assert.True(sdtCell.InnerText == ConstStr.TestStrings.ContentControlCellString4, string.Format("Do not have the expected value element. Its values is \"{0}\".", ConstStr.TestStrings.ContentControlCellString4));
                             break;
 
                         default:
-                            log.Fail(string.Format("Unknown tag appeared. Tag name is [{0}]", tag.Val.Value));
+                            Assert.Fail(string.Format("Unknown tag appeared. Tag name is [{0}]", tag.Val.Value));
                             break;
                     }
                 }

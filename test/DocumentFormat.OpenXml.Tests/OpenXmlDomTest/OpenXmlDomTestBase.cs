@@ -401,7 +401,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
                 {
-                    Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Either hostPart or srcHostPart is NOT reflectable.");
                 }
 
                 AppendCollection(hostPart, getHostElement, srcHostPart, getImportee, operationType);
@@ -411,26 +411,26 @@ namespace DocumentFormat.OpenXml.Tests
         private void AppendCollection(OpenXmlPart hostPart, GetTargetElement getHost,
             OpenXmlPart srcPart, GetTargetElement getImportee, AppendCollectionType operationType)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
-            Log.Comment("Loading root element from source part...");
+            Output.WriteLine("Loading root element from source part...");
             OpenXmlPartRootElement srcMain = srcPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
-                Log.Comment("Looking for importing element in {0}...", srcPart.GetType().Name);
+                Output.WriteLine("Looking for importing element in {0}...", srcPart.GetType().Name);
                 var importHost = getImportee(srcMain);
                 if (importHost is not null)
                 {
-                    Log.Comment("Importing element found: {0}", importHost.Path());
+                    Output.WriteLine("Importing element found: {0}", importHost.Path());
 
                     XElement xBefore = ConvertToXElement(hostPart, hostElement);
 
-                    Log.Comment("Importing {0} elements...", importHost.ChildElements.Count);
+                    Output.WriteLine("Importing {0} elements...", importHost.ChildElements.Count);
                     var originalElementCount = hostElement.ChildElements.Count;
                     var importElementsCount = importHost.ChildElements.Count;
                     var childPosition = originalElementCount;
@@ -448,13 +448,13 @@ namespace DocumentFormat.OpenXml.Tests
                             throw new InvalidOperationException("Invalid Operation Specified!");
                     }
 
-                    Log.Comment("Saving changes...");
+                    Output.WriteLine("Saving changes...");
                     main.Save();
 
                     XElement xAfter = ConvertToXElement(hostPart, hostElement);
 
-                    Log.Comment("Checking if children of current element increased by {0}...", importElementsCount);
-                    Log.VerifyTrue(xBefore.Elements().Count() == xAfter.Elements().Count() - importElementsCount, "Children element NOT increased as expected!");
+                    Output.WriteLine("Checking if children of current element increased by {0}...", importElementsCount);
+                    Assert.True(xBefore.Elements().Count() == xAfter.Elements().Count() - importElementsCount, "Children element NOT increased as expected!");
 
                     for (int i = 0; i < importElementsCount; i++)
                     {
@@ -464,12 +464,12 @@ namespace DocumentFormat.OpenXml.Tests
                 }
                 else
                 {
-                    Log.Warning("Importing element NOT found.");
+                    Output.WriteLine("Warning: Importing element NOT found.");
                 }
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -512,22 +512,22 @@ namespace DocumentFormat.OpenXml.Tests
         private void PendTestBody(OpenXmlPart hostPart, GetTargetElement getHost,
             OpenXmlPart srcPart, GetTargetElement getImportee, PendType operationType)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
-            Log.Comment("Loading root element from source part...");
+            Output.WriteLine("Loading root element from source part...");
             OpenXmlPartRootElement srcMain = srcPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
-                Log.Comment("Looking for importing element in {0}...", srcPart.GetType().Name);
+                Output.WriteLine("Looking for importing element in {0}...", srcPart.GetType().Name);
                 var importElement = getImportee(srcMain);
                 if (importElement is not null)
                 {
-                    Log.Comment("Importing element found: {0}", importElement.Path());
+                    Output.WriteLine("Importing element found: {0}", importElement.Path());
 
                     XElement xBefore = ConvertToXElement(hostPart, hostElement);
 
@@ -549,24 +549,24 @@ namespace DocumentFormat.OpenXml.Tests
                             throw new InvalidOperationException("Invalid Operation Specified!");
                     }
 
-                    Log.Comment("Saving changes...");
+                    Output.WriteLine("Saving changes...");
                     main.Save();
 
                     XElement xAfter = ConvertToXElement(hostPart, hostElement);
 
-                    Log.Comment("Checking if children of current element increased by ONE...");
-                    Log.VerifyTrue(xBefore.Elements().Count() == xAfter.Elements().Count() - 1, "Children element NOT increased by ONE!");
+                    Output.WriteLine("Checking if children of current element increased by ONE...");
+                    Assert.True(xBefore.Elements().Count() == xAfter.Elements().Count() - 1, "Children element NOT increased by ONE!");
 
                     VerifyEqual(xAfter, XElement.Parse(importElementOuterXml), childPosition);
                 }
                 else
                 {
-                    Log.Warning("Importing element NOT found.");
+                    Output.WriteLine("Warning: Importing element NOT found.");
                 }
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -583,11 +583,11 @@ namespace DocumentFormat.OpenXml.Tests
                 throw new ArgumentNullException(nameof(pendOp));
             }
 
-            Log.Comment("Pending child with {0}...", pendOp.GetMethodInfo().Name);
+            Output.WriteLine("Pending child with {0}...", pendOp.GetMethodInfo().Name);
             OpenXmlElement result = pendOp(pendee);
 
-            Log.Comment("Checking if returned element is reference equal to pass-in element...");
-            Log.VerifyTrue(object.ReferenceEquals(result, pendee), "Returned element is NOT reference equal to pass-in one!");
+            Output.WriteLine("Checking if returned element is reference equal to pass-in element...");
+            Assert.True(object.ReferenceEquals(result, pendee), "Returned element is NOT reference equal to pass-in one!");
 
             return result;
         }
@@ -613,7 +613,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
                 {
-                    Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Either hostPart or srcHostPart is NOT reflectable.");
                 }
 
                 InsertTest(hostPart, getHostElement, srcHostPart, getSourceHost, getRef, InsertType.Before);
@@ -631,28 +631,28 @@ namespace DocumentFormat.OpenXml.Tests
         private void InsertTest(OpenXmlPart hostPart, GetTargetElement getHost,
             OpenXmlPart srcPart, GetTargetElement getImportee, GetTargetElement getRef, InsertType type)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
-            Log.Comment("Loading root element from source part...");
+            Output.WriteLine("Loading root element from source part...");
             OpenXmlPartRootElement srcMain = srcPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
-                Log.Comment("Looking for reference element in {0}...", hostElement.GetType().Name);
+                Output.WriteLine("Looking for reference element in {0}...", hostElement.GetType().Name);
                 var refElement = getRef(hostElement);
                 if (refElement is not null)
                 {
-                    Log.Comment("Reference element found: {0}", refElement.Path());
+                    Output.WriteLine("Reference element found: {0}", refElement.Path());
 
-                    Log.Comment("Looking for importing element in {0}...", srcPart.GetType().Name);
+                    Output.WriteLine("Looking for importing element in {0}...", srcPart.GetType().Name);
                     var importElement = getImportee(srcMain);
                     if (importElement is not null)
                     {
-                        Log.Comment("Importing element found: {0}", importElement.Path());
+                        Output.WriteLine("Importing element found: {0}", importElement.Path());
 
                         XElement xbefore = ConvertToXElement(hostPart, hostElement);
 
@@ -676,30 +676,30 @@ namespace DocumentFormat.OpenXml.Tests
                                 throw new InvalidOperationException("Operation specified is invalid!!");
                         }
 
-                        Log.Comment("Saving changes...");
+                        Output.WriteLine("Saving changes...");
                         main.Save();
 
                         XElement xafter = ConvertToXElement(hostPart, hostElement);
 
-                        Log.Comment("Check if the child of  current element increased by ONE...");
-                        Log.VerifyTrue(xbefore.Elements().Count() == xafter.Elements().Count() - 1, "Child element NOT increased by ONE!");
+                        Output.WriteLine("Check if the child of  current element increased by ONE...");
+                        Assert.True(xbefore.Elements().Count() == xafter.Elements().Count() - 1, "Child element NOT increased by ONE!");
 
-                        Log.Comment("Check if specified child inserted as expected...");
+                        Output.WriteLine("Check if specified child inserted as expected...");
                         VerifyEqual(xafter, XElement.Parse(insertElement), expectPos);
                     }
                     else
                     {
-                        Log.Warning("Importing element NOT found.");
+                        Output.WriteLine("Warning: Importing element NOT found.");
                     }
                 }
                 else
                 {
-                    Log.Warning("Reference element NOT found.");
+                    Output.WriteLine("Warning: Reference element NOT found.");
                 }
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -717,11 +717,11 @@ namespace DocumentFormat.OpenXml.Tests
                 throw new ArgumentNullException("insertOp|insertee");
             }
 
-            Log.Comment("New child element is {0} the reference child", insertOp.GetMethodInfo().Name);
+            Output.WriteLine("New child element is {0} the reference child", insertOp.GetMethodInfo().Name);
             OpenXmlElement result = insertOp(insertee, refChild);
 
-            Log.Comment("Check if the element inserted is the same as the element inserted");
-            Log.VerifyTrue(object.ReferenceEquals(result, insertee), "two elements are not the same");
+            Output.WriteLine("Check if the element inserted is the same as the element inserted");
+            Assert.True(object.ReferenceEquals(result, insertee), "two elements are not the same");
 
             return result;
         }
@@ -750,7 +750,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
                 {
-                    Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Either hostPart or srcHostPart is NOT reflectable.");
                 }
 
                 InsertAt(hostPart, getHost, srcHostPart, getImportee, posType);
@@ -760,22 +760,22 @@ namespace DocumentFormat.OpenXml.Tests
         private void InsertAt(OpenXmlPart hostPart, GetTargetElement getHost,
             OpenXmlPart srcPart, GetTargetElement getImportee, InsertAtPosition posType)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
-            Log.Comment("Loading root element from source part...");
+            Output.WriteLine("Loading root element from source part...");
             OpenXmlPartRootElement srcMain = srcPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
-                Log.Comment("Looking for importing element in {0}...", srcPart.GetType().Name);
+                Output.WriteLine("Looking for importing element in {0}...", srcPart.GetType().Name);
                 var importElement = getImportee(srcMain);
                 if (importElement is not null)
                 {
-                    Log.Comment("Importing element found: {0}", importElement.Path());
+                    Output.WriteLine("Importing element found: {0}", importElement.Path());
 
                     XElement xbefore = ConvertToXElement(hostPart, hostElement);
 
@@ -807,25 +807,25 @@ namespace DocumentFormat.OpenXml.Tests
 
                     result = hostElement.InsertAt<OpenXmlElement>(importElement.Clone() as OpenXmlElement, expectPos);
 
-                    Log.Comment("Saving changes...");
+                    Output.WriteLine("Saving changes...");
                     main.Save();
 
                     XElement xafter = ConvertToXElement(hostPart, hostElement);
 
-                    Log.Comment("Check if the child of  current element increased by ONE...");
-                    Log.VerifyTrue(xbefore.Elements().Count() == xafter.Elements().Count() - 1, "Child element NOT increased by ONE!");
+                    Output.WriteLine("Check if the child of  current element increased by ONE...");
+                    Assert.True(xbefore.Elements().Count() == xafter.Elements().Count() - 1, "Child element NOT increased by ONE!");
 
-                    Log.Comment("Check if specified child inserted as expected...");
+                    Output.WriteLine("Check if specified child inserted as expected...");
                     VerifyEqual(xafter, XElement.Parse(insertElement), expectPos);
                 }
                 else
                 {
-                    Log.Warning("Importing element NOT found.");
+                    Output.WriteLine("Warning: Importing element NOT found.");
                 }
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -850,7 +850,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
                 {
-                    Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Either hostPart or srcHostPart is NOT reflectable.");
                 }
 
                 InsertRelative(hostPart, getHost, srcHostPart, getImportee, posType);
@@ -860,22 +860,22 @@ namespace DocumentFormat.OpenXml.Tests
         private void InsertRelative(OpenXmlPart hostPart, GetTargetElement getHost,
             OpenXmlPart srcPart, GetTargetElement getImportee, InsertRel posType)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
-            Log.Comment("Loading root element from source part...");
+            Output.WriteLine("Loading root element from source part...");
             OpenXmlPartRootElement srcMain = srcPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
-                Log.Comment("Looking for importing element in {0}...", srcPart.GetType().Name);
+                Output.WriteLine("Looking for importing element in {0}...", srcPart.GetType().Name);
                 var importElement = getImportee(srcMain);
                 if (importElement is not null)
                 {
-                    Log.Comment("Importing element found: {0}", importElement.Path());
+                    Output.WriteLine("Importing element found: {0}", importElement.Path());
 
                     XElement xBefore = ConvertToXElement(hostPart, hostElement.Parent);
 
@@ -897,25 +897,25 @@ namespace DocumentFormat.OpenXml.Tests
                             throw new InvalidOperationException("Invalid Operation Specified!");
                     }
 
-                    Log.Comment("Saving changes...");
+                    Output.WriteLine("Saving changes...");
                     main.Save();
 
                     XElement xAfter = ConvertToXElement(hostPart, hostElement.Parent);
 
-                    Log.Comment("Check if the child of  current element increased by ONE...");
-                    Log.VerifyTrue(xBefore.Elements().Count() == xAfter.Elements().Count() - 1, "Child element NOT increased by ONE!");
+                    Output.WriteLine("Check if the child of  current element increased by ONE...");
+                    Assert.True(xBefore.Elements().Count() == xAfter.Elements().Count() - 1, "Child element NOT increased by ONE!");
 
-                    Log.Comment("Check if specified element inserted as expected...");
+                    Output.WriteLine("Check if specified element inserted as expected...");
                     VerifyEqual(xAfter, XElement.Parse(insertElement), expectPos);
                 }
                 else
                 {
-                    Log.Warning("Importing element NOT found.");
+                    Output.WriteLine("Warning: Importing element NOT found.");
                 }
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -934,35 +934,35 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void RemoveAllChildren(OpenXmlPart hostPart, GetTargetElement getHost)
         {
-            Log.Comment("Loading root element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Loading root element in {0}...", hostPart.GetType().Name);
             OpenXmlPartRootElement main = hostPart.RootElement();
 
-            Log.Comment("Looking for host element...");
+            Output.WriteLine("Looking for host element...");
             OpenXmlElement hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
                 if (hostElement.ChildElements.Count == 0)
                 {
-                    Log.Warning("The host element has NO children!");
+                    Output.WriteLine("Warning: The host element has NO children!");
                 }
 
-                Log.Comment("The host element have {0} children.", hostElement.ChildElements.Count);
+                Output.WriteLine("The host element have {0} children.", hostElement.ChildElements.Count);
 
-                Log.Comment("Remove all children from host element...");
+                Output.WriteLine("Remove all children from host element...");
                 hostElement.RemoveAllChildren();
 
-                Log.Comment("Saving changes...");
+                Output.WriteLine("Saving changes...");
                 main.Save();
 
-                Log.Comment("Verifying host element has no children any more...");
+                Output.WriteLine("Verifying host element has no children any more...");
                 XElement xbefore = ConvertToXElement(hostPart, hostElement);
                 VerifyNoChildren(xbefore);
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -978,14 +978,14 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void RemoveAllTypedChildren(OpenXmlPart hostPart, GetTargetElement getHost, Type deleteType)
         {
-            Log.Comment("Loading root element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Loading root element in {0}...", hostPart.GetType().Name);
             OpenXmlPartRootElement main = hostPart.RootElement();
 
-            Log.Comment("Looking for host element...");
+            Output.WriteLine("Looking for host element...");
             OpenXmlElement hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
                 if (hostElement.ChildElements.Count != 0)
                 {
@@ -994,40 +994,40 @@ namespace DocumentFormat.OpenXml.Tests
 
                     var childrenOfType = hostElement.ChildElements
                         .Where(c => isOfType(c.GetType(), deleteType)).ToArray();
-                    Log.Comment("Host element have {0} children of type {1}.", childrenOfType.Length, deleteType.Name);
+                    Output.WriteLine("Host element have {0} children of type {1}.", childrenOfType.Length, deleteType.Name);
                     var childrenPosition = childrenOfType.Select(c => c.Index()).ToArray();
 
                     XElement xbefore = ConvertToXElement(hostPart, hostElement);
 
-                    Log.Comment("Looking for RemoveAllChildren<T>() by reflecting...");
+                    Output.WriteLine("Looking for RemoveAllChildren<T>() by reflecting...");
                     var flag = BindingFlags.Public | BindingFlags.Instance | BindingFlags.FlattenHierarchy;
                     var removeAll = typeof(OpenXmlElement).GetMethods(flag)
                         .Where(m => m.IsGenericMethod && m.Name.StartsWith("RemoveAllChildren"))
                         .First();
-                    Log.Comment("Remove all children of {0} from host element...", deleteType.Name);
+                    Output.WriteLine("Remove all children of {0} from host element...", deleteType.Name);
                     removeAll = removeAll.MakeGenericMethod(deleteType);
                     removeAll.Invoke(hostElement, null);
 
-                    Log.Comment("Saving changes...");
+                    Output.WriteLine("Saving changes...");
                     main.Save();
 
-                    Log.Comment("Verifying host element has no specified children element any more...");
+                    Output.WriteLine("Verifying host element has no specified children element any more...");
                     var childrenOfTypeAfter = hostElement.ChildElements
                         .Where(c => isOfType(c.GetType(), deleteType));
-                    Log.VerifyTrue(!childrenOfTypeAfter.Any(), "Children of specified {0} still exists.", deleteType);
+                    Assert.True(!childrenOfTypeAfter.Any(), string.Format("Children of specified {0} still exists.", deleteType));
 
-                    Log.Comment("Verifing children of specified type removed...");
+                    Output.WriteLine("Verifing children of specified type removed...");
                     XElement xAfter = ConvertToXElement(hostPart, hostElement);
                     VerifyRemove(xAfter, xbefore, childrenPosition);
                 }
                 else
                 {
-                    Log.Warning("The host element has NO children!");
+                    Output.WriteLine("Warning: The host element has NO children!");
                 }
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -1052,40 +1052,40 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="getDelete">delegate to return the element to be removed</param>
         private void RemoveChild(OpenXmlPart hostPart, GetTargetElement getHost, GetTargetElement getDelete)
         {
-            Log.Comment("Loading root element of {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Loading root element of {0}...", hostPart.GetType().Name);
             OpenXmlPartRootElement main = hostPart.RootElement();
 
             OpenXmlElement hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
                 OpenXmlElement deleteElement = getDelete(hostElement);
                 if (deleteElement is not null)
                 {
-                    Log.Comment("Target element found: {0}", deleteElement.Path());
+                    Output.WriteLine("Target element found: {0}", deleteElement.Path());
 
                     int childPosition = deleteElement is null ? -1 : deleteElement.Index();
                     XElement xBefore = ConvertToXElement(hostPart, hostElement);
 
-                    Log.Comment("Removing specified child element...");
+                    Output.WriteLine("Removing specified child element...");
                     OpenXmlElement result = hostElement.RemoveChild<OpenXmlElement>(deleteElement);
 
-                    Log.Comment("Save the changes");
+                    Output.WriteLine("Save the changes");
                     main.Save();
 
-                    Log.Comment("Verifying child removed as expected...");
+                    Output.WriteLine("Verifying child removed as expected...");
                     XElement xAfter = ConvertToXElement(hostPart, hostElement);
                     VerifyRemove(xAfter, xBefore, childPosition);
                 }
                 else
                 {
-                    Log.Warning("Target element to remove NOT found.");
+                    Output.WriteLine("Warning: Target element to remove NOT found.");
                 }
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -1110,40 +1110,40 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="getTarget">delegate to return target element, which will perform the remove operation</param>
         private void Remove(OpenXmlPart hostPart, GetTargetElement getTarget)
         {
-            Log.Comment("Loading root element of {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Loading root element of {0}...", hostPart.GetType().Name);
             OpenXmlPartRootElement main = hostPart.RootElement();
 
             OpenXmlElement targetElement = getTarget(main);
             if (targetElement is not null)
             {
-                Log.Comment("Target element found: {0}", targetElement.Path());
+                Output.WriteLine("Target element found: {0}", targetElement.Path());
 
                 OpenXmlElement parent = targetElement.Parent;
                 if (parent is not null)
                 {
-                    Log.Comment("Parent element found: {0}", parent.Path());
+                    Output.WriteLine("Parent element found: {0}", parent.Path());
 
                     int targetPosition = targetElement is null ? -1 : targetElement.Index();
                     XElement xBefore = ConvertToXElement(hostPart, parent);
 
-                    Log.Comment("Removing current element...");
+                    Output.WriteLine("Removing current element...");
                     targetElement.Remove();
 
-                    Log.Comment("Save the changes");
+                    Output.WriteLine("Save the changes");
                     main.Save();
 
-                    Log.Comment("Verifying target removed as expected...");
+                    Output.WriteLine("Verifying target removed as expected...");
                     XElement xAfter = ConvertToXElement(hostPart, parent);
                     VerifyRemove(xAfter, xBefore, targetPosition);
                 }
                 else
                 {
-                    Log.Warning("Parent of target element is NULL.");
+                    Output.WriteLine("Warning: Parent of target element is NULL.");
                 }
             }
             else
             {
-                Log.Warning("Target element NOT found.");
+                Output.WriteLine("Warning: Target element NOT found.");
             }
         }
 
@@ -1162,7 +1162,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
                 {
-                    Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Either hostPart or srcHostPart is NOT reflectable.");
                 }
 
                 ReplaceChild(hostPart, getHost, getTarget, srcHostPart, getReplace, replaceType);
@@ -1172,60 +1172,58 @@ namespace DocumentFormat.OpenXml.Tests
         private void ReplaceChild(OpenXmlPart hostPart, GetTargetElement getHost, GetTargetElement getTarget,
             OpenXmlPart srcPart, GetTargetElement getReplace, Type replaceType)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
-            Log.Comment("Loading root element from source part...");
+            Output.WriteLine("Loading root element from source part...");
             OpenXmlPartRootElement srcMain = srcPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
-            Log.Comment("Found host element: {0}", hostElement.Path());
+            Output.WriteLine("Found host element: {0}", hostElement.Path());
             var targetElement = getTarget(hostElement);
             if (targetElement is not null)
             {
-                Log.Comment("Target element found: {0}", targetElement.Path());
+                Output.WriteLine("Target element found: {0}", targetElement.Path());
 
                 int expectPos = targetElement.Index();
 
-                Log.Comment("Looking for importing element in {0}...", srcPart.GetType().Name);
+                Output.WriteLine("Looking for importing element in {0}...", srcPart.GetType().Name);
                 var importElement = getReplace(srcMain);
                 if (importElement is not null)
                 {
-                    Log.Comment("Importing element found: {0}", importElement.Path());
+                    Output.WriteLine("Importing element found: {0}", importElement.Path());
 
-                    Log.Comment("Looking for ReplaceChild<T>() by reflecting...");
+                    Output.WriteLine("Looking for ReplaceChild<T>() by reflecting...");
                     var flag = BindingFlags.Public | BindingFlags.Instance | BindingFlags.FlattenHierarchy;
                     var replaceChild = hostElement.GetType().GetMethods(flag)
                         .Where(m => m.IsGenericMethod && m.Name.StartsWith("ReplaceChild"))
                         .First();
-                    Log.VerifyNotNull(replaceChild, "ReplaceChild<T>() NOT found for {0}!", hostElement.GetFullName());
+                    Assert.NotNull(replaceChild);
 
                     XElement xBefore = ConvertToXElement(hostPart, hostElement);
                     XElement xImport = ConvertToXElement(srcPart, importElement);
-                    Log.Comment("Replacing child of {0} from host element...", replaceType.Name);
+                    Output.WriteLine("Replacing child of {0} from host element...", replaceType.Name);
                     replaceChild = replaceChild.MakeGenericMethod(replaceType);
                     var result = replaceChild.Invoke(hostElement, new object[] { importElement.CloneNode(true), targetElement });
 
-                    Log.Comment("Saving changes...");
+                    Output.WriteLine("Saving changes...");
                     main.Save();
 
                     XElement xAfter = ConvertToXElement(hostPart, hostElement);
 
-                    Log.Comment("Check if Count of ChildElement changed...");
-                    Log.VerifyTrue(
-                        xBefore.Elements().Count() == xAfter.Elements().Count(),
-                        "ChildElement Count: {0} Changed After Replacing.", xBefore.Elements().Count());
+                    Output.WriteLine("Check if Count of ChildElement changed...");
+                    Assert.True(xBefore.Elements().Count() == xAfter.Elements().Count(), string.Format("ChildElement Count: {0} Changed After Replacing.", xBefore.Elements().Count()));
 
                     VerifyEqual(xAfter, xImport, expectPos);
                 }
                 else
                 {
-                    Log.Warning("Importing element NOT found.");
+                    Output.WriteLine("Warning: Importing element NOT found.");
                 }
             }
             else
             {
-                Log.Warning("Target element to be replaced NOT found.");
+                Output.WriteLine("Warning: Target element to be replaced NOT found.");
             }
         }
 
@@ -1315,7 +1313,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable())
                 {
-                    Log.Warning("Either hostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Either hostPart is NOT reflectable.");
                 }
 
                 GetAttribute(hostPart, getHost);
@@ -1324,27 +1322,26 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void GetAttribute(OpenXmlPart hostPart, GetTargetElement getHost)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
                 XElement xBefore = ConvertToXElement(hostPart, hostElement);
                 XAttribute xAttribute = xBefore.Attributes().FirstOrDefault();
 
                 var attribute = hostElement.GetAttribute(xAttribute.Name.LocalName, xAttribute.Name.NamespaceName);
 
-                Log.Comment("Checking if attribute: {0} has correct value as XAttribute...", xAttribute.Name);
-                Log.VerifyValue(attribute.Value, xAttribute.Value,
-                    "Attribute {0} value {1} does NOT match expected value {2}", attribute.GetFullName(), attribute.Value, xAttribute.Value);
+                Output.WriteLine("Checking if attribute: {0} has correct value as XAttribute...", xAttribute.Name);
+                Assert.Equal(xAttribute.Value, attribute.Value);
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -1360,7 +1357,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable())
                 {
-                    Log.Warning("Either hostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Either hostPart is NOT reflectable.");
                 }
 
                 GetAttributes(hostPart, getHost);
@@ -1369,40 +1366,38 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void GetAttributes(OpenXmlPart hostPart, GetTargetElement getHost)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
                 XElement xBefore = ConvertToXElement(hostPart, hostElement);
                 var attributes = hostElement.GetAttributes();
 
-                Log.Comment("Checking if attributes count is correct...");
-                Log.VerifyValue(attributes.Count, xBefore.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count(),
-                    "Attributes Count: {0} does NOT match expected value: {1}", attributes.Count, xBefore.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count());
+                Output.WriteLine("Checking if attributes count is correct...");
+                Assert.Equal(xBefore.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count(), attributes.Count);
 
-                Log.Comment("Checking if attributes returned correctly...");
+                Output.WriteLine("Checking if attributes returned correctly...");
                 foreach (var a in attributes)
                 {
                     XAttribute xa = xBefore.Attribute(a.GetXName());
                     if (xa is null)
                     {
-                        Log.Fail("Attribute {0} does NOT exist.", a.GetFullName());
+                        Assert.Fail(string.Format("Attribute {0} does NOT exist.", a.GetFullName()));
                     }
                     else
                     {
-                        Log.VerifyValue(a.Value, xa.Value,
-                            "Attribute {0} value {1} does NOT match expected value {2}", a.GetFullName(), a.Value, xa.Value);
+                        Assert.Equal(xa.Value, a.Value);
                     }
                 }
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -1421,7 +1416,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
                 {
-                    Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Either hostPart or srcHostPart is NOT reflectable.");
                 }
 
                 SetAttribute(hostPart, getHost, srcHostPart, getImportee, getAttribute);
@@ -1431,53 +1426,52 @@ namespace DocumentFormat.OpenXml.Tests
         private void SetAttribute(OpenXmlPart hostPart, GetTargetElement getHost,
             OpenXmlPart srcPart, GetTargetElement getImportee, GetTargetAttribute getAttribute)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
-            Log.Comment("Loading root element from source part...");
+            Output.WriteLine("Loading root element from source part...");
             OpenXmlPartRootElement srcMain = srcPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
                 XElement xBefore = ConvertToXElement(hostPart, hostElement);
 
-                Log.Comment("Looking for importing element in {0}...", srcPart.GetType().Name);
+                Output.WriteLine("Looking for importing element in {0}...", srcPart.GetType().Name);
                 var importElement = getImportee(srcMain);
                 if (importElement is not null)
                 {
-                    Log.Comment("Importing element found: {0}", importElement.Path());
+                    Output.WriteLine("Importing element found: {0}", importElement.Path());
 
                     var attribute = getAttribute(importElement);
                     if (attribute != default)
                     {
-                        Log.Comment("Setting attribute {0} with value {1}...", attribute.GetFullName(), attribute.Value);
+                        Output.WriteLine("Setting attribute {0} with value {1}...", attribute.GetFullName(), attribute.Value);
 
                         hostElement.SetAttribute(attribute);
 
-                        Log.Comment("Saving changes...");
+                        Output.WriteLine("Saving changes...");
                         main.Save();
 
                         XElement xAfter = ConvertToXElement(hostPart, hostElement);
-                        Log.Comment("Verifying element: {0} was set to expected value: {1}", attribute.GetFullName(), attribute.Value);
-                        Log.VerifyValue(xAfter.Attribute(attribute.GetXName()).Value, attribute.Value,
-                            "Attribute {0} was set to {1} instead of expected value: {2}", attribute.GetFullName(), xAfter.Attribute(attribute.GetXName()).Value, attribute.Value);
+                        Output.WriteLine("Verifying element: {0} was set to expected value: {1}", attribute.GetFullName(), attribute.Value);
+                        Assert.Equal(attribute.Value, xAfter.Attribute(attribute.GetXName()).Value);
                     }
                     else
                     {
-                        Log.Warning("Setting Null attribute to host element...");
+                        Output.WriteLine("Warning: Setting Null attribute to host element...");
                     }
                 }
                 else
                 {
-                    Log.Warning("Importing element NOT found.");
+                    Output.WriteLine("Warning: Importing element NOT found.");
                 }
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -1492,7 +1486,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
                 {
-                    Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Either hostPart or srcHostPart is NOT reflectable.");
                 }
 
                 SetAttributes(hostPart, getHost, srcHostPart, getImportee);
@@ -1502,58 +1496,55 @@ namespace DocumentFormat.OpenXml.Tests
         private void SetAttributes(OpenXmlPart hostPart, GetTargetElement getHost,
             OpenXmlPart srcPart, GetTargetElement getImportee)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
-            Log.Comment("Loading root element from source part...");
+            Output.WriteLine("Loading root element from source part...");
             OpenXmlPartRootElement srcMain = srcPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
                 XElement xBefore = ConvertToXElement(hostPart, hostElement);
 
-                Log.Comment("Looking for importing element in {0}...", srcPart.GetType().Name);
+                Output.WriteLine("Looking for importing element in {0}...", srcPart.GetType().Name);
                 var importElement = getImportee(srcMain);
                 if (importElement is not null)
                 {
-                    Log.Comment("Importing element found: {0}", importElement.Path());
+                    Output.WriteLine("Importing element found: {0}", importElement.Path());
 
                     var attributes = importElement.GetAttributes().AsEnumerable();
 
-                    Log.Comment("Setting attributes in batch...");
+                    Output.WriteLine("Setting attributes in batch...");
                     hostElement.SetAttributes(attributes);
 
-                    Log.Comment("Saving changes...");
+                    Output.WriteLine("Saving changes...");
                     main.Save();
 
                     XElement xAfter = ConvertToXElement(hostPart, hostElement);
-                    Log.Comment("Checking if count of current element attributes is expected value {0}...", xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count());
-                    Log.VerifyTrue(
-                        hostElement.GetAttributes().Count == xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count(),
-                        "Count of element attributes {0} is NOT expected value {1}.", hostElement.GetAttributes().Count, xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count());
+                    Output.WriteLine("Checking if count of current element attributes is expected value {0}...", xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count());
+                    Assert.True(hostElement.GetAttributes().Count == xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count(), string.Format("Count of element attributes {0} is NOT expected value {1}.", hostElement.GetAttributes().Count, xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count()));
 
                     foreach (var a in attributes)
                     {
                         var xa = xAfter.Attribute(a.GetXName());
-                        Log.VerifyNotNull(xa, "Attribute {0} was NOT set correctly.", a.GetFullName());
+                        Assert.NotNull(xa);
                         if (xa is not null)
                         {
-                            Log.VerifyValue(xa.Value, a.Value,
-                                "Attribute {0}={1} was NOT set to expected {2}", a.GetFullName(), xa.Value, a.Value);
+                            Assert.Equal(a.Value, xa.Value);
                         }
                     }
                 }
                 else
                 {
-                    Log.Warning("Importing element NOT found.");
+                    Output.WriteLine("Warning: Importing element NOT found.");
                 }
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -1569,7 +1560,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable())
                 {
-                    Log.Warning("Either hostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Either hostPart is NOT reflectable.");
                 }
 
                 RemoveAttribute(hostPart, getHost, getRemoveAttribute);
@@ -1578,53 +1569,49 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void RemoveAttribute(OpenXmlPart hostPart, GetTargetElement getHost, GetTargetAttribute getRemoveAttribute)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
                 XElement xBefore = ConvertToXElement(hostPart, hostElement);
 
                 var attributes = hostElement.GetAttributes();       // Return non-live source of attributes
-                Log.Comment("Current host element {0} has {1} attributes.", hostElement.GetFullName(), hostElement.GetAttributes().Count);
-                Log.VerifyValue(xBefore.Attributes().Where(e => !e.IsNamespaceDeclaration).Count(), hostElement.GetAttributes().Count,
-                    "Different element count by (XAttribute vs OpenXmlAttribute): ({0}:{1})",
-                    xBefore.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count(), hostElement.GetAttributes().Count);
+                Output.WriteLine("Current host element {0} has {1} attributes.", hostElement.GetFullName(), hostElement.GetAttributes().Count);
+                Assert.Equal(hostElement.GetAttributes().Count, xBefore.Attributes().Where(e => !e.IsNamespaceDeclaration).Count());
 
-                Log.Comment("Looking for target attribute to remove...");
+                Output.WriteLine("Looking for target attribute to remove...");
                 OpenXmlAttribute remove = getRemoveAttribute(hostElement);
 
                 if (remove != default)
                 {
-                    Log.Comment("Removing Attribute {0}", remove.GetFullName());
+                    Output.WriteLine("Removing Attribute {0}", remove.GetFullName());
 
                     hostElement.RemoveAttribute(remove.LocalName, remove.NamespaceUri);
 
-                    Log.Comment("Saving changes...");
+                    Output.WriteLine("Saving changes...");
                     main.Save();
 
                     XElement xAfter = ConvertToXElement(hostPart, hostElement);
-                    Log.Comment("Checking attributes count...");
-                    Log.VerifyValue(xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count(), hostElement.GetAttributes().Count,
-                        "Different attributes count by (XAttribute vs OpenXmlAttribute): ({0}:{1})",
-                        xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count(), hostElement.GetAttributes().Count);
+                    Output.WriteLine("Checking attributes count...");
+                    Assert.Equal(hostElement.GetAttributes().Count, xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count());
 
-                    Log.Comment("Checking if attribute removed correctly...");
+                    Output.WriteLine("Checking if attribute removed correctly...");
                     XAttribute a = xAfter.Attribute(remove.GetXName());
-                    Log.VerifyNull(a, "Attribute {0} was NOT removed as expected.", remove.GetFullName());
+                    Assert.Null(a);
                 }
                 else
                 {
-                    Log.Warning("Target attribute NOT found.");
+                    Output.WriteLine("Warning: Target attribute NOT found.");
                 }
             }
             else
             {
-                Log.Warning("Host element which attribute to be removed NOT found.");
+                Output.WriteLine("Warning: Host element which attribute to be removed NOT found.");
             }
         }
 
@@ -1640,7 +1627,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable())
                 {
-                    Log.Warning("Either hostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Either hostPart is NOT reflectable.");
                 }
 
                 ClearAllAttributes(hostPart, getHost);
@@ -1649,41 +1636,38 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void ClearAllAttributes(OpenXmlPart hostPart, GetTargetElement getHost)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
                 var attributes = hostElement.GetAttributes();
                 XElement xBefore = ConvertToXElement(hostPart, hostElement);
 
-                Log.Comment("Clearing all attributes...");
+                Output.WriteLine("Clearing all attributes...");
                 hostElement.ClearAllAttributes();
 
-                Log.Comment("Saving changes...");
+                Output.WriteLine("Saving changes...");
                 main.Save();
 
                 XElement xAfter = ConvertToXElement(hostPart, hostElement);
-                Log.Comment("Checking if attributes count is ZERO now...");
-                Log.VerifyValue(xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count(), 0,
-                    "Attributes Count: {0} does NOT match expected value: {1}", xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count(), 0);
+                Output.WriteLine("Checking if attributes count is ZERO now...");
+                Assert.Equal(0, xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count());
 
-                Log.Comment("Checking if attributes returned correctly...");
+                Output.WriteLine("Checking if attributes returned correctly...");
                 foreach (var a in attributes)
                 {
                     XNamespace xns = a.NamespaceUri;
-                    Log.VerifyNull(
-                        xAfter.Attribute(a.GetXName()),
-                        "Attribute {0} is NOT removed as expected!", a.GetFullName());
+                    Assert.Null(xAfter.Attribute(a.GetXName()));
                 }
             }
             else
             {
-                Log.Warning("Host element which attributes to be removed NOT found.");
+                Output.WriteLine("Warning: Host element which attributes to be removed NOT found.");
             }
         }
 
@@ -1701,7 +1685,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
                 {
-                    Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Either hostPart or srcHostPart is NOT reflectable.");
                 }
 
                 AddNamespaceDeclaration(hostPart, getHost, srcHostPart, getImportee, getNamespaceDeclaration);
@@ -1711,73 +1695,71 @@ namespace DocumentFormat.OpenXml.Tests
         private void AddNamespaceDeclaration(OpenXmlPart hostPart, GetTargetElement getHost,
             OpenXmlPart srcPart, GetTargetElement getImportee, GetTargetNamespaceDeclaration getNamespaceDeclaration)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
-            Log.Comment("Loading root element from source part...");
+            Output.WriteLine("Loading root element from source part...");
             OpenXmlPartRootElement srcMain = srcPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
-                Log.Comment("NamespaceDeclarations returned by SDK before adding...");
+                Output.WriteLine("NamespaceDeclarations returned by SDK before adding...");
                 var namespaceDeclarations = hostElement.NamespaceDeclarations;
                 foreach (var ns in namespaceDeclarations)
                 {
-                    Log.Comment("xmlns:{0} = {1}", ns.Key, ns.Value);
+                    Output.WriteLine("xmlns:{0} = {1}", ns.Key, ns.Value);
                 }
 
                 XElement xBefore = ConvertToXElement(hostPart, hostElement);
-                Log.Comment("NamespaceDeclarations returned by XLink on same element...");
+                Output.WriteLine("NamespaceDeclarations returned by XLink on same element...");
                 foreach (var xa in xBefore.Attributes().Where(xa => xa.IsNamespaceDeclaration))
                 {
-                    Log.Comment("xmlns:{0} = {1}", xa.Name.LocalName, xa.Value);
+                    Output.WriteLine("xmlns:{0} = {1}", xa.Name.LocalName, xa.Value);
                 }
 
-                Log.Comment("Looking for importing element in {0}...", srcPart.GetType().Name);
+                Output.WriteLine("Looking for importing element in {0}...", srcPart.GetType().Name);
                 var importElement = getImportee(srcMain);
                 if (importElement is not null)
                 {
-                    Log.Comment("Importing element found: {0}", importElement.Path());
+                    Output.WriteLine("Importing element found: {0}", importElement.Path());
 
                     var newNs = getNamespaceDeclaration(importElement);
                     if (newNs.Key is not null || newNs.Value is not null)
                     {
-                        Log.Comment("Setting NamespaceDeclaration {0} with value {1}...", newNs.Key, newNs.Value);
+                        Output.WriteLine("Setting NamespaceDeclaration {0} with value {1}...", newNs.Key, newNs.Value);
 
                         if (!hostElement.NamespaceDeclarations.Where(e => (e.Key == newNs.Key && e.Value == newNs.Value)).Any())
                         {
                             hostElement.AddNamespaceDeclaration(newNs.Key, newNs.Value);
 
-                            Log.Comment("NamespaceDeclarations returned by SDK after adding...");
+                            Output.WriteLine("NamespaceDeclarations returned by SDK after adding...");
                             foreach (var ns in hostElement.NamespaceDeclarations)
                             {
-                                Log.Comment("xmlns:{0} = {1}", ns.Key, ns.Value);
+                                Output.WriteLine("xmlns:{0} = {1}", ns.Key, ns.Value);
                             }
 
-                            Log.VerifyTrue(
-                                hostElement.NamespaceDeclarations.Where(ns => ns.Key == newNs.Key).Count() == 1,
-                                "NamespaceDeclaration {0} was NOT added as expected.", newNs.Key);
+                            Assert.True(hostElement.NamespaceDeclarations.Where(ns => ns.Key == newNs.Key).Count() == 1, string.Format("NamespaceDeclaration {0} was NOT added as expected.", newNs.Key));
                         }
 
-                        Log.Comment("Saving changes...");
+                        Output.WriteLine("Saving changes...");
                         main.Save();
                     }
                     else
                     {
-                        Log.Warning("Setting Null NamespaceDeclaration to host element...");
+                        Output.WriteLine("Warning: Setting Null NamespaceDeclaration to host element...");
                     }
                 }
                 else
                 {
-                    Log.Warning("Importing element NOT found.");
+                    Output.WriteLine("Warning: Importing element NOT found.");
                 }
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
         #endregion AddNamespaceDeclaration
@@ -1792,7 +1774,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable())
                 {
-                    Log.Warning("Either hostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Either hostPart is NOT reflectable.");
                 }
 
                 RemoveNamespaceDeclaration(hostPart, getHost, getRemoveNS);
@@ -1801,63 +1783,60 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void RemoveNamespaceDeclaration(OpenXmlPart hostPart, GetTargetElement getHost, GetTargetNamespaceDeclaration getRemoveNS)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
-                Log.Comment("NamespaceDeclarations returned by SDK before removing...");
+                Output.WriteLine("NamespaceDeclarations returned by SDK before removing...");
                 var namespaceDeclarations = hostElement.NamespaceDeclarations;
                 foreach (var ns in namespaceDeclarations)
                 {
-                    Log.Comment("xmlns:{0} = {1}", ns.Key, ns.Value);
+                    Output.WriteLine("xmlns:{0} = {1}", ns.Key, ns.Value);
                 }
 
                 XElement xBefore = ConvertToXElement(hostPart, hostElement);
-                Log.Comment("NamespaceDeclarations returned by XLink on same element...");
+                Output.WriteLine("NamespaceDeclarations returned by XLink on same element...");
                 foreach (var xa in xBefore.Attributes().Where(xa => xa.IsNamespaceDeclaration))
                 {
-                    Log.Comment("xmlns:{0} = {1}", xa.Name.LocalName, xa.Value);
+                    Output.WriteLine("xmlns:{0} = {1}", xa.Name.LocalName, xa.Value);
                 }
 
                 var nss = hostElement.NamespaceDeclarations;       // Return non-live source of NamespaceDeclaration
-                Log.Comment("Current host element {0} has {1} NamespaceDeclarations.", hostElement.GetFullName(), nss.Count());
-                Log.VerifyValue(xBefore.Attributes().Where(xa => xa.IsNamespaceDeclaration && xa.Name != "xmlns").Count(), hostElement.NamespaceDeclarations.Count(),
-                    "Different NamespaceDeclaration count by (XElement vs OpenXmlElement): ({0}:{1})", xBefore.Attributes().Where(xa => xa.IsNamespaceDeclaration && xa.Name != "xmlns").Count(), hostElement.NamespaceDeclarations.Count());
+                Output.WriteLine("Current host element {0} has {1} NamespaceDeclarations.", hostElement.GetFullName(), nss.Count());
+                Assert.Equal(hostElement.NamespaceDeclarations.Count(), xBefore.Attributes().Where(xa => xa.IsNamespaceDeclaration && xa.Name != "xmlns").Count());
 
-                Log.Comment("Looking for target NamespaceDeclaration to remove...");
+                Output.WriteLine("Looking for target NamespaceDeclaration to remove...");
                 var remove = getRemoveNS(hostElement);
                 if (remove.Key is not null || remove.Value is not null)
                 {
-                    Log.Comment("Removing NamespaceDeclaration {0}:{1}", remove.Key, remove.Value);
+                    Output.WriteLine("Removing NamespaceDeclaration {0}:{1}", remove.Key, remove.Value);
 
                     hostElement.RemoveNamespaceDeclaration(remove.Key);
 
-                    Log.Comment("NamespaceDeclarations returned by SDK after removing...");
+                    Output.WriteLine("NamespaceDeclarations returned by SDK after removing...");
                     foreach (var ns in hostElement.NamespaceDeclarations)
                     {
-                        Log.Comment("xmlns:{0} = {1}", ns.Key, ns.Value);
+                        Output.WriteLine("xmlns:{0} = {1}", ns.Key, ns.Value);
                     }
 
-                    Log.VerifyTrue(
-                        !hostElement.NamespaceDeclarations.Where(ns => ns.Key == remove.Key).Any(),
-                        "NamespaceDeclaration {0} was NOT removed as expected.", remove.Key);
+                    Assert.True(!hostElement.NamespaceDeclarations.Where(ns => ns.Key == remove.Key).Any(), string.Format("NamespaceDeclaration {0} was NOT removed as expected.", remove.Key));
 
-                    Log.Comment("Saving changes...");
+                    Output.WriteLine("Saving changes...");
                     main.Save();
                 }
                 else
                 {
-                    Log.Warning("Target NamespaceDeclaration NOT found.");
+                    Output.WriteLine("Warning: Target NamespaceDeclaration NOT found.");
                 }
             }
             else
             {
-                Log.Warning("Host element which NamespaceDeclaration to be removed NOT found.");
+                Output.WriteLine("Warning: Host element which NamespaceDeclaration to be removed NOT found.");
             }
         }
         #endregion RemoveNamespaceDeclaration
@@ -1872,7 +1851,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable())
                 {
-                    Log.Warning("Either hostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Either hostPart is NOT reflectable.");
                 }
 
                 NamespaceDeclarations(hostPart, getHost);
@@ -1881,51 +1860,49 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void NamespaceDeclarations(OpenXmlPart hostPart, GetTargetElement getHost)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
-                Log.Comment("NamespaceDeclarations returned by SDK on the element...");
+                Output.WriteLine("NamespaceDeclarations returned by SDK on the element...");
                 var namespaceDeclarations = hostElement.NamespaceDeclarations;
                 foreach (var ns in namespaceDeclarations)
                 {
-                    Log.Comment("xmlns:{0} = {1}", ns.Key, ns.Value);
+                    Output.WriteLine("xmlns:{0} = {1}", ns.Key, ns.Value);
                 }
 
                 XElement xBefore = ConvertToXElement(hostPart, hostElement);
-                Log.Comment("NamespaceDeclarations returned by XLink on same element...");
+                Output.WriteLine("NamespaceDeclarations returned by XLink on same element...");
                 foreach (var xa in xBefore.Attributes().Where(xa => xa.IsNamespaceDeclaration && xa.Name.LocalName != "xmlns"))
                 {
-                    Log.Comment("xmlns:{0} = {1}", xa.Name.LocalName, xa.Value);
+                    Output.WriteLine("xmlns:{0} = {1}", xa.Name.LocalName, xa.Value);
                 }
 
-                Log.Comment("Checking if NamespaceDeclarations count is correct...");
-                Log.VerifyValue(namespaceDeclarations.Count(), xBefore.Attributes().Where(a => a.IsNamespaceDeclaration && a.Name.LocalName != "xmlns").Count(),
-                    "NamespaceDeclarations Count: {0} does NOT match expected value: {1}", namespaceDeclarations.Count(), xBefore.Attributes().Where(a => a.IsNamespaceDeclaration).Count());
+                Output.WriteLine("Checking if NamespaceDeclarations count is correct...");
+                Assert.Equal(xBefore.Attributes().Where(a => a.IsNamespaceDeclaration && a.Name.LocalName != "xmlns").Count(), namespaceDeclarations.Count());
 
-                Log.Comment("Checking if NamespaceDeclarations returned correctly...");
+                Output.WriteLine("Checking if NamespaceDeclarations returned correctly...");
                 foreach (var ns in namespaceDeclarations)
                 {
                     var nsUri = xBefore.GetNamespaceOfPrefix(ns.Key).NamespaceName;
                     if (nsUri is null)
                     {
-                        Log.Fail("NamespaceDeclaration {0} does NOT exist.", ns.Key);
+                        Assert.Fail(string.Format("NamespaceDeclaration {0} does NOT exist.", ns.Key));
                     }
                     else
                     {
-                        Log.VerifyValue(ns.Value, nsUri,
-                            "NamespaceDeclaration {0} value {1} does NOT match expected value {2}", ns.Key, ns.Value, nsUri);
+                        Assert.Equal(nsUri, ns.Value);
                     }
                 }
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
         #endregion NamespaceDeclarations
@@ -1940,7 +1917,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable())
                 {
-                    Log.Warning("Current HostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Current HostPart is NOT reflectable.");
                 }
 
                 GetOuterXml(hostPart, getHost);
@@ -1949,29 +1926,27 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void GetOuterXml(OpenXmlPart hostPart, GetTargetElement getHost)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
                 XElement xBefore = ConvertToXElement(hostPart, hostElement);
                 string outerXml = hostElement.OuterXml;
 
-                Log.Comment("Checking if XElement count vs OpenXmlElement Children Count...");
-                Log.VerifyTrue(
-                    hostElement.ChildElements.Count == xBefore.Elements().Count(),
-                    "Children element returned by OpenXmlElement {0} is different from XElement {1}", hostElement.ChildElements.Count, xBefore.Elements().Count());
+                Output.WriteLine("Checking if XElement count vs OpenXmlElement Children Count...");
+                Assert.True(hostElement.ChildElements.Count == xBefore.Elements().Count(), string.Format("Children element returned by OpenXmlElement {0} is different from XElement {1}", hostElement.ChildElements.Count, xBefore.Elements().Count()));
 
                 var result = xBefore.Compare(XElement.Parse(outerXml));
-                Log.VerifyTrue(result, "OuterXml is not returned as expected.");
+                Assert.True(result, "OuterXml is not returned as expected.");
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -1987,7 +1962,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable())
                 {
-                    Log.Warning("Current hostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Current hostPart is NOT reflectable.");
                 }
 
                 Clone(hostPart, getHost);
@@ -1996,34 +1971,32 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void Clone(OpenXmlPart hostPart, GetTargetElement getHost)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
                 XElement xBefore = ConvertToXElement(hostPart, hostElement);
 
                 // Clone() behaves as CloneNode(true) except it return object instead of OpenXmlElement
-                Log.Comment("Deep Clone ...");
+                Output.WriteLine("Deep Clone ...");
                 var clone = hostElement.Clone() as OpenXmlElement;
                 string outerXml = clone.OuterXml;
                 var xAfter = XElement.Parse(outerXml);
 
-                Log.Comment("Checking if XElement count vs OpenXmlElement Children Count...");
-                Log.VerifyTrue(
-                    hostElement.ChildElements.Count == xBefore.Elements().Count(),
-                    "Children element returned by OpenXmlElement {0} is different from XElement {1}", hostElement.ChildElements.Count, xBefore.Elements().Count());
+                Output.WriteLine("Checking if XElement count vs OpenXmlElement Children Count...");
+                Assert.True(hostElement.ChildElements.Count == xBefore.Elements().Count(), string.Format("Children element returned by OpenXmlElement {0} is different from XElement {1}", hostElement.ChildElements.Count, xBefore.Elements().Count()));
 
                 var result = xBefore.Compare(XElement.Parse(outerXml));
-                Log.VerifyTrue(result, "Pass-in element is not cloned as expected.");
+                Assert.True(result, "Pass-in element is not cloned as expected.");
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -2035,7 +2008,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable())
                 {
-                    Log.Warning("Current hostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Current hostPart is NOT reflectable.");
                 }
 
                 CloneNodeFalse(hostPart, getHost);
@@ -2044,43 +2017,41 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void CloneNodeFalse(OpenXmlPart hostPart, GetTargetElement getHost)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
                 var attributes = hostElement.GetAttributes();
                 XElement xBefore = ConvertToXElement(hostPart, hostElement);
 
                 // CloneNode(false) returns tag and attributes of current element
-                Log.Comment("Shallow Clone ...");
+                Output.WriteLine("Shallow Clone ...");
                 var clone = hostElement.CloneNode(false);
 
-                Log.VerifyValue(clone.ChildElements.Count, 0,
-                    "Shallow cloned node contains {0} Child Elements!", clone.ChildElements.Count);
-                Log.VerifyValue(clone.GetFullName(), hostElement.GetFullName(),
-                    "Shallow cloned node: {0} contains wrong name: {1}", hostElement.GetFullName(), clone.GetFullName());
-                Log.Comment("Verifying attributes cloned exactly...");
+                Assert.Equal(0, clone.ChildElements.Count);
+                Assert.Equal(hostElement.GetFullName(), clone.GetFullName());
+                Output.WriteLine("Verifying attributes cloned exactly...");
                 foreach (var ca in clone.GetAttributes())
                 {
                     var result = attributes.Any(a => a.GetFullName() == ca.GetFullName() && a.Value == ca.Value);
                     if (result)
                     {
-                        Log.Comment("Verified same attribute {0}={1}", ca.GetFullName(), ca.Value);
+                        Output.WriteLine("Verified same attribute {0}={1}", ca.GetFullName(), ca.Value);
                     }
                     else
                     {
-                        Log.Fail("attribute {0} not found with expected value {1}", ca.GetFullName(), ca.Value);
+                        Assert.Fail(string.Format("attribute {0} not found with expected value {1}", ca.GetFullName(), ca.Value));
                     }
                 }
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -2096,7 +2067,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable())
                 {
-                    Log.Warning("Current hostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Current hostPart is NOT reflectable.");
                 }
 
                 GetInnerXml(hostPart, getHost);
@@ -2105,16 +2076,16 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void GetInnerXml(OpenXmlPart hostPart, GetTargetElement getHost)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}", hostElement.Path());
+                Output.WriteLine("Host element found: {0}", hostElement.Path());
 
-                Log.Comment("Accumulating child elements' OuterXml...");
+                Output.WriteLine("Accumulating child elements' OuterXml...");
                 var elementsXml = string.Empty;
                 if (hostElement.HasChildren)
                 {
@@ -2125,14 +2096,13 @@ namespace DocumentFormat.OpenXml.Tests
                     elementsXml = hostElement is OpenXmlLeafTextElement ? hostElement.InnerText : string.Empty;
                 }
 
-                Log.Comment("Verifying InnerXml with accumulated child elements' OuterXml...");
+                Output.WriteLine("Verifying InnerXml with accumulated child elements' OuterXml...");
                 string innerXml = hostElement.InnerXml;
-                Log.VerifyValue(innerXml, elementsXml,
-                    "InnerXml is different from accumulated child elements' OuterXml.");
+                Assert.Equal(elementsXml, innerXml);
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -2147,7 +2117,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
                 {
-                    Log.Warning("Either hostPart or srcHostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Either hostPart or srcHostPart is NOT reflectable.");
                 }
 
                 SetInnerXml(hostPart, getHost, srcHostPart, getImportee);
@@ -2157,58 +2127,56 @@ namespace DocumentFormat.OpenXml.Tests
         private void SetInnerXml(OpenXmlPart hostPart, GetTargetElement getHost,
             OpenXmlPart srcPart, GetTargetElement getImportee)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
-            Log.Comment("Loading root element from source part...");
+            Output.WriteLine("Loading root element from source part...");
             OpenXmlPartRootElement srcMain = srcPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found: {0}.", hostElement.Path());
+                Output.WriteLine("Host element found: {0}.", hostElement.Path());
 
-                Log.Comment("Looking for importing element in {0}...", srcPart.GetType().Name);
+                Output.WriteLine("Looking for importing element in {0}...", srcPart.GetType().Name);
                 var importHost = getImportee(srcMain);
                 if (importHost is not null)
                 {
-                    Log.Comment("Importing element found: {0}.", importHost.Path());
+                    Output.WriteLine("Importing element found: {0}.", importHost.Path());
 
                     XElement xBefore = ConvertToXElement(hostPart, hostElement);
                     var fullName = hostElement.GetFullName();
                     var attributes = hostElement.GetAttributes();
 
-                    Log.Comment("Accumulating {0} child elements' OuterXml of {1}...", importHost.ChildElements.Count, importHost.GetFullName());
+                    Output.WriteLine("Accumulating {0} child elements' OuterXml of {1}...", importHost.ChildElements.Count, importHost.GetFullName());
                     var elementsXml = string.Empty;
                     elementsXml = importHost.ChildElements.Aggregate(elementsXml, (cs, e) => cs + e.OuterXml);
 
-                    Log.Comment("Setting InnerXml...");
+                    Output.WriteLine("Setting InnerXml...");
                     hostElement.InnerXml = elementsXml;
 
-                    Log.Comment("Saving changes...");
+                    Output.WriteLine("Saving changes...");
                     main.Save();
 
                     XElement xAfter = ConvertToXElement(hostPart, hostElement);
 
-                    Log.VerifyValue(hostElement.GetFullName(), fullName,
-                        "Tag Name change from {0} to {1}", fullName, hostElement.GetFullName());
-                    Log.Comment("Verifying attributes are kept exactly...");
+                    Assert.Equal(fullName, hostElement.GetFullName());
+                    Output.WriteLine("Verifying attributes are kept exactly...");
                     foreach (var ca in hostElement.GetAttributes())
                     {
                         var result = attributes.Any(a => a.GetFullName() == ca.GetFullName() && a.Value == ca.Value);
                         if (result)
                         {
-                            Log.Comment("Verified same attribute {0}={1}", ca.GetFullName(), ca.Value);
+                            Output.WriteLine("Verified same attribute {0}={1}", ca.GetFullName(), ca.Value);
                         }
                         else
                         {
-                            Log.Fail("attribute {0} not found with expected value {1}", ca.GetFullName(), ca.Value);
+                            Assert.Fail(string.Format("attribute {0} not found with expected value {1}", ca.GetFullName(), ca.Value));
                         }
                     }
 
-                    Log.Comment("Checking if children element are set onto host...");
-                    Log.VerifyValue(xAfter.Elements().Count(), importHost.ChildElements.Count,
-                        "Children element count {0} is different from expected {1}!", xAfter.Elements().Count(), importHost.ChildElements.Count);
+                    Output.WriteLine("Checking if children element are set onto host...");
+                    Assert.Equal(importHost.ChildElements.Count, xAfter.Elements().Count());
                     for (int i = 0; i < importHost.ChildElements.Count; i++)
                     {
                         var importElementOuterXml = importHost.ChildElements[i].OuterXml;
@@ -2217,12 +2185,12 @@ namespace DocumentFormat.OpenXml.Tests
                 }
                 else
                 {
-                    Log.Warning("No Expected Element found");
+                    Output.WriteLine("Warning: No Expected Element found");
                 }
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -2238,7 +2206,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable())
                 {
-                    Log.Warning("Either hostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Either hostPart is NOT reflectable.");
                 }
 
                 WriteTo(hostPart, getHost);
@@ -2247,18 +2215,18 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void WriteTo(OpenXmlPart hostPart, GetTargetElement getHost)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
             if (hostElement is not null)
             {
-                Log.Comment("Host element found with path: {0}.", hostElement.Path());
+                Output.WriteLine("Host element found with path: {0}.", hostElement.Path());
 
                 XElement xBefore = ConvertToXElement(hostPart, hostElement);
 
-                Log.Comment("Writ content To cache...");
+                Output.WriteLine("Writ content To cache...");
                 StringBuilder sb = new StringBuilder();
                 using (var writer = XmlWriter.Create(sb))
                 {
@@ -2268,18 +2236,16 @@ namespace DocumentFormat.OpenXml.Tests
                 string outerXml = sb.ToString();
 
                 XElement xAfter = XElement.Parse(outerXml);
-                Log.Comment("Checking if element count not changed...");
-                Log.VerifyTrue(
-                    xAfter.Elements().Count() == xBefore.Elements().Count(),
-                    "Children element in written out {0} is different from original {1}", xAfter.Elements().Count(), xBefore.Elements().Count());
+                Output.WriteLine("Checking if element count not changed...");
+                Assert.True(xAfter.Elements().Count() == xBefore.Elements().Count(), string.Format("Children element in written out {0} is different from original {1}", xAfter.Elements().Count(), xBefore.Elements().Count()));
 
-                Log.Comment("Comparing element content...");
+                Output.WriteLine("Comparing element content...");
                 var result = xBefore.Compare(xAfter);
-                Log.VerifyTrue(result, "WriteTo returned different content from expected.");
+                Assert.True(result, "WriteTo returned different content from expected.");
             }
             else
             {
-                Log.Warning("Host element NOT found.");
+                Output.WriteLine("Warning: Host element NOT found.");
             }
         }
 
@@ -2325,108 +2291,100 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void ExpectedElementInserting(object sender, ElementEventArgs args)
         {
-            Log.Pass("ElementInserting event caught.");
-            Log.Comment("[ElementInserting] Inserting {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
-            Log.VerifyNull(args.Element.Parent, "New child element has Non-Null parent before inserting.");
-            Log.VerifyNotNull(args.ParentElement, "ParentElement is Null before inserting.");
+            Output.WriteLine("ElementInserting event caught.");
+            Output.WriteLine("[ElementInserting] Inserting {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
+            Assert.Null(args.Element.Parent);
+            Assert.NotNull(args.ParentElement);
 
-            Log.VerifyTrue(sender is OpenXmlElementContext, "Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name);
-            Log.VerifyReference(args.ParentElement.OpenXmlElementContext, sender, "ParentElement has different OpenXmlElementContext before inserting!");
-            Log.VerifyNotReference(args.Element.OpenXmlElementContext, sender, "New element has same OpenXmlElementContext before inserting!");
+            Assert.True(sender is OpenXmlElementContext, string.Format("Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name));
+            Assert.Same(sender, args.ParentElement.OpenXmlElementContext);
+            Assert.NotSame(sender, args.Element.OpenXmlElementContext);
         }
 
         private void SurprisingElementInserting(object sender, ElementEventArgs args)
         {
-            Log.Fail("ElementInserting event caught.");
-            Log.Comment("[ElementInserting] Inserting {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
-            Log.VerifyNull(args.Element.Parent, "New child element has Non-Null parent before inserting.");
-            Log.VerifyNotNull(args.ParentElement, "ParentElement is Null before inserting.");
+            Assert.Fail("ElementInserting event caught.");
+            Output.WriteLine("[ElementInserting] Inserting {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
+            Assert.Null(args.Element.Parent);
+            Assert.NotNull(args.ParentElement);
 
-            Log.VerifyTrue(sender is OpenXmlElementContext, "Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name);
-            Log.VerifyReference(args.ParentElement.OpenXmlElementContext, sender, "ParentElement has different OpenXmlElementContext before inserting!");
-            Log.VerifyNotReference(args.Element.OpenXmlElementContext, sender, "New element has same OpenXmlElementContext before inserting!");
+            Assert.True(sender is OpenXmlElementContext, string.Format("Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name));
+            Assert.Same(sender, args.ParentElement.OpenXmlElementContext);
+            Assert.NotSame(sender, args.Element.OpenXmlElementContext);
         }
 
         private void ExpectedElementInserted(object sender, ElementEventArgs args)
         {
-            Log.Pass("ElementInserted event caught.");
-            Log.Comment("[ElementInserted] Inserted {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
-            Log.VerifyNotNull(args.Element.Parent, "New child element has Null parent after been inserted.");
-            Log.Verify(
-                args.ParentElement == args.Element.Parent,
-                "Element inserted {0} has different parent from expected {1}.", args.Element.GetFullName(), args.ParentElement.GetFullName());
+            Output.WriteLine("ElementInserted event caught.");
+            Output.WriteLine("[ElementInserted] Inserted {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
+            Assert.NotNull(args.Element.Parent);
+            Assert.True(args.ParentElement == args.Element.Parent, string.Format("Element inserted {0} has different parent from expected {1}.", args.Element.GetFullName(), args.ParentElement.GetFullName()));
 
-            Log.VerifyTrue(sender is OpenXmlElementContext, "Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name);
-            Log.VerifyReference(args.ParentElement.OpenXmlElementContext, sender, "ParentElement has different OpenXmlElementContext after inserting!");
-            Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "New child element still has different OpenXmlElementContext after been inserted!");
+            Assert.True(sender is OpenXmlElementContext, string.Format("Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name));
+            Assert.Same(sender, args.ParentElement.OpenXmlElementContext);
+            Assert.Same(sender, args.Element.OpenXmlElementContext);
         }
 
         private void SurprisingElementInserted(object sender, ElementEventArgs args)
         {
-            Log.Fail("ElementInserted event caught.");
-            Log.Comment("[ElementInserted] Inserted {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
-            Log.VerifyNotNull(args.Element.Parent, "New child element has Null parent after been inserted.");
-            Log.Verify(
-                args.ParentElement == args.Element.Parent,
-                "Element inserted {0} has different parent from expected {1}.", args.Element.GetFullName(), args.ParentElement.GetFullName());
+            Assert.Fail("ElementInserted event caught.");
+            Output.WriteLine("[ElementInserted] Inserted {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
+            Assert.NotNull(args.Element.Parent);
+            Assert.True(args.ParentElement == args.Element.Parent, string.Format("Element inserted {0} has different parent from expected {1}.", args.Element.GetFullName(), args.ParentElement.GetFullName()));
 
-            Log.VerifyTrue(sender is OpenXmlElementContext, "Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name);
-            Log.VerifyReference(args.ParentElement.OpenXmlElementContext, sender, "ParentElement has different OpenXmlElementContext after inserting!");
-            Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "New child element still has different OpenXmlElementContext after been inserted!");
+            Assert.True(sender is OpenXmlElementContext, string.Format("Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name));
+            Assert.Same(sender, args.ParentElement.OpenXmlElementContext);
+            Assert.Same(sender, args.Element.OpenXmlElementContext);
         }
 
         private void ExpectedElementRemoving(object sender, ElementEventArgs args)
         {
-            Log.Pass("ElementRemoving event caught.");
-            Log.Comment("[ElementRemoving] Removing {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
-            Log.VerifyNotNull(args.Element.Parent, "Child element has Null parent before removing.");
-            Log.VerifyNotNull(args.ParentElement, "Parent element is Null before removing.");
-            Log.Verify(
-                args.ParentElement == args.Element.Parent,
-                "Element to be removed {0} has different parent from expected {1}.", args.Element.GetFullName(), args.ParentElement.GetFullName());
+            Output.WriteLine("ElementRemoving event caught.");
+            Output.WriteLine("[ElementRemoving] Removing {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
+            Assert.NotNull(args.Element.Parent);
+            Assert.NotNull(args.ParentElement);
+            Assert.True(args.ParentElement == args.Element.Parent, string.Format("Element to be removed {0} has different parent from expected {1}.", args.Element.GetFullName(), args.ParentElement.GetFullName()));
 
-            Log.VerifyTrue(sender is OpenXmlElementContext, "Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name);
-            Log.VerifyReference(args.ParentElement.OpenXmlElementContext, sender, "ParentElement has different OpenXmlElementContext before removing!");
-            Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "Child element has different OpenXmlElementContext before removing!");
+            Assert.True(sender is OpenXmlElementContext, string.Format("Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name));
+            Assert.Same(sender, args.ParentElement.OpenXmlElementContext);
+            Assert.Same(sender, args.Element.OpenXmlElementContext);
         }
 
         private void SurprisingElementRemoving(object sender, ElementEventArgs args)
         {
-            Log.Fail("ElementRemoving event caught.");
-            Log.Comment("[ElementRemoving] Removing {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
-            Log.VerifyNotNull(args.Element.Parent, "Child element has Null parent before removing.");
-            Log.VerifyNotNull(args.ParentElement, "Parent element is Null before removing.");
-            Log.Verify(
-                args.ParentElement == args.Element.Parent,
-                "Element to be removed {0} has different parent from expected {1}.", args.Element.GetFullName(), args.ParentElement.GetFullName());
+            Assert.Fail("ElementRemoving event caught.");
+            Output.WriteLine("[ElementRemoving] Removing {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
+            Assert.NotNull(args.Element.Parent);
+            Assert.NotNull(args.ParentElement);
+            Assert.True(args.ParentElement == args.Element.Parent, string.Format("Element to be removed {0} has different parent from expected {1}.", args.Element.GetFullName(), args.ParentElement.GetFullName()));
 
-            Log.VerifyTrue(sender is OpenXmlElementContext, "Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name);
-            Log.VerifyReference(args.ParentElement.OpenXmlElementContext, sender, "ParentElement has different OpenXmlElementContext before removing!");
-            Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "Child element has different OpenXmlElementContext before removing!");
+            Assert.True(sender is OpenXmlElementContext, string.Format("Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name));
+            Assert.Same(sender, args.ParentElement.OpenXmlElementContext);
+            Assert.Same(sender, args.Element.OpenXmlElementContext);
         }
 
         private void ExpectedElementRemoved(object sender, ElementEventArgs args)
         {
-            Log.Pass("ElementRemoved event caught.");
-            Log.Comment("[ElementRemoved] Removed {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
-            Log.VerifyNull(args.Element.Parent, "Child element to be removed has Non-Null parent after removing.");
-            Log.VerifyNotNull(args.ParentElement, "Parent element is Null after removing.");
+            Output.WriteLine("ElementRemoved event caught.");
+            Output.WriteLine("[ElementRemoved] Removed {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
+            Assert.Null(args.Element.Parent);
+            Assert.NotNull(args.ParentElement);
 
-            Log.VerifyTrue(sender is OpenXmlElementContext, "Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name);
-            Log.VerifyReference(args.ParentElement.OpenXmlElementContext, sender, "ParentElement has different OpenXmlElementContext after removing!");
-            Log.VerifyNotReference(args.Element.OpenXmlElementContext, sender, "Child element still has same OpenXmlElementContext after removing!");
+            Assert.True(sender is OpenXmlElementContext, string.Format("Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name));
+            Assert.Same(sender, args.ParentElement.OpenXmlElementContext);
+            Assert.NotSame(sender, args.Element.OpenXmlElementContext);
         }
 
         private void SurprisingElementRemoved(object sender, ElementEventArgs args)
         {
-            Log.Fail("ElementRemoved event caught.");
-            Log.Comment("[ElementRemoved] Removed {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
-            Log.VerifyNull(args.Element.Parent, "Child element to be removed has Non-Null parent after removing.");
-            Log.VerifyNotNull(args.ParentElement, "Parent element is Null after removing.");
+            Assert.Fail("ElementRemoved event caught.");
+            Output.WriteLine("[ElementRemoved] Removed {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
+            Assert.Null(args.Element.Parent);
+            Assert.NotNull(args.ParentElement);
 
-            Log.VerifyTrue(sender is OpenXmlElementContext, "Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name);
-            Log.VerifyReference(args.ParentElement.OpenXmlElementContext, sender, "ParentElement has different OpenXmlElementContext after removing!");
-            Log.VerifyNotReference(args.Element.OpenXmlElementContext, sender, "Child element still has same OpenXmlElementContext after removing!");
+            Assert.True(sender is OpenXmlElementContext, string.Format("Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name));
+            Assert.Same(sender, args.ParentElement.OpenXmlElementContext);
+            Assert.NotSame(sender, args.Element.OpenXmlElementContext);
         }
 
         #endregion EventHandlers
@@ -2442,156 +2400,156 @@ namespace DocumentFormat.OpenXml.Tests
         // RemoveAnnotations<T>()
         internal void AnnotationType(OpenXmlPart hostPart, GetTargetElement getHost)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
 
-            Log.Comment("Removing all annotations for setup...");
+            Output.WriteLine("Removing all annotations for setup...");
             hostElement.RemoveAnnotations(typeof(object));
             var results = hostElement.Annotations(typeof(object));
             if (results is null || !results.Any())
             {
-                Log.Pass("Removed all annotations.");
+                Output.WriteLine("Removed all annotations.");
             }
 
-            Log.Comment("Adding annotations...");
+            Output.WriteLine("Adding annotations...");
             var annotation = hostElement.FirstChild;
             hostElement.AddAnnotation(annotation);
 
-            Log.Comment("Retrieving annotations...");
+            Output.WriteLine("Retrieving annotations...");
             var result = hostElement.Annotation(annotation.GetType());
             if (annotation == result)
             {
-                Log.Pass("Annotation retrieved is exactly same one as added.");
+                Output.WriteLine("Annotation retrieved is exactly same one as added.");
             }
             else
             {
-                Log.Fail("Annotation retrieved is different from the one added.");
+                Assert.Fail("Annotation retrieved is different from the one added.");
             }
 
-            Log.Comment("Retrieving annotations...");
+            Output.WriteLine("Retrieving annotations...");
             results = hostElement.Annotations(annotation.GetType());
-            Log.VerifyValue(results.Count(), 1, "Annotations count differs from expected vlaue: ONE.");
+            Assert.Equal(1, results.Count());
             if (results.First() == result)
             {
-                Log.Pass("Annotation retrieved is exactly same one as added.");
+                Output.WriteLine("Annotation retrieved is exactly same one as added.");
             }
             else
             {
-                Log.Fail("Annotation retrieved is different from the one added.");
+                Assert.Fail("Annotation retrieved is different from the one added.");
             }
 
-            Log.Comment("Removing annotations for cleanup...");
+            Output.WriteLine("Removing annotations for cleanup...");
             hostElement.RemoveAnnotations(annotation.GetType());
             results = hostElement.Annotations(annotation.GetType());
             if (results is null || !results.Any())
             {
-                Log.Pass("Removed all annotations.");
+                Output.WriteLine("Removed all annotations.");
             }
         }
 
         internal void AnnotationT(OpenXmlPart hostPart, GetTargetElement getHost)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
 
-            Log.Comment("Removing all annotations for setup...");
+            Output.WriteLine("Removing all annotations for setup...");
             hostElement.RemoveAnnotations<object>();
             var results = hostElement.Annotations<object>();
             if (results is null || !results.Any())
             {
-                Log.Pass("Removed all annotations.");
+                Output.WriteLine("Removed all annotations.");
             }
 
-            Log.Comment("Adding annotations...");
+            Output.WriteLine("Adding annotations...");
             var annotation = hostElement.FirstChild;
             hostElement.AddAnnotation(annotation);
 
-            Log.Comment("Retrieving annotations...");
+            Output.WriteLine("Retrieving annotations...");
             var result = hostElement.Annotation<OpenXmlElement>();
             if (annotation == result)
             {
-                Log.Pass("Annotation retrieved is exactly same one as added.");
+                Output.WriteLine("Annotation retrieved is exactly same one as added.");
             }
             else
             {
-                Log.Fail("Annotation retrieved is different from the one added.");
+                Assert.Fail("Annotation retrieved is different from the one added.");
             }
 
-            Log.Comment("Retrieving annotations...");
+            Output.WriteLine("Retrieving annotations...");
             var oResults = hostElement.Annotations<OpenXmlElement>();
-            Log.VerifyValue(oResults.Count(), 1, "Annotations count differs from expected vlaue: ONE.");
+            Assert.Equal(1, oResults.Count());
             if (oResults.First() == result)
             {
-                Log.Pass("Annotation retrieved is exactly same one as added.");
+                Output.WriteLine("Annotation retrieved is exactly same one as added.");
             }
             else
             {
-                Log.Fail("Annotation retrieved is different from the one added.");
+                Assert.Fail("Annotation retrieved is different from the one added.");
             }
 
-            Log.Comment("Removing annotations for cleanup...");
+            Output.WriteLine("Removing annotations for cleanup...");
             hostElement.RemoveAnnotations<OpenXmlElement>();
             results = hostElement.Annotations(annotation.GetType());
             if (results is null || !results.Any())
             {
-                Log.Pass("Removed all annotations.");
+                Output.WriteLine("Removed all annotations.");
             }
         }
 
         internal void AnnotationArray(OpenXmlPart hostPart, GetTargetElement getHost)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
 
-            Log.Comment("Removing all annotations for setup...");
+            Output.WriteLine("Removing all annotations for setup...");
             hostElement.RemoveAnnotations(typeof(object));
             var results = hostElement.Annotations(typeof(object));
             if (results is null || !results.Any())
             {
-                Log.Pass("Removed all annotations.");
+                Output.WriteLine("Removed all annotations.");
             }
 
-            Log.Comment("Adding first child as annotation...");
+            Output.WriteLine("Adding first child as annotation...");
             var annotation = hostElement.FirstChild;
             hostElement.AddAnnotation(annotation);
 
-            Log.Comment("Adding annotations...");
+            Output.WriteLine("Adding annotations...");
             var annotations = hostElement.Elements().ToArray();
             hostElement.AddAnnotation(annotations);
 
-            Log.Comment("Adding last child as annotation...");
+            Output.WriteLine("Adding last child as annotation...");
             annotation = hostElement.LastChild;
             hostElement.AddAnnotation(annotation);
 
-            Log.Comment("Retrieving annotation...");
+            Output.WriteLine("Retrieving annotation...");
             var result = hostElement.Annotation(typeof(OpenXmlElement));
             if (result == hostElement.FirstChild)
             {
-                Log.Pass("Annotation retrieved is exactly same one as added.");
+                Output.WriteLine("Annotation retrieved is exactly same one as added.");
             }
             else
             {
-                Log.Fail("Annotation retrieved is different from the one added.");
+                Assert.Fail("Annotation retrieved is different from the one added.");
             }
 
-            Log.Comment("Retrieving annotation of array...");
+            Output.WriteLine("Retrieving annotation of array...");
             var resultArray = hostElement.Annotation(typeof(OpenXmlElement[])) as OpenXmlElement[];
             if (resultArray.SequenceEqual(hostElement.Elements()))
             {
-                Log.Pass("Annotation of array retrieved is exactly same one as added.");
+                Output.WriteLine("Annotation of array retrieved is exactly same one as added.");
             }
             else
             {
-                Log.Fail("Annotation of array retrieved is different from the one added.");
+                Assert.Fail("Annotation of array retrieved is different from the one added.");
             }
 
             int index = 0;
@@ -2599,84 +2557,84 @@ namespace DocumentFormat.OpenXml.Tests
             expected[index++] = hostElement.FirstChild;
             expected[index++] = hostElement.LastChild;
 
-            Log.Comment("Retrieving annotations of OpenXmlElement...");
+            Output.WriteLine("Retrieving annotations of OpenXmlElement...");
             results = hostElement.Annotations(typeof(OpenXmlElement));
-            Log.VerifyValue(results.Count(), expected.Length, "Annotations counts differ from expected vlaue: {0}.", expected.Length);
+            Assert.Equal(expected.Length, results.Count());
             if (results.SequenceEqual(expected))
             {
-                Log.Pass("Annotations retrieved are exactly same ones as added.");
+                Output.WriteLine("Annotations retrieved are exactly same ones as added.");
             }
             else
             {
-                Log.Fail("Annotations retrieved are different from the ones added.");
+                Assert.Fail("Annotations retrieved are different from the ones added.");
             }
 
-            Log.Comment("Removing annotations of OpenXmlElement...");
+            Output.WriteLine("Removing annotations of OpenXmlElement...");
             hostElement.RemoveAnnotations(typeof(OpenXmlElement));
             results = hostElement.Annotations(typeof(OpenXmlElement));
             if (results is null || !results.Any())
             {
-                Log.Pass("Removed all annotations.");
+                Output.WriteLine("Removed all annotations.");
             }
 
-            Log.Comment("Removing annotations for cleanup...");
+            Output.WriteLine("Removing annotations for cleanup...");
             hostElement.RemoveAnnotations(typeof(object));
             results = hostElement.Annotations(typeof(object));
             if (results is null || !results.Any())
             {
-                Log.Pass("Removed all annotations.");
+                Output.WriteLine("Removed all annotations.");
             }
         }
 
         internal void AnnotationCollection(OpenXmlPart hostPart, GetTargetElement getHost)
         {
-            Log.Comment("Loading root element from hosting part...");
+            Output.WriteLine("Loading root element from hosting part...");
             OpenXmlPartRootElement main = hostPart.RootElement();
 
-            Log.Comment("Looking for target element in {0}...", hostPart.GetType().Name);
+            Output.WriteLine("Looking for target element in {0}...", hostPart.GetType().Name);
             var hostElement = getHost(main);
 
-            Log.Comment("Removing all annotations for setup...");
+            Output.WriteLine("Removing all annotations for setup...");
             hostElement.RemoveAnnotations(typeof(object));
             var results = hostElement.Annotations(typeof(object));
             if (results is null || !results.Any())
             {
-                Log.Pass("Removed all annotations.");
+                Output.WriteLine("Removed all annotations.");
             }
 
-            Log.Comment("Adding collection annotations...");
+            Output.WriteLine("Adding collection annotations...");
             var annotations = hostElement.Elements();
             hostElement.AddAnnotation(annotations);
 
-            Log.Comment("Retrieving annotations...");
+            Output.WriteLine("Retrieving annotations...");
             var result = hostElement.Annotation(annotations.GetType());
             if (annotations == result)
             {
-                Log.Pass("Annotation retrieved is exactly same one as added.");
+                Output.WriteLine("Annotation retrieved is exactly same one as added.");
             }
             else
             {
-                Log.Fail("Annotation retrieved is different from the one added.");
+                Assert.Fail("Annotation retrieved is different from the one added.");
             }
 
-            Log.Comment("Retrieving annotations...");
+            Output.WriteLine("Retrieving annotations...");
             results = hostElement.Annotations(annotations.GetType());
-            Log.VerifyValue(results.Count(), 1, "Annotations count differs from expected vlaue: ONE.");
+            Assert.Equal(1, results.Count());
             if (results.First() == result)
             {
-                Log.Pass("Annotation retrieved is exactly same one as added.");
+                Output.WriteLine("Annotation retrieved is exactly same one as added.");
             }
             else
             {
-                Log.Fail("Annotation retrieved is different from the one added.");
+                Assert.Fail("Annotation retrieved is different from the one added.");
             }
 
-            Log.Comment("Removing annotations for cleanup...");
+            Output.WriteLine("Removing annotations for cleanup...");
             hostElement.RemoveAnnotations(annotations.GetType());
             results = hostElement.Annotations(annotations.GetType());
             if (results is null || !results.Any())
             {
-                Log.Pass("Removed all annotations.");
+                Output.WriteLine("Removed all annotations.");
             }
         }
 
@@ -2695,8 +2653,8 @@ namespace DocumentFormat.OpenXml.Tests
                 throw new ArgumentNullException(nameof(targetElement));
             }
 
-            Log.Comment("check if the current element has no children");
-            Log.VerifyFalse(targetElement.HasElements, "Not all children are removed");
+            Output.WriteLine("check if the current element has no children");
+            Assert.False(targetElement.HasElements, "Not all children are removed");
         }
 
         /// <summary>
@@ -2721,16 +2679,16 @@ namespace DocumentFormat.OpenXml.Tests
 
             if (childPosition is not null)
             {
-                Log.Comment("retrieve the child element of resultElement at position {0} to compare with originalElement", childPosition);
+                Output.WriteLine("retrieve the child element of resultElement at position {0} to compare with originalElement", childPosition);
                 targetElement = resultElement.Elements().ElementAt(childPosition.Value);
             }
             else
             {
-                Log.Comment("Compare the resultElement with the originalElement");
+                Output.WriteLine("Compare the resultElement with the originalElement");
                 targetElement = resultElement;
             }
 
-            Log.VerifyTrue(targetElement.Compare(originalElement), "Two elements are not same");
+            Assert.True(targetElement.Compare(originalElement), "Two elements are not same");
         }
 
         internal void VerifyEqual(XElement xelement, OpenXmlElement oelement, OpenXmlPart part)
@@ -2750,12 +2708,12 @@ namespace DocumentFormat.OpenXml.Tests
 
             if (xElement.Count() != oElement.Count())
             {
-                Log.Fail("Two List of elements have different count");
+                Assert.Fail("Two List of elements have different count");
                 pass = false;
             }
             else if (!xElement.Any())
             {
-                Log.Warning("0 element is encountered");
+                Output.WriteLine("Warning: 0 element is encountered");
             }
 
             if (pass)
@@ -2764,7 +2722,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     if (!xElement.ElementAt(i).Compare(ConvertToXElement(part, oElement.ElementAt(i))))
                     {
-                        Log.Fail("the Elements at position {0} are different", i);
+                        Assert.Fail(string.Format("the Elements at position {0} are different", i));
                         pass = false;
                         break;
                     }
@@ -2773,7 +2731,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             if (pass)
             {
-                Log.Pass("the two list of elements are the same");
+                Output.WriteLine("the two list of elements are the same");
             }
         }
 
@@ -2795,27 +2753,23 @@ namespace DocumentFormat.OpenXml.Tests
                 throw new IndexOutOfRangeException("the child position is out of range");
             }
 
-            Log.Comment("check if the targetElement's children is decreased by 1");
-            Log.VerifyTrue(originalElement.Elements().Count() == resultElement.Elements().Count() + 1, "the target's children is not decreased by 1");
+            Output.WriteLine("check if the targetElement's children is decreased by 1");
+            Assert.True(originalElement.Elements().Count() == resultElement.Elements().Count() + 1, "the target's children is not decreased by 1");
 
-            Log.Comment("check if all other child elements are matched, except the removed one");
+            Output.WriteLine("check if all other child elements are matched, except the removed one");
 
             for (int i = 0; i < childPosition; i++)
             {
-                Log.Comment("check child elements at position {0}", i);
-                Log.VerifyTrue(
-                    resultElement.Elements().ElementAt(i).Compare(originalElement.Elements().ElementAt(i)),
-                    "the child elements at position {0} are not same", i);
+                Output.WriteLine("check child elements at position {0}", i);
+                Assert.True(resultElement.Elements().ElementAt(i).Compare(originalElement.Elements().ElementAt(i)), string.Format("the child elements at position {0} are not same", i));
             }
 
             if (childPosition < resultElement.Elements().Count())
             {
                 for (int i = childPosition; i < resultElement.Elements().Count(); i++)
                 {
-                    Log.Comment("check child elements at position {0}", i);
-                    Log.VerifyTrue(
-                        resultElement.Elements().ElementAt(i).Compare(originalElement.Elements().ElementAt(i + 1)),
-                        "the child elements at position {0} are not same", i);
+                    Output.WriteLine("check child elements at position {0}", i);
+                    Assert.True(resultElement.Elements().ElementAt(i).Compare(originalElement.Elements().ElementAt(i + 1)), string.Format("the child elements at position {0} are not same", i));
                 }
             }
         }
@@ -2843,12 +2797,10 @@ namespace DocumentFormat.OpenXml.Tests
                 throw new IndexOutOfRangeException("Child position is out of range");
             }
 
-            Log.Comment("check if the targetElement's children is decreased as expected");
-            Log.VerifyTrue(
-                originalElement.Elements().Count() == resultElement.Elements().Count() + childrenPosition.Count(),
-                "Target's children is not decreased as expected.");
+            Output.WriteLine("check if the targetElement's children is decreased as expected");
+            Assert.True(originalElement.Elements().Count() == resultElement.Elements().Count() + childrenPosition.Count(), "Target's children is not decreased as expected.");
 
-            Log.Comment("check if all other child elements are matched, except the removed one");
+            Output.WriteLine("check if all other child elements are matched, except the removed one");
             for (int i = 0; i < originalElement.Elements().Count(); i++)
             {
                 if (childrenPosition.Contains(i))
@@ -2857,10 +2809,8 @@ namespace DocumentFormat.OpenXml.Tests
                 }
 
                 int expectPos = i - childrenPosition.Count(j => j < i);
-                Log.Comment("Verifying child element at position ({0}:{1})...", i, expectPos);
-                Log.VerifyTrue(
-                    resultElement.Elements().ElementAt(expectPos).Compare(originalElement.Elements().ElementAt(i)),
-                    "Child element at position ({0}:{1}) is NOT same.", i, expectPos);
+                Output.WriteLine("Verifying child element at position ({0}:{1})...", i, expectPos);
+                Assert.True(resultElement.Elements().ElementAt(expectPos).Compare(originalElement.Elements().ElementAt(i)), string.Format("Child element at position ({0}:{1}) is NOT same.", i, expectPos));
             }
         }
         #endregion

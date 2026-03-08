@@ -73,8 +73,8 @@ namespace DocumentFormat.OpenXml.Tests
                 string t = v.InnerText;
 
                 // Verify value and text
-                Log.VerifyValue(v2, (sbyte)100, "{0}.Value", v.GetType().Name);
-                Log.VerifyValue(t, "+100", "{0}.InnerText", v.GetType().Name);
+                Assert.Equal((sbyte)100, v2);
+                Assert.Equal("+100", t);
             }
 
             {
@@ -84,8 +84,8 @@ namespace DocumentFormat.OpenXml.Tests
                 string t = v.InnerText;
 
                 // Verify value and text
-                Log.VerifyValue(v2, (short)100, "{0}.Value", v.GetType().Name);
-                Log.VerifyValue(t, "+100", "{0}.InnerText", v.GetType().Name);
+                Assert.Equal((short)100, v2);
+                Assert.Equal("+100", t);
             }
 
             {
@@ -95,8 +95,8 @@ namespace DocumentFormat.OpenXml.Tests
                 string t = v.InnerText;
 
                 // Verify value and text
-                Log.VerifyValue(v2, 100, "{0}.Value", v.GetType().Name);
-                Log.VerifyValue(t, "+100", "{0}.InnerText", v.GetType().Name);
+                Assert.Equal(100, v2);
+                Assert.Equal("+100", t);
             }
 
             {
@@ -106,8 +106,8 @@ namespace DocumentFormat.OpenXml.Tests
                 string t = v.InnerText;
 
                 // Verify value and text
-                Log.VerifyValue(v2, 100L, "{0}.Value", v.GetType().Name);
-                Log.VerifyValue(t, "+100", "{0}.InnerText", v.GetType().Name);
+                Assert.Equal(100L, v2);
+                Assert.Equal("+100", t);
             }
 
             {
@@ -117,8 +117,8 @@ namespace DocumentFormat.OpenXml.Tests
                 string t = v.InnerText;
 
                 // Verify value and text
-                Log.VerifyValue(v2, 100M, "{0}.Value", v.GetType().Name);
-                Log.VerifyValue(t, "+100", "{0}.InnerText", v.GetType().Name);
+                Assert.Equal(100M, v2);
+                Assert.Equal("+100", t);
             }
 
             {
@@ -128,8 +128,8 @@ namespace DocumentFormat.OpenXml.Tests
                 string t = v.InnerText;
 
                 // Verify value and text
-                Log.VerifyValue(v2, 100F, "{0}.Value", v.GetType().Name);
-                Log.VerifyValue(t, "+100", "{0}.InnerText", v.GetType().Name);
+                Assert.Equal(100F, v2);
+                Assert.Equal("+100", t);
             }
 
             {
@@ -139,8 +139,8 @@ namespace DocumentFormat.OpenXml.Tests
                 string t = v.InnerText;
 
                 // Verify value and text
-                Log.VerifyValue(v2, 100D, "{0}.Value", v.GetType().Name);
-                Log.VerifyValue(t, "+100", "{0}.InnerText", v.GetType().Name);
+                Assert.Equal(100D, v2);
+                Assert.Equal("+100", t);
             }
         }
 
@@ -153,8 +153,8 @@ namespace DocumentFormat.OpenXml.Tests
             string t = v.InnerText;
 
             // Verify value and text
-            Log.VerifyValue(v2, 0.51200000000000001, "{0}.Value", v.GetType().Name);
-            Log.VerifyValue(t, "0.51200000000000001", "{0}.InnerText", v.GetType().Name);
+            Assert.Equal(0.51200000000000001, v2);
+            Assert.Equal("0.51200000000000001", t);
         }
 
         [Fact]
@@ -163,8 +163,8 @@ namespace DocumentFormat.OpenXml.Tests
             using (var stream = GetStream(TestDataStorage.V2FxTestFiles.ForTestCase.Bug571679_Brownbag, true))
             using (var package = PresentationDocument.Open(stream, true))
             {
-                Log.Comment("Opening file that contains duplicated namespace declarations...");
-                Log.Comment("Part that contains duplicated namespace declarations /ppt/diagrams/data3.xml.");
+                Output.WriteLine("Opening file that contains duplicated namespace declarations...");
+                Output.WriteLine("Part that contains duplicated namespace declarations /ppt/diagrams/data3.xml.");
 
                 foreach (var part in package.DescendantParts().Where(p => p.IsReflectable()))
                 {
@@ -252,27 +252,27 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadParagraphWithRedefinedPrefixTest()
         {
-            Log.Comment("Constructing a Paragraph with rawxml...");
+            Output.WriteLine("Constructing a Paragraph with rawxml...");
             var rawxml = "<w:p w:rsidR=\"006B669D\" w:rsidRDefault=\"006B669D\" w:rsidP=\"006B669D\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:myw=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" >\n"
                 + "	<w12:r xmlns:w12=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" >\n"
                 + "		<w:t xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xml:space=\"preserve\">This is the text in this paragraph. </w:t>\n"
                 + "	</w12:r>\n"
                 + "</w:p>\n";
 
-            Log.Comment(rawxml);
+            Output.WriteLine(rawxml);
             var para = new DocumentFormat.OpenXml.Wordprocessing.Paragraph(rawxml);
-            Log.VerifyValue(para.NamespaceDeclarations.Count(), 2, "Count of returned Namespace Declarations does NOT match expectation.");
+            Assert.Equal(2, para.NamespaceDeclarations.Count());
             var run = para.FirstChild;
-            Log.VerifyValue(run.NamespaceDeclarations.Count(), 1, "Count of returned Namespace Declarations does NOT match expectation.");
-            Log.VerifyValue(run.Prefix, "w12", "Unexpected prefix returned for the Run.");
-            Log.VerifyValue(run.NamespaceUri, run.NamespaceDeclarations.ElementAt(0).Value, "NamespaceUri does NOT match declarations on itself.");
-            Log.VerifyValue(para.NamespaceUri, run.NamespaceUri, "NamespaceUri of Run does NOT match Paragraph.");
+            Assert.Equal(1, run.NamespaceDeclarations.Count());
+            Assert.Equal("w12", run.Prefix);
+            Assert.Equal(run.NamespaceDeclarations.ElementAt(0).Value, run.NamespaceUri);
+            Assert.Equal(run.NamespaceUri, para.NamespaceUri);
             var text = run.FirstChild;
-            Log.VerifyValue(text.NamespaceDeclarations.Count(), 1, "Count of returned Namespace Declarations does NOT match expectation.");
-            Log.VerifyValue(text.Prefix, "w", "Unexpected prefix returned for the Text.");
-            Log.VerifyValue(text.NamespaceUri, text.NamespaceDeclarations.ElementAt(0).Value, "NamespaceUri does NOT match declarations on itself.");
-            Log.VerifyValue(run.NamespaceUri, text.NamespaceUri, "NamespaceUri of Text does NOT match Run.");
-            Log.Comment("OuterXml of Paragraph:\n{0}", para.OuterXml);
+            Assert.Equal(1, text.NamespaceDeclarations.Count());
+            Assert.Equal("w", text.Prefix);
+            Assert.Equal(text.NamespaceDeclarations.ElementAt(0).Value, text.NamespaceUri);
+            Assert.Equal(text.NamespaceUri, run.NamespaceUri);
+            Output.WriteLine("OuterXml of Paragraph:\n{0}", para.OuterXml);
         }
 
         [InlineData(TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm)]

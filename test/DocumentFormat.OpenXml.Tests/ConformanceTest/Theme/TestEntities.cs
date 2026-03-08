@@ -2,9 +2,9 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using LogUtil;
 using System.IO;
 using System.Linq;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests.Theme
 {
@@ -19,13 +19,13 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        internal void EditAttribute(Stream stream, VerifiableLog log)
+        internal void EditAttribute(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value = ThemeId2;
 
-                log.Pass("Edit theme id attribute. Set value is \"{0}\"", ThemeId2);
+                log.WriteLine("Edit theme id attribute. Set value is \"{0}\"", ThemeId2);
             }
         }
 
@@ -34,13 +34,11 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        internal void VerifyAttribute(Stream stream, VerifiableLog log)
+        internal void VerifyAttribute(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
-                log.Verify(
-                    package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == ThemeId2,
-                    "UnChanged in the id attribute value on theme element. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value);
+                Assert.True(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == ThemeId2, string.Format("UnChanged in the id attribute value on theme element. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value));
             }
         }
 
@@ -49,13 +47,13 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        internal void DeletAttribute(Stream stream, VerifiableLog log)
+        internal void DeletAttribute(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId = null;
 
-                log.Pass("Delete theme id attribute.");
+                log.WriteLine("Delete theme id attribute.");
             }
         }
 
@@ -64,13 +62,11 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        internal void VerifyDeletedAttribute(Stream stream, VerifiableLog log)
+        internal void VerifyDeletedAttribute(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
-                log.Verify(
-                    package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId is null,
-                    "Theme id attribute is not deleted. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId);
+                Assert.True(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId is null, string.Format("Theme id attribute is not deleted. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId));
             }
         }
 
@@ -79,13 +75,13 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// </summary>
         /// <param name="stream">Target excel stream</param>
         /// <param name="log">Logger</param>
-        internal void AddAttribute(Stream stream, VerifiableLog log)
+        internal void AddAttribute(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
                 package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId = ThemeId1;
 
-                log.Pass("Add theme id attribute.");
+                log.WriteLine("Add theme id attribute.");
             }
         }
 
@@ -94,13 +90,11 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        internal void VerifyAddedAttribute(Stream stream, VerifiableLog log)
+        internal void VerifyAddedAttribute(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
-                log.Verify(
-                    package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == ThemeId1,
-                    "UnChanged in the id attribute value on theme element. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value);
+                Assert.True(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == ThemeId1, string.Format("UnChanged in the id attribute value on theme element. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value));
             }
         }
     }

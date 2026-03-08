@@ -577,12 +577,12 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OpenXmlAttributeValueTypeTest()
         {
-            Log.Comment("Constructing a default OpenXmlAttribute and assign it to another variable...");
+            Output.WriteLine("Constructing a default OpenXmlAttribute and assign it to another variable...");
             var oxaX = default(OpenXmlAttribute);
             var oxaY = oxaX;
-            Log.VerifyTrue(oxaX == oxaY, "The assigned OpenXmlAttribute variable is NOT equal to original one.");
+            Assert.True(oxaX == oxaY, "The assigned OpenXmlAttribute variable is NOT equal to original one.");
 
-            Log.Comment("Constructing OpenXmlAttribute w:rsidR and assigning it to another variable...");
+            Output.WriteLine("Constructing OpenXmlAttribute w:rsidR and assigning it to another variable...");
             var wrsidR = new OpenXmlAttribute("w", "rsidR", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00B327F7");
             var wrsidP = new OpenXmlAttribute("w", "rsidP", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00EC35BB");
 
@@ -592,28 +592,28 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void OpenXmlAttributeEqualTest()
         {
-            Log.Comment("Comparing two default OpenXmlAttribute...");
+            Output.WriteLine("Comparing two default OpenXmlAttribute...");
             var defaultA = default(OpenXmlAttribute);
             var defaultB = default(OpenXmlAttribute);
-            Log.VerifyTrue(defaultA == defaultB, "Two default OpenXmlAttribute are NOT equal.");
-            Log.VerifyFalse(defaultA != defaultB, "Two default OpenXmlAttribute are Equal.");
+            Assert.True(defaultA == defaultB, "Two default OpenXmlAttribute are NOT equal.");
+            Assert.False(defaultA != defaultB, "Two default OpenXmlAttribute are Equal.");
 
             var wrsidRA = new OpenXmlAttribute("w", "rsidR", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00B327F7");
             var wrsidRB = new OpenXmlAttribute("w", "rsidR", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00B327F7");
-            Log.Comment("Comparing two {0} OpenXmlAttribute with value {1}...", wrsidRA.GetFullName(), wrsidRA.Value);
-            Log.Comment("HashCode for {0}: {1}", wrsidRA.XmlQualifiedName, wrsidRA.GetHashCode());
-            Log.VerifyTrue(wrsidRA == wrsidRB, "Two OpenXmlAttribute with same leftBorders are NOT equal by ==.");
-            Log.VerifyTrue(wrsidRA.Equals((object)wrsidRB), "Two OpenXmlAttribute with same leftBorders are NOT equal by Equals().");
-            Log.VerifyFalse(wrsidRA != wrsidRB, "Two OpenXmlAttribute with fame leftBorders are NOT equal by !=.");
+            Output.WriteLine("Comparing two {0} OpenXmlAttribute with value {1}...", wrsidRA.GetFullName(), wrsidRA.Value);
+            Output.WriteLine("HashCode for {0}: {1}", wrsidRA.XmlQualifiedName, wrsidRA.GetHashCode());
+            Assert.True(wrsidRA == wrsidRB, "Two OpenXmlAttribute with same leftBorders are NOT equal by ==.");
+            Assert.True(wrsidRA.Equals((object)wrsidRB), "Two OpenXmlAttribute with same leftBorders are NOT equal by Equals().");
+            Assert.False(wrsidRA != wrsidRB, "Two OpenXmlAttribute with fame leftBorders are NOT equal by !=.");
 
             var wrsidR = new OpenXmlAttribute("w", "rsidR", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00B327F7");
             var wrsidP = new OpenXmlAttribute("w", "rsidP", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00EC35BB");
-            Log.Comment("HashCode for {0}: {1}", wrsidR.XmlQualifiedName, wrsidR.GetHashCode());
-            Log.Comment("HashCode for {0}: {1}", wrsidP.XmlQualifiedName, wrsidP.GetHashCode());
-            Log.Comment("Comparing two different OpenXmlAttribute with different value...");
-            Log.VerifyFalse(wrsidR == wrsidP, "Two different OpenXmlAttribute with different value are equal by ==.");
-            Log.VerifyFalse(wrsidR.Equals((object)wrsidP), "Two different OpenXmlAttribute with different value are equal by Equals().");
-            Log.VerifyTrue(wrsidR != wrsidP, "Two different OpenXmlAttribute with different are equal by !=.");
+            Output.WriteLine("HashCode for {0}: {1}", wrsidR.XmlQualifiedName, wrsidR.GetHashCode());
+            Output.WriteLine("HashCode for {0}: {1}", wrsidP.XmlQualifiedName, wrsidP.GetHashCode());
+            Output.WriteLine("Comparing two different OpenXmlAttribute with different value...");
+            Assert.False(wrsidR == wrsidP, "Two different OpenXmlAttribute with different value are equal by ==.");
+            Assert.False(wrsidR.Equals((object)wrsidP), "Two different OpenXmlAttribute with different value are equal by Equals().");
+            Assert.True(wrsidR != wrsidP, "Two different OpenXmlAttribute with different are equal by !=.");
         }
 
         #endregion OpenXmlAttribute
@@ -1987,12 +1987,12 @@ namespace DocumentFormat.OpenXml.Tests
             using (var testfile = TestAssets.OpenFile(testPath, true))
             using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target MainPart...");
+                Output.WriteLine("Loading target MainPart...");
                 OpenXmlPart hostPart = target.MainPart();
 
                 if (!hostPart.IsReflectable())
                 {
-                    Log.Warning("Current hostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Current hostPart is NOT reflectable.");
                 }
 
                 AnnotationType(hostPart, GetBody);
@@ -2009,12 +2009,12 @@ namespace DocumentFormat.OpenXml.Tests
             using (var testfile = TestAssets.OpenFile(testPath, true))
             using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target MainPart...");
+                Output.WriteLine("Loading target MainPart...");
                 OpenXmlPart hostPart = GetSlidePart(target);
 
                 if (!hostPart.IsReflectable())
                 {
-                    Log.Warning("Current hostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Current hostPart is NOT reflectable.");
                 }
 
                 AnnotationType(hostPart, GetSlideTextBody);
@@ -2031,12 +2031,12 @@ namespace DocumentFormat.OpenXml.Tests
             using (var testfile = TestAssets.OpenFile(testPath, true))
             using (OpenXmlPackage target = testfile.Open(true))
             {
-                Log.Comment("Loading target MainPart...");
+                Output.WriteLine("Loading target MainPart...");
                 OpenXmlPart hostPart = GetLastSheetPart(target);
 
                 if (!hostPart.IsReflectable())
                 {
-                    Log.Warning("Current hostPart is NOT reflectable.");
+                    Output.WriteLine("Warning: Current hostPart is NOT reflectable.");
                 }
 
                 AnnotationType(hostPart, GetSheetData);
@@ -2139,17 +2139,17 @@ namespace DocumentFormat.OpenXml.Tests
                 var element = doc.Descendants().Where(e => e.LocalName == "lockedCanvas").FirstOrDefault();
                 if (element is null)
                 {
-                    Log.Warning("No lockedCanvas element found in specified document.");
+                    Output.WriteLine("Warning: No lockedCanvas element found in specified document.");
                     return;
                 }
 
                 if (element is OpenXmlUnknownElement)
                 {
-                    Log.Fail("Element {0} is loaded as OpenXmlUnknownElement, instead of expected LockedCanvasElement.", element.Path());
+                    Assert.Fail(string.Format("Element {0} is loaded as OpenXmlUnknownElement, instead of expected LockedCanvasElement.", element.Path()));
                 }
                 else
                 {
-                    Log.Pass("Element {0} is loaded as strongly type {1}.", element.Path(), element.GetType().FullName);
+                    Output.WriteLine("Element {0} is loaded as strongly type {1}.", element.Path(), element.GetType().FullName);
                 }
             }
         }
@@ -2161,7 +2161,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             try
             {
-                Log.Comment("Constructing Paragraph with OuterXml...");
+                Output.WriteLine("Constructing Paragraph with OuterXml...");
                 string xml = "<w:p xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" mc:Ignorable=\"w14\" " +
                     "xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:v=\"urn:schemas-microsoft-com:vml\" " +
                 "xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:rsidR=\"00A35C47\" w14:paraId=\"017B6C57\" w14:editId=\"32F17AD3\" >" +
@@ -2171,15 +2171,15 @@ namespace DocumentFormat.OpenXml.Tests
                 "</mc:AlternateContent></w:r>" +
                 "</w:p>";
                 var p = new DocumentFormat.OpenXml.Wordprocessing.Paragraph(xml);
-                Log.Comment("Constructed Paragraph without issues.");
+                Output.WriteLine("Constructed Paragraph without issues.");
 
-                Log.Comment("Accessing first child of Paragraph...");
+                Output.WriteLine("Accessing first child of Paragraph...");
                 var r = p.FirstChild;
-                Log.Pass("No NullReferenceException thrown out anymore.");
+                Output.WriteLine("No NullReferenceException thrown out anymore.");
             }
             catch (NullReferenceException ex)
             {
-                Log.Fail("{0} thrown out unexpected.\n{1}", ex.GetType().FullName, ex.ToString());
+                Assert.Fail(string.Format("{0} thrown out unexpected.\n{1}", ex.GetType().FullName, ex.ToString()));
             }
         }
 
@@ -2206,21 +2206,21 @@ namespace DocumentFormat.OpenXml.Tests
                     var ignorable = fonts.GetAttributes().Where(a => a.LocalName == "Ignorable" && a.Value == "w14").FirstOrDefault();
                     if (ignorable == default(OpenXmlAttribute))
                     {
-                        Log.Fail("No mc:Ignorable attribute with value {0} exists", "w14");
+                        Assert.Fail(string.Format("No mc:Ignorable attribute with value {0} exists", "w14"));
                     }
                     else
                     {
-                        Log.Pass("mc:Ignorable attribute with value {0} exists", "w14");
+                        Output.WriteLine("mc:Ignorable attribute with value {0} exists", "w14");
                     }
 
                     var w14ns = fonts.OuterXml.Contains(@"xmlns:w14=""http://schemas.microsoft.com/office/word/2010/wordml");
                     if (!w14ns)
                     {
-                        Log.Fail("No w14 namespace declaration found.");
+                        Assert.Fail("No w14 namespace declaration found.");
                     }
                     else
                     {
-                        Log.Pass("w14 namespace declaration found on fonts element.");
+                        Output.WriteLine("w14 namespace declaration found on fonts element.");
                     }
                 }
 
@@ -2236,21 +2236,21 @@ namespace DocumentFormat.OpenXml.Tests
                     var ignorable = fonts.GetAttributes().Where(a => a.LocalName == "Ignorable" && a.Value == "w14").FirstOrDefault();
                     if (ignorable == default(OpenXmlAttribute))
                     {
-                        Log.Fail("No mc:Ignorable attribute with value {0} exists", "w14");
+                        Assert.Fail(string.Format("No mc:Ignorable attribute with value {0} exists", "w14"));
                     }
                     else
                     {
-                        Log.Pass("mc:Ignorable attribute with value {0} exists", "w14");
+                        Output.WriteLine("mc:Ignorable attribute with value {0} exists", "w14");
                     }
 
                     var w14ns = fonts.OuterXml.Contains(@"xmlns:w14=""http://schemas.microsoft.com/office/word/2010/wordml");
                     if (!w14ns)
                     {
-                        Log.Fail("No w14 namespace declaration found.");
+                        Assert.Fail("No w14 namespace declaration found.");
                     }
                     else
                     {
-                        Log.Pass("w14 namespace declaration found on fonts element.");
+                        Output.WriteLine("w14 namespace declaration found on fonts element.");
                     }
                 }
             }
@@ -2267,9 +2267,9 @@ namespace DocumentFormat.OpenXml.Tests
                 + "w14:paraId=\"017B6C57\" w14:editId=\"32F17AD3\" w:rsidR=\"00A35C47\"  />";
             var p = new DocumentFormat.OpenXml.Wordprocessing.Paragraph(paragraphXml);
             Assert.NotNull(p.MCAttributes);
-            Log.VerifyValue(3, p.NamespaceDeclarations.Count(), "mc, w14, w");    // mc, w14, w
-            Log.VerifyValue(4, p.GetAttributes().Count, "w:rsidR, w14:paraId, w14:editId, mc:Ignorable");        // w:rsidR, w14:paraId, w14:editId, mc:Ignorable
-            Log.VerifyValue(2, p.ExtendedAttributes.Count(), "w14:paraId, w14:editId");   // w14:paraId, w14:editId
+            Assert.Equal(p.NamespaceDeclarations.Count(), 3);    // mc, w14, w
+            Assert.Equal(p.GetAttributes().Count, 4);        // w:rsidR, w14:paraId, w14:editId, mc:Ignorable
+            Assert.Equal(p.ExtendedAttributes.Count(), 2);   // w14:paraId, w14:editId
         }
 
         #endregion Bug Regression

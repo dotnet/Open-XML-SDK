@@ -2425,7 +2425,7 @@ namespace DocumentFormat.OpenXml.Tests
                         WrapChildrenWithElement(target, unknownElement11, children);
 
                         var muhost = ChooseElementBetween(target, host.Path(), target.Path());
-                        Log.Comment("Setting @MustUnderstand with value: {0} on {1}", unknownElement11.Prefix, muhost.Path());
+                        Output.WriteLine("Setting @MustUnderstand with value: {0} on {1}", unknownElement11.Prefix, muhost.Path());
                         muhost.SetMustUnderstand(unknownElement11.Prefix);
 
                         return host.Path();
@@ -3516,7 +3516,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     var children = new List<OpenXmlElement>();
                     var acb = WrapEachChildWithChoice_OneFallback(host, children);
-                    Log.Comment("Setting mc:Ignorable = {0} @{1}...", unknownElement11.Prefix, acb.Path());
+                    Output.WriteLine("Setting mc:Ignorable = {0} @{1}...", unknownElement11.Prefix, acb.Path());
                     acb.SetIgnorable(unknownElement11.Prefix);
                     acb.AddNamespaceDeclaration(unknownElement11.Prefix, unknownElement11.NamespaceUri);
                     acb.SetAttribute(unknownAttribute11);
@@ -3664,14 +3664,14 @@ namespace DocumentFormat.OpenXml.Tests
                 children.Add(c.CloneNode(true));
             }
 
-            Log.Comment("Appending AlaternateContent element without choice and fallback...");
+            Output.WriteLine("Appending AlaternateContent element without choice and fallback...");
             var acb = new AlternateContent();
             return e.AppendChild(acb);
         }
 
         private AlternateContent WrapWithChoice(OpenXmlElement e, List<OpenXmlElement> children)
         {
-            Log.Comment("Appending child elements to Choice...");
+            Output.WriteLine("Appending child elements to Choice...");
             var choice = new AlternateContentChoice();
             foreach (var prefix in e.ChildElements.Select(c => c.Prefix).Distinct())
             {
@@ -3686,7 +3686,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             e.RemoveAllChildren();
 
-            Log.Comment("Appending a choice to AlaternateContent element...");
+            Output.WriteLine("Appending a choice to AlaternateContent element...");
             var acb = new AlternateContent();
             acb.AppendChild(choice);
             return e.AppendChild(acb);
@@ -3699,7 +3699,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 children.Add(c.CloneNode(true));
 
-                Log.Comment("Appending a choice to Alternate Content element...");
+                Output.WriteLine("Appending a choice to Alternate Content element...");
                 var choice = new AlternateContentChoice();
                 var prefix = c.Prefix;
                 choice.SetRequires(prefix);
@@ -3718,7 +3718,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 children.Add(c.CloneNode(true));
 
-                Log.Comment("Appending a choice to Alternate Content element...");
+                Output.WriteLine("Appending a choice to Alternate Content element...");
                 var choice = new AlternateContentChoice();
                 var prefix = c.Prefix;
                 choice.SetRequires(prefix);
@@ -3740,18 +3740,18 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 children.Add(c.CloneNode(true));
 
-                Log.Comment("Appending a choice to Alternate Content element...");
+                Output.WriteLine("Appending a choice to Alternate Content element...");
                 var choice = new AlternateContentChoice();
                 var prefix = c.Prefix;
                 choice.SetRequires(prefix);
                 choice.AppendChild(c.CloneNode(true));
                 acb.AppendChild(choice);
 
-                Log.Comment("Appending same child element as Choice to Fallback...");
+                Output.WriteLine("Appending same child element as Choice to Fallback...");
                 fallback.AppendChild(c.CloneNode(true));
             }
 
-            Log.Comment("Appending fallback to Alternate Content element...");
+            Output.WriteLine("Appending fallback to Alternate Content element...");
             acb.AppendChild(fallback);
             e.RemoveAllChildren();
             return e.AppendChild(acb);
@@ -3765,7 +3765,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 children.Add(c.CloneNode(true));
 
-                Log.Comment("Appending a choice to Alternate Content element...");
+                Output.WriteLine("Appending a choice to Alternate Content element...");
                 var choice = new AlternateContentChoice();
                 var prefix = c.Prefix;
                 choice.SetRequires(prefix);
@@ -3773,11 +3773,11 @@ namespace DocumentFormat.OpenXml.Tests
                 choice.AppendChild(c.CloneNode(true));
                 acb.AppendChild(choice);
 
-                Log.Comment("Appending same child element as Choice to Fallback...");
+                Output.WriteLine("Appending same child element as Choice to Fallback...");
                 fallback.AppendChild(c.CloneNode(true));
             }
 
-            Log.Comment("Appending fallback to Alternate Content element...");
+            Output.WriteLine("Appending fallback to Alternate Content element...");
             acb.AppendChild(fallback);
             e.RemoveAllChildren();
             e.SetAttribute(unknownAttribute11);    // append unknown element/attribute to make its ns resolvable
@@ -3787,21 +3787,21 @@ namespace DocumentFormat.OpenXml.Tests
         private AlternateContent WrapEachChildWithChoice_LeadingFallback(OpenXmlElement e, List<OpenXmlElement> children)
         {
             var acb = new AlternateContent();
-            Log.Comment("Appending fallback to Alternate Content element...");
+            Output.WriteLine("Appending fallback to Alternate Content element...");
             var fallback = new AlternateContentFallback();
             acb.AppendChild(fallback);
             foreach (var c in e.ChildElements)
             {
                 children.Add(c.CloneNode(true));
 
-                Log.Comment("Appending a choice to Alternate Content element...");
+                Output.WriteLine("Appending a choice to Alternate Content element...");
                 var choice = new AlternateContentChoice();
                 var prefix = c.Prefix;
                 choice.SetRequires(prefix);
                 choice.AppendChild(c.CloneNode(true));
                 acb.AppendChild(choice);
 
-                Log.Comment("Appending same child element as Choice to Fallback...");
+                Output.WriteLine("Appending same child element as Choice to Fallback...");
                 fallback.AppendChild(c.CloneNode(true));
             }
 
@@ -3899,7 +3899,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void WrapChildrenWithElement(OpenXmlElement host, OpenXmlElement wrapper, List<OpenXmlElement> children)
         {
-            Log.Comment("Moving child elements from {0} to {1}...", host.Path(), wrapper.Path());
+            Output.WriteLine("Moving child elements from {0} to {1}...", host.Path(), wrapper.Path());
             foreach (var d in host.ChildElements)
             {
                 wrapper.AppendChild(d.CloneNode(true));
@@ -3935,29 +3935,29 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void VerifyMcAttribute(OpenXmlElement host, string mcName, string expectedValue)
         {
-            Log.Comment("Verifying {0} attribute is set correctly.", mcName);
+            Output.WriteLine("Verifying {0} attribute is set correctly.", mcName);
             var hasAttribute = host.GetAttributes().Where(a => a.LocalName == mcName && a.Value == expectedValue).FirstOrDefault() != default(OpenXmlAttribute);
             if (hasAttribute)
             {
-                Log.Pass("{0} is set correctly.", mcName);
+                Output.WriteLine("{0} is set correctly.", mcName);
             }
             else
             {
-                Log.Fail("{0} does NOT exist or is set wrong value.", mcName);
+                Assert.Fail(string.Format("{0} does NOT exist or is set wrong value.", mcName));
             }
         }
 
         private void VerifyNoMcAttribute(OpenXmlElement host, string mcName, string expectedValue)
         {
-            Log.Comment("Verifing {0} attribute is filtered out...", mcName);
+            Output.WriteLine("Verifing {0} attribute is filtered out...", mcName);
             var hasAttribute = host.GetAttributes().Where(a => a.LocalName == "Ignorable" && a.Value == expectedValue).FirstOrDefault() != default(OpenXmlAttribute);
             if (hasAttribute)
             {
-                Log.Fail("{0} attribute still exist on host element:{1}", mcName, host.Path());
+                Assert.Fail(string.Format("{0} attribute still exist on host element:{1}", mcName, host.Path()));
             }
             else
             {
-                Log.Pass("{0} attribute does NOT exist on host element:{1}", mcName, host.Path());
+                Output.WriteLine("{0} attribute does NOT exist on host element:{1}", mcName, host.Path());
             }
         }
 
@@ -3973,56 +3973,56 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void VerifyNoAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
         {
-            Log.Comment("Verifying attribute {0} does NOT exist....", expectedAttribute.GetFullName());
+            Output.WriteLine("Verifying attribute {0} does NOT exist....", expectedAttribute.GetFullName());
             var exist = host.GetAttributes().Any(a => a == expectedAttribute);
             if (exist)
             {
-                Log.Fail("Verifyied attribute {0} exist with value {1}.", expectedAttribute.GetFullName(), expectedAttribute.Value);
+                Assert.Fail(string.Format("Verifyied attribute {0} exist with value {1}.", expectedAttribute.GetFullName(), expectedAttribute.Value));
             }
             else
             {
-                Log.Pass("Verified attribute {0} NOT exist with value {1}.", expectedAttribute.GetFullName(), expectedAttribute.Value);
+                Output.WriteLine("Verified attribute {0} NOT exist with value {1}.", expectedAttribute.GetFullName(), expectedAttribute.Value);
             }
         }
 
         private void VerifyExtendedAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
         {
-            Log.Comment("Verifying unknown attribute is loaded as extended...");
+            Output.WriteLine("Verifying unknown attribute is loaded as extended...");
             if (host.ExtendedAttributes.Any(ea => ea == expectedAttribute))
             {
-                Log.Pass("Verified attribute {0} from unknown ns is loaded as Extended attribute.", expectedAttribute.GetFullName());
+                Output.WriteLine("Verified attribute {0} from unknown ns is loaded as Extended attribute.", expectedAttribute.GetFullName());
             }
             else
             {
-                Log.Fail("Attribute {0} from unknown ns is NOT loaded as Extended attribute.", expectedAttribute.GetFullName());
+                Assert.Fail(string.Format("Attribute {0} from unknown ns is NOT loaded as Extended attribute.", expectedAttribute.GetFullName()));
             }
         }
 
         private void VerifyNoExtendedAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
         {
-            Log.Comment("Verifying unknown attribute is ignored...");
+            Output.WriteLine("Verifying unknown attribute is ignored...");
             var verified = !host.ExtendedAttributes.Any(ea => ea == expectedAttribute);
             if (verified)
             {
-                Log.Pass("Attribute {0} from unknown ns is NOT loaded as Extended attribute.", expectedAttribute.GetFullName());
+                Output.WriteLine("Attribute {0} from unknown ns is NOT loaded as Extended attribute.", expectedAttribute.GetFullName());
             }
             else
             {
-                Log.Fail("Attribute {0} from unknown ns is loaded as Extended attribute.", expectedAttribute.GetFullName());
+                Assert.Fail(string.Format("Attribute {0} from unknown ns is loaded as Extended attribute.", expectedAttribute.GetFullName()));
             }
         }
 
         private void VerifyKnownAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)
         {
-            Log.Comment("Verifying known attribute is loaded as built-in attribute...");
+            Output.WriteLine("Verifying known attribute is loaded as built-in attribute...");
             var verified = (host.GetAttributes().First() == expectedAttribute) && host.ExtendedAttributes.All(ea => ea != expectedAttribute);
             if (verified)
             {
-                Log.Pass("Verified attribute {0} from kown ns is loaded as built-in attribute.", expectedAttribute.GetFullName());
+                Output.WriteLine("Verified attribute {0} from kown ns is loaded as built-in attribute.", expectedAttribute.GetFullName());
             }
             else
             {
-                Log.Fail("Attribute {0} from known ns is NOT loaded as built-in attribute.", expectedAttribute.GetFullName());
+                Assert.Fail(string.Format("Attribute {0} from known ns is NOT loaded as built-in attribute.", expectedAttribute.GetFullName()));
             }
         }
 
@@ -4034,29 +4034,29 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void VerifyNoUnknownElement(OpenXmlElement host, OpenXmlElement expectedElement)
         {
-            Log.Comment("Verifying unknown element is ignored...");
+            Output.WriteLine("Verifying unknown element is ignored...");
             var unknown = (host is OpenXmlUnknownElement) && host.ToXElement().Compare(expectedElement.ToXElement());
             if (unknown)
             {
-                Log.Fail("Element {0} from unknown ns is loaded as OpenXmlUnknownElement.", expectedElement.GetFullName());
+                Assert.Fail(string.Format("Element {0} from unknown ns is loaded as OpenXmlUnknownElement.", expectedElement.GetFullName()));
             }
             else
             {
-                Log.Pass("Element {0} from unknown ns is NOT loaded as OpenXmlUnknownElement.", expectedElement.GetFullName());
+                Output.WriteLine("Element {0} from unknown ns is NOT loaded as OpenXmlUnknownElement.", expectedElement.GetFullName());
             }
         }
 
         private void VerifyKnownElement(OpenXmlElement host, OpenXmlElement expectedElement)
         {
-            Log.Comment("Verifying known element is loaded as strongly typed...");
+            Output.WriteLine("Verifying known element is loaded as strongly typed...");
             var known = !(host is OpenXmlUnknownElement) && host.ToXElement().Compare(expectedElement.ToXElement());
             if (known)
             {
-                Log.Pass("Verified element {0} from kown ns is loaded as strongly typed {1}.", expectedElement.GetFullName(), host.GetType().FullName);
+                Output.WriteLine("Verified element {0} from kown ns is loaded as strongly typed {1}.", expectedElement.GetFullName(), host.GetType().FullName);
             }
             else
             {
-                Log.Fail("Element {0} from known ns is NOT loaded as strongly typed.", expectedElement.GetFullName());
+                Assert.Fail(string.Format("Element {0} from known ns is NOT loaded as strongly typed.", expectedElement.GetFullName()));
             }
         }
 
@@ -4064,50 +4064,50 @@ namespace DocumentFormat.OpenXml.Tests
         {
             if (host is OpenXmlUnknownElement)
             {
-                Log.Warning("Host element {0} IS OpenXmlUnknownElement.", host.GetFullName());
+                Output.WriteLine("Warning: Host element {0} IS OpenXmlUnknownElement.", host.GetFullName());
             }
 
-            Log.Comment("Verifying content of unknown element is loaded as OpenXmlUnkownElement...");
+            Output.WriteLine("Verifying content of unknown element is loaded as OpenXmlUnkownElement...");
             for (int i = 0; i < children.Count; i++)
             {
                 if (!(host.ChildElements[i] is OpenXmlUnknownElement) || !host.ChildElements[i].ToXElement().Compare(children[i].ToXElement()))
                 {
-                    Log.Fail("Element {0} under unknown element is NOT loaded as OpenXmlUnknownElement.", host.ChildElements[i].GetFullName());
+                    Assert.Fail(string.Format("Element {0} under unknown element is NOT loaded as OpenXmlUnknownElement.", host.ChildElements[i].GetFullName()));
                 }
                 else
                 {
-                    Log.Pass("Verified element {0} under unknown element is loaded as OpenXmlUnknownElement.", host.ChildElements[i].GetFullName());
+                    Output.WriteLine("Verified element {0} under unknown element is loaded as OpenXmlUnknownElement.", host.ChildElements[i].GetFullName());
                 }
             }
         }
 
         private void VerifyKnownChildren(OpenXmlElement parent, List<OpenXmlElement> children)
         {
-            Log.Comment("Verifying each child element is loaded as strongly typed element...");
+            Output.WriteLine("Verifying each child element is loaded as strongly typed element...");
             for (int i = 0; i < children.Count; i++)
             {
                 if (!(parent.ChildElements[i] is OpenXmlUnknownElement) && parent.ChildElements[i].ToXElement().Compare(children[i].ToXElement()))
                 {
-                    Log.Pass("Verified child element {0} is loaded as {1}.", parent.ChildElements[i].GetFullName(), parent.ChildElements[i].GetType().FullName);
+                    Output.WriteLine("Verified child element {0} is loaded as {1}.", parent.ChildElements[i].GetFullName(), parent.ChildElements[i].GetType().FullName);
                 }
                 else
                 {
-                    Log.Fail("Child elements {0} is NOT loaded as strongly typed or changed.", parent.ChildElements[i].GetFullName());
+                    Assert.Fail(string.Format("Child elements {0} is NOT loaded as strongly typed or changed.", parent.ChildElements[i].GetFullName()));
                 }
             }
         }
 
         private void VerifyNoUnkownChild(OpenXmlElement host, string qualified)
         {
-            Log.Comment("Verifying NO unknown child element exist...");
+            Output.WriteLine("Verifying NO unknown child element exist...");
             var hasUnknown = host.ChildElements.Any(c => (c is OpenXmlUnknownElement) && (c.GetFullName() == qualified));
             if (!hasUnknown)
             {
-                Log.Pass("Verified NO element {0} from unknown ns exist.", qualified);
+                Output.WriteLine("Verified NO element {0} from unknown ns exist.", qualified);
             }
             else
             {
-                Log.Fail("Element {0} from unknown ns is loaded as OpenXmlUnknownElement.", qualified);
+                Assert.Fail(string.Format("Element {0} from unknown ns is loaded as OpenXmlUnknownElement.", qualified));
             }
         }
 

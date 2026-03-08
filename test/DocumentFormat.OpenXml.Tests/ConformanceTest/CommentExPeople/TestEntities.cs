@@ -2,9 +2,9 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using LogUtil;
 using System.IO;
 using System.Linq;
+using Xunit;
 
 using W15 = DocumentFormat.OpenXml.Office2013.Word;
 
@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
         /// <summary>
         /// Reading of People part element.
         /// </summary>
-        internal void ReadElements(Stream stream, VerifiableLog log)
+        internal void ReadElements(Stream stream, ITestOutputHelper log)
         {
             using (WordprocessingDocument package = WordprocessingDocument.Open(stream, true))
             {
@@ -30,16 +30,16 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
                 W15.Person person = peoplePart.People.Descendants<W15.Person>().First();
                 W15.PresenceInfo presenceInfo = person.Descendants<W15.PresenceInfo>().First();
 
-                log.VerifyValue(person.Author.Value, verifyAuthor, "Person Author attribute is matched. Author={0}", person.Author);
-                log.VerifyValue(presenceInfo.ProviderId.Value, verifyProviderId, "PresenceInfo ProviderId attribute is matched. ProviderId={0}", presenceInfo.ProviderId);
-                log.VerifyValue(presenceInfo.UserId.Value, verifyUserId, "PresenceInfo UserId attribute is matched. UserId={0}", presenceInfo.UserId);
+                Assert.Equal(verifyAuthor, person.Author.Value);
+                Assert.Equal(verifyProviderId, presenceInfo.ProviderId.Value);
+                Assert.Equal(verifyUserId, presenceInfo.UserId.Value);
             }
         }
 
         /// <summary>
         /// Editing of People part element.
         /// </summary>
-        internal void EditElements(Stream stream, VerifiableLog log)
+        internal void EditElements(Stream stream, ITestOutputHelper log)
         {
             using (WordprocessingDocument package = WordprocessingDocument.Open(stream, true))
             {
@@ -51,14 +51,14 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
                 presenceInfo.ProviderId.Value = editProviderId;
                 presenceInfo.UserId.Value = editUserId;
 
-                log.Pass("PresenceInfo in PeoplePart is updated");
+                log.WriteLine("PresenceInfo in PeoplePart is updated");
             }
         }
 
         /// <summary>
         /// Verifying of People part element.
         /// </summary>
-        internal void VerifyElements(Stream stream, VerifiableLog log)
+        internal void VerifyElements(Stream stream, ITestOutputHelper log)
         {
             using (WordprocessingDocument package = WordprocessingDocument.Open(stream, false))
             {
@@ -66,9 +66,9 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
                 W15.Person person = peoplePart.People.Descendants<W15.Person>().First();
                 W15.PresenceInfo presenceInfo = peoplePart.RootElement.Descendants<W15.PresenceInfo>().First();
 
-                log.VerifyValue(person.Author.Value, editAuthor, "Person Author attribute is matched. Author={0}", person.Author);
-                log.VerifyValue(presenceInfo.ProviderId.Value, editProviderId, "PresenceInfo ProviderId attribute is matched. ProviderId={0}", presenceInfo.ProviderId);
-                log.VerifyValue(presenceInfo.UserId.Value, editUserId, "PresenceInfo UserId attribute is matched. UserId={0}", presenceInfo.UserId);
+                Assert.Equal(editAuthor, person.Author.Value);
+                Assert.Equal(editProviderId, presenceInfo.ProviderId.Value);
+                Assert.Equal(editUserId, presenceInfo.UserId.Value);
             }
         }
     }
