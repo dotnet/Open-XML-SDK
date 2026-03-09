@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransition
                 (e) =>
                 {
                     Assert.Equal(OriginalPresetTransition, e.Preset.Value);
-                    Assert.Equal(true, e.InvX.Value);
+                    Assert.True(e.InvX.Value);
                     Assert.Null(e.InvY);
                 },
                 (e) =>
@@ -44,8 +44,8 @@ namespace DocumentFormat.OpenXml.Tests.PresetTransition
                 (e) =>
                 {
                     Assert.Equal(ModifiedPresetTransition, e.Preset.Value);
-                    Assert.Equal(false, e.InvX.Value);
-                    Assert.Equal(true, e.InvY.Value);
+                    Assert.False(e.InvX.Value);
+                    Assert.True(e.InvY.Value);
                 });
         }
         #endregion

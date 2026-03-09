@@ -1656,7 +1656,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 XElement xAfter = ConvertToXElement(hostPart, hostElement);
                 Output.WriteLine("Checking if attributes count is ZERO now...");
-                Assert.Equal(0, xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count());
+                Assert.Empty(xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration));
 
                 Output.WriteLine("Checking if attributes returned correctly...");
                 foreach (var a in attributes)
@@ -2033,7 +2033,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Output.WriteLine("Shallow Clone ...");
                 var clone = hostElement.CloneNode(false);
 
-                Assert.Equal(0, clone.ChildElements.Count);
+                Assert.Empty(clone.ChildElements);
                 Assert.Equal(hostElement.GetFullName(), clone.GetFullName());
                 Output.WriteLine("Verifying attributes cloned exactly...");
                 foreach (var ca in clone.GetAttributes())
@@ -2431,15 +2431,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Retrieving annotations...");
             results = hostElement.Annotations(annotation.GetType());
-            Assert.Equal(1, results.Count());
-            if (results.First() == result)
-            {
-                Output.WriteLine("Annotation retrieved is exactly same one as added.");
-            }
-            else
-            {
-                Assert.Fail("Annotation retrieved is different from the one added.");
-            }
+            Assert.Single(results);
 
             Output.WriteLine("Removing annotations for cleanup...");
             hostElement.RemoveAnnotations(annotation.GetType());
@@ -2483,15 +2475,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Retrieving annotations...");
             var oResults = hostElement.Annotations<OpenXmlElement>();
-            Assert.Equal(1, oResults.Count());
-            if (oResults.First() == result)
-            {
-                Output.WriteLine("Annotation retrieved is exactly same one as added.");
-            }
-            else
-            {
-                Assert.Fail("Annotation retrieved is different from the one added.");
-            }
+            Assert.Single(oResults);
 
             Output.WriteLine("Removing annotations for cleanup...");
             hostElement.RemoveAnnotations<OpenXmlElement>();
@@ -2619,15 +2603,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Retrieving annotations...");
             results = hostElement.Annotations(annotations.GetType());
-            Assert.Equal(1, results.Count());
-            if (results.First() == result)
-            {
-                Output.WriteLine("Annotation retrieved is exactly same one as added.");
-            }
-            else
-            {
-                Assert.Fail("Annotation retrieved is different from the one added.");
-            }
+            Assert.Single(results);
 
             Output.WriteLine("Removing annotations for cleanup...");
             hostElement.RemoveAnnotations(annotations.GetType());

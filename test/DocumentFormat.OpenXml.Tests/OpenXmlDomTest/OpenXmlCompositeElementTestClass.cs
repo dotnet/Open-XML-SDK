@@ -2267,9 +2267,9 @@ namespace DocumentFormat.OpenXml.Tests
                 + "w14:paraId=\"017B6C57\" w14:editId=\"32F17AD3\" w:rsidR=\"00A35C47\"  />";
             var p = new DocumentFormat.OpenXml.Wordprocessing.Paragraph(paragraphXml);
             Assert.NotNull(p.MCAttributes);
-            Assert.Equal(p.NamespaceDeclarations.Count(), 3);    // mc, w14, w
-            Assert.Equal(p.GetAttributes().Count, 4);        // w:rsidR, w14:paraId, w14:editId, mc:Ignorable
-            Assert.Equal(p.ExtendedAttributes.Count(), 2);   // w14:paraId, w14:editId
+            Assert.Equal(3, p.NamespaceDeclarations.Count());    // mc, w14, w
+            Assert.Equal(4, p.GetAttributes().Count);        // w:rsidR, w14:paraId, w14:editId, mc:Ignorable
+            Assert.Equal(2, p.ExtendedAttributes.Count());   // w14:paraId, w14:editId
         }
 
         #endregion Bug Regression

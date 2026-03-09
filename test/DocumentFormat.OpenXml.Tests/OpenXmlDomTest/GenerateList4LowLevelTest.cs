@@ -263,12 +263,12 @@ namespace DocumentFormat.OpenXml.Tests
             var para = new DocumentFormat.OpenXml.Wordprocessing.Paragraph(rawxml);
             Assert.Equal(2, para.NamespaceDeclarations.Count());
             var run = para.FirstChild;
-            Assert.Equal(1, run.NamespaceDeclarations.Count());
+            Assert.Single(run.NamespaceDeclarations);
             Assert.Equal("w12", run.Prefix);
             Assert.Equal(run.NamespaceDeclarations.ElementAt(0).Value, run.NamespaceUri);
             Assert.Equal(run.NamespaceUri, para.NamespaceUri);
             var text = run.FirstChild;
-            Assert.Equal(1, text.NamespaceDeclarations.Count());
+            Assert.Single(text.NamespaceDeclarations);
             Assert.Equal("w", text.Prefix);
             Assert.Equal(text.NamespaceDeclarations.ElementAt(0).Value, text.NamespaceUri);
             Assert.Equal(text.NamespaceUri, run.NamespaceUri);

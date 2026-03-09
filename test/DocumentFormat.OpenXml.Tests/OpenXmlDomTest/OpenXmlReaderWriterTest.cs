@@ -514,9 +514,11 @@ namespace DocumentFormat.OpenXml.Tests
 
                 Output.WriteLine("check if the load is successful");
                 Assert.NotNull(element);
-                Assert.True(element.LocalName.Equals(
-                    xreader.Name.Replace(xreader.Prefix + ":", string.Empty),
-                    StringComparison.OrdinalIgnoreCase), string.Format("LocalName test FAIL. Expected: {0} <> Actual: {1}", xreader.Name.Replace(xreader.Prefix + ":", string.Empty), element.LocalName));
+                Assert.True(
+                    element.LocalName.Equals(
+                        xreader.Name.Replace(xreader.Prefix + ":", string.Empty),
+                        StringComparison.OrdinalIgnoreCase),
+                    string.Format("LocalName test FAIL. Expected: {0} <> Actual: {1}", xreader.Name.Replace(xreader.Prefix + ":", string.Empty), element.LocalName));
                 if (!(reader is OpenXmlDomReader))
                 {
                     Assert.True(element.HasAttributes == xreader.HasAttributes, string.Format("HasAttributes test FAIL. Expected: {0} <> Actual: {1}", xreader.HasAttributes, element.HasAttributes));
