@@ -636,22 +636,6 @@
       "IsLeafElement": true
     },
     {
-      "Name": "c:CT_Boolean/c:date1904",
-      "ClassName": "Date1904",
-      "Summary": "Defines the Date1904 Class.",
-      "BaseClass": "BooleanType",
-      "IsDerived": true,
-      "IsLeafElement": true
-    },
-    {
-      "Name": "c:CT_Boolean/c:roundedCorners",
-      "ClassName": "RoundedCorners",
-      "Summary": "Defines the RoundedCorners Class.",
-      "BaseClass": "BooleanType",
-      "IsDerived": true,
-      "IsLeafElement": true
-    },
-    {
       "Name": "c:CT_Boolean/c:autoTitleDeleted",
       "ClassName": "AutoTitleDeleted",
       "Summary": "True if the chart automatic title has been deleted..",
@@ -671,6 +655,22 @@
       "Name": "c:CT_Boolean/c:showDLblsOverMax",
       "ClassName": "ShowDataLabelsOverMaximum",
       "Summary": "True if we should render datalabels over the maximum scale.",
+      "BaseClass": "BooleanType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "c:CT_Boolean/c:date1904",
+      "ClassName": "Date1904",
+      "Summary": "Defines the Date1904 Class.",
+      "BaseClass": "BooleanType",
+      "IsDerived": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "c:CT_Boolean/c:roundedCorners",
+      "ClassName": "RoundedCorners",
+      "Summary": "Defines the RoundedCorners Class.",
       "BaseClass": "BooleanType",
       "IsDerived": true,
       "IsLeafElement": true
@@ -2525,6 +2525,23 @@
       "Part": "ChartPart",
       "CompositeType": "OneSequence",
       "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":version",
+          "Type": "StringValue",
+          "PropertyComments": "Version number of the file, as determined by the features used by this chart"
+        },
+        {
+          "QName": ":featureList",
+          "Type": "StringValue",
+          "PropertyComments": "A space-delimited list of additional features used in this chart but not captured in the version"
+        },
+        {
+          "QName": ":fallbackImg",
+          "Type": "StringValue",
+          "PropertyComments": "A reference (in the form of a relationship ID) to a fallback image to be used if the chart cannot be loaded"
+        }
+      ],
       "Children": [
         {
           "Name": "c:CT_Boolean/c:date1904",
@@ -11346,847 +11363,6 @@
       }
     },
     {
-      "Name": "c:CT_TextLanguageID/c:lang",
-      "ClassName": "EditingLanguage",
-      "Summary": "Defines the EditingLanguage Class.",
-      "BaseClass": "OpenXmlLeafElement",
-      "IsLeafElement": true,
-      "Attributes": [
-        {
-          "QName": ":val",
-          "PropertyName": "Val",
-          "Type": "StringValue",
-          "PropertyComments": "Language Code",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Name": "c:CT_Style/c:style",
-      "ClassName": "Style",
-      "Summary": "Defines the Style Class.",
-      "BaseClass": "OpenXmlLeafElement",
-      "IsLeafElement": true,
-      "Attributes": [
-        {
-          "QName": ":val",
-          "PropertyName": "Val",
-          "Type": "ByteValue",
-          "PropertyComments": "Style Type",
-          "Validators": [
-            {
-              "Arguments": [
-                {
-                  "Type": "Long",
-                  "Name": "MinInclusive",
-                  "Value": "1"
-                },
-                {
-                  "Type": "Long",
-                  "Name": "MaxInclusive",
-                  "Value": "48"
-                }
-              ],
-              "Name": "NumberValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Name": "a:CT_ColorMapping/c:clrMapOvr",
-      "ClassName": "ColorMapOverride",
-      "Summary": "Defines the ColorMapOverride Class.",
-      "CompositeType": "OneSequence",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":bg1",
-          "PropertyName": "Background1",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
-          "PropertyComments": "Background 1",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        },
-        {
-          "QName": ":tx1",
-          "PropertyName": "Text1",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
-          "PropertyComments": "Text 1",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        },
-        {
-          "QName": ":bg2",
-          "PropertyName": "Background2",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
-          "PropertyComments": "Background 2",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        },
-        {
-          "QName": ":tx2",
-          "PropertyName": "Text2",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
-          "PropertyComments": "Text 2",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        },
-        {
-          "QName": ":accent1",
-          "PropertyName": "Accent1",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
-          "PropertyComments": "Accent 1",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        },
-        {
-          "QName": ":accent2",
-          "PropertyName": "Accent2",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
-          "PropertyComments": "Accent 2",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        },
-        {
-          "QName": ":accent3",
-          "PropertyName": "Accent3",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
-          "PropertyComments": "Accent 3",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        },
-        {
-          "QName": ":accent4",
-          "PropertyName": "Accent4",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
-          "PropertyComments": "Accent 4",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        },
-        {
-          "QName": ":accent5",
-          "PropertyName": "Accent5",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
-          "PropertyComments": "Accent 5",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        },
-        {
-          "QName": ":accent6",
-          "PropertyName": "Accent6",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
-          "PropertyComments": "Accent 6",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        },
-        {
-          "QName": ":hlink",
-          "PropertyName": "Hyperlink",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
-          "PropertyComments": "Hyperlink",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        },
-        {
-          "QName": ":folHlink",
-          "PropertyName": "FollowedHyperlink",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
-          "PropertyComments": "Followed Hyperlink",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "a:CT_OfficeArtExtensionList/a:extLst",
-          "PropertyName": "ExtensionList"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "a:CT_OfficeArtExtensionList/a:extLst",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_PivotSource/c:pivotSource",
-      "ClassName": "PivotSource",
-      "Summary": "Defines the PivotSource Class.",
-      "CompositeType": "OneSequence",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "c:ST_Xstring/c:name",
-          "PropertyName": "PivotTableName",
-          "PropertyComments": "Pivot Name"
-        },
-        {
-          "Name": "c:CT_UnsignedInt/c:fmtId",
-          "PropertyName": "FormatId",
-          "PropertyComments": "Format ID"
-        },
-        {
-          "Name": "c:CT_ExtensionList/c:extLst",
-          "PropertyName": "ExtensionList",
-          "PropertyComments": "Chart Extensibility"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "c:ST_Xstring/c:name"
-          },
-          {
-            "Name": "c:CT_UnsignedInt/c:fmtId"
-          },
-          {
-            "Name": "c:CT_ExtensionList/c:extLst",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_Protection/c:protection",
-      "ClassName": "Protection",
-      "Summary": "Defines the Protection Class.",
-      "CompositeType": "OneSequence",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "c:CT_Boolean/c:chartObject",
-          "PropertyName": "ChartObject",
-          "PropertyComments": "Chart Object"
-        },
-        {
-          "Name": "c:CT_Boolean/c:data",
-          "PropertyName": "Data",
-          "PropertyComments": "Data Cannot Be Changed"
-        },
-        {
-          "Name": "c:CT_Boolean/c:formatting",
-          "PropertyName": "Formatting",
-          "PropertyComments": "Formatting"
-        },
-        {
-          "Name": "c:CT_Boolean/c:selection",
-          "PropertyName": "Selection",
-          "PropertyComments": "Selection"
-        },
-        {
-          "Name": "c:CT_Boolean/c:userInterface",
-          "PropertyName": "UserInterface",
-          "PropertyComments": "User Interface"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "c:CT_Boolean/c:chartObject",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Boolean/c:data",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Boolean/c:formatting",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Boolean/c:selection",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Boolean/c:userInterface",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_Chart/c:chart",
-      "ClassName": "Chart",
-      "Summary": "Defines the Chart Class.",
-      "CompositeType": "OneSequence",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "c:CT_Title/c:title",
-          "PropertyName": "Title",
-          "PropertyComments": "Title data and formatting"
-        },
-        {
-          "Name": "c:CT_Boolean/c:autoTitleDeleted",
-          "PropertyName": "AutoTitleDeleted",
-          "PropertyComments": "True if the chart automatic title has been deleted."
-        },
-        {
-          "Name": "c:CT_PivotFmts/c:pivotFmts",
-          "PropertyName": "PivotFormats",
-          "PropertyComments": "pivot chart format persistence data"
-        },
-        {
-          "Name": "c:CT_View3D/c:view3D",
-          "PropertyName": "View3D",
-          "PropertyComments": "3D view settings"
-        },
-        {
-          "Name": "c:CT_Surface/c:floor",
-          "PropertyName": "Floor",
-          "PropertyComments": "3D floor formatting"
-        },
-        {
-          "Name": "c:CT_Surface/c:sideWall",
-          "PropertyName": "SideWall",
-          "PropertyComments": "3D side wall formatting"
-        },
-        {
-          "Name": "c:CT_Surface/c:backWall",
-          "PropertyName": "BackWall",
-          "PropertyComments": "3D back wall formatting"
-        },
-        {
-          "Name": "c:CT_PlotArea/c:plotArea",
-          "PropertyName": "PlotArea",
-          "PropertyComments": "Plot data and formatting"
-        },
-        {
-          "Name": "c:CT_Legend/c:legend",
-          "PropertyName": "Legend",
-          "PropertyComments": "Legend data and formatting"
-        },
-        {
-          "Name": "c:CT_Boolean/c:plotVisOnly",
-          "PropertyName": "PlotVisibleOnly",
-          "PropertyComments": "True if only visible cells are plotted."
-        },
-        {
-          "Name": "c:CT_DispBlanksAs/c:dispBlanksAs",
-          "PropertyName": "DisplayBlanksAs",
-          "PropertyComments": "The way that blank cells are plotted on a chart."
-        },
-        {
-          "Name": "c:CT_Boolean/c:showDLblsOverMax",
-          "PropertyName": "ShowDataLabelsOverMaximum",
-          "PropertyComments": "True if we should render datalabels over the maximum scale"
-        },
-        {
-          "Name": "c:CT_ChartExtensionList/c:extLst",
-          "PropertyName": "ChartExtensionList",
-          "PropertyComments": "Extensibility container"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "c:CT_Title/c:title",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Boolean/c:autoTitleDeleted",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_PivotFmts/c:pivotFmts",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_View3D/c:view3D",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Surface/c:floor",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Surface/c:sideWall",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Surface/c:backWall",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_PlotArea/c:plotArea"
-          },
-          {
-            "Name": "c:CT_Legend/c:legend",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Boolean/c:plotVisOnly",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_DispBlanksAs/c:dispBlanksAs",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Boolean/c:showDLblsOverMax",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_ChartExtensionList/c:extLst",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_ExternalData/c:externalData",
-      "ClassName": "ExternalData",
-      "Summary": "Defines the ExternalData Class.",
-      "CompositeType": "OneSequence",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": "r:id",
-          "PropertyName": "Id",
-          "Type": "StringValue",
-          "PropertyComments": "Relationship Reference",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "c:CT_Boolean/c:autoUpdate",
-          "PropertyName": "AutoUpdate",
-          "PropertyComments": "Update Automatically"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "c:CT_Boolean/c:autoUpdate",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_PrintSettings/c:printSettings",
-      "ClassName": "PrintSettings",
-      "Summary": "Defines the PrintSettings Class.",
-      "CompositeType": "OneSequence",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "c:CT_HeaderFooter/c:headerFooter",
-          "PropertyName": "HeaderFooter",
-          "PropertyComments": "Header and Footer"
-        },
-        {
-          "Name": "c:CT_PageMargins/c:pageMargins",
-          "PropertyName": "PageMargins",
-          "PropertyComments": "Page Margins"
-        },
-        {
-          "Name": "c:CT_PageSetup/c:pageSetup",
-          "PropertyName": "PageSetup",
-          "PropertyComments": "Page Setup"
-        },
-        {
-          "Name": "c:CT_RelId/c:legacyDrawingHF",
-          "PropertyName": "LegacyDrawingHeaderFooter",
-          "PropertyComments": "Legacy Drawing for Headers and Footers"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "c:CT_HeaderFooter/c:headerFooter",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_PageMargins/c:pageMargins",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_PageSetup/c:pageSetup",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_RelId/c:legacyDrawingHF",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_ChartSpaceExtensionList/c:extLst",
-      "ClassName": "ChartSpaceExtensionList",
-      "Summary": "Defines the ChartSpaceExtensionList Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "c:CT_ChartSpaceExtension/c:ext"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "c:CT_ChartSpaceExtension/c:ext",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_ChartSpaceExtension/c:ext",
-      "ClassName": "ChartSpaceExtension",
-      "Summary": "Defines the ChartSpaceExtension Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":uri",
-          "Type": "StringValue",
-          "PropertyComments": "URI",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "c14:CT_PivotOptions/c14:pivotOptions",
-          "PropertyName": "PivotOptions"
-        },
-        {
-          "Name": "c14:CT_SketchOptions/c14:sketchOptions",
-          "PropertyName": "SketchOptions"
-        },
-        {
-          "Name": "c:CT_PivotSource/c15:pivotSource",
-          "PropertyName": "PivotSource"
-        }
-      ],
-      "Particle": {
-        "Kind": "Choice",
-        "Items": [
-          {
-            "Name": "c14:CT_PivotOptions/c14:pivotOptions",
-            "InitialVersion": "Office2010"
-          },
-          {
-            "Name": "c14:CT_SketchOptions/c14:sketchOptions",
-            "InitialVersion": "Office2010"
-          },
-          {
-            "Name": "c:CT_PivotSource/c15:pivotSource",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Kind": "Any",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       "Name": "c:CT_DLblExtensionList/c:extLst",
       "ClassName": "DLblExtensionList",
       "Summary": "Defines the DLblExtensionList Class.",
@@ -14543,6 +13719,847 @@
               {}
             ],
             "InitialVersion": "Office2019"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_TextLanguageID/c:lang",
+      "ClassName": "EditingLanguage",
+      "Summary": "Defines the EditingLanguage Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "StringValue",
+          "PropertyComments": "Language Code",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "c:CT_Style/c:style",
+      "ClassName": "Style",
+      "Summary": "Defines the Style Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "ByteValue",
+          "PropertyComments": "Style Type",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MinInclusive",
+                  "Value": "1"
+                },
+                {
+                  "Type": "Long",
+                  "Name": "MaxInclusive",
+                  "Value": "48"
+                }
+              ],
+              "Name": "NumberValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "a:CT_ColorMapping/c:clrMapOvr",
+      "ClassName": "ColorMapOverride",
+      "Summary": "Defines the ColorMapOverride Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":bg1",
+          "PropertyName": "Background1",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Background 1",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":tx1",
+          "PropertyName": "Text1",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Text 1",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":bg2",
+          "PropertyName": "Background2",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Background 2",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":tx2",
+          "PropertyName": "Text2",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Text 2",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":accent1",
+          "PropertyName": "Accent1",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Accent 1",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":accent2",
+          "PropertyName": "Accent2",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Accent 2",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":accent3",
+          "PropertyName": "Accent3",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Accent 3",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":accent4",
+          "PropertyName": "Accent4",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Accent 4",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":accent5",
+          "PropertyName": "Accent5",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Accent 5",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":accent6",
+          "PropertyName": "Accent6",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Accent 6",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":hlink",
+          "PropertyName": "Hyperlink",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Hyperlink",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        },
+        {
+          "QName": ":folHlink",
+          "PropertyName": "FollowedHyperlink",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "PropertyComments": "Followed Hyperlink",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "a:CT_OfficeArtExtensionList/a:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_PivotSource/c:pivotSource",
+      "ClassName": "PivotSource",
+      "Summary": "Defines the PivotSource Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "c:ST_Xstring/c:name",
+          "PropertyName": "PivotTableName",
+          "PropertyComments": "Pivot Name"
+        },
+        {
+          "Name": "c:CT_UnsignedInt/c:fmtId",
+          "PropertyName": "FormatId",
+          "PropertyComments": "Format ID"
+        },
+        {
+          "Name": "c:CT_ExtensionList/c:extLst",
+          "PropertyName": "ExtensionList",
+          "PropertyComments": "Chart Extensibility"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:ST_Xstring/c:name"
+          },
+          {
+            "Name": "c:CT_UnsignedInt/c:fmtId"
+          },
+          {
+            "Name": "c:CT_ExtensionList/c:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_Protection/c:protection",
+      "ClassName": "Protection",
+      "Summary": "Defines the Protection Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "c:CT_Boolean/c:chartObject",
+          "PropertyName": "ChartObject",
+          "PropertyComments": "Chart Object"
+        },
+        {
+          "Name": "c:CT_Boolean/c:data",
+          "PropertyName": "Data",
+          "PropertyComments": "Data Cannot Be Changed"
+        },
+        {
+          "Name": "c:CT_Boolean/c:formatting",
+          "PropertyName": "Formatting",
+          "PropertyComments": "Formatting"
+        },
+        {
+          "Name": "c:CT_Boolean/c:selection",
+          "PropertyName": "Selection",
+          "PropertyComments": "Selection"
+        },
+        {
+          "Name": "c:CT_Boolean/c:userInterface",
+          "PropertyName": "UserInterface",
+          "PropertyComments": "User Interface"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_Boolean/c:chartObject",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Boolean/c:data",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Boolean/c:formatting",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Boolean/c:selection",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Boolean/c:userInterface",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_Chart/c:chart",
+      "ClassName": "Chart",
+      "Summary": "Defines the Chart Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "c:CT_Title/c:title",
+          "PropertyName": "Title",
+          "PropertyComments": "Title data and formatting"
+        },
+        {
+          "Name": "c:CT_Boolean/c:autoTitleDeleted",
+          "PropertyName": "AutoTitleDeleted",
+          "PropertyComments": "True if the chart automatic title has been deleted."
+        },
+        {
+          "Name": "c:CT_PivotFmts/c:pivotFmts",
+          "PropertyName": "PivotFormats",
+          "PropertyComments": "pivot chart format persistence data"
+        },
+        {
+          "Name": "c:CT_View3D/c:view3D",
+          "PropertyName": "View3D",
+          "PropertyComments": "3D view settings"
+        },
+        {
+          "Name": "c:CT_Surface/c:floor",
+          "PropertyName": "Floor",
+          "PropertyComments": "3D floor formatting"
+        },
+        {
+          "Name": "c:CT_Surface/c:sideWall",
+          "PropertyName": "SideWall",
+          "PropertyComments": "3D side wall formatting"
+        },
+        {
+          "Name": "c:CT_Surface/c:backWall",
+          "PropertyName": "BackWall",
+          "PropertyComments": "3D back wall formatting"
+        },
+        {
+          "Name": "c:CT_PlotArea/c:plotArea",
+          "PropertyName": "PlotArea",
+          "PropertyComments": "Plot data and formatting"
+        },
+        {
+          "Name": "c:CT_Legend/c:legend",
+          "PropertyName": "Legend",
+          "PropertyComments": "Legend data and formatting"
+        },
+        {
+          "Name": "c:CT_Boolean/c:plotVisOnly",
+          "PropertyName": "PlotVisibleOnly",
+          "PropertyComments": "True if only visible cells are plotted."
+        },
+        {
+          "Name": "c:CT_DispBlanksAs/c:dispBlanksAs",
+          "PropertyName": "DisplayBlanksAs",
+          "PropertyComments": "The way that blank cells are plotted on a chart."
+        },
+        {
+          "Name": "c:CT_Boolean/c:showDLblsOverMax",
+          "PropertyName": "ShowDataLabelsOverMaximum",
+          "PropertyComments": "True if we should render datalabels over the maximum scale"
+        },
+        {
+          "Name": "c:CT_ChartExtensionList/c:extLst",
+          "PropertyName": "ChartExtensionList",
+          "PropertyComments": "Extensibility container"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_Title/c:title",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Boolean/c:autoTitleDeleted",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_PivotFmts/c:pivotFmts",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_View3D/c:view3D",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Surface/c:floor",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Surface/c:sideWall",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Surface/c:backWall",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_PlotArea/c:plotArea"
+          },
+          {
+            "Name": "c:CT_Legend/c:legend",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Boolean/c:plotVisOnly",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_DispBlanksAs/c:dispBlanksAs",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Boolean/c:showDLblsOverMax",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_ChartExtensionList/c:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_ExternalData/c:externalData",
+      "ClassName": "ExternalData",
+      "Summary": "Defines the ExternalData Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": "r:id",
+          "PropertyName": "Id",
+          "Type": "StringValue",
+          "PropertyComments": "Relationship Reference",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "c:CT_Boolean/c:autoUpdate",
+          "PropertyName": "AutoUpdate",
+          "PropertyComments": "Update Automatically"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_Boolean/c:autoUpdate",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_PrintSettings/c:printSettings",
+      "ClassName": "PrintSettings",
+      "Summary": "Defines the PrintSettings Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "c:CT_HeaderFooter/c:headerFooter",
+          "PropertyName": "HeaderFooter",
+          "PropertyComments": "Header and Footer"
+        },
+        {
+          "Name": "c:CT_PageMargins/c:pageMargins",
+          "PropertyName": "PageMargins",
+          "PropertyComments": "Page Margins"
+        },
+        {
+          "Name": "c:CT_PageSetup/c:pageSetup",
+          "PropertyName": "PageSetup",
+          "PropertyComments": "Page Setup"
+        },
+        {
+          "Name": "c:CT_RelId/c:legacyDrawingHF",
+          "PropertyName": "LegacyDrawingHeaderFooter",
+          "PropertyComments": "Legacy Drawing for Headers and Footers"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_HeaderFooter/c:headerFooter",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_PageMargins/c:pageMargins",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_PageSetup/c:pageSetup",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_RelId/c:legacyDrawingHF",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_ChartSpaceExtensionList/c:extLst",
+      "ClassName": "ChartSpaceExtensionList",
+      "Summary": "Defines the ChartSpaceExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "c:CT_ChartSpaceExtension/c:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_ChartSpaceExtension/c:ext",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_ChartSpaceExtension/c:ext",
+      "ClassName": "ChartSpaceExtension",
+      "Summary": "Defines the ChartSpaceExtension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":uri",
+          "Type": "StringValue",
+          "PropertyComments": "URI",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "c14:CT_PivotOptions/c14:pivotOptions",
+          "PropertyName": "PivotOptions"
+        },
+        {
+          "Name": "c14:CT_SketchOptions/c14:sketchOptions",
+          "PropertyName": "SketchOptions"
+        },
+        {
+          "Name": "c:CT_PivotSource/c15:pivotSource",
+          "PropertyName": "PivotSource"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "c14:CT_PivotOptions/c14:pivotOptions",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "c14:CT_SketchOptions/c14:sketchOptions",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "c:CT_PivotSource/c15:pivotSource",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
           }
         ]
       }

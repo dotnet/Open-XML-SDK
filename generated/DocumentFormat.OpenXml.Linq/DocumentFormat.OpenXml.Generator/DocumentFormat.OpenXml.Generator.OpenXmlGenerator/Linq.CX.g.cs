@@ -174,6 +174,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following child XML elements: <see cref="chart" />, <see cref="chartData" />, <see cref="clrMapOvr" />, <see cref="extLst" />, <see cref="fmtOvrs" />, <see cref="printSettings" />, <see cref="spPr" />, <see cref="txPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.fallbackImg" />, <see cref="NoNamespace.featureList" />, <see cref="NoNamespace.version" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ChartSpace.</description></item>
         /// </list>
         /// </remarks>
@@ -879,7 +880,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chart" />.</description></item>
-        /// <item><description>has the following child XML elements: <see cref="extLst" />, <see cref="spPr" />, <see cref="txPr" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="extLst" />, <see cref="offset" />, <see cref="spPr" />, <see cref="txPr" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.align" />, <see cref="NoNamespace.overlay" />, <see cref="NoNamespace.pos" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Legend.</description></item>
         /// </list>
@@ -1105,6 +1106,19 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName oddHeader = cx + "oddHeader";
+
+        /// <summary>
+        /// Represents the cx:offset XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="legend" />, <see cref="title" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.left" />, <see cref="NoNamespace.top" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: Offset.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName offset = cx + "offset";
 
         /// <summary>
         /// Represents the cx:pageMargins XML element.
@@ -1349,7 +1363,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="axis" />, <see cref="chart" />.</description></item>
-        /// <item><description>has the following child XML elements: <see cref="extLst" />, <see cref="spPr" />, <see cref="tx" />, <see cref="txPr" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="extLst" />, <see cref="offset" />, <see cref="spPr" />, <see cref="tx" />, <see cref="txPr" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.align" />, <see cref="NoNamespace.overlay" />, <see cref="NoNamespace.pos" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AxisTitle, ChartTitle.</description></item>
         /// </list>

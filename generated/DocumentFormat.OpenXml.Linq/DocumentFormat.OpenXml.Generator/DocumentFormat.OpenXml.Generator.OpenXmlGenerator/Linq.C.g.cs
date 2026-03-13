@@ -363,6 +363,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="chart" />, <see cref="clrMapOvr" />, <see cref="date1904" />, <see cref="externalData" />, <see cref="extLst" />, <see cref="lang" />, <see cref="pivotSource" />, <see cref="printSettings" />, <see cref="protection" />, <see cref="roundedCorners" />, <see cref="spPr" />, <see cref="style" />, <see cref="txPr" />, <see cref="userShapes" />, <see cref="C14.style" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.fallbackImg" />, <see cref="NoNamespace.featureList" />, <see cref="NoNamespace.version" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ChartSpace.</description></item>
         /// </list>
         /// </remarks>

@@ -1546,66 +1546,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     }
 
     /// <summary>
-    /// <para>Defines the Date1904 Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:date1904.</para>
-    /// </summary>
-    public partial class Date1904 : BooleanType
-    {
-        #pragma warning disable CS0109
-        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "date1904");
-        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
-        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
-        #pragma warning restore CS0109
-
-        /// <summary>
-        /// Initializes a new instance of the Date1904 class.
-        /// </summary>
-        public Date1904() : base()
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(ElementType);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Date1904>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the RoundedCorners Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:roundedCorners.</para>
-    /// </summary>
-    public partial class RoundedCorners : BooleanType
-    {
-        #pragma warning disable CS0109
-        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "roundedCorners");
-        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
-        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
-        #pragma warning restore CS0109
-
-        /// <summary>
-        /// Initializes a new instance of the RoundedCorners class.
-        /// </summary>
-        public RoundedCorners() : base()
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(ElementType);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<RoundedCorners>(deep);
-    }
-
-    /// <summary>
     /// <para>True if the chart automatic title has been deleted..</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:autoTitleDeleted.</para>
@@ -1693,6 +1633,66 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowDataLabelsOverMaximum>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the Date1904 Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:date1904.</para>
+    /// </summary>
+    public partial class Date1904 : BooleanType
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "date1904");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the Date1904 class.
+        /// </summary>
+        public Date1904() : base()
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Date1904>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the RoundedCorners Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:roundedCorners.</para>
+    /// </summary>
+    public partial class RoundedCorners : BooleanType
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "roundedCorners");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Boolean");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the RoundedCorners class.
+        /// </summary>
+        public RoundedCorners() : base()
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<RoundedCorners>(deep);
     }
 
     /// <summary>
@@ -5195,6 +5195,36 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
         }
 
+        /// <summary>
+        /// <para>Version number of the file, as determined by the features used by this chart</para>
+        /// <para>Represents the following attribute in the schema: version</para>
+        /// </summary>
+        public StringValue? Version
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>A space-delimited list of additional features used in this chart but not captured in the version</para>
+        /// <para>Represents the following attribute in the schema: featureList</para>
+        /// </summary>
+        public StringValue? FeatureList
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>A reference (in the form of a relationship ID) to a fallback image to be used if the chart cannot be loaded</para>
+        /// <para>Represents the following attribute in the schema: fallbackImg</para>
+        /// </summary>
+        public StringValue? FallbackImg
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
@@ -5214,6 +5244,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Style.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Style());
             builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage());
             builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style());
+            builder.AddElement<ChartSpace>()
+                .AddAttribute("version", a => a.Version)
+                .AddAttribute("featureList", a => a.FeatureList)
+                .AddAttribute("fallbackImg", a => a.FallbackImg);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Date1904.ElementType, 0, 1),
@@ -19254,1254 +19288,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     }
 
     /// <summary>
-    /// <para>Defines the EditingLanguage Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:lang.</para>
-    /// </summary>
-    public partial class EditingLanguage : OpenXmlLeafElement
-    {
-        #pragma warning disable CS0109
-        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "lang");
-        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_TextLanguageID");
-        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
-        #pragma warning restore CS0109
-
-        /// <summary>
-        /// Initializes a new instance of the EditingLanguage class.
-        /// </summary>
-        public EditingLanguage() : base()
-        {
-        }
-
-        /// <summary>
-        /// <para>Language Code</para>
-        /// <para>Represents the following attribute in the schema: val</para>
-        /// </summary>
-        public StringValue? Val
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(ElementType);
-            builder.AddElement<EditingLanguage>()
-                .AddAttribute("val", a => a.Val, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                });
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<EditingLanguage>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the Style Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:style.</para>
-    /// </summary>
-    public partial class Style : OpenXmlLeafElement
-    {
-        #pragma warning disable CS0109
-        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "style");
-        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Style");
-        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
-        #pragma warning restore CS0109
-
-        /// <summary>
-        /// Initializes a new instance of the Style class.
-        /// </summary>
-        public Style() : base()
-        {
-        }
-
-        /// <summary>
-        /// <para>Style Type</para>
-        /// <para>Represents the following attribute in the schema: val</para>
-        /// </summary>
-        public ByteValue? Val
-        {
-            get => GetAttribute<ByteValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(ElementType);
-            builder.AddElement<Style>()
-                .AddAttribute("val", a => a.Val, aBuilder =>
-                {
-                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (48L) });
-                });
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Style>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the ColorMapOverride Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:clrMapOvr.</para>
-    /// </summary>
-    /// <remarks>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
-    /// </list>
-    /// </remarks>
-    public partial class ColorMapOverride : OpenXmlCompositeElement
-    {
-        #pragma warning disable CS0109
-        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "clrMapOvr");
-        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ColorMapping");
-        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
-        #pragma warning restore CS0109
-
-        /// <summary>
-        /// Initializes a new instance of the ColorMapOverride class.
-        /// </summary>
-        public ColorMapOverride() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ColorMapOverride class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ColorMapOverride(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ColorMapOverride class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ColorMapOverride(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ColorMapOverride class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public ColorMapOverride(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>Background 1</para>
-        /// <para>Represents the following attribute in the schema: bg1</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Background1
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Text 1</para>
-        /// <para>Represents the following attribute in the schema: tx1</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Text1
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Background 2</para>
-        /// <para>Represents the following attribute in the schema: bg2</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Background2
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Text 2</para>
-        /// <para>Represents the following attribute in the schema: tx2</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Text2
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Accent 1</para>
-        /// <para>Represents the following attribute in the schema: accent1</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent1
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Accent 2</para>
-        /// <para>Represents the following attribute in the schema: accent2</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent2
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Accent 3</para>
-        /// <para>Represents the following attribute in the schema: accent3</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent3
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Accent 4</para>
-        /// <para>Represents the following attribute in the schema: accent4</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent4
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Accent 5</para>
-        /// <para>Represents the following attribute in the schema: accent5</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent5
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Accent 6</para>
-        /// <para>Represents the following attribute in the schema: accent6</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent6
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Hyperlink</para>
-        /// <para>Represents the following attribute in the schema: hlink</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Hyperlink
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Followed Hyperlink</para>
-        /// <para>Represents the following attribute in the schema: folHlink</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? FollowedHyperlink
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(ElementType);
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
-            builder.AddElement<ColorMapOverride>()
-                .AddAttribute("bg1", a => a.Background1, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                })
-                .AddAttribute("tx1", a => a.Text1, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                })
-                .AddAttribute("bg2", a => a.Background2, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                })
-                .AddAttribute("tx2", a => a.Text2, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                })
-                .AddAttribute("accent1", a => a.Accent1, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                })
-                .AddAttribute("accent2", a => a.Accent2, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                })
-                .AddAttribute("accent3", a => a.Accent3, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                })
-                .AddAttribute("accent4", a => a.Accent4, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                })
-                .AddAttribute("accent5", a => a.Accent5, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                })
-                .AddAttribute("accent6", a => a.Accent6, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                })
-                .AddAttribute("hlink", a => a.Hyperlink, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                })
-                .AddAttribute("folHlink", a => a.FollowedHyperlink, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                });
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, 0, 1)
-            };
-        }
-
-        /// <summary>
-        /// <para>ExtensionList.</para>
-        /// <para>Represents the following element tag in the schema: a:extLst.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.ExtensionList;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorMapOverride>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the PivotSource Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:pivotSource.</para>
-    /// </summary>
-    /// <remarks>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FormatId" /> <c>&lt;c:fmtId></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PivotTableName" /> <c>&lt;c:name></c></description></item>
-    /// </list>
-    /// </remarks>
-    public partial class PivotSource : OpenXmlCompositeElement
-    {
-        #pragma warning disable CS0109
-        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "pivotSource");
-        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PivotSource");
-        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
-        #pragma warning restore CS0109
-
-        /// <summary>
-        /// Initializes a new instance of the PivotSource class.
-        /// </summary>
-        public PivotSource() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PivotSource class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public PivotSource(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PivotSource class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public PivotSource(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PivotSource class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public PivotSource(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(ElementType);
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.FormatId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.FormatId());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PivotTableName.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PivotTableName());
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PivotTableName.ElementType, 1, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.FormatId.ElementType, 1, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
-            };
-        }
-
-        /// <summary>
-        /// <para>Pivot Name.</para>
-        /// <para>Represents the following element tag in the schema: c:name.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.PivotTableName? PivotTableName
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PivotTableName.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PivotTableName;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PivotTableName.ElementType);
-        }
-
-        /// <summary>
-        /// <para>Format ID.</para>
-        /// <para>Represents the following element tag in the schema: c:fmtId.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.FormatId? FormatId
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.FormatId.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.FormatId;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.FormatId.ElementType);
-        }
-
-        /// <summary>
-        /// <para>Chart Extensibility.</para>
-        /// <para>Represents the following element tag in the schema: c:extLst.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ExtensionList;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotSource>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the Protection Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:protection.</para>
-    /// </summary>
-    /// <remarks>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartObject" /> <c>&lt;c:chartObject></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Data" /> <c>&lt;c:data></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Formatting" /> <c>&lt;c:formatting></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Selection" /> <c>&lt;c:selection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UserInterface" /> <c>&lt;c:userInterface></c></description></item>
-    /// </list>
-    /// </remarks>
-    public partial class Protection : OpenXmlCompositeElement
-    {
-        #pragma warning disable CS0109
-        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "protection");
-        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Protection");
-        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
-        #pragma warning restore CS0109
-
-        /// <summary>
-        /// Initializes a new instance of the Protection class.
-        /// </summary>
-        public Protection() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Protection class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public Protection(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Protection class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public Protection(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Protection class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public Protection(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(ElementType);
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartObject.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartObject());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Data.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Data());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Formatting.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Formatting());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Selection.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Selection());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.UserInterface.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.UserInterface());
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartObject.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Data.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Formatting.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Selection.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.UserInterface.ElementType, 0, 1)
-            };
-        }
-
-        /// <summary>
-        /// <para>Chart Object.</para>
-        /// <para>Represents the following element tag in the schema: c:chartObject.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartObject? ChartObject
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartObject.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartObject;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartObject.ElementType);
-        }
-
-        /// <summary>
-        /// <para>Data Cannot Be Changed.</para>
-        /// <para>Represents the following element tag in the schema: c:data.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.Data? Data
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Data.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Data;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Data.ElementType);
-        }
-
-        /// <summary>
-        /// <para>Formatting.</para>
-        /// <para>Represents the following element tag in the schema: c:formatting.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.Formatting? Formatting
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Formatting.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Formatting;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Formatting.ElementType);
-        }
-
-        /// <summary>
-        /// <para>Selection.</para>
-        /// <para>Represents the following element tag in the schema: c:selection.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.Selection? Selection
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Selection.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Selection;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Selection.ElementType);
-        }
-
-        /// <summary>
-        /// <para>User Interface.</para>
-        /// <para>Represents the following element tag in the schema: c:userInterface.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.UserInterface? UserInterface
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.UserInterface.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.UserInterface;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.UserInterface.ElementType);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Protection>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the Chart Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:chart.</para>
-    /// </summary>
-    /// <remarks>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted" /> <c>&lt;c:autoTitleDeleted></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly" /> <c>&lt;c:plotVisOnly></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum" /> <c>&lt;c:showDLblsOverMax></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs" /> <c>&lt;c:dispBlanksAs></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Legend" /> <c>&lt;c:legend></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PivotFormats" /> <c>&lt;c:pivotFmts></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PlotArea" /> <c>&lt;c:plotArea></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Floor" /> <c>&lt;c:floor></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SideWall" /> <c>&lt;c:sideWall></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BackWall" /> <c>&lt;c:backWall></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Title" /> <c>&lt;c:title></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.View3D" /> <c>&lt;c:view3D></c></description></item>
-    /// </list>
-    /// </remarks>
-    public partial class Chart : OpenXmlCompositeElement
-    {
-        #pragma warning disable CS0109
-        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "chart");
-        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Chart");
-        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
-        #pragma warning restore CS0109
-
-        /// <summary>
-        /// Initializes a new instance of the Chart class.
-        /// </summary>
-        public Chart() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Chart class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public Chart(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Chart class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public Chart(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Chart class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public Chart(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(ElementType);
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Legend.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Legend());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PivotFormats.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PivotFormats());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PlotArea.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PlotArea());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Floor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Floor());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.SideWall.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.SideWall());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.BackWall.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.BackWall());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Title());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.View3D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.View3D());
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PivotFormats.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.View3D.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Floor.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SideWall.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BackWall.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PlotArea.ElementType, 1, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Legend.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList.ElementType, 0, 1)
-            };
-            builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
-        }
-
-        /// <summary>
-        /// <para>Title data and formatting.</para>
-        /// <para>Represents the following element tag in the schema: c:title.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Title;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType);
-        }
-
-        /// <summary>
-        /// <para>True if the chart automatic title has been deleted..</para>
-        /// <para>Represents the following element tag in the schema: c:autoTitleDeleted.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted? AutoTitleDeleted
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted.ElementType);
-        }
-
-        /// <summary>
-        /// <para>pivot chart format persistence data.</para>
-        /// <para>Represents the following element tag in the schema: c:pivotFmts.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.PivotFormats? PivotFormats
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PivotFormats.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PivotFormats;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PivotFormats.ElementType);
-        }
-
-        /// <summary>
-        /// <para>3D view settings.</para>
-        /// <para>Represents the following element tag in the schema: c:view3D.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.View3D? View3D
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.View3D.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.View3D;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.View3D.ElementType);
-        }
-
-        /// <summary>
-        /// <para>3D floor formatting.</para>
-        /// <para>Represents the following element tag in the schema: c:floor.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.Floor? Floor
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Floor.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Floor;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Floor.ElementType);
-        }
-
-        /// <summary>
-        /// <para>3D side wall formatting.</para>
-        /// <para>Represents the following element tag in the schema: c:sideWall.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.SideWall? SideWall
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.SideWall.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.SideWall;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.SideWall.ElementType);
-        }
-
-        /// <summary>
-        /// <para>3D back wall formatting.</para>
-        /// <para>Represents the following element tag in the schema: c:backWall.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.BackWall? BackWall
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.BackWall.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.BackWall;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.BackWall.ElementType);
-        }
-
-        /// <summary>
-        /// <para>Plot data and formatting.</para>
-        /// <para>Represents the following element tag in the schema: c:plotArea.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.PlotArea? PlotArea
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PlotArea.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PlotArea;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PlotArea.ElementType);
-        }
-
-        /// <summary>
-        /// <para>Legend data and formatting.</para>
-        /// <para>Represents the following element tag in the schema: c:legend.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.Legend? Legend
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Legend.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Legend;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Legend.ElementType);
-        }
-
-        /// <summary>
-        /// <para>True if only visible cells are plotted..</para>
-        /// <para>Represents the following element tag in the schema: c:plotVisOnly.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly? PlotVisibleOnly
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly.ElementType);
-        }
-
-        /// <summary>
-        /// <para>The way that blank cells are plotted on a chart..</para>
-        /// <para>Represents the following element tag in the schema: c:dispBlanksAs.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs? DisplayBlanksAs
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs.ElementType);
-        }
-
-        /// <summary>
-        /// <para>True if we should render datalabels over the maximum scale.</para>
-        /// <para>Represents the following element tag in the schema: c:showDLblsOverMax.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum? ShowDataLabelsOverMaximum
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum.ElementType);
-        }
-
-        /// <summary>
-        /// <para>Extensibility container.</para>
-        /// <para>Represents the following element tag in the schema: c:extLst.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList? ChartExtensionList
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList.ElementType);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Chart>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the ExternalData Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:externalData.</para>
-    /// </summary>
-    /// <remarks>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate" /> <c>&lt;c:autoUpdate></c></description></item>
-    /// </list>
-    /// </remarks>
-    public partial class ExternalData : OpenXmlCompositeElement
-    {
-        #pragma warning disable CS0109
-        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "externalData");
-        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ExternalData");
-        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
-        #pragma warning restore CS0109
-
-        /// <summary>
-        /// Initializes a new instance of the ExternalData class.
-        /// </summary>
-        public ExternalData() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ExternalData class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ExternalData(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ExternalData class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ExternalData(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ExternalData class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public ExternalData(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>Relationship Reference</para>
-        /// <para>Represents the following attribute in the schema: r:id</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remarks>
-        public StringValue? Id
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(ElementType);
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate());
-            builder.AddElement<ExternalData>()
-                .AddAttribute("r:id", a => a.Id, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                });
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate.ElementType, 0, 1)
-            };
-            builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
-        }
-
-        /// <summary>
-        /// <para>Update Automatically.</para>
-        /// <para>Represents the following element tag in the schema: c:autoUpdate.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate? AutoUpdate
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate.ElementType);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExternalData>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the PrintSettings Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:printSettings.</para>
-    /// </summary>
-    /// <remarks>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter" /> <c>&lt;c:headerFooter></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PageMargins" /> <c>&lt;c:pageMargins></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PageSetup" /> <c>&lt;c:pageSetup></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter" /> <c>&lt;c:legacyDrawingHF></c></description></item>
-    /// </list>
-    /// </remarks>
-    public partial class PrintSettings : OpenXmlCompositeElement
-    {
-        #pragma warning disable CS0109
-        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "printSettings");
-        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PrintSettings");
-        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
-        #pragma warning restore CS0109
-
-        /// <summary>
-        /// Initializes a new instance of the PrintSettings class.
-        /// </summary>
-        public PrintSettings() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PrintSettings class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public PrintSettings(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PrintSettings class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public PrintSettings(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PrintSettings class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public PrintSettings(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(ElementType);
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PageMargins.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PageMargins());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PageSetup.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PageSetup());
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter());
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PageMargins.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PageSetup.ElementType, 0, 1),
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter.ElementType, 0, 1)
-            };
-        }
-
-        /// <summary>
-        /// <para>Header and Footer.</para>
-        /// <para>Represents the following element tag in the schema: c:headerFooter.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter? HeaderFooter
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter.ElementType);
-        }
-
-        /// <summary>
-        /// <para>Page Margins.</para>
-        /// <para>Represents the following element tag in the schema: c:pageMargins.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.PageMargins? PageMargins
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PageMargins.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PageMargins;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PageMargins.ElementType);
-        }
-
-        /// <summary>
-        /// <para>Page Setup.</para>
-        /// <para>Represents the following element tag in the schema: c:pageSetup.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.PageSetup? PageSetup
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PageSetup.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PageSetup;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PageSetup.ElementType);
-        }
-
-        /// <summary>
-        /// <para>Legacy Drawing for Headers and Footers.</para>
-        /// <para>Represents the following element tag in the schema: c:legacyDrawingHF.</para>
-        /// </summary>
-        /// <remarks>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remarks>
-        public DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
-        {
-            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter;
-            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter.ElementType);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintSettings>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the ChartSpaceExtensionList Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
-    /// </summary>
-    /// <remarks>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension" /> <c>&lt;c:ext></c></description></item>
-    /// </list>
-    /// </remarks>
-    public partial class ChartSpaceExtensionList : OpenXmlCompositeElement
-    {
-        #pragma warning disable CS0109
-        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
-        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ChartSpaceExtensionList");
-        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
-        #pragma warning restore CS0109
-
-        /// <summary>
-        /// Initializes a new instance of the ChartSpaceExtensionList class.
-        /// </summary>
-        public ChartSpaceExtensionList() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ChartSpaceExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ChartSpaceExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ChartSpaceExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ChartSpaceExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ChartSpaceExtensionList class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public ChartSpaceExtensionList(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(ElementType);
-            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension());
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension.ElementType, 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartSpaceExtensionList>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the ChartSpaceExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
-    /// </summary>
-    /// <remarks>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource" /> <c>&lt;c15:pivotSource></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions" /> <c>&lt;c14:pivotOptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions" /> <c>&lt;c14:sketchOptions></c></description></item>
-    /// </list>
-    /// </remarks>
-    public partial class ChartSpaceExtension : OpenXmlCompositeElement
-    {
-        #pragma warning disable CS0109
-        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
-        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ChartSpaceExtension");
-        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
-        #pragma warning restore CS0109
-
-        /// <summary>
-        /// Initializes a new instance of the ChartSpaceExtension class.
-        /// </summary>
-        public ChartSpaceExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ChartSpaceExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ChartSpaceExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ChartSpaceExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ChartSpaceExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ChartSpaceExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public ChartSpaceExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema(ElementType);
-            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource());
-            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions());
-            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions());
-            builder.AddElement<ChartSpaceExtension>()
-                .AddAttribute("uri", a => a.Uri, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                });
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions.ElementType, 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions.ElementType, 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource.ElementType, 1, 1, version: FileFormatVersions.Office2013),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartSpaceExtension>(deep);
-    }
-
-    /// <summary>
     /// <para>Defines the DLblExtensionList Class.</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
@@ -23910,6 +22696,1254 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the EditingLanguage Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:lang.</para>
+    /// </summary>
+    public partial class EditingLanguage : OpenXmlLeafElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "lang");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_TextLanguageID");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the EditingLanguage class.
+        /// </summary>
+        public EditingLanguage() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Language Code</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        public StringValue? Val
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+            builder.AddElement<EditingLanguage>()
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<EditingLanguage>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the Style Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:style.</para>
+    /// </summary>
+    public partial class Style : OpenXmlLeafElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "style");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Style");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the Style class.
+        /// </summary>
+        public Style() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Style Type</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        public ByteValue? Val
+        {
+            get => GetAttribute<ByteValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+            builder.AddElement<Style>()
+                .AddAttribute("val", a => a.Val, aBuilder =>
+                {
+                    aBuilder.AddValidator(new NumberValidator() { MinInclusive = (1L), MaxInclusive = (48L) });
+                });
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Style>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the ColorMapOverride Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:clrMapOvr.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    /// </list>
+    /// </remarks>
+    public partial class ColorMapOverride : OpenXmlCompositeElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "clrMapOvr");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/main", "CT_ColorMapping");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the ColorMapOverride class.
+        /// </summary>
+        public ColorMapOverride() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorMapOverride class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColorMapOverride(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorMapOverride class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColorMapOverride(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColorMapOverride class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ColorMapOverride(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Background 1</para>
+        /// <para>Represents the following attribute in the schema: bg1</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Background1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Text 1</para>
+        /// <para>Represents the following attribute in the schema: tx1</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Text1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Background 2</para>
+        /// <para>Represents the following attribute in the schema: bg2</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Background2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Text 2</para>
+        /// <para>Represents the following attribute in the schema: tx2</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Text2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Accent 1</para>
+        /// <para>Represents the following attribute in the schema: accent1</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent1
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Accent 2</para>
+        /// <para>Represents the following attribute in the schema: accent2</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent2
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Accent 3</para>
+        /// <para>Represents the following attribute in the schema: accent3</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent3
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Accent 4</para>
+        /// <para>Represents the following attribute in the schema: accent4</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent4
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Accent 5</para>
+        /// <para>Represents the following attribute in the schema: accent5</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent5
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Accent 6</para>
+        /// <para>Represents the following attribute in the schema: accent6</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent6
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Hyperlink</para>
+        /// <para>Represents the following attribute in the schema: hlink</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Hyperlink
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Followed Hyperlink</para>
+        /// <para>Represents the following attribute in the schema: folHlink</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? FollowedHyperlink
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.ExtensionList());
+            builder.AddElement<ColorMapOverride>()
+                .AddAttribute("bg1", a => a.Background1, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("tx1", a => a.Text1, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("bg2", a => a.Background2, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("tx2", a => a.Text2, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent1", a => a.Accent1, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent2", a => a.Accent2, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent3", a => a.Accent3, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent4", a => a.Accent4, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent5", a => a.Accent5, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("accent6", a => a.Accent6, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("hlink", a => a.Hyperlink, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                })
+                .AddAttribute("folHlink", a => a.FollowedHyperlink, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType, 0, 1)
+            };
+        }
+
+        /// <summary>
+        /// <para>ExtensionList.</para>
+        /// <para>Represents the following element tag in the schema: a:extLst.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.ExtensionList.ElementType);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorMapOverride>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the PivotSource Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:pivotSource.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FormatId" /> <c>&lt;c:fmtId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PivotTableName" /> <c>&lt;c:name></c></description></item>
+    /// </list>
+    /// </remarks>
+    public partial class PivotSource : OpenXmlCompositeElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "pivotSource");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PivotSource");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the PivotSource class.
+        /// </summary>
+        public PivotSource() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PivotSource class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PivotSource(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PivotSource class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PivotSource(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PivotSource class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public PivotSource(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.FormatId.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.FormatId());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PivotTableName.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PivotTableName());
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PivotTableName.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.FormatId.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType, 0, 1)
+            };
+        }
+
+        /// <summary>
+        /// <para>Pivot Name.</para>
+        /// <para>Represents the following element tag in the schema: c:name.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.PivotTableName? PivotTableName
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PivotTableName.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PivotTableName;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PivotTableName.ElementType);
+        }
+
+        /// <summary>
+        /// <para>Format ID.</para>
+        /// <para>Represents the following element tag in the schema: c:fmtId.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.FormatId? FormatId
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.FormatId.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.FormatId;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.FormatId.ElementType);
+        }
+
+        /// <summary>
+        /// <para>Chart Extensibility.</para>
+        /// <para>Represents the following element tag in the schema: c:extLst.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ExtensionList.ElementType);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotSource>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the Protection Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:protection.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartObject" /> <c>&lt;c:chartObject></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Data" /> <c>&lt;c:data></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Formatting" /> <c>&lt;c:formatting></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Selection" /> <c>&lt;c:selection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UserInterface" /> <c>&lt;c:userInterface></c></description></item>
+    /// </list>
+    /// </remarks>
+    public partial class Protection : OpenXmlCompositeElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "protection");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Protection");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the Protection class.
+        /// </summary>
+        public Protection() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Protection class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Protection(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Protection class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Protection(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Protection class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Protection(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartObject.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartObject());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Data.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Data());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Formatting.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Formatting());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Selection.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Selection());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.UserInterface.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.UserInterface());
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartObject.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Data.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Formatting.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Selection.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.UserInterface.ElementType, 0, 1)
+            };
+        }
+
+        /// <summary>
+        /// <para>Chart Object.</para>
+        /// <para>Represents the following element tag in the schema: c:chartObject.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartObject? ChartObject
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartObject.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartObject;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartObject.ElementType);
+        }
+
+        /// <summary>
+        /// <para>Data Cannot Be Changed.</para>
+        /// <para>Represents the following element tag in the schema: c:data.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.Data? Data
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Data.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Data;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Data.ElementType);
+        }
+
+        /// <summary>
+        /// <para>Formatting.</para>
+        /// <para>Represents the following element tag in the schema: c:formatting.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.Formatting? Formatting
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Formatting.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Formatting;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Formatting.ElementType);
+        }
+
+        /// <summary>
+        /// <para>Selection.</para>
+        /// <para>Represents the following element tag in the schema: c:selection.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.Selection? Selection
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Selection.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Selection;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Selection.ElementType);
+        }
+
+        /// <summary>
+        /// <para>User Interface.</para>
+        /// <para>Represents the following element tag in the schema: c:userInterface.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.UserInterface? UserInterface
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.UserInterface.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.UserInterface;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.UserInterface.ElementType);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Protection>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the Chart Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:chart.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted" /> <c>&lt;c:autoTitleDeleted></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly" /> <c>&lt;c:plotVisOnly></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum" /> <c>&lt;c:showDLblsOverMax></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs" /> <c>&lt;c:dispBlanksAs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Legend" /> <c>&lt;c:legend></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PivotFormats" /> <c>&lt;c:pivotFmts></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PlotArea" /> <c>&lt;c:plotArea></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Floor" /> <c>&lt;c:floor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SideWall" /> <c>&lt;c:sideWall></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BackWall" /> <c>&lt;c:backWall></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Title" /> <c>&lt;c:title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.View3D" /> <c>&lt;c:view3D></c></description></item>
+    /// </list>
+    /// </remarks>
+    public partial class Chart : OpenXmlCompositeElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "chart");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_Chart");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the Chart class.
+        /// </summary>
+        public Chart() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Chart class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Chart(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Chart class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Chart(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Chart class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Chart(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Legend.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Legend());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PivotFormats.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PivotFormats());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PlotArea.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PlotArea());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Floor.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Floor());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.SideWall.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.SideWall());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.BackWall.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.BackWall());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.Title());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.View3D.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.View3D());
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PivotFormats.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.View3D.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Floor.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.SideWall.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.BackWall.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PlotArea.ElementType, 1, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.Legend.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList.ElementType, 0, 1)
+            };
+            builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
+        }
+
+        /// <summary>
+        /// <para>Title data and formatting.</para>
+        /// <para>Represents the following element tag in the schema: c:title.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Title;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Title.ElementType);
+        }
+
+        /// <summary>
+        /// <para>True if the chart automatic title has been deleted..</para>
+        /// <para>Represents the following element tag in the schema: c:autoTitleDeleted.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted? AutoTitleDeleted
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted.ElementType);
+        }
+
+        /// <summary>
+        /// <para>pivot chart format persistence data.</para>
+        /// <para>Represents the following element tag in the schema: c:pivotFmts.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.PivotFormats? PivotFormats
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PivotFormats.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PivotFormats;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PivotFormats.ElementType);
+        }
+
+        /// <summary>
+        /// <para>3D view settings.</para>
+        /// <para>Represents the following element tag in the schema: c:view3D.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.View3D? View3D
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.View3D.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.View3D;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.View3D.ElementType);
+        }
+
+        /// <summary>
+        /// <para>3D floor formatting.</para>
+        /// <para>Represents the following element tag in the schema: c:floor.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.Floor? Floor
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Floor.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Floor;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Floor.ElementType);
+        }
+
+        /// <summary>
+        /// <para>3D side wall formatting.</para>
+        /// <para>Represents the following element tag in the schema: c:sideWall.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.SideWall? SideWall
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.SideWall.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.SideWall;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.SideWall.ElementType);
+        }
+
+        /// <summary>
+        /// <para>3D back wall formatting.</para>
+        /// <para>Represents the following element tag in the schema: c:backWall.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.BackWall? BackWall
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.BackWall.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.BackWall;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.BackWall.ElementType);
+        }
+
+        /// <summary>
+        /// <para>Plot data and formatting.</para>
+        /// <para>Represents the following element tag in the schema: c:plotArea.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.PlotArea? PlotArea
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PlotArea.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PlotArea;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PlotArea.ElementType);
+        }
+
+        /// <summary>
+        /// <para>Legend data and formatting.</para>
+        /// <para>Represents the following element tag in the schema: c:legend.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.Legend? Legend
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.Legend.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.Legend;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.Legend.ElementType);
+        }
+
+        /// <summary>
+        /// <para>True if only visible cells are plotted..</para>
+        /// <para>Represents the following element tag in the schema: c:plotVisOnly.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly? PlotVisibleOnly
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly.ElementType);
+        }
+
+        /// <summary>
+        /// <para>The way that blank cells are plotted on a chart..</para>
+        /// <para>Represents the following element tag in the schema: c:dispBlanksAs.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs? DisplayBlanksAs
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs.ElementType);
+        }
+
+        /// <summary>
+        /// <para>True if we should render datalabels over the maximum scale.</para>
+        /// <para>Represents the following element tag in the schema: c:showDLblsOverMax.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum? ShowDataLabelsOverMaximum
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum.ElementType);
+        }
+
+        /// <summary>
+        /// <para>Extensibility container.</para>
+        /// <para>Represents the following element tag in the schema: c:extLst.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList? ChartExtensionList
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList.ElementType);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Chart>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the ExternalData Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:externalData.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate" /> <c>&lt;c:autoUpdate></c></description></item>
+    /// </list>
+    /// </remarks>
+    public partial class ExternalData : OpenXmlCompositeElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "externalData");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ExternalData");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the ExternalData class.
+        /// </summary>
+        public ExternalData() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ExternalData class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ExternalData(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ExternalData class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ExternalData(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ExternalData class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ExternalData(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Relationship Reference</para>
+        /// <para>Represents the following attribute in the schema: r:id</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
+        /// </remarks>
+        public StringValue? Id
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate());
+            builder.AddElement<ExternalData>()
+                .AddAttribute("r:id", a => a.Id, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate.ElementType, 0, 1)
+            };
+            builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
+        }
+
+        /// <summary>
+        /// <para>Update Automatically.</para>
+        /// <para>Represents the following element tag in the schema: c:autoUpdate.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate? AutoUpdate
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate.ElementType);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExternalData>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the PrintSettings Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:printSettings.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter" /> <c>&lt;c:headerFooter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PageMargins" /> <c>&lt;c:pageMargins></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PageSetup" /> <c>&lt;c:pageSetup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter" /> <c>&lt;c:legacyDrawingHF></c></description></item>
+    /// </list>
+    /// </remarks>
+    public partial class PrintSettings : OpenXmlCompositeElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "printSettings");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_PrintSettings");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the PrintSettings class.
+        /// </summary>
+        public PrintSettings() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PrintSettings class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PrintSettings(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PrintSettings class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PrintSettings(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PrintSettings class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public PrintSettings(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PageMargins.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PageMargins());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.PageSetup.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.PageSetup());
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter());
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PageMargins.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.PageSetup.ElementType, 0, 1),
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter.ElementType, 0, 1)
+            };
+        }
+
+        /// <summary>
+        /// <para>Header and Footer.</para>
+        /// <para>Represents the following element tag in the schema: c:headerFooter.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter? HeaderFooter
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter.ElementType);
+        }
+
+        /// <summary>
+        /// <para>Page Margins.</para>
+        /// <para>Represents the following element tag in the schema: c:pageMargins.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.PageMargins? PageMargins
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PageMargins.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PageMargins;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PageMargins.ElementType);
+        }
+
+        /// <summary>
+        /// <para>Page Setup.</para>
+        /// <para>Represents the following element tag in the schema: c:pageSetup.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.PageSetup? PageSetup
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.PageSetup.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.PageSetup;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.PageSetup.ElementType);
+        }
+
+        /// <summary>
+        /// <para>Legacy Drawing for Headers and Footers.</para>
+        /// <para>Represents the following element tag in the schema: c:legacyDrawingHF.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remarks>
+        public DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
+        {
+            get => GetElement(DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter.ElementType) as DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter;
+            set => SetElement(value, DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter.ElementType);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintSettings>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the ChartSpaceExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension" /> <c>&lt;c:ext></c></description></item>
+    /// </list>
+    /// </remarks>
+    public partial class ChartSpaceExtensionList : OpenXmlCompositeElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "extLst");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ChartSpaceExtensionList");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the ChartSpaceExtensionList class.
+        /// </summary>
+        public ChartSpaceExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ChartSpaceExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ChartSpaceExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ChartSpaceExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ChartSpaceExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ChartSpaceExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ChartSpaceExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension.ElementType, static () => new DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension());
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension.ElementType, 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartSpaceExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the ChartSpaceExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
+    /// </summary>
+    /// <remarks>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource" /> <c>&lt;c15:pivotSource></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions" /> <c>&lt;c14:pivotOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions" /> <c>&lt;c14:sketchOptions></c></description></item>
+    /// </list>
+    /// </remarks>
+    public partial class ChartSpaceExtension : OpenXmlCompositeElement
+    {
+        #pragma warning disable CS0109
+        internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "ext");
+        internal static readonly new OpenXmlQualifiedName ElementTypeName = new("http://schemas.openxmlformats.org/drawingml/2006/chart", "CT_ChartSpaceExtension");
+        internal static readonly new OpenXmlSchemaType ElementType = new(ElementQName, ElementTypeName);
+        #pragma warning restore CS0109
+
+        /// <summary>
+        /// Initializes a new instance of the ChartSpaceExtension class.
+        /// </summary>
+        public ChartSpaceExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ChartSpaceExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ChartSpaceExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ChartSpaceExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ChartSpaceExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ChartSpaceExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ChartSpaceExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema(ElementType);
+            builder.AddChild(DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource.ElementType, static () => new DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions());
+            builder.AddChild(DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions.ElementType, static () => new DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions());
+            builder.AddElement<ChartSpaceExtension>()
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions.ElementType, 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource.ElementType, 1, 1, version: FileFormatVersions.Office2013),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartSpaceExtension>(deep);
     }
 
     /// <summary>

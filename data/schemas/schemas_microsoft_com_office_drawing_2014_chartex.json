@@ -9,6 +9,26 @@
       "CompositeType": "OneSequence",
       "BaseClass": "OpenXmlCompositeElement",
       "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":version",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "version"
+        },
+        {
+          "QName": ":featureList",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "featureList"
+        },
+        {
+          "QName": ":fallbackImg",
+          "Type": "StringValue",
+          "Version": "Office2016",
+          "PropertyComments": "fallbackImg"
+        }
+      ],
       "Children": [
         {
           "Name": "cx:CT_ChartData/cx:chartData",
@@ -1403,6 +1423,38 @@
       }
     },
     {
+      "Name": "cx:CT_Offset/cx:offset",
+      "ClassName": "Offset",
+      "Summary": "Defines the Offset Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Office2016",
+      "Attributes": [
+        {
+          "QName": ":top",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "top",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":left",
+          "Type": "DoubleValue",
+          "Version": "Office2016",
+          "PropertyComments": "left",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "Name": "cx:CT_AxisUnitsLabel/cx:unitsLabel",
       "ClassName": "AxisUnitsLabel",
       "Summary": "Defines the AxisUnitsLabel Class.",
@@ -1626,6 +1678,10 @@
           "PropertyName": "TxPrTextBody"
         },
         {
+          "Name": "cx:CT_Offset/cx:offset",
+          "PropertyName": "Offset"
+        },
+        {
           "Name": "cx:CT_ExtensionList/cx:extLst",
           "PropertyName": "ExtensionList"
         }
@@ -1653,6 +1709,15 @@
           },
           {
             "Name": "a:CT_TextBody/cx:txPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_Offset/cx:offset",
             "Occurs": [
               {
                 "Max": 1
@@ -4800,6 +4865,10 @@
           "PropertyName": "TxPrTextBody"
         },
         {
+          "Name": "cx:CT_Offset/cx:offset",
+          "PropertyName": "Offset"
+        },
+        {
           "Name": "cx:CT_ExtensionList/cx:extLst",
           "PropertyName": "ExtensionList"
         }
@@ -4827,6 +4896,15 @@
           },
           {
             "Name": "a:CT_TextBody/cx:txPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_Offset/cx:offset",
             "Occurs": [
               {
                 "Max": 1
@@ -4940,6 +5018,10 @@
           "PropertyName": "TxPrTextBody"
         },
         {
+          "Name": "cx:CT_Offset/cx:offset",
+          "PropertyName": "Offset"
+        },
+        {
           "Name": "cx:CT_ExtensionList/cx:extLst",
           "PropertyName": "ExtensionList"
         }
@@ -4958,6 +5040,15 @@
           },
           {
             "Name": "a:CT_TextBody/cx:txPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "cx:CT_Offset/cx:offset",
             "Occurs": [
               {
                 "Max": 1
@@ -5792,6 +5883,29 @@
     }
   ],
   "Enums": [
+    {
+      "Type": "cx:ST_ExtensionDropMode",
+      "Name": "ExtensionDropMode",
+      "Facets": [
+        {
+          "Version": "Office2016",
+          "Value": "never"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "onModelChange"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "onDataChange"
+        },
+        {
+          "Version": "Office2016",
+          "Value": "always"
+        }
+      ],
+      "Version": "Office2016"
+    },
     {
       "Type": "cx:ST_FormulaDirection",
       "Name": "FormulaDirection",
