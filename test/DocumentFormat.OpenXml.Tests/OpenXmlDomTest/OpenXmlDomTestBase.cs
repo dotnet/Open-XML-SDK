@@ -1656,7 +1656,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 XElement xAfter = ConvertToXElement(hostPart, hostElement);
                 Output.WriteLine("Checking if attributes count is ZERO now...");
-                Assert.Empty(xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration));
+                Assert.DoesNotContain(xAfter.Attributes(), xa => !xa.IsNamespaceDeclaration);
 
                 Output.WriteLine("Checking if attributes returned correctly...");
                 foreach (var a in attributes)
