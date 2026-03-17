@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
                 WorkbookExtensionList workbookExtensionList = package.WorkbookPart.Workbook.Descendants<WorkbookExtensionList>().Single();
                 X15.WorkbookProperties workbookProperties = workbookExtensionList.Descendants<X15.WorkbookProperties>().Single();
 
-                Assert.True(workbookProperties.ChartTrackingReferenceBase.Value == false, "UnChanged in the ChartTrackingReferenceBase attribute value on workbookPr element.");
+                Assert.False(workbookProperties.ChartTrackingReferenceBase.Value, "UnChanged in the ChartTrackingReferenceBase attribute value on workbookPr element.");
 
                 X15ac.AbsolutePath absolutePath = package.WorkbookPart.Workbook.AbsolutePath;
                 Assert.NotNull(absolutePath);
@@ -115,10 +115,10 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013) }))
             {
                 int workbookExtensionNum = package.WorkbookPart.Workbook.Descendants<WorkbookExtension>().Where(e => e.Uri == WorkbookPrExtUri).Count();
-                Assert.True(workbookExtensionNum == 0, "WorkbookExtension element is not deleted.");
+                Assert.Equal(0, workbookExtensionNum);
 
                 int workbookPrCount = package.WorkbookPart.Workbook.Descendants<X15.WorkbookProperties>().Count();
-                Assert.True(workbookPrCount == 0, "workbookPr element is not deleted.");
+                Assert.Equal(0, workbookPrCount);
 
                 X15ac.AbsolutePath absolutePath = package.WorkbookPart.Workbook.AbsolutePath;
                 Assert.True(absolutePath is null, "X15ac.AbsolutePath element is not deleted.");
@@ -174,7 +174,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
             {
                 WorkbookExtensionList workbookExtensionList = package.WorkbookPart.Workbook.Descendants<WorkbookExtensionList>().Single();
                 int workbookPrNum = workbookExtensionList.Descendants<X15.WorkbookProperties>().Count();
-                Assert.True(workbookPrNum == 1, "Missing workbookPr element.");
+                Assert.Equal(1, workbookPrNum);
 
                 X15ac.AbsolutePath absolutePath = package.WorkbookPart.Workbook.AbsolutePath;
                 Assert.True(absolutePath is not null, "Missing X15ac.AbsolutePath element.");

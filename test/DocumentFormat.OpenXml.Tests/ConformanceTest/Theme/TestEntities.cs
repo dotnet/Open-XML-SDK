@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
-                Assert.True(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == ThemeId2, string.Format("UnChanged in the id attribute value on theme element. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value));
+                Assert.Equal(ThemeId2, package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value);
             }
         }
 
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Tests.Theme
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
-                Assert.True(package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value == ThemeId1, string.Format("UnChanged in the id attribute value on theme element. ID value=[{0}]", package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value));
+                Assert.Equal(ThemeId1, package.PresentationPart.SlideMasterParts.First().ThemePart.Theme.ThemeId.Value);
             }
         }
     }

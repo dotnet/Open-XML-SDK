@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine(" ****** test HasChildren ******");
             Output.WriteLine("check if the hasChildren is correct");
-            Assert.True(xroot.HasElements == root.HasChildren, "hasChildren is not correct");
+            Assert.Equal(xroot.HasElements, root.HasChildren);
 
             if (root.HasChildren)
             {

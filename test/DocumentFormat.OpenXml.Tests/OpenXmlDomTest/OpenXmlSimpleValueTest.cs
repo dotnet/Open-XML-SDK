@@ -75,7 +75,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Explicit bool conversion with value {0} and testing", validValue);
             objB = BooleanValue.FromBoolean(validValue);
-            Assert.True(BooleanValue.ToBoolean(objB) == validValue, "FromXX() value doesn't equal to ToXX() value!");
+            Assert.Equal(validValue, BooleanValue.ToBoolean(objB));
 
             Output.WriteLine("Constructing with another instance with valid value...");
             objA = new BooleanValue(validValue);
@@ -184,7 +184,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Explicit byte conversion with value {0} and testing", validValue);
             objB = ByteValue.FromByte(validValue);
-            Assert.True(ByteValue.ToByte(objB) == validValue, "FromByte() value doesn't equal to ToByte() value!");
+            Assert.Equal(validValue, ByteValue.ToByte(objB));
 
             Output.WriteLine("Constructing with another instance with valid value...");
             objA = new ByteValue(validValue);
@@ -252,7 +252,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Explicit SByteValue conversion with value {0} and testing", validValue);
             objB = SByteValue.FromSByte(validValue);
-            Assert.True(SByteValue.ToSByte(objB) == validValue, "FromSByte() value doesn't equal to ToSByte() value!");
+            Assert.Equal(validValue, SByteValue.ToSByte(objB));
 
             Output.WriteLine("Constructing with another instance with valid value...");
             objA = new SByteValue(validValue);
@@ -320,7 +320,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Explicit conversion with value {0} and testing", validValue);
             objB = UInt16Value.FromUInt16(validValue);
-            Assert.True(UInt16Value.ToUInt16(objB) == validValue, "FromUInt16() value doesn't equal to ToUInt16() value!");
+            Assert.Equal(validValue, UInt16Value.ToUInt16(objB));
 
             Output.WriteLine("Constructing with another instance with valid value...");
             objA = new UInt16Value(validValue);
@@ -388,7 +388,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Explicit conversion with value {0} and testing", validValue);
             objB = UInt32Value.FromUInt32(validValue);
-            Assert.True(UInt32Value.ToUInt32(objB) == validValue, "FromUInt32() value doesn't equal to ToUInt32() value!");
+            Assert.Equal(validValue, UInt32Value.ToUInt32(objB));
 
             Output.WriteLine("Constructing with another instance with valid value...");
             objA = new UInt32Value(validValue);
@@ -456,7 +456,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Explicit conversion with value {0} and testing", validValue);
             objB = Int32Value.FromInt32(validValue);
-            Assert.True(Int32Value.ToInt32(objB) == validValue, "FromInt32() value doesn't equal to ToInt32() value!");
+            Assert.Equal(validValue, Int32Value.ToInt32(objB));
 
             Output.WriteLine("Constructing with another instance with valid value...");
             objA = new Int32Value(validValue);
@@ -524,7 +524,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Explicit UInt64Value conversion with value {0} and testing", validValue);
             objB = UInt64Value.FromUInt64(validValue);
-            Assert.True(UInt64Value.ToUInt64(objB) == validValue, "FromUInt64() value doesn't equal to ToUInt64() value!");
+            Assert.Equal(validValue, UInt64Value.ToUInt64(objB));
 
             Output.WriteLine("Constructing with another instance with valid value...");
             objA = new UInt64Value(validValue);
@@ -594,7 +594,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Output.WriteLine("Explicit conversion with value {0} and testing", testValue);
                 objB = Int64Value.FromInt64(testValue);
-                Assert.True(Int64Value.ToInt64(objB) == testValue, "FromInt64() value doesn't equal to ToInt64() value!");
+                Assert.Equal(testValue, Int64Value.ToInt64(objB));
 
                 Output.WriteLine("Constructing with another instance with valid value...");
                 objA = new Int64Value(testValue);
@@ -665,7 +665,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Output.WriteLine("Explicit IntegerValue conversion with value {0} and testing", testValue);
                 objB = IntegerValue.FromInt64(testValue);
-                Assert.True(IntegerValue.ToInt64(objB) == testValue, "FromInt64() value doesn't equal to ToInt64() value!");
+                Assert.Equal(testValue, IntegerValue.ToInt64(objB));
 
                 Output.WriteLine("Constructing with another instance with valid value...");
                 objA = new IntegerValue(testValue);
@@ -739,7 +739,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Explicit decimal conversion with value {0} and testing", validValue);
             objB = DecimalValue.FromDecimal(validValue);
-            Assert.True(DecimalValue.ToDecimal(objB) == validValue, "FromDecimal() value doesn't equal to ToDecimal() value!");
+            Assert.Equal(validValue, DecimalValue.ToDecimal(objB));
 
             Output.WriteLine("Constructing with another instance with valid value...");
             objA = new DecimalValue(validValue);
@@ -830,7 +830,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Explicit SingleValue conversion with value {0} and testing", validValue);
             objB = SingleValue.FromSingle(validValue);
-            Assert.True(SingleValue.ToSingle(objB) == validValue, "SingleValue() value doesn't equal to ToSingle() value!");
+            Assert.Equal(validValue, SingleValue.ToSingle(objB));
 
             Output.WriteLine("Constructing with another instance with valid value...");
             objA = new SingleValue(validValue);
@@ -964,7 +964,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Explicit Double conversion with value {0} and testing", validValue);
             objB = DoubleValue.FromDouble(validValue);
-            Assert.True(DoubleValue.ToDouble(objB) == validValue, "FromDouble() value doesn't equal to ToDouble() value!");
+            Assert.Equal(validValue, DoubleValue.ToDouble(objB));
 
             Output.WriteLine("Constructing with another instance with valid value...");
             objA = new DoubleValue(validValue);
@@ -1089,7 +1089,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Explicit conversion with value {0} and testing", validValue);
             objB = DateTimeValue.FromDateTime(validValue);
-            Assert.True(DateTimeValue.ToDateTime(objB) == validValue, "FromDateTime() value doesn't equal to ToDateTime() value!");
+            Assert.Equal(validValue, DateTimeValue.ToDateTime(objB));
 
             Output.WriteLine("Constructing with another instance with valid value...");
             objA = new DateTimeValue(validValue);

@@ -135,40 +135,40 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
                 // Verify TableId attribute value.
 
                 // Verify TableId attribute value of TableSlicerCache.
-                Assert.True(tableSlicerCache1.TableId.Value == 2, "Verify TableSlicerCache attribute of TableId.");
+                Assert.Equal(2, tableSlicerCache1.TableId.Value);
 
                 // Verify Column attribute value.
 
                 // Verify Column attribute value of TableSlicerCache.
-                Assert.True(tableSlicerCache1.Column.Value == 2, "Verify TableSlicerCache attribute of Column.");
+                Assert.Equal(2, tableSlicerCache1.Column.Value);
 
                 // Verify SortOrder attribute value.
 
                 // Verify SortOrder attribute value of TableSlicerCache. Value is Descending.
-                Assert.True(tableSlicerCache1.SortOrder.Value == X14.TabularSlicerCacheSortOrderValues.Descending, "Verify TableSlicerCache attribute of SortOrder. Value is not Descending.");
+                Assert.Equal(X14.TabularSlicerCacheSortOrderValues.Descending, tableSlicerCache1.SortOrder.Value);
 
                 // Verify SortOrder attribute value of TableSlicerCache. Value is Ascending.
-                Assert.True(tableSlicerCache2.SortOrder.Value == X14.TabularSlicerCacheSortOrderValues.Ascending, "Verify TableSlicerCache attribute of SortOrder. Value is not Ascending.");
+                Assert.Equal(X14.TabularSlicerCacheSortOrderValues.Ascending, tableSlicerCache2.SortOrder.Value);
 
                 // Verify CustomListSort attribute value.
                 // Verify CustomListSort attribute value of TableSlicerCache. Value is false.
-                Assert.True(tableSlicerCache1.CustomListSort.Value == false, "Verify TableSlicerCache attribute of CustomListSort. Value is not false.");
+                Assert.False(tableSlicerCache1.CustomListSort.Value, "Verify TableSlicerCache attribute of CustomListSort. Value is not false.");
 
                 // Verify CustomListSort attribute value of TableSlicerCache. Value is true.
-                Assert.True(tableSlicerCache2.CustomListSort.Value == true, "Verify TableSlicerCache attribute of CustomListSort. Value is not true.");
+                Assert.True(tableSlicerCache2.CustomListSort.Value, "Verify TableSlicerCache attribute of CustomListSort. Value is not true.");
 
                 // Verify CrossFilter attribute value.
                 // Verify CrossFilter attribute value of TableSlicerCache. Value is None.
-                Assert.True(tableSlicerCache1.CrossFilter == X14.SlicerCacheCrossFilterValues.None, "Verify TableSlicerCache attribute of CrossFilter. Value is not None");
+                Assert.Equal(X14.SlicerCacheCrossFilterValues.None, tableSlicerCache1.CrossFilter);
 
                 // Verify CrossFilter attribute value of TableSlicerCache. Value is ShowItemsWithDataAtTop.
-                Assert.True(tableSlicerCache2.CrossFilter == X14.SlicerCacheCrossFilterValues.ShowItemsWithDataAtTop, "Verify TableSlicerCache attribute of CrossFilter. Value is ShowItemsWithDataAtTop.");
+                Assert.Equal(X14.SlicerCacheCrossFilterValues.ShowItemsWithDataAtTop, tableSlicerCache2.CrossFilter);
 
                 // Verify CrossFilter attribute value of TableSlicerCache. Value is ShowItemsWithNoData.
-                Assert.True(tableSlicerCache3.CrossFilter == X14.SlicerCacheCrossFilterValues.ShowItemsWithNoData, "Verify TableSlicerCache attribute of CrossFilter. Value is ShowItemsWithNoData.");
+                Assert.Equal(X14.SlicerCacheCrossFilterValues.ShowItemsWithNoData, tableSlicerCache3.CrossFilter);
 
                 // Verify SlicerCacheHideItemsWithNoData element exist.
-                Assert.True(slicerCachePart2.SlicerCacheDefinition.SlicerCacheDefinitionExtensionList.Descendants<X15.SlicerCacheHideItemsWithNoData>().Count() == 1, "Verify SlicerCacheHideItemsWithNoData exist.");
+                Assert.Equal(1, slicerCachePart2.SlicerCacheDefinition.SlicerCacheDefinitionExtensionList.Descendants<X15.SlicerCacheHideItemsWithNoData>().Count());
             }
         }
 

@@ -580,7 +580,7 @@ namespace DocumentFormat.OpenXml.Tests
             Output.WriteLine("Constructing a default OpenXmlAttribute and assign it to another variable...");
             var oxaX = default(OpenXmlAttribute);
             var oxaY = oxaX;
-            Assert.True(oxaX == oxaY, "The assigned OpenXmlAttribute variable is NOT equal to original one.");
+            Assert.Equal(oxaX, oxaY);
 
             Output.WriteLine("Constructing OpenXmlAttribute w:rsidR and assigning it to another variable...");
             var wrsidR = new OpenXmlAttribute("w", "rsidR", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00B327F7");
@@ -595,25 +595,25 @@ namespace DocumentFormat.OpenXml.Tests
             Output.WriteLine("Comparing two default OpenXmlAttribute...");
             var defaultA = default(OpenXmlAttribute);
             var defaultB = default(OpenXmlAttribute);
-            Assert.True(defaultA == defaultB, "Two default OpenXmlAttribute are NOT equal.");
-            Assert.False(defaultA != defaultB, "Two default OpenXmlAttribute are Equal.");
+            Assert.Equal(defaultA, defaultB);
+            Assert.Equal(defaultA, defaultB);
 
             var wrsidRA = new OpenXmlAttribute("w", "rsidR", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00B327F7");
             var wrsidRB = new OpenXmlAttribute("w", "rsidR", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00B327F7");
             Output.WriteLine("Comparing two {0} OpenXmlAttribute with value {1}...", wrsidRA.GetFullName(), wrsidRA.Value);
             Output.WriteLine("HashCode for {0}: {1}", wrsidRA.XmlQualifiedName, wrsidRA.GetHashCode());
-            Assert.True(wrsidRA == wrsidRB, "Two OpenXmlAttribute with same leftBorders are NOT equal by ==.");
+            Assert.Equal(wrsidRA, wrsidRB);
             Assert.True(wrsidRA.Equals((object)wrsidRB), "Two OpenXmlAttribute with same leftBorders are NOT equal by Equals().");
-            Assert.False(wrsidRA != wrsidRB, "Two OpenXmlAttribute with fame leftBorders are NOT equal by !=.");
+            Assert.Equal(wrsidRA, wrsidRB);
 
             var wrsidR = new OpenXmlAttribute("w", "rsidR", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00B327F7");
             var wrsidP = new OpenXmlAttribute("w", "rsidP", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00EC35BB");
             Output.WriteLine("HashCode for {0}: {1}", wrsidR.XmlQualifiedName, wrsidR.GetHashCode());
             Output.WriteLine("HashCode for {0}: {1}", wrsidP.XmlQualifiedName, wrsidP.GetHashCode());
             Output.WriteLine("Comparing two different OpenXmlAttribute with different value...");
-            Assert.False(wrsidR == wrsidP, "Two different OpenXmlAttribute with different value are equal by ==.");
+            Assert.NotEqual(wrsidR, wrsidP);
             Assert.False(wrsidR.Equals((object)wrsidP), "Two different OpenXmlAttribute with different value are equal by Equals().");
-            Assert.True(wrsidR != wrsidP, "Two different OpenXmlAttribute with different are equal by !=.");
+            Assert.NotEqual(wrsidR, wrsidP);
         }
 
         #endregion OpenXmlAttribute

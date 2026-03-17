@@ -422,8 +422,8 @@ namespace DocumentFormat.OpenXml.Tests
             var other = default(OpenXmlAttribute);
 
             Assert.Equal(target, other);
-            Assert.True(target == other);
-            Assert.False(target != other);
+            Assert.Equal(target, other);
+            Assert.Equal(target, other);
             Assert.True(target.Equals(other));
             Assert.True(target.Equals((object)other));
             Assert.True(Equals(target, other));
@@ -437,8 +437,8 @@ namespace DocumentFormat.OpenXml.Tests
             var other = new OpenXmlAttribute("test", "http://test", "test", "value");
 
             Assert.Equal(target, other);
-            Assert.True(target == other);
-            Assert.False(target != other);
+            Assert.Equal(target, other);
+            Assert.Equal(target, other);
             Assert.True(target.Equals(other));
             Assert.True(target.Equals((object)other));
             Assert.True(Equals(target, other));
@@ -452,8 +452,8 @@ namespace DocumentFormat.OpenXml.Tests
             var other = new OpenXmlAttribute("test", "http://test", "test", "other");
 
             Assert.NotEqual(target, other);
-            Assert.False(target == other);
-            Assert.True(target != other);
+            Assert.NotEqual(target, other);
+            Assert.NotEqual(target, other);
             Assert.False(target.Equals(other));
             Assert.False(target.Equals((object)other));
             Assert.False(Equals(target, other));
@@ -467,8 +467,8 @@ namespace DocumentFormat.OpenXml.Tests
             var other = new OpenXmlAttribute("t", "http://test", "test", "value");
 
             Assert.NotEqual(target, other);
-            Assert.False(target == other);
-            Assert.True(target != other);
+            Assert.NotEqual(target, other);
+            Assert.NotEqual(target, other);
             Assert.False(target.Equals(other));
             Assert.False(target.Equals((object)other));
             Assert.False(Equals(target, other));

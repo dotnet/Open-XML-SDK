@@ -3968,7 +3968,7 @@ namespace DocumentFormat.OpenXml.Tests
                 .Where(a => a.Prefix == expectedAttribute.Prefix && a.LocalName == expectedAttribute.LocalName && a.Value == expectedAttribute.Value)
                 .FirstOrDefault();
 
-            Assert.True(verified != default(OpenXmlAttribute));
+            Assert.NotEqual(default(OpenXmlAttribute), verified);
         }
 
         private void VerifyNoAttribute(OpenXmlElement host, OpenXmlAttribute expectedAttribute)

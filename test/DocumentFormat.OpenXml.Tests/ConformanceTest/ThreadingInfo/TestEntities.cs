@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
                 P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
 
-                Assert.True(threadingInfo.TimeZoneBias.Value == timeZoneBiasValue, "UnChanged in the ThreadingInfo element.");
+                Assert.Equal(timeZoneBiasValue, threadingInfo.TimeZoneBias.Value);
             }
         }
 
@@ -106,10 +106,10 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
 
                 int threadingInfoExtCount = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == ThreadingInfoExtUri).Count();
-                Assert.True(threadingInfoExtCount == 0, "ThreadingInfo extension element is not deleted.");
+                Assert.Equal(0, threadingInfoExtCount);
 
                 int threadingInfoCount = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Count();
-                Assert.True(threadingInfoCount == 0, "ThreadingInfo element is not deleted.");
+                Assert.Equal(0, threadingInfoCount);
             }
         }
 
@@ -140,10 +140,10 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
 
                 int threadingInfoExtCount = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == ThreadingInfoExtUri).Count();
-                Assert.True(threadingInfoExtCount == 1, "ThreadingInfo element is not added.");
+                Assert.Equal(1, threadingInfoExtCount);
 
                 int threadingInfoCount = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Count();
-                Assert.True(threadingInfoCount == 1, "ThreadingInfo element is not added.");
+                Assert.Equal(1, threadingInfoCount);
             }
         }
 

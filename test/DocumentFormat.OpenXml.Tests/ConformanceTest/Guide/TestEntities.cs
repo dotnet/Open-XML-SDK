@@ -151,18 +151,18 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 // Verifying Guide(1) element
                 P15.ExtendedGuide extendedGuide1 = extendedGuideList1.Descendants<P15.ExtendedGuide>().Where(e => e.Id == Id1).Single();
 
-                Assert.True(extendedGuide1.Position == position1, string.Format("An incorrect value, Position value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id));
-                Assert.True(extendedGuide1.Orientation == directionValues1, string.Format("An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id));
+                Assert.Equal(position1, extendedGuide1.Position);
+                Assert.Equal(directionValues1, extendedGuide1.Orientation);
                 A.RgbColorModelHex rgbColorModelHex1 = extendedGuide1.Descendants<A.RgbColorModelHex>().First();
-                Assert.True(rgbColorModelHex1.Val.Value == Color1, string.Format("An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id));
+                Assert.Equal(Color1, rgbColorModelHex1.Val.Value);
 
                 // Verifying Guide(2) element
                 P15.ExtendedGuide extendedGuide2 = extendedGuideList1.Descendants<P15.ExtendedGuide>().Where(e => e.Id == Id2).Single();
 
-                Assert.True(extendedGuide2.Position == position2, string.Format("An incorrect value, Position value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id));
-                Assert.True(extendedGuide2.Orientation == directionValues2, string.Format("An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id));
+                Assert.Equal(position2, extendedGuide2.Position);
+                Assert.Equal(directionValues2, extendedGuide2.Orientation);
                 A.RgbColorModelHex rgbColorModelHex2 = extendedGuide2.Descendants<A.RgbColorModelHex>().First();
-                Assert.True(rgbColorModelHex2.Val.Value == Color2, string.Format("An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id));
+                Assert.Equal(Color2, rgbColorModelHex2.Val.Value);
 
                 // Verify NotesGuideList
                 PresentationExtension presentationExtension2 = package.PresentationPart.RootElement.Descendants<PresentationExtension>().Where(e => e.Uri == NotesExtUri).Single();
@@ -171,18 +171,18 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 // Verifying Guide(1) element
                 P15.ExtendedGuide extendedGuide3 = notesGuideList.Descendants<P15.ExtendedGuide>().Where(e => e.Id == Id1).Single();
 
-                Assert.True(extendedGuide3.Position == position3, string.Format("An incorrect value, Position value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id));
-                Assert.True(extendedGuide3.Orientation == directionValues2, string.Format("An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id));
+                Assert.Equal(position3, extendedGuide3.Position);
+                Assert.Equal(directionValues2, extendedGuide3.Orientation);
                 A.RgbColorModelHex rgbColorModelHex3 = extendedGuide3.Descendants<A.RgbColorModelHex>().First();
-                Assert.True(rgbColorModelHex3.Val.Value == Color3, string.Format("An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id));
+                Assert.Equal(Color3, rgbColorModelHex3.Val.Value);
 
                 // Verifying Guide(2) element
                 P15.ExtendedGuide extendedGuide4 = notesGuideList.Descendants<P15.ExtendedGuide>().Where(e => e.Id == Id2).Single();
 
-                Assert.True(extendedGuide4.Position == position4, string.Format("An incorrect value, Position value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id));
-                Assert.True(extendedGuide4.Orientation == directionValues1, string.Format("An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id));
+                Assert.Equal(position4, extendedGuide4.Position);
+                Assert.Equal(directionValues1, extendedGuide4.Orientation);
                 A.RgbColorModelHex rgbColorModelHex4 = extendedGuide4.Descendants<A.RgbColorModelHex>().First();
-                Assert.True(rgbColorModelHex4.Val.Value == Color4, string.Format("An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id));
+                Assert.Equal(Color4, rgbColorModelHex4.Val.Value);
             }
         }
 
@@ -334,23 +334,23 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 PresentationExtensionList presentationExtensionList = package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Single();
-                Assert.True(package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Count() == 1, "PresentationExtensionList element not exist.");
+                Assert.Equal(1, package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Count());
 
                 PresentationExtension presentationExtension1 = presentationExtensionList.Descendants<PresentationExtension>().Where(e => e.Uri == SldExtUri).Single();
-                Assert.True(presentationExtension1.Count() == 1, "PresentationExtension element not exist. By SlideGuide.");
+                Assert.Equal(1, presentationExtension1.Count());
 
-                Assert.True(presentationExtension1.Descendants<P15.SlideGuideList>().Count() == 1, "SlideGuideList element not exist. By SlideGuide.");
-                Assert.True(presentationExtension1.Descendants<P15.ExtendedGuide>().Count() == 1, "ExtendedGuide element not exist. By SlideGuide.");
-                Assert.True(presentationExtension1.Descendants<P15.ColorType>().Count() == 1, "ColorType element not exist. By SlideGuide.");
-                Assert.True(presentationExtension1.Descendants<A.RgbColorModelHex>().Count() == 1, "RgbColorModelHex element not exist. By SlideGuide.");
+                Assert.Equal(1, presentationExtension1.Descendants<P15.SlideGuideList>().Count());
+                Assert.Equal(1, presentationExtension1.Descendants<P15.ExtendedGuide>().Count());
+                Assert.Equal(1, presentationExtension1.Descendants<P15.ColorType>().Count());
+                Assert.Equal(1, presentationExtension1.Descendants<A.RgbColorModelHex>().Count());
 
                 PresentationExtension presentationExtension2 = presentationExtensionList.Descendants<PresentationExtension>().Where(e => e.Uri == NotesExtUri).Single();
-                Assert.True(presentationExtension2.Count() == 1, "PresentationExtension element not exist. By NotesGuide.");
+                Assert.Equal(1, presentationExtension2.Count());
 
-                Assert.True(presentationExtension2.Descendants<P15.NotesGuideList>().Count() == 1, "SlideGuideList element not exist. By NotesGuide.");
-                Assert.True(presentationExtension2.Descendants<P15.ExtendedGuide>().Count() == 1, "ExtendedGuide element not exist. By NotesGuide.");
-                Assert.True(presentationExtension2.Descendants<P15.ColorType>().Count() == 1, "ColorType element not exist. By NotesGuide.");
-                Assert.True(presentationExtension2.Descendants<A.RgbColorModelHex>().Count() == 1, "RgbColorModelHex element not exist. By NotesGuide.");
+                Assert.Equal(1, presentationExtension2.Descendants<P15.NotesGuideList>().Count());
+                Assert.Equal(1, presentationExtension2.Descendants<P15.ExtendedGuide>().Count());
+                Assert.Equal(1, presentationExtension2.Descendants<P15.ColorType>().Count());
+                Assert.Equal(1, presentationExtension2.Descendants<A.RgbColorModelHex>().Count());
             }
         }
     }

@@ -530,7 +530,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Explicit string conversion with value {0} and testing", validValue);
             objB = Base64BinaryValue.FromString(validValue);
-            Assert.True(Base64BinaryValue.ToString(objB) == validValue, "FromXX() value doesn't equal to ToXX() value!");
+            Assert.Equal(validValue, Base64BinaryValue.ToString(objB));
 
             Output.WriteLine("Constructing with another instance with valid value {0}...", validValue);
             objA = new Base64BinaryValue(validValue);
@@ -648,7 +648,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Explicit string conversion with value {0} and testing", validValue);
             objB = HexBinaryValue.FromString(validValue);
-            Assert.True(HexBinaryValue.ToString(objB) == validValue, "FromXX() value doesn't equal to ToXX() value!");
+            Assert.Equal(validValue, HexBinaryValue.ToString(objB));
 
             Output.WriteLine("Constructing with another instance with valid value {0}...", validValue);
             objA = new HexBinaryValue(validValue);
@@ -750,7 +750,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Explicit OnOffValue conversion with value {0} and testing", validValue);
             objB = OnOffValue.FromBoolean(validValue);
-            Assert.True(OnOffValue.ToBoolean(objB) == validValue, "FromBoolean() value doesn't equal to ToBoolean() value!");
+            Assert.Equal(validValue, OnOffValue.ToBoolean(objB));
 
             Output.WriteLine("Constructing with another instance with valid value...");
             objA = new OnOffValue(validValue);
@@ -864,7 +864,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Output.WriteLine("Explicit TrueFalseBlankValue conversion with value {0} and testing", validValue);
             objB = TrueFalseBlankValue.FromBoolean(validValue);
-            Assert.True(TrueFalseBlankValue.ToBoolean(objB) == validValue, "FromBoolean() value doesn't equal to ToBoolean() value!");
+            Assert.Equal(validValue, TrueFalseBlankValue.ToBoolean(objB));
 
             Output.WriteLine("Constructing with another instance with valid value...");
             objA = new TrueFalseBlankValue(validValue);

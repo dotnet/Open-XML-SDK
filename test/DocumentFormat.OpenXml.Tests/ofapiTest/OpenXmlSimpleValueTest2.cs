@@ -377,22 +377,22 @@ namespace DocumentFormat.OpenXml.Tests
             target.InnerText = "true";
             Assert.True(target.HasValue);
             Assert.True(target.Value);
-            Assert.True(target == true);
+            Assert.True(target);
 
             target.InnerText = "false";
             Assert.True(target.HasValue);
             Assert.False(target.Value);
-            Assert.True(target == false);
+            Assert.False(target);
 
             target.InnerText = "t";
             Assert.True(target.HasValue);
             Assert.True(target.Value);
-            Assert.True(target == true);
+            Assert.True(target);
 
             target.InnerText = "f";
             Assert.True(target.HasValue);
             Assert.False(target.Value);
-            Assert.True(target == false);
+            Assert.False(target);
 
             target.InnerText = "invalid";
             Assert.False(target.HasValue);
@@ -433,7 +433,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.False(target5.Value);
 
             TrueFalseValue target6 = target5.Clone() as TrueFalseValue;
-            Assert.True(target6 == false);
+            Assert.False(target6);
         }
 
         /// <summary>
@@ -449,27 +449,27 @@ namespace DocumentFormat.OpenXml.Tests
             target.InnerText = "true";
             Assert.True(target.HasValue);
             Assert.True(target.Value);
-            Assert.True(target == true);
+            Assert.True(target);
 
             target.InnerText = "false";
             Assert.True(target.HasValue);
             Assert.False(target.Value);
-            Assert.True(target == false);
+            Assert.False(target);
 
             target.InnerText = "t";
             Assert.True(target.HasValue);
             Assert.True(target.Value);
-            Assert.True(target == true);
+            Assert.True(target);
 
             target.InnerText = "f";
             Assert.True(target.HasValue);
             Assert.False(target.Value);
-            Assert.True(target == false);
+            Assert.False(target);
 
             target.InnerText = string.Empty;
             Assert.True(target.HasValue);
             Assert.False(target.Value);
-            Assert.True(target == false);
+            Assert.False(target);
 
             target.InnerText = "invalid";
             Assert.False(target.HasValue);
@@ -523,32 +523,32 @@ namespace DocumentFormat.OpenXml.Tests
             target.InnerText = "true";
             Assert.True(target.HasValue);
             Assert.True(target.Value);
-            Assert.True(target == true);
+            Assert.True(target);
 
             target.InnerText = "false";
             Assert.True(target.HasValue);
             Assert.False(target.Value);
-            Assert.True(target == false);
+            Assert.False(target);
 
             target.InnerText = "on";
             Assert.True(target.HasValue);
             Assert.True(target.Value);
-            Assert.True(target == true);
+            Assert.True(target);
 
             target.InnerText = "off";
             Assert.True(target.HasValue);
             Assert.False(target.Value);
-            Assert.True(target == false);
+            Assert.False(target);
 
             target.InnerText = "1";
             Assert.True(target.HasValue);
             Assert.True(target.Value);
-            Assert.True(target == true);
+            Assert.True(target);
 
             target.InnerText = "0";
             Assert.True(target.HasValue);
             Assert.False(target.Value);
-            Assert.True(target == false);
+            Assert.False(target);
 
             target.InnerText = "invalid";
             Assert.False(target.HasValue);
@@ -630,7 +630,7 @@ namespace DocumentFormat.OpenXml.Tests
             // 1. Base64BinaryValue
             Base64BinaryValue base64 = new Base64BinaryValue();
             base64 = "AA3322";
-            Assert.True(base64 == "AA3322");
+            Assert.Equal("AA3322", base64);
             Assert.Equal("AA3322", base64.Value);
             base64 = Base64BinaryValue.FromString("1234");
             Assert.Equal("1234", base64.ToString());
@@ -649,7 +649,7 @@ namespace DocumentFormat.OpenXml.Tests
             ByteValue byteValue = new ByteValue();
             byte bt = 1;
             byteValue = bt;
-            Assert.True(bt == byteValue);
+            Assert.Equal(byteValue, bt);
             Assert.Equal(bt, byteValue.Value);
             bt = 2;
             byteValue = ByteValue.FromByte(bt);
@@ -659,7 +659,7 @@ namespace DocumentFormat.OpenXml.Tests
             DateTimeValue dtValue = new DateTimeValue();
             DateTime dt = DateTime.Now;
             dtValue = dt;
-            Assert.True(dt == dtValue);
+            Assert.Equal(dtValue, dt);
             dt = DateTime.Now.AddDays(1);
             dtValue = DateTimeValue.FromDateTime(dt);
             Assert.Equal(dt, dtValue.Value);
@@ -669,7 +669,7 @@ namespace DocumentFormat.OpenXml.Tests
             DecimalValue decimalValue = new DecimalValue();
             decimal dcm = 10;
             decimalValue = dcm;
-            Assert.True(dcm == decimalValue);
+            Assert.Equal(decimalValue, dcm);
             decimalValue = DecimalValue.FromDecimal(20);
             Assert.Equal(20, decimalValue.Value);
             Assert.Equal(20, DecimalValue.ToDecimal(decimalValue));
@@ -678,7 +678,7 @@ namespace DocumentFormat.OpenXml.Tests
             DoubleValue doubleValue = new DoubleValue();
             double dbl = 1.1;
             doubleValue = dbl;
-            Assert.True(dbl == doubleValue);
+            Assert.Equal(doubleValue, dbl);
             doubleValue = DoubleValue.FromDouble(2.2);
             Assert.Equal(2.2, doubleValue.Value);
             Assert.Equal(2.2, DoubleValue.ToDouble(doubleValue));
@@ -687,7 +687,7 @@ namespace DocumentFormat.OpenXml.Tests
             HexBinaryValue hexBinaryValue = new HexBinaryValue();
             string hex = "0X99CCFF";
             hexBinaryValue = hex;
-            Assert.True(hex == hexBinaryValue);
+            Assert.Equal(hexBinaryValue, hex);
             hex = "111111";
             hexBinaryValue = HexBinaryValue.FromString(hex);
             Assert.Equal(hex, hexBinaryValue.Value);
@@ -697,7 +697,7 @@ namespace DocumentFormat.OpenXml.Tests
             Int16Value int16Value = new Int16Value();
             short int16 = 16;
             int16Value = int16;
-            Assert.True(int16 == int16Value);
+            Assert.Equal(int16Value, int16);
             int16 = 17;
             int16Value = Int16Value.FromInt16(int16);
             Assert.Equal(int16, int16Value.Value);
@@ -707,7 +707,7 @@ namespace DocumentFormat.OpenXml.Tests
             Int32Value int32Value = new Int32Value();
             int int32 = 32;
             int32Value = int32;
-            Assert.True(int32 == int32Value);
+            Assert.Equal(int32Value, int32);
             int32 = 33;
             int32Value = Int32Value.FromInt32(int32);
             Assert.Equal(int32, int32Value.Value);
@@ -717,7 +717,7 @@ namespace DocumentFormat.OpenXml.Tests
             Int64Value int64Value = new Int64Value();
             long int64 = 64;
             int64Value = int64;
-            Assert.True(int64 == int64Value);
+            Assert.Equal(int64Value, int64);
             int64 = 17;
             int64Value = Int64Value.FromInt64(int64);
             Assert.Equal(int64, int64Value.Value);
@@ -727,7 +727,7 @@ namespace DocumentFormat.OpenXml.Tests
             IntegerValue integerValue = new IntegerValue();
             int integer = 64;
             integerValue = integer;
-            Assert.True(integer == integerValue);
+            Assert.Equal(integerValue, integer);
             integer = 17;
             integerValue = IntegerValue.FromInt64(integer);
             Assert.Equal(integer, integerValue.Value);
@@ -745,7 +745,7 @@ namespace DocumentFormat.OpenXml.Tests
             SByteValue sbyteValue = new SByteValue();
             sbyte sbt = sbyte.MaxValue;
             sbyteValue = sbt;
-            Assert.True(sbt == sbyteValue);
+            Assert.Equal(sbyteValue, sbt);
             sbt = sbyte.MinValue;
             sbyteValue = SByteValue.FromSByte(sbt);
             Assert.Equal(sbt, sbyteValue.Value);
@@ -755,7 +755,7 @@ namespace DocumentFormat.OpenXml.Tests
             SingleValue singleValue = new SingleValue();
             float single = float.MaxValue;
             singleValue = single;
-            Assert.True(single == singleValue);
+            Assert.Equal(singleValue, single);
             single = float.NaN;
             singleValue = SingleValue.FromSingle(single);
             Assert.Equal(single, singleValue.Value);
@@ -765,7 +765,7 @@ namespace DocumentFormat.OpenXml.Tests
             StringValue stringValue = new StringValue();
             string str = "Ethan";
             stringValue = str;
-            Assert.True(str == stringValue);
+            Assert.Equal(stringValue, str);
             str = "Yin";
             stringValue = StringValue.FromString(str);
             Assert.Equal(str, stringValue.Value);
@@ -792,7 +792,7 @@ namespace DocumentFormat.OpenXml.Tests
             UInt16Value uint16Value = new UInt16Value();
             ushort uint16 = ushort.MaxValue;
             uint16Value = uint16;
-            Assert.True(uint16 == uint16Value);
+            Assert.Equal(uint16Value, uint16);
             uint16 = ushort.MinValue;
             uint16Value = UInt16Value.FromUInt16(uint16);
             Assert.Equal(uint16, uint16Value.Value);
@@ -802,7 +802,7 @@ namespace DocumentFormat.OpenXml.Tests
             UInt32Value uint32Value = new UInt32Value();
             uint uint32 = uint.MaxValue;
             uint32Value = uint32;
-            Assert.True(uint32 == uint32Value);
+            Assert.Equal(uint32Value, uint32);
             uint32 = uint.MinValue;
             uint32Value = UInt32Value.FromUInt32(uint32);
             Assert.Equal(uint32, uint32Value.Value);
@@ -812,7 +812,7 @@ namespace DocumentFormat.OpenXml.Tests
             UInt64Value uint64Value = new UInt64Value();
             ulong uint64 = ulong.MaxValue;
             uint64Value = uint64;
-            Assert.True(uint64 == uint64Value);
+            Assert.Equal(uint64Value, uint64);
             uint64 = ulong.MinValue;
             uint64Value = UInt64Value.FromUInt64(uint64);
             Assert.Equal(uint64, uint64Value.Value);

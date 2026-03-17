@@ -122,10 +122,10 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
                 X15.Connection connection = connectionsPart.Connections.Descendants<X15.Connection>().First();
 
                 X15.OleDbPrpoperties oleDbPrpoperties = connection.OleDbPrpoperties;
-                Assert.True(oleDbPrpoperties.Connection == ConnectionString, "OleDbPrpoperties Connection value is not change.");
+                Assert.Equal(ConnectionString, oleDbPrpoperties.Connection);
 
                 X15.DbCommand dbCommand = oleDbPrpoperties.DbCommand;
-                Assert.True(DBCommandText == dbCommand.Text, "DBCommandText value is not change.");
+                Assert.Equal(DBCommandText, dbCommand.Text);
             }
         }
 
@@ -162,7 +162,7 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
                     }
                 }
 
-                Assert.True(hasConnection == false, "Connection is not delete.");
+                Assert.False(hasConnection, "Connection is not delete.");
             }
         }
 
@@ -212,10 +212,10 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
                 }
 
                 Assert.True(connection.OleDbPrpoperties is not null, "Missing X15.OleDbPrpoperties element.");
-                Assert.True(connection.OleDbPrpoperties.Connection == ConnectionString, "OleDbPrpoperties Connection value is not change.");
+                Assert.Equal(ConnectionString, connection.OleDbPrpoperties.Connection);
 
                 Assert.True(connection.OleDbPrpoperties is not null, "Missing X15.DbCommand element.");
-                Assert.True(connection.OleDbPrpoperties.DbCommand.Text == DBCommandText, "OleDbPrpoperties Connection value is not change.");
+                Assert.Equal(DBCommandText, connection.OleDbPrpoperties.DbCommand.Text);
             }
         }
     }

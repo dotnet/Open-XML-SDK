@@ -454,7 +454,7 @@ namespace DocumentFormat.OpenXml.Tests
                     XElement xAfter = ConvertToXElement(hostPart, hostElement);
 
                     Output.WriteLine("Checking if children of current element increased by {0}...", importElementsCount);
-                    Assert.True(xBefore.Elements().Count() == xAfter.Elements().Count() - importElementsCount, "Children element NOT increased as expected!");
+                    Assert.Equal(xAfter.Elements().Count() - importElementsCount, xBefore.Elements().Count());
 
                     for (int i = 0; i < importElementsCount; i++)
                     {
@@ -555,7 +555,7 @@ namespace DocumentFormat.OpenXml.Tests
                     XElement xAfter = ConvertToXElement(hostPart, hostElement);
 
                     Output.WriteLine("Checking if children of current element increased by ONE...");
-                    Assert.True(xBefore.Elements().Count() == xAfter.Elements().Count() - 1, "Children element NOT increased by ONE!");
+                    Assert.Equal(xAfter.Elements().Count() - 1, xBefore.Elements().Count());
 
                     VerifyEqual(xAfter, XElement.Parse(importElementOuterXml), childPosition);
                 }
@@ -682,7 +682,7 @@ namespace DocumentFormat.OpenXml.Tests
                         XElement xafter = ConvertToXElement(hostPart, hostElement);
 
                         Output.WriteLine("Check if the child of  current element increased by ONE...");
-                        Assert.True(xbefore.Elements().Count() == xafter.Elements().Count() - 1, "Child element NOT increased by ONE!");
+                        Assert.Equal(xafter.Elements().Count() - 1, xbefore.Elements().Count());
 
                         Output.WriteLine("Check if specified child inserted as expected...");
                         VerifyEqual(xafter, XElement.Parse(insertElement), expectPos);
@@ -813,7 +813,7 @@ namespace DocumentFormat.OpenXml.Tests
                     XElement xafter = ConvertToXElement(hostPart, hostElement);
 
                     Output.WriteLine("Check if the child of  current element increased by ONE...");
-                    Assert.True(xbefore.Elements().Count() == xafter.Elements().Count() - 1, "Child element NOT increased by ONE!");
+                    Assert.Equal(xafter.Elements().Count() - 1, xbefore.Elements().Count());
 
                     Output.WriteLine("Check if specified child inserted as expected...");
                     VerifyEqual(xafter, XElement.Parse(insertElement), expectPos);
@@ -903,7 +903,7 @@ namespace DocumentFormat.OpenXml.Tests
                     XElement xAfter = ConvertToXElement(hostPart, hostElement.Parent);
 
                     Output.WriteLine("Check if the child of  current element increased by ONE...");
-                    Assert.True(xBefore.Elements().Count() == xAfter.Elements().Count() - 1, "Child element NOT increased by ONE!");
+                    Assert.Equal(xAfter.Elements().Count() - 1, xBefore.Elements().Count());
 
                     Output.WriteLine("Check if specified element inserted as expected...");
                     VerifyEqual(xAfter, XElement.Parse(insertElement), expectPos);
@@ -1212,7 +1212,7 @@ namespace DocumentFormat.OpenXml.Tests
                     XElement xAfter = ConvertToXElement(hostPart, hostElement);
 
                     Output.WriteLine("Check if Count of ChildElement changed...");
-                    Assert.True(xBefore.Elements().Count() == xAfter.Elements().Count(), string.Format("ChildElement Count: {0} Changed After Replacing.", xBefore.Elements().Count()));
+                    Assert.Equal(xBefore.Elements().Count(), xAfter.Elements().Count());
 
                     VerifyEqual(xAfter, xImport, expectPos);
                 }
@@ -1525,7 +1525,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     XElement xAfter = ConvertToXElement(hostPart, hostElement);
                     Output.WriteLine("Checking if count of current element attributes is expected value {0}...", xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count());
-                    Assert.True(hostElement.GetAttributes().Count == xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count(), string.Format("Count of element attributes {0} is NOT expected value {1}.", hostElement.GetAttributes().Count, xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count()));
+                    Assert.Equal(hostElement.GetAttributes().Count, xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count());
 
                     foreach (var a in attributes)
                     {
@@ -1741,7 +1741,7 @@ namespace DocumentFormat.OpenXml.Tests
                                 Output.WriteLine("xmlns:{0} = {1}", ns.Key, ns.Value);
                             }
 
-                            Assert.True(hostElement.NamespaceDeclarations.Where(ns => ns.Key == newNs.Key).Count() == 1, string.Format("NamespaceDeclaration {0} was NOT added as expected.", newNs.Key));
+                            Assert.Equal(1, hostElement.NamespaceDeclarations.Where(ns => ns.Key == newNs.Key).Count());
                         }
 
                         Output.WriteLine("Saving changes...");
@@ -1939,7 +1939,7 @@ namespace DocumentFormat.OpenXml.Tests
                 string outerXml = hostElement.OuterXml;
 
                 Output.WriteLine("Checking if XElement count vs OpenXmlElement Children Count...");
-                Assert.True(hostElement.ChildElements.Count == xBefore.Elements().Count(), string.Format("Children element returned by OpenXmlElement {0} is different from XElement {1}", hostElement.ChildElements.Count, xBefore.Elements().Count()));
+                Assert.Equal(hostElement.ChildElements.Count, xBefore.Elements().Count());
 
                 var result = xBefore.Compare(XElement.Parse(outerXml));
                 Assert.True(result, "OuterXml is not returned as expected.");
@@ -1989,7 +1989,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var xAfter = XElement.Parse(outerXml);
 
                 Output.WriteLine("Checking if XElement count vs OpenXmlElement Children Count...");
-                Assert.True(hostElement.ChildElements.Count == xBefore.Elements().Count(), string.Format("Children element returned by OpenXmlElement {0} is different from XElement {1}", hostElement.ChildElements.Count, xBefore.Elements().Count()));
+                Assert.Equal(hostElement.ChildElements.Count, xBefore.Elements().Count());
 
                 var result = xBefore.Compare(XElement.Parse(outerXml));
                 Assert.True(result, "Pass-in element is not cloned as expected.");
@@ -2237,7 +2237,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 XElement xAfter = XElement.Parse(outerXml);
                 Output.WriteLine("Checking if element count not changed...");
-                Assert.True(xAfter.Elements().Count() == xBefore.Elements().Count(), string.Format("Children element in written out {0} is different from original {1}", xAfter.Elements().Count(), xBefore.Elements().Count()));
+                Assert.Equal(xAfter.Elements().Count(), xBefore.Elements().Count());
 
                 Output.WriteLine("Comparing element content...");
                 var result = xBefore.Compare(xAfter);
@@ -2318,7 +2318,7 @@ namespace DocumentFormat.OpenXml.Tests
             Output.WriteLine("ElementInserted event caught.");
             Output.WriteLine("[ElementInserted] Inserted {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
             Assert.NotNull(args.Element.Parent);
-            Assert.True(args.ParentElement == args.Element.Parent, string.Format("Element inserted {0} has different parent from expected {1}.", args.Element.GetFullName(), args.ParentElement.GetFullName()));
+            Assert.Equal(args.ParentElement, args.Element.Parent);
 
             Assert.True(sender is OpenXmlElementContext, string.Format("Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name));
             Assert.Same(sender, args.ParentElement.OpenXmlElementContext);
@@ -2330,7 +2330,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Fail("ElementInserted event caught.");
             Output.WriteLine("[ElementInserted] Inserted {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
             Assert.NotNull(args.Element.Parent);
-            Assert.True(args.ParentElement == args.Element.Parent, string.Format("Element inserted {0} has different parent from expected {1}.", args.Element.GetFullName(), args.ParentElement.GetFullName()));
+            Assert.Equal(args.ParentElement, args.Element.Parent);
 
             Assert.True(sender is OpenXmlElementContext, string.Format("Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name));
             Assert.Same(sender, args.ParentElement.OpenXmlElementContext);
@@ -2343,7 +2343,7 @@ namespace DocumentFormat.OpenXml.Tests
             Output.WriteLine("[ElementRemoving] Removing {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
             Assert.NotNull(args.Element.Parent);
             Assert.NotNull(args.ParentElement);
-            Assert.True(args.ParentElement == args.Element.Parent, string.Format("Element to be removed {0} has different parent from expected {1}.", args.Element.GetFullName(), args.ParentElement.GetFullName()));
+            Assert.Equal(args.ParentElement, args.Element.Parent);
 
             Assert.True(sender is OpenXmlElementContext, string.Format("Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name));
             Assert.Same(sender, args.ParentElement.OpenXmlElementContext);
@@ -2356,7 +2356,7 @@ namespace DocumentFormat.OpenXml.Tests
             Output.WriteLine("[ElementRemoving] Removing {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
             Assert.NotNull(args.Element.Parent);
             Assert.NotNull(args.ParentElement);
-            Assert.True(args.ParentElement == args.Element.Parent, string.Format("Element to be removed {0} has different parent from expected {1}.", args.Element.GetFullName(), args.ParentElement.GetFullName()));
+            Assert.Equal(args.ParentElement, args.Element.Parent);
 
             Assert.True(sender is OpenXmlElementContext, string.Format("Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name));
             Assert.Same(sender, args.ParentElement.OpenXmlElementContext);
@@ -2730,7 +2730,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             Output.WriteLine("check if the targetElement's children is decreased by 1");
-            Assert.True(originalElement.Elements().Count() == resultElement.Elements().Count() + 1, "the target's children is not decreased by 1");
+            Assert.Equal(resultElement.Elements().Count() + 1, originalElement.Elements().Count());
 
             Output.WriteLine("check if all other child elements are matched, except the removed one");
 
@@ -2774,7 +2774,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
             Output.WriteLine("check if the targetElement's children is decreased as expected");
-            Assert.True(originalElement.Elements().Count() == resultElement.Elements().Count() + childrenPosition.Count(), "Target's children is not decreased as expected.");
+            Assert.Equal(resultElement.Elements().Count() + childrenPosition.Count(), originalElement.Elements().Count());
 
             Output.WriteLine("check if all other child elements are matched, except the removed one");
             for (int i = 0; i < originalElement.Elements().Count(); i++)
