@@ -63,7 +63,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             if (elementNum != 0)
                             {
-                                Assert.Equal(W15.SdtAppearance.Tags, sdtBlock.SdtProperties.Descendants<W15.Appearance>().First().Val);
+                                Assert.Equal(W15.SdtAppearance.Tags, sdtBlock.SdtProperties.Descendants<W15.Appearance>().First().Val.Value);
                             }
 
                             break;
@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             if (elementNum != 0)
                             {
-                                Assert.Equal(W15.SdtAppearance.Hidden, sdtBlock.SdtProperties.Descendants<W15.Appearance>().First().Val);
+                                Assert.Equal(W15.SdtAppearance.Hidden, sdtBlock.SdtProperties.Descendants<W15.Appearance>().First().Val.Value);
                             }
 
                             break;
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             if (elementNum != 0)
                             {
-                                Assert.Equal(W15.SdtAppearance.BoundingBox, sdtBlock.SdtProperties.Descendants<W15.Appearance>().First().Val);
+                                Assert.Equal(W15.SdtAppearance.BoundingBox, sdtBlock.SdtProperties.Descendants<W15.Appearance>().First().Val.Value);
                             }
                             else
                             {

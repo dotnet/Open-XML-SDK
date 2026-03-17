@@ -649,7 +649,7 @@ namespace DocumentFormat.OpenXml.Tests
             ByteValue byteValue = new ByteValue();
             byte bt = 1;
             byteValue = bt;
-            Assert.Equal(byteValue, bt);
+            Assert.Equal(bt, byteValue.Value);
             Assert.Equal(bt, byteValue.Value);
             bt = 2;
             byteValue = ByteValue.FromByte(bt);
@@ -669,7 +669,7 @@ namespace DocumentFormat.OpenXml.Tests
             DecimalValue decimalValue = new DecimalValue();
             decimal dcm = 10;
             decimalValue = dcm;
-            Assert.Equal(decimalValue, dcm);
+            Assert.Equal(dcm, decimalValue.Value);
             decimalValue = DecimalValue.FromDecimal(20);
             Assert.Equal(20, decimalValue.Value);
             Assert.Equal(20, DecimalValue.ToDecimal(decimalValue));
@@ -678,7 +678,7 @@ namespace DocumentFormat.OpenXml.Tests
             DoubleValue doubleValue = new DoubleValue();
             double dbl = 1.1;
             doubleValue = dbl;
-            Assert.Equal(doubleValue, dbl);
+            Assert.Equal(dbl, doubleValue.Value);
             doubleValue = DoubleValue.FromDouble(2.2);
             Assert.Equal(2.2, doubleValue.Value);
             Assert.Equal(2.2, DoubleValue.ToDouble(doubleValue));
@@ -697,7 +697,7 @@ namespace DocumentFormat.OpenXml.Tests
             Int16Value int16Value = new Int16Value();
             short int16 = 16;
             int16Value = int16;
-            Assert.Equal(int16Value, int16);
+            Assert.Equal(int16, int16Value.Value);
             int16 = 17;
             int16Value = Int16Value.FromInt16(int16);
             Assert.Equal(int16, int16Value.Value);
@@ -707,7 +707,7 @@ namespace DocumentFormat.OpenXml.Tests
             Int32Value int32Value = new Int32Value();
             int int32 = 32;
             int32Value = int32;
-            Assert.Equal(int32Value, int32);
+            Assert.Equal(int32, int32Value.Value);
             int32 = 33;
             int32Value = Int32Value.FromInt32(int32);
             Assert.Equal(int32, int32Value.Value);
@@ -717,7 +717,7 @@ namespace DocumentFormat.OpenXml.Tests
             Int64Value int64Value = new Int64Value();
             long int64 = 64;
             int64Value = int64;
-            Assert.Equal(int64Value, int64);
+            Assert.Equal(int64, int64Value.Value);
             int64 = 17;
             int64Value = Int64Value.FromInt64(int64);
             Assert.Equal(int64, int64Value.Value);
@@ -745,7 +745,7 @@ namespace DocumentFormat.OpenXml.Tests
             SByteValue sbyteValue = new SByteValue();
             sbyte sbt = sbyte.MaxValue;
             sbyteValue = sbt;
-            Assert.Equal(sbyteValue, sbt);
+            Assert.Equal(sbt, sbyteValue.Value);
             sbt = sbyte.MinValue;
             sbyteValue = SByteValue.FromSByte(sbt);
             Assert.Equal(sbt, sbyteValue.Value);
@@ -755,7 +755,7 @@ namespace DocumentFormat.OpenXml.Tests
             SingleValue singleValue = new SingleValue();
             float single = float.MaxValue;
             singleValue = single;
-            Assert.Equal(singleValue, single);
+            Assert.Equal(single, singleValue.Value);
             single = float.NaN;
             singleValue = SingleValue.FromSingle(single);
             Assert.Equal(single, singleValue.Value);
@@ -792,7 +792,7 @@ namespace DocumentFormat.OpenXml.Tests
             UInt16Value uint16Value = new UInt16Value();
             ushort uint16 = ushort.MaxValue;
             uint16Value = uint16;
-            Assert.Equal(uint16Value, uint16);
+            Assert.Equal(uint16, uint16Value.Value);
             uint16 = ushort.MinValue;
             uint16Value = UInt16Value.FromUInt16(uint16);
             Assert.Equal(uint16, uint16Value.Value);
@@ -802,7 +802,7 @@ namespace DocumentFormat.OpenXml.Tests
             UInt32Value uint32Value = new UInt32Value();
             uint uint32 = uint.MaxValue;
             uint32Value = uint32;
-            Assert.Equal(uint32Value, uint32);
+            Assert.Equal(uint32, uint32Value.Value);
             uint32 = uint.MinValue;
             uint32Value = UInt32Value.FromUInt32(uint32);
             Assert.Equal(uint32, uint32Value.Value);
@@ -812,7 +812,7 @@ namespace DocumentFormat.OpenXml.Tests
             UInt64Value uint64Value = new UInt64Value();
             ulong uint64 = ulong.MaxValue;
             uint64Value = uint64;
-            Assert.Equal(uint64Value, uint64);
+            Assert.Equal(uint64, uint64Value.Value);
             uint64 = ulong.MinValue;
             uint64Value = UInt64Value.FromUInt64(uint64);
             Assert.Equal(uint64, uint64Value.Value);

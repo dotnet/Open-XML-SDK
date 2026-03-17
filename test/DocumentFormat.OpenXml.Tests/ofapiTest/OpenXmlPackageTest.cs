@@ -199,7 +199,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var firstText = document.MainDocumentPart.Document.Descendants<Text>().First();
                     Assert.Equal("Hello World", firstText.Text);
-                    Assert.Equal(1, document.MainDocumentPart.Document.Descendants<w.Drawing>().Count());
+                    Assert.Single(document.MainDocumentPart.Document.Descendants<w.Drawing>());
                     Assert.True(document.MainDocumentPart.GetPartById("rId6") is ImagePart);
                 }
             }

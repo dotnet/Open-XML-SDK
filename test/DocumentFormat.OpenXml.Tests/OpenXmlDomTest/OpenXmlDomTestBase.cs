@@ -1741,7 +1741,7 @@ namespace DocumentFormat.OpenXml.Tests
                                 Output.WriteLine("xmlns:{0} = {1}", ns.Key, ns.Value);
                             }
 
-                            Assert.Equal(1, hostElement.NamespaceDeclarations.Where(ns => ns.Key == newNs.Key).Count());
+                            Assert.Single(hostElement.NamespaceDeclarations, ns => ns.Key == newNs.Key);
                         }
 
                         Output.WriteLine("Saving changes...");

@@ -135,12 +135,12 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
                 // Verify TableId attribute value.
 
                 // Verify TableId attribute value of TableSlicerCache.
-                Assert.Equal(2, tableSlicerCache1.TableId.Value);
+                Assert.Equal(2u, tableSlicerCache1.TableId.Value);
 
                 // Verify Column attribute value.
 
                 // Verify Column attribute value of TableSlicerCache.
-                Assert.Equal(2, tableSlicerCache1.Column.Value);
+                Assert.Equal(2u, tableSlicerCache1.Column.Value);
 
                 // Verify SortOrder attribute value.
 
@@ -159,16 +159,16 @@ namespace DocumentFormat.OpenXml.Tests.Slicer
 
                 // Verify CrossFilter attribute value.
                 // Verify CrossFilter attribute value of TableSlicerCache. Value is None.
-                Assert.Equal(X14.SlicerCacheCrossFilterValues.None, tableSlicerCache1.CrossFilter);
+                Assert.Equal(X14.SlicerCacheCrossFilterValues.None, tableSlicerCache1.CrossFilter.Value);
 
                 // Verify CrossFilter attribute value of TableSlicerCache. Value is ShowItemsWithDataAtTop.
-                Assert.Equal(X14.SlicerCacheCrossFilterValues.ShowItemsWithDataAtTop, tableSlicerCache2.CrossFilter);
+                Assert.Equal(X14.SlicerCacheCrossFilterValues.ShowItemsWithDataAtTop, tableSlicerCache2.CrossFilter.Value);
 
                 // Verify CrossFilter attribute value of TableSlicerCache. Value is ShowItemsWithNoData.
-                Assert.Equal(X14.SlicerCacheCrossFilterValues.ShowItemsWithNoData, tableSlicerCache3.CrossFilter);
+                Assert.Equal(X14.SlicerCacheCrossFilterValues.ShowItemsWithNoData, tableSlicerCache3.CrossFilter.Value);
 
                 // Verify SlicerCacheHideItemsWithNoData element exist.
-                Assert.Equal(1, slicerCachePart2.SlicerCacheDefinition.SlicerCacheDefinitionExtensionList.Descendants<X15.SlicerCacheHideItemsWithNoData>().Count());
+                Assert.Single(slicerCachePart2.SlicerCacheDefinition.SlicerCacheDefinitionExtensionList.Descendants<X15.SlicerCacheHideItemsWithNoData>());
             }
         }
 

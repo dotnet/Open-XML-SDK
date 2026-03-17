@@ -596,7 +596,6 @@ namespace DocumentFormat.OpenXml.Tests
             var defaultA = default(OpenXmlAttribute);
             var defaultB = default(OpenXmlAttribute);
             Assert.Equal(defaultA, defaultB);
-            Assert.Equal(defaultA, defaultB);
 
             var wrsidRA = new OpenXmlAttribute("w", "rsidR", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00B327F7");
             var wrsidRB = new OpenXmlAttribute("w", "rsidR", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00B327F7");
@@ -604,7 +603,6 @@ namespace DocumentFormat.OpenXml.Tests
             Output.WriteLine("HashCode for {0}: {1}", wrsidRA.XmlQualifiedName, wrsidRA.GetHashCode());
             Assert.Equal(wrsidRA, wrsidRB);
             Assert.True(wrsidRA.Equals((object)wrsidRB), "Two OpenXmlAttribute with same leftBorders are NOT equal by Equals().");
-            Assert.Equal(wrsidRA, wrsidRB);
 
             var wrsidR = new OpenXmlAttribute("w", "rsidR", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00B327F7");
             var wrsidP = new OpenXmlAttribute("w", "rsidP", "http://schemas.openxmlformats.org/wordprocessingml/2006/main", "00EC35BB");
@@ -613,7 +611,6 @@ namespace DocumentFormat.OpenXml.Tests
             Output.WriteLine("Comparing two different OpenXmlAttribute with different value...");
             Assert.NotEqual(wrsidR, wrsidP);
             Assert.False(wrsidR.Equals((object)wrsidP), "Two different OpenXmlAttribute with different value are equal by Equals().");
-            Assert.NotEqual(wrsidR, wrsidP);
         }
 
         #endregion OpenXmlAttribute
