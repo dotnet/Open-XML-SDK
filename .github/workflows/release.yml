@@ -40,6 +40,7 @@ jobs:
       runs-on: ubuntu-latest
       permissions:
         id-token: write
+        issues: write
       steps:
         - name: Download and Extract Artifacts from build
           uses: dawidd6/action-download-artifact@v14
