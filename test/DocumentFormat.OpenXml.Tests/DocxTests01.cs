@@ -362,6 +362,50 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
+        public void ChangeDocumentType_MacroEnabledToDocument_RemovesVbaParts()
+        {
+            using var stream = new MemoryStream();
+
+            // Create a macro-enabled document with a VbaProjectPart
+            using (var doc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.MacroEnabledDocument))
+            {
+                var mainPart = doc.AddMainDocumentPart();
+                mainPart.Document = new W.Document(new W.Body(new W.Paragraph(new W.Run(new W.Text("Test")))));
+
+                // Add a VbaProjectPart (the part that causes the issue)
+                mainPart.AddNewPart<VbaProjectPart>();
+
+                Assert.NotNull(mainPart.VbaProjectPart);
+                Assert.Equal(WordprocessingDocumentType.MacroEnabledDocument, doc.DocumentType);
+            }
+
+            // Re-open and change type to a standard document
+            stream.Position = 0;
+
+            using (var doc = WordprocessingDocument.Open(stream, true))
+            {
+                Assert.Equal(WordprocessingDocumentType.MacroEnabledDocument, doc.DocumentType);
+                Assert.NotNull(doc.MainDocumentPart.VbaProjectPart);
+
+                doc.ChangeDocumentType(WordprocessingDocumentType.Document);
+
+                Assert.Equal(WordprocessingDocumentType.Document, doc.DocumentType);
+
+                // After changing to a non-macro type, VbaProjectPart should be removed
+                Assert.Null(doc.MainDocumentPart.VbaProjectPart);
+            }
+
+            // Re-open and verify the VBA part is no longer present
+            stream.Position = 0;
+
+            using (var doc = WordprocessingDocument.Open(stream, false))
+            {
+                Assert.Null(doc.MainDocumentPart.VbaProjectPart);
+                Assert.Empty(doc.MainDocumentPart.GetPartsOfType<VbaProjectPart>());
+            }
+        }
+
+        [Fact]
         public void W038_DocxCreation_Package()
         {
             using (var stream = GetStream(TestFiles.Document, true))
