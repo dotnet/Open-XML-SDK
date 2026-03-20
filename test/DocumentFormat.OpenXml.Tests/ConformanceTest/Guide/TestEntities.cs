@@ -3,10 +3,10 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
-using LogUtil;
 using System;
 using System.IO;
 using System.Linq;
+using Xunit;
 
 using A = DocumentFormat.OpenXml.Drawing;
 using P15 = DocumentFormat.OpenXml.Office2013.PowerPoint;
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// </summary>
         /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
-        internal void EditElement(Stream stream, VerifiableLog log)
+        internal void EditElement(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -108,7 +108,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 A.RgbColorModelHex rgbColorModelHex2 = extendedGuide2.Descendants<A.RgbColorModelHex>().First();
                 rgbColorModelHex2.Val.Value = Color2;
 
-                log.Pass("Edited the ExtendedGuideList element.");
+                log.WriteLine("Edited the ExtendedGuideList element.");
 
                 PresentationExtension presentationExtension2 = package.PresentationPart.RootElement.Descendants<PresentationExtension>().Where(e => e.Uri == NotesExtUri).Single();
 
@@ -130,7 +130,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 A.RgbColorModelHex rgbColorModelHex4 = extendedGuide4.Descendants<A.RgbColorModelHex>().First();
                 rgbColorModelHex4.Val.Value = Color4;
 
-                log.Pass("Edited the NotesGuideList element.");
+                log.WriteLine("Edited the NotesGuideList element.");
             }
         }
 
@@ -139,7 +139,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// </summary>
         /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
-        internal void VerifyElement(Stream stream, VerifiableLog log)
+        internal void VerifyElement(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
@@ -151,18 +151,18 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 // Verifying Guide(1) element
                 P15.ExtendedGuide extendedGuide1 = extendedGuideList1.Descendants<P15.ExtendedGuide>().Where(e => e.Id == Id1).Single();
 
-                log.Verify(extendedGuide1.Position == position1, "An incorrect value, Position value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
-                log.Verify(extendedGuide1.Orientation == directionValues1, "An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
+                Assert.Equal(position1, extendedGuide1.Position.Value);
+                Assert.Equal(directionValues1, extendedGuide1.Orientation.Value);
                 A.RgbColorModelHex rgbColorModelHex1 = extendedGuide1.Descendants<A.RgbColorModelHex>().First();
-                log.Verify(rgbColorModelHex1.Val.Value == Color1, "An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id);
+                Assert.Equal(Color1, rgbColorModelHex1.Val.Value);
 
                 // Verifying Guide(2) element
                 P15.ExtendedGuide extendedGuide2 = extendedGuideList1.Descendants<P15.ExtendedGuide>().Where(e => e.Id == Id2).Single();
 
-                log.Verify(extendedGuide2.Position == position2, "An incorrect value, Position value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
-                log.Verify(extendedGuide2.Orientation == directionValues2, "An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
+                Assert.Equal(position2, extendedGuide2.Position.Value);
+                Assert.Equal(directionValues2, extendedGuide2.Orientation.Value);
                 A.RgbColorModelHex rgbColorModelHex2 = extendedGuide2.Descendants<A.RgbColorModelHex>().First();
-                log.Verify(rgbColorModelHex2.Val.Value == Color2, "An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id);
+                Assert.Equal(Color2, rgbColorModelHex2.Val.Value);
 
                 // Verify NotesGuideList
                 PresentationExtension presentationExtension2 = package.PresentationPart.RootElement.Descendants<PresentationExtension>().Where(e => e.Uri == NotesExtUri).Single();
@@ -171,18 +171,18 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 // Verifying Guide(1) element
                 P15.ExtendedGuide extendedGuide3 = notesGuideList.Descendants<P15.ExtendedGuide>().Where(e => e.Id == Id1).Single();
 
-                log.Verify(extendedGuide3.Position == position3, "An incorrect value, Position value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
-                log.Verify(extendedGuide3.Orientation == directionValues2, "An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
+                Assert.Equal(position3, extendedGuide3.Position.Value);
+                Assert.Equal(directionValues2, extendedGuide3.Orientation.Value);
                 A.RgbColorModelHex rgbColorModelHex3 = extendedGuide3.Descendants<A.RgbColorModelHex>().First();
-                log.Verify(rgbColorModelHex3.Val.Value == Color3, "An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id);
+                Assert.Equal(Color3, rgbColorModelHex3.Val.Value);
 
                 // Verifying Guide(2) element
                 P15.ExtendedGuide extendedGuide4 = notesGuideList.Descendants<P15.ExtendedGuide>().Where(e => e.Id == Id2).Single();
 
-                log.Verify(extendedGuide4.Position == position4, "An incorrect value, Position value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
-                log.Verify(extendedGuide4.Orientation == directionValues1, "An incorrect value, Orientation value of ExtendedGuide. Id=[{0}].", extendedGuide1.Id);
+                Assert.Equal(position4, extendedGuide4.Position.Value);
+                Assert.Equal(directionValues1, extendedGuide4.Orientation.Value);
                 A.RgbColorModelHex rgbColorModelHex4 = extendedGuide4.Descendants<A.RgbColorModelHex>().First();
-                log.Verify(rgbColorModelHex4.Val.Value == Color4, "An incorrect value, RgbColorModelHex value. Guide Id=[{0}].", extendedGuide1.Id);
+                Assert.Equal(Color4, rgbColorModelHex4.Val.Value);
             }
         }
 
@@ -191,7 +191,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// </summary>
         /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
-        internal void DeleteElement(Stream stream, VerifiableLog log)
+        internal void DeleteElement(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -201,7 +201,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                     rgbColorModelHex.Remove();
                 }
 
-                log.Pass("Deleted the RgbColorModelHex element.");
+                log.WriteLine("Deleted the RgbColorModelHex element.");
 
                 // Delete ColorType element
                 foreach (P15.ColorType colorType in package.PresentationPart.RootElement.Descendants<P15.ColorType>())
@@ -209,7 +209,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                     colorType.Remove();
                 }
 
-                log.Pass("Deleted the ColorType element.");
+                log.WriteLine("Deleted the ColorType element.");
 
                 // Delete ExtendedGuide element
                 foreach (P15.ExtendedGuide extendedGuide in package.PresentationPart.RootElement.Descendants<P15.ExtendedGuide>())
@@ -217,7 +217,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                     extendedGuide.Remove();
                 }
 
-                log.Pass("Deleted the ExtendedGuide element.");
+                log.WriteLine("Deleted the ExtendedGuide element.");
 
                 // Delete ExtendedGuideList element(P15.ExtendedGuideList = P15.SlideGuideList)
                 foreach (P15.ExtendedGuideList extendedGuideList in package.PresentationPart.RootElement.Descendants<P15.SlideGuideList>())
@@ -225,7 +225,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                     extendedGuideList.Remove();
                 }
 
-                log.Pass("Deleted the ExtendedGuideList element.");
+                log.WriteLine("Deleted the ExtendedGuideList element.");
 
                 // Delete PresentationExtension element
                 foreach (PresentationExtension presentationExtension in package.PresentationPart.RootElement.Descendants<PresentationExtension>())
@@ -233,12 +233,12 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                     presentationExtension.Remove();
                 }
 
-                log.Pass("Deleted the PresentationExtension element.");
+                log.WriteLine("Deleted the PresentationExtension element.");
 
                 // Delete PresentationExtensionList element
                 PresentationExtensionList presentationExtensionList = package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Single();
                 presentationExtensionList.Remove();
-                log.Pass("Deleted the PresentationExtensionList element.");
+                log.WriteLine("Deleted the PresentationExtensionList element.");
             }
         }
 
@@ -247,21 +247,21 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// </summary>
         /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
-        internal void VerifyDeletedElement(Stream stream, VerifiableLog log)
+        internal void VerifyDeletedElement(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
-                log.Verify(!package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Any(), "Exist PresentationExtensionList element.");
+                Assert.True(!package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Any(), "Exist PresentationExtensionList element.");
 
-                log.Verify(!package.PresentationPart.RootElement.Descendants<PresentationExtension>().Any(), "Exist PresentationExtension element.");
+                Assert.True(!package.PresentationPart.RootElement.Descendants<PresentationExtension>().Any(), "Exist PresentationExtension element.");
 
-                log.Verify(!package.PresentationPart.RootElement.Descendants<P15.SlideGuideList>().Any(), "Exist ExtendedGuideList element.");
+                Assert.True(!package.PresentationPart.RootElement.Descendants<P15.SlideGuideList>().Any(), "Exist ExtendedGuideList element.");
 
-                log.Verify(!package.PresentationPart.RootElement.Descendants<P15.ExtendedGuide>().Any(), "Exist ExtendedGuide element.");
+                Assert.True(!package.PresentationPart.RootElement.Descendants<P15.ExtendedGuide>().Any(), "Exist ExtendedGuide element.");
 
-                log.Verify(!package.PresentationPart.RootElement.Descendants<P15.ColorType>().Any(), "Exist ColorType element.");
+                Assert.True(!package.PresentationPart.RootElement.Descendants<P15.ColorType>().Any(), "Exist ColorType element.");
 
-                log.Verify(!package.PresentationPart.RootElement.Descendants<A.RgbColorModelHex>().Any(), "Exist RgbColorModelHex element.");
+                Assert.True(!package.PresentationPart.RootElement.Descendants<A.RgbColorModelHex>().Any(), "Exist RgbColorModelHex element.");
             }
         }
 
@@ -270,7 +270,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// </summary>
         /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
-        internal void AddElement(Stream stream, VerifiableLog log)
+        internal void AddElement(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -283,19 +283,19 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 PresentationExtensionList presentationExtensionList = new PresentationExtensionList();
 
                 colorType1.AppendChild<A.RgbColorModelHex>(rgbColorModelHex1);
-                log.Pass("Added RgbColorModelHex element. It SlideGuideList.");
+                log.WriteLine("Added RgbColorModelHex element. It SlideGuideList.");
 
                 extendedGuide1.AppendChild<P15.ColorType>(colorType1);
-                log.Pass("Added ColorType element. It SlideGuideList.");
+                log.WriteLine("Added ColorType element. It SlideGuideList.");
 
                 slideGuideList.AppendChild<P15.ExtendedGuide>(extendedGuide1);
-                log.Pass("Added ExtendedGuide element. It SlideGuideList.");
+                log.WriteLine("Added ExtendedGuide element. It SlideGuideList.");
 
                 presentationExtension1.AppendChild<P15.SlideGuideList>(slideGuideList);
-                log.Pass("Added SlideGuideList element. It SlideGuideList.");
+                log.WriteLine("Added SlideGuideList element. It SlideGuideList.");
 
                 presentationExtensionList.AppendChild<PresentationExtension>(presentationExtension1);
-                log.Pass("Added PresentationExtension element. It SlideGuideList.");
+                log.WriteLine("Added PresentationExtension element. It SlideGuideList.");
 
                 // Adding NotesGuide element
                 A.RgbColorModelHex rgbColorModelHex2 = new A.RgbColorModelHex() { Val = Color4 };
@@ -305,22 +305,22 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 PresentationExtension presentationExtension2 = new PresentationExtension() { Uri = NotesExtUri };
 
                 colorType2.AppendChild<A.RgbColorModelHex>(rgbColorModelHex2);
-                log.Pass("Added RgbColorModelHex element. It SlideGuideList.");
+                log.WriteLine("Added RgbColorModelHex element. It SlideGuideList.");
 
                 extendedGuide2.AppendChild<P15.ColorType>(colorType2);
-                log.Pass("Added ColorType element. It SlideGuideList.");
+                log.WriteLine("Added ColorType element. It SlideGuideList.");
 
                 notesGuideList.AppendChild<P15.ExtendedGuide>(extendedGuide2);
-                log.Pass("Added ExtendedGuide element. It SlideGuideList.");
+                log.WriteLine("Added ExtendedGuide element. It SlideGuideList.");
 
                 presentationExtension2.AppendChild<P15.NotesGuideList>(notesGuideList);
-                log.Pass("Added SlideGuideList element. It SlideGuideList.");
+                log.WriteLine("Added SlideGuideList element. It SlideGuideList.");
 
                 presentationExtensionList.AppendChild<PresentationExtension>(presentationExtension2);
-                log.Pass("Added PresentationExtension element. It SlideGuideList.");
+                log.WriteLine("Added PresentationExtension element. It SlideGuideList.");
 
                 package.PresentationPart.Presentation.Append(presentationExtensionList);
-                log.Pass("Added PresentationExtensionList element. It SlideGuideList.");
+                log.WriteLine("Added PresentationExtensionList element. It SlideGuideList.");
             }
         }
 
@@ -329,28 +329,28 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// </summary>
         /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
-        internal void VerifyAddedElemenet(Stream stream, VerifiableLog log)
+        internal void VerifyAddedElemenet(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 PresentationExtensionList presentationExtensionList = package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Single();
-                log.Verify(package.PresentationPart.RootElement.Descendants<PresentationExtensionList>().Count() == 1, "PresentationExtensionList element not exist.");
+                Assert.Single(package.PresentationPart.RootElement.Descendants<PresentationExtensionList>());
 
                 PresentationExtension presentationExtension1 = presentationExtensionList.Descendants<PresentationExtension>().Where(e => e.Uri == SldExtUri).Single();
-                log.Verify(presentationExtension1.Count() == 1, "PresentationExtension element not exist. By SlideGuide.");
+                Assert.Single(presentationExtension1);
 
-                log.Verify(presentationExtension1.Descendants<P15.SlideGuideList>().Count() == 1, "SlideGuideList element not exist. By SlideGuide.");
-                log.Verify(presentationExtension1.Descendants<P15.ExtendedGuide>().Count() == 1, "ExtendedGuide element not exist. By SlideGuide.");
-                log.Verify(presentationExtension1.Descendants<P15.ColorType>().Count() == 1, "ColorType element not exist. By SlideGuide.");
-                log.Verify(presentationExtension1.Descendants<A.RgbColorModelHex>().Count() == 1, "RgbColorModelHex element not exist. By SlideGuide.");
+                Assert.Single(presentationExtension1.Descendants<P15.SlideGuideList>());
+                Assert.Single(presentationExtension1.Descendants<P15.ExtendedGuide>());
+                Assert.Single(presentationExtension1.Descendants<P15.ColorType>());
+                Assert.Single(presentationExtension1.Descendants<A.RgbColorModelHex>());
 
                 PresentationExtension presentationExtension2 = presentationExtensionList.Descendants<PresentationExtension>().Where(e => e.Uri == NotesExtUri).Single();
-                log.Verify(presentationExtension2.Count() == 1, "PresentationExtension element not exist. By NotesGuide.");
+                Assert.Single(presentationExtension2);
 
-                log.Verify(presentationExtension2.Descendants<P15.NotesGuideList>().Count() == 1, "SlideGuideList element not exist. By NotesGuide.");
-                log.Verify(presentationExtension2.Descendants<P15.ExtendedGuide>().Count() == 1, "ExtendedGuide element not exist. By NotesGuide.");
-                log.Verify(presentationExtension2.Descendants<P15.ColorType>().Count() == 1, "ColorType element not exist. By NotesGuide.");
-                log.Verify(presentationExtension2.Descendants<A.RgbColorModelHex>().Count() == 1, "RgbColorModelHex element not exist. By NotesGuide.");
+                Assert.Single(presentationExtension2.Descendants<P15.NotesGuideList>());
+                Assert.Single(presentationExtension2.Descendants<P15.ExtendedGuide>());
+                Assert.Single(presentationExtension2.Descendants<P15.ColorType>());
+                Assert.Single(presentationExtension2.Descendants<A.RgbColorModelHex>());
             }
         }
     }

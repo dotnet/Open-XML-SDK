@@ -23,8 +23,8 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
 
                 var connectionTestEntities = new ConnectionTestEntities(stream);
 
-                connectionTestEntities.EditElement(stream, Log);
-                connectionTestEntities.VerifyElement(stream, Log);
+                connectionTestEntities.EditElement(stream, Output);
+                connectionTestEntities.VerifyElement(stream, Output);
             }
         }
 
@@ -37,8 +37,8 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
 
                 var connectionTestEntities = new ConnectionTestEntities(stream);
 
-                connectionTestEntities.DeleteElement(stream, Log);
-                connectionTestEntities.VerifyDeletedElement(stream, Log);
+                connectionTestEntities.DeleteElement(stream, Output);
+                connectionTestEntities.VerifyDeletedElement(stream, Output);
             }
         }
 
@@ -51,8 +51,8 @@ namespace DocumentFormat.OpenXml.Tests.Pivot
 
                 var connectionTestEntities = new ConnectionTestEntities(stream);
 
-                connectionTestEntities.AddElement(stream, Log);
-                connectionTestEntities.VerifyAddedElement(stream, Log);
+                connectionTestEntities.AddElement(stream, Output);
+                connectionTestEntities.VerifyAddedElement(stream, Output);
             }
         }
     }

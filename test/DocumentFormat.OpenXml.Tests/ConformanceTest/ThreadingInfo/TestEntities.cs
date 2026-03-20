@@ -3,11 +3,11 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
-using LogUtil;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Xunit;
 
 using P15 = DocumentFormat.OpenXml.Office2013.PowerPoint;
 
@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
         /// <summary>
         /// Editing ThreadingInfo element
         /// </summary>
-        internal void EditElements(Stream stream, VerifiableLog log)
+        internal void EditElements(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -59,28 +59,28 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
                 P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
                 threadingInfo.TimeZoneBias.Value = timeZoneBiasValue;
 
-                log.Pass("Edited ThreadingInfo value.");
+                log.WriteLine("Edited ThreadingInfo value.");
             }
         }
 
         /// <summary>
         /// Verifying the ThreadingInfo element the existence
         /// </summary>
-        internal void VerifyElements(Stream stream, VerifiableLog log)
+        internal void VerifyElements(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
                 P15.ThreadingInfo threadingInfo = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Single();
 
-                log.Verify(threadingInfo.TimeZoneBias.Value == timeZoneBiasValue, "UnChanged in the ThreadingInfo element.");
+                Assert.Equal(timeZoneBiasValue, threadingInfo.TimeZoneBias.Value);
             }
         }
 
         /// <summary>
         /// Deleting ThreadingInfo element
         /// </summary>
-        internal void DeleteElements(Stream stream, VerifiableLog log)
+        internal void DeleteElements(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -89,34 +89,34 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
                 P15.ThreadingInfo threadingInfo = commentExtension.Descendants<P15.ThreadingInfo>().Single();
 
                 threadingInfo.Remove();
-                log.Pass("Deleted ThreadingInfo element.");
+                log.WriteLine("Deleted ThreadingInfo element.");
 
                 commentExtension.Remove();
-                log.Pass("Deleted ThreadingInfo extension element.");
+                log.WriteLine("Deleted ThreadingInfo extension element.");
             }
         }
 
         /// <summary>
         /// Verifying the ThreadingInfo element the deleting
         /// </summary>
-        internal void VerifyDeleteElements(Stream stream, VerifiableLog log)
+        internal void VerifyDeleteElements(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
 
                 int threadingInfoExtCount = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == ThreadingInfoExtUri).Count();
-                log.Verify(threadingInfoExtCount == 0, "ThreadingInfo extension element is not deleted.");
+                Assert.Equal(0, threadingInfoExtCount);
 
                 int threadingInfoCount = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Count();
-                log.Verify(threadingInfoCount == 0, "ThreadingInfo element is not deleted.");
+                Assert.Equal(0, threadingInfoCount);
             }
         }
 
         /// <summary>
         /// Append the ThreadingInfo element
         /// </summary>
-        internal void AddElements(Stream stream, VerifiableLog log)
+        internal void AddElements(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, true))
             {
@@ -126,24 +126,24 @@ namespace DocumentFormat.OpenXml.Tests.ThreadingInfo
                 commentExtension.AppendChild<P15.ThreadingInfo>(threadingInfo);
                 comment.CommentExtensionList.AppendChild<CommentExtension>(commentExtension);
 
-                log.Pass("Added ThreadingInfo element.");
+                log.WriteLine("Added ThreadingInfo element.");
             }
         }
 
         /// <summary>
         /// Verifying the workbookPr element the appending
         /// </summary>
-        internal void VerifyAddElements(Stream stream, VerifiableLog log)
+        internal void VerifyAddElements(Stream stream, ITestOutputHelper log)
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
                 Comment comment = GetComment(package.PresentationPart.SlideParts, 1);
 
                 int threadingInfoExtCount = comment.CommentExtensionList.Descendants<CommentExtension>().Where(e => e.Uri == ThreadingInfoExtUri).Count();
-                log.Verify(threadingInfoExtCount == 1, "ThreadingInfo element is not added.");
+                Assert.Equal(1, threadingInfoExtCount);
 
                 int threadingInfoCount = comment.CommentExtensionList.Descendants<P15.ThreadingInfo>().Count();
-                log.Verify(threadingInfoCount == 1, "ThreadingInfo element is not added.");
+                Assert.Equal(1, threadingInfoCount);
             }
         }
 

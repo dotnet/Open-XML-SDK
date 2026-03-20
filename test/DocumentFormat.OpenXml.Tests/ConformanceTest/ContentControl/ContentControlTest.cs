@@ -24,8 +24,8 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
             {
                 GeneratedDocument.CreatePackage(stream);
 
-                EditElement.EditContentControlElements(stream, Log);
-                VerifyElement.VerifyContentControlElement(stream, Log);
+                EditElement.EditContentControlElements(stream, Output);
+                VerifyElement.VerifyContentControlElement(stream, Output);
             }
         }
 

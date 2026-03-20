@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
                 generatedDocument.CreatePackage(stream);
 
                 TestEntities testEntities = new TestEntities();
-                testEntities.ReadElements(stream, Log);
+                testEntities.ReadElements(stream, Output);
             }
         }
 
@@ -48,8 +48,8 @@ namespace DocumentFormat.OpenXml.Tests.CommentExPeople
                 generatedDocument.CreatePackage(stream);
 
                 TestEntities testEntities = new TestEntities();
-                testEntities.EditElements(stream, Log);
-                testEntities.VerifyElements(stream, Log);
+                testEntities.EditElements(stream, Output);
+                testEntities.VerifyElements(stream, Output);
             }
         }
     }

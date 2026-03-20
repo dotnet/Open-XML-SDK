@@ -3,9 +3,9 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
-using LogUtil;
 using System.IO;
 using System.Linq;
+using Xunit;
 
 using ConstStr = DocumentFormat.OpenXml.Tests.ContentControl.ConstantStrings;
 using W15 = DocumentFormat.OpenXml.Office2013.Word;
@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 {
     public static class EditElement
     {
-        internal static void EditContentControlElements(Stream stream, VerifiableLog log)
+        internal static void EditContentControlElements(Stream stream, ITestOutputHelper log)
         {
             using (WordprocessingDocument package = WordprocessingDocument.Open(stream, true))
             {
@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             sdtBlock.SdtContentBlock.Descendants<RunStyle>().Where(e => e.Val == ConstStr.RunStyleValues.Placeholder).First().Remove();
                             sdtBlock.SdtContentBlock.Descendants<Text>().First().Text = ConstStr.TestStrings.ContentControlString2;
 
-                            log.Pass(string.Format("Edit Content Control string and string style of target tag=[{0}], Remove is style(value=\"PlaceholderText\") element.", ConstStr.TestTagStrings.TagContent01));
+                            log.WriteLine(string.Format("Edit Content Control string and string style of target tag=[{0}], Remove is style(value=\"PlaceholderText\") element.", ConstStr.TestTagStrings.TagContent01));
                             break;
 
                         // Tag is "Test1.1.2"
@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                             sdtBlock.SdtContentBlock.Descendants<Text>().First().Text = ConstStr.TestStrings.ContentControlString1;
 
-                            log.Pass(string.Format("Edit Content Control string and string style of target tag=[{0}], Remove is style(value=\"PlaceholderText\") element.", ConstStr.TestTagStrings.TagContent02));
+                            log.WriteLine(string.Format("Edit Content Control string and string style of target tag=[{0}], Remove is style(value=\"PlaceholderText\") element.", ConstStr.TestTagStrings.TagContent02));
                             break;
 
                         // Tag is "Test1.2.1"
@@ -62,13 +62,13 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                                 sdtBlock.SdtProperties.AppendChild<W15.Appearance>(appearance);
 
-                                log.Pass(string.Format("Edit Content Control an appearance element in attribute of target tag=[{0}], Append an appearance element(value=Tga).", ConstStr.TestTagStrings.TagContent03));
+                                log.WriteLine(string.Format("Edit Content Control an appearance element in attribute of target tag=[{0}], Append an appearance element(value=Tga).", ConstStr.TestTagStrings.TagContent03));
                             }
                             else
                             {
                                 sdtBlock.SdtProperties.Descendants<W15.Appearance>().First().Val.Value = W15.SdtAppearance.Tags;
 
-                                log.Pass(string.Format("Edit Content Control an appearance element in attribute of target tag=[{0}], Change an appearance attribute(value=Tga).", ConstStr.TestTagStrings.TagContent03));
+                                log.WriteLine(string.Format("Edit Content Control an appearance element in attribute of target tag=[{0}], Change an appearance attribute(value=Tga).", ConstStr.TestTagStrings.TagContent03));
                             }
 
                             break;
@@ -85,13 +85,13 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                                 sdtBlock.SdtProperties.AppendChild<W15.Appearance>(appearance);
 
-                                log.Pass(string.Format("Edit Content Control an appearance element in attribute of target tag=[{0}], Append an appearance element(value=Hidden).", ConstStr.TestTagStrings.TagContent04));
+                                log.WriteLine(string.Format("Edit Content Control an appearance element in attribute of target tag=[{0}], Append an appearance element(value=Hidden).", ConstStr.TestTagStrings.TagContent04));
                             }
                             else
                             {
                                 sdtBlock.SdtProperties.Descendants<W15.Appearance>().First().Val.Value = W15.SdtAppearance.Hidden;
 
-                                log.Pass(string.Format("Edit Content Control an appearance element in attribute of target tag=[{0}], Change an appearance attribute(value=Hidden).", ConstStr.TestTagStrings.TagContent04));
+                                log.WriteLine(string.Format("Edit Content Control an appearance element in attribute of target tag=[{0}], Change an appearance attribute(value=Hidden).", ConstStr.TestTagStrings.TagContent04));
                             }
 
                             break;
@@ -108,13 +108,13 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                                 sdtBlock.SdtProperties.AppendChild<W15.Appearance>(appearance);
 
-                                log.Pass(string.Format("Edit Content Control an appearance element in attribute of target tag=[{0}], Append an appearance element(value=BoundingBox).", ConstStr.TestTagStrings.TagContent05));
+                                log.WriteLine(string.Format("Edit Content Control an appearance element in attribute of target tag=[{0}], Append an appearance element(value=BoundingBox).", ConstStr.TestTagStrings.TagContent05));
                             }
                             else
                             {
                                 sdtBlock.SdtProperties.Descendants<W15.Appearance>().First().Val.Value = W15.SdtAppearance.BoundingBox;
 
-                                log.Pass(string.Format("Edit Content Control an appearance element in attribute of target tag=[{0}], Change an appearance attribute(value=BoundingBox).", ConstStr.TestTagStrings.TagContent05));
+                                log.WriteLine(string.Format("Edit Content Control an appearance element in attribute of target tag=[{0}], Change an appearance attribute(value=BoundingBox).", ConstStr.TestTagStrings.TagContent05));
                             }
 
                             break;
@@ -131,14 +131,14 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
 
                                 sdtBlock.SdtProperties.AppendChild<W15.Color>(color);
 
-                                log.Pass(string.Format("Edit Content Control a color element of target tag=[{0}], Append a Color element(value={1}).", ConstStr.TestTagStrings.TagContent06, ConstStr.TestColorValues.TestColor));
+                                log.WriteLine(string.Format("Edit Content Control a color element of target tag=[{0}], Append a Color element(value={1}).", ConstStr.TestTagStrings.TagContent06, ConstStr.TestColorValues.TestColor));
                             }
                             else
                             {
                                 W15.Color color = sdtBlock.SdtProperties.Descendants<W15.Color>().First();
                                 color.Val = ConstStr.TestColorValues.TestColor;
 
-                                log.Pass(string.Format("Edit Content Control a color element of target tag=[{0}], Change a Color element value={1}.", ConstStr.TestTagStrings.TagContent06, ConstStr.TestColorValues.TestColor));
+                                log.WriteLine(string.Format("Edit Content Control a color element of target tag=[{0}], Change a Color element value={1}.", ConstStr.TestTagStrings.TagContent06, ConstStr.TestColorValues.TestColor));
                             }
 
                             break;
@@ -152,11 +152,11 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             {
                                 sdtBlock.SdtProperties.Descendants<W15.Color>().First().Remove();
 
-                                log.Pass(string.Format("Edit Content Control a color element of target tag=[{0}], Removes the element.", ConstStr.TestTagStrings.TagContent07));
+                                log.WriteLine(string.Format("Edit Content Control a color element of target tag=[{0}], Removes the element.", ConstStr.TestTagStrings.TagContent07));
                             }
                             else
                             {
-                                log.Fail(string.Format("Not found to be edited. Target tag=[{0}].", ConstStr.TestTagStrings.TagContent07));
+                                Assert.Fail(string.Format("Not found to be edited. Target tag=[{0}].", ConstStr.TestTagStrings.TagContent07));
                             }
 
                             break;
@@ -171,7 +171,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                                 sdtRepeatedSection = sdtBlock.SdtProperties.Descendants<W15.SdtRepeatedSection>().First();
                                 sdtRepeatedSection.DoNotAllowInsertDeleteSection.Val.Value = false;
 
-                                log.Pass(string.Format("Edit Content Control a DoNotAllowInsertDeleteSection element of target tag=[{0}], Change The DoNotAllowInsertDeleteSection element. Its element in attribute value is false.", ConstStr.TestTagStrings.TagContent10));
+                                log.WriteLine(string.Format("Edit Content Control a DoNotAllowInsertDeleteSection element of target tag=[{0}], Change The DoNotAllowInsertDeleteSection element. Its element in attribute value is false.", ConstStr.TestTagStrings.TagContent10));
                             }
                             else
                             {
@@ -179,7 +179,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                                 sdtRepeatedSection.DoNotAllowInsertDeleteSection.Val.Value = false;
                                 sdtBlock.SdtProperties.AppendChild<W15.SdtRepeatedSection>(sdtRepeatedSection);
 
-                                log.Pass(string.Format("Edit Content Control a DoNotAllowInsertDeleteSection element of target tag=[{0}], Append The DoNotAllowInsertDeleteSection element. Its element in attribute value is false.", ConstStr.TestTagStrings.TagContent10));
+                                log.WriteLine(string.Format("Edit Content Control a DoNotAllowInsertDeleteSection element of target tag=[{0}], Append The DoNotAllowInsertDeleteSection element. Its element in attribute value is false.", ConstStr.TestTagStrings.TagContent10));
                             }
 
                             break;
@@ -193,11 +193,11 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             if (sectionTitles.Any())
                             {
                                 sectionTitles.First().Val = "TEST_TEST";
-                                log.Pass("SectionTitle is detected and updated.");
+                                log.WriteLine("SectionTitle is detected and updated.");
                             }
                             else
                             {
-                                log.Fail("SectionTitle is not found.");
+                                Assert.Fail("SectionTitle is not found.");
                             }
 
                             break;

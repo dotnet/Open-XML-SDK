@@ -3,7 +3,6 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
-using LogUtil;
 using System;
 using System.IO;
 using System.Linq;
@@ -46,7 +45,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         /// <summary>
         /// Editing workbookPr element
         /// </summary>
-        internal void EditElements(Stream stream, VerifiableLog log)
+        internal void EditElements(Stream stream, ITestOutputHelper log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013) }))
             {
@@ -54,10 +53,10 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
                 X15.WorkbookProperties workbookProperties = workbookExtensionList.Descendants<X15.WorkbookProperties>().Single();
                 workbookProperties.ChartTrackingReferenceBase.Value = false;
 
-                log.Pass("Edited ChartTrackingReferenceBase value.");
+                log.WriteLine("Edited ChartTrackingReferenceBase value.");
 
                 X15ac.AbsolutePath absolutePath = package.WorkbookPart.Workbook.AbsolutePath;
-                log.Verify(absolutePath is not null, "Unable to obtain the X15ac.AbsolutePath.");
+                Assert.True(absolutePath is not null, "Unable to obtain the X15ac.AbsolutePath.");
                 absolutePath.Url = string.Empty;
             }
         }
@@ -67,14 +66,14 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        internal void VerifyElements(Stream stream, VerifiableLog log)
+        internal void VerifyElements(Stream stream, ITestOutputHelper log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013) }))
             {
                 WorkbookExtensionList workbookExtensionList = package.WorkbookPart.Workbook.Descendants<WorkbookExtensionList>().Single();
                 X15.WorkbookProperties workbookProperties = workbookExtensionList.Descendants<X15.WorkbookProperties>().Single();
 
-                log.Verify(workbookProperties.ChartTrackingReferenceBase.Value == false, "UnChanged in the ChartTrackingReferenceBase attribute value on workbookPr element.");
+                Assert.False(workbookProperties.ChartTrackingReferenceBase.Value, "UnChanged in the ChartTrackingReferenceBase attribute value on workbookPr element.");
 
                 X15ac.AbsolutePath absolutePath = package.WorkbookPart.Workbook.AbsolutePath;
                 Assert.NotNull(absolutePath);
@@ -87,7 +86,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        internal void DeleteElements(Stream stream, VerifiableLog log)
+        internal void DeleteElements(Stream stream, ITestOutputHelper log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013) }))
             {
@@ -98,11 +97,11 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
                 WorkbookExtension workbookExtension = workbookExtensionList.Descendants<WorkbookExtension>().Where(e => e.Uri == WorkbookPrExtUri).Single();
                 workbookExtension.Remove();
 
-                log.Pass("Deleted workbookPr element.");
+                log.WriteLine("Deleted workbookPr element.");
 
                 X15ac.AbsolutePath absolutePath = package.WorkbookPart.Workbook.AbsolutePath;
                 absolutePath.Remove();
-                log.Pass("Deleted AbsolutePath element.");
+                log.WriteLine("Deleted AbsolutePath element.");
             }
         }
 
@@ -111,18 +110,18 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        internal void VerifyDeleteElements(Stream stream, VerifiableLog log)
+        internal void VerifyDeleteElements(Stream stream, ITestOutputHelper log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013) }))
             {
                 int workbookExtensionNum = package.WorkbookPart.Workbook.Descendants<WorkbookExtension>().Where(e => e.Uri == WorkbookPrExtUri).Count();
-                log.Verify(workbookExtensionNum == 0, "WorkbookExtension element is not deleted.");
+                Assert.Equal(0, workbookExtensionNum);
 
                 int workbookPrCount = package.WorkbookPart.Workbook.Descendants<X15.WorkbookProperties>().Count();
-                log.Verify(workbookPrCount == 0, "workbookPr element is not deleted.");
+                Assert.Equal(0, workbookPrCount);
 
                 X15ac.AbsolutePath absolutePath = package.WorkbookPart.Workbook.AbsolutePath;
-                log.Verify(absolutePath is null, "X15ac.AbsolutePath element is not deleted.");
+                Assert.True(absolutePath is null, "X15ac.AbsolutePath element is not deleted.");
             }
         }
 
@@ -131,7 +130,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         /// </summary>
         /// <param name="stream">Target excel stream</param>
         /// <param name="log">Logger</param>
-        internal void AddElement(Stream stream, VerifiableLog log)
+        internal void AddElement(Stream stream, ITestOutputHelper log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, true, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013) }))
             {
@@ -141,14 +140,14 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
 
                 AlternateContentChoice alternateContentChoice = new AlternateContentChoice() { Requires = "x15" };
                 alternateContentChoice.Append(absolutePath);
-                log.Pass("Added AbsolutePath element.");
+                log.WriteLine("Added AbsolutePath element.");
 
                 AlternateContent alternateContent = new AlternateContent();
                 alternateContent.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
                 alternateContent.Append(alternateContentChoice);
 
                 package.WorkbookPart.Workbook.InsertAfter(alternateContent, package.WorkbookPart.Workbook.Descendants<WorkbookProperties>().First());
-                log.Pass("Added AlternateContentChoice element.");
+                log.WriteLine("Added AlternateContentChoice element.");
 
                 WorkbookExtensionList workbookExtensionList = package.WorkbookPart.Workbook.Descendants<WorkbookExtensionList>().Single();
                 WorkbookExtension workbookExtension = new WorkbookExtension() { Uri = WorkbookPrExtUri };
@@ -160,7 +159,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
                 workbookExtension.AppendChild<X15.WorkbookProperties>(workbookProperties);
                 workbookExtensionList.AppendChild<WorkbookExtension>(workbookExtension);
 
-                log.Pass("Added workbookPr element.");
+                log.WriteLine("Added workbookPr element.");
             }
         }
 
@@ -169,16 +168,16 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
         /// </summary>
         /// <param name="stream">Target Excel stream</param>
         /// <param name="log">Logger</param>
-        internal void VerifyAddElements(Stream stream, VerifiableLog log)
+        internal void VerifyAddElements(Stream stream, ITestOutputHelper log)
         {
             using (SpreadsheetDocument package = SpreadsheetDocument.Open(stream, false, new OpenSettings() { MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013) }))
             {
                 WorkbookExtensionList workbookExtensionList = package.WorkbookPart.Workbook.Descendants<WorkbookExtensionList>().Single();
                 int workbookPrNum = workbookExtensionList.Descendants<X15.WorkbookProperties>().Count();
-                log.Verify(workbookPrNum == 1, "Missing workbookPr element.");
+                Assert.Equal(1, workbookPrNum);
 
                 X15ac.AbsolutePath absolutePath = package.WorkbookPart.Workbook.AbsolutePath;
-                log.Verify(absolutePath is not null, "Missing X15ac.AbsolutePath element.");
+                Assert.True(absolutePath is not null, "Missing X15ac.AbsolutePath element.");
             }
         }
     }
