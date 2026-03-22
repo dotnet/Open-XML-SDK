@@ -189,14 +189,14 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 }
 
                 // must be QName
-                var items = qname.Value.Split(':');
-                if (items.Length != 2)
+                var colonIndex = qname.Value.IndexOf(':');
+                if (colonIndex <= 0 || colonIndex == qname.Value.Length - 1 || qname.Value.IndexOf(':', colonIndex + 1) >= 0)
                 {
                     return qname;
                 }
 
                 // Prefix must be already defined.
-                var attributeNamesapce = element.LookupNamespace(items[0]);
+                var attributeNamesapce = element.LookupNamespace(qname.Value.Substring(0, colonIndex));
                 if (attributeNamesapce.IsNullOrEmpty())
                 {
                     return qname;

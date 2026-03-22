@@ -138,8 +138,8 @@ namespace DocumentFormat.OpenXml
 
             foreach (var qname in qnames)
             {
-                var items = qname.Split(':');
-                if (items.Length != 2)
+                var colonIndex = qname.IndexOf(':');
+                if (colonIndex <= 0 || colonIndex == qname.Length - 1 || qname.IndexOf(':', colonIndex + 1) >= 0)
                 {
                     if (onInvalidQName(qnameList))
                     {
@@ -151,7 +151,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
 
-                var ns = LookupNamespaceDelegate?.Invoke(items[0]);
+                var ns = LookupNamespaceDelegate?.Invoke(qname.Substring(0, colonIndex));
                 if (ns.IsNullOrEmpty())
                 {
                     if (onInvalidQName(qnameList))
@@ -164,7 +164,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
 
-                yield return new XmlQualifiedName(items[1], ns);
+                yield return new XmlQualifiedName(qname.Substring(colonIndex + 1), ns);
             }
         }
 
