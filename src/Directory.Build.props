@@ -51,10 +51,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
-  </ItemGroup>
-
-  <ItemGroup>
     <AdditionalFiles Include="$(MSBuildProjectDirectory)/PublicAPI/PublicAPI.*.txt" />
     <AdditionalFiles Include="$(MSBuildProjectDirectory)/PublicAPI/$(TargetFramework)/PublicAPI.*.txt" />
   </ItemGroup>
