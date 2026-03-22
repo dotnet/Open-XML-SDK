@@ -116,6 +116,11 @@ internal class ValidIdentifierHelper
         else
         {
             value = value.Substring(1);
+
+            if (value.Length == 0)
+            {
+                return false;
+            }
         }
 
         return true;
