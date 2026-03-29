@@ -189,8 +189,8 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 }
 
                 // must be QName
-                var colonIndex = qname.Value.IndexOf(':', StringComparison.Ordinal);
-                if (colonIndex <= 0 || colonIndex == qname.Value.Length - 1 || qname.Value.IndexOf(':', colonIndex + 1, StringComparison.Ordinal) >= 0)
+                var colonIndex = qname.Value.IndexOf(":", StringComparison.Ordinal);
+                if (colonIndex <= 0 || colonIndex == qname.Value.Length - 1 || qname.Value.IndexOf(":", colonIndex + 1, StringComparison.Ordinal) >= 0)
                 {
                     return qname;
                 }
