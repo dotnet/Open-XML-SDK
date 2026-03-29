@@ -138,8 +138,8 @@ namespace DocumentFormat.OpenXml
 
             foreach (var qname in qnames)
             {
-                var colonIndex = qname.IndexOf(':');
-                if (colonIndex <= 0 || colonIndex == qname.Length - 1 || qname.IndexOf(':', colonIndex + 1) >= 0)
+                var colonIndex = qname.IndexOf(':', StringComparison.Ordinal);
+                if (colonIndex <= 0 || colonIndex == qname.Length - 1 || qname.IndexOf(':', colonIndex + 1, StringComparison.Ordinal) >= 0)
                 {
                     if (onInvalidQName(qnameList))
                     {
