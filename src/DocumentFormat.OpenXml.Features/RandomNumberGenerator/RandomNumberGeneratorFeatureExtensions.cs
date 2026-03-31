@@ -37,9 +37,7 @@ namespace DocumentFormat.OpenXml.Features
 
             public void Dispose()
             {
-#if !NET35
                 _generator.Dispose();
-#endif
             }
 
             public void GetBytes(byte[] bytes)

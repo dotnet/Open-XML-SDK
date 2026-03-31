@@ -70,11 +70,7 @@ namespace DocumentFormat.OpenXml
         {
             return new XmlReaderSettings
             {
-#if NET35
-                ProhibitDtd = true,
-#else
                 DtdProcessing = DtdProcessing.Prohibit,
-#endif
                 NameTable = new NameTable(),
 
                 // Set IgnoreWhitespace to false for the SDK to handle the whitespace node type. We have to do this because

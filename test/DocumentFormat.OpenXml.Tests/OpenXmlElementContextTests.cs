@@ -39,11 +39,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Theory]
         public void XmlReaderSettingsSet(XmlReaderSettings settings)
         {
-#if NET35
-            Assert.True(xmlReader.ProhibitDtd);
-#else
             Assert.Equal(DtdProcessing.Prohibit, settings.DtdProcessing);
-#endif
 
             Assert.False(settings.IgnoreWhitespace);
             Assert.IsType<NameTable>(settings.NameTable);

@@ -4,10 +4,8 @@
 using System;
 using System.IO;
 
-#if !NET35 && !NET40
 using System.Threading;
 using System.Threading.Tasks;
-#endif
 
 namespace DocumentFormat.OpenXml.Framework;
 
@@ -24,9 +22,7 @@ internal sealed class ReadOnlyStream : DelegatingStream
     {
     }
 
-#if !NET35 && !NET40
     public override Task FlushAsync(CancellationToken cancellationToken) => Task.CompletedTask;
-#endif
 
     public override void SetLength(long value) => throw new NotSupportedException();
 
@@ -41,10 +37,8 @@ internal sealed class ReadOnlyStream : DelegatingStream
     public override void WriteByte(byte value)
         => throw new NotSupportedException();
 
-#if !NET35 && !NET40
     public override Task WriteAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken)
         => throw new NotSupportedException();
-#endif
 
 #if NET6_0_OR_GREATER
     public override ValueTask WriteAsync(ReadOnlyMemory<byte> buffer, CancellationToken cancellationToken = default)

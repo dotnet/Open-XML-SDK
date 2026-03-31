@@ -1802,11 +1802,7 @@ namespace DocumentFormat.OpenXml
 
             if (OpenXmlElementContext is not null)
             {
-#if NET35
-                OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
-#else
                 OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
-#endif
                 return XmlConvertingReaderFactory.Create(stringReader, Features.GetNamespaceResolver(), OpenXmlElementContext.XmlReaderSettings);
             }
             else

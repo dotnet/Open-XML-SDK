@@ -674,11 +674,7 @@ namespace DocumentFormat.OpenXml
                 MaxCharactersInDocument = maxCharactersInPart,
                 CloseInput = closeInput,
                 IgnoreWhitespace = ignoreWhitespace,
-#if NET35
-                ProhibitDtd = true,
-#else
                 DtdProcessing = DtdProcessing.Prohibit,
-#endif
             };
 
             var xmlReader = XmlConvertingReaderFactory.Create(partStream, _resolver, settings);

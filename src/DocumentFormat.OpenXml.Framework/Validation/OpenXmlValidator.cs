@@ -84,14 +84,8 @@ namespace DocumentFormat.OpenXml.Validation
         /// <param name="token">Cancellation token</param>
         /// <returns>A set of validation errors.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the <paramref name="openXmlPackage"/> parameter is null.</exception>
-#if !NET35
-        public
-#else
-        private
-#endif
-        IEnumerable<ValidationErrorInfo> Validate(OpenXmlPackage openXmlPackage, CancellationToken token = default)
+        public IEnumerable<ValidationErrorInfo> Validate(OpenXmlPackage openXmlPackage, CancellationToken token = default)
         {
-            // Note: This is private on .NET 3.5 as CancellationToken on that platform is not available.
             if (openXmlPackage is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPackage));
@@ -129,14 +123,8 @@ namespace DocumentFormat.OpenXml.Validation
         /// <returns>A set of validation errors.</returns>
         /// <exception cref="ArgumentNullException">Thrown when the <paramref name="openXmlPart"/> parameter is null.</exception>
         /// <exception cref="InvalidOperationException">Throw when the specified part is not a defined part in the specified <see cref="FileFormat"/> version.</exception>
-#if !NET35
-        public
-#else
-        private
-#endif
-        IEnumerable<ValidationErrorInfo> Validate(OpenXmlPart openXmlPart, CancellationToken token = default)
+        public IEnumerable<ValidationErrorInfo> Validate(OpenXmlPart openXmlPart, CancellationToken token = default)
         {
-            // Note: This is private on .NET 3.5 as CancellationToken on that platform is not available.
             if (openXmlPart is null)
             {
                 throw new ArgumentNullException(nameof(openXmlPart));
@@ -179,14 +167,8 @@ namespace DocumentFormat.OpenXml.Validation
         /// <exception cref="ArgumentNullException">Thrown when the <paramref name="openXmlElement"/> parameter is null.</exception>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the <paramref name="openXmlElement"/> is type of <see cref="OpenXmlUnknownElement"/>, <see cref="OpenXmlMiscNode"/>, <see cref="AlternateContent"/>, <see cref="AlternateContentChoice"/> or <see cref="AlternateContentFallback"/>.</exception>
         /// <exception cref="InvalidOperationException">Thrown when the <paramref name="openXmlElement"/> is not defined in the specified <see cref="FileFormat"/>.</exception>
-#if !NET35
-        public
-#else
-        private
-#endif
-        IEnumerable<ValidationErrorInfo> Validate(OpenXmlElement openXmlElement, CancellationToken token = default)
+        public IEnumerable<ValidationErrorInfo> Validate(OpenXmlElement openXmlElement, CancellationToken token = default)
         {
-            // Note: This is private on .NET 3.5 as CancellationToken on that platform is not available.
             if (openXmlElement is null)
             {
                 throw new ArgumentNullException(nameof(openXmlElement));

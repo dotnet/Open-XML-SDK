@@ -90,14 +90,10 @@ public static class FlatOpcExtensions
     /// <returns>The corresponding <see cref="XElement"/>.</returns>
     private static XElement GetContentsAsXml(IPackagePart part, HashSet<Uri> altChunkPartUris)
     {
-#if NET35
-        var settings = default(XmlReaderSettings);
-#else
         var settings = new XmlReaderSettings
         {
             DtdProcessing = DtdProcessing.Ignore,
         };
-#endif
 
         if (part.ContentType.EndsWith("xml", StringComparison.Ordinal) &&
             !altChunkPartUris.Contains(part.Uri))

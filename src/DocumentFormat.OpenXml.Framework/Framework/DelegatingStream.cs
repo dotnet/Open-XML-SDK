@@ -5,10 +5,8 @@ using System;
 using System.Diagnostics;
 using System.IO;
 
-#if !NET35 && !NET40
 using System.Threading;
 using System.Threading.Tasks;
-#endif
 
 namespace DocumentFormat.OpenXml.Framework;
 
@@ -111,12 +109,10 @@ internal abstract class DelegatingStream : Stream
         return _innerStream.ReadByte();
     }
 
-#if !NET35 && !NET40
     public override Task<int> ReadAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken)
     {
         return _innerStream.ReadAsync(buffer, offset, count, cancellationToken);
     }
-#endif
 
 #if NET6_0_OR_GREATER
     public override ValueTask<int> ReadAsync(Memory<byte> buffer, CancellationToken cancellationToken = default)
@@ -132,12 +128,10 @@ internal abstract class DelegatingStream : Stream
     }
 #endif
 
-#if !NET35 && !NET40
     public override Task CopyToAsync(Stream destination, int bufferSize, CancellationToken cancellationToken)
     {
         return _innerStream.CopyToAsync(destination, bufferSize, cancellationToken);
     }
-#endif
 
     #endregion Read
 
@@ -148,12 +142,10 @@ internal abstract class DelegatingStream : Stream
         _innerStream.Flush();
     }
 
-#if !NET35 && !NET40
     public override Task FlushAsync(CancellationToken cancellationToken)
     {
         return _innerStream.FlushAsync(cancellationToken);
     }
-#endif
 
     public override void SetLength(long value)
     {
@@ -177,12 +169,10 @@ internal abstract class DelegatingStream : Stream
         _innerStream.WriteByte(value);
     }
 
-#if !NET35 && !NET40
     public override Task WriteAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken)
     {
         return _innerStream.WriteAsync(buffer, offset, count, cancellationToken);
     }
-#endif
 
 #if NET6_0_OR_GREATER
     public override ValueTask WriteAsync(ReadOnlyMemory<byte> buffer, CancellationToken cancellationToken = default)

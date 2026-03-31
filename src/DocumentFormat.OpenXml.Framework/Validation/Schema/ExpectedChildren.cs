@@ -139,11 +139,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     }
                 }
 
-#if NET35
-                var final = childrenNames.ToArray();
-#else
                 var final = childrenNames;
-#endif
 
                 return SR.Format(ValidationResources.Fmt_ListOfPossibleElements, string.Join(ValidationResources.Fmt_ElementNameSeparator, final));
             }

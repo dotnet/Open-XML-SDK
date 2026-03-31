@@ -71,11 +71,7 @@ namespace DocumentFormat.OpenXml
             {
                 XmlReaderSettings settings = new XmlReaderSettings
                 {
-#if NET35
-                    ProhibitDtd = true, // set true explicitly for security fix
-#else
                     DtdProcessing = DtdProcessing.Prohibit, // set to prohibit explicitly for security fix
-#endif
                 };
 
                 using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, Features.GetNamespaceResolver(), settings))
@@ -121,11 +117,7 @@ namespace DocumentFormat.OpenXml
                         {
                             XmlReaderSettings settings = new XmlReaderSettings
                             {
-#if NET35
-                                ProhibitDtd = true,
-#else
                                 DtdProcessing = DtdProcessing.Prohibit,
-#endif
                             };
 
                             using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, Features.GetNamespaceResolver(), settings))
