@@ -32,54 +32,23 @@
     <Version>$(GitVersion_NuGetVersionV2)</Version>
   </PropertyGroup>
 
-  <!-- Due to the need to test .NET 3.5 and .NET 4.0 builds, we have separate configurations that
-       allow us to build and test them. These are mostly done in CI, but may be useful at dev time. -->
-  <Choose>
-    <When Condition=" '$(ProjectLoadStyle)' == 'net35' ">
-      <PropertyGroup>
-        <!-- We have some internal types that conflict -->
-        <NoWarn>$(NoWarn);CS1685</NoWarn>
-        <ProductTargetFrameworks>net35</ProductTargetFrameworks>
-        <FrameworkTargetFrameworks>net35</FrameworkTargetFrameworks>
-        <TestTargetFrameworks>net472</TestTargetFrameworks>
-        <AssetsTargetFrameworks>net472</AssetsTargetFrameworks>
-        <LatestTargetFramework>net472</LatestTargetFramework>
-        <SamplesFrameworks>net472</SamplesFrameworks>
-        <DefineConstants>$(DefineConstants);FEATURE_NO_VALIDATOR_CANCELLATIONTOKEN</DefineConstants>
-      </PropertyGroup>
-    </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'net40' ">
-      <PropertyGroup>
-        <!-- We have some internal types that conflict -->
-        <NoWarn>$(NoWarn);CS1685</NoWarn>
-        <ProductTargetFrameworks>net40</ProductTargetFrameworks>
-        <FrameworkTargetFrameworks>net40</FrameworkTargetFrameworks>
-        <TestTargetFrameworks>net472</TestTargetFrameworks>
-        <AssetsTargetFrameworks>net472</AssetsTargetFrameworks>
-        <LatestTargetFramework>net472</LatestTargetFramework>
-        <SamplesFrameworks>net472</SamplesFrameworks>
-      </PropertyGroup>
-    </When>
-    <Otherwise>
-      <PropertyGroup>
-        <ProductTargetFrameworks>netstandard2.0;net10.0;net8.0;net35;net40;net46</ProductTargetFrameworks>
-        <FrameworkTargetFrameworks>netstandard2.0;net10.0;net6.0;net8.0;net35;net40;net46</FrameworkTargetFrameworks>
-        <AssetsTargetFrameworks>netstandard2.0;net472</AssetsTargetFrameworks>
-        <TestTargetFrameworks>net8.0;net10.0</TestTargetFrameworks>
-        <TestTargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(TestTargetFrameworks);net472</TestTargetFrameworks>
-        <LatestTargetFramework>net10.0</LatestTargetFramework>
-        <SamplesFrameworks>net8.0;net10.0</SamplesFrameworks>
-        <SamplesFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(SamplesFrameworks);net472</SamplesFrameworks>
-        <DefineConstants Condition=" '$(TargetFramework)' != 'net35' And '$(TargetFramework)' != 'net40' And '$(TargetFramework)' != 'net46' And '$(TargetFramework)' != 'net472' ">$(DefineConstants);FEATURE_ASYNC_SAX_XML</DefineConstants>
-      </PropertyGroup>
-    </Otherwise>
-  </Choose>
+  <PropertyGroup>
+    <ProductTargetFrameworks>netstandard2.0;net10.0;net8.0;net46</ProductTargetFrameworks>
+    <FrameworkTargetFrameworks>netstandard2.0;net10.0;net6.0;net8.0;net46</FrameworkTargetFrameworks>
+    <AssetsTargetFrameworks>netstandard2.0;net472</AssetsTargetFrameworks>
+    <TestTargetFrameworks>net8.0;net10.0</TestTargetFrameworks>
+    <TestTargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(TestTargetFrameworks);net472</TestTargetFrameworks>
+    <LatestTargetFramework>net10.0</LatestTargetFramework>
+    <SamplesFrameworks>net8.0;net10.0</SamplesFrameworks>
+    <SamplesFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(SamplesFrameworks);net472</SamplesFrameworks>
+    <DefineConstants Condition=" '$(TargetFramework)' != 'net46' And '$(TargetFramework)' != 'net472' ">$(DefineConstants);FEATURE_ASYNC_SAX_XML</DefineConstants>
+  </PropertyGroup>
 
   <PropertyGroup>
     <SupportsNetStandard>false</SupportsNetStandard>
     <SupportsNetStandard Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'netstandard2.0'))">true</SupportsNetStandard>
     <IsFramework>false</IsFramework>
-    <IsFramework Condition=" '$(TargetFramework)' == 'net35' OR $(TargetFramework.StartsWith('net4')) ">true</IsFramework>
+    <IsFramework Condition=" $(TargetFramework.StartsWith('net4')) ">true</IsFramework>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
