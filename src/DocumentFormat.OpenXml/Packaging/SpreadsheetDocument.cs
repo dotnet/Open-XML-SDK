@@ -184,6 +184,29 @@ namespace DocumentFormat.OpenXml.Packaging
                 .Open();
         }
 
+#if NETSTANDARD || NETCOREAPP
+        /// <summary>
+        /// Creates a forward-only <see cref="OpenXmlPackageWriter"/> for writing a Spreadsheet document
+        /// directly to the given stream without requiring a seekable stream or temporary <see cref="MemoryStream"/>.
+        /// </summary>
+        /// <param name="stream">The target stream. Does not need to be seekable.</param>
+        /// <param name="type">The type of the SpreadsheetDocument.</param>
+        /// <param name="leaveOpen">Whether to leave the stream open after disposal.</param>
+        /// <returns>A forward-only package writer with the workbook relationship pre-registered.</returns>
+        [Experimental(ExperimentalApis.ForwardOnly, UrlFormat = ExperimentalApis.UrlFormat)]
+        [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.ForwardOnly, UrlFormat = ExperimentalApis.UrlFormat)]
+        public static OpenXmlPackageWriter CreateForwardOnly(Stream stream, SpreadsheetDocumentType type, bool leaveOpen = false)
+        {
+            _ = type; // Reserved for future use
+            var writer = new OpenXmlPackageWriter(stream, leaveOpen);
+            writer.AddRelationship(
+                new Uri("/xl/workbook.xml", UriKind.Relative),
+                "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument",
+                "rId1");
+            return writer;
+        }
+#endif
+
         /// <summary>
         /// Creates a new instance of the SpreadsheetDocument class from the specified file.
         /// </summary>

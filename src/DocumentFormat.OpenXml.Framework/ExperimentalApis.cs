@@ -12,4 +12,5 @@ internal static class ExperimentalApis
     public const string PackageBuilder = "OOXML0002";
     public const string AOT = "OOXML0003";
     public const string Framework = "OOXML0004";
+    public const string ForwardOnly = "OOXML0005";
 }

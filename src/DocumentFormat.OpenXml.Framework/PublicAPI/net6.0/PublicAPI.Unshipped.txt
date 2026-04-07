@@ -1,4 +1,4 @@
-﻿#nullable enable
+#nullable enable
 [OOXML0005]DocumentFormat.OpenXml.Packaging.OpenXmlPackageWriter
 [OOXML0005]DocumentFormat.OpenXml.Packaging.OpenXmlPackageWriter.OpenXmlPackageWriter(System.IO.Stream! stream, bool leaveOpen = false) -> void
 [OOXML0005]DocumentFormat.OpenXml.Packaging.OpenXmlPackageWriter.AddRelationship(System.Uri! partUri, string! relationshipType, string? id = null) -> string!
@@ -18,4 +18,3 @@
 [OOXML0005]DocumentFormat.OpenXml.Packaging.PartRelationship.RelationshipType.get -> string!
 [OOXML0005]DocumentFormat.OpenXml.Packaging.PartRelationship.TargetMode.get -> System.IO.Packaging.TargetMode
 [OOXML0005]DocumentFormat.OpenXml.Packaging.PartRelationship.Id.get -> string?
-

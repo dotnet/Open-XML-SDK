@@ -228,6 +228,29 @@ namespace DocumentFormat.OpenXml.Packaging
             return factory.Open(new MemoryStream(), PackageOpenMode.Create);
         }
 
+#if NETSTANDARD || NETCOREAPP
+        /// <summary>
+        /// Creates a forward-only <see cref="OpenXmlPackageWriter"/> for writing a Word document
+        /// directly to the given stream without requiring a seekable stream or temporary <see cref="MemoryStream"/>.
+        /// </summary>
+        /// <param name="stream">The target stream. Does not need to be seekable.</param>
+        /// <param name="type">The type of the WordprocessingDocument.</param>
+        /// <param name="leaveOpen">Whether to leave the stream open after disposal.</param>
+        /// <returns>A forward-only package writer with the main document relationship pre-registered.</returns>
+        [Experimental(ExperimentalApis.ForwardOnly, UrlFormat = ExperimentalApis.UrlFormat)]
+        [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.ForwardOnly, UrlFormat = ExperimentalApis.UrlFormat)]
+        public static OpenXmlPackageWriter CreateForwardOnly(Stream stream, WordprocessingDocumentType type, bool leaveOpen = false)
+        {
+            _ = type; // Reserved for future use (e.g., macro-enabled documents)
+            var writer = new OpenXmlPackageWriter(stream, leaveOpen);
+            writer.AddRelationship(
+                new Uri("/word/document.xml", UriKind.Relative),
+                "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument",
+                "rId1");
+            return writer;
+        }
+#endif
+
         /// <summary>
         /// Creates a new instance of the WordprocessingDocument class from the specified file.
         /// </summary>

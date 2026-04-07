@@ -1,4 +1,4 @@
-﻿#nullable enable
+#nullable enable
 [OOXML0005]DocumentFormat.OpenXml.Packaging.OpenXmlPackageWriter
 [OOXML0005]DocumentFormat.OpenXml.Packaging.OpenXmlPackageWriter.OpenXmlPackageWriter(System.IO.Stream! stream, bool leaveOpen = false) -> void
 [OOXML0005]DocumentFormat.OpenXml.Packaging.OpenXmlPackageWriter.AddRelationship(System.Uri! partUri, string! relationshipType, string? id = null) -> string!
@@ -6,7 +6,6 @@
 [OOXML0005]DocumentFormat.OpenXml.Packaging.OpenXmlPackageWriter.WritePart(System.Uri! partUri, string! contentType, DocumentFormat.OpenXml.OpenXmlElement! rootElement, System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Packaging.PartRelationship>? relationships = null) -> void
 [OOXML0005]DocumentFormat.OpenXml.Packaging.OpenXmlPackageWriter.Finish() -> void
 [OOXML0005]DocumentFormat.OpenXml.Packaging.OpenXmlPackageWriter.Dispose() -> void
-[OOXML0005]DocumentFormat.OpenXml.Packaging.OpenXmlPackageWriter.DisposeAsync() -> System.Threading.Tasks.ValueTask
 [OOXML0005]DocumentFormat.OpenXml.Packaging.OpenXmlPartEntry
 [OOXML0005]DocumentFormat.OpenXml.Packaging.OpenXmlPartEntry.Stream.get -> System.IO.Stream!
 [OOXML0005]DocumentFormat.OpenXml.Packaging.OpenXmlPartEntry.AddRelationship(System.Uri! targetUri, string! relationshipType, System.IO.Packaging.TargetMode targetMode = System.IO.Packaging.TargetMode.Internal, string? id = null) -> string!
@@ -18,4 +17,3 @@
 [OOXML0005]DocumentFormat.OpenXml.Packaging.PartRelationship.RelationshipType.get -> string!
 [OOXML0005]DocumentFormat.OpenXml.Packaging.PartRelationship.TargetMode.get -> System.IO.Packaging.TargetMode
 [OOXML0005]DocumentFormat.OpenXml.Packaging.PartRelationship.Id.get -> string?
-
