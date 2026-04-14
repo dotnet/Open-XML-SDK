@@ -18,7 +18,7 @@ jobs:
         if: github.event.workflow_run.conclusion == 'success'
         steps:
         - name: Download Release Info
-          uses: dawidd6/action-download-artifact@v19
+          uses: dawidd6/action-download-artifact@v20
           with:
            run_id: ${{ github.event.workflow_run.id }}
            name: release-info
@@ -43,7 +43,7 @@ jobs:
         issues: write
       steps:
         - name: Download and Extract Artifacts from build
-          uses: dawidd6/action-download-artifact@v19
+          uses: dawidd6/action-download-artifact@v20
           with:
             run_id: ${{ github.event.workflow_run.id }}
             name: Signed
