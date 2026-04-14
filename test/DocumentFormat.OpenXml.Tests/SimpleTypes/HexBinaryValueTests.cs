@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests.SimpleTypes
@@ -82,11 +81,10 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
             // InnerText.Length / 2 == 1, so a 1-byte buffer "matches" the
             // truncated size. The guard on line 142 uses && instead of ||,
             // so it falls through and the loop throws on the last Slice.
-            var type = new HexBinaryValue("FFF");
+            HexBinaryValue type = new ("FFF");
             var buffer = new byte[1]; // InnerText.Length / 2 with integer division
-            Span<byte> span = new Span<byte>(buffer);
 
-            Assert.False(type.TryWriteBytes(span));
+            Assert.False(type.TryWriteBytes(buffer));
         }
 
         [Fact]
