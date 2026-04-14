@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
             // so it falls through and the loop throws on the last Slice.
             var type = new HexBinaryValue("FFF");
             var buffer = new byte[1]; // InnerText.Length / 2 with integer division
-            Span<byte> span = new Span<byte>(buffer)
+            Span<byte> span = new Span<byte>(buffer);
 
             Assert.False(type.TryWriteBytes(span));
         }
