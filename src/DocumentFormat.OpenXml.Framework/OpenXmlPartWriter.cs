@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
@@ -38,6 +39,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="openXmlPart">The OpenXmlPart to be written to.</param>
         /// <param name="encoding">The encoding for the XML stream.</param>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Stream ownership transfers to the XmlWriter (CloseOutput = true).")]
         public OpenXmlPartWriter(OpenXmlPart openXmlPart, Encoding encoding)
         {
             if (openXmlPart is null)
@@ -57,7 +59,7 @@ namespace DocumentFormat.OpenXml
                 Encoding = encoding,
             };
 
-            _xmlWriter = XmlWriter.Create(partStream, settings);
+            _xmlWriter = ResolveFactory(openXmlPart).Create(partStream, settings);
         }
 
         /// <summary>
@@ -65,6 +67,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="openXmlPart">The OpenXmlPart to be written to.</param>
         /// <param name="settings">The settings for the OpenXmlPartWriter.</param>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Stream ownership transfers to the XmlWriter (CloseOutput = true).")]
         public OpenXmlPartWriter(OpenXmlPart openXmlPart, OpenXmlPartWriterSettings settings)
         {
             if (openXmlPart is null)
@@ -87,8 +90,11 @@ namespace DocumentFormat.OpenXml
 #endif
             };
 
-            _xmlWriter = XmlWriter.Create(partStream, xmlWriterSettings);
+            _xmlWriter = ResolveFactory(openXmlPart).Create(partStream, xmlWriterSettings);
         }
+
+        private static IXmlWriterFactoryFeature ResolveFactory(OpenXmlPart openXmlPart)
+            => openXmlPart.Features.Get<IXmlWriterFactoryFeature>() ?? DefaultXmlWriterFactoryFeature.Instance;
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartWriter.

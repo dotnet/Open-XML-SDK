@@ -38,6 +38,11 @@ namespace DocumentFormat.OpenXml.Features
                     return _elementMetadata;
                 }
 
+                if (key == typeof(IXmlWriterFactoryFeature))
+                {
+                    return DefaultXmlWriterFactoryFeature.Instance;
+                }
+
                 return null;
             }
             set => throw new NotSupportedException();
@@ -53,6 +58,7 @@ namespace DocumentFormat.OpenXml.Features
         {
             yield return GetPair<IOpenXmlNamespaceResolver>();
             yield return GetPair<IElementMetadataFactoryFeature>();
+            yield return GetPair<IXmlWriterFactoryFeature>();
         }
 
         private KeyValuePair<Type, object> GetPair<T>() => new(typeof(T), this[typeof(T)]!);
