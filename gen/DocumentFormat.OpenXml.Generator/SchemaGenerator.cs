@@ -14,7 +14,7 @@ public static class SchemaGenerator
 {
     public static void WriteSchemaFiles(SourceProductionContext context, OpenXmlGeneratorServices openXml, SchemaNamespace namespaces)
     {
-        var sw = new StringWriter();
+        var sw = new StringWriter() { NewLine = "\n" };
         var writer = new IndentedTextWriter(sw);
 
         writer.WriteFileHeader();
