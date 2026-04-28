@@ -72,18 +72,43 @@ namespace DocumentFormat.OpenXml.Tests
         public void Open_WithCancelledToken_Stream_Throws()
         {
             using var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.O12Typical);
-            var cts = new CancellationTokenSource();
-            cts.Cancel();
-            Assert.Throws<OperationCanceledException>(() => PresentationDocument.Open(stream, false, cts.Token));
+            Assert.Throws<OperationCanceledException>(() => PresentationDocument.Open(stream, false, new CancellationToken(canceled: true)));
         }
 
         [Fact]
         public void Open_WithCancelledToken_StreamAndSettings_Throws()
         {
             using var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.O12Typical);
-            var cts = new CancellationTokenSource();
-            cts.Cancel();
-            Assert.Throws<OperationCanceledException>(() => PresentationDocument.Open(stream, false, new OpenSettings(), cts.Token));
+            Assert.Throws<OperationCanceledException>(() => PresentationDocument.Open(stream, false, new OpenSettings(), new CancellationToken(canceled: true)));
+        }
+
+        [Fact]
+        public void Open_WithCancellationToken_Path_Succeeds()
+        {
+            var path = TestAssets.GetTestFilePath(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.O12Typical);
+            try
+            {
+                using var doc = PresentationDocument.Open(path, false, CancellationToken.None);
+                Assert.NotNull(doc);
+            }
+            finally
+            {
+                File.Delete(path);
+            }
+        }
+
+        [Fact]
+        public void Open_WithCancelledToken_Path_Throws()
+        {
+            var path = TestAssets.GetTestFilePath(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.O12Typical);
+            try
+            {
+                Assert.Throws<OperationCanceledException>(() => PresentationDocument.Open(path, false, new CancellationToken(canceled: true)));
+            }
+            finally
+            {
+                File.Delete(path);
+            }
         }
     }
 }
