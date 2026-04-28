@@ -1,8 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Framework;
 using System;
+using System.Text;
 
 namespace DocumentFormat.OpenXml
 {
@@ -40,8 +40,7 @@ namespace DocumentFormat.OpenXml
 
             return new string(chars);
 #else
-            var sb = StringBuilderPool.Acquire();
-            sb.EnsureCapacity(bytes.Length * 2);
+            var sb = new StringBuilder(bytes.Length * 2);
 
             foreach (var b in bytes)
             {
@@ -49,7 +48,7 @@ namespace DocumentFormat.OpenXml
                 sb.Append(ToCharUpper(b));
             }
 
-            return StringBuilderPool.GetValueAndRelease(sb);
+            return sb.ToString();
 #endif
 
             static char ToCharUpper(int value)
