@@ -71,6 +71,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="bytes">A byte array to use to create a new hex string.</param>
         /// <returns>A hex string that corresponds to the value parameter.</returns>
+        // Use constructor instead of bytes.AsSpan() to avoid SpanExtensions ambiguity
+        // when this file is linked into DocumentFormat.OpenXml.Features.
         public static string Create(params byte[] bytes) => Create(new ReadOnlySpan<byte>(bytes));
     }
 }
