@@ -73,6 +73,38 @@ Generally, assume that there may be a singleton implementation for the events an
 
 > Note: There may be times when the part root is changed but an event is not fired. Not all areas have been identified where it would make sense to raise an event. Please file an issue if you find one.
 
+### IXmlWriterFactoryFeature
+
+This feature abstracts the creation of `XmlWriter` instances used by the SDK when serializing parts. By default, it delegates directly to `System.Xml.XmlWriter.Create`. Register a custom implementation to intercept every writer the SDK creates for a package and its parts.
+
+The SDK ships one opt-in implementation: a sanitizing factory that strips characters not permitted by the XML 1.0 specification from text content before they reach the underlying writer. Without this, control characters such as `0x02` in text that originated from an external data source cause `ArgumentException` during save.
+
+```csharp
+using DocumentFormat.OpenXml.Features;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Wordprocessing;
+
+using var stream = new MemoryStream();
+using var document = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+
+// Opt in to sanitization for this package.
+document.UseXmlTextSanitization();
+
+var main = document.AddMainDocumentPart();
+main.Document = new Document(
+    new Body(
+        new Paragraph(
+            new Run(
+                new Text("Hello\u0002World")))));
+
+// Save now succeeds; the 0x02 control character is silently removed.
+document.Save();
+```
+
+Sanitization applies to element text content, attribute values, CDATA sections, comment bodies, and processing-instruction text. Element and attribute *names* are not sanitized because they are structural — invalid characters in names still throw as before. Calls to `XmlWriter.WriteRaw(...)` are also not sanitized because their contract is that the caller provides pre-validated XML.
+
+The feature is pay-for-play. Packages that don't call `UseXmlTextSanitization()` pay nothing for its presence — the default factory is a direct pass-through to `XmlWriter.Create`.
+
 ## DocumentFormat.OpenXml.Features
 
 This library contains additional (non-core) features that build on top of built-in features and functionality.

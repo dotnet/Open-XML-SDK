@@ -394,7 +394,7 @@ namespace DocumentFormat.OpenXml
                 {
                     using (var w = new StringWriter(CultureInfo.InvariantCulture))
                     {
-                        using (var writer2 = new XmlDOMTextWriter(w))
+                        using (var writer2 = new XmlDOMTextWriter(w, Features))
                         {
                             WriteContentTo(writer2);
                         }
@@ -428,7 +428,7 @@ namespace DocumentFormat.OpenXml
                     // namespace, this element and attributes
                     using (var w = new StringWriter(CultureInfo.InvariantCulture))
                     {
-                        using (var writer2 = new XmlDOMTextWriter(w))
+                        using (var writer2 = new XmlDOMTextWriter(w, Features))
                         {
                             WriteTo(writer2);
                         }
