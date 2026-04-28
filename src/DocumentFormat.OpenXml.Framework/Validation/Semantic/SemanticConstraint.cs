@@ -131,8 +131,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 return current.Package
                     .GetAllParts()
-                    .Where(p => p.Parts.Any(r => r.OpenXmlPart.PackagePart.Uri == current.Part.PackagePart.Uri))
-                    .First();
+                    .First(p => p.Parts.Any(r => r.OpenXmlPart.PackagePart.Uri == current.Part.PackagePart.Uri));
             }
             else
             {
