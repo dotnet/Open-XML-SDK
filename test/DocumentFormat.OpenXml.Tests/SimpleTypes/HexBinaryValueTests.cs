@@ -81,7 +81,7 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
             // InnerText.Length / 2 == 1, so a 1-byte buffer "matches" the
             // truncated size. The guard on line 142 uses && instead of ||,
             // so it falls through and the loop throws on the last Slice.
-            HexBinaryValue type = new ("FFF");
+            HexBinaryValue type = new("FFF");
             var buffer = new byte[1]; // InnerText.Length / 2 with integer division
 
             Assert.False(type.TryWriteBytes(buffer));
