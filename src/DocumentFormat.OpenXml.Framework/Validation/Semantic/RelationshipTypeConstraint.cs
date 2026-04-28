@@ -63,8 +63,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             else
             {
                 var pair = current.Part.Parts
-                    .Where(p => p.RelationshipId == attribute.Value.InnerText)
-                    .SingleOrDefault();
+                    .SingleOrDefault(p => p.RelationshipId == attribute.Value.InnerText);
 
                 if (pair is { })
                 {

@@ -11,7 +11,7 @@ internal static class NamespaceGeneratorExtensions
 {
     public static string Generate(this IEnumerable<NamespaceInfo> namespaces)
     {
-        var sb = new StringWriter();
+        var sb = new StringWriter() { NewLine = "\n" };
         var writer = new IndentedTextWriter(sb);
 
         writer.WriteFileHeader();
