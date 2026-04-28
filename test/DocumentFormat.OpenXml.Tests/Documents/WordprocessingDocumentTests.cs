@@ -3,9 +3,11 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using System;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
+using System.Threading;
 using System.Xml.Linq;
 using Xunit;
 
@@ -74,6 +76,40 @@ namespace DocumentFormat.OpenXml.Tests
 
                 Assert.Equal(XName.Get("svg", "http://www.w3.org/2000/svg"), svg.Name);
             }
+        }
+
+        [Fact]
+        public void Open_WithCancellationToken_Stream_Succeeds()
+        {
+            using var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm);
+            using var doc = WordprocessingDocument.Open(stream, false, CancellationToken.None);
+            Assert.NotNull(doc);
+        }
+
+        [Fact]
+        public void Open_WithCancellationToken_StreamAndSettings_Succeeds()
+        {
+            using var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm);
+            using var doc = WordprocessingDocument.Open(stream, false, new OpenSettings(), CancellationToken.None);
+            Assert.NotNull(doc);
+        }
+
+        [Fact]
+        public void Open_WithCancelledToken_Stream_Throws()
+        {
+            using var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm);
+            var cts = new CancellationTokenSource();
+            cts.Cancel();
+            Assert.Throws<OperationCanceledException>(() => WordprocessingDocument.Open(stream, false, cts.Token));
+        }
+
+        [Fact]
+        public void Open_WithCancelledToken_StreamAndSettings_Throws()
+        {
+            using var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.Complex2005_12rtm);
+            var cts = new CancellationTokenSource();
+            cts.Cancel();
+            Assert.Throws<OperationCanceledException>(() => WordprocessingDocument.Open(stream, false, new OpenSettings(), cts.Token));
         }
     }
 }

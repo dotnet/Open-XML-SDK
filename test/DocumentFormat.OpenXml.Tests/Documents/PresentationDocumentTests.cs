@@ -2,9 +2,12 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
+using System;
 using System.IO;
 using System.IO.Packaging;
+using System.Threading;
 using System.Xml.Linq;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -48,5 +51,39 @@ namespace DocumentFormat.OpenXml.Tests
         protected override PresentationDocument Open(Package package) => PresentationDocument.Open(package);
 
         protected override PresentationDocument Open(string path, bool isEditable) => PresentationDocument.Open(path, isEditable);
+
+        [Fact]
+        public void Open_WithCancellationToken_Stream_Succeeds()
+        {
+            using var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.O12Typical);
+            using var doc = PresentationDocument.Open(stream, false, CancellationToken.None);
+            Assert.NotNull(doc);
+        }
+
+        [Fact]
+        public void Open_WithCancellationToken_StreamAndSettings_Succeeds()
+        {
+            using var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.O12Typical);
+            using var doc = PresentationDocument.Open(stream, false, new OpenSettings(), CancellationToken.None);
+            Assert.NotNull(doc);
+        }
+
+        [Fact]
+        public void Open_WithCancelledToken_Stream_Throws()
+        {
+            using var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.O12Typical);
+            var cts = new CancellationTokenSource();
+            cts.Cancel();
+            Assert.Throws<OperationCanceledException>(() => PresentationDocument.Open(stream, false, cts.Token));
+        }
+
+        [Fact]
+        public void Open_WithCancelledToken_StreamAndSettings_Throws()
+        {
+            using var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.O12Typical);
+            var cts = new CancellationTokenSource();
+            cts.Cancel();
+            Assert.Throws<OperationCanceledException>(() => PresentationDocument.Open(stream, false, new OpenSettings(), cts.Token));
+        }
     }
 }
