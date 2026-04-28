@@ -17,6 +17,8 @@ namespace DocumentFormat.OpenXml
             Length = array.Length;
         }
 
+        public static implicit operator Span<T>(T[]? array) => array is null ? default : new Span<T>(array);
+
         public int Length { get; }
 
         public T this[int index]
