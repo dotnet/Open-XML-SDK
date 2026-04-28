@@ -3,10 +3,6 @@
 
 using System;
 
-#if !NET6_0_OR_GREATER
-using System.Text;
-#endif
-
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
@@ -43,7 +39,7 @@ namespace DocumentFormat.OpenXml
 
             return new string(chars);
 #else
-            var sb = new StringBuilder(bytes.Length * 2);
+            var sb = StringBuilderPool.Acquire();
 
             foreach (var b in bytes)
             {
@@ -51,7 +47,7 @@ namespace DocumentFormat.OpenXml
                 sb.Append(ToCharUpper(b));
             }
 
-            return sb.ToString();
+            return StringBuilderPool.GetValueAndRelease(sb);
 #endif
 
             static char ToCharUpper(int value)

@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Diagnostics;
-using System.Text;
 
 namespace DocumentFormat.OpenXml
 {
@@ -194,7 +193,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (TextValue is null && _list is not null)
                 {
-                    var textString = new StringBuilder();
+                    var textString = StringBuilderPool.Acquire();
                     string separator = string.Empty;
 
                     foreach (var value in _list)
@@ -207,7 +206,7 @@ namespace DocumentFormat.OpenXml
                         }
                     }
 
-                    TextValue = textString.ToString();
+                    TextValue = StringBuilderPool.GetValueAndRelease(textString);
                 }
 
                 return TextValue;

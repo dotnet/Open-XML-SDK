@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
-using System.Text;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
@@ -60,7 +59,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 }
             }
 
-            var sb = new StringBuilder();
+            var sb = StringBuilderPool.Acquire();
             sb.Append('\'').Append(_values[0]).Append('\'');
             if (_values.Length > 1)
             {
@@ -72,7 +71,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 sb.Append(" and '").Append(_values[_values.Length - 1]).Append('\'');
             }
 
-            string valueString = sb.ToString();
+            string valueString = StringBuilderPool.GetValueAndRelease(sb);
 
             return new ValidationErrorInfo()
             {
