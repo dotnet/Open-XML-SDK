@@ -5,6 +5,9 @@ using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Xml;
+#if FEATURE_ASYNC_SAX_XML
+using System.Threading.Tasks;
+#endif
 
 namespace DocumentFormat.OpenXml
 {
@@ -188,5 +191,16 @@ namespace DocumentFormat.OpenXml
 
             return ns.Uri;
         }
+
+#if FEATURE_ASYNC_SAX_XML
+        /// <inheritdoc/>
+        public override Task<bool> ReadAsync() => BaseReader.ReadAsync();
+
+        /// <inheritdoc/>
+        public override Task SkipAsync() => BaseReader.SkipAsync();
+
+        /// <inheritdoc/>
+        public override Task<XmlNodeType> MoveToContentAsync() => BaseReader.MoveToContentAsync();
+#endif
     }
 }
