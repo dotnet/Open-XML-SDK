@@ -40,6 +40,7 @@ namespace DocumentFormat.OpenXml
             return new string(chars);
 #else
             var sb = StringBuilderPool.Acquire();
+            sb.EnsureCapacity(bytes.Length * 2);
 
             foreach (var b in bytes)
             {

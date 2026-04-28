@@ -10,6 +10,9 @@ namespace DocumentFormat.OpenXml;
 /// </summary>
 internal static class StringBuilderPool
 {
+    // Maximum capacity (in characters) a StringBuilder may have before it is not returned to the pool.
+    private const int MaxBuilderCapacity = 360;
+
     // Two slots per thread to handle cases where two StringBuilders are active simultaneously.
     [System.ThreadStatic]
     private static StringBuilder? _primary;
@@ -54,6 +57,12 @@ internal static class StringBuilderPool
     /// </summary>
     public static void Release(StringBuilder sb)
     {
+        // Don't pool excessively large instances to avoid holding onto large memory allocations.
+        if (sb.Capacity > MaxBuilderCapacity)
+        {
+            return;
+        }
+
         // Use Length = 0 instead of Clear() for .NET 3.5 compatibility
         sb.Length = 0;
 
