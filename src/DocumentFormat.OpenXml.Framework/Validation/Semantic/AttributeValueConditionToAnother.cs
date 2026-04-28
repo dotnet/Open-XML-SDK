@@ -66,29 +66,41 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 if (AttributeValueEquals(conditionAttribute.Value, value, false))
                 {
                     var sb = StringBuilderPool.Acquire();
-                    sb.Append('\'').Append(_values[0]).Append('\'');
+                    sb.Append('\'');
+                    sb.Append(_values[0]);
+                    sb.Append('\'');
                     if (_values.Length > 1)
                     {
                         for (int i = 1; i < _values.Length - 1; i++)
                         {
-                            sb.Append(", '").Append(_values[i]).Append('\'');
+                            sb.Append(", '");
+                            sb.Append(_values[i]);
+                            sb.Append('\'');
                         }
 
-                        sb.Append(" or '").Append(_values[_values.Length - 1]).Append('\'');
+                        sb.Append(" or '");
+                        sb.Append(_values[_values.Length - 1]);
+                        sb.Append('\'');
                     }
 
                     string attributeValueString = StringBuilderPool.GetValueAndRelease(sb);
 
                     var otherSb = StringBuilderPool.Acquire();
-                    otherSb.Append('\'').Append(_otherValues[0]).Append('\'');
+                    otherSb.Append('\'');
+                    otherSb.Append(_otherValues[0]);
+                    otherSb.Append('\'');
                     if (_otherValues.Length > 1)
                     {
                         for (int i = 1; i < _otherValues.Length - 1; i++)
                         {
-                            otherSb.Append(", '").Append(_otherValues[i]).Append('\'');
+                            otherSb.Append(", '");
+                            otherSb.Append(_otherValues[i]);
+                            otherSb.Append('\'');
                         }
 
-                        otherSb.Append(" or '").Append(_otherValues[_otherValues.Length - 1]).Append('\'');
+                        otherSb.Append(" or '");
+                        otherSb.Append(_otherValues[_otherValues.Length - 1]);
+                        otherSb.Append('\'');
                     }
 
                     string otherAttributeValueString = StringBuilderPool.GetValueAndRelease(otherSb);

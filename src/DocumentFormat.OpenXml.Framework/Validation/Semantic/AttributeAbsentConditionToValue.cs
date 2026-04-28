@@ -56,15 +56,21 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 if (AttributeValueEquals(conditionAttribute.Value, value, false))
                 {
                     var sb = StringBuilderPool.Acquire();
-                    sb.Append('\'').Append(_values[0]).Append('\'');
+                    sb.Append('\'');
+                    sb.Append(_values[0]);
+                    sb.Append('\'');
                     if (_values.Length > 1)
                     {
                         for (int i = 1; i < _values.Length - 1; i++)
                         {
-                            sb.Append(", '").Append(_values[i]).Append('\'');
+                            sb.Append(", '");
+                            sb.Append(_values[i]);
+                            sb.Append('\'');
                         }
 
-                        sb.Append(" or '").Append(_values[_values.Length - 1]).Append('\'');
+                        sb.Append(" or '");
+                        sb.Append(_values[_values.Length - 1]);
+                        sb.Append('\'');
                     }
 
                     string valueString = StringBuilderPool.GetValueAndRelease(sb);
