@@ -52,6 +52,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         protected override PresentationDocument Open(string path, bool isEditable) => PresentationDocument.Open(path, isEditable);
 
+#if !FEATURE_NO_VALIDATOR_CANCELLATIONTOKEN
         [Fact]
         public void Open_WithCancellationToken_Stream_Succeeds()
         {
@@ -110,5 +111,6 @@ namespace DocumentFormat.OpenXml.Tests
                 File.Delete(path);
             }
         }
+#endif
     }
 }
