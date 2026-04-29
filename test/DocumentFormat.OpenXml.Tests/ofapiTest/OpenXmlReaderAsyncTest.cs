@@ -19,190 +19,211 @@ namespace DocumentFormat.OpenXml.Tests
         public async Task ReadAsync_ShouldNavigateToRootElement()
         {
             // Arrange
-            using MemoryStream memoryStream = new MemoryStream();
-            using WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document);
-            MainDocumentPart mdp = wpd.AddMainDocumentPart();
-            mdp.Document = new Document(new Body(new Paragraph(new Run(new Text("Hello")))));
-            mdp.Document.Save();
-            wpd.Save();
+            using (MemoryStream memoryStream = new MemoryStream())
+            using (WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document))
+            {
+                MainDocumentPart mdp = wpd.AddMainDocumentPart();
+                mdp.Document = new Document(new Body(new Paragraph(new Run(new Text("Hello")))));
+                mdp.Document.Save();
+                wpd.Save();
 
-            // Act
-            using OpenXmlPartReader reader = new OpenXmlPartReader(mdp, new OpenXmlPartReaderOptions { Async = true });
+                // Act
+                using (OpenXmlPartReader reader = new OpenXmlPartReader(mdp, new OpenXmlPartReaderOptions { Async = true }))
+                {
+                    bool result = await reader.ReadAsync();
 
-            bool result = await reader.ReadAsync();
-
-            // Assert - should be at the Document element
-            Assert.True(result);
-            Assert.True(reader.IsStartElement);
-            Assert.Equal(typeof(Document), reader.ElementType);
+                    // Assert - should be at the Document element
+                    Assert.True(result);
+                    Assert.True(reader.IsStartElement);
+                    Assert.Equal(typeof(Document), reader.ElementType);
+                }
+            }
         }
 
         [Fact]
         public async Task ReadAsync_ShouldReturnFalse_WhenNoMoreElements()
         {
             // Arrange
-            using MemoryStream memoryStream = new MemoryStream();
-            using WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document);
-            MainDocumentPart mdp = wpd.AddMainDocumentPart();
-            mdp.Document = new Document(new Body());
-            mdp.Document.Save();
-            wpd.Save();
-
-            // Act
-            using OpenXmlPartReader reader = new OpenXmlPartReader(mdp, new OpenXmlPartReaderOptions { Async = true });
-
-            // Read through all elements
-            while (await reader.ReadAsync())
+            using (MemoryStream memoryStream = new MemoryStream())
+            using (WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document))
             {
-            }
+                MainDocumentPart mdp = wpd.AddMainDocumentPart();
+                mdp.Document = new Document(new Body());
+                mdp.Document.Save();
+                wpd.Save();
 
-            // Assert
-            Assert.True(reader.EOF);
+                // Act
+                using (OpenXmlPartReader reader = new OpenXmlPartReader(mdp, new OpenXmlPartReaderOptions { Async = true }))
+                {
+                    // Read through all elements
+                    while (await reader.ReadAsync())
+                    {
+                    }
+
+                    // Assert
+                    Assert.True(reader.EOF);
+                }
+            }
         }
 
         [Fact]
         public async Task ReadFirstChildAsync_ShouldMoveToFirstChild()
         {
             // Arrange
-            using MemoryStream memoryStream = new MemoryStream();
-            using WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document);
-            MainDocumentPart mdp = wpd.AddMainDocumentPart();
-            mdp.Document = new Document(new Body(new Paragraph()));
-            mdp.Document.Save();
-            wpd.Save();
+            using (MemoryStream memoryStream = new MemoryStream())
+            using (WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document))
+            {
+                MainDocumentPart mdp = wpd.AddMainDocumentPart();
+                mdp.Document = new Document(new Body(new Paragraph()));
+                mdp.Document.Save();
+                wpd.Save();
 
-            // Act
-            using OpenXmlPartReader reader = new OpenXmlPartReader(mdp, new OpenXmlPartReaderOptions { Async = true });
+                // Act
+                using (OpenXmlPartReader reader = new OpenXmlPartReader(mdp, new OpenXmlPartReaderOptions { Async = true }))
+                {
+                    // Move to Document element
+                    await reader.ReadAsync();
 
-            // Move to Document element
-            await reader.ReadAsync();
+                    // Move to first child (Body)
+                    bool result = await reader.ReadFirstChildAsync();
 
-            // Move to first child (Body)
-            bool result = await reader.ReadFirstChildAsync();
-
-            // Assert
-            Assert.True(result);
-            Assert.True(reader.IsStartElement);
-            Assert.Equal(typeof(Body), reader.ElementType);
+                    // Assert
+                    Assert.True(result);
+                    Assert.True(reader.IsStartElement);
+                    Assert.Equal(typeof(Body), reader.ElementType);
+                }
+            }
         }
 
         [Fact]
         public async Task ReadFirstChildAsync_ShouldReturnFalse_WhenNoChildren()
         {
             // Arrange
-            using MemoryStream memoryStream = new MemoryStream();
-            using WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document);
-            MainDocumentPart mdp = wpd.AddMainDocumentPart();
-            mdp.Document = new Document(new Body());
-            mdp.Document.Save();
-            wpd.Save();
+            using (MemoryStream memoryStream = new MemoryStream())
+            using (WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document))
+            {
+                MainDocumentPart mdp = wpd.AddMainDocumentPart();
+                mdp.Document = new Document(new Body());
+                mdp.Document.Save();
+                wpd.Save();
 
-            // Act
-            using OpenXmlPartReader reader = new OpenXmlPartReader(mdp, new OpenXmlPartReaderOptions { Async = true });
+                // Act
+                using (OpenXmlPartReader reader = new OpenXmlPartReader(mdp, new OpenXmlPartReaderOptions { Async = true }))
+                {
+                    // Move to Document element
+                    await reader.ReadAsync();
 
-            // Move to Document element
-            await reader.ReadAsync();
+                    // Move to Body
+                    await reader.ReadFirstChildAsync();
 
-            // Move to Body
-            await reader.ReadFirstChildAsync();
+                    // Try to move to first child of Body (should fail - empty Body)
+                    bool result = await reader.ReadFirstChildAsync();
 
-            // Try to move to first child of Body (should fail - empty Body)
-            bool result = await reader.ReadFirstChildAsync();
-
-            // Assert
-            Assert.False(result);
-            Assert.True(reader.IsEndElement);
+                    // Assert
+                    Assert.False(result);
+                    Assert.True(reader.IsEndElement);
+                }
+            }
         }
 
         [Fact]
         public async Task ReadNextSiblingAsync_ShouldMoveToNextSibling()
         {
             // Arrange
-            using MemoryStream memoryStream = new MemoryStream();
-            using WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document);
-            MainDocumentPart mdp = wpd.AddMainDocumentPart();
-            mdp.Document = new Document(new Body(new Paragraph(), new Paragraph()));
-            mdp.Document.Save();
-            wpd.Save();
+            using (MemoryStream memoryStream = new MemoryStream())
+            using (WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document))
+            {
+                MainDocumentPart mdp = wpd.AddMainDocumentPart();
+                mdp.Document = new Document(new Body(new Paragraph(), new Paragraph()));
+                mdp.Document.Save();
+                wpd.Save();
 
-            // Act
-            using OpenXmlPartReader reader = new OpenXmlPartReader(mdp, new OpenXmlPartReaderOptions { Async = true });
+                // Act
+                using (OpenXmlPartReader reader = new OpenXmlPartReader(mdp, new OpenXmlPartReaderOptions { Async = true }))
+                {
+                    // Move to Document -> Body -> first Paragraph
+                    await reader.ReadAsync();
+                    await reader.ReadFirstChildAsync();
+                    await reader.ReadFirstChildAsync();
 
-            // Move to Document -> Body -> first Paragraph
-            await reader.ReadAsync();
-            await reader.ReadFirstChildAsync();
-            await reader.ReadFirstChildAsync();
+                    Assert.Equal(typeof(Paragraph), reader.ElementType);
 
-            Assert.Equal(typeof(Paragraph), reader.ElementType);
+                    // Move to second Paragraph (next sibling)
+                    bool result = await reader.ReadNextSiblingAsync();
 
-            // Move to second Paragraph (next sibling)
-            bool result = await reader.ReadNextSiblingAsync();
-
-            // Assert
-            Assert.True(result);
-            Assert.True(reader.IsStartElement);
-            Assert.Equal(typeof(Paragraph), reader.ElementType);
+                    // Assert
+                    Assert.True(result);
+                    Assert.True(reader.IsStartElement);
+                    Assert.Equal(typeof(Paragraph), reader.ElementType);
+                }
+            }
         }
 
         [Fact]
         public async Task ReadNextSiblingAsync_ShouldReturnFalse_WhenNoMoreSiblings()
         {
             // Arrange
-            using MemoryStream memoryStream = new MemoryStream();
-            using WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document);
-            MainDocumentPart mdp = wpd.AddMainDocumentPart();
-            mdp.Document = new Document(new Body(new Paragraph()));
-            mdp.Document.Save();
-            wpd.Save();
+            using (MemoryStream memoryStream = new MemoryStream())
+            using (WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document))
+            {
+                MainDocumentPart mdp = wpd.AddMainDocumentPart();
+                mdp.Document = new Document(new Body(new Paragraph()));
+                mdp.Document.Save();
+                wpd.Save();
 
-            // Act
-            using OpenXmlPartReader reader = new OpenXmlPartReader(mdp, new OpenXmlPartReaderOptions { Async = true });
+                // Act
+                using (OpenXmlPartReader reader = new OpenXmlPartReader(mdp, new OpenXmlPartReaderOptions { Async = true }))
+                {
+                    // Move to Document -> Body -> Paragraph
+                    await reader.ReadAsync();
+                    await reader.ReadFirstChildAsync();
+                    await reader.ReadFirstChildAsync();
 
-            // Move to Document -> Body -> Paragraph
-            await reader.ReadAsync();
-            await reader.ReadFirstChildAsync();
-            await reader.ReadFirstChildAsync();
+                    Assert.Equal(typeof(Paragraph), reader.ElementType);
 
-            Assert.Equal(typeof(Paragraph), reader.ElementType);
+                    // Try to move to next sibling (should be the Body end element)
+                    bool result = await reader.ReadNextSiblingAsync();
 
-            // Try to move to next sibling (should be the Body end element)
-            bool result = await reader.ReadNextSiblingAsync();
-
-            // Assert - no more siblings, moved to end element of parent
-            Assert.False(result);
-            Assert.True(reader.IsEndElement);
+                    // Assert - no more siblings, moved to end element of parent
+                    Assert.False(result);
+                    Assert.True(reader.IsEndElement);
+                }
+            }
         }
 
         [Fact]
         public async Task SkipAsync_ShouldSkipCurrentElementChildren()
         {
             // Arrange
-            using MemoryStream memoryStream = new MemoryStream();
-            using WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document);
-            MainDocumentPart mdp = wpd.AddMainDocumentPart();
-            mdp.Document = new Document(new Body(new Paragraph(new Run(new Text("Hello"))), new Paragraph()));
-            mdp.Document.Save();
-            wpd.Save();
+            using (MemoryStream memoryStream = new MemoryStream())
+            using (WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document))
+            {
+                MainDocumentPart mdp = wpd.AddMainDocumentPart();
+                mdp.Document = new Document(new Body(new Paragraph(new Run(new Text("Hello"))), new Paragraph()));
+                mdp.Document.Save();
+                wpd.Save();
 
-            // Act
-            using OpenXmlPartReader reader = new OpenXmlPartReader(mdp, new OpenXmlPartReaderOptions { Async = true });
+                // Act
+                using (OpenXmlPartReader reader = new OpenXmlPartReader(mdp, new OpenXmlPartReaderOptions { Async = true }))
+                {
+                    // Move to Document -> Body
+                    await reader.ReadAsync();
+                    await reader.ReadFirstChildAsync();
 
-            // Move to Document -> Body
-            await reader.ReadAsync();
-            await reader.ReadFirstChildAsync();
+                    Assert.Equal(typeof(Body), reader.ElementType);
 
-            Assert.Equal(typeof(Body), reader.ElementType);
+                    // Move to first Paragraph
+                    await reader.ReadFirstChildAsync();
+                    Assert.Equal(typeof(Paragraph), reader.ElementType);
 
-            // Move to first Paragraph
-            await reader.ReadFirstChildAsync();
-            Assert.Equal(typeof(Paragraph), reader.ElementType);
+                    // Skip the first Paragraph (and its children)
+                    await reader.SkipAsync();
 
-            // Skip the first Paragraph (and its children)
-            await reader.SkipAsync();
-
-            // Should now be at the second Paragraph
-            Assert.True(reader.IsStartElement);
-            Assert.Equal(typeof(Paragraph), reader.ElementType);
+                    // Should now be at the second Paragraph
+                    Assert.True(reader.IsStartElement);
+                    Assert.Equal(typeof(Paragraph), reader.ElementType);
+                }
+            }
         }
 
         [Fact]
@@ -213,14 +234,15 @@ namespace DocumentFormat.OpenXml.Tests
             Paragraph para = new Paragraph(paragraphOuterXml);
 
             // Act
-            using OpenXmlReader reader = OpenXmlReader.Create(para);
+            using (OpenXmlReader reader = OpenXmlReader.Create(para))
+            {
+                bool result = await reader.ReadAsync();
 
-            bool result = await reader.ReadAsync();
-
-            // Assert
-            Assert.True(result);
-            Assert.True(reader.IsStartElement);
-            Assert.Equal(typeof(Paragraph), reader.ElementType);
+                // Assert
+                Assert.True(result);
+                Assert.True(reader.IsStartElement);
+                Assert.Equal(typeof(Paragraph), reader.ElementType);
+            }
         }
 
         [Fact]
@@ -231,15 +253,17 @@ namespace DocumentFormat.OpenXml.Tests
             Body body = new Body(bodyOuterXml);
 
             // Act
-            using OpenXmlReader reader = OpenXmlReader.Create(body);
-            await reader.ReadAsync(); // move to Body
+            using (OpenXmlReader reader = OpenXmlReader.Create(body))
+            {
+                await reader.ReadAsync(); // move to Body
 
-            bool result = await reader.ReadFirstChildAsync(); // move to Paragraph
+                bool result = await reader.ReadFirstChildAsync(); // move to Paragraph
 
-            // Assert
-            Assert.True(result);
-            Assert.True(reader.IsStartElement);
-            Assert.Equal(typeof(Paragraph), reader.ElementType);
+                // Assert
+                Assert.True(result);
+                Assert.True(reader.IsStartElement);
+                Assert.Equal(typeof(Paragraph), reader.ElementType);
+            }
         }
 
         [Fact]
@@ -249,16 +273,18 @@ namespace DocumentFormat.OpenXml.Tests
             Body body = new Body(new Paragraph(), new Paragraph());
 
             // Act
-            using OpenXmlReader reader = OpenXmlReader.Create(body);
-            await reader.ReadAsync(); // move to Body
-            await reader.ReadFirstChildAsync(); // move to first Paragraph
+            using (OpenXmlReader reader = OpenXmlReader.Create(body))
+            {
+                await reader.ReadAsync(); // move to Body
+                await reader.ReadFirstChildAsync(); // move to first Paragraph
 
-            bool result = await reader.ReadNextSiblingAsync(); // move to second Paragraph
+                bool result = await reader.ReadNextSiblingAsync(); // move to second Paragraph
 
-            // Assert
-            Assert.True(result);
-            Assert.True(reader.IsStartElement);
-            Assert.Equal(typeof(Paragraph), reader.ElementType);
+                // Assert
+                Assert.True(result);
+                Assert.True(reader.IsStartElement);
+                Assert.Equal(typeof(Paragraph), reader.ElementType);
+            }
         }
 
         [Fact]
@@ -268,42 +294,47 @@ namespace DocumentFormat.OpenXml.Tests
             Body body = new Body(new Paragraph(new Run(new Text("Hello"))), new Paragraph());
 
             // Act
-            using OpenXmlReader reader = OpenXmlReader.Create(body);
-            await reader.ReadAsync(); // move to Body
-            await reader.ReadFirstChildAsync(); // move to first Paragraph
+            using (OpenXmlReader reader = OpenXmlReader.Create(body))
+            {
+                await reader.ReadAsync(); // move to Body
+                await reader.ReadFirstChildAsync(); // move to first Paragraph
 
-            await reader.SkipAsync(); // skip first Paragraph
+                await reader.SkipAsync(); // skip first Paragraph
 
-            // Should now be at second Paragraph
-            Assert.True(reader.IsStartElement);
-            Assert.Equal(typeof(Paragraph), reader.ElementType);
+                // Should now be at second Paragraph
+                Assert.True(reader.IsStartElement);
+                Assert.Equal(typeof(Paragraph), reader.ElementType);
+            }
         }
 
         [Fact]
         public async Task ReadAsync_PartReader_ShouldReadAllElements()
         {
             // Arrange - full traversal of a document
-            using MemoryStream memoryStream = new MemoryStream();
-            using WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document);
-            MainDocumentPart mdp = wpd.AddMainDocumentPart();
-            mdp.Document = new Document(new Body(new Paragraph(new Run(new Text("Hello World")))));
-            mdp.Document.Save();
-            wpd.Save();
-
-            // Act
-            using OpenXmlPartReader reader = new OpenXmlPartReader(mdp, new OpenXmlPartReaderOptions { Async = true });
-
-            int elementCount = 0;
-            while (await reader.ReadAsync())
+            using (MemoryStream memoryStream = new MemoryStream())
+            using (WordprocessingDocument wpd = WordprocessingDocument.Create(memoryStream, WordprocessingDocumentType.Document))
             {
-                if (reader.IsStartElement)
+                MainDocumentPart mdp = wpd.AddMainDocumentPart();
+                mdp.Document = new Document(new Body(new Paragraph(new Run(new Text("Hello World")))));
+                mdp.Document.Save();
+                wpd.Save();
+
+                // Act
+                using (OpenXmlPartReader reader = new OpenXmlPartReader(mdp, new OpenXmlPartReaderOptions { Async = true }))
                 {
-                    elementCount++;
+                    int elementCount = 0;
+                    while (await reader.ReadAsync())
+                    {
+                        if (reader.IsStartElement)
+                        {
+                            elementCount++;
+                        }
+                    }
+
+                    // Assert: Document, Body, Paragraph, Run, Text = 5 start elements
+                    Assert.Equal(5, elementCount);
                 }
             }
-
-            // Assert: Document, Body, Paragraph, Run, Text = 5 start elements
-            Assert.Equal(5, elementCount);
         }
 
         [Fact]
