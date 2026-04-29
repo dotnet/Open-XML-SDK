@@ -102,8 +102,10 @@ namespace DocumentFormat.OpenXml.Tests
 
             // Move to Document element
             await reader.ReadAsync();
+
             // Move to Body
             await reader.ReadFirstChildAsync();
+
             // Try to move to first child of Body (should fail - empty Body)
             bool result = await reader.ReadFirstChildAsync();
 
