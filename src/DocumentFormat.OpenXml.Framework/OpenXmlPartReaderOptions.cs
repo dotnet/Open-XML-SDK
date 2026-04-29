@@ -31,7 +31,7 @@ public struct OpenXmlPartReaderOptions
     /// </summary>
     public bool CloseStream { get; set; }
 
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
     /// <summary>
     /// Gets or sets a value indicating whether asynchronous <see cref="OpenXmlPartReader"/> methods can be used.
     /// </summary>
@@ -44,7 +44,7 @@ public struct OpenXmlPartReaderOptions
         MaxCharactersInPart = MaxCharactersInPart != 0 ? MaxCharactersInPart : part.MaxCharactersInPart,
         IgnoreWhitespace = IgnoreWhitespace,
         CloseStream = true,
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
         Async = Async,
 #endif
     };

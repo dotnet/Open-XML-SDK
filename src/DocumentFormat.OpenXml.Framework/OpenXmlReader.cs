@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Xml;
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
 using System.Threading.Tasks;
 #endif
 
@@ -238,7 +238,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public abstract void Close();
 
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
         /// <summary>
         /// Asynchronously moves to read the next element.
         /// </summary>

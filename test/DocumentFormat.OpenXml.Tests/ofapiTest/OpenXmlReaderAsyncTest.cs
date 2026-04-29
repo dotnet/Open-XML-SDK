@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Tests
     /// </summary>
     public class OpenXmlReaderAsyncTest
     {
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
         [Fact]
         public async Task ReadAsync_ShouldNavigateToRootElement()
         {

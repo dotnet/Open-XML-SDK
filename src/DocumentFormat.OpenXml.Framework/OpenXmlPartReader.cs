@@ -11,7 +11,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Xml;
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
 using System.Threading.Tasks;
 #endif
 
@@ -682,7 +682,7 @@ namespace DocumentFormat.OpenXml
 #else
                 DtdProcessing = DtdProcessing.Prohibit,
 #endif
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
                 Async = options.Async,
 #endif
             };
@@ -903,7 +903,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
         // Async Methods
 
         /// <inheritdoc/>

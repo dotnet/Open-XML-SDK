@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Xml;
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
 using System.Threading.Tasks;
 #endif
 
@@ -192,7 +192,7 @@ namespace DocumentFormat.OpenXml
             return ns.Uri;
         }
 
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
         /// <inheritdoc/>
         public override Task<bool> ReadAsync() => BaseReader.ReadAsync();
 
