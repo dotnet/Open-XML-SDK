@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using System.Text;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
@@ -57,13 +58,18 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var attributes = string.Empty;
-            var existAttribute = string.Empty;
-            var existAttribute2 = string.Empty;
+            var attributesSb = new StringBuilder();
+            var existAttributeSb = new StringBuilder();
+            string? existAttribute2 = null;
 
             foreach (var attribute in _attributes)
             {
-                attributes += "," + attribute;
+                if (attributesSb.Length > 0)
+                {
+                    attributesSb.Append(',');
+                }
+
+                attributesSb.Append(attribute);
 
                 if (!TryFindAttribute(element, attribute, out var found))
                 {
@@ -72,16 +78,21 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
                 if (found.Value is not null)
                 {
-                    if (!string.IsNullOrEmpty(existAttribute2))
+                    if (existAttribute2 is not null)
                     {
-                        existAttribute += "," + existAttribute2;
+                        if (existAttributeSb.Length > 0)
+                        {
+                            existAttributeSb.Append(',');
+                        }
+
+                        existAttributeSb.Append(existAttribute2);
                     }
 
                     existAttribute2 = found.ToString();
                 }
             }
 
-            if (string.IsNullOrEmpty(existAttribute))
+            if (existAttributeSb.Length == 0)
             {
                 return null;
             }
@@ -93,9 +104,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Node = element,
                 Description = SR.Format(
                     ValidationResources.Sem_AttributeMutualExclusive,
-                    existAttribute.Substring(1),
+                    existAttributeSb.ToString(),
                     existAttribute2,
-                    attributes.Substring(1)),
+                    attributesSb.ToString()),
             };
         }
     }

@@ -80,7 +80,7 @@ internal static class PackageGeneratorExtensions
             var features = builder.Build(gContext).ToList();
 
             var sb = new StringBuilder();
-            var writer = new IndentedTextWriter(new StringWriter(sb));
+            var writer = new IndentedTextWriter(new StringWriter(sb) { NewLine = "\n" });
 
             foreach (var feature in features)
             {

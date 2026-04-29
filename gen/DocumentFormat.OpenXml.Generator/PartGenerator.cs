@@ -19,7 +19,7 @@ public static class PartGenerator
         }
 
         var sb = new StringBuilder();
-        var sw = new StringWriter(sb);
+        var sw = new StringWriter(sb) { NewLine = "\n" };
         var writer = new IndentedTextWriter(sw);
 
         foreach (var part in openXml.DataSource.Parts.Concat(openXml.DataSource.Packages))

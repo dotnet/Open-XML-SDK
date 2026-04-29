@@ -60,7 +60,7 @@ public static class LinqGeneratorExtensions
 
             var className = GetClassName(prefix);
 
-            using var output = new StringWriter();
+            using var output = new StringWriter() { NewLine = "\n" };
 
             GenerateClassFilePreamble(output);
             GenerateClass(output, prefix, namespaceName, classFieldInfos, fieldInfos);

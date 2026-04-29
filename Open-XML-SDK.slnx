@@ -48,6 +48,7 @@
     <Project Path="test/DocumentFormat.OpenXml.Benchmarks/DocumentFormat.OpenXml.Benchmarks.csproj" />
     <Project Path="test/DocumentFormat.OpenXml.Framework.Features.Tests/DocumentFormat.OpenXml.Framework.Features.Tests.csproj" />
     <Project Path="test/DocumentFormat.OpenXml.Framework.Tests/DocumentFormat.OpenXml.Framework.Tests.csproj" />
+    <Project Path="test/DocumentFormat.OpenXml.Generator.Models.Tests/DocumentFormat.OpenXml.Generator.Models.Tests.csproj" />
     <Project Path="test/DocumentFormat.OpenXml.Linq.Tests/DocumentFormat.OpenXml.Linq.Tests.csproj" />
     <Project Path="test/DocumentFormat.OpenXml.Packaging.Tests/DocumentFormat.OpenXml.Packaging.Tests.csproj" />
     <Project Path="test/DocumentFormat.OpenXml.Tests.Assets/DocumentFormat.OpenXml.Tests.Assets.csproj" />

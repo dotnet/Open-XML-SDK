@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                if (!InnerValue.HasValue && ShouldParse(InnerText) && InnerText is not null)
+                if (!InnerValue.HasValue && InnerText is not null && ShouldParse(InnerText))
                 {
                     InnerValue = Parse(InnerText);
                 }
