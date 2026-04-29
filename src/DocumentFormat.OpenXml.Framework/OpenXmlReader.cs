@@ -7,6 +7,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Xml;
+#if TASKS_SUPPORTED
+using System.Threading.Tasks;
+#endif
 
 namespace DocumentFormat.OpenXml
 {
@@ -234,6 +237,46 @@ namespace DocumentFormat.OpenXml
         /// Closes the reader.
         /// </summary>
         public abstract void Close();
+
+#if TASKS_SUPPORTED
+        /// <summary>
+        /// Asynchronously moves to read the next element.
+        /// </summary>
+        /// <returns>Returns true if the next element was read successfully; false if there are no more elements to read.</returns>
+        public virtual Task<bool> ReadAsync()
+        {
+            return Task.FromResult(Read());
+        }
+
+        /// <summary>
+        /// Asynchronously moves to read the first child element.
+        /// </summary>
+        /// <returns>Returns true if the first child element was read successfully; false if there are no child elements to read.</returns>
+        /// <remarks>This method can only be called on element start. At the current node, the reader will move to the end tag if there is no child element.</remarks>
+        public virtual Task<bool> ReadFirstChildAsync()
+        {
+            return Task.FromResult(ReadFirstChild());
+        }
+
+        /// <summary>
+        /// Asynchronously moves to read the next sibling element.
+        /// </summary>
+        /// <returns>Returns true if the next sibling element was read successfully; false if there are no more sibling elements to read.</returns>
+        /// <remarks>At the current node, the reader will move to the end tag of the parent node if there are no more sibling elements.</remarks>
+        public virtual Task<bool> ReadNextSiblingAsync()
+        {
+            return Task.FromResult(ReadNextSibling());
+        }
+
+        /// <summary>
+        /// Asynchronously skips the child elements of the current node.
+        /// </summary>
+        public virtual Task SkipAsync()
+        {
+            Skip();
+            return Task.CompletedTask;
+        }
+#endif
 
         /// <summary>
         /// Thrown if the object is disposed.
