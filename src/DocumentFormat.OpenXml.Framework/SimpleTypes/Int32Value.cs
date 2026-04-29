@@ -3,6 +3,7 @@
 
 using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -40,7 +41,20 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(int input) => XmlConvert.ToString(input);
 
-        private protected override int Parse(string input) => XmlConvert.ToInt32(input);
+        private protected override int Parse(string input)
+        {
+            // ECMA-376 percentage types (e.g. ST_Percentage, ST_PositiveFixedPercentage) are a union of
+            // a decimal integer in 1000ths of a percent and a string with a trailing "%" (e.g. "50%").
+            // Office sometimes emits the string form, so accept it as a fallback for attributes
+            // mapped to Int32Value such as a:biLevel/@thresh.
+            if (input is { Length: > 0 } && input[input.Length - 1] == '%')
+            {
+                var number = input.Substring(0, input.Length - 1);
+                return (int)(double.Parse(number, CultureInfo.InvariantCulture) * 1000);
+            }
+
+            return XmlConvert.ToInt32(input);
+        }
 
         /// <summary>
         /// Implicitly converts the specified value to an <see cref="int"/> value.
