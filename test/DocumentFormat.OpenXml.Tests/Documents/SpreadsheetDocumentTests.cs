@@ -3,10 +3,13 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
+using System;
 using System.IO;
 using System.IO.Packaging;
 using System.Linq;
+using System.Threading;
 using System.Xml.Linq;
+using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -51,5 +54,66 @@ namespace DocumentFormat.OpenXml.Tests
         protected override SpreadsheetDocument Open(Package package) => SpreadsheetDocument.Open(package);
 
         protected override SpreadsheetDocument Open(string path, bool isEditable) => SpreadsheetDocument.Open(path, isEditable);
+
+#if !FEATURE_NO_VALIDATOR_CANCELLATIONTOKEN
+        [Fact]
+        public void Open_WithCancellationToken_Stream_Succeeds()
+        {
+            using var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.PerformanceEng);
+            using var doc = SpreadsheetDocument.Open(stream, false, CancellationToken.None);
+            Assert.NotNull(doc);
+        }
+
+        [Fact]
+        public void Open_WithCancellationToken_StreamAndSettings_Succeeds()
+        {
+            using var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.PerformanceEng);
+            using var doc = SpreadsheetDocument.Open(stream, false, new OpenSettings(), CancellationToken.None);
+            Assert.NotNull(doc);
+        }
+
+        [Fact]
+        public void Open_WithCancelledToken_Stream_Throws()
+        {
+            using var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.PerformanceEng);
+            Assert.Throws<OperationCanceledException>(() => SpreadsheetDocument.Open(stream, false, new CancellationToken(canceled: true)));
+        }
+
+        [Fact]
+        public void Open_WithCancelledToken_StreamAndSettings_Throws()
+        {
+            using var stream = TestAssets.GetStream(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.PerformanceEng);
+            Assert.Throws<OperationCanceledException>(() => SpreadsheetDocument.Open(stream, false, new OpenSettings(), new CancellationToken(canceled: true)));
+        }
+
+        [Fact]
+        public void Open_WithCancellationToken_Path_Succeeds()
+        {
+            var path = TestAssets.GetTestFilePath(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.PerformanceEng);
+            try
+            {
+                using var doc = SpreadsheetDocument.Open(path, false, CancellationToken.None);
+                Assert.NotNull(doc);
+            }
+            finally
+            {
+                File.Delete(path);
+            }
+        }
+
+        [Fact]
+        public void Open_WithCancelledToken_Path_Throws()
+        {
+            var path = TestAssets.GetTestFilePath(TestAssets.TestDataStorage.V2FxTestFiles.Bvt.PerformanceEng);
+            try
+            {
+                Assert.Throws<OperationCanceledException>(() => SpreadsheetDocument.Open(path, false, new CancellationToken(canceled: true)));
+            }
+            finally
+            {
+                File.Delete(path);
+            }
+        }
+#endif
     }
 }
