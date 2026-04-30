@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
-using System.Text;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
@@ -58,8 +57,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            var attributesSb = new StringBuilder();
-            var existAttributeSb = new StringBuilder();
+            var attributesSb = StringBuilderPool.Acquire();
+            var existAttributeSb = StringBuilderPool.Acquire();
             string? existAttribute2 = null;
 
             foreach (var attribute in _attributes)
@@ -94,6 +93,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             if (existAttributeSb.Length == 0)
             {
+                StringBuilderPool.Release(attributesSb);
+                StringBuilderPool.Release(existAttributeSb);
                 return null;
             }
 
@@ -104,9 +105,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Node = element,
                 Description = SR.Format(
                     ValidationResources.Sem_AttributeMutualExclusive,
-                    existAttributeSb.ToString(),
+                    StringBuilderPool.GetValueAndRelease(existAttributeSb),
                     existAttribute2,
-                    attributesSb.ToString()),
+                    StringBuilderPool.GetValueAndRelease(attributesSb)),
             };
         }
     }

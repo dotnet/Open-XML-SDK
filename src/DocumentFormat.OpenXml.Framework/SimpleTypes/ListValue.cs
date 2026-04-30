@@ -1,13 +1,13 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Diagnostics;
-using System.Text;
 
 namespace DocumentFormat.OpenXml
 {
@@ -194,7 +194,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (TextValue is null && _list is not null)
                 {
-                    var textString = new StringBuilder();
+                    var textString = StringBuilderPool.Acquire();
                     string separator = string.Empty;
 
                     foreach (var value in _list)
@@ -207,7 +207,7 @@ namespace DocumentFormat.OpenXml
                         }
                     }
 
-                    TextValue = textString.ToString();
+                    TextValue = StringBuilderPool.GetValueAndRelease(textString);
                 }
 
                 return TextValue;

@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
-using System.Text;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
@@ -56,19 +55,25 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 if (AttributeValueEquals(conditionAttribute.Value, value, false))
                 {
-                    var sb = new StringBuilder();
-                    sb.Append('\'').Append(_values[0]).Append('\'');
+                    var sb = StringBuilderPool.Acquire();
+                    sb.Append('\'');
+                    sb.Append(_values[0]);
+                    sb.Append('\'');
                     if (_values.Length > 1)
                     {
                         for (int i = 1; i < _values.Length - 1; i++)
                         {
-                            sb.Append(", '").Append(_values[i]).Append('\'');
+                            sb.Append(", '");
+                            sb.Append(_values[i]);
+                            sb.Append('\'');
                         }
 
-                        sb.Append(" or '").Append(_values[_values.Length - 1]).Append('\'');
+                        sb.Append(" or '");
+                        sb.Append(_values[_values.Length - 1]);
+                        sb.Append('\'');
                     }
 
-                    string valueString = sb.ToString();
+                    string valueString = StringBuilderPool.GetValueAndRelease(sb);
 
                     return new ValidationErrorInfo()
                     {
