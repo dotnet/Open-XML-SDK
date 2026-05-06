@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>$(TestTargetFrameworks)</TargetFrameworks>
+    <IsTestProject>true</IsTestProject>
+    <IsPackable>false</IsPackable>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\gen\DocumentFormat.OpenXml.Generator.Models\DocumentFormat.OpenXml.Generator.Models.csproj" />
+  </ItemGroup>
+
+</Project>

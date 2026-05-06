@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using System.Text;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
@@ -65,27 +66,33 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 if (AttributeValueEquals(conditionAttribute.Value, value, false))
                 {
-                    string attributeValueString = "'" + _values[0] + "'";
+                    var sb = new StringBuilder();
+                    sb.Append('\'').Append(_values[0]).Append('\'');
                     if (_values.Length > 1)
                     {
                         for (int i = 1; i < _values.Length - 1; i++)
                         {
-                            attributeValueString += ", '" + _values[i] + "'";
+                            sb.Append(", '").Append(_values[i]).Append('\'');
                         }
 
-                        attributeValueString += " or '" + _values[_values.Length - 1] + "'";
+                        sb.Append(" or '").Append(_values[_values.Length - 1]).Append('\'');
                     }
 
-                    string otherAttributeValueString = "'" + _otherValues[0] + "'";
+                    string attributeValueString = sb.ToString();
+
+                    var otherSb = new StringBuilder();
+                    otherSb.Append('\'').Append(_otherValues[0]).Append('\'');
                     if (_otherValues.Length > 1)
                     {
                         for (int i = 1; i < _otherValues.Length - 1; i++)
                         {
-                            otherAttributeValueString += ", '" + _otherValues[i] + "'";
+                            otherSb.Append(", '").Append(_otherValues[i]).Append('\'');
                         }
 
-                        otherAttributeValueString += " or '" + _otherValues[_otherValues.Length - 1] + "'";
+                        otherSb.Append(" or '").Append(_otherValues[_otherValues.Length - 1]).Append('\'');
                     }
+
+                    string otherAttributeValueString = otherSb.ToString();
 
                     return new ValidationErrorInfo()
                     {

@@ -125,14 +125,13 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             if (string.IsNullOrEmpty(parts[0]))
             {
-                return GetPartThroughPartPath(current.Package.Parts, parts.Skip(1).ToArray()); // absolute path
+                return GetPartThroughPartPath(current.Package.Parts, parts.Skip(1)); // absolute path
             }
             else if (parts[0] == "..")
             {
                 return current.Package
                     .GetAllParts()
-                    .Where(p => p.Parts.Any(r => r.OpenXmlPart.PackagePart.Uri == current.Part.PackagePart.Uri))
-                    .First();
+                    .First(p => p.Parts.Any(r => r.OpenXmlPart.PackagePart.Uri == current.Part.PackagePart.Uri));
             }
             else
             {
@@ -242,15 +241,15 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1851:Possible multiple enumerations of 'IEnumerable' collection", Justification = "We're resetting the parts variable, but the analyzer doesn't realize that")]
-        private static OpenXmlPart? GetPartThroughPartPath(IEnumerable<IdPartPair> pairs, string[] path)
+        private static OpenXmlPart? GetPartThroughPartPath(IEnumerable<IdPartPair> pairs, IEnumerable<string> path)
         {
             var foundPart = default(OpenXmlPart);
             var parts = pairs;
 
-            for (int i = 0; i < path.Length; i++)
+            foreach (var pathPart in path)
             {
                 foundPart = parts
-                    .Where(p => p.OpenXmlPart.GetType().Name == path[i])
+                    .Where(p => p.OpenXmlPart.GetType().Name == pathPart)
                     .Select(t => t.OpenXmlPart)
                     .SingleOrDefault();
 

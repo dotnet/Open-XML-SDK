@@ -139,7 +139,7 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
-            if (InnerText.Length % 2 != 0 && bytes.Length != InnerText.Length / 2)
+            if (InnerText.Length % 2 != 0 || bytes.Length != InnerText.Length / 2)
             {
                 return false;
             }

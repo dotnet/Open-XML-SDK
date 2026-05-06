@@ -113,9 +113,9 @@ internal class ValidIdentifierHelper
                 return false;
             }
         }
-        else
+        else if (value.Length < 2)
         {
-            value = value.Substring(1);
+            return false;
         }
 
         return true;

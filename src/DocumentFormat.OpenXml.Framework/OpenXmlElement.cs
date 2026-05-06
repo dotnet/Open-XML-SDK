@@ -543,7 +543,7 @@ namespace DocumentFormat.OpenXml
             if (HasAttributes)
             {
                 var resolver = Features.GetNamespaceResolver();
-                var attributes = new List<OpenXmlAttribute>();
+                var attributes = new List<OpenXmlAttribute>(ParsedState.Attributes.Length);
 
                 foreach (var attribute in ParsedState.Attributes)
                 {
