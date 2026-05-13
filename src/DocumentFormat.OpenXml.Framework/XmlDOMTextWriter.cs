@@ -1,6 +1,7 @@
-﻿// Copyright (c) Microsoft. All rights reserved.
+// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Features;
 using System;
 using System.IO;
 using System.Xml;
@@ -12,16 +13,31 @@ namespace DocumentFormat.OpenXml
         private readonly XmlWriter _writer;
 
         public XmlDOMTextWriter(Stream stream)
+            : this(stream, features: null)
         {
-            _writer = Create(stream);
+        }
+
+        public XmlDOMTextWriter(Stream stream, IFeatureCollection? features)
+        {
+            _writer = ResolveFactory(features).Create(stream, settings: null);
         }
 
         public XmlDOMTextWriter(Stream stream, XmlWriterSettings settings)
+            : this(stream, settings, features: null)
         {
-            _writer = Create(stream, settings);
+        }
+
+        public XmlDOMTextWriter(Stream stream, XmlWriterSettings settings, IFeatureCollection? features)
+        {
+            _writer = ResolveFactory(features).Create(stream, settings);
         }
 
         public XmlDOMTextWriter(TextWriter w)
+            : this(w, features: null)
+        {
+        }
+
+        public XmlDOMTextWriter(TextWriter w, IFeatureCollection? features)
         {
             var xwSettings = new XmlWriterSettings
             {
@@ -30,8 +46,11 @@ namespace DocumentFormat.OpenXml
                 ConformanceLevel = ConformanceLevel.Fragment,
             };
 
-            _writer = Create(w, xwSettings);
+            _writer = ResolveFactory(features).Create(w, xwSettings);
         }
+
+        private static IXmlWriterFactoryFeature ResolveFactory(IFeatureCollection? features)
+            => features?.Get<IXmlWriterFactoryFeature>() ?? DefaultXmlWriterFactoryFeature.Instance;
 
         public override WriteState WriteState => _writer.WriteState;
 
