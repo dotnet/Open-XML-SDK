@@ -8,6 +8,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
 using System.Reflection;
+using System.Threading;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -266,6 +267,112 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML SpreadsheetDocument.</exception>
         public static SpreadsheetDocument Open(System.IO.Packaging.Package package)
             => Open(package, new OpenSettings());
+
+#if !NET35
+        /// <summary>
+        /// Creates a new instance of the SpreadsheetDocument class from the specified file.
+        /// </summary>
+        /// <param name="path">The path and file name of the target SpreadsheetDocument.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="cancellationToken">The cancellation token to observe while opening the SpreadsheetDocument.</param>
+        /// <returns>A new instance of SpreadsheetDocument.</returns>
+        /// <exception cref="ArgumentNullException">Thrown when "path" is null reference.</exception>
+        /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML SpreadsheetDocument.</exception>
+        /// <exception cref="OperationCanceledException">Thrown when the <paramref name="cancellationToken"/> is canceled.</exception>
+        public static SpreadsheetDocument Open(string path, bool isEditable, CancellationToken cancellationToken)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+            return Open(path, isEditable, new OpenSettings(), cancellationToken);
+        }
+
+        /// <summary>
+        /// Creates a new instance of the SpreadsheetDocument class from the specified file.
+        /// </summary>
+        /// <param name="path">The path and file name of the target SpreadsheetDocument.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <param name="cancellationToken">The cancellation token to observe while opening the SpreadsheetDocument.</param>
+        /// <returns>A new instance of SpreadsheetDocument.</returns>
+        /// <exception cref="ArgumentNullException">Thrown when "path" is null reference.</exception>
+        /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML SpreadsheetDocument.</exception>
+        /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
+        /// <exception cref="OperationCanceledException">Thrown when the <paramref name="cancellationToken"/> is canceled.</exception>
+        public static SpreadsheetDocument Open(string path, bool isEditable, OpenSettings openSettings, CancellationToken cancellationToken)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+            return Open(path, isEditable, openSettings);
+        }
+
+        /// <summary>
+        /// Creates a new instance of the SpreadsheetDocument class from the IO stream.
+        /// </summary>
+        /// <param name="stream">The IO stream on which to open the SpreadsheetDocument.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="cancellationToken">The cancellation token to observe while opening the SpreadsheetDocument.</param>
+        /// <returns>A new instance of SpreadsheetDocument.</returns>
+        /// <exception cref="ArgumentNullException">Thrown when "stream" is null reference.</exception>
+        /// <exception cref="IOException">Thrown when "stream" is not opened with Read (ReadWrite) access.</exception>
+        /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML SpreadsheetDocument.</exception>
+        /// <exception cref="OperationCanceledException">Thrown when the <paramref name="cancellationToken"/> is canceled.</exception>
+        public static SpreadsheetDocument Open(Stream stream, bool isEditable, CancellationToken cancellationToken)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+            return Open(stream, isEditable, new OpenSettings(), cancellationToken);
+        }
+
+        /// <summary>
+        /// Creates a new instance of the SpreadsheetDocument class from the IO stream.
+        /// </summary>
+        /// <param name="stream">The IO stream on which to open the SpreadsheetDocument.</param>
+        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <param name="cancellationToken">The cancellation token to observe while opening the SpreadsheetDocument.</param>
+        /// <returns>A new instance of SpreadsheetDocument.</returns>
+        /// <exception cref="ArgumentNullException">Thrown when "stream" is null reference.</exception>
+        /// <exception cref="IOException">Thrown when "stream" is not opened with Read (ReadWrite) access.</exception>
+        /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML SpreadsheetDocument.</exception>
+        /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
+        /// <exception cref="OperationCanceledException">Thrown when the <paramref name="cancellationToken"/> is canceled.</exception>
+        public static SpreadsheetDocument Open(Stream stream, bool isEditable, OpenSettings openSettings, CancellationToken cancellationToken)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+            return Open(stream, isEditable, openSettings);
+        }
+
+        /// <summary>
+        /// Creates a new instance of the SpreadsheetDocument class from the specified package.
+        /// </summary>
+        /// <param name="package">The specified OpenXml package.</param>
+        /// <param name="cancellationToken">The cancellation token to observe while opening the SpreadsheetDocument.</param>
+        /// <returns>A new instance of SpreadsheetDocument.</returns>
+        /// <exception cref="ArgumentNullException">Thrown when "package" is null reference.</exception>
+        /// <exception cref="IOException">Thrown when "package" is not opened with Read (ReadWrite) access.</exception>
+        /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML SpreadsheetDocument.</exception>
+        /// <exception cref="OperationCanceledException">Thrown when the <paramref name="cancellationToken"/> is canceled.</exception>
+        public static SpreadsheetDocument Open(System.IO.Packaging.Package package, CancellationToken cancellationToken)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+            return Open(package, new OpenSettings(), cancellationToken);
+        }
+
+        /// <summary>
+        /// Creates a new instance of the SpreadsheetDocument class from the specified package.
+        /// </summary>
+        /// <param name="package">The specified OpenXml package.</param>
+        /// <param name="openSettings">The advanced settings for opening a document.</param>
+        /// <param name="cancellationToken">The cancellation token to observe while opening the SpreadsheetDocument.</param>
+        /// <returns>A new instance of SpreadsheetDocument.</returns>
+        /// <exception cref="ArgumentNullException">Thrown when package is a null reference.</exception>
+        /// <exception cref="OpenXmlPackageException">Thrown when package is not opened with read access.</exception>
+        /// <exception cref="OpenXmlPackageException">Thrown when the package is not a valid Open XML document.</exception>
+        /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
+        /// <exception cref="OperationCanceledException">Thrown when the <paramref name="cancellationToken"/> is canceled.</exception>
+        public static SpreadsheetDocument Open(System.IO.Packaging.Package package, OpenSettings openSettings, CancellationToken cancellationToken)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+            return Open(package, openSettings);
+        }
+#endif
 
         /// <summary>
         /// Changes the document type.
