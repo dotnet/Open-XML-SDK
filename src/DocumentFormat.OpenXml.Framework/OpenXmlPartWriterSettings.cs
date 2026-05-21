@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml;
 /// </summary>
 public class OpenXmlPartWriterSettings
 {
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
     /// <summary>
     /// Gets or sets a value indicating whether asynchronous <see cref="OpenXmlPartWriter" />  methods can be used.
     /// </summary>
