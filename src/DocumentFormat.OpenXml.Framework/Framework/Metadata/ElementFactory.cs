@@ -4,29 +4,12 @@
 using System;
 using System.Diagnostics;
 
-namespace DocumentFormat.OpenXml.Framework.Metadata
+namespace DocumentFormat.OpenXml.Framework.Metadata;
+
+[DebuggerDisplay("{QName,nq}")]
+internal readonly struct ElementFactory(OpenXmlSchemaType type, Func<OpenXmlElement> factory)
 {
-    [DebuggerDisplay("{QName,nq}")]
-    internal sealed class ElementFactory
-    {
-        private readonly Func<OpenXmlElement> _factory;
+    public OpenXmlSchemaType Type => type;
 
-        public ElementFactory(in OpenXmlSchemaType type, Func<OpenXmlElement> factory)
-        {
-            Type = type;
-            _factory = factory;
-        }
-
-        public OpenXmlSchemaType Type { get; }
-
-        public OpenXmlElement Create() => _factory();
-
-        public static ElementFactory Create<T>()
-            where T : OpenXmlElement, new()
-        {
-            var instance = new T();
-
-            return new ElementFactory(instance.Metadata.Type, static () => new T());
-        }
-    }
+    public OpenXmlElement Create() => factory();
 }
