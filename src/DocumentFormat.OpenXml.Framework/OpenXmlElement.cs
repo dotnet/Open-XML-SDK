@@ -1548,11 +1548,11 @@ namespace DocumentFormat.OpenXml
             // read attributes
             if (xmlReader.HasAttributes)
             {
-                var resolver = Features.GetNamespaceResolver();
+                var strictRelationshipFound = ((XmlConvertingReader)xmlReader).StrictRelationshipFound;
 
                 while (xmlReader.MoveToNextAttribute())
                 {
-                    if (!TrySetFixedAttribute(new(xmlReader.NamespaceURI, xmlReader.LocalName), xmlReader.Value, ((XmlConvertingReader)xmlReader).StrictRelationshipFound))
+                    if (!TrySetFixedAttribute(new(xmlReader.NamespaceURI, xmlReader.LocalName), xmlReader.Value, strictRelationshipFound))
                     {
                         if (xmlReader.NamespaceURI == AlternateContent.MarkupCompatibilityNamespace)
                         {
@@ -1611,22 +1611,11 @@ namespace DocumentFormat.OpenXml
         {
             Debug.Assert(xmlReader.NodeType == XmlNodeType.Element);
 
-            if (OpenXmlElementContext is not null && OpenXmlElementContext.MCSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess)
+            var context = OpenXmlElementContext;
+            var mcSettings = context?.MCSettings;
+            if (context is not null && mcSettings is not null && mcSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess)
             {
-                OpenXmlElementContext.MCContext.LookupNamespaceDelegate = xmlReader.LookupNamespace;
-
-                var mcAttributes = LoadMCAttribute(xmlReader);
-
-                if (mcAttributes is not null)
-                {
-                    OpenXmlElementContext.MCContext.PushMCAttributes(mcAttributes);
-                    if (OpenXmlElementContext.ACBlockLevel == 0)
-                    {
-                        CheckMustUnderstandAttr(xmlReader, mcAttributes, OpenXmlElementContext.MCSettings);
-                    }
-
-                    return true;
-                }
+                return PushMcContext(xmlReader, context, mcSettings);
             }
             else
             {
@@ -1636,11 +1625,35 @@ namespace DocumentFormat.OpenXml
             return false;
         }
 
+        private protected bool PushMcContext(XmlReader xmlReader, OpenXmlElementContext context, MarkupCompatibilityProcessSettings mcSettings)
+        {
+            Debug.Assert(xmlReader.NodeType == XmlNodeType.Element);
+            Debug.Assert(mcSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess);
+
+            context.MCContext.LookupNamespaceDelegate = xmlReader.LookupNamespace;
+
+            var mcAttributes = LoadMCAttribute(xmlReader);
+
+            if (mcAttributes is not null)
+            {
+                context.MCContext.PushMCAttributes(mcAttributes);
+                if (context.ACBlockLevel == 0)
+                {
+                    CheckMustUnderstandAttr(xmlReader, mcAttributes, mcSettings);
+                }
+
+                return true;
+            }
+
+            return false;
+        }
+
         private protected void PopMcContext()
         {
-            if (OpenXmlElementContext is not null && OpenXmlElementContext.MCSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess)
+            var context = OpenXmlElementContext;
+            if (context is not null && context.MCSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess)
             {
-                OpenXmlElementContext.MCContext.PopMCAttributes();
+                context.MCContext.PopMCAttributes();
             }
             else
             {
@@ -1824,11 +1837,23 @@ namespace DocumentFormat.OpenXml
                 _ => throw new InvalidOperationException(),
             };
 
+        internal OpenXmlElement ElementFactory(XmlReader xmlReader, IOpenXmlNamespaceResolver resolver)
+            => xmlReader.NodeType switch
+            {
+                XmlNodeType.Element => CreateElement(new(xmlReader.NamespaceURI, xmlReader.LocalName), xmlReader.Prefix, resolver),
+                XmlNodeType.Comment or XmlNodeType.ProcessingInstruction or XmlNodeType.XmlDeclaration => new OpenXmlMiscNode(xmlReader.NodeType),
+                XmlNodeType.Text or XmlNodeType.CDATA or XmlNodeType.SignificantWhitespace or XmlNodeType.Whitespace => new OpenXmlMiscNode(xmlReader.NodeType),
+                _ => throw new InvalidOperationException(),
+            };
+
         internal OpenXmlElement CreateElement(in OpenXmlQualifiedName qname, string prefix)
+            => CreateElement(qname, prefix, Features.GetNamespaceResolver());
+
+        internal OpenXmlElement CreateElement(in OpenXmlQualifiedName qname, string prefix, IOpenXmlNamespaceResolver resolver)
         {
             var newElement = default(OpenXmlElement);
 
-            if (Features.GetNamespaceResolver().IsKnown(qname.Namespace))
+            if (resolver.IsKnown(qname.Namespace))
             {
                 newElement = ElementFactory(qname);
 
@@ -2443,22 +2468,30 @@ namespace DocumentFormat.OpenXml
 
         internal void RemoveAttributesBasedonMC()
         {
-            if (OpenXmlElementContext is null ||
-                OpenXmlElementContext.MCSettings.ProcessMode == MarkupCompatibilityProcessMode.NoProcess)
+            var context = OpenXmlElementContext;
+            if (context is null)
             {
                 return;
             }
 
-            if (!OpenXmlElementContext.MCContext.HasIgnorable())
+            var mcSettings = context.MCSettings;
+            if (mcSettings.ProcessMode == MarkupCompatibilityProcessMode.NoProcess)
             {
                 return;
             }
 
+            var mcContext = context.MCContext;
+            if (!mcContext.HasIgnorable())
+            {
+                return;
+            }
+
+            var targetFileFormatVersions = mcSettings.TargetFileFormatVersions;
             foreach (var attribute in RawState.Attributes)
             {
                 if (attribute.Value is not null)
                 {
-                    var action = OpenXmlElementContext.MCContext.GetAttributeAction(attribute.Property.QName, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
+                    var action = mcContext.GetAttributeAction(attribute.Property.QName, targetFileFormatVersions);
 
                     if (action == AttributeAction.Ignore)
                     {
@@ -2473,7 +2506,7 @@ namespace DocumentFormat.OpenXml
 
                 foreach (var attribute in ExtendedAttributesField)
                 {
-                    var action = OpenXmlElementContext.MCContext.GetAttributeAction(attribute.QName, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
+                    var action = mcContext.GetAttributeAction(attribute.QName, targetFileFormatVersions);
                     if (action == AttributeAction.Ignore)
                     {
                         tobeRemoved.Add(attribute);
