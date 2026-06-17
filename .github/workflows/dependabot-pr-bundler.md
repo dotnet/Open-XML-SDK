@@ -17,7 +17,14 @@ on:
 
 if: needs.pre_activation.outputs.check_result == 'success'
 
-permissions: read-all
+permissions:
+  copilot-requests: write
+  actions: read
+  contents: read
+  discussions: read
+  issues: read
+  pull-requests: read
+  security-events: read
 
 network: defaults
 
