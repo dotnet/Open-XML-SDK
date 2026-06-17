@@ -191,3 +191,4 @@ msbuild.binlog
 /.idea/
 
 BenchmarkDotNet.Artifacts/
+.github/aw/logs
