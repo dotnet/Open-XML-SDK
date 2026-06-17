@@ -582,6 +582,21 @@ namespace DocumentFormat.OpenXml.Packaging
                 "application/vnd.ms-word.template.macroEnabledTemplate.main+xml" => WordprocessingDocumentType.MacroEnabledTemplate,
                 _ => default,
             };
+
+            protected override void OnDocumentTypeChanged(WordprocessingDocumentType newType)
+            {
+                if (newType is WordprocessingDocumentType.MacroEnabledDocument
+                    or WordprocessingDocumentType.MacroEnabledTemplate)
+                {
+                    return;
+                }
+
+                if (MainPart is { } mainPart)
+                {
+                    mainPart.DeletePartsRecursivelyOfTypeBase<VbaProjectPart>();
+                    mainPart.DeletePartsRecursivelyOfTypeBase<CustomizationPart>();
+                }
+            }
         }
     }
 }

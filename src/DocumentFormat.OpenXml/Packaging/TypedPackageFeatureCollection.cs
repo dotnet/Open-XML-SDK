@@ -96,6 +96,7 @@ internal abstract partial class TypedPackageFeatureCollection<TDocumentType, TMa
         try
         {
             Package.ChangeDocumentTypeInternal(CreateMainPart());
+            OnDocumentTypeChanged(newType);
         }
         catch (OpenXmlPackageException e)
         {
@@ -115,6 +116,14 @@ internal abstract partial class TypedPackageFeatureCollection<TDocumentType, TMa
     public abstract TDocumentType? GetDocumentType(string contentPart);
 
     protected abstract TMainPart CreateMainPart();
+
+    /// <summary>
+    /// Called after the document type has been changed. Subclasses can override to perform
+    /// cleanup such as removing parts that are not valid for the new document type.
+    /// </summary>
+    protected virtual void OnDocumentTypeChanged(TDocumentType newType)
+    {
+    }
 
     bool IKnownDataPartFeature.IsKnown(string relationshipId) => false;
 }
