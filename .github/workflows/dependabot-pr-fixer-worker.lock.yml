@@ -1,5 +1,5 @@
-# gh-aw-metadata: {"schema_version":"v4","frontmatter_hash":"ee6b9005677e4debb5d310b6c938a4a506cbb033dda26b9b71587f47f8664a70","body_hash":"27f590a7ea3b68694ca1eec82e92162b86a70d1994f2e24fabe7d09bb5fa0e97","compiler_version":"v0.79.8","strict":true,"agent_id":"copilot","engine_versions":{"copilot":"1.0.60"}}
-# gh-aw-manifest: {"version":1,"secrets":["GH_AW_GITHUB_MCP_SERVER_TOKEN","GH_AW_GITHUB_TOKEN","GITHUB_TOKEN"],"actions":[{"repo":"actions/checkout","sha":"df4cb1c069e1874edd31b4311f1884172cec0e10","version":"v6.0.3"},{"repo":"actions/download-artifact","sha":"3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c","version":"v8.0.1"},{"repo":"actions/github-script","sha":"3a2844b7e9c422d3c10d287c895573f7108da1b3","version":"v9.0.0"},{"repo":"actions/setup-node","sha":"48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e","version":"v6.4.0"},{"repo":"actions/upload-artifact","sha":"043fb46d1a93c77aae656e7c1c64a875d1fc6a0a","version":"v7.0.1"},{"repo":"github/gh-aw-actions/setup","sha":"c0338fef4749d08c21f8f975fb0e37efa17dda47","version":"v0.79.8"}],"containers":[{"image":"ghcr.io/github/gh-aw-firewall/agent:0.27.2","digest":"sha256:f88e5b17b6b7a600117bc121114d6ce2155c88c983c0c939c5df884f730fa1d6","pinned_image":"ghcr.io/github/gh-aw-firewall/agent:0.27.2@sha256:f88e5b17b6b7a600117bc121114d6ce2155c88c983c0c939c5df884f730fa1d6"},{"image":"ghcr.io/github/gh-aw-firewall/api-proxy:0.27.2","digest":"sha256:ee39841d980878ebbb87592903b06d31a1af500c71525c9616f7e8e2a27041a4","pinned_image":"ghcr.io/github/gh-aw-firewall/api-proxy:0.27.2@sha256:ee39841d980878ebbb87592903b06d31a1af500c71525c9616f7e8e2a27041a4"},{"image":"ghcr.io/github/gh-aw-firewall/cli-proxy:0.27.2","digest":"sha256:02f3ec08f32dc26c5427920c6a2e2f3036238fce44802f2f11ef49ed8621b5d0","pinned_image":"ghcr.io/github/gh-aw-firewall/cli-proxy:0.27.2@sha256:02f3ec08f32dc26c5427920c6a2e2f3036238fce44802f2f11ef49ed8621b5d0"},{"image":"ghcr.io/github/gh-aw-firewall/squid:0.27.2","digest":"sha256:2e3a717e5f19a654cd9a2263beb52012b56bcb68562ec5ae2e42f9d156b49591","pinned_image":"ghcr.io/github/gh-aw-firewall/squid:0.27.2@sha256:2e3a717e5f19a654cd9a2263beb52012b56bcb68562ec5ae2e42f9d156b49591"},{"image":"ghcr.io/github/gh-aw-mcpg:v0.3.25","digest":"sha256:c10331ad17668ef89f38f5e356678788a40b0cd5fef96e8f92e1d9c1de47cbaa","pinned_image":"ghcr.io/github/gh-aw-mcpg:v0.3.25@sha256:c10331ad17668ef89f38f5e356678788a40b0cd5fef96e8f92e1d9c1de47cbaa"},{"image":"ghcr.io/github/github-mcp-server:v1.1.2","digest":"sha256:30197479d8036c7811892bc07e06f9a05c9ef3cdd79bc59f256d50647f95788c","pinned_image":"ghcr.io/github/github-mcp-server:v1.1.2@sha256:30197479d8036c7811892bc07e06f9a05c9ef3cdd79bc59f256d50647f95788c"}]}
+# gh-aw-metadata: {"schema_version":"v4","frontmatter_hash":"0bc9c368a35f7649b9c240fda92c6645d2c590c33adc51e08665b495991ce035","body_hash":"f9193bf7539b738a6492600b17f8c4b6df909f00383836384934b4ede6ffafc5","compiler_version":"v0.79.8","strict":true,"agent_id":"copilot","engine_versions":{"copilot":"1.0.60"}}
+# gh-aw-manifest: {"version":1,"secrets":["GH_AW_CI_TRIGGER_TOKEN","GH_AW_GITHUB_MCP_SERVER_TOKEN","GH_AW_GITHUB_TOKEN","GITHUB_TOKEN"],"actions":[{"repo":"actions/checkout","sha":"df4cb1c069e1874edd31b4311f1884172cec0e10","version":"v6.0.3"},{"repo":"actions/download-artifact","sha":"3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c","version":"v8.0.1"},{"repo":"actions/github-script","sha":"3a2844b7e9c422d3c10d287c895573f7108da1b3","version":"v9.0.0"},{"repo":"actions/setup-node","sha":"48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e","version":"v6.4.0"},{"repo":"actions/upload-artifact","sha":"043fb46d1a93c77aae656e7c1c64a875d1fc6a0a","version":"v7.0.1"},{"repo":"github/gh-aw-actions/setup","sha":"c0338fef4749d08c21f8f975fb0e37efa17dda47","version":"v0.79.8"}],"containers":[{"image":"ghcr.io/github/gh-aw-firewall/agent:0.27.2","digest":"sha256:f88e5b17b6b7a600117bc121114d6ce2155c88c983c0c939c5df884f730fa1d6","pinned_image":"ghcr.io/github/gh-aw-firewall/agent:0.27.2@sha256:f88e5b17b6b7a600117bc121114d6ce2155c88c983c0c939c5df884f730fa1d6"},{"image":"ghcr.io/github/gh-aw-firewall/api-proxy:0.27.2","digest":"sha256:ee39841d980878ebbb87592903b06d31a1af500c71525c9616f7e8e2a27041a4","pinned_image":"ghcr.io/github/gh-aw-firewall/api-proxy:0.27.2@sha256:ee39841d980878ebbb87592903b06d31a1af500c71525c9616f7e8e2a27041a4"},{"image":"ghcr.io/github/gh-aw-firewall/cli-proxy:0.27.2","digest":"sha256:02f3ec08f32dc26c5427920c6a2e2f3036238fce44802f2f11ef49ed8621b5d0","pinned_image":"ghcr.io/github/gh-aw-firewall/cli-proxy:0.27.2@sha256:02f3ec08f32dc26c5427920c6a2e2f3036238fce44802f2f11ef49ed8621b5d0"},{"image":"ghcr.io/github/gh-aw-firewall/squid:0.27.2","digest":"sha256:2e3a717e5f19a654cd9a2263beb52012b56bcb68562ec5ae2e42f9d156b49591","pinned_image":"ghcr.io/github/gh-aw-firewall/squid:0.27.2@sha256:2e3a717e5f19a654cd9a2263beb52012b56bcb68562ec5ae2e42f9d156b49591"},{"image":"ghcr.io/github/gh-aw-mcpg:v0.3.25","digest":"sha256:c10331ad17668ef89f38f5e356678788a40b0cd5fef96e8f92e1d9c1de47cbaa","pinned_image":"ghcr.io/github/gh-aw-mcpg:v0.3.25@sha256:c10331ad17668ef89f38f5e356678788a40b0cd5fef96e8f92e1d9c1de47cbaa"},{"image":"ghcr.io/github/github-mcp-server:v1.1.2","digest":"sha256:30197479d8036c7811892bc07e06f9a05c9ef3cdd79bc59f256d50647f95788c","pinned_image":"ghcr.io/github/github-mcp-server:v1.1.2@sha256:30197479d8036c7811892bc07e06f9a05c9ef3cdd79bc59f256d50647f95788c"}]}
 # This file was automatically generated by gh-aw (v0.79.8). DO NOT EDIT. To debug this workflow, load the skill at https://github.com/github/gh-aw/blob/main/debug.md
 #
 #    ___                   _   _      
@@ -23,9 +23,10 @@
 #
 # For more information: https://github.github.com/gh-aw/introduction/overview/
 #
-# Scans open Dependabot pull requests, groups them by ecosystem and area, and dispatches worker runs.
+# Reviews a single Dependabot pull request, assesses risk, and applies safe repo-local fixes when possible.
 #
 # Secrets used:
+#   - GH_AW_CI_TRIGGER_TOKEN
 #   - GH_AW_GITHUB_MCP_SERVER_TOKEN
 #   - GH_AW_GITHUB_TOKEN
 #   - GITHUB_TOKEN
@@ -47,8 +48,13 @@
 #   - ghcr.io/github/gh-aw-mcpg:v0.3.25@sha256:c10331ad17668ef89f38f5e356678788a40b0cd5fef96e8f92e1d9c1de47cbaa
 #   - ghcr.io/github/github-mcp-server:v1.1.2@sha256:30197479d8036c7811892bc07e06f9a05c9ef3cdd79bc59f256d50647f95788c
 
-name: "Dependabot PR Bundler"
+name: "Dependabot PR Fixer"
 on:
+  pull_request:
+    types:
+    - opened
+    - reopened
+    - synchronize
   workflow_dispatch:
     inputs:
       aw_context:
@@ -57,24 +63,25 @@ on:
         required: false
         type: string
       group:
-        description: Optional group key to scan, such as nuget:product or github-actions:workflows
-        required: false
-      max_prs:
-        description: Maximum PRs to fan out in one run (up to 3)
+        description: Optional group key carried from the bundler run
         required: false
       pr_number:
-        description: Optional pull request number to target directly
+        description: Pull request number to inspect manually
         required: false
 
 permissions: {}
 
 concurrency:
-  group: "gh-aw-${{ github.workflow }}"
+  group: "gh-aw-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref || github.run_id }}"
+  cancel-in-progress: true
 
-run-name: "Dependabot PR Bundler"
+run-name: "Dependabot PR Fixer"
 
 jobs:
   activation:
+    needs: pre_activation
+    if: >
+      needs.pre_activation.outputs.activated == 'true' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.id == github.repository_id)
     runs-on: ubuntu-slim
     permissions:
       actions: read
@@ -82,6 +89,7 @@ jobs:
     env:
       GH_AW_MAX_DAILY_AI_CREDITS: ${{ vars.GH_AW_DEFAULT_MAX_DAILY_AI_CREDITS || '5000' }}
     outputs:
+      body: ${{ steps.sanitized.outputs.body }}
       comment_id: ""
       comment_repo: ""
       daily_ai_credits_exceeded: ${{ steps.daily-effective-workflow-guardrail.outputs.daily_ai_credits_exceeded == 'true' }}
@@ -94,6 +102,8 @@ jobs:
       setup-span-id: ${{ steps.setup.outputs.span-id }}
       setup-trace-id: ${{ steps.setup.outputs.trace-id }}
       stale_lock_file_failed: ${{ steps.check-lock-file.outputs.stale_lock_file_failed == 'true' }}
+      text: ${{ steps.sanitized.outputs.text }}
+      title: ${{ steps.sanitized.outputs.title }}
     steps:
       - name: Setup Scripts
         id: setup
@@ -101,10 +111,12 @@ jobs:
         with:
           destination: ${{ runner.temp }}/gh-aw/actions
           job-name: ${{ github.job }}
+          trace-id: ${{ needs.pre_activation.outputs.setup-trace-id }}
+          parent-span-id: ${{ needs.pre_activation.outputs.setup-parent-span-id || needs.pre_activation.outputs.setup-span-id }}
           safe-output-artifact-client: ${{ env.GH_AW_MAX_DAILY_AI_CREDITS != '' }}
         env:
-          GH_AW_SETUP_WORKFLOW_NAME: "Dependabot PR Bundler"
-          GH_AW_CURRENT_WORKFLOW_REF: ${{ github.repository }}/.github/workflows/dependabot-pr-bundler.lock.yml@${{ github.ref }}
+          GH_AW_SETUP_WORKFLOW_NAME: "Dependabot PR Fixer"
+          GH_AW_CURRENT_WORKFLOW_REF: ${{ github.repository }}/.github/workflows/dependabot-pr-fixer-worker.lock.yml@${{ github.ref }}
           GH_AW_INFO_VERSION: "1.0.60"
           GH_AW_INFO_AWF_VERSION: "v0.27.2"
           GH_AW_INFO_ENGINE_ID: "copilot"
@@ -117,16 +129,16 @@ jobs:
           GH_AW_INFO_VERSION: "1.0.60"
           GH_AW_INFO_AGENT_VERSION: "1.0.60"
           GH_AW_INFO_CLI_VERSION: "v0.79.8"
-          GH_AW_INFO_WORKFLOW_NAME: "Dependabot PR Bundler"
+          GH_AW_INFO_WORKFLOW_NAME: "Dependabot PR Fixer"
           GH_AW_INFO_EXPERIMENTAL: "false"
           GH_AW_INFO_SUPPORTS_TOOLS_ALLOWLIST: "true"
           GH_AW_INFO_STAGED: "false"
-          GH_AW_INFO_ALLOWED_DOMAINS: '["defaults"]'
+          GH_AW_INFO_ALLOWED_DOMAINS: '["defaults","dotnet"]'
           GH_AW_INFO_FIREWALL_ENABLED: "true"
           GH_AW_INFO_AWF_VERSION: "v0.27.2"
           GH_AW_INFO_AWMG_VERSION: ""
           GH_AW_INFO_FIREWALL_TYPE: "squid"
-          GH_AW_INFO_FRONTMATTER_EMOJI: "🧭"
+          GH_AW_INFO_FRONTMATTER_EMOJI: "🛠️"
           GH_AW_COMPILED_STRICT: "true"
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
@@ -140,8 +152,8 @@ jobs:
         if: ${{ env.GH_AW_MAX_DAILY_AI_CREDITS != '' }}
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
-          GH_AW_WORKFLOW_NAME: "Dependabot PR Bundler"
-          GH_AW_WORKFLOW_ID: "dependabot-pr-bundler"
+          GH_AW_WORKFLOW_NAME: "Dependabot PR Fixer"
+          GH_AW_WORKFLOW_ID: "dependabot-pr-fixer-worker"
           GH_AW_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           GH_AW_WORKFLOW_DISPATCH_AW_CONTEXT: ${{ github.event.inputs.aw_context || '' }}
           GH_AW_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -179,7 +191,7 @@ jobs:
         id: check-lock-file
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
-          GH_AW_WORKFLOW_FILE: "dependabot-pr-bundler.lock.yml"
+          GH_AW_WORKFLOW_FILE: "dependabot-pr-fixer-worker.lock.yml"
           GH_AW_CONTEXT_WORKFLOW_REF: "${{ github.workflow_ref }}"
         with:
           script: |
@@ -197,6 +209,17 @@ jobs:
             setupGlobals(core, github, context, exec, io, getOctokit);
             const { main } = require('${{ runner.temp }}/gh-aw/actions/check_version_updates.cjs');
             await main();
+      - name: Compute current body text
+        id: sanitized
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          GH_AW_ALLOWED_DOMAINS: "*.vsblob.vsassets.io,api.business.githubcopilot.com,api.enterprise.githubcopilot.com,api.github.com,api.githubcopilot.com,api.individual.githubcopilot.com,api.nuget.org,api.snapcraft.io,archive.ubuntu.com,azure.archive.ubuntu.com,azuresearch-usnc.nuget.org,azuresearch-ussc.nuget.org,builds.dotnet.microsoft.com,ci.dot.net,crl.geotrust.com,crl.globalsign.com,crl.identrust.com,crl.sectigo.com,crl.thawte.com,crl.usertrust.com,crl.verisign.com,crl3.digicert.com,crl4.digicert.com,crls.ssl.com,dc.services.visualstudio.com,dist.nuget.org,dot.net,dotnet.microsoft.com,dotnetcli.blob.core.windows.net,github.com,host.docker.internal,json-schema.org,json.schemastore.org,keyserver.ubuntu.com,nuget.org,nuget.pkg.github.com,nugetregistryv2prod.blob.core.windows.net,ocsp.digicert.com,ocsp.geotrust.com,ocsp.globalsign.com,ocsp.identrust.com,ocsp.sectigo.com,ocsp.ssl.com,ocsp.thawte.com,ocsp.usertrust.com,ocsp.verisign.com,oneocsp.microsoft.com,packagecloud.io,packages.cloud.google.com,packages.microsoft.com,pkgs.dev.azure.com,ppa.launchpad.net,raw.githubusercontent.com,registry.npmjs.org,s.symcb.com,s.symcd.com,security.ubuntu.com,telemetry.enterprise.githubcopilot.com,ts-crl.ws.symantec.com,ts-ocsp.ws.symantec.com,www.googleapis.com,www.microsoft.com"
+        with:
+          script: |
+            const { setupGlobals } = require('${{ runner.temp }}/gh-aw/actions/setup_globals.cjs');
+            setupGlobals(core, github, context, exec, io, getOctokit);
+            const { main } = require('${{ runner.temp }}/gh-aw/actions/compute_text.cjs');
+            await main();
       - name: Create prompt with built-in context
         env:
           GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
@@ -213,20 +236,23 @@ jobs:
         run: |
           bash "${RUNNER_TEMP}/gh-aw/actions/create_prompt_first.sh"
           {
-          cat << 'GH_AW_PROMPT_93423fe2f3d4aa28_EOF'
+          cat << 'GH_AW_PROMPT_c64b8fe7d34837e0_EOF'
           <system>
-          GH_AW_PROMPT_93423fe2f3d4aa28_EOF
+          GH_AW_PROMPT_c64b8fe7d34837e0_EOF
           cat "${RUNNER_TEMP}/gh-aw/prompts/xpia.md"
           cat "${RUNNER_TEMP}/gh-aw/prompts/temp_folder_prompt.md"
           cat "${RUNNER_TEMP}/gh-aw/prompts/markdown.md"
           cat "${RUNNER_TEMP}/gh-aw/prompts/safe_outputs_prompt.md"
-          cat << 'GH_AW_PROMPT_93423fe2f3d4aa28_EOF'
+          cat << 'GH_AW_PROMPT_c64b8fe7d34837e0_EOF'
           <safe-output-tools>
-          Tools: dispatch_workflow(max:3), missing_tool, missing_data, noop
+          Tools: add_comment(max:2), push_to_pull_request_branch, missing_tool, missing_data, noop
+          GH_AW_PROMPT_c64b8fe7d34837e0_EOF
+          cat "${RUNNER_TEMP}/gh-aw/prompts/safe_outputs_push_to_pr_branch.md"
+          cat << 'GH_AW_PROMPT_c64b8fe7d34837e0_EOF'
           </safe-output-tools>
-          GH_AW_PROMPT_93423fe2f3d4aa28_EOF
+          GH_AW_PROMPT_c64b8fe7d34837e0_EOF
           cat "${RUNNER_TEMP}/gh-aw/prompts/mcp_cli_tools_prompt.md"
-          cat << 'GH_AW_PROMPT_93423fe2f3d4aa28_EOF'
+          cat << 'GH_AW_PROMPT_c64b8fe7d34837e0_EOF'
           <github-context>
           The following GitHub context information is available for this workflow:
           {{#if github.actor}}
@@ -254,7 +280,7 @@ jobs:
           - **workflow-run-id**: __GH_AW_GITHUB_RUN_ID__
           {{/if}}
           - **checkouts**: The following repositories have been checked out and are available in the workspace:
-            - repo `__GH_AW_GITHUB_REPOSITORY__` → `$GITHUB_WORKSPACE` (cwd) [full history, all branches available as remote-tracking refs]
+            - repo `__GH_AW_GITHUB_REPOSITORY__` → `$GITHUB_WORKSPACE` (cwd) [full history, all branches available as remote-tracking refs] [additional refs fetched: refs/pulls/*, refs/heads/*]
             - **Note**: If a branch you need is not in the list above and is not listed as an additional fetched ref, it has NOT been checked out. For private repositories you cannot fetch it. If the branch is required and not available, exit with an error and ask the user to add it to the `fetch:` option of the `checkout:` configuration (e.g., `fetch: ["refs/pulls/open/*"]` for all open PR refs, or `fetch: ["main", "feature/my-branch"]` for specific branches).
             - **Warning: No git credentials are available to the agent.** Credentials are
               intentionally removed after the checkout step for security. This means any git
@@ -268,12 +294,12 @@ jobs:
               stop immediately and report the limitation rather than spending turns trying to work around it.
           </github-context>
           
-          GH_AW_PROMPT_93423fe2f3d4aa28_EOF
+          GH_AW_PROMPT_c64b8fe7d34837e0_EOF
           cat "${RUNNER_TEMP}/gh-aw/prompts/cli_proxy_with_safeoutputs_prompt.md"
-          cat << 'GH_AW_PROMPT_93423fe2f3d4aa28_EOF'
+          cat << 'GH_AW_PROMPT_c64b8fe7d34837e0_EOF'
           </system>
-          {{#runtime-import .github/workflows/dependabot-pr-bundler.md}}
-          GH_AW_PROMPT_93423fe2f3d4aa28_EOF
+          {{#runtime-import .github/workflows/dependabot-pr-fixer-worker.md}}
+          GH_AW_PROMPT_c64b8fe7d34837e0_EOF
           } > "$GH_AW_PROMPT"
       - name: Interpolate variables and render templates
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
@@ -299,6 +325,7 @@ jobs:
           GH_AW_GITHUB_RUN_ID: ${{ github.run_id }}
           GH_AW_GITHUB_WORKSPACE: ${{ github.workspace }}
           GH_AW_MCP_CLI_SERVERS_LIST: '- `safeoutputs` — run `safeoutputs --help` to see available tools'
+          GH_AW_NEEDS_PRE_ACTIVATION_OUTPUTS_ACTIVATED: ${{ needs.pre_activation.outputs.activated }}
         with:
           script: |
             const { setupGlobals } = require('${{ runner.temp }}/gh-aw/actions/setup_globals.cjs');
@@ -318,7 +345,8 @@ jobs:
                 GH_AW_GITHUB_REPOSITORY: process.env.GH_AW_GITHUB_REPOSITORY,
                 GH_AW_GITHUB_RUN_ID: process.env.GH_AW_GITHUB_RUN_ID,
                 GH_AW_GITHUB_WORKSPACE: process.env.GH_AW_GITHUB_WORKSPACE,
-                GH_AW_MCP_CLI_SERVERS_LIST: process.env.GH_AW_MCP_CLI_SERVERS_LIST
+                GH_AW_MCP_CLI_SERVERS_LIST: process.env.GH_AW_MCP_CLI_SERVERS_LIST,
+                GH_AW_NEEDS_PRE_ACTIVATION_OUTPUTS_ACTIVATED: process.env.GH_AW_NEEDS_PRE_ACTIVATION_OUTPUTS_ACTIVATED
               }
             });
       - name: Validate prompt placeholders
@@ -366,7 +394,7 @@ jobs:
       GH_AW_ASSETS_BRANCH: ""
       GH_AW_ASSETS_MAX_SIZE_KB: 0
       GH_AW_MCP_LOG_DIR: /tmp/gh-aw/mcp-logs/safeoutputs
-      GH_AW_WORKFLOW_ID_SANITIZED: dependabotprbundler
+      GH_AW_WORKFLOW_ID_SANITIZED: dependabotprfixerworker
     outputs:
       agentic_engine_timeout: ${{ steps.detect-agent-errors.outputs.agentic_engine_timeout || 'false' }}
       ai_credits_rate_limit_error: ${{ steps.parse-mcp-gateway.outputs.ai_credits_rate_limit_error || 'false' }}
@@ -395,8 +423,8 @@ jobs:
           trace-id: ${{ needs.activation.outputs.setup-trace-id }}
           parent-span-id: ${{ needs.activation.outputs.setup-parent-span-id || needs.activation.outputs.setup-span-id }}
         env:
-          GH_AW_SETUP_WORKFLOW_NAME: "Dependabot PR Bundler"
-          GH_AW_CURRENT_WORKFLOW_REF: ${{ github.repository }}/.github/workflows/dependabot-pr-bundler.lock.yml@${{ github.ref }}
+          GH_AW_SETUP_WORKFLOW_NAME: "Dependabot PR Fixer"
+          GH_AW_CURRENT_WORKFLOW_REF: ${{ github.repository }}/.github/workflows/dependabot-pr-fixer-worker.lock.yml@${{ github.ref }}
           GH_AW_INFO_VERSION: "1.0.60"
           GH_AW_INFO_AWF_VERSION: "v0.27.2"
           GH_AW_INFO_ENGINE_ID: "copilot"
@@ -413,6 +441,12 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 0
+      - name: Fetch additional refs
+        env:
+          GH_AW_FETCH_TOKEN: ${{ secrets.GH_AW_GITHUB_MCP_SERVER_TOKEN || secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          header=$(printf "x-access-token:%s" "${GH_AW_FETCH_TOKEN}" | base64 -w 0)
+          git -c "http.extraheader=Authorization: Basic ${header}" fetch origin '+refs/heads/refs/pulls/*:refs/remotes/origin/refs/pulls/*' '+refs/heads/refs/heads/*:refs/remotes/origin/refs/heads/*'
       - name: Create gh-aw temp directory
         run: bash "${RUNNER_TEMP}/gh-aw/actions/create_gh_aw_tmp_dir.sh"
       - name: Configure gh CLI for GitHub Enterprise
@@ -421,12 +455,12 @@ jobs:
           GH_TOKEN: ${{ github.token }}
       - env:
           EXPR_GITHUB_REPOSITORY: ${{ github.repository }}
+          EXPR_PR_NUMBER: ${{ github.event.pull_request.number }}
           GH_TOKEN: ${{ secrets.GH_AW_GITHUB_MCP_SERVER_TOKEN || secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           INPUT_GROUP: ${{ inputs.group }}
-          INPUT_MAX_PRS: ${{ inputs.max_prs }}
           INPUT_PR_NUMBER: ${{ inputs.pr_number }}
         name: Prepare Dependabot context
-        run: "set -euo pipefail\nmkdir -p /tmp/gh-aw/data /tmp/gh-aw/data/pr-files\n\nPR_NUMBER=\"${INPUT_PR_NUMBER:-}\"\nGROUP_KEY=\"${INPUT_GROUP:-}\"\nMAX_PRS_RAW=\"${INPUT_MAX_PRS:-3}\"\n\ncase \"$MAX_PRS_RAW\" in\n  ''|*[!0-9]*) MAX_PRS=3 ;;\n  *) MAX_PRS=\"$MAX_PRS_RAW\" ;;\nesac\nif [ \"$MAX_PRS\" -lt 1 ]; then\n  MAX_PRS=1\nelif [ \"$MAX_PRS\" -gt 3 ]; then\n  MAX_PRS=3\nfi\n\nif [ -n \"$PR_NUMBER\" ]; then\n  gh pr view \"$PR_NUMBER\" --repo \"$EXPR_GITHUB_REPOSITORY\" \\\n    --json number,title,url,headRefName,author \\\n    | jq -s '.' > /tmp/gh-aw/data/open-prs.json\nelse\n  gh pr list --repo \"$EXPR_GITHUB_REPOSITORY\" --state open --limit 100 \\\n    --json number,title,url,headRefName,author \\\n    > /tmp/gh-aw/data/open-prs.raw.json\n\n  jq '[.[] | select(\n      ((.author.login // \"\") == \"app/dependabot\")\n      or ((.author.login // \"\") == \"dependabot[bot]\")\n      or ((.title // \"\") | test(\"^Bump \"; \"i\"))\n      or ((.headRefName // \"\") | contains(\"dependabot/\"))\n    )]' \\\n    /tmp/gh-aw/data/open-prs.raw.json > /tmp/gh-aw/data/open-prs.json\nfi\n\nif [ \"$(jq 'length' /tmp/gh-aw/data/open-prs.json)\" -eq 0 ]; then\n  jq -n \\\n    --arg group_filter \"$GROUP_KEY\" \\\n    --argjson max_prs \"$MAX_PRS\" \\\n    '{\n      mode: \"scan\",\n      group_filter: (if $group_filter == \"\" then null else $group_filter end),\n      max_prs: $max_prs,\n      total_open_dependabot_prs: 0,\n      filtered_pr_count: 0,\n      dispatch_count: 0,\n      groups: [],\n      dispatch_queue: []\n    }' > /tmp/gh-aw/data/summary.json\n  exit 0\nfi\n\n: > /tmp/gh-aw/data/scan-prs.jsonl\nwhile IFS= read -r pr; do\n  number=\"$(jq -r '.number' <<< \"$pr\")\"\n  title=\"$(jq -r '.title' <<< \"$pr\")\"\n  url=\"$(jq -r '.url' <<< \"$pr\")\"\n  head_ref=\"$(jq -r '.headRefName // \"\"' <<< \"$pr\")\"\n\n  gh api \"repos/$EXPR_GITHUB_REPOSITORY/pulls/$number/files?per_page=100\" \\\n    --jq 'map(.filename)' > \"/tmp/gh-aw/data/pr-files/$number.json\"\n\n  ecosystem=\"$(jq -rn --arg head_ref \"$head_ref\" '\n    if ($head_ref | test(\"^dependabot/[^/]+/\")) then\n      ($head_ref | capture(\"^dependabot/(?<ecosystem>[^/]+)/\").ecosystem)\n    else\n      \"unknown\"\n    end\n  ')\"\n\n  area=\"$(jq -r '\n    if any(.[]; startswith(\".github/workflows/\")) then \"workflows\"\n    elif any(.[]; startswith(\"src/\")) or any(.[]; startswith(\"gen/\")) then \"product\"\n    elif any(.[]; startswith(\"test/\")) then \"tests\"\n    elif any(.[]; startswith(\"samples/\")) then \"samples\"\n    elif any(.[]; startswith(\"data/\")) then \"data\"\n    else \"repo\"\n    end\n  ' \"/tmp/gh-aw/data/pr-files/$number.json\")\"\n\n  group_key=\"$ecosystem:$area\"\n  group_label=\"$ecosystem / $area\"\n\n  jq -n \\\n    --argjson number \"$number\" \\\n    --arg title \"$title\" \\\n    --arg url \"$url\" \\\n    --arg ecosystem \"$ecosystem\" \\\n    --arg area \"$area\" \\\n    --arg group_key \"$group_key\" \\\n    --arg group_label \"$group_label\" \\\n    '{\n      number: $number,\n      title: $title,\n      url: $url,\n      ecosystem: $ecosystem,\n      area: $area,\n      group_key: $group_key,\n      group_label: $group_label\n    }' >> /tmp/gh-aw/data/scan-prs.jsonl\ndone < <(jq -c '.[]' /tmp/gh-aw/data/open-prs.json)\n\njq -s '.' /tmp/gh-aw/data/scan-prs.jsonl > /tmp/gh-aw/data/scan-prs.json\n\nif [ -n \"$GROUP_KEY\" ]; then\n  jq --arg group_key \"$GROUP_KEY\" '[.[] | select(.group_key == $group_key or .ecosystem == $group_key or .area == $group_key)]' \\\n    /tmp/gh-aw/data/scan-prs.json > /tmp/gh-aw/data/scan-prs.filtered.json\nelse\n  cp /tmp/gh-aw/data/scan-prs.json /tmp/gh-aw/data/scan-prs.filtered.json\nfi\n\njq 'sort_by(.group_key, .number) | group_by(.group_key) | map({\n    group_key: .[0].group_key,\n    group_label: .[0].group_label,\n    ecosystem: .[0].ecosystem,\n    area: .[0].area,\n    count: length,\n    prs: map({number, title, url})\n  })' /tmp/gh-aw/data/scan-prs.filtered.json > /tmp/gh-aw/data/groups.json\n\njq \"sort_by(.group_key, .number)[:$MAX_PRS]\" /tmp/gh-aw/data/scan-prs.filtered.json > /tmp/gh-aw/data/dispatch-queue.json\n\njq -n \\\n  --arg group_filter \"$GROUP_KEY\" \\\n  --argjson max_prs \"$MAX_PRS\" \\\n  --argjson total_open_dependabot_prs \"$(jq 'length' /tmp/gh-aw/data/open-prs.json)\" \\\n  --argjson filtered_pr_count \"$(jq 'length' /tmp/gh-aw/data/scan-prs.filtered.json)\" \\\n  --argjson dispatch_count \"$(jq 'length' /tmp/gh-aw/data/dispatch-queue.json)\" \\\n  --slurpfile groups /tmp/gh-aw/data/groups.json \\\n  --slurpfile dispatch_queue /tmp/gh-aw/data/dispatch-queue.json \\\n  '{\n    mode: \"scan\",\n    group_filter: (if $group_filter == \"\" then null else $group_filter end),\n    max_prs: $max_prs,\n    total_open_dependabot_prs: $total_open_dependabot_prs,\n    filtered_pr_count: $filtered_pr_count,\n    dispatch_count: $dispatch_count,\n    groups: $groups[0],\n    dispatch_queue: $dispatch_queue[0]\n  }' > /tmp/gh-aw/data/summary.json\n"
+        run: "set -euo pipefail\nmkdir -p /tmp/gh-aw/data\n\nPR_NUMBER=\"${INPUT_PR_NUMBER:-${EXPR_PR_NUMBER:-}}\"\nGROUP_KEY=\"${INPUT_GROUP:-}\"\n\nif [ -z \"$PR_NUMBER\" ]; then\n  echo \"Missing PR number\" >&2\n  exit 1\nfi\n\ngh pr view \"$PR_NUMBER\" --repo \"$EXPR_GITHUB_REPOSITORY\" \\\n  --json number,title,url,author,headRefName,headRefOid,baseRefName,mergeStateStatus,reviewDecision,isDraft,labels,statusCheckRollup \\\n  > /tmp/gh-aw/data/pr.json\n\ngh api \"repos/$EXPR_GITHUB_REPOSITORY/pulls/$PR_NUMBER/files?per_page=100\" \\\n  --jq 'map({filename,status,additions,deletions,changes})' \\\n  > /tmp/gh-aw/data/files.json\n\ngh api \"repos/$EXPR_GITHUB_REPOSITORY/issues/$PR_NUMBER/comments?per_page=20\" \\\n  --jq 'map({author:(.user.login // \"unknown\"), created_at, body})' \\\n  > /tmp/gh-aw/data/comments.json\n\ngh api \"repos/$EXPR_GITHUB_REPOSITORY/pulls/$PR_NUMBER/reviews?per_page=20\" \\\n  --jq 'map({author:(.user.login // \"unknown\"), state, submitted_at, body})' \\\n  > /tmp/gh-aw/data/reviews.json\n\njq -n \\\n  --arg mode \"worker\" \\\n  --arg group_key \"$GROUP_KEY\" \\\n  --slurpfile pr /tmp/gh-aw/data/pr.json \\\n  --slurpfile files /tmp/gh-aw/data/files.json \\\n  --slurpfile comments /tmp/gh-aw/data/comments.json \\\n  --slurpfile reviews /tmp/gh-aw/data/reviews.json \\\n  '{\n    mode: $mode,\n    group_key: (if $group_key == \"\" then null else $group_key end),\n    pr: $pr[0],\n    changed_files: ($files[0] | map(.filename)),\n    changed_file_count: ($files[0] | length),\n    latest_comment_author: (if (($comments[0] | length) > 0) then $comments[0][-1].author else null end),\n    review_states: ($reviews[0] | group_by(.state) | map({state: .[0].state, count: length})),\n    likely_dependabot: (\n      (($pr[0].author.login // \"\") == \"app/dependabot\")\n      or (($pr[0].author.login // \"\") == \"dependabot[bot]\")\n      or (($pr[0].title // \"\") | test(\"^Bump \"; \"i\"))\n      or (($pr[0].headRefName // \"\") | contains(\"dependabot/\"))\n    )\n  }' > /tmp/gh-aw/data/summary.json\n"
 
       - name: Configure Git credentials
         env:
@@ -498,39 +532,43 @@ jobs:
           mkdir -p "${RUNNER_TEMP}/gh-aw/safeoutputs"
           mkdir -p /tmp/gh-aw/safeoutputs
           mkdir -p /tmp/gh-aw/mcp-logs/safeoutputs
-          cat > "${RUNNER_TEMP}/gh-aw/safeoutputs/config.json" << 'GH_AW_SAFE_OUTPUTS_CONFIG_7535b75faef8a8a7_EOF'
-          {"create_report_incomplete_issue":{},"dispatch_workflow":{"max":3,"workflow_files":{"dependabot-pr-fixer-worker":".lock.yml"},"workflows":["dependabot-pr-fixer-worker"]},"missing_data":{},"missing_tool":{},"noop":{"max":1,"report-as-issue":"true"},"report_incomplete":{}}
-          GH_AW_SAFE_OUTPUTS_CONFIG_7535b75faef8a8a7_EOF
+          cat > "${RUNNER_TEMP}/gh-aw/safeoutputs/config.json" << 'GH_AW_SAFE_OUTPUTS_CONFIG_49ea3a483c3abc15_EOF'
+          {"add_comment":{"hide_older_comments":true,"max":2},"create_report_incomplete_issue":{},"missing_data":{},"missing_tool":{},"noop":{"max":1,"report-as-issue":"true"},"push_to_pull_request_branch":{"allowed_files":["src/**","test/**","gen/**","samples/**","data/**","*.sln","*.slnx","global.json","nuget.config","Directory.Build.props","Directory.Build.targets","Directory.Packages.props"],"commit_title_suffix":" [dependabot-pr-fixer]","if_no_changes":"ignore","max_patch_size":1024,"protect_top_level_dot_folders":true,"protected_files":["package.json","bun.lockb","bunfig.toml","deno.json","deno.jsonc","deno.lock","global.json","NuGet.Config","Directory.Packages.props","mix.exs","mix.lock","go.mod","go.sum","stack.yaml","stack.yaml.lock","pom.xml","build.gradle","build.gradle.kts","settings.gradle","settings.gradle.kts","gradle.properties","package-lock.json","yarn.lock","pnpm-lock.yaml","npm-shrinkwrap.json","requirements.txt","Pipfile","Pipfile.lock","pyproject.toml","setup.py","setup.cfg","Gemfile","Gemfile.lock","uv.lock","CODEOWNERS","DESIGN.md","README.md","CONTRIBUTING.md","CHANGELOG.md","SECURITY.md","CODE_OF_CONDUCT.md","AGENTS.md","CLAUDE.md","GEMINI.md"],"protected_files_policy":"fallback-to-issue"},"report_incomplete":{}}
+          GH_AW_SAFE_OUTPUTS_CONFIG_49ea3a483c3abc15_EOF
       - name: Generate Safe Outputs Tools
         env:
           GH_AW_TOOLS_META_JSON: |
             {
-              "description_suffixes": {},
+              "description_suffixes": {
+                "add_comment": " CONSTRAINTS: Maximum 2 comment(s) can be added. Supports reply_to_id for discussion threading."
+              },
               "repo_params": {},
-              "dynamic_tools": [
-                {
-                  "_workflow_name": "dependabot-pr-fixer-worker",
-                  "description": "Dispatch the 'dependabot-pr-fixer-worker' workflow with workflow_dispatch trigger. This workflow must support workflow_dispatch and be in .github/workflows/ directory in the same repository.",
-                  "inputSchema": {
-                    "additionalProperties": false,
-                    "properties": {
-                      "group": {
-                        "description": "Optional group key carried from the bundler run",
-                        "type": "string"
-                      },
-                      "pr_number": {
-                        "description": "Pull request number to inspect manually",
-                        "type": "string"
-                      }
-                    },
-                    "type": "object"
-                  },
-                  "name": "dependabot_pr_fixer_worker"
-                }
-              ]
+              "dynamic_tools": []
             }
           GH_AW_VALIDATION_JSON: |
             {
+              "add_comment": {
+                "defaultMax": 1,
+                "fields": {
+                  "body": {
+                    "required": true,
+                    "type": "string",
+                    "sanitize": true,
+                    "maxLength": 65000
+                  },
+                  "item_number": {
+                    "issueOrPRNumber": true
+                  },
+                  "reply_to_id": {
+                    "type": "string",
+                    "maxLength": 256
+                  },
+                  "repo": {
+                    "type": "string",
+                    "maxLength": 256
+                  }
+                }
+              },
               "missing_data": {
                 "defaultMax": 20,
                 "fields": {
@@ -585,6 +623,25 @@ jobs:
                     "type": "string",
                     "sanitize": true,
                     "maxLength": 65000
+                  }
+                }
+              },
+              "push_to_pull_request_branch": {
+                "defaultMax": 1,
+                "fields": {
+                  "branch": {
+                    "type": "string",
+                    "sanitize": true,
+                    "maxLength": 256
+                  },
+                  "message": {
+                    "required": true,
+                    "type": "string",
+                    "sanitize": true,
+                    "maxLength": 65000
+                  },
+                  "pull_request_number": {
+                    "issueOrPRNumber": true
                   }
                 }
               },
@@ -745,7 +802,7 @@ jobs:
       - name: Execute GitHub Copilot CLI
         id: agentic_execution
         # Copilot CLI tool arguments (sorted):
-        timeout-minutes: 15
+        timeout-minutes: 25
         run: |
           set -o pipefail
           printf '%s' "$(date +%s%3N)" > /tmp/gh-aw/agent_cli_start_ms.txt
@@ -760,7 +817,7 @@ jobs:
           export COPILOT_API_KEY="$COPILOT_DUMMY_BYOK"
           (umask 177 && touch /tmp/gh-aw/agent-stdio.log)
           GH_AW_MAX_AI_CREDITS="${{ vars.GH_AW_DEFAULT_MAX_AI_CREDITS || '1000' }}"
-          printf '%s\n' "{\"\$schema\":\"https://github.com/github/gh-aw-firewall/releases/download/v0.27.2/awf-config.schema.json\",\"network\":{\"allowDomains\":[\"api.business.githubcopilot.com\",\"api.enterprise.githubcopilot.com\",\"api.github.com\",\"api.githubcopilot.com\",\"api.individual.githubcopilot.com\",\"api.snapcraft.io\",\"archive.ubuntu.com\",\"azure.archive.ubuntu.com\",\"crl.geotrust.com\",\"crl.globalsign.com\",\"crl.identrust.com\",\"crl.sectigo.com\",\"crl.thawte.com\",\"crl.usertrust.com\",\"crl.verisign.com\",\"crl3.digicert.com\",\"crl4.digicert.com\",\"crls.ssl.com\",\"github.com\",\"host.docker.internal\",\"json-schema.org\",\"json.schemastore.org\",\"keyserver.ubuntu.com\",\"ocsp.digicert.com\",\"ocsp.geotrust.com\",\"ocsp.globalsign.com\",\"ocsp.identrust.com\",\"ocsp.sectigo.com\",\"ocsp.ssl.com\",\"ocsp.thawte.com\",\"ocsp.usertrust.com\",\"ocsp.verisign.com\",\"packagecloud.io\",\"packages.cloud.google.com\",\"packages.microsoft.com\",\"ppa.launchpad.net\",\"raw.githubusercontent.com\",\"registry.npmjs.org\",\"s.symcb.com\",\"s.symcd.com\",\"security.ubuntu.com\",\"telemetry.enterprise.githubcopilot.com\",\"ts-crl.ws.symantec.com\",\"ts-ocsp.ws.symantec.com\",\"www.googleapis.com\"]},\"apiProxy\":{\"enabled\":true,\"enableTokenSteering\":true,\"maxRuns\":500,\"maxAiCredits\":${GH_AW_MAX_AI_CREDITS},\"models\":{\"agent\":[\"sonnet-6x\",\"gpt-5.4\",\"gpt-5.3\",\"gemini-pro\",\"any\"],\"antigravity\":[\"copilot/antigravity*\",\"google/antigravity*\",\"gemini/antigravity*\"],\"any\":[\"copilot/*\",\"anthropic/*\",\"openai/*\",\"google/*\",\"gemini/*\"],\"claude\":[\"agent\"],\"codex\":[\"agent\"],\"coding\":[\"copilot/gpt-5*codex*\",\"openai/gpt-5*codex*\",\"gpt-5-codex\"],\"computer-use\":[\"copilot/*computer-use*\",\"google/*computer-use*\",\"gemini/*computer-use*\",\"openai/*computer-use*\"],\"copilot\":[\"agent\"],\"deep-research\":[\"copilot/deep-research*\",\"copilot/o3-deep-research*\",\"copilot/o4-mini-deep-research*\",\"google/deep-research*\",\"gemini/deep-research*\",\"openai/o3-deep-research*\",\"openai/o4-mini-deep-research*\"],\"gemini\":[\"agent\"],\"gemini-3-flash\":[\"copilot/gemini-3*flash*\",\"google/gemini-3*flash*\",\"gemini/gemini-3*flash*\"],\"gemini-3-pro\":[\"copilot/gemini-3*pro*\",\"google/gemini-3*pro*\",\"google/nano-banana*\",\"gemini/gemini-3*pro*\"],\"gemini-3.1-flash\":[\"copilot/gemini-3.1*flash*\",\"google/gemini-3.1*flash*\",\"gemini/gemini-3.1*flash*\"],\"gemini-3.1-pro\":[\"copilot/gemini-3.1*pro*\",\"google/gemini-3.1*pro*\",\"gemini/gemini-3.1*pro*\"],\"gemini-3.5-flash\":[\"copilot/gemini-3.5*flash*\",\"google/gemini-3.5*flash*\",\"gemini/gemini-3.5*flash*\"],\"gemini-flash\":[\"copilot/gemini-*flash*\",\"google/gemini-*flash*\",\"gemini/gemini-*flash*\"],\"gemini-flash-lite\":[\"copilot/gemini-*flash*lite*\",\"google/gemini-*flash*lite*\",\"gemini/gemini-*flash*lite*\"],\"gemini-pro\":[\"copilot/gemini-*pro*\",\"google/gemini-*pro*\",\"gemini/gemini-*pro*\"],\"gemma\":[\"copilot/gemma*\",\"google/gemma*\",\"gemini/gemma*\"],\"gpt-5\":[\"copilot/gpt-5*\",\"openai/gpt-5*\"],\"gpt-5-codex\":[\"copilot/gpt-5*codex*\",\"openai/gpt-5*codex*\"],\"gpt-5-mini\":[\"copilot/gpt-5*mini*\",\"openai/gpt-5*mini*\"],\"gpt-5-nano\":[\"copilot/gpt-5*nano*\",\"openai/gpt-5*nano*\"],\"gpt-5-pro\":[\"copilot/gpt-5*pro*\",\"openai/gpt-5*pro*\"],\"gpt-5.2\":[\"copilot/gpt-5.2*\",\"openai/gpt-5.2*\"],\"gpt-5.3\":[\"copilot/gpt-5.3*\",\"openai/gpt-5.3*\"],\"gpt-5.4\":[\"copilot/gpt-5.4*\",\"openai/gpt-5.4*\"],\"gpt-5.5\":[\"copilot/gpt-5.5*\",\"openai/gpt-5.5*\"],\"haiku\":[\"copilot/*haiku*\",\"anthropic/*haiku*\"],\"large\":[\"sonnet\",\"gpt-5-pro\",\"gpt-5\",\"gemini-pro\"],\"mai-code\":[\"copilot/MAI-Code*\",\"copilot/mai-code*\",\"openai/MAI-Code*\"],\"mini\":[\"haiku\",\"gpt-5-mini\",\"gpt-5-nano\",\"gemini-flash-lite\"],\"nano-banana\":[\"copilot/nano-banana*\",\"google/nano-banana*\",\"gemini/nano-banana*\"],\"opus\":[\"copilot/*opus*\",\"anthropic/*opus*\"],\"opusplan\":[\"opus?effort=high\"],\"reasoning\":[\"copilot/o1*\",\"copilot/o3*\",\"copilot/o4*\",\"openai/o1*\",\"openai/o3*\",\"openai/o4*\"],\"robotics\":[\"copilot/*robotics*\",\"google/*robotics*\",\"gemini/*robotics*\"],\"small\":[\"mini\"],\"small-agent\":[\"haiku\",\"gpt-5-mini\",\"gemini-flash\"],\"sonnet\":[\"copilot/*sonnet*\",\"anthropic/*sonnet*\"],\"sonnet-6x\":[\"copilot/*sonnet-4.5*\",\"copilot/*sonnet-4.6*\",\"copilot/*sonnet-4-5-*\",\"anthropic/*sonnet-4-5-*\",\"copilot/*sonnet-4-6*\",\"anthropic/*sonnet-4-6*\"],\"summarization\":[\"haiku\",\"gpt-5-mini\",\"gemini-flash-lite\",\"mini\"],\"vision\":[\"copilot/gemini-*image*\",\"gemini/gemini-*image*\",\"copilot/gemini-*flash*\",\"gemini/gemini-*flash*\"]}},\"container\":{\"imageTag\":\"0.27.2,squid=sha256:2e3a717e5f19a654cd9a2263beb52012b56bcb68562ec5ae2e42f9d156b49591,agent=sha256:f88e5b17b6b7a600117bc121114d6ce2155c88c983c0c939c5df884f730fa1d6,api-proxy=sha256:ee39841d980878ebbb87592903b06d31a1af500c71525c9616f7e8e2a27041a4,cli-proxy=sha256:02f3ec08f32dc26c5427920c6a2e2f3036238fce44802f2f11ef49ed8621b5d0\"}}" > "${RUNNER_TEMP}/gh-aw/awf-config.json"
+          printf '%s\n' "{\"\$schema\":\"https://github.com/github/gh-aw-firewall/releases/download/v0.27.2/awf-config.schema.json\",\"network\":{\"allowDomains\":[\"*.vsblob.vsassets.io\",\"api.business.githubcopilot.com\",\"api.enterprise.githubcopilot.com\",\"api.github.com\",\"api.githubcopilot.com\",\"api.individual.githubcopilot.com\",\"api.nuget.org\",\"api.snapcraft.io\",\"archive.ubuntu.com\",\"azure.archive.ubuntu.com\",\"azuresearch-usnc.nuget.org\",\"azuresearch-ussc.nuget.org\",\"builds.dotnet.microsoft.com\",\"ci.dot.net\",\"crl.geotrust.com\",\"crl.globalsign.com\",\"crl.identrust.com\",\"crl.sectigo.com\",\"crl.thawte.com\",\"crl.usertrust.com\",\"crl.verisign.com\",\"crl3.digicert.com\",\"crl4.digicert.com\",\"crls.ssl.com\",\"dc.services.visualstudio.com\",\"dist.nuget.org\",\"dot.net\",\"dotnet.microsoft.com\",\"dotnetcli.blob.core.windows.net\",\"github.com\",\"host.docker.internal\",\"json-schema.org\",\"json.schemastore.org\",\"keyserver.ubuntu.com\",\"nuget.org\",\"nuget.pkg.github.com\",\"nugetregistryv2prod.blob.core.windows.net\",\"ocsp.digicert.com\",\"ocsp.geotrust.com\",\"ocsp.globalsign.com\",\"ocsp.identrust.com\",\"ocsp.sectigo.com\",\"ocsp.ssl.com\",\"ocsp.thawte.com\",\"ocsp.usertrust.com\",\"ocsp.verisign.com\",\"oneocsp.microsoft.com\",\"packagecloud.io\",\"packages.cloud.google.com\",\"packages.microsoft.com\",\"pkgs.dev.azure.com\",\"ppa.launchpad.net\",\"raw.githubusercontent.com\",\"registry.npmjs.org\",\"s.symcb.com\",\"s.symcd.com\",\"security.ubuntu.com\",\"telemetry.enterprise.githubcopilot.com\",\"ts-crl.ws.symantec.com\",\"ts-ocsp.ws.symantec.com\",\"www.googleapis.com\",\"www.microsoft.com\"]},\"apiProxy\":{\"enabled\":true,\"enableTokenSteering\":true,\"maxRuns\":500,\"maxAiCredits\":${GH_AW_MAX_AI_CREDITS},\"models\":{\"agent\":[\"sonnet-6x\",\"gpt-5.4\",\"gpt-5.3\",\"gemini-pro\",\"any\"],\"antigravity\":[\"copilot/antigravity*\",\"google/antigravity*\",\"gemini/antigravity*\"],\"any\":[\"copilot/*\",\"anthropic/*\",\"openai/*\",\"google/*\",\"gemini/*\"],\"claude\":[\"agent\"],\"codex\":[\"agent\"],\"coding\":[\"copilot/gpt-5*codex*\",\"openai/gpt-5*codex*\",\"gpt-5-codex\"],\"computer-use\":[\"copilot/*computer-use*\",\"google/*computer-use*\",\"gemini/*computer-use*\",\"openai/*computer-use*\"],\"copilot\":[\"agent\"],\"deep-research\":[\"copilot/deep-research*\",\"copilot/o3-deep-research*\",\"copilot/o4-mini-deep-research*\",\"google/deep-research*\",\"gemini/deep-research*\",\"openai/o3-deep-research*\",\"openai/o4-mini-deep-research*\"],\"gemini\":[\"agent\"],\"gemini-3-flash\":[\"copilot/gemini-3*flash*\",\"google/gemini-3*flash*\",\"gemini/gemini-3*flash*\"],\"gemini-3-pro\":[\"copilot/gemini-3*pro*\",\"google/gemini-3*pro*\",\"google/nano-banana*\",\"gemini/gemini-3*pro*\"],\"gemini-3.1-flash\":[\"copilot/gemini-3.1*flash*\",\"google/gemini-3.1*flash*\",\"gemini/gemini-3.1*flash*\"],\"gemini-3.1-pro\":[\"copilot/gemini-3.1*pro*\",\"google/gemini-3.1*pro*\",\"gemini/gemini-3.1*pro*\"],\"gemini-3.5-flash\":[\"copilot/gemini-3.5*flash*\",\"google/gemini-3.5*flash*\",\"gemini/gemini-3.5*flash*\"],\"gemini-flash\":[\"copilot/gemini-*flash*\",\"google/gemini-*flash*\",\"gemini/gemini-*flash*\"],\"gemini-flash-lite\":[\"copilot/gemini-*flash*lite*\",\"google/gemini-*flash*lite*\",\"gemini/gemini-*flash*lite*\"],\"gemini-pro\":[\"copilot/gemini-*pro*\",\"google/gemini-*pro*\",\"gemini/gemini-*pro*\"],\"gemma\":[\"copilot/gemma*\",\"google/gemma*\",\"gemini/gemma*\"],\"gpt-5\":[\"copilot/gpt-5*\",\"openai/gpt-5*\"],\"gpt-5-codex\":[\"copilot/gpt-5*codex*\",\"openai/gpt-5*codex*\"],\"gpt-5-mini\":[\"copilot/gpt-5*mini*\",\"openai/gpt-5*mini*\"],\"gpt-5-nano\":[\"copilot/gpt-5*nano*\",\"openai/gpt-5*nano*\"],\"gpt-5-pro\":[\"copilot/gpt-5*pro*\",\"openai/gpt-5*pro*\"],\"gpt-5.2\":[\"copilot/gpt-5.2*\",\"openai/gpt-5.2*\"],\"gpt-5.3\":[\"copilot/gpt-5.3*\",\"openai/gpt-5.3*\"],\"gpt-5.4\":[\"copilot/gpt-5.4*\",\"openai/gpt-5.4*\"],\"gpt-5.5\":[\"copilot/gpt-5.5*\",\"openai/gpt-5.5*\"],\"haiku\":[\"copilot/*haiku*\",\"anthropic/*haiku*\"],\"large\":[\"sonnet\",\"gpt-5-pro\",\"gpt-5\",\"gemini-pro\"],\"mai-code\":[\"copilot/MAI-Code*\",\"copilot/mai-code*\",\"openai/MAI-Code*\"],\"mini\":[\"haiku\",\"gpt-5-mini\",\"gpt-5-nano\",\"gemini-flash-lite\"],\"nano-banana\":[\"copilot/nano-banana*\",\"google/nano-banana*\",\"gemini/nano-banana*\"],\"opus\":[\"copilot/*opus*\",\"anthropic/*opus*\"],\"opusplan\":[\"opus?effort=high\"],\"reasoning\":[\"copilot/o1*\",\"copilot/o3*\",\"copilot/o4*\",\"openai/o1*\",\"openai/o3*\",\"openai/o4*\"],\"robotics\":[\"copilot/*robotics*\",\"google/*robotics*\",\"gemini/*robotics*\"],\"small\":[\"mini\"],\"small-agent\":[\"haiku\",\"gpt-5-mini\",\"gemini-flash\"],\"sonnet\":[\"copilot/*sonnet*\",\"anthropic/*sonnet*\"],\"sonnet-6x\":[\"copilot/*sonnet-4.5*\",\"copilot/*sonnet-4.6*\",\"copilot/*sonnet-4-5-*\",\"anthropic/*sonnet-4-5-*\",\"copilot/*sonnet-4-6*\",\"anthropic/*sonnet-4-6*\"],\"summarization\":[\"haiku\",\"gpt-5-mini\",\"gemini-flash-lite\",\"mini\"],\"vision\":[\"copilot/gemini-*image*\",\"gemini/gemini-*image*\",\"copilot/gemini-*flash*\",\"gemini/gemini-*flash*\"]}},\"container\":{\"imageTag\":\"0.27.2,squid=sha256:2e3a717e5f19a654cd9a2263beb52012b56bcb68562ec5ae2e42f9d156b49591,agent=sha256:f88e5b17b6b7a600117bc121114d6ce2155c88c983c0c939c5df884f730fa1d6,api-proxy=sha256:ee39841d980878ebbb87592903b06d31a1af500c71525c9616f7e8e2a27041a4,cli-proxy=sha256:02f3ec08f32dc26c5427920c6a2e2f3036238fce44802f2f11ef49ed8621b5d0\"}}" > "${RUNNER_TEMP}/gh-aw/awf-config.json"
           cp "${RUNNER_TEMP}/gh-aw/awf-config.json" /tmp/gh-aw/awf-config.json
           export GH_AW_MODELS_JSON_PATH="/tmp/gh-aw/models.json"
           GH_AW_DOCKER_HOST_PATH_PREFIX_ARGS=""
@@ -789,7 +846,7 @@ jobs:
           GH_AW_PHASE: agent
           GH_AW_PROMPT: /tmp/gh-aw/aw-prompts/prompt.txt
           GH_AW_SAFE_OUTPUTS: ${{ steps.set-runtime-paths.outputs.GH_AW_SAFE_OUTPUTS }}
-          GH_AW_TIMEOUT_MINUTES: 15
+          GH_AW_TIMEOUT_MINUTES: 25
           GH_AW_VERSION: v0.79.8
           GH_TOKEN: ${{ secrets.GH_AW_GITHUB_TOKEN || github.token }}
           GITHUB_API_URL: ${{ github.api_url }}
@@ -872,7 +929,7 @@ jobs:
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           GH_AW_SAFE_OUTPUTS: ${{ steps.set-runtime-paths.outputs.GH_AW_SAFE_OUTPUTS }}
-          GH_AW_ALLOWED_DOMAINS: "api.business.githubcopilot.com,api.enterprise.githubcopilot.com,api.github.com,api.githubcopilot.com,api.individual.githubcopilot.com,api.snapcraft.io,archive.ubuntu.com,azure.archive.ubuntu.com,crl.geotrust.com,crl.globalsign.com,crl.identrust.com,crl.sectigo.com,crl.thawte.com,crl.usertrust.com,crl.verisign.com,crl3.digicert.com,crl4.digicert.com,crls.ssl.com,github.com,host.docker.internal,json-schema.org,json.schemastore.org,keyserver.ubuntu.com,ocsp.digicert.com,ocsp.geotrust.com,ocsp.globalsign.com,ocsp.identrust.com,ocsp.sectigo.com,ocsp.ssl.com,ocsp.thawte.com,ocsp.usertrust.com,ocsp.verisign.com,packagecloud.io,packages.cloud.google.com,packages.microsoft.com,ppa.launchpad.net,raw.githubusercontent.com,registry.npmjs.org,s.symcb.com,s.symcd.com,security.ubuntu.com,telemetry.enterprise.githubcopilot.com,ts-crl.ws.symantec.com,ts-ocsp.ws.symantec.com,www.googleapis.com"
+          GH_AW_ALLOWED_DOMAINS: "*.vsblob.vsassets.io,api.business.githubcopilot.com,api.enterprise.githubcopilot.com,api.github.com,api.githubcopilot.com,api.individual.githubcopilot.com,api.nuget.org,api.snapcraft.io,archive.ubuntu.com,azure.archive.ubuntu.com,azuresearch-usnc.nuget.org,azuresearch-ussc.nuget.org,builds.dotnet.microsoft.com,ci.dot.net,crl.geotrust.com,crl.globalsign.com,crl.identrust.com,crl.sectigo.com,crl.thawte.com,crl.usertrust.com,crl.verisign.com,crl3.digicert.com,crl4.digicert.com,crls.ssl.com,dc.services.visualstudio.com,dist.nuget.org,dot.net,dotnet.microsoft.com,dotnetcli.blob.core.windows.net,github.com,host.docker.internal,json-schema.org,json.schemastore.org,keyserver.ubuntu.com,nuget.org,nuget.pkg.github.com,nugetregistryv2prod.blob.core.windows.net,ocsp.digicert.com,ocsp.geotrust.com,ocsp.globalsign.com,ocsp.identrust.com,ocsp.sectigo.com,ocsp.ssl.com,ocsp.thawte.com,ocsp.usertrust.com,ocsp.verisign.com,oneocsp.microsoft.com,packagecloud.io,packages.cloud.google.com,packages.microsoft.com,pkgs.dev.azure.com,ppa.launchpad.net,raw.githubusercontent.com,registry.npmjs.org,s.symcb.com,s.symcd.com,security.ubuntu.com,telemetry.enterprise.githubcopilot.com,ts-crl.ws.symantec.com,ts-ocsp.ws.symantec.com,www.googleapis.com,www.microsoft.com"
           GITHUB_SERVER_URL: ${{ github.server_url }}
           GITHUB_API_URL: ${{ github.api_url }}
         with:
@@ -980,9 +1037,12 @@ jobs:
       needs.activation.outputs.stale_lock_file_failed == 'true' || needs.activation.outputs.daily_ai_credits_exceeded == 'true')
     runs-on: ubuntu-slim
     permissions:
-      actions: write
+      contents: write
+      discussions: write
+      issues: write
+      pull-requests: write
     concurrency:
-      group: "gh-aw-conclusion-dependabot-pr-bundler"
+      group: "gh-aw-conclusion-dependabot-pr-fixer-worker"
       cancel-in-progress: false
       queue: max
     outputs:
@@ -1000,8 +1060,8 @@ jobs:
           trace-id: ${{ needs.activation.outputs.setup-trace-id }}
           parent-span-id: ${{ needs.activation.outputs.setup-parent-span-id || needs.activation.outputs.setup-span-id }}
         env:
-          GH_AW_SETUP_WORKFLOW_NAME: "Dependabot PR Bundler"
-          GH_AW_CURRENT_WORKFLOW_REF: ${{ github.repository }}/.github/workflows/dependabot-pr-bundler.lock.yml@${{ github.ref }}
+          GH_AW_SETUP_WORKFLOW_NAME: "Dependabot PR Fixer"
+          GH_AW_CURRENT_WORKFLOW_REF: ${{ github.repository }}/.github/workflows/dependabot-pr-fixer-worker.lock.yml@${{ github.ref }}
           GH_AW_INFO_VERSION: "1.0.60"
           GH_AW_INFO_AWF_VERSION: "v0.27.2"
           GH_AW_INFO_ENGINE_ID: "copilot"
@@ -1059,15 +1119,15 @@ jobs:
         env:
           GH_AW_AGENT_OUTPUT: ${{ steps.setup-agent-output-env.outputs.GH_AW_AGENT_OUTPUT }}
           GH_AW_NOOP_MAX: "1"
-          GH_AW_WORKFLOW_NAME: "Dependabot PR Bundler"
-          GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/dependabot-pr-bundler.md"
+          GH_AW_WORKFLOW_NAME: "Dependabot PR Fixer"
+          GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/dependabot-pr-fixer-worker.md"
           GH_AW_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           GH_AW_AGENT_CONCLUSION: ${{ needs.agent.result }}
           GH_AW_NOOP_REPORT_AS_ISSUE: "true"
           GH_AW_AIC: ${{ needs.agent.outputs.aic }}
           GH_AW_THREAT_DETECTION_AIC: ${{ needs.detection.outputs.aic }}
           GH_AW_AMBIENT_CONTEXT: ${{ needs.agent.outputs.ambient_context }}
-          GH_AW_WORKFLOW_ID: "dependabot-pr-bundler"
+          GH_AW_WORKFLOW_ID: "dependabot-pr-fixer-worker"
         with:
           github-token: ${{ secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
@@ -1080,8 +1140,8 @@ jobs:
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           GH_AW_AGENT_OUTPUT: ${{ steps.setup-agent-output-env.outputs.GH_AW_AGENT_OUTPUT }}
-          GH_AW_WORKFLOW_NAME: "Dependabot PR Bundler"
-          GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/dependabot-pr-bundler.md"
+          GH_AW_WORKFLOW_NAME: "Dependabot PR Fixer"
+          GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/dependabot-pr-fixer-worker.md"
           GH_AW_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           GH_AW_DETECTION_CONCLUSION: ${{ needs.detection.outputs.detection_conclusion }}
           GH_AW_DETECTION_REASON: ${{ needs.detection.outputs.detection_reason }}
@@ -1098,8 +1158,8 @@ jobs:
         env:
           GH_AW_AGENT_OUTPUT: ${{ steps.setup-agent-output-env.outputs.GH_AW_AGENT_OUTPUT }}
           GH_AW_MISSING_TOOL_CREATE_ISSUE: "true"
-          GH_AW_WORKFLOW_NAME: "Dependabot PR Bundler"
-          GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/dependabot-pr-bundler.md"
+          GH_AW_WORKFLOW_NAME: "Dependabot PR Fixer"
+          GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/dependabot-pr-fixer-worker.md"
         with:
           github-token: ${{ secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
@@ -1113,8 +1173,8 @@ jobs:
         env:
           GH_AW_AGENT_OUTPUT: ${{ steps.setup-agent-output-env.outputs.GH_AW_AGENT_OUTPUT }}
           GH_AW_REPORT_INCOMPLETE_CREATE_ISSUE: "true"
-          GH_AW_WORKFLOW_NAME: "Dependabot PR Bundler"
-          GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/dependabot-pr-bundler.md"
+          GH_AW_WORKFLOW_NAME: "Dependabot PR Fixer"
+          GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/dependabot-pr-fixer-worker.md"
         with:
           github-token: ${{ secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
@@ -1128,11 +1188,11 @@ jobs:
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           GH_AW_AGENT_OUTPUT: ${{ steps.setup-agent-output-env.outputs.GH_AW_AGENT_OUTPUT }}
-          GH_AW_WORKFLOW_NAME: "Dependabot PR Bundler"
-          GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/dependabot-pr-bundler.md"
+          GH_AW_WORKFLOW_NAME: "Dependabot PR Fixer"
+          GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/dependabot-pr-fixer-worker.md"
           GH_AW_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           GH_AW_AGENT_CONCLUSION: ${{ needs.agent.result }}
-          GH_AW_WORKFLOW_ID: "dependabot-pr-bundler"
+          GH_AW_WORKFLOW_ID: "dependabot-pr-fixer-worker"
           GH_AW_ACTION_FAILURE_ISSUE_EXPIRES_HOURS: "168"
           GH_AW_ENGINE_ID: "copilot"
           GH_AW_CHECKOUT_PR_SUCCESS: ${{ needs.agent.outputs.checkout_pr_success }}
@@ -1147,6 +1207,8 @@ jobs:
           GH_AW_AGENTIC_ENGINE_TIMEOUT: ${{ needs.agent.outputs.agentic_engine_timeout }}
           GH_AW_MODEL_NOT_SUPPORTED_ERROR: ${{ needs.agent.outputs.model_not_supported_error }}
           GH_AW_ENGINE_API_HOSTS: "api.enterprise.githubcopilot.com,api.githubcopilot.com,api.business.githubcopilot.com,api.individual.githubcopilot.com"
+          GH_AW_CODE_PUSH_FAILURE_ERRORS: ${{ needs.safe_outputs.outputs.code_push_failure_errors }}
+          GH_AW_CODE_PUSH_FAILURE_COUNT: ${{ needs.safe_outputs.outputs.code_push_failure_count }}
           GH_AW_LOCKDOWN_CHECK_FAILED: ${{ needs.activation.outputs.lockdown_check_failed }}
           GH_AW_STALE_LOCK_FILE_FAILED: ${{ needs.activation.outputs.stale_lock_file_failed }}
           GH_AW_DAILY_AI_CREDITS_EXCEEDED: ${{ needs.activation.outputs.daily_ai_credits_exceeded }}
@@ -1156,7 +1218,7 @@ jobs:
           GH_AW_FAILURE_REPORT_AS_ISSUE: "true"
           GH_AW_MISSING_TOOL_REPORT_AS_FAILURE: "true"
           GH_AW_MISSING_DATA_REPORT_AS_FAILURE: "true"
-          GH_AW_TIMEOUT_MINUTES: "15"
+          GH_AW_TIMEOUT_MINUTES: "25"
         with:
           github-token: ${{ secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
@@ -1190,8 +1252,8 @@ jobs:
           trace-id: ${{ needs.activation.outputs.setup-trace-id }}
           parent-span-id: ${{ needs.activation.outputs.setup-parent-span-id || needs.activation.outputs.setup-span-id }}
         env:
-          GH_AW_SETUP_WORKFLOW_NAME: "Dependabot PR Bundler"
-          GH_AW_CURRENT_WORKFLOW_REF: ${{ github.repository }}/.github/workflows/dependabot-pr-bundler.lock.yml@${{ github.ref }}
+          GH_AW_SETUP_WORKFLOW_NAME: "Dependabot PR Fixer"
+          GH_AW_CURRENT_WORKFLOW_REF: ${{ github.repository }}/.github/workflows/dependabot-pr-fixer-worker.lock.yml@${{ github.ref }}
           GH_AW_INFO_VERSION: "1.0.60"
           GH_AW_INFO_AWF_VERSION: "v0.27.2"
           GH_AW_INFO_ENGINE_ID: "copilot"
@@ -1263,8 +1325,8 @@ jobs:
         if: always() && steps.detection_guard.outputs.run_detection == 'true'
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
-          WORKFLOW_NAME: "Dependabot PR Bundler"
-          WORKFLOW_DESCRIPTION: "Scans open Dependabot pull requests, groups them by ecosystem and area, and dispatches worker runs."
+          WORKFLOW_NAME: "Dependabot PR Fixer"
+          WORKFLOW_DESCRIPTION: "Reviews a single Dependabot pull request, assesses risk, and applies safe repo-local fixes when possible."
           HAS_PATCH: ${{ needs.agent.outputs.has_patch }}
         with:
           script: |
@@ -1404,6 +1466,41 @@ jobs:
               }
             }
 
+  pre_activation:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.id == github.repository_id
+    runs-on: ubuntu-slim
+    outputs:
+      activated: ${{ steps.check_membership.outputs.is_team_member == 'true' }}
+      matched_command: ''
+      setup-parent-span-id: ${{ steps.setup.outputs.parent-span-id || steps.setup.outputs.span-id }}
+      setup-span-id: ${{ steps.setup.outputs.span-id }}
+      setup-trace-id: ${{ steps.setup.outputs.trace-id }}
+    steps:
+      - name: Setup Scripts
+        id: setup
+        uses: github/gh-aw-actions/setup@c0338fef4749d08c21f8f975fb0e37efa17dda47 # v0.79.8
+        with:
+          destination: ${{ runner.temp }}/gh-aw/actions
+          job-name: ${{ github.job }}
+        env:
+          GH_AW_SETUP_WORKFLOW_NAME: "Dependabot PR Fixer"
+          GH_AW_CURRENT_WORKFLOW_REF: ${{ github.repository }}/.github/workflows/dependabot-pr-fixer-worker.lock.yml@${{ github.ref }}
+          GH_AW_INFO_VERSION: "1.0.60"
+          GH_AW_INFO_AWF_VERSION: "v0.27.2"
+          GH_AW_INFO_ENGINE_ID: "copilot"
+      - name: Check team membership for workflow
+        id: check_membership
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          GH_AW_REQUIRED_ROLES: "admin,maintainer,write"
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { setupGlobals } = require('${{ runner.temp }}/gh-aw/actions/setup_globals.cjs');
+            setupGlobals(core, github, context, exec, io, getOctokit);
+            const { main } = require('${{ runner.temp }}/gh-aw/actions/check_membership.cjs');
+            await main();
+
   safe_outputs:
     needs:
       - activation
@@ -1412,13 +1509,16 @@ jobs:
     if: (!cancelled()) && needs.agent.result != 'skipped' && needs.detection.result == 'success'
     runs-on: ubuntu-slim
     permissions:
-      actions: write
+      contents: write
+      discussions: write
+      issues: write
+      pull-requests: write
     timeout-minutes: 45
     env:
       GH_AW_AGENT_AIC: ${{ needs.agent.outputs.aic }}
       GH_AW_AIC: ${{ needs.agent.outputs.aic }}
       GH_AW_AMBIENT_CONTEXT: ${{ needs.agent.outputs.ambient_context }}
-      GH_AW_CALLER_WORKFLOW_ID: "${{ github.repository }}/dependabot-pr-bundler"
+      GH_AW_CALLER_WORKFLOW_ID: "${{ github.repository }}/dependabot-pr-fixer-worker"
       GH_AW_DETECTION_CONCLUSION: ${{ needs.detection.outputs.detection_conclusion }}
       GH_AW_DETECTION_REASON: ${{ needs.detection.outputs.detection_reason }}
       GH_AW_EFFECTIVE_TOKENS: ${{ needs.agent.outputs.effective_tokens }}
@@ -1426,17 +1526,21 @@ jobs:
       GH_AW_ENGINE_MODEL: ${{ needs.agent.outputs.model }}
       GH_AW_ENGINE_VERSION: "1.0.60"
       GH_AW_THREAT_DETECTION_AIC: ${{ needs.detection.outputs.aic }}
-      GH_AW_WORKFLOW_EMOJI: "🧭"
-      GH_AW_WORKFLOW_ID: "dependabot-pr-bundler"
-      GH_AW_WORKFLOW_NAME: "Dependabot PR Bundler"
-      GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/dependabot-pr-bundler.md"
+      GH_AW_WORKFLOW_EMOJI: "🛠️"
+      GH_AW_WORKFLOW_ID: "dependabot-pr-fixer-worker"
+      GH_AW_WORKFLOW_NAME: "Dependabot PR Fixer"
+      GH_AW_WORKFLOW_SOURCE_URL: "${{ github.server_url }}/${{ github.repository }}/blob/${{ github.ref_name }}/.github/workflows/dependabot-pr-fixer-worker.md"
     outputs:
       code_push_failure_count: ${{ steps.process_safe_outputs.outputs.code_push_failure_count }}
       code_push_failure_errors: ${{ steps.process_safe_outputs.outputs.code_push_failure_errors }}
+      comment_id: ${{ steps.process_safe_outputs.outputs.comment_id }}
+      comment_url: ${{ steps.process_safe_outputs.outputs.comment_url }}
       create_discussion_error_count: ${{ steps.process_safe_outputs.outputs.create_discussion_error_count }}
       create_discussion_errors: ${{ steps.process_safe_outputs.outputs.create_discussion_errors }}
       process_safe_outputs_processed_count: ${{ steps.process_safe_outputs.outputs.processed_count }}
       process_safe_outputs_temporary_id_map: ${{ steps.process_safe_outputs.outputs.temporary_id_map }}
+      push_commit_sha: ${{ steps.process_safe_outputs.outputs.push_commit_sha }}
+      push_commit_url: ${{ steps.process_safe_outputs.outputs.push_commit_url }}
     steps:
       - name: Setup Scripts
         id: setup
@@ -1447,8 +1551,8 @@ jobs:
           trace-id: ${{ needs.activation.outputs.setup-trace-id }}
           parent-span-id: ${{ needs.activation.outputs.setup-parent-span-id || needs.activation.outputs.setup-span-id }}
         env:
-          GH_AW_SETUP_WORKFLOW_NAME: "Dependabot PR Bundler"
-          GH_AW_CURRENT_WORKFLOW_REF: ${{ github.repository }}/.github/workflows/dependabot-pr-bundler.lock.yml@${{ github.ref }}
+          GH_AW_SETUP_WORKFLOW_NAME: "Dependabot PR Fixer"
+          GH_AW_CURRENT_WORKFLOW_REF: ${{ github.repository }}/.github/workflows/dependabot-pr-fixer-worker.lock.yml@${{ github.ref }}
           GH_AW_INFO_VERSION: "1.0.60"
           GH_AW_INFO_AWF_VERSION: "v0.27.2"
           GH_AW_INFO_ENGINE_ID: "copilot"
@@ -1466,6 +1570,52 @@ jobs:
           mkdir -p /tmp/gh-aw/
           find "/tmp/gh-aw/" -type f -print
           echo "GH_AW_AGENT_OUTPUT=/tmp/gh-aw/agent_output.json" >> "$GITHUB_OUTPUT"
+      - name: Download patch artifact
+        continue-on-error: true
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: agent
+          path: /tmp/gh-aw/
+      - name: Extract base branch from agent output
+        id: extract-base-branch
+        if: steps.download-agent-output.outcome == 'success'
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          script: |
+            const { setupGlobals } = require('${{ runner.temp }}/gh-aw/actions/setup_globals.cjs');
+            setupGlobals(core, github, context, exec, io, getOctokit);
+            const { main } = require('${{ runner.temp }}/gh-aw/actions/extract_base_branch_from_agent_output.cjs');
+            await main();
+      - name: Checkout repository (trusted default branch for comment events)
+        if: (!cancelled()) && needs.agent.result != 'skipped' && contains(needs.agent.outputs.output_types, 'push_to_pull_request_branch') && (github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment')
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          token: ${{ secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Checkout repository
+        if: (!cancelled()) && needs.agent.result != 'skipped' && contains(needs.agent.outputs.output_types, 'push_to_pull_request_branch') && github.event_name != 'issue_comment' && github.event_name != 'pull_request_review_comment'
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          ref: ${{ steps.extract-base-branch.outputs.base-branch || github.base_ref || github.event.pull_request.base.ref || github.ref_name || github.event.repository.default_branch }}
+          token: ${{ secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Configure Git credentials
+        if: (!cancelled()) && needs.agent.result != 'skipped' && contains(needs.agent.outputs.output_types, 'push_to_pull_request_branch')
+        env:
+          REPO_NAME: ${{ github.repository }}
+          SERVER_URL: ${{ github.server_url }}
+          GIT_TOKEN: ${{ secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global am.keepcr true
+          # Re-authenticate git with GitHub token
+          SERVER_URL_STRIPPED="${SERVER_URL#https://}"
+          git remote set-url origin "https://x-access-token:${GIT_TOKEN}@${SERVER_URL_STRIPPED}/${REPO_NAME}.git"
+          echo "Git configured with standard GitHub Actions identity"
       - name: Configure GH_HOST for enterprise compatibility
         id: ghes-host-config
         shell: bash
@@ -1482,10 +1632,11 @@ jobs:
         env:
           GH_AW_AGENT_OUTPUT: ${{ steps.setup-agent-output-env.outputs.GH_AW_AGENT_OUTPUT }}
           GH_AW_COMMENT_ID: ${{ needs.activation.outputs.comment_id }}
-          GH_AW_ALLOWED_DOMAINS: "api.business.githubcopilot.com,api.enterprise.githubcopilot.com,api.github.com,api.githubcopilot.com,api.individual.githubcopilot.com,api.snapcraft.io,archive.ubuntu.com,azure.archive.ubuntu.com,crl.geotrust.com,crl.globalsign.com,crl.identrust.com,crl.sectigo.com,crl.thawte.com,crl.usertrust.com,crl.verisign.com,crl3.digicert.com,crl4.digicert.com,crls.ssl.com,github.com,host.docker.internal,json-schema.org,json.schemastore.org,keyserver.ubuntu.com,ocsp.digicert.com,ocsp.geotrust.com,ocsp.globalsign.com,ocsp.identrust.com,ocsp.sectigo.com,ocsp.ssl.com,ocsp.thawte.com,ocsp.usertrust.com,ocsp.verisign.com,packagecloud.io,packages.cloud.google.com,packages.microsoft.com,ppa.launchpad.net,raw.githubusercontent.com,registry.npmjs.org,s.symcb.com,s.symcd.com,security.ubuntu.com,telemetry.enterprise.githubcopilot.com,ts-crl.ws.symantec.com,ts-ocsp.ws.symantec.com,www.googleapis.com"
+          GH_AW_ALLOWED_DOMAINS: "*.vsblob.vsassets.io,api.business.githubcopilot.com,api.enterprise.githubcopilot.com,api.github.com,api.githubcopilot.com,api.individual.githubcopilot.com,api.nuget.org,api.snapcraft.io,archive.ubuntu.com,azure.archive.ubuntu.com,azuresearch-usnc.nuget.org,azuresearch-ussc.nuget.org,builds.dotnet.microsoft.com,ci.dot.net,crl.geotrust.com,crl.globalsign.com,crl.identrust.com,crl.sectigo.com,crl.thawte.com,crl.usertrust.com,crl.verisign.com,crl3.digicert.com,crl4.digicert.com,crls.ssl.com,dc.services.visualstudio.com,dist.nuget.org,dot.net,dotnet.microsoft.com,dotnetcli.blob.core.windows.net,github.com,host.docker.internal,json-schema.org,json.schemastore.org,keyserver.ubuntu.com,nuget.org,nuget.pkg.github.com,nugetregistryv2prod.blob.core.windows.net,ocsp.digicert.com,ocsp.geotrust.com,ocsp.globalsign.com,ocsp.identrust.com,ocsp.sectigo.com,ocsp.ssl.com,ocsp.thawte.com,ocsp.usertrust.com,ocsp.verisign.com,oneocsp.microsoft.com,packagecloud.io,packages.cloud.google.com,packages.microsoft.com,pkgs.dev.azure.com,ppa.launchpad.net,raw.githubusercontent.com,registry.npmjs.org,s.symcb.com,s.symcd.com,security.ubuntu.com,telemetry.enterprise.githubcopilot.com,ts-crl.ws.symantec.com,ts-ocsp.ws.symantec.com,www.googleapis.com,www.microsoft.com"
           GITHUB_SERVER_URL: ${{ github.server_url }}
           GITHUB_API_URL: ${{ github.api_url }}
-          GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "{\"create_report_incomplete_issue\":{},\"dispatch_workflow\":{\"max\":3,\"workflow_files\":{\"dependabot-pr-fixer-worker\":\".lock.yml\"},\"workflows\":[\"dependabot-pr-fixer-worker\"]},\"missing_data\":{},\"missing_tool\":{},\"noop\":{\"max\":1,\"report-as-issue\":\"true\"},\"report_incomplete\":{}}"
+          GH_AW_SAFE_OUTPUTS_HANDLER_CONFIG: "{\"add_comment\":{\"hide_older_comments\":true,\"max\":2},\"create_report_incomplete_issue\":{},\"missing_data\":{},\"missing_tool\":{},\"noop\":{\"max\":1,\"report-as-issue\":\"true\"},\"push_to_pull_request_branch\":{\"allowed_files\":[\"src/**\",\"test/**\",\"gen/**\",\"samples/**\",\"data/**\",\"*.sln\",\"*.slnx\",\"global.json\",\"nuget.config\",\"Directory.Build.props\",\"Directory.Build.targets\",\"Directory.Packages.props\"],\"commit_title_suffix\":\" [dependabot-pr-fixer]\",\"if_no_changes\":\"ignore\",\"max_patch_size\":1024,\"protect_top_level_dot_folders\":true,\"protected_files\":[\"package.json\",\"bun.lockb\",\"bunfig.toml\",\"deno.json\",\"deno.jsonc\",\"deno.lock\",\"global.json\",\"NuGet.Config\",\"Directory.Packages.props\",\"mix.exs\",\"mix.lock\",\"go.mod\",\"go.sum\",\"stack.yaml\",\"stack.yaml.lock\",\"pom.xml\",\"build.gradle\",\"build.gradle.kts\",\"settings.gradle\",\"settings.gradle.kts\",\"gradle.properties\",\"package-lock.json\",\"yarn.lock\",\"pnpm-lock.yaml\",\"npm-shrinkwrap.json\",\"requirements.txt\",\"Pipfile\",\"Pipfile.lock\",\"pyproject.toml\",\"setup.py\",\"setup.cfg\",\"Gemfile\",\"Gemfile.lock\",\"uv.lock\",\"CODEOWNERS\",\"DESIGN.md\",\"README.md\",\"CONTRIBUTING.md\",\"CHANGELOG.md\",\"SECURITY.md\",\"CODE_OF_CONDUCT.md\",\"AGENTS.md\",\"CLAUDE.md\",\"GEMINI.md\"],\"protected_files_policy\":\"fallback-to-issue\"},\"report_incomplete\":{}}"
+          GH_AW_CI_TRIGGER_TOKEN: ${{ secrets.GH_AW_CI_TRIGGER_TOKEN }}
         with:
           github-token: ${{ secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
           script: |
