@@ -195,10 +195,9 @@ timeout-minutes: 15
    - do not inspect or modify repository files
    - do not add PR comments
 3. If `summary.dispatch_queue` is empty, call `noop` with a short summary of the grouped PRs found and why no worker runs were dispatched.
-4. Otherwise, for each PR in `summary.dispatch_queue`, call `dispatch_workflow` with:
-   - `workflow_name: "dependabot-pr-fixer-worker"`
-   - `inputs.pr_number`: the PR number as a string
-   - `inputs.group`: the PR group key
+4. Otherwise, for each PR in `summary.dispatch_queue`, call `dependabot_pr_fixer_worker` with:
+   - `pr_number`: the PR number as a string
+   - `group`: the PR group key
 5. After dispatching, call `noop` with a short summary of the grouped PRs found, which group filter was used if any, and how many worker runs you dispatched.
 6. Never try to repair PRs directly in this orchestrator run.
-7. Never dispatch workers with direct `gh api` writes from the agent job; use `dispatch_workflow` only.
+7. Never dispatch workers with direct `gh api` writes from the agent job; use the `dependabot_pr_fixer_worker` safe-output tool only.
