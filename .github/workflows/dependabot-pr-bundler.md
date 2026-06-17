@@ -14,6 +14,8 @@ on:
     - id: check
       run: gh api /repos/${{ github.repository }}/dependabot/alerts?state=open --jq 'length > 0' | grep -q 'true'
       # exits 0 (outcome: success) if there are open alerts, 1 (outcome: failure) if not
+      env:
+        GH_TOKEN: ${{ github.token }}
 
 if: needs.pre_activation.outputs.check_result == 'success'
 
