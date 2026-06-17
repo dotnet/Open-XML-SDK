@@ -38,6 +38,7 @@ safe-outputs:
 
 tools:
   github:
+    mode: gh-proxy
     toolsets: [all]
   bash: true
 
