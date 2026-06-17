@@ -1,63 +1,155 @@
 ---
-description: |
-  This workflow checks Dependabot alerts and updates dependencies in package manifests (not just lock files).
-  Bundles multiple compatible updates into single pull requests, runs tests to verify
-  compatibility, and creates draft PRs with working changes. Documents investigation
-  attempts for problematic updates.
-
+emoji: "🛠️"
+name: Dependabot PR Fixer
+description: Buckets Dependabot pull requests, applies known-safe fixes, and comments with next steps for anything manual.
 on:
-  schedule: daily
+  pull_request:
+    types: [opened, reopened, synchronize]
   workflow_dispatch:
-  permissions:
-    security-events: read
-  steps:
-    - id: check
-      run: gh api /repos/${{ github.repository }}/dependabot/alerts?state=open --jq 'length > 0' | grep -q 'true'
-      # exits 0 (outcome: success) if there are open alerts, 1 (outcome: failure) if not
-      env:
-        GH_TOKEN: ${{ github.token }}
-
-if: needs.pre_activation.outputs.check_result == 'success'
-
+    inputs:
+      pr_number:
+        description: Pull request number to inspect manually
+        required: true
 permissions:
-  copilot-requests: write
-  actions: read
   contents: read
-  discussions: read
-  issues: read
   pull-requests: read
-  security-events: read
-
-network: defaults
-
-safe-outputs:
-  create-pull-request:
-    draft: true
-    labels: [automation, dependencies]
-    protected-files: fallback-to-issue
-  create-issue:
-    title-prefix: "[dependabot-pr-bundler] "
-
+  issues: read
+  actions: read
+  copilot-requests: write
+checkout:
+  fetch: ["refs/pulls/*", "refs/heads/*"]
+  fetch-depth: 0
+network:
+  allowed: [defaults, dotnet]
 tools:
   github:
     mode: gh-proxy
-    toolsets: [all]
-  bash: true
+    toolsets: [pull_requests, issues, actions, repos]
+steps:
+  - name: Fetch PR context
+    env:
+      GH_TOKEN: ${{ secrets.GH_AW_GITHUB_MCP_SERVER_TOKEN || secrets.GH_AW_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+      EXPR_GITHUB_REPOSITORY: ${{ github.repository }}
+      EXPR_PR_NUMBER: ${{ github.event.pull_request.number }}
+      INPUT_PR_NUMBER: ${{ inputs.pr_number }}
+    run: |
+      set -euo pipefail
+      mkdir -p /tmp/gh-aw/data
 
-timeout-minutes: 15
+      PR_NUMBER="${EXPR_PR_NUMBER:-${INPUT_PR_NUMBER:-}}"
+      if [ -z "$PR_NUMBER" ]; then
+        echo "Missing PR number" >&2
+        exit 1
+      fi
 
-source: githubnext/agentics/workflows/dependabot-pr-bundler.md@e15e57b40918dbca11b350c55d02ab61934afa75
+      gh pr view "$PR_NUMBER" --repo "$EXPR_GITHUB_REPOSITORY" \
+        --json number,title,url,author,headRefName,headRefOid,baseRefName,mergeStateStatus,reviewDecision,isDraft,labels,statusCheckRollup \
+        > /tmp/gh-aw/data/pr.json
+
+      gh api "repos/$EXPR_GITHUB_REPOSITORY/pulls/$PR_NUMBER/files?per_page=100" \
+        --jq 'map({filename,status,additions,deletions,changes})' \
+        > /tmp/gh-aw/data/files.json
+
+      gh api "repos/$EXPR_GITHUB_REPOSITORY/issues/$PR_NUMBER/comments?per_page=20" \
+        --jq 'map({author:(.user.login // "unknown"), created_at, body})' \
+        > /tmp/gh-aw/data/comments.json
+
+      gh api "repos/$EXPR_GITHUB_REPOSITORY/pulls/$PR_NUMBER/reviews?per_page=20" \
+        --jq 'map({author:(.user.login // "unknown"), state, submitted_at, body})' \
+        > /tmp/gh-aw/data/reviews.json
+
+      jq -n \
+        --slurpfile pr /tmp/gh-aw/data/pr.json \
+        --slurpfile files /tmp/gh-aw/data/files.json \
+        --slurpfile comments /tmp/gh-aw/data/comments.json \
+        --slurpfile reviews /tmp/gh-aw/data/reviews.json \
+        '{
+          pr: $pr[0],
+          changed_files: ($files[0] | map(.filename)),
+          changed_file_count: ($files[0] | length),
+          latest_comment_author: (if (($comments[0] | length) > 0) then $comments[0][-1].author else null end),
+          review_states: ($reviews[0] | group_by(.state) | map({state: .[0].state, count: length})),
+          likely_dependabot: (
+            (($pr[0].author.login // "") == "app/dependabot")
+            or (($pr[0].title // "") | test("^Bump "; "i"))
+            or (($pr[0].headRefName // "") | contains("dependabot/"))
+          )
+        }' > /tmp/gh-aw/data/summary.json
+safe-outputs:
+  add-comment:
+    max: 2
+    hide-older-comments: true
+  push-to-pull-request-branch:
+    if-no-changes: ignore
+    commit-title-suffix: " [dependabot-pr-fixer]"
+    protected-files: fallback-to-issue
+    allowed-files:
+      - "src/**"
+      - "test/**"
+      - "gen/**"
+      - "samples/**"
+      - "data/**"
+      - "*.sln"
+      - "*.slnx"
+      - "global.json"
+      - "nuget.config"
+      - "Directory.Build.props"
+      - "Directory.Build.targets"
+      - "Directory.Packages.props"
+  noop:
+timeout-minutes: 25
 ---
 
-# Agentic Dependabot Bundler
+# Dependabot PR Fixer
 
-Your name is "Dependabot PR Bundler". Your job is to act as an agentic coder for the GitHub repository `${{ github.repository }}`. You're really good at all kinds of tasks. You're excellent at everything.
+## Task
 
-1. Check the dependabot alerts in the repository. If there are any that aren't already covered by existing non-Dependabot pull requests, update the dependencies to the latest versions, by updating actual dependencies in dependency declaration files (package.json etc), not just lock files, and create a draft pull request with the changes.
+You analyze one pull request at a time and only act on **Dependabot** pull requests.
 
-   - Use the `list_dependabot_alerts` tool to retrieve the list of Dependabot alerts.
-   - Use the `get_dependabot_alert` tool to retrieve details of each alert.
+1. Read `/tmp/gh-aw/data/summary.json` first, then use `/tmp/gh-aw/data/pr.json`, `/tmp/gh-aw/data/files.json`, `/tmp/gh-aw/data/comments.json`, and `/tmp/gh-aw/data/reviews.json` as your primary context.
+2. If the PR is not clearly from Dependabot, call `noop` with a short reason and stop.
+3. Assign exactly one bucket:
+   - `ready-to-merge`: no repo changes needed; remaining work is waiting for CI or maintainer approval.
+   - `safe-auto-fix`: a known-safe repo-local fix can be applied automatically.
+   - `manual-breaking-change`: the update appears to need a human design or compatibility decision.
+   - `blocked-external`: failures are caused by flaky CI, branch protection, missing permissions, or unrelated external breakage.
+   - `unsupported`: the change falls outside the safe auto-fix patterns below.
+4. Always inspect the changed files, current checks, and the likely source of failure before choosing a bucket.
+5. When you need repository changes, check out the PR branch, make the smallest correct fix, and verify it with the narrowest existing commands that give confidence. Prefer targeted restore/build/test commands over broad full-repo runs when possible.
 
-2. Create a new PR with title "[dependabot-pr-bundler]". Try to bundle as many dependency updates as possible into one PR. Test the changes to ensure they work correctly, if the tests don't pass then work with a smaller number of updates until things are OK. 
+## Safe auto-fix patterns
 
-> NOTE: If you didn't make progress on particular dependency updates, create one overall issue saying what you've tried, ask for clarification if necessary, and add a link to a new branch containing any investigations you tried.
+Only push changes for patterns that are clearly low-risk and local to this repository:
+
+- simple dependency-version follow-up edits in project or solution files needed to keep versions aligned
+- small source fixes caused by well-understood API or package rename/signature changes
+- generated-file refreshes that are required after a safe source change
+- Dependabot PRs for generated workflow manifests under `.github/workflows/`: **never fix those by editing generated manifest files directly**.
+
+For workflow-manifest Dependabot PRs, follow this rule set:
+
+- Treat `.github/workflows/package.json`, `.github/workflows/package-lock.json`, `.github/workflows/requirements.txt`, and `.github/workflows/go.mod` as generated artifacts.
+- Explain in the summary comment which source `.md` workflow or shared component should be updated.
+- Because this workflow is not allowed to push `.github/workflows/**` changes without an app-backed workflow token, bucket these as `unsupported` unless the required source change is outside `.github/workflows/**`.
+
+## Guardrails
+
+- Never make speculative or large refactors.
+- Never force-push, merge the PR, or edit unrelated files.
+- If the correct fix is unclear, stop and use `manual-breaking-change` or `unsupported`.
+- If a push would touch protected or disallowed files, do not work around it; comment instead.
+- Do not use a GitHub App or any app-backed token flow.
+- Prefer one concise summary comment over multiple comments.
+- If you push a fix, also leave a comment summarizing the bucket, what changed, and what verification you ran.
+- If you do not push a fix, leave a comment with the bucket, the blocker, and the smallest useful next step for a maintainer.
+- If there is nothing useful to change or say beyond an explicit skip, call `noop`.
+
+## Comment format
+
+When commenting, keep it short and structured:
+
+- bucket
+- root cause
+- changes made or why no safe fix was applied
+- verification run
+- next step
