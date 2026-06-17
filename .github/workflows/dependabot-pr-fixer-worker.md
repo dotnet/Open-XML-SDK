@@ -18,7 +18,6 @@ permissions:
   pull-requests: read
   issues: read
   actions: read
-  copilot-requests: write
 checkout:
   fetch: ["refs/pulls/*", "refs/heads/*"]
   fetch-depth: 0

@@ -19,7 +19,6 @@ permissions:
   pull-requests: read
   issues: read
   actions: read
-  copilot-requests: write
 checkout:
   fetch-depth: 0
 network:
