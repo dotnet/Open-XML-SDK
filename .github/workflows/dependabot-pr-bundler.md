@@ -9,7 +9,7 @@ on:
     inputs:
       pr_number:
         description: Pull request number to inspect manually
-        required: true
+        required: false
 permissions:
   contents: read
   pull-requests: read
