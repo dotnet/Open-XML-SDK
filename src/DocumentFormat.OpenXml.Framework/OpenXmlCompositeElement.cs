@@ -633,6 +633,14 @@ namespace DocumentFormat.OpenXml
 
             if (!xmlReader.IsEmptyElement)
             {
+                var context = OpenXmlElementContext;
+                var mcSettings = context?.MCSettings;
+                var processMarkupCompatibility = mcSettings is not null &&
+                    mcSettings.ProcessMode != DocumentFormat.OpenXml.Packaging.MarkupCompatibilityProcessMode.NoProcess;
+                var mcContext = context?.MCContext;
+                var targetFileFormatVersions = mcSettings?.TargetFileFormatVersions ?? FileFormatVersions.None;
+                var resolver = Features.GetNamespaceResolver();
+
                 xmlReader.Read(); // read this element
 
                 while (!xmlReader.EOF)
@@ -650,41 +658,41 @@ namespace DocumentFormat.OpenXml
                         break;
                     }
 
-                    OpenXmlElement element = ElementFactory(xmlReader);
+                    OpenXmlElement element = ElementFactory(xmlReader, resolver);
 
                     // set parent before Load( ) call. AlternateContentChoice need parent info on loading.
                     element.Parent = this;
 
                     bool isACB = element is AlternateContent;
-                    if (isACB && element.OpenXmlElementContext is not null)
+                    if (processMarkupCompatibility && isACB && context is not null)
                     {
-                        element.OpenXmlElementContext.ACBlockLevel++;
+                        context.ACBlockLevel++;
                     }
 
                     bool mcContextPushed = false;
-                    if (!(element is OpenXmlMiscNode))
+                    if (processMarkupCompatibility && !(element is OpenXmlMiscNode))
                     {
                         // push MC context based on the context of the child element to be loaded
-                        mcContextPushed = PushMcContext(xmlReader);
+                        mcContextPushed = PushMcContext(xmlReader, context!, mcSettings!);
                     }
 
                     // Process the element according to the MC behavior
                     var action = ElementAction.Normal;
-                    if (OpenXmlElementContext is not null && OpenXmlElementContext.MCSettings.ProcessMode != DocumentFormat.OpenXml.Packaging.MarkupCompatibilityProcessMode.NoProcess)
+                    if (processMarkupCompatibility)
                     {
-                        action = OpenXmlElementContext.MCContext.GetElementAction(element, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
+                        action = mcContext!.GetElementAction(element, targetFileFormatVersions);
                     }
 
                     element.Load(xmlReader, loadMode);
 
                     if (mcContextPushed)
                     {
-                        PopMcContext();
+                        mcContext!.PopMCAttributes();
                     }
 
-                    if (isACB && element.OpenXmlElementContext is not null)
+                    if (processMarkupCompatibility && isACB && context is not null)
                     {
-                        element.OpenXmlElementContext.ACBlockLevel--;
+                        context.ACBlockLevel--;
                     }
 
                     switch (action)
@@ -755,7 +763,7 @@ namespace DocumentFormat.OpenXml
                                     break;
                                 }
 
-                                var effectiveNode = OpenXmlElementContext?.MCContext.GetContentFromACBlock(acb, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
+                                var effectiveNode = mcContext!.GetContentFromACBlock(acb, targetFileFormatVersions);
                                 if (effectiveNode is null)
                                 {
                                     break;

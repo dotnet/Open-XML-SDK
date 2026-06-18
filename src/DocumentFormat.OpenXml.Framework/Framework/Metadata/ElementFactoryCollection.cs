@@ -32,21 +32,51 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         public OpenXmlElement? Create(in OpenXmlQualifiedName qname)
         {
-            if (_data.Length == 0)
+            var data = _data;
+            if (data.Length == 0)
             {
                 return null;
             }
 
-            // This is on a hot-path and using a dictionary adds substantial time to the lookup. Most child lists are small, so using a sorted
-            // list to store them with a binary search improves overall performance.
-            var idx = Array.BinarySearch(_data, new ElementFactory(new(qname, default), null!), ElementChildNameComparer.Instance);
-
-            if (idx < 0)
+            // This is on a hot-path and using a dictionary adds substantial time to the lookup. Most child lists are small, so use
+            // a linear scan for tiny lists and binary search for larger ones. Avoid allocating a temporary ElementFactory lookup key
+            // for every element encountered while populating the DOM.
+            if (data.Length <= 4)
             {
+                for (var i = 0; i < data.Length; i++)
+                {
+                    if (data[i].Type.Name.Equals(qname))
+                    {
+                        return data[i].Create();
+                    }
+                }
+
                 return null;
             }
 
-            return _data[idx].Create();
+            var min = 0;
+            var max = data.Length - 1;
+            while (min <= max)
+            {
+                var mid = min + ((max - min) >> 1);
+                var comparison = data[mid].Type.Name.CompareTo(qname);
+
+                if (comparison == 0)
+                {
+                    return data[mid].Create();
+                }
+
+                if (comparison < 0)
+                {
+                    min = mid + 1;
+                }
+                else
+                {
+                    max = mid - 1;
+                }
+            }
+
+            return null;
         }
 
         private class ElementChildNameComparer : IComparer<ElementFactory>
