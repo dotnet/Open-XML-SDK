@@ -87,7 +87,7 @@ Please see [Open XML SDK](https://learn.microsoft.com/en-us/office/open-xml/open
 - **[Open XML SDK 2.5 Productivity Tool](https://github.com/OfficeDev/Open-XML-SDK/releases/tag/v2.5)**: The Productivity Tool provides viewing and code generation compatible with the Open XML SDK 2.5.
 - **[Open XML Powertools](https://github.com/EricWhiteDev/Open-Xml-PowerTools)**: This provides example code and guidance for implementing a wide range of Open XML scenarios.
 - **[ClosedXml](https://github.com/closedxml/closedxml)**: This library provides a simplified object model on top of the OpenXml SDK for manipulating and creating Excel documents.
-- **[OfficeIMO](https://github.com/EvotecIT/OfficeIMO)**: This library provides a simplified object model on top of the OpenXml SDK manipulating and creating Word documents.
+- **[OfficeIMO](https://github.com/EvotecIT/OfficeIMO)**: This library provides a simplified object model on top of the OpenXml SDK for manipulating and creating Word, Excel, PowerPoint documents with support for Markdown, Html and Pdf, and Visio. 
 - **[OpenXML-Office](https://github.com/DraviaVemal/OpenXML-Office)**: This nuget library provides a simplified object model on top of the OpenXml SDK manipulating and creating PPT and Excel documents.
 - **[Serialize.OpenXml.CodeGen](https://github.com/rmboggs/Serialize.OpenXml.CodeGen)**: This is a tool that converts an OpenXml document into the .NET code required to create it.
 - **[Html2OpenXml](https://github.com/onizet/html2openxml)**: This is a tool that takes HTML and converts it to an OpenXml document.
