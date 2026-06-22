@@ -31,11 +31,26 @@ public struct OpenXmlPartReaderOptions
     /// </summary>
     public bool CloseStream { get; set; }
 
+#if TASKS_SUPPORTED
+    /// <summary>
+    /// Gets or sets a value indicating whether the part reader should operate asynchronously.
+    /// </summary>
+    /// <remarks>
+    /// When set to <c>true</c>, the reader will use asynchronous methods for reading XML data,
+    /// allowing non-blocking operations. This property is only available when the build target
+    /// supports asynchronous SAX XML processing.
+    /// </remarks>
+    public bool Async { get; set; }
+#endif
+
     internal OpenXmlPartReaderOptions UpdateForPart(OpenXmlPart part) => new()
     {
         ReadMiscellaneousNodes = ReadMiscellaneousNodes,
         MaxCharactersInPart = MaxCharactersInPart != 0 ? MaxCharactersInPart : part.MaxCharactersInPart,
         IgnoreWhitespace = IgnoreWhitespace,
         CloseStream = true,
+#if TASKS_SUPPORTED
+        Async = Async,
+#endif
     };
 }

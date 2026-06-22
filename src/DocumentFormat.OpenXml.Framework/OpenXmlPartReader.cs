@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the Open XML part reader class.
     /// </summary>
-    public class OpenXmlPartReader : OpenXmlReader
+    public partial class OpenXmlPartReader : OpenXmlReader
     {
         private readonly IRootElementFeature _rootElements;
         private readonly IOpenXmlNamespaceResolver _resolver;
@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml
 
             _resolver = features.GetRequired<IOpenXmlNamespaceResolver>();
             _rootElements = features.GetRequired<IRootElementFeature>();
-            _xmlReader = CreateReader(partStream, options.CloseStream, options.MaxCharactersInPart, ignoreWhitespace: options.IgnoreWhitespace, out _standalone, out _encoding);
+            _xmlReader = CreateReader(partStream, options, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -402,11 +402,18 @@ namespace DocumentFormat.OpenXml
         /// <returns>true if the next element was read successfully; false if there are no more elements to read. </returns>
         private bool MoveToNextElement()
         {
+            if (_elementState == ElementState.Null)
+            {
+                return ReadRoot();
+            }
+
+            return MoveToNextElementHelper();
+        }
+
+        private bool MoveToNextElementHelper()
+        {
             switch (_elementState)
             {
-                case ElementState.Null:
-                    return ReadRoot();
-
                 case ElementState.EOF:
                     return false;
 
@@ -667,17 +674,20 @@ namespace DocumentFormat.OpenXml
             _xmlReader.Close();
         }
 
-        private XmlReader CreateReader(Stream partStream, bool closeInput, long maxCharactersInPart, bool ignoreWhitespace, out bool? standalone, out string? encoding)
+        private XmlReader CreateReader(Stream partStream, OpenXmlPartReaderOptions options, out bool? standalone, out string? encoding)
         {
             var settings = new XmlReaderSettings
             {
-                MaxCharactersInDocument = maxCharactersInPart,
-                CloseInput = closeInput,
-                IgnoreWhitespace = ignoreWhitespace,
+                MaxCharactersInDocument = options.MaxCharactersInPart,
+                CloseInput = options.CloseStream,
+                IgnoreWhitespace = options.IgnoreWhitespace,
 #if NET35
                 ProhibitDtd = true,
 #else
                 DtdProcessing = DtdProcessing.Prohibit,
+#endif
+#if TASKS_SUPPORTED
+                Async = options.Async,
 #endif
             };
 
@@ -727,6 +737,11 @@ namespace DocumentFormat.OpenXml
                 _xmlReader.Skip();
             }
 
+            return ReadRootHelper();
+        }
+
+        private bool ReadRootHelper()
+        {
             if (_xmlReader.EOF || !_xmlReader.IsStartElement())
             {
                 throw new InvalidDataException(ExceptionMessages.PartIsEmpty);
