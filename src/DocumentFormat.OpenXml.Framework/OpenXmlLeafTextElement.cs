@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml
                 {
                     using (StringWriter w = new StringWriter(CultureInfo.InvariantCulture))
                     {
-                        using (XmlDOMTextWriter writer2 = new XmlDOMTextWriter(w))
+                        using (XmlDOMTextWriter writer2 = new XmlDOMTextWriter(w, Features))
                         {
                             WriteContentTo(writer2);
                         }
