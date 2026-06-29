@@ -25530,7 +25530,12 @@
   },
   {
     "Element": "DocumentFormat.OpenXml.Office2010.Drawing.TextMath",
-    "Children": []
+    "Children": [
+      {
+        "Name": "http://schemas.openxmlformats.org/officeDocument/2006/math*oMath",
+        "Type": "http://schemas.openxmlformats.org/officeDocument/2006/math*CT_OMath"
+      }
+    ]
   },
   {
     "Element": "DocumentFormat.OpenXml.Office2010.Drawing.Transform2D",
