@@ -1936,13 +1936,19 @@ namespace DocumentFormat.OpenXml
         // Copy child elements from the container.
         internal void CopyChildren(OpenXmlElement container, bool deep)
         {
-            // Use AppendChild rather than Append: with a single OpenXmlElement argument the
-            // Append(params OpenXmlElement[]) overload allocates a 1-element array per child.
-            // For deep clones over a wide subtree those add up to a meaningful share of the
-            // CloneNode(true) allocation profile.
-            foreach (var element in container.ChildElements)
+            var child = container.FirstChild;
+
+            while (child is not null)
             {
-                AppendChild(element.CloneNode(deep));
+                var next = child.NextSibling();
+
+                // Use AppendChild rather than Append: with a single OpenXmlElement argument the
+                // Append(params OpenXmlElement[]) overload allocates a 1-element array per child.
+                // For deep clones over a wide subtree those add up to a meaningful share of the
+                // CloneNode(true) allocation profile.
+                AppendChild(child.CloneNode(deep));
+
+                child = next;
             }
         }
 
