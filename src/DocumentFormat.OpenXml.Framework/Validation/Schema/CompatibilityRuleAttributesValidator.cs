@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
@@ -190,14 +189,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 }
 
                 // must be QName
-                var colonIndex = qname.Value.IndexOf(":", StringComparison.Ordinal);
-                if (colonIndex <= 0 || colonIndex == qname.Value.Length - 1 || qname.Value.IndexOf(":", colonIndex + 1, StringComparison.Ordinal) >= 0)
+                if (!PrefixName.TryParsePrefixed(qname.Value, out var parsed))
                 {
                     return qname;
                 }
 
                 // Prefix must be already defined.
-                var attributeNamesapce = element.LookupNamespace(qname.Value.Substring(0, colonIndex));
+                var attributeNamesapce = element.LookupNamespace(parsed.Prefix);
                 if (attributeNamesapce.IsNullOrEmpty())
                 {
                     return qname;
