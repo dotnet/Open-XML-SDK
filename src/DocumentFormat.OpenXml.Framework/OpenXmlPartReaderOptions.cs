@@ -1,4 +1,4 @@
-﻿// Copyright (c) Microsoft. All rights reserved.
+// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
@@ -31,11 +31,21 @@ public struct OpenXmlPartReaderOptions
     /// </summary>
     public bool CloseStream { get; set; }
 
+#if TASKS_SUPPORTED
+    /// <summary>
+    /// Gets or sets a value indicating whether asynchronous <see cref="OpenXmlPartReader"/> methods can be used.
+    /// </summary>
+    public bool Async { get; set; }
+#endif
+
     internal OpenXmlPartReaderOptions UpdateForPart(OpenXmlPart part) => new()
     {
         ReadMiscellaneousNodes = ReadMiscellaneousNodes,
         MaxCharactersInPart = MaxCharactersInPart != 0 ? MaxCharactersInPart : part.MaxCharactersInPart,
         IgnoreWhitespace = IgnoreWhitespace,
         CloseStream = true,
+#if TASKS_SUPPORTED
+        Async = Async,
+#endif
     };
 }
