@@ -33,11 +33,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
       with:
         fetch-depth: 0
     - name: Install .NET
-      uses: actions/setup-dotnet@v5
+      uses: actions/setup-dotnet@v6
     - name: Remove generated files for baseline
       run: Remove-Item generated/ -Include *.g.cs -Recurse
       shell: pwsh
@@ -77,18 +77,18 @@ jobs:
     
     steps:
     - name: Checkout
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
       with:
         fetch-depth: 0
 
     - name: Install .NET Core
-      uses: actions/setup-dotnet@v5
+      uses: actions/setup-dotnet@v6
       with:
         dotnet-version: |
           6.0.x
           8.0.x
     - name: Install global.json .NET
-      uses: actions/setup-dotnet@v5
+      uses: actions/setup-dotnet@v6
     - name: Restore
       run: dotnet restore --verbosity normal          
     - name: Build
