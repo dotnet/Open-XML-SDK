@@ -11,6 +11,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Xml;
+#if TASKS_SUPPORTED
+using System.Threading.Tasks;
+#endif
 
 namespace DocumentFormat.OpenXml
 {
@@ -100,7 +103,7 @@ namespace DocumentFormat.OpenXml
 
             _resolver = features.GetRequired<IOpenXmlNamespaceResolver>();
             _rootElements = features.GetRequired<IRootElementFeature>();
-            _xmlReader = CreateReader(partStream, options.CloseStream, options.MaxCharactersInPart, ignoreWhitespace: options.IgnoreWhitespace, out _standalone, out _encoding);
+            _xmlReader = CreateReader(partStream, options, out _standalone, out _encoding);
         }
 
         /// <summary>
@@ -667,17 +670,20 @@ namespace DocumentFormat.OpenXml
             _xmlReader.Close();
         }
 
-        private XmlReader CreateReader(Stream partStream, bool closeInput, long maxCharactersInPart, bool ignoreWhitespace, out bool? standalone, out string? encoding)
+        private XmlReader CreateReader(Stream partStream, OpenXmlPartReaderOptions options, out bool? standalone, out string? encoding)
         {
             var settings = new XmlReaderSettings
             {
-                MaxCharactersInDocument = maxCharactersInPart,
-                CloseInput = closeInput,
-                IgnoreWhitespace = ignoreWhitespace,
+                MaxCharactersInDocument = options.MaxCharactersInPart,
+                CloseInput = options.CloseStream,
+                IgnoreWhitespace = options.IgnoreWhitespace,
 #if NET35
                 ProhibitDtd = true,
 #else
                 DtdProcessing = DtdProcessing.Prohibit,
+#endif
+#if TASKS_SUPPORTED
+                Async = options.Async,
 #endif
             };
 
@@ -896,5 +902,292 @@ namespace DocumentFormat.OpenXml
                 throw new InvalidOperationException(ExceptionMessages.ReaderInEofState);
             }
         }
+
+#if TASKS_SUPPORTED
+        // Async Methods
+
+        /// <inheritdoc/>
+        public override async Task<bool> ReadAsync()
+        {
+            ThrowIfObjectDisposed();
+            bool result = await MoveToNextElementAsync().ConfigureAwait(false);
+
+            if (result && !ReadMiscNodes)
+            {
+                // skip miscellaneous node
+                while (result && IsMiscNode)
+                {
+                    result = await MoveToNextElementAsync().ConfigureAwait(false);
+                }
+            }
+
+            return result;
+        }
+
+        /// <inheritdoc/>
+        public override async Task<bool> ReadFirstChildAsync()
+        {
+            ThrowIfObjectDisposed();
+            bool result = await MoveToFirstChildAsync().ConfigureAwait(false);
+
+            if (result && !ReadMiscNodes)
+            {
+                // skip miscellaneous node
+                while (result && IsMiscNode)
+                {
+                    result = await MoveToNextSiblingInternalAsync().ConfigureAwait(false);
+                }
+            }
+
+            return result;
+        }
+
+        /// <inheritdoc/>
+        public override async Task<bool> ReadNextSiblingAsync()
+        {
+            ThrowIfObjectDisposed();
+            bool result = await MoveToNextSiblingInternalAsync().ConfigureAwait(false);
+
+            if (result && !ReadMiscNodes)
+            {
+                // skip miscellaneous node
+                while (result && IsMiscNode)
+                {
+                    result = await MoveToNextSiblingInternalAsync().ConfigureAwait(false);
+                }
+            }
+
+            return result;
+        }
+
+        /// <inheritdoc/>
+        public override async Task SkipAsync()
+        {
+            ThrowIfObjectDisposed();
+            await InnerSkipAsync().ConfigureAwait(false);
+
+            if (!EOF && !ReadMiscNodes)
+            {
+                // skip miscellaneous node
+                while (!EOF && IsMiscNode)
+                {
+                    await InnerSkipAsync().ConfigureAwait(false);
+                }
+            }
+        }
+
+        private async Task<bool> ReadRootAsync()
+        {
+            Debug.Assert(_elementState == ElementState.Null);
+            Debug.Assert(_elementStack.Count == 0);
+
+            await _xmlReader.MoveToContentAsync().ConfigureAwait(false);
+
+            while (!_xmlReader.EOF && _xmlReader.NodeType != XmlNodeType.Element)
+            {
+                await _xmlReader.SkipAsync().ConfigureAwait(false);
+            }
+
+            if (_xmlReader.EOF || !_xmlReader.IsStartElement())
+            {
+                throw new InvalidDataException(ExceptionMessages.PartIsEmpty);
+            }
+
+            // create the root element object
+            var rootElement = CreateElement(new(_xmlReader.NamespaceURI, _xmlReader.LocalName));
+
+            if (rootElement is null)
+            {
+                throw new InvalidDataException(ExceptionMessages.PartUnknown);
+            }
+
+            _elementStack.Push(rootElement);
+
+            LoadAttributes();
+
+            if (_xmlReader.IsEmptyElement)
+            {
+                _elementState = ElementState.LeafStart;
+                rootElement.Load(_xmlReader, OpenXmlLoadMode.Full);
+            }
+            else
+            {
+                _elementState = ElementState.Start;
+            }
+
+            return true;
+        }
+
+        private async Task<bool> MoveToNextElementAsync()
+        {
+            switch (_elementState)
+            {
+                case ElementState.Null:
+                    return await ReadRootAsync().ConfigureAwait(false);
+
+                case ElementState.EOF:
+                    return false;
+
+                case ElementState.Start:
+                    break;
+
+                case ElementState.End:
+                case ElementState.MiscNode:
+                    // cursor is end element, pop stack
+                    _elementStack.Pop();
+                    if (_elementStack.Count == 0)
+                    {
+                        _elementState = ElementState.EOF;
+                        return false;
+                    }
+
+                    break;
+
+                case ElementState.LeafStart:
+                    // cursor is leaf element start
+                    // just change the state to element end
+                    // do not move the cursor
+                    _elementState = ElementState.LeafEnd;
+                    return true;
+
+                case ElementState.LeafEnd:
+                case ElementState.LoadEnd:
+                    // cursor is end element, pop stack
+                    _elementStack.Pop();
+                    if (_elementStack.Count == 0)
+                    {
+                        _elementState = ElementState.EOF;
+                        return false;
+                    }
+                    else
+                    {
+                        GetElementInformation();
+                        return true;
+                    }
+
+                default:
+                    break;
+            }
+
+            _elementState = ElementState.Null;
+
+            if (_xmlReader.EOF || !await _xmlReader.ReadAsync().ConfigureAwait(false))
+            {
+                _elementState = ElementState.EOF;
+                return false;
+            }
+            else
+            {
+                GetElementInformation();
+                return true;
+            }
+        }
+
+        private async Task<bool> MoveToFirstChildAsync()
+        {
+            switch (_elementState)
+            {
+                case ElementState.EOF:
+                    return false;
+
+                case ElementState.Start:
+                    if (!await _xmlReader.ReadAsync().ConfigureAwait(false))
+                    {
+                        // should be able to read.
+                        Debug.Assert(false);
+                        return false;
+                    }
+
+                    GetElementInformation();
+                    if (_elementState == ElementState.End)
+                    {
+                        return false;
+                    }
+
+                    return true;
+
+                case ElementState.LeafStart:
+                    _elementState = ElementState.LeafEnd;
+                    return false;
+
+                case ElementState.End:
+                case ElementState.LeafEnd:
+                case ElementState.LoadEnd:
+                case ElementState.MiscNode:
+                    return false;
+
+                case ElementState.Null:
+                    ThrowIfNull();
+                    break;
+
+                default:
+                    break;
+            }
+
+            return false;
+        }
+
+        private async Task<bool> MoveToNextSiblingInternalAsync()
+        {
+            Debug.Assert(_xmlReader is not null);
+
+            if (_elementState == ElementState.EOF)
+            {
+                return false;
+            }
+
+            await InnerSkipAsync().ConfigureAwait(false);
+
+            if (_elementState == ElementState.EOF)
+            {
+                return false;
+            }
+            else if (_elementState == ElementState.End)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private async Task InnerSkipAsync()
+        {
+            switch (_elementState)
+            {
+                case ElementState.Null:
+                    ThrowIfNull();
+                    break;
+
+                case ElementState.EOF:
+                    return;
+
+                case ElementState.Start:
+                case ElementState.End:
+                case ElementState.MiscNode:
+                    await _xmlReader.SkipAsync().ConfigureAwait(false);
+                    _elementStack.Pop();
+                    GetElementInformation();
+                    return;
+
+                case ElementState.LeafStart:
+                    // no move, just process cursor
+                    _elementStack.Pop();
+                    GetElementInformation();
+                    return;
+
+                case ElementState.LeafEnd:
+                case ElementState.LoadEnd:
+                    // cursor is leaf element, pop stack, no move
+                    _elementStack.Pop();
+                    GetElementInformation();
+                    return;
+
+                default:
+                    break;
+            }
+        }
+#endif
     }
 }

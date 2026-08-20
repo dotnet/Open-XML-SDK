@@ -1,2 +1,12 @@
 ﻿#nullable enable
 
+virtual DocumentFormat.OpenXml.OpenXmlReader.ReadAsync() -> System.Threading.Tasks.Task<bool>!
+virtual DocumentFormat.OpenXml.OpenXmlReader.ReadFirstChildAsync() -> System.Threading.Tasks.Task<bool>!
+virtual DocumentFormat.OpenXml.OpenXmlReader.ReadNextSiblingAsync() -> System.Threading.Tasks.Task<bool>!
+virtual DocumentFormat.OpenXml.OpenXmlReader.SkipAsync() -> System.Threading.Tasks.Task!
+DocumentFormat.OpenXml.OpenXmlPartReaderOptions.Async.get -> bool
+DocumentFormat.OpenXml.OpenXmlPartReaderOptions.Async.set -> void
+override DocumentFormat.OpenXml.OpenXmlPartReader.ReadAsync() -> System.Threading.Tasks.Task<bool>!
+override DocumentFormat.OpenXml.OpenXmlPartReader.ReadFirstChildAsync() -> System.Threading.Tasks.Task<bool>!
+override DocumentFormat.OpenXml.OpenXmlPartReader.ReadNextSiblingAsync() -> System.Threading.Tasks.Task<bool>!
+override DocumentFormat.OpenXml.OpenXmlPartReader.SkipAsync() -> System.Threading.Tasks.Task!
