@@ -239,7 +239,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-#if FEATURE_ASYNC_SAX_XML
+#if TASKS_SUPPORTED
         [Fact]
         public async Task WriteStartDocumentAsync_ShouldWriteStartDocument()
         {
