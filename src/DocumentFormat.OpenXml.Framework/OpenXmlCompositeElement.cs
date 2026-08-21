@@ -8,7 +8,6 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
-using System.Text;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -122,14 +121,14 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                var innerText = new StringBuilder();
+                var innerText = StringBuilderPool.Acquire();
 
                 foreach (var child in ChildElements)
                 {
                     innerText.Append(child.InnerText);
                 }
 
-                return innerText.ToString();
+                return StringBuilderPool.GetValueAndRelease(innerText);
             }
         }
 

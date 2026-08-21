@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
-using System.Text;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
@@ -66,33 +65,45 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 if (AttributeValueEquals(conditionAttribute.Value, value, false))
                 {
-                    var sb = new StringBuilder();
-                    sb.Append('\'').Append(_values[0]).Append('\'');
+                    var sb = StringBuilderPool.Acquire();
+                    sb.Append('\'');
+                    sb.Append(_values[0]);
+                    sb.Append('\'');
                     if (_values.Length > 1)
                     {
                         for (int i = 1; i < _values.Length - 1; i++)
                         {
-                            sb.Append(", '").Append(_values[i]).Append('\'');
+                            sb.Append(", '");
+                            sb.Append(_values[i]);
+                            sb.Append('\'');
                         }
 
-                        sb.Append(" or '").Append(_values[_values.Length - 1]).Append('\'');
+                        sb.Append(" or '");
+                        sb.Append(_values[_values.Length - 1]);
+                        sb.Append('\'');
                     }
 
-                    string attributeValueString = sb.ToString();
+                    string attributeValueString = StringBuilderPool.GetValueAndRelease(sb);
 
-                    var otherSb = new StringBuilder();
-                    otherSb.Append('\'').Append(_otherValues[0]).Append('\'');
+                    var otherSb = StringBuilderPool.Acquire();
+                    otherSb.Append('\'');
+                    otherSb.Append(_otherValues[0]);
+                    otherSb.Append('\'');
                     if (_otherValues.Length > 1)
                     {
                         for (int i = 1; i < _otherValues.Length - 1; i++)
                         {
-                            otherSb.Append(", '").Append(_otherValues[i]).Append('\'');
+                            otherSb.Append(", '");
+                            otherSb.Append(_otherValues[i]);
+                            otherSb.Append('\'');
                         }
 
-                        otherSb.Append(" or '").Append(_otherValues[_otherValues.Length - 1]).Append('\'');
+                        otherSb.Append(" or '");
+                        otherSb.Append(_otherValues[_otherValues.Length - 1]);
+                        otherSb.Append('\'');
                     }
 
-                    string otherAttributeValueString = otherSb.ToString();
+                    string otherAttributeValueString = StringBuilderPool.GetValueAndRelease(otherSb);
 
                     return new ValidationErrorInfo()
                     {

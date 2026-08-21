@@ -9,7 +9,6 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using System.Text;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
@@ -113,7 +112,7 @@ namespace DocumentFormat.OpenXml
                 return string.Empty;
             }
 
-            var xpath = new StringBuilder();
+            var xpath = StringBuilderPool.Acquire();
             namespaces = new XmlNamespaceManager(new NameTable());
 
             foreach (var element in elements)
@@ -152,7 +151,7 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            return xpath.ToString();
+            return StringBuilderPool.GetValueAndRelease(xpath);
         }
 
         private static Stack<OpenXmlElement> GetElements(OpenXmlElement? element)
