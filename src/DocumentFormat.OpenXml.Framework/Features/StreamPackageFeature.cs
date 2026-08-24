@@ -7,6 +7,9 @@ using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
+#if !NETFRAMEWORK
+using System.IO.Compression;
+#endif
 using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Features;
@@ -128,6 +131,7 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageS
 
         try
         {
+            _stream = RepairRelsContentType(_stream);
             _package = Package.Open(_stream, mode.Value, access.Value);
         }
         catch (ArgumentException ex)
@@ -169,6 +173,107 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageS
         Dispose(disposing: true);
         GC.SuppressFinalize(this);
     }
+
+    // Some OOXML producers omit the required <Default Extension="rels" .../> entry from
+    // [Content_Types].xml (a known OPC spec deviation). System.IO.Packaging is strict: without
+    // that registration it cannot resolve .rels parts, so package-level relationships are never
+    // loaded and MainDocumentPart (and equivalents) come back null. Repair the stream in-memory
+    // before handing it to Package.Open so the SDK behaves like Word Desktop and the MIP SDK,
+    // both of which recover silently from this deviation.
+    //
+    // Gated on !NETFRAMEWORK because ZipArchive requires net45+ and the old System.IO.Packaging
+    // on net35/net40/net46 is already lenient about missing content-type registrations.
+#if !NETFRAMEWORK
+    private static Stream RepairRelsContentType(Stream input)
+    {
+        const string Marker = "Extension=\"rels\"";
+        const string Closing = "</Types>";
+        const string Injection =
+            "<Default Extension=\"rels\" " +
+            "ContentType=\"application/vnd.openxmlformats-package.relationships+xml\"/>";
+
+        if (!input.CanRead || !input.CanSeek)
+        {
+            return input;
+        }
+
+        long originalPosition = input.Position;
+
+        try
+        {
+            string ctXml;
+            using (var readZip = new ZipArchive(input, ZipArchiveMode.Read, leaveOpen: true))
+            {
+                var ctEntry = readZip.GetEntry("[Content_Types].xml");
+                if (ctEntry is null)
+                {
+                    input.Position = originalPosition;
+                    return input;
+                }
+
+                using var reader = new StreamReader(ctEntry.Open());
+                ctXml = reader.ReadToEnd();
+            }
+
+#if NET6_0_OR_GREATER
+            if (ctXml.Contains(Marker, StringComparison.Ordinal))
+            {
+                input.Position = originalPosition;
+                return input;
+            }
+
+            int closingIdx = ctXml.IndexOf(Closing, StringComparison.Ordinal);
+            string patched = closingIdx >= 0
+                ? string.Concat(ctXml.AsSpan(0, closingIdx), Injection, ctXml.AsSpan(closingIdx))
+                : ctXml + Injection;
+#else
+            if (ctXml.IndexOf(Marker, StringComparison.Ordinal) >= 0)
+            {
+                input.Position = originalPosition;
+                return input;
+            }
+
+            int closingIdx = ctXml.IndexOf(Closing, StringComparison.Ordinal);
+            string patched = closingIdx >= 0
+                ? ctXml.Substring(0, closingIdx) + Injection + ctXml.Substring(closingIdx)
+                : ctXml + Injection;
+#endif
+
+            input.Position = originalPosition;
+            var output = new MemoryStream();
+            using (var inZip = new ZipArchive(input, ZipArchiveMode.Read, leaveOpen: false))
+            using (var outZip = new ZipArchive(output, ZipArchiveMode.Create, leaveOpen: true))
+            {
+                foreach (var entry in inZip.Entries)
+                {
+                    var outEntry = outZip.CreateEntry(entry.FullName, CompressionLevel.Fastest);
+                    outEntry.LastWriteTime = entry.LastWriteTime;
+                    using var inStream = entry.Open();
+                    using var outStream = outEntry.Open();
+                    if (entry.FullName == "[Content_Types].xml")
+                    {
+                        using var sw = new StreamWriter(outStream);
+                        sw.Write(patched);
+                    }
+                    else
+                    {
+                        inStream.CopyTo(outStream);
+                    }
+                }
+            }
+
+            output.Position = 0;
+            return output;
+        }
+        catch
+        {
+            input.Position = originalPosition;
+            return input;
+        }
+    }
+#else
+    private static Stream RepairRelsContentType(Stream input) => input;
+#endif
 
     protected override void Register(IFeatureCollection features)
     {

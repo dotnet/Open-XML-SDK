@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Xml.Linq;
 using Xunit;
@@ -397,6 +398,70 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             // Clean up the test file path
             File.Delete(filePath);
+        }
+
+        [Fact]
+        public void Open_MissingRelsContentType_MainDocumentPartIsNotNull()
+        {
+            using var stream = CreateDocxMissingRelsContentType();
+            using var doc = WordprocessingDocument.Open(stream, isEditable: false);
+            Assert.NotNull(doc.MainDocumentPart);
+        }
+
+        [Fact]
+        public void Open_MissingRelsContentType_IsIdempotent()
+        {
+            // Opening a file that already has the rels Default entry must not alter it.
+            var wellFormed = new MemoryStream();
+            using (var doc = WordprocessingDocument.Create(wellFormed, WordprocessingDocumentType.Document, autoSave: false))
+            {
+                var main = doc.AddMainDocumentPart();
+                main.Document = new Document(new Body(new Paragraph()));
+                doc.Save();
+            }
+
+            wellFormed.Position = 0;
+            using var reopened = WordprocessingDocument.Open(wellFormed, isEditable: false);
+            Assert.NotNull(reopened.MainDocumentPart);
+        }
+
+        private static MemoryStream CreateDocxMissingRelsContentType()
+        {
+            var stream = new MemoryStream();
+            using (var zip = new ZipArchive(stream, ZipArchiveMode.Create, leaveOpen: true))
+            {
+                Write(zip, "[Content_Types].xml", """
+                    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+                    <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+                      <Default Extension="xml" ContentType="application/xml"/>
+                      <Override PartName="/word/document.xml"
+                        ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>
+                    </Types>
+                    """);
+                Write(zip, "_rels/.rels", """
+                    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+                    <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+                      <Relationship Id="rId1"
+                        Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument"
+                        Target="word/document.xml"/>
+                    </Relationships>
+                    """);
+                Write(zip, "word/document.xml", """
+                    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+                    <w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+                      <w:body><w:p/></w:body>
+                    </w:document>
+                    """);
+            }
+
+            stream.Position = 0;
+            return stream;
+
+            static void Write(ZipArchive zip, string name, string content)
+            {
+                using var w = new StreamWriter(zip.CreateEntry(name).Open());
+                w.Write(content);
+            }
         }
     }
 }
