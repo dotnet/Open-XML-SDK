@@ -16,6 +16,10 @@
     <Compile Include="..\DocumentFormat.OpenXml.Framework.Tests\TestUtility.cs" Link="TestUtility.cs" />
   </ItemGroup>
 
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net472' ">
+    <Reference Include="System.IO.Compression" />
+  </ItemGroup>
+
   <ItemGroup>
     <None Include="..\..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
