@@ -1,1 +1,6 @@
-﻿#nullable enable
+#nullable enable
+DocumentFormat.OpenXml.Features.IXmlWriterFactoryFeature
+DocumentFormat.OpenXml.Features.IXmlWriterFactoryFeature.Create(System.IO.Stream! stream, System.Xml.XmlWriterSettings? settings) -> System.Xml.XmlWriter!
+DocumentFormat.OpenXml.Features.IXmlWriterFactoryFeature.Create(System.IO.TextWriter! textWriter, System.Xml.XmlWriterSettings? settings) -> System.Xml.XmlWriter!
+DocumentFormat.OpenXml.Features.XmlTextSanitizationExtensions
+static DocumentFormat.OpenXml.Features.XmlTextSanitizationExtensions.UseXmlTextSanitization(this DocumentFormat.OpenXml.Packaging.OpenXmlPackage! package) -> DocumentFormat.OpenXml.Packaging.OpenXmlPackage!

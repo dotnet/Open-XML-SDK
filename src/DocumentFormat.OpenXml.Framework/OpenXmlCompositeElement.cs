@@ -147,7 +147,7 @@ namespace DocumentFormat.OpenXml
                     // because XmlReader can not be created on InnerXml ( InnerXml may have several root elements ).
                     using (var w = new StringWriter(CultureInfo.InvariantCulture))
                     {
-                        using (var writer2 = new XmlDOMTextWriter(w))
+                        using (var writer2 = new XmlDOMTextWriter(w, Features))
                         {
                             writer2.WriteStartElement(Prefix, LocalName, NamespaceUri);
                             writer2.WriteRaw(value);

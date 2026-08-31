@@ -138,7 +138,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             using (var stream = _part.GetStream(FileMode.Create, FileAccess.Write))
-            using (var xmlWriter = new XmlDOMTextWriter(stream))
+            using (var xmlWriter = new XmlDOMTextWriter(stream, _part.Features))
             {
                 _partXDocument.Save(xmlWriter);
             }
