@@ -19,11 +19,7 @@ internal readonly struct PrefixName
 
     public static PrefixName Parse(string name)
     {
-#if NET5_0_OR_GREATER
-        var idx = name.IndexOf(':', StringComparison.Ordinal);
-#else
-        var idx = name.IndexOf(':');
-#endif
+        var idx = IndexOfColon(name);
 
         if (((idx == -1) || (idx == 0)) || ((name.Length - 1) == idx))
         {
@@ -38,5 +34,38 @@ internal readonly struct PrefixName
 
             return new(prefix, localName);
         }
+    }
+
+    /// <summary>
+    /// Parses a name that is required to be prefixed, i.e. it contains a single colon that separates the prefix from the local name.
+    /// </summary>
+    /// <remarks>
+    /// Unlike <see cref="Parse(string)"/>, a name that has no colon or more than one colon is not a valid prefixed name. The prefix
+    /// and the local name may themselves be empty, so both <c>:name</c> and <c>prefix:</c> are parsed successfully.
+    /// </remarks>
+    /// <param name="name">The name to parse.</param>
+    /// <param name="result">The prefix and local name of <paramref name="name"/>, if it is prefixed.</param>
+    /// <returns><see langword="true"/> if <paramref name="name"/> contains a single colon; otherwise <see langword="false"/>.</returns>
+    public static bool TryParsePrefixed(string name, out PrefixName result)
+    {
+        var idx = IndexOfColon(name);
+
+        if (idx < 0 || name.IndexOf(':', idx + 1) >= 0)
+        {
+            result = default;
+            return false;
+        }
+
+        result = new(name.Substring(0, idx), name.Substring(idx + 1));
+        return true;
+    }
+
+    private static int IndexOfColon(string name)
+    {
+#if NET5_0_OR_GREATER
+        return name.IndexOf(':', StringComparison.Ordinal);
+#else
+        return name.IndexOf(':');
+#endif
     }
 }

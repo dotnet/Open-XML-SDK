@@ -138,8 +138,7 @@ namespace DocumentFormat.OpenXml
 
             foreach (var qname in qnames)
             {
-                var items = qname.Split(':');
-                if (items.Length != 2)
+                if (!PrefixName.TryParsePrefixed(qname, out var parsed))
                 {
                     if (onInvalidQName(qnameList))
                     {
@@ -151,7 +150,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
 
-                var ns = LookupNamespaceDelegate?.Invoke(items[0]);
+                var ns = LookupNamespaceDelegate?.Invoke(parsed.Prefix);
                 if (ns.IsNullOrEmpty())
                 {
                     if (onInvalidQName(qnameList))
@@ -164,7 +163,7 @@ namespace DocumentFormat.OpenXml
                     }
                 }
 
-                yield return new XmlQualifiedName(items[1], ns);
+                yield return new XmlQualifiedName(parsed.Name, ns);
             }
         }
 
