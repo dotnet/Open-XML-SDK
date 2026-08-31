@@ -53796,6 +53796,25 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Office2010.Drawing.TextMath",
+  "Value": [
+   {
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "Type": {
+        "Name": "http://schemas.openxmlformats.org/officeDocument/2006/math:oMath",
+        "Type": "http://schemas.openxmlformats.org/officeDocument/2006/math:CT_OMath"
+       }
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Office2010.Drawing.Transform2D",
   "Value": [
    {

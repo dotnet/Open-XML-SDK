@@ -10,6 +10,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
+using DocumentFormat.OpenXml.Math;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
@@ -1244,7 +1245,13 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:m.</para>
     /// </summary>
-    public partial class TextMath : OpenXmlLeafElement
+    /// <remarks>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.OfficeMath" /> <c>&lt;m:oMath></c></description></item>
+    /// </list>
+    /// </remarks>
+    public partial class TextMath : OpenXmlCompositeElement
     {
         #pragma warning disable CS0109
         internal static readonly new OpenXmlQualifiedName ElementQName = new("http://schemas.microsoft.com/office/drawing/2010/main", "m");
@@ -1259,11 +1266,53 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the TextMath class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TextMath(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TextMath class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TextMath(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TextMath class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TextMath(string outerXml) : base(outerXml)
+        {
+        }
+
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema(ElementType);
             builder.Availability = FileFormatVersions.Office2010;
+            builder.AddChild(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, static () => new DocumentFormat.OpenXml.Math.OfficeMath());
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(DocumentFormat.OpenXml.Math.OfficeMath.ElementType, 1, 1)
+            };
+        }
+
+        /// <summary>
+        /// <para>OfficeMath.</para>
+        /// <para>Represents the following element tag in the schema: m:oMath.</para>
+        /// </summary>
+        /// <remarks>
+        /// xmlns:m = http://schemas.openxmlformats.org/officeDocument/2006/math
+        /// </remarks>
+        public DocumentFormat.OpenXml.Math.OfficeMath? OfficeMath
+        {
+            get => GetElement(DocumentFormat.OpenXml.Math.OfficeMath.ElementType) as DocumentFormat.OpenXml.Math.OfficeMath;
+            set => SetElement(value, DocumentFormat.OpenXml.Math.OfficeMath.ElementType);
         }
 
         /// <inheritdoc/>
