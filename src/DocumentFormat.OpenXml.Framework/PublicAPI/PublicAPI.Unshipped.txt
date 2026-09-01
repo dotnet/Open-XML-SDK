@@ -1,1 +1,9 @@
 ﻿#nullable enable
+DocumentFormat.OpenXml.Features.IOpenXmlNamespacePrefixFeature
+DocumentFormat.OpenXml.Features.IOpenXmlNamespacePrefixFeature.TryGetPrefix(string! namespaceUri, out string! prefix) -> bool
+DocumentFormat.OpenXml.Features.NamespacePrefixFeatureExtensions
+DocumentFormat.OpenXml.Features.OpenXmlNamespacePrefix
+static DocumentFormat.OpenXml.Features.NamespacePrefixFeatureExtensions.SetNamespacePrefixOverride(this DocumentFormat.OpenXml.Features.IFeatureCollection! features, DocumentFormat.OpenXml.Features.IOpenXmlNamespacePrefixFeature! feature) -> void
+static DocumentFormat.OpenXml.Features.NamespacePrefixFeatureExtensions.SetNamespacePrefixOverride(this DocumentFormat.OpenXml.Features.IFeatureCollection! features, System.Func<string!, string?>! resolver) -> void
+static DocumentFormat.OpenXml.Features.OpenXmlNamespacePrefix.Create(System.Func<string!, string?>! resolver) -> DocumentFormat.OpenXml.Features.IOpenXmlNamespacePrefixFeature!
+static DocumentFormat.OpenXml.Features.OpenXmlNamespacePrefix.DefaultFor(params string![]! namespaceUris) -> DocumentFormat.OpenXml.Features.IOpenXmlNamespacePrefixFeature!
