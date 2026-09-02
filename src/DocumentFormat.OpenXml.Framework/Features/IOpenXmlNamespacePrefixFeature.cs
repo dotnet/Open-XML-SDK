@@ -55,19 +55,20 @@ namespace DocumentFormat.OpenXml.Features;
 /// value naming it.
 /// </para>
 /// <para>
-/// A prefix that another Open XML namespace already owns - <c>r</c>, <c>mc</c>, <c>a</c> and the
-/// rest of the built-in table - is rejected with an <see cref="System.InvalidOperationException"/> naming
-/// both namespaces. Taking one has no good outcome: where the other namespace is declared on the
-/// same element the writer refuses it, and where it is declared further out the writer silently
-/// rebinds that namespace to a generated prefix, so <c>r:id</c> would ship as <c>p3:id</c> with no
-/// error at all. Choose a prefix outside that set, or the empty string for the default namespace.
-/// The returned prefix must also be a valid XML name; the underlying
-/// <see cref="System.Xml.XmlWriter"/> enforces that while saving.
+/// A prefix that is already bound to another namespace - by the built-in table (<c>r</c>, <c>mc</c>,
+/// <c>a</c> and the rest) or by a declaration anywhere in the document being saved - is rejected
+/// with an <see cref="System.InvalidOperationException"/> naming both namespaces. Taking one has no
+/// good outcome: where the other namespace is declared on the same element the writer refuses it,
+/// and where it is declared further out the writer silently rebinds that namespace to a generated
+/// prefix, so <c>r:id</c> would ship as <c>p3:id</c> with no error at all. Choose a prefix outside
+/// that set, or the empty string for the default namespace. The returned prefix must also be a
+/// valid XML name, or an <see cref="System.Xml.XmlException"/> is thrown.
 /// </para>
 /// <para>
-/// Note that a save which throws has already truncated the part, so the package is left incomplete.
-/// That is a property of the save path rather than of this feature, but it is worth knowing when
-/// experimenting with a resolver against a file you care about.
+/// Every namespace the part uses is checked before the part is opened for writing, so a rejected
+/// prefix leaves the part's previous content in place. When the save runs from
+/// <see cref="Packaging.OpenXmlPackage.Dispose()"/>, the exception still surfaces there and any
+/// parts not yet saved are skipped.
 /// </para>
 /// </remarks>
 /// <example>

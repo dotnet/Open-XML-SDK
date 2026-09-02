@@ -1,15 +1,14 @@
-﻿// Copyright (c) Microsoft. All rights reserved.
+// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
 using System.Collections.Generic;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml.Features;
 
 /// <summary>
-/// An <see cref="XmlWriter"/> decorator that applies an <see cref="IOpenXmlNamespacePrefixFeature"/>
-/// to the elements and namespace declarations written through it.
+/// An <see cref="XmlWriter"/> decorator that applies a <see cref="NamespacePrefixOverride"/> to the
+/// elements written through it.
 /// </summary>
 /// <remarks>
 /// <para>
@@ -33,133 +32,46 @@ namespace DocumentFormat.OpenXml.Features;
 /// <c>mc:Choice/@Requires</c> value that names the prefix.
 /// </para>
 /// </remarks>
-internal sealed class NamespacePrefixOverrideXmlWriter : XmlWriter
+internal sealed class NamespacePrefixOverrideXmlWriter : ForwardingXmlWriter
 {
-    private readonly XmlWriter _writer;
-    private readonly IOpenXmlNamespacePrefixFeature _feature;
-    private readonly IOpenXmlNamespaceResolver _resolver;
+    private readonly NamespacePrefixOverride _override;
 
-    // Namespaces whose supplied prefix has already been checked for a collision.
-    private readonly HashSet<string> _validated = new(StringComparer.Ordinal);
-
-    public NamespacePrefixOverrideXmlWriter(XmlWriter writer, IOpenXmlNamespacePrefixFeature feature, IOpenXmlNamespaceResolver resolver)
+    public NamespacePrefixOverrideXmlWriter(XmlWriter writer, NamespacePrefixOverride @override)
+        : base(writer)
     {
-        _writer = writer;
-        _feature = feature;
-        _resolver = resolver;
+        _override = @override;
     }
 
-    public override WriteState WriteState => _writer.WriteState;
+    /// <summary>
+    /// Gets the namespace resolver of the part being saved.
+    /// </summary>
+    /// <remarks>
+    /// Once an overridden namespace is bound as the default namespace, <see cref="XmlWriter.LookupPrefix(string)"/>
+    /// answers with the empty prefix, which <see cref="OpenXmlElement.WriteTo(XmlWriter)"/> treats
+    /// as "not found" and resolves through the element's features instead. An element's features
+    /// are not cached: each lookup walks to the part root and through the feature chain. Every
+    /// element written under the override would pay that walk, so they read the resolver from here.
+    /// </remarks>
+    internal IOpenXmlNamespaceResolver Resolver => _override.Resolver;
 
-    public override string? XmlLang => _writer.XmlLang;
-
-    public override XmlSpace XmlSpace => _writer.XmlSpace;
-
-    public override XmlWriterSettings? Settings => _writer.Settings;
+    /// <summary>
+    /// Gets the namespace declarations the override collected from the tree, keyed by prefix.
+    /// </summary>
+    internal Dictionary<string, string> DeclaredNamespaces => _override.DeclaredNamespaces;
 
     public override void WriteStartElement(string? prefix, string localName, string? ns)
     {
         // The empty namespace is excluded deliberately: a prefix cannot be bound to it, so honoring
         // a feature that answered for it would produce "Cannot use a prefix with an empty namespace".
-        var resolved = !string.IsNullOrEmpty(ns) && TryGetPrefix(ns!, out var overridden) ? overridden : prefix;
+        var resolved = !string.IsNullOrEmpty(ns) && _override.TryGetPrefix(ns!, out var overridden) ? overridden : prefix;
 
-        _writer.WriteStartElement(resolved, localName, ns);
+        Inner.WriteStartElement(resolved, localName, ns);
     }
-
-    public override void WriteStartAttribute(string? prefix, string localName, string? ns)
-        => _writer.WriteStartAttribute(prefix, localName, ns);
-
-    public override void WriteEndAttribute() => _writer.WriteEndAttribute();
-
-    public override void WriteString(string? text) => _writer.WriteString(text);
-
-    public override void Flush() => _writer.Flush();
-
-    public override string? LookupPrefix(string ns) => _writer.LookupPrefix(ns);
-
-    public override void WriteBase64(byte[] buffer, int index, int count) => _writer.WriteBase64(buffer, index, count);
-
-    public override void WriteCData(string? text) => _writer.WriteCData(text);
-
-    public override void WriteCharEntity(char ch) => _writer.WriteCharEntity(ch);
-
-    public override void WriteChars(char[] buffer, int index, int count) => _writer.WriteChars(buffer, index, count);
-
-    public override void WriteComment(string? text) => _writer.WriteComment(text);
-
-    public override void WriteDocType(string name, string? pubid, string? sysid, string? subset) => _writer.WriteDocType(name, pubid, sysid, subset);
-
-    public override void WriteEndDocument() => _writer.WriteEndDocument();
-
-    public override void WriteEndElement() => _writer.WriteEndElement();
-
-    public override void WriteEntityRef(string name) => _writer.WriteEntityRef(name);
-
-    public override void WriteFullEndElement() => _writer.WriteFullEndElement();
-
-    public override void WriteProcessingInstruction(string name, string? text) => _writer.WriteProcessingInstruction(name, text);
-
-    public override void WriteRaw(string data) => _writer.WriteRaw(data);
-
-    public override void WriteRaw(char[] buffer, int index, int count) => _writer.WriteRaw(buffer, index, count);
-
-    public override void WriteStartDocument() => _writer.WriteStartDocument();
-
-    public override void WriteStartDocument(bool standalone) => _writer.WriteStartDocument(standalone);
-
-    public override void WriteSurrogateCharEntity(char lowChar, char highChar) => _writer.WriteSurrogateCharEntity(lowChar, highChar);
-
-    public override void WriteWhitespace(string? ws) => _writer.WriteWhitespace(ws);
 
     /// <summary>
     /// Does nothing. The wrapped writer is owned by the caller and outlives this decorator.
     /// </summary>
     public override void Close()
     {
-    }
-
-    protected override void Dispose(bool disposing)
-    {
-        // The wrapped writer is owned by the caller, so it is deliberately not disposed here.
-        base.Dispose(disposing);
-    }
-
-    private bool TryGetPrefix(string namespaceUri, out string prefix)
-    {
-        if (_feature.TryGetPrefix(namespaceUri, out var overridden))
-        {
-            // Tolerate a third-party feature that reports success with a null prefix.
-            prefix = overridden ?? string.Empty;
-
-            if (prefix.Length > 0 && _validated.Add(namespaceUri))
-            {
-                ThrowIfPrefixIsReserved(namespaceUri, prefix);
-            }
-
-            return true;
-        }
-
-        prefix = string.Empty;
-        return false;
-    }
-
-    /// <summary>
-    /// Rejects a prefix that another Open XML namespace already owns.
-    /// </summary>
-    /// <remarks>
-    /// Taking such a prefix has no good outcome. When the other namespace is declared on the same
-    /// element the writer rejects it outright ("the prefix cannot be redefined"); when it is declared
-    /// further out the writer silently rebinds that namespace to a generated prefix, so
-    /// <c>r:id</c> ships as <c>p3:id</c> with no error at all. Callers cannot be expected to know
-    /// which prefixes a loaded document uses, so this is reported rather than left to the writer.
-    /// </remarks>
-    private void ThrowIfPrefixIsReserved(string namespaceUri, string prefix)
-    {
-        var reservedFor = _resolver.LookupNamespace(prefix);
-
-        if (reservedFor is not null && !string.Equals(reservedFor, namespaceUri, StringComparison.Ordinal))
-        {
-            throw new InvalidOperationException(SR.Format(ExceptionMessages.Fmt_NamespacePrefixIsReserved, prefix, namespaceUri, reservedFor));
-        }
     }
 }

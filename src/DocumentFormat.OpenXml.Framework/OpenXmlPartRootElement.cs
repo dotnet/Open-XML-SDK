@@ -191,10 +191,14 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
+            // Resolved before the part is opened: opening truncates it, and a prefix the registered
+            // feature cannot be given is reported while the previous content is still intact.
+            var prefixOverride = CreateNamespacePrefixOverride();
+
             // If we're saving the existing root to the the part, we don't need to unload the root as they're already equal
             using var partStream = openXmlPart.GetStream(FileMode.Create, unloadRootOnChange: !ReferenceEquals(this, openXmlPart.PartRootElement));
 
-            Save(partStream);
+            Save(partStream, prefixOverride);
         }
 
         /// <summary>
@@ -203,7 +207,9 @@ namespace DocumentFormat.OpenXml
         /// <param name="stream">
         /// The stream to which to save the XML.
         /// </param>
-        public void Save(Stream stream)
+        public void Save(Stream stream) => Save(stream, CreateNamespacePrefixOverride());
+
+        private void Save(Stream stream, NamespacePrefixOverride? prefixOverride)
         {
             var settings = new XmlWriterSettings
             {
@@ -217,13 +223,15 @@ namespace DocumentFormat.OpenXml
             events?.OnChange(EventType.Saving, OpenXmlPart);
 
             using (var xmlWriter = new XmlDOMTextWriter(stream, settings))
+            using (var overrideWriter = prefixOverride is null ? null : new NamespacePrefixOverrideXmlWriter(xmlWriter, prefixOverride))
             {
                 if (_standaloneDeclaration is not null)
                 {
                     xmlWriter.WriteStartDocument(_standaloneDeclaration.Value);
                 }
 
-                WriteTo(xmlWriter);
+                // WriteTo recognizes the decorator and does not wrap the writer a second time.
+                WriteTo(overrideWriter ?? (XmlWriter)xmlWriter);
 
                 // Do not call WriteEndDocument if this root element is not parsed.
                 // In that case, the WriteTo() will just call WriteRaw() with the raw xml,
@@ -306,15 +314,30 @@ namespace DocumentFormat.OpenXml
             // A prefix override is applied once for the whole part rather than per element: the
             // decorator forces the prefix as each element is written, which the writer's namespace
             // scope cannot undo, and costs a single feature lookup per save when none is registered.
-            if (xmlWriter is not NamespacePrefixOverrideXmlWriter && Features.Get<IOpenXmlNamespacePrefixFeature>() is { } feature)
+            if (xmlWriter is not NamespacePrefixOverrideXmlWriter && CreateNamespacePrefixOverride() is { } prefixOverride)
             {
-                using var overrideWriter = new NamespacePrefixOverrideXmlWriter(xmlWriter, feature, Features.GetNamespaceResolver());
+                using var overrideWriter = new NamespacePrefixOverrideXmlWriter(xmlWriter, prefixOverride);
 
                 WriteToCore(overrideWriter);
                 return;
             }
 
             WriteToCore(xmlWriter);
+        }
+
+        /// <summary>
+        /// Creates the prefix override for this tree when an <see cref="IOpenXmlNamespacePrefixFeature"/>
+        /// is registered and the root is parsed, checking every prefix it supplies; otherwise returns
+        /// <see langword="null"/>. An unparsed root is written verbatim, so no override applies to it.
+        /// </summary>
+        private NamespacePrefixOverride? CreateNamespacePrefixOverride()
+        {
+            if (!XmlParsed || Features.Get<IOpenXmlNamespacePrefixFeature>() is not { } feature)
+            {
+                return null;
+            }
+
+            return NamespacePrefixOverride.Create(this, feature, Features.GetNamespaceResolver());
         }
 
         private void WriteToCore(XmlWriter xmlWriter)
@@ -356,21 +379,13 @@ namespace DocumentFormat.OpenXml
         {
             if (WriteAllNamespaceOnRoot)
             {
-                var namespaces = new Dictionary<string, string>();
-
-                foreach (OpenXmlElement element in Descendants())
-                {
-                    if (element.NamespaceDeclField is not null)
-                    {
-                        foreach (var item in element.NamespaceDeclField)
-                        {
-                            if (!namespaces.ContainsKey(item.Key))
-                            {
-                                namespaces.Add(item.Key, item.Value);
-                            }
-                        }
-                    }
-                }
+                // A prefix override has already walked the tree to check its prefixes and collected
+                // the declarations on the way; reuse them rather than walking the tree a second time.
+                // Its map also holds the root's own declarations, which the loop below skips anyway
+                // because the root declares them locally.
+                var namespaces = xmlWrite is NamespacePrefixOverrideXmlWriter overrideWriter
+                    ? overrideWriter.DeclaredNamespaces
+                    : CollectDescendantNamespaceDeclarations();
 
                 foreach (var namespacePair in namespaces)
                 {
@@ -385,6 +400,27 @@ namespace DocumentFormat.OpenXml
                     }
                 }
             }
+        }
+
+        private Dictionary<string, string> CollectDescendantNamespaceDeclarations()
+        {
+            var namespaces = new Dictionary<string, string>();
+
+            foreach (OpenXmlElement element in Descendants())
+            {
+                if (element.NamespaceDeclField is not null)
+                {
+                    foreach (var item in element.NamespaceDeclField)
+                    {
+                        if (!namespaces.ContainsKey(item.Key))
+                        {
+                            namespaces.Add(item.Key, item.Value);
+                        }
+                    }
+                }
+            }
+
+            return namespaces;
         }
 
         /// <summary>

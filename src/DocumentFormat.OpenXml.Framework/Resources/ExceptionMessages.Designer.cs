@@ -775,7 +775,7 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The namespace prefix '{0}' supplied for '{1}' is already reserved for '{2}'..
+        ///   Looks up a localized string similar to The namespace prefix '{0}' supplied for '{1}' is already bound to '{2}'..
         /// </summary>
         internal static string Fmt_NamespacePrefixIsReserved {
             get {
@@ -789,15 +789,6 @@ namespace DocumentFormat.OpenXml {
         internal static string NamespaceUriCannotBeNull {
             get {
                 return ResourceManager.GetString("NamespaceUriCannotBeNull", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to This feature collection is read-only. Register the feature on the package instead, using OpenXmlPackage.Features..
-        /// </summary>
-        internal static string ReadOnlyFeatureCollection {
-            get {
-                return ResourceManager.GetString("ReadOnlyFeatureCollection", resourceCulture);
             }
         }
         

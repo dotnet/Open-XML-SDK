@@ -1093,7 +1093,7 @@ namespace DocumentFormat.OpenXml
                 // in this case, we use the predefined prefix
                 if (string.IsNullOrEmpty(prefix))
                 {
-                    prefix = Features.GetNamespaceResolver().LookupPrefix(QName.Namespace.Uri);
+                    prefix = GetNamespaceResolver(xmlWriter).LookupPrefix(QName.Namespace.Uri);
                 }
 
                 xmlWriter.WriteStartElement(prefix, LocalName, NamespaceUri);
@@ -1106,6 +1106,19 @@ namespace DocumentFormat.OpenXml
                 xmlWriter.WriteRaw(RawOuterXml);
             }
         }
+
+        /// <summary>
+        /// Gets the namespace resolver to use while writing to <paramref name="xmlWriter"/>.
+        /// </summary>
+        /// <remarks>
+        /// A prefix override binds a namespace as the default namespace, after which the writer
+        /// reports the empty prefix for it and every element below the root falls back to the
+        /// resolver. Resolving it through <see cref="Features"/> walks to the part root and through
+        /// the feature chain each time, so the resolver the root already resolved is reused instead.
+        /// The element's features are read-only and defer to the part, so the two are the same instance.
+        /// </remarks>
+        private IOpenXmlNamespaceResolver GetNamespaceResolver(XmlWriter xmlWriter)
+            => xmlWriter is NamespacePrefixOverrideXmlWriter overrideWriter ? overrideWriter.Resolver : Features.GetNamespaceResolver();
 
         /// <summary>
         /// Appends each element from a list of elements to the end of the current element's list of child elements.
@@ -1477,7 +1490,7 @@ namespace DocumentFormat.OpenXml
                             prefix = xmlWriter.LookupPrefix(ns);
                             if (string.IsNullOrEmpty(prefix))
                             {
-                                prefix = Features.GetNamespaceResolver().LookupPrefix(attribute.Property.QName.Namespace.Uri);
+                                prefix = GetNamespaceResolver(xmlWriter).LookupPrefix(attribute.Property.QName.Namespace.Uri);
                             }
                         }
 
@@ -1489,7 +1502,23 @@ namespace DocumentFormat.OpenXml
 
                 foreach (var attribute in ExtendedAttributes)
                 {
-                    xmlWriter.WriteAttributeString(attribute.Prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value);
+                    var prefix = attribute.Prefix;
+
+                    // A qualified attribute needs a real prefix - an empty one means "no namespace".
+                    // When the namespace is bound as the default namespace the writer has no prefix
+                    // to offer and would generate one, so fall back to the built-in prefix the way
+                    // the parsed attributes above do.
+                    if (string.IsNullOrEmpty(prefix) && !string.IsNullOrEmpty(attribute.NamespaceUri))
+                    {
+                        prefix = xmlWriter.LookupPrefix(attribute.NamespaceUri);
+
+                        if (string.IsNullOrEmpty(prefix))
+                        {
+                            prefix = GetNamespaceResolver(xmlWriter).LookupPrefix(attribute.NamespaceUri);
+                        }
+                    }
+
+                    xmlWriter.WriteAttributeString(prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value);
                 }
 
                 WriteMCAttribute(xmlWriter);

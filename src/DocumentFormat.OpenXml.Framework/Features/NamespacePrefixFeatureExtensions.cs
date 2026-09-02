@@ -19,7 +19,6 @@ public static class NamespacePrefixFeatureExtensions
     /// </param>
     /// <param name="feature">The feature to register.</param>
     /// <exception cref="ArgumentNullException"><paramref name="features"/> or <paramref name="feature"/> is <see langword="null"/>.</exception>
-    /// <exception cref="InvalidOperationException"><paramref name="features"/> is read-only.</exception>
     public static void SetNamespacePrefixOverride(this IFeatureCollection features, IOpenXmlNamespacePrefixFeature feature)
     {
         if (features is null)
@@ -30,11 +29,6 @@ public static class NamespacePrefixFeatureExtensions
         if (feature is null)
         {
             throw new ArgumentNullException(nameof(feature));
-        }
-
-        if (features.IsReadOnly)
-        {
-            throw new InvalidOperationException(ExceptionMessages.ReadOnlyFeatureCollection);
         }
 
         features.Set(feature);
@@ -49,7 +43,6 @@ public static class NamespacePrefixFeatureExtensions
     /// namespace, or <see langword="null"/> to use the built-in prefix.
     /// </param>
     /// <exception cref="ArgumentNullException"><paramref name="features"/> or <paramref name="resolver"/> is <see langword="null"/>.</exception>
-    /// <exception cref="InvalidOperationException"><paramref name="features"/> is read-only.</exception>
     public static void SetNamespacePrefixOverride(this IFeatureCollection features, Func<string, string?> resolver)
     {
         // Checked before building the feature so a null collection is reported as such, rather than

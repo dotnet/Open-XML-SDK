@@ -316,18 +316,19 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             var builder = new StringBuilder();
             var element = new Worksheet(new SheetData());
 
+            var prefixOverride = NamespacePrefixOverride.Create(
+                element,
+                OpenXmlNamespacePrefix.Create(ns => ns.Length == 0 ? "p" : null),
+                new OpenXmlNamespaceResolver());
+
             using (var writer = XmlWriter.Create(builder, new XmlWriterSettings { OmitXmlDeclaration = true }))
-            using (var wrapper = new NamespacePrefixOverrideXmlWriter(
-                writer,
-                OpenXmlNamespacePrefix.Create(_ => "p"),
-                new OpenXmlNamespaceResolver()))
+            using (var wrapper = new NamespacePrefixOverrideXmlWriter(writer, prefixOverride))
             {
                 wrapper.WriteStartElement(string.Empty, "plain", string.Empty);
                 wrapper.WriteEndElement();
             }
 
             Assert.Equal("<plain />", builder.ToString());
-            Assert.NotNull(element);
         }
 
         [Fact]
@@ -482,17 +483,117 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         }
 
         [Fact]
-        public void SetNamespacePrefixOverrideRejectsAReadOnlyCollection()
+        public void APrefixTheRootDeclaresForAnotherNamespaceIsRejected()
         {
+            // The built-in table is not the only source of taken prefixes: a loaded document can
+            // declare its own. Writing the override's binding and the document's own declaration
+            // on one start tag is a redefinition the writer refuses, so it is reported up front
+            // with the same actionable message as a reserved prefix.
+            var worksheet = new Worksheet(new SheetData());
+            worksheet.AddNamespaceDeclaration("ss", "urn:vendor");
+
+            var exception = Assert.Throws<InvalidOperationException>(() => SaveWorksheet(
+                worksheet,
+                features => features.SetNamespacePrefixOverride(ns => ns == SpreadsheetNamespace ? "ss" : null)));
+
+            Assert.Contains("'ss'", exception.Message, StringComparison.Ordinal);
+            Assert.Contains("urn:vendor", exception.Message, StringComparison.Ordinal);
+        }
+
+        [Fact]
+        public void APrefixADescendantDeclaresForAnotherNamespaceIsRejected()
+        {
+            var sheetData = new SheetData();
+            sheetData.AddNamespaceDeclaration("ss", "urn:vendor");
+
+            var exception = Assert.Throws<InvalidOperationException>(() => SaveWorksheet(
+                new Worksheet(sheetData),
+                features => features.SetNamespacePrefixOverride(ns => ns == SpreadsheetNamespace ? "ss" : null)));
+
+            Assert.Contains("'ss'", exception.Message, StringComparison.Ordinal);
+            Assert.Contains("urn:vendor", exception.Message, StringComparison.Ordinal);
+        }
+
+        [Fact]
+        public void AFeatureThatChangesItsAnswerIsStillChecked()
+        {
+            // Nothing in the contract requires a feature to answer the same prefix for a namespace
+            // every time, so the reserved-prefix check must not be skipped because an earlier answer
+            // for the namespace passed.
             using var stream = new MemoryStream();
             using var document = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook);
+
+            var calls = 0;
+            document.Features.SetNamespacePrefixOverride(
+                ns => ns == SpreadsheetNamespace ? (calls++ == 0 ? "sheet" : "r") : null);
 
             var workbookPart = document.AddWorkbookPart();
             workbookPart.Workbook = new Workbook();
 
-            Assert.Throws<InvalidOperationException>(() =>
-                workbookPart.Workbook.Features.SetNamespacePrefixOverride(
-                    OpenXmlNamespacePrefix.DefaultFor(SpreadsheetNamespace)));
+            var worksheetPart = workbookPart.AddNewPart<WorksheetPart>();
+            worksheetPart.Worksheet = new Worksheet(new SheetData());
+
+            var exception = Assert.Throws<InvalidOperationException>(() => worksheetPart.Worksheet.Save());
+
+            Assert.Contains("'r'", exception.Message, StringComparison.Ordinal);
+
+            // Cleared so that disposing the document does not fail the same way.
+            document.Features.Set<IOpenXmlNamespacePrefixFeature>(null);
+        }
+
+        [Fact]
+        public void AnExtendedAttributeWithoutAPrefixUsesTheBuiltInPrefix()
+        {
+            // With the namespace bound as the default namespace the writer has no usable prefix for
+            // a qualified attribute and would invent one. Falling back to the built-in prefix keeps
+            // the attribute on x:, as it is without the override and as parsed attributes already are.
+            var sheetData = new SheetData();
+            sheetData.SetAttribute(new OpenXmlAttribute(string.Empty, "custom2", SpreadsheetNamespace, "v2"));
+
+            var worksheet = new Worksheet(sheetData);
+            worksheet.SetAttribute(new OpenXmlAttribute(string.Empty, "custom", SpreadsheetNamespace, "v"));
+
+            var xml = SaveWorksheet(
+                worksheet,
+                features => features.SetNamespacePrefixOverride(OpenXmlNamespacePrefix.DefaultFor(SpreadsheetNamespace)));
+
+            Assert.Contains("x:custom=\"v\"", xml, StringComparison.Ordinal);
+            Assert.Contains("x:custom2=\"v2\"", xml, StringComparison.Ordinal);
+            Assert.DoesNotContain("xmlns:p", xml, StringComparison.Ordinal);
+        }
+
+        [Fact]
+        public void ARejectedPrefixIsReportedBeforeThePartIsWritten()
+        {
+            // Saving to a part truncates it before writing. A prefix the feature cannot honor must be
+            // rejected before that point, so the part keeps its previous content and no save events fire.
+            using var stream = new MemoryStream();
+            using var document = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook);
+
+            Populate(document);
+
+            var worksheetPart = document.WorkbookPart!.WorksheetParts.Single();
+            var worksheet = worksheetPart.Worksheet!;
+            worksheet.Save();
+
+            document.AddPartRootEventsFeature();
+
+            var saving = false;
+            document.Features.Get<IPartRootEventsFeature>()!.Change += args => saving |= args.Type == EventType.Saving;
+
+            document.Features.SetNamespacePrefixOverride(ns => ns == SpreadsheetNamespace ? "r" : null);
+
+            Assert.Throws<InvalidOperationException>(() => worksheet.Save());
+
+            Assert.False(saving);
+
+            using (var reader = new StreamReader(worksheetPart.GetStream(FileMode.Open, FileAccess.Read)))
+            {
+                Assert.Contains("<x:worksheet", reader.ReadToEnd(), StringComparison.Ordinal);
+            }
+
+            // Cleared so that disposing the document does not fail the same way.
+            document.Features.Set<IOpenXmlNamespacePrefixFeature>(null);
         }
 
         private sealed class NullPrefixFeature : IOpenXmlNamespacePrefixFeature
