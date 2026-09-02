@@ -775,6 +775,24 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The namespace prefix '{0}' supplied for '{1}' is already bound to '{2}'..
+        /// </summary>
+        internal static string Fmt_NamespacePrefixIsReserved {
+            get {
+                return ResourceManager.GetString("Fmt_NamespacePrefixIsReserved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A namespace URI cannot be null..
+        /// </summary>
+        internal static string NamespaceUriCannotBeNull {
+            get {
+                return ResourceManager.GetString("NamespaceUriCannotBeNull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Id conflicts with the Id of an existing relationship..
         /// </summary>
         internal static string RelationshipIdConflict {

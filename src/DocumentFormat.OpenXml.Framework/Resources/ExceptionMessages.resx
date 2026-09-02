@@ -303,6 +303,12 @@
   <data name="ReaderInNullState" xml:space="preserve">
     <value>The reader is now positioned before the first element. Call OpenXmlReader.Read() before this operation.</value>
   </data>
+  <data name="Fmt_NamespacePrefixIsReserved" xml:space="preserve">
+    <value>The namespace prefix '{0}' supplied for '{1}' is already bound to '{2}'. Writing both would either be rejected as a redefined prefix or silently rebind the other namespace. Choose a prefix that is neither used by another Open XML namespace nor declared in the document.</value>
+  </data>
+  <data name="NamespaceUriCannotBeNull" xml:space="preserve">
+    <value>A namespace URI cannot be null.</value>
+  </data>
   <data name="RelationshipIdConflict" xml:space="preserve">
     <value>Id conflicts with the Id of an existing relationship.</value>
   </data>
