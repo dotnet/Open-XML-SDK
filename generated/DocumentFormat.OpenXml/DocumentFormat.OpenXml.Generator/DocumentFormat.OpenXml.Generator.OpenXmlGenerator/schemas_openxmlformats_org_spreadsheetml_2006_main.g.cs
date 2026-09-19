@@ -40360,10 +40360,13 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddElement<Filters>()
                 .AddAttribute("blank", a => a.Blank)
                 .AddAttribute("calendarType", a => a.CalendarType);
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.Filter.ElementType, 0, 0, version: FileFormatVersions.Office2010),
-                new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Filter.ElementType, 0, 0),
+                new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
+                {
+                    new ElementParticle(DocumentFormat.OpenXml.Office2010.Excel.Filter.ElementType, 0, 0, version: FileFormatVersions.Office2010),
+                    new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.Filter.ElementType, 0, 0)
+                },
                 new ElementParticle(DocumentFormat.OpenXml.Spreadsheet.DateGroupItem.ElementType, 0, 0)
             };
         }

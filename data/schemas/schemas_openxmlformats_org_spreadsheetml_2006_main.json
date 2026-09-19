@@ -20674,19 +20674,29 @@
         }
       ],
       "Particle": {
-        "Kind": "Choice",
+        "Kind": "Sequence",
         "Items": [
           {
-            "Name": "x14:CT_Filter/x14:filter",
+            "Kind": "Choice",
             "Occurs": [
-              {}
+              {
+                "Max": 1
+              }
             ],
-            "InitialVersion": "Office2010"
-          },
-          {
-            "Name": "x:CT_Filter/x:filter",
-            "Occurs": [
-              {}
+            "Items": [
+              {
+                "Name": "x14:CT_Filter/x14:filter",
+                "Occurs": [
+                  {}
+                ],
+                "InitialVersion": "Office2010"
+              },
+              {
+                "Name": "x:CT_Filter/x:filter",
+                "Occurs": [
+                  {}
+                ]
+              }
             ]
           },
           {

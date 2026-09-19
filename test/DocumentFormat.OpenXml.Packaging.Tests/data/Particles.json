@@ -89111,20 +89111,26 @@
     "Value": {
      "ChildrenParticles": [
       {
-       "MaxOccurs": 0,
+       "ChildrenParticles": [
+        {
+         "MaxOccurs": 0,
+         "MinOccurs": 0,
+         "Type": {
+          "Name": "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main:filter",
+          "Type": "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main:CT_Filter"
+         }
+        },
+        {
+         "MaxOccurs": 0,
+         "MinOccurs": 0,
+         "Type": {
+          "Name": "http://schemas.openxmlformats.org/spreadsheetml/2006/main:filter",
+          "Type": "http://schemas.openxmlformats.org/spreadsheetml/2006/main:CT_Filter"
+         }
+        }
+       ],
        "MinOccurs": 0,
-       "Type": {
-        "Name": "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main:filter",
-        "Type": "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main:CT_Filter"
-       }
-      },
-      {
-       "MaxOccurs": 0,
-       "MinOccurs": 0,
-       "Type": {
-        "Name": "http://schemas.openxmlformats.org/spreadsheetml/2006/main:filter",
-        "Type": "http://schemas.openxmlformats.org/spreadsheetml/2006/main:CT_Filter"
-       }
+       "ParticleType": "Choice"
       },
       {
        "MaxOccurs": 0,
@@ -89135,7 +89141,7 @@
        }
       }
      ],
-     "ParticleType": "Choice"
+     "ParticleType": "Sequence"
     }
    },
    {
@@ -89143,12 +89149,18 @@
     "Value": {
      "ChildrenParticles": [
       {
-       "MaxOccurs": 0,
+       "ChildrenParticles": [
+        {
+         "MaxOccurs": 0,
+         "MinOccurs": 0,
+         "Type": {
+          "Name": "http://schemas.openxmlformats.org/spreadsheetml/2006/main:filter",
+          "Type": "http://schemas.openxmlformats.org/spreadsheetml/2006/main:CT_Filter"
+         }
+        }
+       ],
        "MinOccurs": 0,
-       "Type": {
-        "Name": "http://schemas.openxmlformats.org/spreadsheetml/2006/main:filter",
-        "Type": "http://schemas.openxmlformats.org/spreadsheetml/2006/main:CT_Filter"
-       }
+       "ParticleType": "Choice"
       },
       {
        "MaxOccurs": 0,
@@ -89159,7 +89171,7 @@
        }
       }
      ],
-     "ParticleType": "Choice"
+     "ParticleType": "Sequence"
     }
    }
   ]
