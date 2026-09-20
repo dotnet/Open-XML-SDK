@@ -12,19 +12,17 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
         private readonly OpenXmlSimpleType?[] _data;
         private readonly ReadOnlyArray<AttributeMetadata> _attributes;
 
-        public AttributeCollection(ReadOnlyArray<AttributeMetadata> tags)
+        public AttributeCollection(ReadOnlyArray<AttributeMetadata> tags, OpenXmlSimpleType?[] data)
         {
             _attributes = tags;
-
-            if (tags.Length == 0)
-            {
-                _data = Cached.Array<OpenXmlSimpleType>();
-            }
-            else
-            {
-                _data = new OpenXmlSimpleType[tags.Length];
-            }
+            _data = data;
         }
+
+        /// <summary>
+        /// Creates the storage for the values of the given attributes, to be viewed with an <see cref="AttributeCollection"/>.
+        /// </summary>
+        public static OpenXmlSimpleType?[] CreateData(ReadOnlyArray<AttributeMetadata> tags)
+            => tags.Length == 0 ? Cached.Array<OpenXmlSimpleType>() : new OpenXmlSimpleType[tags.Length];
 
         public bool IsEmpty => _data is null;
 

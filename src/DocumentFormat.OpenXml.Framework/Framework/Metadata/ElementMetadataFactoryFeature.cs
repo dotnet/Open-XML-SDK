@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Framework.Metadata
 
         private static ElementMetadata CreateMetadata(OpenXmlElement element)
         {
-            var builder = new ElementMetadata.Builder(element.Features.GetNamespaceResolver());
+            var builder = new ElementMetadata.Builder(OpenXmlElement.ElementFeatureCollection.GetInherited<IOpenXmlNamespaceResolver>(element));
 
             element.ConfigureMetadata(builder);
 

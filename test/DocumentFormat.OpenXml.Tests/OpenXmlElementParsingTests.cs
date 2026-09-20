@@ -17,5 +17,52 @@ namespace DocumentFormat.OpenXml.Tests
             var properties = new NonVisualDrawingProperties(OuterXml);
             Assert.NotNull(properties);
         }
+
+        [Fact]
+        public void ParsingAttributesDoesNotCreateFeatureCollection()
+        {
+            // Large documents create an element per node, so a feature collection per element adds up (see #1511)
+            const string OuterXml = "<x:row xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" r=\"1\"><x:c r=\"A1\" t=\"s\"><x:v>3</x:v></x:c></x:row>";
+
+            var row = new Spreadsheet.Row(OuterXml);
+            var cell = Assert.IsType<Spreadsheet.Cell>(row.FirstChild);
+
+            Assert.Equal(1u, row.RowIndex!.Value);
+            Assert.Equal("A1", cell.CellReference!.Value);
+            Assert.Equal(Spreadsheet.CellValues.SharedString, cell.DataType!.Value);
+            Assert.Equal("3", cell.CellValue!.Text);
+
+            // The row itself parses its outer XML with its own features; its descendants should not need any
+            Assert.False(cell.HasFeatureCollection);
+            Assert.False(cell.CellValue.HasFeatureCollection);
+        }
+
+        [Fact]
+        public void CreatingChildrenDoesNotCreateAttributeStorage()
+        {
+            // Parents look up their metadata to create children; that should not allocate storage for attributes they do not have
+            const string OuterXml = "<x:row xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><x:c><x:v>3</x:v></x:c></x:row>";
+
+            var row = new Spreadsheet.Row(OuterXml);
+            var cell = Assert.IsType<Spreadsheet.Cell>(row.FirstChild);
+
+            Assert.Equal("3", cell.CellValue!.Text);
+            Assert.False(cell.HasAttributeStorage);
+
+            Assert.Null(cell.CellReference);
+            Assert.True(cell.HasAttributeStorage);
+        }
+
+        [Fact]
+        public void MetadataMatchesFeatureCollectionAfterParsing()
+        {
+            const string OuterXml = "<x:c xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" r=\"A1\"><x:v>3</x:v></x:c>";
+
+            var cell = new Spreadsheet.Cell(OuterXml);
+            var metadata = cell.Metadata;
+
+            Assert.Same(metadata, cell.Features.Get<Framework.Metadata.IElementMetadata>());
+            Assert.Equal("A1", cell.CellReference!.Value);
+        }
     }
 }
