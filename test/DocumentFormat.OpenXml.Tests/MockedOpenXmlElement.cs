@@ -14,6 +14,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         internal override void WriteContentTo(XmlWriter w) => throw new NotImplementedException();
 
-        private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode) => throw new NotImplementedException();
+        private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode, DocumentFormat.OpenXml.OpenXmlElementContext? context) => throw new NotImplementedException();
     }
 }

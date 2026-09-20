@@ -208,7 +208,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        private protected override void LazyLoad(XmlReader xmlReader)
+        private protected override void LazyLoad(XmlReader xmlReader, OpenXmlElementContext? context)
         {
             _tagName = xmlReader.LocalName;
             _prefix = xmlReader.Prefix;
@@ -218,7 +218,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
+        private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode, OpenXmlElementContext? context)
         {
             if (string.IsNullOrEmpty(_tagName))
             {
@@ -234,7 +234,7 @@ namespace DocumentFormat.OpenXml
             }
 
             // load children elements
-            base.Populate(xmlReader, loadMode);
+            base.Populate(xmlReader, loadMode, context);
 
             if (FirstChild is not null && FirstChild.NextSibling() is null)
             {

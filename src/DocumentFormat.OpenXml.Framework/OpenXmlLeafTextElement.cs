@@ -140,9 +140,9 @@ namespace DocumentFormat.OpenXml
             RawInnerText = null;
         }
 
-        private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
+        private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode, OpenXmlElementContext? context)
         {
-            LoadAttributes(xmlReader);
+            LoadAttributes(xmlReader, context);
 
             if (!xmlReader.IsEmptyElement)
             { // only when element is not empty (not  <element />).
@@ -191,7 +191,7 @@ namespace DocumentFormat.OpenXml
 
                             // Load unexpected children if there are any.
                             OpenXmlElement child = ElementFactory(xmlReader);
-                            child.Load(xmlReader, OpenXmlLoadMode.Full);
+                            child.Load(xmlReader, OpenXmlLoadMode.Full, context);
                             unwanted++;
 
                             if (ShadowElement is null)

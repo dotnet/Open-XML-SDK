@@ -25,19 +25,19 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
             var element = new Metadata.ElementState(data);
 
-            ref var str = ref element.Attributes.GetProperty(nameof(SomeElement.Str)).Value;
+            var entry = element.Attributes.GetProperty(nameof(SomeElement.Str));
 
-            Assert.Null(str);
+            Assert.Null(entry.Value);
 
             var tmp = new StringValue();
 
-            str = tmp;
+            entry.Value = tmp;
 
-            Assert.NotNull(str);
+            Assert.NotNull(entry.Value);
 
             var str2 = element.Attributes.GetProperty(nameof(SomeElement.Str)).Value;
 
-            Assert.Same(str, tmp);
+            Assert.Same(str2, tmp);
         }
 
         [Fact]
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
             internal override void WriteContentTo(XmlWriter w) => throw new NotImplementedException();
 
-            private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode) => throw new NotImplementedException();
+            private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode, DocumentFormat.OpenXml.OpenXmlElementContext? context) => throw new NotImplementedException();
         }
     }
 }

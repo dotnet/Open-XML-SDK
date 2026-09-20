@@ -60,11 +60,18 @@ namespace DocumentFormat.OpenXml
 
         internal uint ACBlockLevel { get; set; }
 
-        internal OpenXmlElementContext(IOpenXmlNamespaceResolver resolver)
+        internal OpenXmlElementContext(IOpenXmlNamespaceResolver resolver, IElementMetadataFactoryFeature metadataFactory)
         {
             MCContext = new MCContext(resolver);
+            MetadataFactory = metadataFactory;
             XmlReaderSettings = CreateDefaultXmlReaderSettings();
         }
+
+        /// <summary>
+        /// Gets the factory for element metadata, resolved once for the part being loaded so that each element does
+        /// not have to look it up, which walks up to the part root.
+        /// </summary>
+        internal IElementMetadataFactoryFeature MetadataFactory { get; }
 
         internal static XmlReaderSettings CreateDefaultXmlReaderSettings()
         {

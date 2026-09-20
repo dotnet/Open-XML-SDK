@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 
                     using (var converting = new XmlConvertingReader(reader, new OpenXmlNamespaceResolver(), true))
                     {
-                        element.LoadAttributes(converting);
+                        element.LoadAttributes(converting, context: null);
                     }
                 }
 

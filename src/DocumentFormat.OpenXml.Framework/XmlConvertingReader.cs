@@ -26,6 +26,12 @@ namespace DocumentFormat.OpenXml
         private readonly IOpenXmlNamespaceResolver _resolver;
 
         /// <summary>
+        /// Gets the namespace resolver the reader was created with, so that elements being parsed do not have to
+        /// resolve it themselves, which walks up to the part root for every element.
+        /// </summary>
+        public IOpenXmlNamespaceResolver NamespaceResolver => _resolver;
+
+        /// <summary>
         /// Gets the inner <see cref="XmlReader"/>
         /// </summary>
         protected XmlReader BaseReader { get; }

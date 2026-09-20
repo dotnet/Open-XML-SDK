@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the OpenXmlElementContext.
         /// </summary>
-        internal override OpenXmlElementContext RootElementContext => _context ??= new(Features.GetNamespaceResolver());
+        internal override OpenXmlElementContext RootElementContext => _context ??= new(Features.GetNamespaceResolver(), Features.GetRequired<IElementMetadataFactoryFeature>());
 
         /// <summary>
         /// Load the DOM tree from the Open XML part.
@@ -168,11 +168,11 @@ namespace DocumentFormat.OpenXml
 
                 // remove all children and clear all attributes
                 OuterXml = string.Empty;
-                var mcContextPushed = PushMcContext(xmlReader);
-                Load(xmlReader, context.LoadMode);
+                var mcContextPushed = PushMcContext(xmlReader, context);
+                Load(xmlReader, context.LoadMode, context);
                 if (mcContextPushed)
                 {
-                    PopMcContext();
+                    PopMcContext(context);
                 }
             }
 

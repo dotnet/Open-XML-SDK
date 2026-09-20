@@ -524,7 +524,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 throw new System.NotImplementedException();
             }
 
-            private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
+            private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode, DocumentFormat.OpenXml.OpenXmlElementContext? context)
             {
                 throw new System.NotImplementedException();
             }

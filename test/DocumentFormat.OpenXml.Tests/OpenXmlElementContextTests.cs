@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
+using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using NSubstitute;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DefaultMarkupCompatibilitySettings()
         {
-            var context = new OpenXmlElementContext(new OpenXmlNamespaceResolver());
+            var context = new OpenXmlElementContext(new OpenXmlNamespaceResolver(), new ElementMetadataFactoryFeature());
 
             Assert.NotNull(context.MCSettings);
             Assert.Same(context.MCSettings, context.MCSettings);
@@ -27,7 +28,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SetMarkupCompatibility()
         {
-            var context = new OpenXmlElementContext(new OpenXmlNamespaceResolver());
+            var context = new OpenXmlElementContext(new OpenXmlNamespaceResolver(), new ElementMetadataFactoryFeature());
             var settings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2010);
 
             context.MCSettings = settings;
@@ -59,7 +60,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ElementInsertingEventTest()
         {
-            var context = new OpenXmlElementContext(new OpenXmlNamespaceResolver());
+            var context = new OpenXmlElementContext(new OpenXmlNamespaceResolver(), new ElementMetadataFactoryFeature());
             var element = Substitute.For<OpenXmlElement>();
             var parent = Substitute.For<OpenXmlElement>();
             var eventFired = false;
@@ -83,7 +84,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ElementInsertedEventTest()
         {
-            var context = new OpenXmlElementContext(new OpenXmlNamespaceResolver());
+            var context = new OpenXmlElementContext(new OpenXmlNamespaceResolver(), new ElementMetadataFactoryFeature());
             var element = Substitute.For<OpenXmlElement>();
             var parent = Substitute.For<OpenXmlElement>();
             var eventFired = false;
@@ -107,7 +108,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ElementRemovingEventTest()
         {
-            var context = new OpenXmlElementContext(new OpenXmlNamespaceResolver());
+            var context = new OpenXmlElementContext(new OpenXmlNamespaceResolver(), new ElementMetadataFactoryFeature());
             var element = Substitute.For<OpenXmlElement>();
             var parent = Substitute.For<OpenXmlElement>();
             var eventFired = false;
@@ -131,7 +132,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ElementRemovedEventTest()
         {
-            var context = new OpenXmlElementContext(new OpenXmlNamespaceResolver());
+            var context = new OpenXmlElementContext(new OpenXmlNamespaceResolver(), new ElementMetadataFactoryFeature());
             var element = Substitute.For<OpenXmlElement>();
             var parent = Substitute.For<OpenXmlElement>();
             var eventFired = false;
@@ -154,7 +155,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         public static IEnumerable<object[]> GetXmlReaders()
         {
-            yield return new object[] { new OpenXmlElementContext(new OpenXmlNamespaceResolver()).XmlReaderSettings };
+            yield return new object[] { new OpenXmlElementContext(new OpenXmlNamespaceResolver(), new ElementMetadataFactoryFeature()).XmlReaderSettings };
             yield return new object[] { OpenXmlElementContext.CreateDefaultXmlReaderSettings() };
         }
     }

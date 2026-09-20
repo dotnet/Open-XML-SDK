@@ -606,7 +606,7 @@ namespace DocumentFormat.OpenXml
 
                 case ElementState.Start:
                     element = _elementStack.Peek();
-                    element.Load(_xmlReader, OpenXmlLoadMode.Full);
+                    element.Load(_xmlReader, OpenXmlLoadMode.Full, element.OpenXmlElementContext);
 
                     // stop at the end tag.
                     _elementState = ElementState.LoadEnd;
@@ -616,7 +616,7 @@ namespace DocumentFormat.OpenXml
                     Debug.Assert(ReadMiscNodes);
 
                     element = _elementStack.Pop();
-                    element.Load(_xmlReader, OpenXmlLoadMode.Full);
+                    element.Load(_xmlReader, OpenXmlLoadMode.Full, element.OpenXmlElementContext);
 
                     // stop at next element.
                     GetElementInformation();
@@ -747,7 +747,7 @@ namespace DocumentFormat.OpenXml
             if (_xmlReader.IsEmptyElement)
             {
                 _elementState = ElementState.LeafStart;
-                rootElement.Load(_xmlReader, OpenXmlLoadMode.Full);
+                rootElement.Load(_xmlReader, OpenXmlLoadMode.Full, rootElement.OpenXmlElementContext);
             }
             else
             {
@@ -820,12 +820,12 @@ namespace DocumentFormat.OpenXml
                     if (_xmlReader.IsEmptyElement)
                     {
                         _elementState = ElementState.LeafStart;
-                        element.Load(_xmlReader, OpenXmlLoadMode.Full);
+                        element.Load(_xmlReader, OpenXmlLoadMode.Full, element.OpenXmlElementContext);
                     }
                     else if (element is OpenXmlLeafElement || element is OpenXmlLeafTextElement)
                     {
                         _elementState = ElementState.LeafStart;
-                        element.Load(_xmlReader, OpenXmlLoadMode.Full);
+                        element.Load(_xmlReader, OpenXmlLoadMode.Full, element.OpenXmlElementContext);
                     }
                     else if (element is OpenXmlUnknownElement)
                     {
