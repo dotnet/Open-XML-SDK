@@ -28,7 +28,10 @@ namespace DocumentFormat.OpenXml.Features
                 return feature;
             }
 
-            throw new NotSupportedException(SR.Format(ExceptionMessages.FeatureNotRegistered, typeof(TFeature).FullName));
+            throw NotRegistered<TFeature>();
         }
+
+        internal static Exception NotRegistered<TFeature>()
+            => new NotSupportedException(SR.Format(ExceptionMessages.FeatureNotRegistered, typeof(TFeature).FullName));
     }
 }

@@ -21,6 +21,12 @@ namespace DocumentFormat.OpenXml.Benchmarks
                 throw new System.ArgumentNullException(nameof(input));
             }
 
+            if (input.Length > 0 && input[0] == "retained")
+            {
+                RetainedMemoryReport.Run(input);
+                return;
+            }
+
             var switcher = new BenchmarkSwitcher(typeof(Program).Assembly);
             var config = new CustomConfig();
 
