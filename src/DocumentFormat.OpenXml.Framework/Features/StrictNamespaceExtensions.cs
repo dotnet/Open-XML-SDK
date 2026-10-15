@@ -44,6 +44,11 @@ internal static class StrictNamespaceExtensions
         {
             package.Features.GetRequired<ISaveFeature>().Register(container =>
             {
+                // Load every relationship before the first container is saved, whichever container that is. Otherwise a
+                // relationship that is loaded later in the save is recorded after its container was already saved, and
+                // keeps its Strict type.
+                foundFeature.EnsureAllPartsLoaded();
+
                 if (alteredRelationships.Count == 0)
                 {
                     return;
@@ -53,12 +58,7 @@ internal static class StrictNamespaceExtensions
                 {
                     if (alteredRelationships.TryGetValue(OpenXmlPackage.Uri, out var list))
                     {
-                        foreach (var toReplace in list)
-                        {
-                            package.Relationships.Remove(toReplace.Id);
-                            package.Relationships.Create(toReplace.TargetUri, toReplace.TargetMode, toReplace.RelationshipType, toReplace.Id);
-                        }
-
+                        ReplaceRelationships(package.Relationships, list);
                         alteredRelationships.Remove(OpenXmlPackage.Uri);
                     }
                 }
@@ -66,16 +66,32 @@ internal static class StrictNamespaceExtensions
                 {
                     if (alteredRelationships.TryGetValue(part.Uri, out var list))
                     {
-                        foreach (var toReplace in list)
-                        {
-                            part.Relationships.Remove(toReplace.Id);
-                            part.Relationships.Create(toReplace.TargetUri, toReplace.TargetMode, toReplace.RelationshipType, toReplace.Id);
-                        }
-
+                        ReplaceRelationships(part.Relationships, list);
                         alteredRelationships.Remove(part.Uri);
                     }
                 }
             });
+        }
+    }
+
+    private static void ReplaceRelationships(IRelationshipCollection relationships, List<PackageRelationshipBuilder> list)
+    {
+        foreach (var toReplace in list)
+        {
+            // A relationship hidden by an ignore filter is never in the collection, so it cannot have been removed
+            // through it, and it is still in the package. Rewrite it as before.
+            //
+            // Any other relationship may have been removed since the package was opened (for example, its part was
+            // deleted), or its id may now belong to a new relationship. Only rewrite the relationship that was
+            // translated on load.
+            if (!toReplace.IsRemoved
+                && (!relationships.Contains(toReplace.Id) || !ReferenceEquals(relationships[toReplace.Id], toReplace)))
+            {
+                continue;
+            }
+
+            relationships.Remove(toReplace.Id);
+            relationships.Create(toReplace.TargetUri, toReplace.TargetMode, toReplace.RelationshipType, toReplace.Id);
         }
     }
 
@@ -92,16 +108,24 @@ internal static class StrictNamespaceExtensions
         {
             get
             {
-                if (_package is { } package)
-                {
-                    _package = null;
-                    package.LoadAllParts();
-                }
+                EnsureAllPartsLoaded();
 
                 return Found;
             }
         }
 
         public bool Found { get; set; }
+
+        /// <summary>
+        /// Loads every part, and so every relationship, the first time it is called. Later calls do nothing.
+        /// </summary>
+        public void EnsureAllPartsLoaded()
+        {
+            if (_package is { } package)
+            {
+                _package = null;
+                package.LoadAllParts();
+            }
+        }
     }
 }
