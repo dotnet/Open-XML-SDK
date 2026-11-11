@@ -64,18 +64,18 @@ namespace DocumentFormat.OpenXml.Tests
             var parent = Substitute.For<OpenXmlElement>();
             var eventFired = false;
 
-            context.ElementInsertingEvent(element, element);
+            context.ElementInsertingEvent(element, parent);
 
             context.ElementInserting += (s, e) =>
             {
                 Assert.Same(context, s);
                 Assert.Same(element, e.Element);
-                Assert.Same(element, e.ParentElement);
+                Assert.Same(parent, e.ParentElement);
 
                 eventFired = true;
             };
 
-            context.ElementInsertingEvent(element, element);
+            context.ElementInsertingEvent(element, parent);
 
             Assert.True(eventFired);
         }
@@ -88,18 +88,18 @@ namespace DocumentFormat.OpenXml.Tests
             var parent = Substitute.For<OpenXmlElement>();
             var eventFired = false;
 
-            context.ElementInsertedEvent(element, element);
+            context.ElementInsertedEvent(element, parent);
 
             context.ElementInserted += (s, e) =>
             {
                 Assert.Same(context, s);
                 Assert.Same(element, e.Element);
-                Assert.Same(element, e.ParentElement);
+                Assert.Same(parent, e.ParentElement);
 
                 eventFired = true;
             };
 
-            context.ElementInsertedEvent(element, element);
+            context.ElementInsertedEvent(element, parent);
 
             Assert.True(eventFired);
         }
@@ -112,18 +112,18 @@ namespace DocumentFormat.OpenXml.Tests
             var parent = Substitute.For<OpenXmlElement>();
             var eventFired = false;
 
-            context.ElementRemovingEvent(element, element);
+            context.ElementRemovingEvent(element, parent);
 
             context.ElementRemoving += (s, e) =>
             {
                 Assert.Same(context, s);
                 Assert.Same(element, e.Element);
-                Assert.Same(element, e.ParentElement);
+                Assert.Same(parent, e.ParentElement);
 
                 eventFired = true;
             };
 
-            context.ElementRemovingEvent(element, element);
+            context.ElementRemovingEvent(element, parent);
 
             Assert.True(eventFired);
         }
@@ -136,18 +136,18 @@ namespace DocumentFormat.OpenXml.Tests
             var parent = Substitute.For<OpenXmlElement>();
             var eventFired = false;
 
-            context.ElementRemovedEvent(element, element);
+            context.ElementRemovedEvent(element, parent);
 
             context.ElementRemoved += (s, e) =>
             {
                 Assert.Same(context, s);
                 Assert.Same(element, e.Element);
-                Assert.Same(element, e.ParentElement);
+                Assert.Same(parent, e.ParentElement);
 
                 eventFired = true;
             };
 
-            context.ElementRemovedEvent(element, element);
+            context.ElementRemovedEvent(element, parent);
 
             Assert.True(eventFired);
         }
