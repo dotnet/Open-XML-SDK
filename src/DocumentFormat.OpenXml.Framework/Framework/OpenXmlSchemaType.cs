@@ -23,7 +23,9 @@ internal readonly struct OpenXmlSchemaType(OpenXmlQualifiedName name, OpenXmlQua
         return Type.CompareTo(other.Type);
     }
 
-    public bool Equals(OpenXmlSchemaType other) => Equals(Name, other.Name) && Equals(Type, other.Type);
+    // Call the IEquatable<OpenXmlQualifiedName> overload directly: the static object.Equals(object, object) would box both
+    // structs on every comparison, and this runs for every child in the typed child-property getters and setters.
+    public bool Equals(OpenXmlSchemaType other) => Name.Equals(other.Name) && Type.Equals(other.Type);
 
     public override bool Equals(object? obj) => obj is OpenXmlSchemaType t && Equals(t);
 
